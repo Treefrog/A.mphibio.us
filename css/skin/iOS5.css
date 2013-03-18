@@ -1,0 +1,119 @@
+/* Theme Styles 
+/* odd/even classes are added via /js/scripts.js
+================================================== */
+
+table.amp.ios {
+	border-right: 1px solid #d4d4d4;
+	box-shadow: rgba(0,0,0,.4) 0 2px 2px,rgba(0,0,0,.1) 0 2px 6px,rgba(0,0,0,.1) 0 2px 12px;
+}
+
+table.amp.ios caption {
+	color: #ccc;
+	text-align: left;
+	padding:.625em;
+	padding-bottom: .825em;
+	border: 1px solid rgba(0,0,0,.4);
+	text-shadow:rgba(255,255,255,.8) 0 1px 0;
+	margin-bottom: -4px;
+	-khtml-border-top-left-radius: 4px;
+	-webkit-border-top-left-radius: 4px;
+	border-top-left-radius: 4px;
+	-khtml-border-top-right-radius: 4px;
+	-webkit-border-top-right-radius: 4px;
+	border-top-right-radius: 4px;
+}
+
+table.amp.ios td, table.amp.ios th {
+	margin:0;
+	padding: .3em .425em;
+	text-align: left;
+	border-right: 1px solid #ccc;
+	border-top: 0px !important;
+}
+
+table.amp.ios th {
+	font-weight: bold;
+	text-shadow: #fff 0 1px 0;
+	background-image:-moz-linear-gradient(top,#ffffff,#d4d4d4);
+	background-image:-ms-linear-gradient(top,#ffffff,#d4d4d4);
+	background-image:-webkit-gradient(linear,0 0,0 100%,from(#ffffff),to(#d4d4d4));
+	background-image:-webkit-linear-gradient(top,#ffffff,#d4d4d4);
+	background-image:-o-linear-gradient(top,#ffffff,#d4d4d4);
+	background-image:linear-gradient(top,#ffffff,#d4d4d4);
+	background-repeat:repeat-x;
+	border-top: 0px;
+}
+
+table.amp.ios thead th {padding-top: 1.5em;}
+table.amp.ios tr.odd td {background: #fff;}
+table.amp.ios tr.even td {background: #efefef;}
+
+/* iOS Style Tabs (activated by scripts.js)
+================================================== */
+
+ul.tabs li a {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#c9c9c9));
+	background-image: -webkit-linear-gradient(top, #fbfbfb, #c9c9c9);
+	background-image:    -moz-linear-gradient(top, #fbfbfb, #c9c9c9);
+	background-image:      -o-linear-gradient(top, #fbfbfb, #c9c9c9);
+	background-image:         linear-gradient(to bottom, #fbfbfb, #c9c9c9);
+	-webkit-box-shadow: rgba(0,0,0,.3) 0 0 2px, rgba(0,0,0,.4) 0 0 1px, inset rgba(255,255,255,.4) 0 0 2px;
+	 -khtml-box-shadow: rgba(0,0,0,.3) 0 0 2px, rgba(0,0,0,.4) 0 0 1px, inset rgba(255,255,255,.4) 0 0 2px;
+	   -moz-box-shadow: rgba(0,0,0,.3) 0 0 2px, rgba(0,0,0,.4) 0 0 1px, inset rgba(255,255,255,.4) 0 0 2px;
+		 -o-box-shadow: rgba(0,0,0,.3) 0 0 2px, rgba(0,0,0,.4) 0 0 1px, inset rgba(255,255,255,.4) 0 0 2px;
+			box-shadow: rgba(0,0,0,.3) 0 0 2px, rgba(0,0,0,.4) 0 0 1px, inset rgba(255,255,255,.4) 0 0 2px;
+}
+
+ul.tabs li:hover a {
+	-webkit-box-shadow: rgba(0,0,0,.4) 0 0 1px, inset rgba(255,255,255,.4) 0 0 2px;
+	 -khtml-box-shadow: rgba(0,0,0,.4) 0 0 1px, inset rgba(255,255,255,.4) 0 0 2px;
+	   -moz-box-shadow: rgba(0,0,0,.4) 0 0 1px, inset rgba(255,255,255,.4) 0 0 2px;
+		 -o-box-shadow: rgba(0,0,0,.4) 0 0 1px, inset rgba(255,255,255,.4) 0 0 2px;
+			box-shadow: rgba(0,0,0,.4) 0 0 1px, inset rgba(255,255,255,.4) 0 0 2px;
+}
+
+ul.tabs li a.active {
+	background-color: #1b378c;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#1b378c), to(#7485b9));
+	background-image: -webkit-linear-gradient(top, #1b378c, #7485b9);
+	background-image:    -moz-linear-gradient(top, #1b378c, #7485b9);
+	background-image:      -o-linear-gradient(top, #1b378c, #7485b9);
+	background-image:         linear-gradient(to bottom, #1b378c, #7485b9);
+	-webkit-box-shadow: inset rgba(0,0,0,.4) 0 0 1px, inset rgba(0,0,0,.2) 0 0 2px;
+	 -khtml-box-shadow: inset rgba(0,0,0,.4) 0 0 1px, inset rgba(0,0,0,.2) 0 0 2px;
+	   -moz-box-shadow: inset rgba(0,0,0,.4) 0 0 1px, inset rgba(0,0,0,.2) 0 0 2px;
+		 -o-box-shadow: inset rgba(0,0,0,.4) 0 0 1px, inset rgba(0,0,0,.2) 0 0 2px;
+			box-shadow: inset rgba(0,0,0,.4) 0 0 1px, inset rgba(0,0,0,.2) 0 0 2px;
+}
+
+ul.tabs li:first-child a.active {
+	margin-left: 0; 
+}
+
+ul.tabs li:first-child a {
+	-webkit-border-top-left-radius: 2px;
+		-moz-border-radius-topleft: 2px;
+			border-top-left-radius: 2px;
+}
+
+ul.tabs li:last-child a {}
+
+ul.tabs-content { margin: 0; display: block;}
+ul.tabs-content > li { display:none;padding: 20px;  }
+ul.tabs-content > li.active {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#ffffff));
+	background-image: -webkit-linear-gradient(top, #fefefe, #ffffff);
+	background-image:    -moz-linear-gradient(top, #fefefe, #ffffff);
+	background-image:      -o-linear-gradient(top, #fefefe, #ffffff);
+	background-image:         linear-gradient(to bottom, #fefefe, #ffffff);
+	border-bottom: 1px solid #efefef;
+	-o-box-shadow: inset rgba(0,0,0,.2) 0 1px 2px;
+	-moz-box-shadow: inset rgba(0,0,0,.2) 0 1px 2px;
+	-webkit-box-shadow: inset rgba(0,0,0,.2) 0 1px 2px;
+	-khtml-box-shadow: inset rgba(0,0,0,.2) 0 1px 2px;
+	box-shadow: inset rgba(0,0,0,.2) 0 2px 2px;
+	-webkit-transition: all 0.3s ease-out;
+	 -moz-transition: all 0.3s ease-out;
+	   -o-transition: all 0.3s ease-out;
+	      transition: all 0.3s ease-out;
+}

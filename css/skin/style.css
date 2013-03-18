@@ -1,0 +1,350 @@
+/*
+* a.mphibio.us V1.0
+* Copyright 2012, Clive Moore
+* www.lassosoft.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 26/09/2012
+*/
+
+/* Font-Face
+================================================== */
+
+/*
+ * Web Fonts from fontspring.com
+ *
+ * All OpenType features and all extended glyphs have been removed.
+ * Fully installable fonts can be purchased at http://www.fontspring.com
+ *
+ * The fonts included in this stylesheet are subject to the End User License you purchased
+ * from Fontspring. The fonts are protected under domestic and international trademark and 
+ * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+ * distributing this font software.
+ *
+ * (c) 2010-2012 Fontspring
+ *
+ *
+ *
+ *
+ * The fonts included are copyrighted by the vendor listed below.
+ *
+ * Vendor:      Typodermic
+ * License URL: http://www.fontspring.com/fflicense/typodermic
+ *
+ *
+ */
+ 
+@font-face {
+    font-family: 'BlueHighwayRegular';
+    src: url('../fonts/blue_highway/blue_highway_rg-webfont.eot');
+    src: url('../fonts/blue_highway/blue_highway_rg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/blue_highway/blue_highway_rg-webfont.woff') format('woff'),
+         url('../fonts/blue_highway/blue_highway_rg-webfont.ttf') format('truetype'),
+         url('../fonts/blue_highway/blue_highway_rg-webfont.svg#BlueHighwayRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'BlueHighwayCondensedRegular';
+    src: url('../fonts/blue_highway/blue_highway_cd-webfont.eot');
+    src: url('../fonts/blue_highway/blue_highway_cd-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/blue_highway/blue_highway_cd-webfont.woff') format('woff'),
+         url('../fonts/blue_highway/blue_highway_cd-webfont.ttf') format('truetype'),
+         url('../fonts/blue_highway/blue_highway_cd-webfont.svg#BlueHighwayCondensedRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'BlueHighwayDRegular';
+    src: url('../fonts/blue_highway/blue_highway_d-webfont.eot');
+    src: url('../fonts/blue_highway/blue_highway_d-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/blue_highway/blue_highway_d-webfont.woff') format('woff'),
+         url('../fonts/blue_highway/blue_highway_d-webfont.ttf') format('truetype'),
+         url('../fonts/blue_highway/blue_highway_d-webfont.svg#BlueHighwayDRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'BlueHighwayBold';
+    src: url('../fonts/blue_highway/blue_highway_bd-webfont.eot');
+    src: url('../fonts/blue_highway/blue_highway_bd-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/blue_highway/blue_highway_bd-webfont.woff') format('woff'),
+         url('../fonts/blue_highway/blue_highway_bd-webfont.ttf') format('truetype'),
+         url('../fonts/blue_highway/blue_highway_bd-webfont.svg#BlueHighwayBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'BlueHighwayLinocutRegular';
+    src: url('../fonts/blue_highway/blue_highway_linocut-webfont.eot');
+    src: url('../fonts/blue_highway/blue_highway_linocut-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/blue_highway/blue_highway_linocut-webfont.woff') format('woff'),
+         url('../fonts/blue_highway/blue_highway_linocut-webfont.ttf') format('truetype'),
+         url('../fonts/blue_highway/blue_highway_linocut-webfont.svg#BlueHighwayLinocutRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* Link-o-matic
+================================================== */
+	a, a:visited { color: #0081c6; text-decoration: none; outline: 0; }
+	.active a, .
+	a:hover, a:focus { color: #b2bb1e; }
+	p a, p a:visited { line-height: inherit; }
+
+/* Site Styles
+================================================== */
+
+* html body,
+html, body {height: 100%;	min-height: 100%;}
+
+body {
+	background: #000 url(../img/bgs/low_contrast_linen.png) 0 0 repeat;
+	color: #fff;
+	text-shadow: #fff 0 1px 1px;
+	text-shadow: rgba(255,255,255,.6) 0 1px 1px;
+}
+
+/* Typography
+================================================== */
+h1, h2, h3, h4, h5, h6 {text-shadow: rgba(0,0,0,.4)0 0 1px, rgba(0,0,0,.6)0 0 1px,  rgba(255,255,255,1)0 1px 0,  rgba(255,255,255,.6) 0 0 2px, rgba(255,255,255,.3) 0 1px 1px;}
+h1 { 
+	font-family: 'BlueHighwayDRegular';
+	font-size:3em;
+	color:#fff;
+	text-shadow: rgba(0,0,0,.3)0 0 1px, rgba(0,0,0,.4)0 0 1px, rgba(0,0,0,.3)0 0 2px, rgba(0,0,0,.1)0 1px 3px,  rgba(255,255,255,1)0 1px 0,  rgba(255,255,255,.8)0 1px 1px,  rgba(255,255,255,.8)0 1px 2px;
+	
+}
+h1#project_title {position: fixed; font-size: 12em; line-height: 1;opacity: .2; 
+	text-shadow: rgba(0,0,0,.6)0 0 1px, rgba(0,0,0,.8)0 0 1px, rgba(0,0,0,.6)0 0 2px, rgba(0,0,0,.3)0 1px 3px,  rgba(255,255,255,1)0 1px 0,  rgba(255,255,255,1)0 1px 1px,  rgba(255,255,255,1)0 1px 2px;}
+p#tagline {position: absolute;padding-left: 125px;}
+
+.adot { 
+	color:#fff;
+	background-color: #f6921e; 
+	background-image:-moz-linear-gradient(top,#ca7819,#f6921e); 
+	background-image:-webkit-gradient(linear,left top,left bottom,color-stop(0,#ca7819),color-stop(1,#f6921e));
+	background-image: -o-linear-gradient(top,#ca7819,#f6921e;);
+	background-image: linear-gradient(top,#ca7819,#f6921e;);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorStr=#ca7819,EndColorStr=#f6921e); 
+	-ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorStr=#ca7819,EndColorStr=#f6921e);
+}
+
+h2 .adot {text-shadow: rgba(0,0,0,.4) 0 -1px 0 !important;}
+h2 { font-size: 2.825em;font-family: 'BlueHighwayDRegular';}
+h3 { font-size: 1.625em; }h4 { font-size: 1.125em;}h5 { font-size: 1.125em;}h6 { font-size: 1em;font-weight: bold; }
+
+blockquote cite span {font-weight: bold;} 
+
+.pedigree:hover {cursor: pointer;}
+
+em, i, blockquote cite  {font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;font-style: italic;color: #000;}
+
+blockquote {
+	margin-left: 0;
+	padding-bottom: .6em;text-shadow: rgba(0,0,0,.6)0 0 1px, rgba(0,0,0,.8)0 0 1px, rgba(0,0,0,.6)0 0 2px, rgba(0,0,0,.3)0 1px 3px,  rgba(255,255,255,1)0 1px 0;
+	-webkit-box-shadow:inset rgba(0,0,0,.6)0 0 1px, inset rgba(0,0,0,.3)0 0 2px;
+	box-shadow:inset rgba(0,0,0,.6)0 0 2px, inset rgba(0,0,0,.3)0 0 12px;
+}
+blockquote p {font-style: normal;}
+blockquote cite  {text-shadow: none;color: #fff;font-size: .865em;font-style: normal;}
+
+
+/* #Download Button Styles
+================================================== */
+#download_button {
+	margin-top: 2em;
+}
+          
+#download_button div.inner{padding: 5px;margin: 5px;margin-bottom: 0;border: 1px dashed #000000;}
+
+#download_button .button {
+	border-color: transparent;
+	background:url(../img/bgs/1440x900.png) 50% 30% no-repeat;
+	-o-border-radius: 12px;
+	-moz-border-radius: 12px;
+	-khtml-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
+	color: #fff;
+	display: inline-block;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: 0 -1px 0 rgba(0,0,0, .6);
+	-o-box-shadow: rgba(0,0,0,.6) 0 1px 2px, rgba(0,0,0,.3) 0 1px 8px, inset rgba(255,255,255,.2) 0 0 12px;
+	-moz-box-shadow: rgba(0,0,0,.6) 0 1px 2px, rgba(0,0,0,.3) 0 1px 8px, inset rgba(255,255,255,.4) 0 0 2px;
+	-webkit-box-shadow: rgba(0,0,0,.6) 0 1px 2px, rgba(0,0,0,.3) 0 1px 8px, inset rgba(0,0,0,.4) 0 0 6px;
+	-khtml-box-shadow: rgba(0,0,0,.6) 0 1px 2px, rgba(0,0,0,.3) 0 1px 8px, inset rgba(255,255,255,.4) 0 0 2px;
+	box-shadow: rgba(0,0,0,.6) 0 1px 2px, rgba(0,0,0,.3) 0 1px 8px, inset rgba(0,0,0,.4) 0 0 6px;
+	cursor: pointer;
+	margin-bottom: 1.625em;
+	line-height: normal;
+	padding: .4em .825em;
+	  -webkit-transition: all 0.3s ease-out; 
+	     -moz-transition: all 0.3s ease-out; 
+	       -o-transition: all 0.3s ease-out; 
+	          transition: all 0.3s ease-out; 
+ }
+#download_button .button a:visited, #download_button .button a{color: #000;text-shadow: rgba(255,255,255,.6) 0 1px 1px;}
+
+#download_button .button:hover{
+	background:url(../img/bgs/1440x900.png) 50% 35% no-repeat;
+	-o-box-shadow: rgba(0,0,0,.6) 0 1px 2px, inset rgba(255,255,255,.4) 0 0 2px;
+	-moz-box-shadow: rgba(0,0,0,.6) 0 1px 2px, inset rgba(255,255,255,.4) 0 0 2px;
+	-webkit-box-shadow: rgba(0,0,0,.6) 0 1px 2px, inset rgba(255,255,255,.4) 0 0 2px;
+	-khtml-box-shadow: rgba(0,0,0,.6) 0 1px 2px, inset rgba(255,255,255,.4) 0 0 2px;
+	box-shadow: rgba(255,255,255,.6) 0 1px 2px, inset rgba(0,0,0,.4) 0 0 2px;
+}
+
+	
+
+
+/* Icons
+================================================== */
+
+.icon {display: block;width: 16px; height: 16px;background: url(../img/iconsprite.png) 0 0 no-repeat;}
+
+.icon.zip{background-position: 0 0;}					
+.icon.download{background-position: 0 -16px;}	
+
+
+/* #Nav Styles
+================================================== */
+#nav{
+	list-style: none;
+	position: fixed;
+	top:20px;
+	right: 20px;
+	z-index: 500;
+}
+
+#nav li{
+	margin: 0 0 15px 0;	
+}
+
+.morenav {display: none;}
+/* Parallax Styles
+================================================== */
+#intro, #second, #third, #fourth {
+	margin-bottom: 50px;
+	border-bottom: 10px solid #000;
+	-o-box-shadow:inset rgba(0,0,0,.6) 0 0 6px, rgba(0,0,0,.6) 0 0 6px,  rgba(0,0,0,.4) 0 0 2px, rgba(0,0,0,.2) 0 2px 2px;
+	-khtml-box-shadow:inset rgba(0,0,0,.6) 0 0 6px, rgba(0,0,0,.6) 0 0 6px,  rgba(0,0,0,.4) 0 0 2px, rgba(0,0,0,.2) 0 2px 2px;
+	-moz-box-shadow:inset rgba(0,0,0,.6) 0 0 6px, rgba(0,0,0,.6) 0 0 6px,  rgba(0,0,0,.4) 0 0 2px, rgba(0,0,0,.2) 0 2px 2px;
+	-webkit-box-shadow:inset rgba(0,0,0,.6) 0 0 6px, rgba(0,0,0,.6) 0 0 6px,  rgba(0,0,0,.4) 0 0 2px, rgba(0,0,0,.2) 0 2px 2px;
+	box-shadow:inset rgba(0,0,0,.6) 0 0 6px, rgba(0,0,0,.6) 0 0 6px, 
+		rgba(0,0,0,.4) 0 0 2px, rgba(0,0,0,.2) 0 2px 2px, rgba(255,255,255,.8) 0 0 2px, rgba(255,255,255,.6) 0 1px 2px;
+	}
+
+#intro{
+	background:url(../img/bgs/1440x900.png) 50% 0 repeat;
+	height: 800px;
+	margin: 0 auto;
+	margin-bottom: 200px;
+	padding: 0;
+	color: #333;
+}
+#intro blockquote {font-size: 1.3em; background: rgba(0,0,0,.2);margin-top: 1em;color: white;}
+
+#second{
+	background: url(../img/bgs/double_lined.png) 0 0 repeat;
+	color: white;
+	height: 1300px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 0;
+	padding-top: 180px;
+	color: #333;
+}
+
+#third{
+	background: url(../img/bgs/project_paper.png) 0 0 repeat;
+	color: white;
+	height: 650px;
+	padding: 0;	
+	color: #333;
+}
+#more_than_a_grid, #intro_left, #intro_right {	padding-top: 180px;}
+
+.bg, .bg2, .bg3 {
+	background: url(../img/trainers.png) 50% 0 no-repeat fixed;
+	height: 600px;
+	margin: 0 auto;
+	padding: 0;
+	position: absolute;
+	width: 900px;
+}
+#third .bg{
+	background: url(../img/trainers.png) 50% 0 no-repeat fixed;
+	z-index: 200;
+}
+
+#third .bg2{
+	background: url(../img/trainers.png) 50% 0 no-repeat fixed;
+	z-index: 300;
+}
+
+#third .bg3{
+	background: url(../img/trainers.png) 50% 0 no-repeat fixed;
+	z-index: 400;
+}
+
+#fourth {
+	background: url(../img/bgs/natural_paper.png) 0 0 repeat;
+	margin: 0 auto;
+	padding: 40px 0 0 0;}
+
+#fourth .container {height: 600px;
+	padding-top: 180px;
+}
+
+#fifth{
+	background: url(../img/bgs/low_contrast_linen.png) 0 0 repeat;
+	height: 600px;
+	margin: 0 auto;
+	padding: 40px 0 0 0;
+	text-shadow: #000 0 -1px 0;
+}
+
+.paperc====utout {
+	padding: .6em 1.6em;
+	color: #000;
+	background: url(../img/bgs/natural_paper.png) 0 0 repeat;
+	-o-box-shadow:inset rgba(0,0,0,.6)0 0 2px, inset rgba(0,0,0,.6)0 0 12px;
+	-khtml-box-shadow:inset rgba(0,0,0,.6)0 0 1px, inset rgba(0,0,0,.6)0 0 12px;
+	-moz-box-shadow:inset rgba(0,0,0,.6)0 0 1px, inset rgba(0,0,0,.6)0 0 12px;
+	-webkit-box-shadow:inset rgba(0,0,0,.6)0 0 1px, inset rgba(0,0,0,.6)0 0 12px;
+	box-shadow:inset rgba(0,0,0,.6)0 0 2px, inset rgba(0,0,0,.6)0 0 12px;
+	
+} 
+/* Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {
+	}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {
+	}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {
+	}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+	}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {
+	}

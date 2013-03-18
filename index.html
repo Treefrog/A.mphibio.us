@@ -1,0 +1,675 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="ie ie9" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]>
+<!--[if IEMobile 7 ]>    <html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js"> <!--<![endif]-->
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Amphibious CSS | An Elegant HTML5 Boilerplate for Responsive Web Development | 1.0.0-a.1 March 19, 2013</title>
+<meta name="description" content="A.mphibio.us is a responsive design tool for rapid development has a familiar sixteen column, lightweight 960 grid as its base, but elegantly scales down to downsized browser windows">
+<meta name="keywords" content="css3, html5, responsive, web, design, mobile layout, responsive design">
+
+<link rel="canonical" href="http://a.mphibio.us/index.html" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/touch/apple-touch-icon-144x144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/touch/apple-touch-icon-114x114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/touch/apple-touch-icon-72x72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="/img/touch/apple-touch-icon-57x57-precomposed.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon-precomposed.png">
+
+<script src="js/libs/modernizr-2.5.3.min.js"></script><!-- iPhone SPLASHSCREEN-->
+<link href="/img/startup/startup.png" media="(device-width: 320px)" rel="apple-touch-startup-image">
+<!-- iPhone (Retina) SPLASHSCREEN-->
+<link href="/img/startup/startup-retina.png" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+<!-- iPad (portrait) SPLASHSCREEN-->
+<link href="/img/startup/startup-tablet-portrait.png" media="(device-width: 768px) and (orientation: portrait)" rel="apple-touch-startup-image">
+<!-- iPad (landscape) SPLASHSCREEN-->
+<link href="/img/startup/startup-tablet-landscape.png" media="(device-width: 768px) and (orientation: landscape)" rel="apple-touch-startup-image">
+<!-- iPad (Retina, portrait) SPLASHSCREEN-->
+<link href="/img/startup/startup-tablet-portrait-retina.png" media="(device-width: 1536px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+<!-- iPad (Retina, landscape) SPLASHSCREEN-->
+<link href="/img/startup/startup-tablet-landscape-retina.png" media="(device-width: 2048px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+<!-- Tile icon for Win8 (144x144 + tile color) -->
+<meta name="msapplication-TileImage" content="/img/touch/apple-touch-icon-144x144-precomposed.png">
+<meta name="msapplication-TileColor" content="#000000">
+
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, , maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="cleartype" content="on">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="A.mphibio.us">
+
+<link rel="stylesheet" href="css/a.mphibio.us.min.css">
+
+<link rel="stylesheet" type="text/css" media="screen" href="css/sequencejs-theme.modern-slide-in.css" />
+<!--[if lt IE 9]><link rel="stylesheet" type="text/css" media="screen" href="css/sequencejs-theme.modern-slide-in.ie.css" /><![endif]-->
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/libs/jquery-1.9.1.min.js"><\/script>')</script>
+<!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
+<script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
+<script type="text/javascript" src="js/libs/sequence.jquery-min.js"></script>
+	<script type="text/javascript">	
+		
+		/mobile/i.test(navigator.userAgent) && !location.hash && setTimeout(function () {
+		  if (!pageYOffset) window.scrollTo(0, 1);
+		}, 1000);
+		
+		$(document).ready(function(){
+			var options = {
+				nextButton: true,
+				prevButton: true,
+				animateStartingFrameIn: true,
+				transitionThreshold: 250,
+				preloadTheseFrames: [1],
+				preloadTheseImages: [
+					"img/tn-iphone.png",
+					"img/tn-code.png",
+					"img/tn-design.png"
+				]
+			};
+
+			var sequence = $("#sequence").sequence(options).data("sequence");
+
+			sequence.afterLoaded = function(){
+				$("#nav").fadeIn(100);
+				$("#nav li:nth-child("+(sequence.settings.startingFrameID)+") img").addClass("active");
+			}
+
+			sequence.beforeNextFrameAnimatesIn = function(){
+				$("#nav li:not(:nth-child("+(sequence.nextFrameID)+")) img").removeClass("active");
+				$("#nav li:nth-child("+(sequence.nextFrameID)+") img").addClass("active");
+			}
+			
+			$("#nav li").click(function(){
+				if(!sequence.active){
+					$(this).children("img").removeClass("active").children("img").addClass("active");
+					sequence.nextFrameID = $(this).index()+1;
+					sequence.goTo(sequence.nextFrameID);
+				}
+			});
+		});
+	</script>
+
+<script src="js/plugins.js"></script>
+<script src="js/scripts.js"></script>
+
+	<script type="text/javascript">	
+		
+    $(document).ready(function () {
+
+      // Slideshow 1
+      $("#slider1").responsiveSlides({
+        auto: false,
+        pager: false,
+        nav: true,
+        speed: 500,
+        maxwidth: 960,
+        namespace: "centered-btns"
+      });
+
+      // Slideshow 2
+      $("#slider2").responsiveSlides({
+        auto: false,
+        pager: true,
+        nav: true,
+        speed: 500,
+        maxwidth: 960,
+        namespace: "centered-btns"
+      });
+      
+     });
+	</script>
+<style type="text/css">
+  /* Grid */
+.example-grid .col {
+    background: rgba(0,0,0,.1);
+    min-height: 25px;
+    line-height: 25px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold; }
+.example-grid .col:hover {background: rgba(0,129,198,.1); }
+.example-grid { overflow: hidden; }
+</style>
+  
+</head>
+<body>
+<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+<div id="navbar" class="navbar fixed top">
+	<div class="navbar-inner">
+		<div class="container">
+			<nav>
+				<ul class="mainnav branded">
+					<li class="slideshow"><a href="#header-container">&uarr; What &amp; Why</a></li>
+					<li class="grid"><a href="#grid">Grid</a></li>
+					<li class="typo"><a href="#typography">Typography</a></li>
+					<li class="tabs_navigation"><a href="#navigation">Navigation</a></li>
+					<li class="slides"><a href="#slides">Responsive Slide Shows</a></li>
+					<li class="forms"><a href="#forms">Forms</a></li>
+					<li class="media_queries"><a href="#mediaQueries">Media Queries</a></li>
+					<li class="support"><a href="#support">Support</a></li>
+					
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<div id="header-container">
+<span id="download_button" class="r mr dmt">
+<a class="button" href="releases/a.mphibio.us_RC_1.0.1.zip" title="Download A.mphibio.us Release Candidate 1.0.1 (.zip )">Download RC 1.0.1 &darr;</a>
+</span>
+		<div id="header">
+				<img class="prev" src="img/prev.png" alt="Previous Frame" />
+				<img class="next" src="img/next.png" alt="Next Frame" />
+				
+			<div id="sequence">
+				<ul>
+					<li id="intro">
+						<h2 class="title animate-in">Responsive Design Layout from Mobile Up</h2>
+						<h3 class="subtitle animate-in">Using Sequence.js Responsive Slider with Advanced CSS3 Transitions</h3>
+						<p class="woop animate-in">A.mphibio.us has a familiar, lightweight 960 grid as its base, but elegantly scales down to downsized browser windows, tablets, mobile phones (in landscape and portrait).</p>
+						<img class="model animate-in" src="img/iphone.png" alt=" " />
+					</li>
+					<li id="rapid">
+						<h2 class="title">Fast Start => Rapid Development</h2>
+						<h3 class="subtitle">A.mphibio.us is a tool for rapid development.</h3>
+						<p class="woop animate-in">Get started fast with CSS best practices, a well-structured grid that makes mobile consideration easy, an organized file structure and super basic UI elements like lightly styled forms, buttons, tabs and more. Simple human readable code and shorthand classes makes coding a snap!</p>
+						<img class="model" src="img/code.png" alt=" " />
+					</li>
+					<li id="agnostic" class="frame3">
+						<h2 class="title">Design Agnostic</h2>
+						<h3 class="subtitle">A.mphibio.us is not intended for use as a UI framework.</h3>
+						<p class="woop animate-in"> a RDK that provides the most basic styles as a foundation, it is ready to adapt to whatever your design or style is.</p>
+						<img class="model" src="img/agnostic.png" alt=" " />
+					</li>
+				</ul>
+			</div>
+			<nav role="navigation"> 
+			<ul id="nav">
+				<li><img src="img/tn-iphone.png" alt="Mobile" /></li>
+				<li><img src="img/tn-code.png" alt="Rapid" /></li>
+				<li><img src="img/tn-design.png" alt="Agnostic" /></li>
+			</ul>
+			</nav>
+		</div>
+</div>
+
+<br class="clear">
+<header>
+	<div id="top" role="banner" class="container">
+		<hgroup>
+			<div class="sixteen col">
+				<h1 class="rmb mt">A.mphibio.us</h1>
+				<p class="meta v">Release Candidate 1.0.1 <span class="date ml">Release Date: <span class="mo">November</span> 26<sup>th</sup> 2012</span></p>
+			</div>
+		</hgroup>
+	</div>
+</header>
+<div id="main" role="main" class="container">
+
+	<div id="maincontent" class="col sixteen content">
+		<header>
+			<h2 class="dmt dmb dpb">An Elegant HTML5 Boilerplate for Responsive Web Development</h2>
+			<h5></h5>
+		</header>
+
+		<div class="section cfx" id="grid">
+			<h3>The Grid</h3>
+			<p>A.mphibio.us' base grid is a variation of the 960 grid system. The syntax is simple and it's effective cross browser, but the awesome part is that it also has the flexibility to go mobile like a champ. <strong>Go ahead, resize the browser and watch as the layout reacts!</strong></p>
+			<div class="example-grid">
+				<div class="one col first">One</div>
+				<div class="fifteen col last">Fifteen</div>
+				<div class="fourteen col first">Fourteen</div>
+				<div class="two col last">Two</div>
+				<div class="three col first">Three</div>
+				<div class="thirteen col last">Thirteen</div>
+				<div class="twelve col first">Twelve</div>
+				<div class="four col last">Four</div>
+				<div class="five col first">Five</div>
+				<div class="eleven col last">Eleven</div>
+				<div class="ten col first">Ten</div>
+				<div class="six col last">Six</div>
+				<div class="seven col first">Seven</div>
+				<div class="nine col last">Nine</div>
+				<div class="eight col first">Eight</div>
+				<div class="eight col last">Eight</div>
+				<div class="sixteen col first last">Sixteen</div>
+				<div class="one-third col first">One Third</div>
+				<div class="one-third col">One Third</div>
+				<div class="one-third col last">One Third</div>
+				<div class="one-third col first">One Third</div>
+				<div class="two-thirds col last">Two Thirds</div>
+				<div class="one-quarter col first equalize">One Quarter</div>
+				<div class="one-quarter col equalize">One Quarter</div>
+				<div class="one-quarter col equalize">One Quarter</div>
+				<div class="one-quarter col equalize last">One Quarter</div>
+				<div class="one-quarter col first equalize">One Quarter</div>
+				<div class="three-quarters col last equalize">Three Quarters</div>
+				<div class="one-quarter col first equalize">One Quarter</div>
+				<div class="half col equalize">Half</div>
+				<div class="one-quarter col last equalize">One Quarter</div>
+				<div class="half col first">Half</div>
+				<div class="half col last">Half</div>
+				
+			</div>
+			
+		</div>
+
+		<div class="section clearfix" id="typography">
+			<h3>Typography</h3>
+			<p>The typography of A.mphibio.us is designed to create a strong hierarchy with basic styles. The primary font is Lucida Grande, but the font stack can be easily changed with just a couple adjustments. Regular paragraphs are set at a 13px base with 1.3 line height.</p>
+			<div class="row">
+				<div class="seven col first headings">
+					<h1>Heading &lt;h1&gt;</h1>
+					<h2>Heading &lt;h2&gt;</h2>
+					<h3>Heading &lt;h3&gt;</h3>
+					<h4>Heading &lt;h4&gt;</h4>
+					<h5>Heading &lt;h5&gt;</h5>
+					<h6>Heading &lt;h6&gt;</h6>
+				</div>
+				<div class="five col last">
+					<blockquote>
+						<p>Everybody love nice blockquote style. These are great for testimonials as well!</p>
+						<cite><span>Clive Moore</span>, A.mphibio.us Creator</cite>
+					</blockquote>
+				</div>
+			</div>
+		</div>
+		
+		<div class="section cfx" id="navigation">
+			<h3>Navigation</h3>
+			<h4>Horzintal menu bar</h4>
+			<div class="navbar-inner">
+			<nav role="navigation">
+				<ul class="mainnav">
+					<li class="what"><a href="#whatAndWhy">What &amp; Why</a></li>
+					<li class="grid"><a href="#grid">Grid</a></li>
+					<li class="typo"><a href="#typography">Typography</a></li>
+					<li class="buttons"><a href="#buttons">Buttons</a></li>
+					<li class="tabs"><a href="#tabs">Tabs</a></li>
+					<li class="forms"><a href="#forms">Forms</a></li>
+					<li class="media_queries"><a href="#mediaQueries">Media Queries</a></li>
+					<li class="support"><a href="#support">Support</a></li>
+				</ul>
+			</nav>		
+			</div>
+			<h5>Breadcrumbs</h5>
+			<nav>
+				<ul class="breadcrumb">
+					<li><a href="#">This is a link</a></li>
+					<li><a href="#">Lorem link</a></li>
+					<li><a href="#">Dolor link two</a></li>
+					<li><a href="#">Here is a link</a></li>
+					<li class="active">Active Link</li>
+				</ul>			
+			</nav>	
+					
+			<h3>Tabs</h3>
+			<p>Some very simple tabs that have dead simple jQuery that hook them up to their corresponding content.</p>
+			<ul class="tabs">
+				<li><a class="active" href="#simple">Simple</a></li>
+				<li><a href="#lightweight">Lightweight</a></li>
+				<li><a href="#mobileFriendly">Mobile</a></li>
+			</ul>
+			<ul class="tabs-content">
+				<li class="active" id="simple">The tabs are clean and simple unordered-list markup and basic CSS.</li>
+				<li id="lightweight">The tabs are cross-browser, but don't need a ton of hacky CSS or markup.</li>
+				<li id="mobileFriendly">The tabs work like a charm even on mobile devices. If there are too many they will stack (it's not completely awesome, but still retains functionality).</li>
+			</ul>
+					
+			<div class="col eight first">
+			<h4>Pagination</h4>
+			<nav role="navigation">
+			<ul class="pager_nav">
+				<li>
+					<ul class="button_grp">
+						<li><a class="button first" href="#">First</a></li>
+						<li class="active">1</li>
+						<li><a class="button" href="#">2</a></li>
+						<li><a class="button" href="#">3</a></li>
+						<li><a class="button" href="#">4</a></li>
+						<li><a class="button" href="#">5</a></li>
+						<li><a class="button" href="#">...</a></li>
+						<li><a class="button" href="#">Last</a></li>
+					</ul>
+				</li>
+				<li><input type="text" class="rmb rmt first last col one"> <button type="button" class="button last">Jump</button></li>
+			</ul>
+			</nav>
+			<nav role="navigation">
+				<ul class="button_grp">
+					<li><a class="button first" href="#"><b class="east"></b> Prev</a></li>
+					<li><a class="button last" href="#">Next <b class="west"></b></a></li>
+				</ul>
+			</nav>
+			</div>
+			<div class="col eight last">
+			<h4>Filter Nav</h4>
+				<nav>
+				<dl class="filter_nav cfx">
+				  <dt>Filter by:</dt>
+				  <dd class="active"><a href="#">Option 1</a></dd>
+				  <dd><a href="#">Option 2</a></dd>
+				  <dd><a href="#">Option 3</a></dd>
+				</dl>
+				</nav>
+			</div>
+		</div>
+
+		<div class="section" id="slides">
+		<div class="row mb">
+			 <div class="rslides_container dmb">
+			      <ul class="rslides" id="slider1">
+			        <li><img src="img/1.jpg" alt="" />
+				        <div class="caption">
+				        	<h2>Configurable Recycling Containers Support Recycling at Every Step</h2>
+				        	<p>Vestibulum id ligula porta felis euismod setmper. Sed posuere consectetur est at lobortis.</p>
+				        	<a class="button r read_more small" href="#top">Read more</a>
+				        </div>
+			        </li>
+			        <li><img src="img/2.jpg" alt="" />
+				        <div class="caption">
+				        	<h2>Configurable Recycling Containers Support Recycling at Every Step</h2>
+				        	<p>Vestibulum id ligula porta felis euismod setmper. Sed posuere consectetur est at lobortis.</p>
+				        	<a class="button r read_more small" href="#top">Read more</a>
+				        </div></li>
+			        <li><img src="img/3.jpg" alt="" />
+				        <div class="caption">
+				        	<h2>Configurable Recycling Containers Support Recycling at Every Step</h2>
+				        	<p>Vestibulum id ligula porta felis euismod setmper. Sed posuere consectetur est at lobortis.</p>
+				        	<a class="button r read_more small" href="#top">Read more</a>
+				        </div></li>
+			      </ul>
+			    </div>
+	    </div>
+		<div class="row mb">
+		
+		    <div class="rslides_container slider-b">
+		      <ul class="rslides" id="slider2">
+		        <li><img src="img/1.jpg" alt="" />
+			        <div class="caption">
+			        	<h2>Configurable Recycling Containers Support Recycling at Every Step</h2>
+			        </div>
+		        </li>
+		        <li><img src="img/2.jpg" alt="" />
+			        <div class="caption">
+			        	<h2>Configurable Recycling Containers Support Recycling at Every Step</h2>
+			        </div></li>
+		        <li><img src="img/3.jpg" alt="" />
+			        <div class="caption">
+			        	<h2>Configurable Recycling Containers Support Recycling at Every Step</h2>
+			        </div></li>
+		      </ul>
+		    </div>
+
+		</div>
+		
+
+		</div>
+		<div class="section clearfix" id="forms">
+			<h3>Buttons</h3>
+			<p>Buttons are intended for action and thus should have appropriate weight. The standard button is given that weight with a little bit of depth and a strong hover.</p>
+			<a href="#" class="button">Click Me For Action</a>
+			
+			<h3>Forms</h3>
+			<p>Forms can be one of the biggest pains for web developers, but just use these dead simple styles and you should be good to go. </p>
+			<div class="five col first">
+			
+			<h4>Search Field</h4>
+			<form action="/" class="search">
+				<fieldset>
+					<input type="text" placeholder="Search" />
+					<input type="submit" value="Go" />
+				</fieldset>
+			</form>	
+			
+			<h4>Standard Fields</h4>
+				<form>
+					<fieldset>
+						<label class="above" for="regularInput">Regular Input</label>
+						<input type="text" id="regularInput" placeholder="Sample Placeholder Text" />
+					</fieldset>
+					
+					<fieldset>
+						<label class="above" for="regularInputError">Regular Input with error class</label>
+						<input type="text" id="regularInputError" class="error" placeholder="Sample of an error field" />
+					</fieldset>
+					
+					<fieldset>
+						<label class="above" for="regularTextarea">Regular Textarea</label>
+						<textarea id="regularTextarea"></textarea>
+					</fieldset>
+					
+					<fieldset>
+					<label class="above" for="selectList">Select List</label>
+					<div class="styled_select">
+					<select id="selectList">
+						<option value="Option 1">Option 1</option>
+						<option value="Option 2">Option 2</option>
+						<option value="Option 3">Option 3</option>
+						<option value="Option 4">Option 4</option>
+					</select>
+					</div>
+					</fieldset>
+					<fieldset>
+					  <legend>Check in:</legend>
+					  <p><label>Date: <input type="date" name="checkin-date"></label>
+					</fieldset>
+					
+					<button type="submit">Submit Form</button>
+				</form>
+			</div>
+			<div class="nine col push_one last">
+			<h4>Multi Form</h4>
+			<form action="/" class="multi beside">
+			<fieldset>
+				<label for="name">Name</label>
+				<input type="text" id="name" class="form-text" />
+				<p class="form-help">This is help text under the form field.</p>
+			</fieldset>
+			
+			<fieldset>
+				<label for="email">Email</label>
+				<input type="email" id="email" class="form-text" />
+			</fieldset>
+			
+			<fieldset>
+				<label for="gender">Gender</label>
+				<div class="styled_select">
+				<select id="gender">
+					<option>Male</option>
+					<option>Female</option>
+					<option>Cylon</option>
+				</select>
+				</div>
+			</fieldset>
+		
+			<fieldset class="radio">
+				<label for="notifications">Notifications</label>
+				<ul>
+					<li><label><input type="radio" name="notifications" /> Send me email</label></li>
+					<li><label><input type="radio" name="notifications" /> Don't send me email</label></li>
+					<li><label><input type="radio" name="notifications" /> Send me flowers</label></li>
+				</ul>
+			</fieldset>
+		
+			<fieldset>
+				<label for="url">URL</label>
+				<input type="url" id="url" class="form-text" placeholder="http://yourdomain.com" />
+			</fieldset>
+		
+			<fieldset>
+				<label for="bio">Bio</label>
+				<textarea id="bio"></textarea>
+			</fieldset>
+			
+			<fieldset class="check">
+				<label><input type="checkbox" /> I accept the terms of service and lorem ipsum.</label>
+			</fieldset>
+		
+			<fieldset class="form-actions">
+				<input type="submit" value="Submit" />
+			</fieldset>
+		</form>			
+						
+			
+			</div>
+		
+		</div>
+
+		<div class="section" id="mediaQueries">
+			<h3>Media Queries</h3>
+			<p>A.mphibio.us uses a <strong>lot</strong> of media queries to serve the scalable grid, but also for the convenience of styling your site on different size screens. A.mphibio.us' media queries are almost exclusively targeted at max and min widths rather than device sizes or orientations. The advantage of this is browsers and future mobile devices that don't map to exact set dimensions will still benefit from the styles. That being said, all of the queries were written to be optimal on Apple iOS devices. The built in media queries include:</p>
+			<ul class="square">
+				<li><strong>Smaller than 960</strong>: Smaller than the standard base grid</li>
+				<li><strong>Tablet Portrait</strong>: Between 768px and 959px</li>
+				<li><strong>All Mobile Sizes</strong>: Less than 767px</li>
+				<li><strong>Just Mobile Landscape</strong>: Between 480px and 767px</li>
+				<li><strong>Just Mobile Portrait</strong>: Less than 479px</li>
+			</ul>
+		</div>
+
+		<div class="section" id="tables">
+			<h3>Table Styles</h3>
+			<p>We hate tables for layout </p>
+			<table class="amp ios" width="100%">
+				<caption>Using caption is always a good idea for accessibility</caption>
+				<thead>
+					<tr>
+						<th>TH 1</th>
+						<th>TH Two</th>
+						<th>TH Three</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Col 1</td>
+						<td>Col 2</td>
+						<td>Col 3</td>
+					</tr>
+					<tr>
+						<td>Col 1</td>
+						<td>Col 2</td>
+						<td>Col 3</td>
+					</tr>
+					<tr>
+						<td>Col 1</td>
+						<td>Col 2</td>
+						<td>Col 3</td>
+					</tr>
+					<tr>
+						<td>Col 1</td>
+						<td>Col 2</td>
+						<td>Col 3</td>
+					</tr>
+					<tr>
+						<td>Col 1</td>
+						<td>Col 2</td>
+						<td>Col 3</td>
+					</tr>
+					<tr>
+						<td>Col 1</td>
+						<td>Col 2</td>
+						<td>Col 3</td>
+					</tr>
+					<tr>
+						<td>Col 1</td>
+						<td>Col 2</td>
+						<td>Col 3</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<th>TF 1</th>
+						<th>TF 2</th>
+						<th>TF 3</th>
+					</tr>
+				</tfoot>
+			</table>
+						
+		</div>
+
+		<div class="section" id="support">
+			<h3>Support for A.mphibio.us</h3>
+			<p>Do you have feedback, questions or thoughts about A.mphibio.us - email me at <em>clive@lassosoft.com</em> and I will get back to you as soon as I can :)</p>
+			<ul class="tabs">
+				<li><a class="active" href="#browsers">Browsers</a></li>
+				<li><a href="#changelog">Changelog</a></li>
+				<li><a href="#licensing">License</a></li>
+			</ul>
+			<ul class="tabs-content">
+				<li class="active" id="browsers">
+					<p>A.mphibio.us has been tested across as many devices and browsers as I could get my hands on:</p>
+					<ul class="square add-bottom">
+						<li>Latest Chrome (Mac/PC)</li>
+						<li>Firefox 4.0, 3.6, 3.5, 3.0 (Mac/PC)</li>
+						<li>Latest Safari</li>
+						<li>IE9, IE8, IE7</li>
+						<li>iPhone (Retina)</li>
+						<li>Droid (Charge/Original)</li>
+						<li>iPad</li>
+					</ul>
+					<p>There is a small small issue with using media queries&#8212;older non-CSS3 simply browsers aren&#8217;t going to respond to them&#8212;they will be served the standard 960 grid even if they are resized. In the true spirit of progressive enhancment, I'm leaving it! If you are interested in a js solution to this you could try the <a href="https://github.com/scottjehl/Respond">respond.js polyfill</a>.</p>
+					<p><strong>Notes on IE</strong>: We all know IE misbehaves frequently, so through the genius of conditional CSS I've added a class of "ie" to all versions of the browser, as well as specific targets for each (i.e. "ie6", "ie7", "ie8"). It's not a perfect world, but this will help you rule IE.</p>
+				</li>
+				<li id="changelog">
+					<ul class="square">
+						<li>
+							<strong>V0.0.5b</strong> <em>(5/8/2012)</em>: First beta use in production environment
+						</li>
+						<li>
+							<strong>V0.0.6b</strong> <em>(5/13/2012)</em>: First beta inclusion with <abbr title="Ultra Simple Framework for Lasso">USeFuL</abbr>.
+						</li>
+						<li>
+							<strong>V1.0.0</strong> <em>(6/1/2012)</em>: Initial public release of Tadpole.
+						</li>
+						<li>
+							<strong>RC 1.0.0</strong> <em>(9/28/2012)</em>: Initial public release of A.mphibio.us.
+						</li>
+					</ul>
+				</li>
+				<li id="licensing">
+					<p>All parts of A.mphibio.us are free to use and abuse under the open-source MIT license. The full licensing language can be found here: <a href="http://www.opensource.org/licenses/mit-license.php">http://www.opensource.org/licenses/mit-license.php</a>. </p>
+				
+				</li>
+			</ul>
+		</div>
+
+	</div><!-- content -->
+
+</div><!-- container -->
+
+</div>
+<footer>
+	<div class="container" id="attribution">
+		<div class="col sixteen dpt">
+		<p class="remove-bottom"><small>Created by <a href="http://www.clivemoore.ca">Clive Moore</a>, at <a href="http://www.lassosoft.com">LassoSoft Inc.</a> <span class="r"><small><a href="#header-container">Back to top &#x2191;</a></span></p>
+		
+		</div>
+	</div>
+</footer>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-35159096-Y']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
