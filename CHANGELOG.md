@@ -1,8 +1,7 @@
-### Alpha Release 1.0.0 (Tuesday, March 18, 2013)
+### Alpha Release 1.0.0-a.1 (Tuesday, March 18, 2013)
 
 * Removed LassoSoft theme from base files completely (minor styling remains)
 * Added Grunt Setup and package files
-* Removed A.mphibio.us Github repo
 * Added into Treefrog Github repo
 * Added list-style examples
 
