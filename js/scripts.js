@@ -41,8 +41,25 @@ $('table th:last-child').addClass('last');
 		
 	});
 	
-}); 
+	$("#slider1").responsiveSlides({
+		auto: false,
+		pager: false,
+		nav: true,
+		speed: 500,
+		maxwidth: 960,
+		namespace: "centered-btns"
+	});
+	
+	$("#slider2").responsiveSlides({
+		auto: false,
+		pager: true,
+		nav: true,
+		speed: 500,
+		maxwidth: 960,
+		namespace: "centered-btns"
+	});
 
+}); 
 
 $('.options_select').change(function(){
 	$('.options_div').each(function(){
@@ -66,3 +83,10 @@ jQuery('.openWhat').click(function(){
 		jQuery('#'+thisOfCourse+'').addClass('hide');
 	}
 });
+
+if (!jQuery.browser.mobile) {
+    jQuery('body').on('click', 'a[href^="tel:"]', function() {
+            jQuery(this).attr('href', 
+                jQuery(this).attr('href').replace(/^tel:/, 'callto:'));
+    });
+}

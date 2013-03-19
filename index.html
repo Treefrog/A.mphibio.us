@@ -20,8 +20,7 @@
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/touch/apple-touch-icon-72x72-precomposed.png">
 <link rel="apple-touch-icon-precomposed" href="/img/touch/apple-touch-icon-57x57-precomposed.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon-precomposed.png">
-
-<script src="js/libs/modernizr-2.5.3.min.js"></script><!-- iPhone SPLASHSCREEN-->
+<!-- iPhone SPLASHSCREEN-->
 <link href="/img/startup/startup.png" media="(device-width: 320px)" rel="apple-touch-startup-image">
 <!-- iPhone (Retina) SPLASHSCREEN-->
 <link href="/img/startup/startup-retina.png" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
@@ -48,10 +47,11 @@
 
 <link rel="stylesheet" href="css/a.mphibio.us.min.css">
 
-<link rel="stylesheet" type="text/css" media="screen" href="css/sequencejs-theme.modern-slide-in.css" />
-<!--[if lt IE 9]><link rel="stylesheet" type="text/css" media="screen" href="css/sequencejs-theme.modern-slide-in.ie.css" /><![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="css/lib/sequencejs-theme.modern-slide-in.css" />
+<!--[if lt IE 9]><link rel="stylesheet" type="text/css" media="screen" href="css/lib/sequencejs-theme.modern-slide-in.ie.css" /><![endif]-->
 
 
+<script src="js/libs/modernizr-2.6.2.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/libs/jquery-1.9.1.min.js"><\/script>')</script>
 <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
@@ -99,35 +99,10 @@
 		});
 	</script>
 
+
 <script src="js/plugins.js"></script>
 <script src="js/scripts.js"></script>
 
-	<script type="text/javascript">	
-		
-    $(document).ready(function () {
-
-      // Slideshow 1
-      $("#slider1").responsiveSlides({
-        auto: false,
-        pager: false,
-        nav: true,
-        speed: 500,
-        maxwidth: 960,
-        namespace: "centered-btns"
-      });
-
-      // Slideshow 2
-      $("#slider2").responsiveSlides({
-        auto: false,
-        pager: true,
-        nav: true,
-        speed: 500,
-        maxwidth: 960,
-        namespace: "centered-btns"
-      });
-      
-     });
-	</script>
 <style type="text/css">
   /* Grid */
 .example-grid .col {
@@ -159,21 +134,21 @@
 					<li class="media_queries"><a href="#mediaQueries">Media Queries</a></li>
 					<li class="support"><a href="#support">Support</a></li>
 					
-				</ul>
+				</ol>
 			</nav>
 		</div>
 	</div>
 </div>
 <div id="header-container">
 <span id="download_button" class="r mr dmt">
-<a class="button" href="releases/a.mphibio.us_RC_1.0.1.zip" title="Download A.mphibio.us Release Candidate 1.0.1 (.zip )">Download RC 1.0.1 &darr;</a>
+<a class="button" href="releases/a.mphibio.us_1.0.0-a.1.zip" title="Download A.mphibio.us Alpha Release 1.0.0 a.1(.zip )">A.mphibio.us &darr;</a>
 </span>
 		<div id="header">
 				<img class="prev" src="img/prev.png" alt="Previous Frame" />
 				<img class="next" src="img/next.png" alt="Next Frame" />
 				
 			<div id="sequence">
-				<ul>
+				<ol>
 					<li id="intro">
 						<h2 class="title animate-in">Responsive Design Layout from Mobile Up</h2>
 						<h3 class="subtitle animate-in">Using Sequence.js Responsive Slider with Advanced CSS3 Transitions</h3>
@@ -192,14 +167,14 @@
 						<p class="woop animate-in"> a RDK that provides the most basic styles as a foundation, it is ready to adapt to whatever your design or style is.</p>
 						<img class="model" src="img/agnostic.png" alt=" " />
 					</li>
-				</ul>
+				</ol>
 			</div>
 			<nav role="navigation"> 
 			<ul id="nav">
 				<li><img src="img/tn-iphone.png" alt="Mobile" /></li>
 				<li><img src="img/tn-code.png" alt="Rapid" /></li>
 				<li><img src="img/tn-design.png" alt="Agnostic" /></li>
-			</ul>
+			</ol>
 			</nav>
 		</div>
 </div>
@@ -276,12 +251,119 @@
 					<h4>Heading &lt;h4&gt;</h4>
 					<h5>Heading &lt;h5&gt;</h5>
 					<h6>Heading &lt;h6&gt;</h6>
+					
+					<div class="col first three mt">
+						<ul>
+							<li>Default Bullets
+							<ul>
+								<li>Including Some
+								<ul>
+									<li>Nesting Styles</li>
+								</ul></li>
+							</ul></li>
+						</ul>
+						<ul class="disc">
+							<li>Disc Bullets
+							<ul class="circle">
+								<li>Circle Bullets
+								<ul class="square">
+									<li>Square Bullets</li>
+								</ul></li>
+							</ul></li>
+						</ul>
+						<ul class="square">
+							<li>Square Bullets
+							<ul class="disc">
+								<li>Disc Bullets
+								<ul class="circle">
+									<li>Circle Bullets</li>
+								</ul></li>
+							</ul></li>
+						</ul>
+						<ul class="img">
+							<li>Image Bullets</li>
+						</ul>
+					</div>
+					<div class="col four last mt">
+						<ol>
+							<li>Ordered Lists
+							<ol>
+								<li>Including Some
+								<ol>
+									<li>Deeply Nesting
+										<ol>
+											<li>&lt;ol&gt; Styles</li>
+										</ol></li>
+								</ol></li>
+								<li>Including
+									<ol>
+										<li>Deeply Nesting</li>
+										<li>Deeply Nesting</li>
+										<li>Deeply Nesting</li>
+									</ol>
+							</ol></li>
+							<li>Default Bullets
+							<ol>
+								<li>Including Some
+								<ol>
+									<li>Deeply Nesting
+										<ol>
+											<li>&lt;ol&gt; Styles</li>
+										</ol></li>
+								</ol></li>
+							</ol></li>
+						</ol>
+						<ol class="upper_roman">
+							<li>Upper Roman
+							<ol class="roman">
+								<li>Roman
+								<ol class="upper_latin">
+									<li>Upper Latin
+										<ol class="latin">
+											<li>Latin</li>
+										</ol></li>
+								</ol></li>
+							</ol></li>
+						</ol>
+						<ol class="square">
+							<li>Square Bullets
+							<ul class="disc">
+								<li>Disc Bullets
+								<ul class="circle">
+									<li>Circle Bullets</li>
+								</ol></li>
+							</ol></li>
+						</ol>
+						<ul class="img">
+							<li>Image Bullets</li>
+						</ol>
+					</div>
 				</div>
 				<div class="five col last">
 					<blockquote>
 						<p>Everybody love nice blockquote style. These are great for testimonials as well!</p>
 						<cite><span>Clive Moore</span>, A.mphibio.us Creator</cite>
 					</blockquote>
+					
+					<h5>Microformats hCard Example</h5>
+					
+					<div class="vcard">
+						<p class="fn"><a class="url" href="#">Clive Moore</a><p>
+						<p class="adr">
+							<span class="street-address">My Favourite Place</span><br>
+							<span class="region">Whotown</span>, <span class="postal-code">R0F LMA</span>, <span class="country-name">Canada</span>
+						</p>
+						<p class="tel"><a href="tel:9058364442">(905) 836 4442</a></p>
+					</div>
+					
+					<aside>
+						<div class="vcard">
+						 <address class="author"><span class="">example address block by </span>
+							<em class="fn"><a title="Stuff by Clive Moore" href="#">Clive Moore</a></em>
+						</address><span> on </span>
+							 <time datetime="2013-19-03" class="published updated">March 19<sup>th</sup>, 2013</time>
+						</div>
+					</aside>
 				</div>
 			</div>
 		</div>
@@ -300,7 +382,7 @@
 					<li class="forms"><a href="#forms">Forms</a></li>
 					<li class="media_queries"><a href="#mediaQueries">Media Queries</a></li>
 					<li class="support"><a href="#support">Support</a></li>
-				</ul>
+				</ol>
 			</nav>		
 			</div>
 			<h5>Breadcrumbs</h5>
@@ -311,7 +393,7 @@
 					<li><a href="#">Dolor link two</a></li>
 					<li><a href="#">Here is a link</a></li>
 					<li class="active">Active Link</li>
-				</ul>			
+				</ol>			
 			</nav>	
 					
 			<h3>Tabs</h3>
@@ -320,12 +402,12 @@
 				<li><a class="active" href="#simple">Simple</a></li>
 				<li><a href="#lightweight">Lightweight</a></li>
 				<li><a href="#mobileFriendly">Mobile</a></li>
-			</ul>
+			</ol>
 			<ul class="tabs-content">
 				<li class="active" id="simple">The tabs are clean and simple unordered-list markup and basic CSS.</li>
 				<li id="lightweight">The tabs are cross-browser, but don't need a ton of hacky CSS or markup.</li>
 				<li id="mobileFriendly">The tabs work like a charm even on mobile devices. If there are too many they will stack (it's not completely awesome, but still retains functionality).</li>
-			</ul>
+			</ol>
 					
 			<div class="col eight first">
 			<h4>Pagination</h4>
@@ -341,16 +423,16 @@
 						<li><a class="button" href="#">5</a></li>
 						<li><a class="button" href="#">...</a></li>
 						<li><a class="button" href="#">Last</a></li>
-					</ul>
+					</ol>
 				</li>
 				<li><input type="text" class="rmb rmt first last col one"> <button type="button" class="button last">Jump</button></li>
-			</ul>
+			</ol>
 			</nav>
 			<nav role="navigation">
 				<ul class="button_grp">
 					<li><a class="button first" href="#"><b class="east"></b> Prev</a></li>
 					<li><a class="button last" href="#">Next <b class="west"></b></a></li>
-				</ul>
+				</ol>
 			</nav>
 			</div>
 			<div class="col eight last">
@@ -389,7 +471,7 @@
 				        	<p>Vestibulum id ligula porta felis euismod setmper. Sed posuere consectetur est at lobortis.</p>
 				        	<a class="button r read_more small" href="#top">Read more</a>
 				        </div></li>
-			      </ul>
+			      </ol>
 			    </div>
 	    </div>
 		<div class="row mb">
@@ -409,7 +491,7 @@
 			        <div class="caption">
 			        	<h2>Configurable Recycling Containers Support Recycling at Every Step</h2>
 			        </div></li>
-		      </ul>
+		      </ol>
 		    </div>
 
 		</div>
@@ -496,11 +578,11 @@
 		
 			<fieldset class="radio">
 				<label for="notifications">Notifications</label>
-				<ul>
+				<ol>
 					<li><label><input type="radio" name="notifications" /> Send me email</label></li>
 					<li><label><input type="radio" name="notifications" /> Don't send me email</label></li>
 					<li><label><input type="radio" name="notifications" /> Send me flowers</label></li>
-				</ul>
+				</ol>
 			</fieldset>
 		
 			<fieldset>
@@ -536,7 +618,7 @@
 				<li><strong>All Mobile Sizes</strong>: Less than 767px</li>
 				<li><strong>Just Mobile Landscape</strong>: Between 480px and 767px</li>
 				<li><strong>Just Mobile Portrait</strong>: Less than 479px</li>
-			</ul>
+			</ol>
 		</div>
 
 		<div class="section" id="tables">
@@ -606,7 +688,7 @@
 				<li><a class="active" href="#browsers">Browsers</a></li>
 				<li><a href="#changelog">Changelog</a></li>
 				<li><a href="#licensing">License</a></li>
-			</ul>
+			</ol>
 			<ul class="tabs-content">
 				<li class="active" id="browsers">
 					<p>A.mphibio.us has been tested across as many devices and browsers as I could get my hands on:</p>
@@ -618,7 +700,7 @@
 						<li>iPhone (Retina)</li>
 						<li>Droid (Charge/Original)</li>
 						<li>iPad</li>
-					</ul>
+					</ol>
 					<p>There is a small small issue with using media queries&#8212;older non-CSS3 simply browsers aren&#8217;t going to respond to them&#8212;they will be served the standard 960 grid even if they are resized. In the true spirit of progressive enhancment, I'm leaving it! If you are interested in a js solution to this you could try the <a href="https://github.com/scottjehl/Respond">respond.js polyfill</a>.</p>
 					<p><strong>Notes on IE</strong>: We all know IE misbehaves frequently, so through the genius of conditional CSS I've added a class of "ie" to all versions of the browser, as well as specific targets for each (i.e. "ie6", "ie7", "ie8"). It's not a perfect world, but this will help you rule IE.</p>
 				</li>
@@ -636,13 +718,31 @@
 						<li>
 							<strong>RC 1.0.0</strong> <em>(9/28/2012)</em>: Initial public release of A.mphibio.us.
 						</li>
-					</ul>
+					</ol>
 				</li>
 				<li id="licensing">
 					<p>All parts of A.mphibio.us are free to use and abuse under the open-source MIT license. The full licensing language can be found here: <a href="http://www.opensource.org/licenses/mit-license.php">http://www.opensource.org/licenses/mit-license.php</a>. </p>
 				
 				</li>
-			</ul>
+			</ol>
+		</div>
+
+		<div class="section" id="comments">
+		<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'amphibiouscss'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
 		</div>
 
 	</div><!-- content -->
