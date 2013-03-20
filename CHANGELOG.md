@@ -1,11 +1,11 @@
 ### Alpha Release 1.0.0-a.1 (Tuesday, March 19, 2013)
 
-* Removed LassoSoft theme from base files completely (minor styling remains)
 * Added Grunt Setup and package files
 * Added into Treefrog Github repo
 * Added list-style examples
 * Added tel:/callto: handler using (http://detectmobilebrowser.com/)
 * Added PSD Icon Template [1.2] and .atn to Source Files
+* Added additional table styles
 
 ### Public Beta 0.0.2 (Thursday, March 14, 2013)
 

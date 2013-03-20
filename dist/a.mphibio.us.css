@@ -914,7 +914,7 @@ hr { border: solid #ececec; border-width: 1px 0 0; clear: both; margin: 1em 0 2e
 
 /* Link-o-matic
 ================================================== */
-	a, a:visited { color: #333; text-decoration: underline; outline: 0;	-webkit-transition: color .2s linear; }
+	a, a:visited { color: #1b378c; outline: 0;	-webkit-transition: color .2s linear; }
 	a:hover, a:focus { color: #000; }
 	p a, p a:visited { line-height: inherit; }
 
@@ -924,8 +924,6 @@ hr { border: solid #ececec; border-width: 1px 0 0; clear: both; margin: 1em 0 2e
 	ul, ol { margin-bottom: 1.625em; }
 	ul { list-style: circle outside; }
 	ol { list-style: decimal; }
-	ol ol { list-style: lower-alpha; }
-	ol ol ol {list-style: lower-latin;}
 	ol, ul.square, ul.circle, ul.disc { margin-left: 2em; }
 	ul.square { list-style: square outside; }
 	ul.circle { list-style: circle outside; }
@@ -941,6 +939,8 @@ hr { border: solid #ececec; border-width: 1px 0 0; clear: both; margin: 1em 0 2e
 	ul ul li, ul ol li,
 	ol ol li, ol ul li { margin-bottom: .5em; }
 	li { margin-bottom: 1em; }
+	ol ol, ol ol ol ol { list-style: lower-alpha; }
+	ol ol ol {list-style: lower-roman;}
 
 /* Tables
 ================================================== */
@@ -952,9 +952,9 @@ table {
 
 table caption {
 	background: #fefefe;
-	color: #cfcfcf;
+	color: #747474;
 	text-align: left;
-	padding:.625em;
+	padding:.625em 0;
 	padding-bottom: .825em;
 }
 
@@ -964,15 +964,27 @@ table td, table th {
 	text-align: left;
 }
 
+table td {border-top: 1px solid #cfcfcf;}
 table th {
-	background: #efefef;
 	font-weight: bold;
 	text-shadow: #fff 0 1px 0;
 	border-top: 0px;
 }
 
+table thead th {border-bottom: 2px solid #cfcfcf;}
+table tfoot th {border-top: 3px double #cfcfcf;}
+
+table tfoot th {
+	background: #ffffff;
+	font-weight: bold;
+	text-shadow: #fff 0 1px 0;
+}
+
 td.no-wrap {white-space: nowrap;}
 
+table.amp thead th {background: #efefef;}
+table.amp tr.odd td {background: #fff;}
+table.amp tr.even td {background: #efefef;}
 
 /* Images
 ================================================== */
@@ -2266,10 +2278,13 @@ table.amp.ios td, table.amp.ios th {
 	padding: .3em .425em;
 	text-align: left;
 	border-right: 1px solid #ccc;
-	border-top: 0px !important;
+	border-top: 1px solid rgba(255,255,255,.6);
+	_border-top: 1px solid #fff;
+	*border-top: 1px solid #fff;
+	border-bottom: 1px solid #ededed;
 }
 
-table.amp.ios th {
+table.amp.ios thead th {
 	font-weight: bold;
 	text-shadow: #fff 0 1px 0;
 	background-image:-moz-linear-gradient(top,#ffffff,#d4d4d4);
@@ -2280,11 +2295,31 @@ table.amp.ios th {
 	background-image:linear-gradient(top,#ffffff,#d4d4d4);
 	background-repeat:repeat-x;
 	border-top: 0px;
+	border-bottom: 0px;
+}
+
+table.amp.ios tfoot th {
+	font-weight: bold;
+	text-shadow: #fff 0 1px 0;
+	background-image:-moz-linear-gradient(top,#e2e2e2,#eeeeee);
+	background-image:-ms-linear-gradient(top,#e2e2e2,#eeeeee);
+	background-image:-webkit-gradient(linear,0 0,0 100%,from(#e2e2e2),to(#eeeeee));
+	background-image:-webkit-linear-gradient(top,#e2e2e2,#eeeeee);
+	background-image:-o-linear-gradient(top,#e2e2e2,#eeeeee);
+	background-image:linear-gradient(top,#e2e2e2,#eeeeee);
+	-webkit-box-shadow: rgba(0,0,0,.3) 0 1px 0;
+	 -khtml-box-shadow: rgba(0,0,0,.3) 0 1px 0;
+	   -moz-box-shadow: rgba(0,0,0,.3) 0 1px 0;
+		 -o-box-shadow: rgba(0,0,0,.3) 0 1px 0;
+			box-shadow: rgba(0,0,0,.3) 0 1px 0;
+	background-repeat:repeat-x;
+	border-top: 1px solid #969696;
+	border-bottom: 1px solid #dfdfdf;
 }
 
 table.amp.ios thead th {padding-top: 1.5em;}
-table.amp.ios tr.odd td {background: #fff;}
-table.amp.ios tr.even td {background: #efefef;}
+table.amp.ios tr.odd td {background: #f1f4f7;}
+table.amp.ios tr.even td {background: #fafafa;}
 
 /* iOS Style Tabs (activated by scripts.js)
 ================================================== */
