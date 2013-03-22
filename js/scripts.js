@@ -1,30 +1,29 @@
 /*!
-* A.mphibio.us  V1.0.0-a.1
-* Copyright 2013, @cliveMoore
+* A.mphibio.us  V1.0.0-a.2
+* Copyright 2013, @cliveMoore @Treefrog
 * http://a.mphibio.us
 * Free to use under the MIT license.
 * http://www.opensource.org/licenses/mit-license.php
-* 03/19/2013
+* 03/21/2013
 *
 */
 
 $(document).ready(function() {
 
-$('table td:first-child').addClass('first');
-$('table tr:nth-child(2n+1)').addClass('odd');
-$('table tr:nth-child(2n)').addClass('even');
-$('table tr:first-child').addClass('first');
-$('table tr:last-child').addClass('last');
-$('table td:first-child').addClass('first');
-$('table td:last-child').addClass('last');
-$('table th:first-child').addClass('first');
-$('table th:last-child').addClass('last');
+	$('table td:first-child').addClass('first');
+	$('table tr:nth-child(2n+1)').addClass('odd');
+	$('table tr:nth-child(2n)').addClass('even');
+	$('table tr:first-child').addClass('first');
+	$('table tr:last-child').addClass('last');
+	$('table td:first-child').addClass('first');
+	$('table td:last-child').addClass('last');
+	$('table th:first-child').addClass('first');
+	$('table th:last-child').addClass('last');
+	$('.ie ul.stats li:last-child').addClass('last');
 
 	$.localScroll();
 	
-	$(".equalize").equalHeights();
-	
-	$('.mainnav li').click(function(){
+		$('.mainnav li').click(function(){
 		$(this).siblings().removeClass('active');
 		$(this).addClass('active');
 	});

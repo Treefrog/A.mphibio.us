@@ -10,7 +10,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>Amphibious CSS | An Elegant HTML5 Boilerplate for Responsive Web Development | 1.0.0-a.1 March 19, 2013</title>
+<title>Amphibious | An Elegant HTML5/CSS Responsive Web Development Kit | 1.0.0-a.2 March 21, 2013</title>
 <meta name="description" content="A.mphibio.us is a responsive design tool for rapid development has a familiar sixteen column, lightweight 960 grid as its base, but elegantly scales down to downsized browser windows">
 <meta name="keywords" content="css3, html5, responsive, web, design, mobile layout, responsive design">
 
@@ -45,7 +45,10 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="apple-mobile-web-app-title" content="A.mphibio.us">
 
-<link rel="stylesheet" href="css/a.mphibio.us.min.css">
+<link rel="stylesheet" href="css/lib/normalize.css">
+<link rel="stylesheet" href="css/lib/main.css">
+<link rel="stylesheet" href="css/lib/a.mphibio.us.css">
+<link rel="stylesheet" href="css/skin/iOS5.css">
 
 <link rel="stylesheet" type="text/css" media="screen" href="css/lib/sequencejs-theme.modern-slide-in.css" />
 <!--[if lt IE 9]><link rel="stylesheet" type="text/css" media="screen" href="css/lib/sequencejs-theme.modern-slide-in.ie.css" /><![endif]-->
@@ -185,7 +188,7 @@
 		<hgroup>
 			<div class="sixteen col">
 				<h1 class="rmb mt">A.mphibio.us</h1>
-				<p class="meta v">Release Candidate 1.0.1 <span class="date ml">Release Date: <span class="mo">November</span> 26<sup>th</sup> 2012</span></p>
+				<p class="meta v">1.0.0-a.1 <span class="date ml">Release <span class="mo">March</span> 19<sup>th</sup> 2013</span></p>
 			</div>
 		</hgroup>
 	</div>
@@ -243,7 +246,7 @@
 		<div class="section clearfix" id="typography">
 			<h3>Typography</h3>
 			<p>The typography of A.mphibio.us is designed to create a strong hierarchy with basic styles. The primary font is Lucida Grande, but the font stack can be easily changed with just a couple adjustments. Regular paragraphs are set at a 13px base with 1.3 line height.</p>
-			<div class="row">
+			<div class="row pt dra">
 				<div class="seven col first headings">
 					<h1>Heading &lt;h1&gt;</h1>
 					<h2>Heading &lt;h2&gt;</h2>
@@ -252,7 +255,7 @@
 					<h5>Heading &lt;h5&gt;</h5>
 					<h6>Heading &lt;h6&gt;</h6>
 					
-					<hr class="dra">
+					<hr>
 					
 					<h6 class="mt">Blockquote Example</h6>
 					
@@ -284,16 +287,23 @@
 					</aside>
 </div>
 					
-					<div class="col first three push_one mt">
+					<div class="col first four mt">
+						<h5 class="dmt mb rb">Standard Lists</h5>
 						<ul>
-							<li>Default Unordered Lists
+							<li>Unordered Lists
 							<ul>
 								<li>Including Some
 								<ul>
 									<li>Nesting Styles</li>
 								</ul></li>
+								<li>Including Some
+								<ul>
+									<li>Nesting Styles</li>
+									<li>Nesting Styles</li>
+								</ul></li>
 							</ul></li>
 						</ul>
+						<h6>Classed Lists</h6>
 						<ul class="disc">
 							<li>Disc Bullets
 							<ul class="circle">
@@ -303,6 +313,7 @@
 								</ul></li>
 							</ul></li>
 						</ul>
+						<h6>In any order</h6>
 						<ul class="square">
 							<li>Square Bullets
 							<ul class="disc">
@@ -312,8 +323,11 @@
 								</ul></li>
 							</ul></li>
 						</ul>
+						<ul class="img">
+							<li>Image Bullets</li>
+						</ul>
 						
-						<h5 class="dmt">Definition Lists</h5>
+						<h5 class="dmt mb rb">Definition Lists</h5>
 						
 						<dl>
 							<dt>definition title</dt>
@@ -323,9 +337,18 @@
 							<dd>Description of the definition</dd>
 							<dd>Description of the definition</dd>
 						</dl>
+						
+						<h5 class="dmt mb rb">Stats Listing</h5>
+						
+						<ul class="stats">
+							<li><a href="#">1,234 <span>donuts</span></a></li>
+							<li><a href="#">567 <span>kayaks</span></a></li>
+							<li><a href="#">23,456 <span>kittens</span></a></li>
+						</ul>	
+						
 					</div>
 					
-					<div class="col four last push_one mt">
+					<div class="col four last mt">
 						<ol>
 							<li>Ordered Lists
 							<ol>
@@ -365,18 +388,6 @@
 										</ol></li>
 								</ol></li>
 							</ol></li>
-						</ol>
-						<ol class="square">
-							<li>Square Bullets
-							<ul class="disc">
-								<li>Disc Bullets
-								<ul class="circle">
-									<li>Circle Bullets</li>
-								</ol></li>
-							</ol></li>
-						</ol>
-						<ul class="img">
-							<li>Image Bullets</li>
 						</ol>
 					</div>
 					
