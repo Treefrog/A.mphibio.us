@@ -131,9 +131,11 @@
 					<li class="slideshow"><a href="#header-container">&uarr; What &amp; Why</a></li>
 					<li class="grid"><a href="#grid">Grid</a></li>
 					<li class="typo"><a href="#typography">Typography</a></li>
+					<li class="pears"><a href="#pears">Pea.rs</a></li>
 					<li class="tabs_navigation"><a href="#navigation">Navigation</a></li>
 					<li class="slides"><a href="#slides">Responsive Slide Shows</a></li>
 					<li class="forms"><a href="#forms">Forms</a></li>
+					<li class="icon_s"><a href="#icons">Icons</a></li>
 					<li class="media_queries"><a href="#mediaQueries">Media Queries</a></li>
 					<li class="support"><a href="#support">Support</a></li>
 					
@@ -246,7 +248,6 @@
 		<div class="section clearfix" id="typography">
 			<h3>Typography</h3>
 			<p>The typography of A.mphibio.us is designed to create a strong hierarchy with basic styles. The primary font is Lucida Grande, but the font stack can be easily changed with just a couple adjustments. Regular paragraphs are set at a 13px base with 1.3 line height.</p>
-			<div class="row pt dra">
 				<div class="seven col first headings">
 					<h1>Heading &lt;h1&gt;</h1>
 					<h2>Heading &lt;h2&gt;</h2>
@@ -255,7 +256,7 @@
 					<h5>Heading &lt;h5&gt;</h5>
 					<h6>Heading &lt;h6&gt;</h6>
 					
-					<hr>
+					<br>
 					
 					<h6 class="mt">Blockquote Example</h6>
 					
@@ -285,113 +286,202 @@
 							 <time datetime="2013-19-03" class="published updated">March 19<sup>th</sup>, 2013</time>
 						</div>
 					</aside>
-</div>
-					
-					<div class="col first four mt">
-						<h5 class="dmt mb rb">Standard Lists</h5>
+				</div>
+				
+				<div class="col first four mt">
+					<h5 class="mb rb">Standard Lists</h5>
+					<ul>
+						<li>Unordered Lists
 						<ul>
-							<li>Unordered Lists
+							<li>Including Some
 							<ul>
-								<li>Including Some
-								<ul>
-									<li>Nesting Styles</li>
-								</ul></li>
-								<li>Including Some
-								<ul>
-									<li>Nesting Styles</li>
-									<li>Nesting Styles</li>
-								</ul></li>
+								<li>Nesting Styles</li>
 							</ul></li>
-						</ul>
-						<h6>Classed Lists</h6>
+							<li>Including Some
+							<ul>
+								<li>Nesting Styles</li>
+								<li>Nesting Styles</li>
+							</ul></li>
+						</ul></li>
+					</ul>
+					<h6>Classed Lists</h6>
+					<ul class="disc">
+						<li>Disc Bullets
+						<ul class="circle">
+							<li>Circle Bullets
+							<ul class="square">
+								<li>Square Bullets</li>
+							</ul></li>
+						</ul></li>
+					</ul>
+					<h6>In any order</h6>
+					<ul class="square">
+						<li>Square Bullets
 						<ul class="disc">
 							<li>Disc Bullets
 							<ul class="circle">
-								<li>Circle Bullets
-								<ul class="square">
-									<li>Square Bullets</li>
-								</ul></li>
+								<li>Circle Bullets</li>
 							</ul></li>
-						</ul>
-						<h6>In any order</h6>
-						<ul class="square">
-							<li>Square Bullets
-							<ul class="disc">
-								<li>Disc Bullets
-								<ul class="circle">
-									<li>Circle Bullets</li>
-								</ul></li>
-							</ul></li>
-						</ul>
-						<ul class="img">
-							<li>Image Bullets</li>
-						</ul>
-						
-						<h5 class="dmt mb rb">Definition Lists</h5>
-						
-						<dl>
-							<dt>definition title</dt>
-							<dd>Description of the definition</dd>
-							<dd>Description of the definition</dd>
-							<dt>definition title</dt>
-							<dd>Description of the definition</dd>
-							<dd>Description of the definition</dd>
-						</dl>
-						
-						<h5 class="dmt mb rb">Stats Listing</h5>
-						
-						<ul class="stats">
-							<li><a href="#">1,234 <span>donuts</span></a></li>
-							<li><a href="#">567 <span>kayaks</span></a></li>
-							<li><a href="#">23,456 <span>kittens</span></a></li>
-						</ul>	
-						
-					</div>
-					
-					<div class="col four last mt">
-						<ol>
-							<li>Ordered Lists
-							<ol>
-								<li>Including Some
-								<ol>
-									<li>Deeply Nesting
-										<ol>
-											<li>&lt;ol&gt; Styles</li>
-										</ol></li>
-								</ol></li>
-								<li>Including
-									<ol>
-										<li>Deeply Nesting</li>
-										<li>Deeply Nesting</li>
-										<li>Deeply Nesting</li>
-									</ol>
-							</ol></li>
-							<li>Default Bullets
-							<ol>
-								<li>Including Some
-								<ol>
-									<li>Deeply Nesting
-										<ol>
-											<li>&lt;ol&gt; Styles</li>
-										</ol></li>
-								</ol></li>
-							</ol></li>
-						</ol>
-						<ol class="upper_roman">
-							<li>Upper Roman
-							<ol class="roman">
-								<li>Roman
-								<ol class="upper_latin">
-									<li>Upper Latin
-										<ol class="latin">
-											<li>Latin</li>
-										</ol></li>
-								</ol></li>
-							</ol></li>
-						</ol>
-					</div>
-					
+						</ul></li>
+					</ul>
+					<ul class="img">
+						<li>Image Bullets</li>
+					</ul>						
 				</div>
+				
+				<div class="col four last mt">
+					<ol>
+						<li>Ordered Lists
+						<ol>
+							<li>Including Some
+							<ol>
+								<li>Deeply Nesting
+									<ol>
+										<li>&lt;ol&gt; Styles</li>
+									</ol></li>
+							</ol></li>
+							<li>Including
+								<ol>
+									<li>Deeply Nesting</li>
+									<li>Deeply Nesting</li>
+									<li>Deeply Nesting</li>
+								</ol>
+						</ol></li>
+						<li>Default Bullets
+						<ol>
+							<li>Including Some
+							<ol>
+								<li>Deeply Nesting
+									<ol>
+										<li>&lt;ol&gt; Styles</li>
+									</ol></li>
+							</ol></li>
+						</ol></li>
+					</ol>
+					<ol class="upper_roman">
+						<li>Upper Roman
+						<ol class="roman">
+							<li>Roman
+							<ol class="upper_latin">
+								<li>Upper Latin
+									<ol class="latin">
+										<li>Latin</li>
+									</ol></li>
+							</ol></li>
+						</ol></li>
+					</ol>
+				</div>
+									
+		</div>
+		
+		<div class="section cfx" id="pears">
+			<h3>Content <a href="http://pea.rs">Pea.rs</a></h3>
+			
+			<div class="row pb drb">
+				<h5 class="mb drb">Article</h5>
+				
+				<article>
+					<header>
+						<h2>The Title Goes Here</h2>	
+					</header>
+					
+					<aside>
+						This is aside text lorem ipsum dolor sit amet consectetur adipisicing.
+					</aside>
+					
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis <a href="#">nostrud exercitation</a> ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
+					<footer class="meta">
+						Posted August 22, 2011
+					</footer>
+				</article>			
+								
+			</div>
+		<div class="row">
+			<div class="col nine first">
+				
+				<h5 class="mb rb">Content Slats</h5>
+				
+				<ol class="slats">
+					<li class="group">
+						<h3><a href="#">This is the title</a></h3>
+						
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="meta">August 10, 2011</span></p>
+					</li>
+					<li class="group">
+						<h3><a href="#">This is the title</a></h3>
+						
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="meta">August 10, 2011</span></p>
+					</li>
+					<li class="group">
+						<h3><a href="#">This is the title</a></h3>
+						
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="meta">August 10, 2011</span></p>
+					</li>
+				</ol>			
+										
+				
+			</div>
+			<div class="col seven last">
+				<h5 class="mb rb">Definition Lists</h5>
+				
+				<dl>
+					<dt>am·phib·i·ous <sub class="meta">noun <i>\am-ˈfi-bē-əs\</i></sub></dt>
+					<dd>: simply the best css framework</dd>
+					<dd><b>a</b> : relating to or adapted for both desktop and mobile<br>
+					&lt;amphibious devices&gt;<br>
+					<b>b</b> : executed by the coordinated action of HTML5, CSS3, and JavaScript organized for rapid development &lt;Rapid Development Tool Kit &gt;; also : architected to optimize the inherent strenghts of &lt;casscading style sheets&gt;</dd>
+					
+					<dt>am·phib·i·ous <sub class="meta">adjective <i>\am-ˈfi-bē-əs\</i></sub></dt>
+					<dd>: combining two characteristics</dd>
+					<dd><b>a</b> : relating to or adapted for both land and water<br>
+					&lt;amphibious vehicles&gt;<br>
+					<b>b</b> : executed by coordinated action of land, sea, and air forces organized for invasion &lt;an amphibious landing&gt;; also : trained or organized for such action <amphibious forces></dd>
+					
+				</dl>
+				
+				<h5 class="mb rb">Stats Listing</h5>
+				
+				<ul class="stats">
+					<li><a href="#">1,234 <span>donuts</span></a></li>
+					<li><a href="#">567 <span>kayaks</span></a></li>
+					<li><a href="#">23,456 <span>kittens</span></a></li>
+				</ul>	
+
+			</div>
+			</div>
+			<div class="row pt dra">
+			
+			
+				
+				<h5 class="mb rb">Content Slats with image</h5>
+				
+				<ol class="slats image">
+					<li class="group">
+						<a href="#">
+							<img src="img/touch/apple-touch-icon-72x72-precomposed.png" alt="thumbnail" />
+							<h3>This is the title</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="meta">August 10, 2011</span></p>
+						</a>
+					</li>
+					<li class="group">
+						<a href="#">
+							<img src="img/touch/apple-touch-icon-72x72-precomposed.png" alt="thumbnail" />
+							<h3>This is the title</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="meta">August 10, 2011</span></p>
+						</a>
+					</li>
+					<li class="group">
+						<a href="#">
+							<img src="img/touch/apple-touch-icon-72x72-precomposed.png" alt="thumbnail" />
+							<h3>This is the title</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="meta">August 10, 2011</span></p>
+						</a>
+					</li>
+				</ol>	
+				
+			</div>
+
 		</div>
 		
 		<div class="section cfx" id="navigation">
@@ -634,6 +724,304 @@
 			</div>
 		
 		</div>
+<section id="icons" class="content cfx">
+		<div class="row pb rb">
+				<h3 class="pb rb pl">Icons by <a href="http://www.entypo.com">Entypo</a></h3>
+			<ul class="icons">
+				<li title="phone">📞</li>
+				<li title="mobile">📱</li>
+				<li title="mouse"></li>
+				<li title="address"></li>
+				<li title="mail">✉</li>
+				<li title="paper-plane">🔿</li>
+				<li title="pencil">✎</li>
+				<li title="feather">✒</li>
+				<li title="attach">📎</li>
+				<li title="inbox"></li>
+				<li title="reply"></li>
+				<li title="reply-all"></li>
+				<li title="forward">➦</li>
+				<li title="user">👤</li>
+				<li title="users">👥</li>
+				<li title="add-user"></li>
+				<li title="vcard"></li>
+				<li title="export"></li>
+				<li title="location"></li>
+				<li title="map"></li>
+				<li title="compass">➢</li>
+				<li title="direction"></li>
+				<li title="hair-cross">🎯</li>
+				<li title="share"></li>
+				<li title="shareable"></li>
+				<li title="heart">♥</li>
+				<li title="heart-empty">♡</li>
+				<li title="star">★</li>
+				<li title="star-empty">☆</li>
+				<li title="thumbs-up">👍</li>
+				<li title="thumbs-down">👎</li>
+				<li title="chat"></li>
+				<li title="comment"></li>
+				<li title="quote">❞</li>
+				<li title="home">⌂</li>
+				<li title="popup"></li>
+				<li title="search">🔍</li>
+				<li title="flashlight">🔦</li>
+				<li title="print"></li>
+				<li title="bell">🔔</li>
+				<li title="link">🔗</li>
+				<li title="flag">⚑</li>
+				<li title="cog">⚙</li>
+				<li title="tools">⚒</li>
+				<li title="trophy">🏆</li>
+				<li title="tag"></li>
+				<li title="camera">📷</li>
+				<li title="megaphone">📣</li>
+				<li title="moon">☽</li>
+				<li title="palette">🎨</li>
+				<li title="leaf">🍂</li>
+				<li title="note">♪</li>
+				<li title="beamed-note">♫</li>
+				<li title="new">💥</li>
+				<li title="graduation-cap">🎓</li>
+				<li title="book">📕</li>
+				<li title="newspaper">📰</li>
+				<li title="bag">👜</li>
+				<li title="airplane">✈</li>
+				<li title="lifebuoy"></li>
+				<li title="eye"></li>
+				<li title="clock">🕔</li>
+				<li title="mic">🎤</li>
+				<li title="calendar">📅</li>
+				<li title="flash">⚡</li>
+				<li title="thunder-cloud">⛈</li>
+				<li title="droplet">💧</li>
+				<li title="cd">💿</li>
+				<li title="briefcase">💼</li>
+				<li title="air">💨</li>
+				<li title="hourglass">⏳</li>
+				<li title="gauge">🛇</li>
+				<li title="language">🎔</li>
+				<li title="network"></li>
+				<li title="key">🔑</li>
+				<li title="battery">🔋</li>
+				<li title="bucket">📾</li>
+				<li title="magnet"></li>
+				<li title="drive">📽</li>
+				<li title="cup">☕</li>
+				<li title="rocket">🚀</li>
+				<li title="brush"></li>
+				<li title="suitcase">🛆</li>
+				<li title="traffic-cone">🛈</li>
+				<li title="globe">🌎</li>
+				<li title="keyboard">⌨</li>
+				<li title="browser"></li>
+				<li title="publish"></li>
+				<li title="progress-3"></li>
+				<li title="progress-2"></li>
+				<li title="progress-1"></li>
+				<li title="progress-0"></li>
+				<li title="light-down">🔅</li>
+				<li title="light-up">🔆</li>
+				<li title="adjust">◑</li>
+				<li title="code"></li>
+				<li title="monitor">💻</li>
+				<li title="infinity">∞</li>
+				<li title="light-bulb">💡</li>
+				<li title="credit-card">💳</li>
+				<li title="database">📸</li>
+				<li title="voicemail">✇</li>
+				<li title="clipboard">📋</li>
+				<li title="cart"></li>
+				<li title="box">📦</li>
+				<li title="ticket">🎫</li>
+				<li title="rss"></li>
+				<li title="signal">📶</li>
+				<li title="thermometer">📿</li>
+				<li title="water">💦</li>
+				<li title="sweden"></li>
+				<li title="line-graph">📈</li>
+				<li title="pie-chart">◴</li>
+				<li title="bar-graph">📊</li>
+				<li title="area-graph">🔾</li>
+				<li title="lock">🔒</li>
+				<li title="lock-open">🔓</li>
+				<li title="logout"></li>
+				<li title="login"></li>
+				<li title="check">✓</li>
+				<li title="cross">❌</li>
+				<li title="squared-minus">⊟</li>
+				<li title="squared-plus">⊞</li>
+				<li title="squared-cross">❎</li>
+				<li title="circled-minus">⊖</li>
+				<li title="circled-plus">⊕</li>
+				<li title="circled-cross">✖</li>
+				<li title="minus">➖</li>
+				<li title="plus">➕</li>
+				<li title="erase">⌫</li>
+				<li title="block">🚫</li>
+				<li title="info">ℹ</li>
+				<li title="circled-info"></li>
+				<li title="help"> ❓ </li>
+				<li title="circled-help"></li>
+				<li title="warning">⚠</li>
+				<li title="cycle">🔄</li>
+				<li title="cw">⟳</li>
+				<li title="ccw">⟲</li>
+				<li title="shuffle">🔀</li>
+				<li title="back">🔙</li>
+				<li title="level-down">↳</li>
+				<li title="retweet"></li>
+				<li title="loop">🔁</li>
+				<li title="back-in-time"></li>
+				<li title="level-up">↰</li>
+				<li title="switch">⇆</li>
+				<li title="numbered-list"></li>
+				<li title="add-to-list"></li>
+				<li title="layout">⚏</li>
+				<li title="list">☰</li>
+				<li title="text-doc">📄</li>
+				<li title="text-doc-inverted"></li>
+				<li title="doc"></li>
+				<li title="docs"></li>
+				<li title="landscape-doc"></li>
+				<li title="picture">🌄</li>
+				<li title="video">🎬</li>
+				<li title="music">🎵</li>
+				<li title="folder">📁</li>
+				<li title="archive"></li>
+				<li title="trash"></li>
+				<li title="upload">📤</li>
+				<li title="download">📥</li>
+				<li title="save">💾</li>
+				<li title="install"></li>
+				<li title="cloud">☁</li>
+				<li title="upload-cloud"></li>
+				<li title="bookmark">🔖</li>
+				<li title="bookmarks">📑</li>
+				<li title="open-book">📖</li>
+				<li title="play">▶</li>
+				<li title="paus">‖</li>
+				<li title="record">●</li>
+				<li title="stop">■</li>
+				<li title="ff">⏩</li>
+				<li title="fb">⏪</li>
+				<li title="to-start">⏮</li>
+				<li title="to-end">⏭</li>
+				<li title="resize-full"></li>
+				<li title="resize-small"></li>
+				<li title="volume">⏷</li>
+				<li title="sound">🔊</li>
+				<li title="mute">🔇</li>
+				<li title="flow-cascade">🕨</li>
+				<li title="flow-branch">🕩</li>
+				<li title="flow-tree">🕪</li>
+				<li title="flow-line">🕫</li>
+				<li title="flow-parallel">🕬</li>
+				<li title="left-bold"></li>
+				<li title="down-bold"></li>
+				<li title="up-bold"></li>
+				<li title="right-bold"></li>
+				<li title="left">⬅</li>
+				<li title="down">⬇</li>
+				<li title="up">⬆</li>
+				<li title="right">➡</li>
+				<li title="circled-left"></li>
+				<li title="circled-down"></li>
+				<li title="circled-up"></li>
+				<li title="circled-right"></li>
+				<li title="triangle-left">◂</li>
+				<li title="triangle-down">▾</li>
+				<li title="triangle-up">▴</li>
+				<li title="triangle-right">▸</li>
+				<li title="chevron-left"></li>
+				<li title="chevron-down"></li>
+				<li title="chevron-up"></li>
+				<li title="chevron-right"></li>
+				<li title="chevron-small-left"></li>
+				<li title="chevron-small-down"></li>
+				<li title="chevron-small-up"></li>
+				<li title="chevron-small-right"></li>
+				<li title="chevron-thin-left"></li>
+				<li title="chevron-thin-down"></li>
+				<li title="chevron-thin-up"></li>
+				<li title="chevron-thin-right"></li>
+				<li title="left-thin">←</li>
+				<li title="down-thin">↓</li>
+				<li title="up-thin">↑</li>
+				<li title="right-thin">→</li>
+				<li title="arrow-combo"></li>
+				<li title="three-dots">⏶</li>
+				<li title="two-dots">⏵</li>
+				<li title="dot">⏴</li>
+				<li title="cc">🕅</li>
+				<li title="cc-by">🕆</li>
+				<li title="cc-nc">🕇</li>
+				<li title="cc-nc-eu">🕈</li>
+				<li title="cc-nc-jp">🕉</li>
+				<li title="cc-sa">🕊</li>
+				<li title="cc-nd">🕋</li>
+				<li title="cc-pd">🕌</li>
+				<li title="cc-zero">🕍</li>
+				<li title="cc-share">🕎</li>
+				<li title="cc-remix">🕏</li>
+				<li title="db-logo">🗹</li>
+				<li title="db-shape">🗺</li>
+			</ul>	
+		</div>
+				
+		<div class="row">
+				<h3 class="pb rb pl">The Entypo Social Extention</h3>
+			
+			<ul id="entypo-social" class="icons">
+				<li title="github">&#62208;</li>
+				<li title="c-github">&#62209;</li>
+				<li title="flickr">&#62211;</li>
+				<li title="c-flickr">&#62212;</li>
+				<li title="vimeo">&#62214;</li>
+				<li title="c-vimeo">&#62215;</li>
+				<li title="twitter">&#62217;</li>
+				<li title="c-twitter">&#62218;</li>
+				<li title="facebook">&#62220;</li>
+				<li title="c-facebook"></li>
+				<li title="s-facebook"></li>
+				<li title="google+"></li>
+				<li title="c-google+"></li>
+				<li title="pinterest"></li>
+				<li title="c-pinterest"></li>
+				<li title="tumblr"></li>
+				<li title="c-tumblr"></li>
+				<li title="linkedin"></li>
+				<li title="c-linkedin"></li>
+				<li title="dribbble"></li>
+				<li title="c-dribbble"></li>
+				<li title="stumbleupon"></li>
+				<li title="c-stumbleupon"></li>
+				<li title="lastfm"></li>
+				<li title="c-lastfm"></li>
+				<li title="rdio"></li>
+				<li title="c-rdio"></li>
+				<li title="spotify"></li>
+				<li title="c-spotify"></li>
+				<li title="qq"></li>
+				<li title="instagram"></li>
+				<li title="dropbox"></li>
+				<li title="evernote"></li>
+				<li title="flattr"></li>
+				<li title="skype"></li>
+				<li title="c-skype"></li>
+				<li title="renren"></li>
+				<li title="sina-weibo"></li>
+				<li title="paypal"></li>
+				<li title="picasa"></li>
+				<li title="soundcloud"></li>
+				<li title="mixi"></li>
+				<li title="behance"></li>
+				<li title="google-circles"></li>
+				<li title="vk"></li>
+				<li title="smashing"></li>
+			</ul>		
+		</div>	
+		</section>
 
 		<div class="section" id="mediaQueries">
 			<h3>Media Queries</h3>
@@ -789,7 +1177,7 @@
 
 		<div class="section" id="support">
 			<h3>Support for A.mphibio.us</h3>
-			<p>Do you have feedback, questions or thoughts about A.mphibio.us - email me at <em>clive@lassosoft.com</em> and I will get back to you as soon as I can :)</p>
+			<p>Do you have feedback, questions or thoughts about A.mphibio.us - email me at <em>clive@treefrog.ca</em> and I will get back to you as soon as I can :)</p>
 			<ul class="tabs">
 				<li><a class="active" href="#browsers">Browsers</a></li>
 				<li><a href="#changelog">Changelog</a></li>
@@ -835,7 +1223,23 @@
 		
 
 		</div>
-
+		<div class="row">
+		    <div id="disqus_thread"></div>
+		    <script type="text/javascript">
+		        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+		        var disqus_shortname = 'amphibiouscss'; // required: replace example with your forum shortname
+		
+		        /* * * DON'T EDIT BELOW THIS LINE * * */
+		        (function() {
+		            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		        })();
+		    </script>
+		    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		</div>
+    
 
 	</div><!-- content -->
 
@@ -845,7 +1249,7 @@
 <footer>
 	<div class="container" id="attribution">
 		<div class="col sixteen dpt">
-		<p class="remove-bottom"><small>Created by <a href="http://www.clivemoore.ca">Clive Moore</a>, at <a href="http://www.lassosoft.com">LassoSoft Inc.</a> <span class="r"><small><a href="#header-container">Back to top &#x2191;</a></span></p>
+		<p class="remove-bottom"><small>Created by <a href="http://www.clivemoore.ca">Clive Moore</a>, at <a href="http://www.treefrog.ca">Treefrog Inc.</a> <span class="r"><small><a href="#header-container">Back to top &#x2191;</a></span></p>
 		
 		</div>
 	</div>
