@@ -124,6 +124,10 @@ amp.mobilelisteners = function() {
 	 * Mobile browser specific listeners are placed here 
 	 * *** NOT *** executed by desktop browsers. See amp.desktoplisteners instead.
 	 * ================================================================== */
+	$('body').on('click', 'a[href^="tel:"]', function() {
+		$(this).attr('href', 
+				$(this).attr('href').replace(/^tel:/, 'callto:'));
+	});
 };
 
 amp.desktoplisteners = function() {
@@ -131,10 +135,6 @@ amp.desktoplisteners = function() {
 	 * Desktop browser specific listeners are placed here 
 	 * *** NOT *** executed by mobile browsers. See amp.mobilelisteners instead.
 	 * ================================================================== */
-	$('body').on('click', 'a[href^="tel:"]', function() {
-		$(this).attr('href', 
-			$(this).attr('href').replace(/^tel:/, 'callto:'));
-	});
 };
 
 $(document).ready(function() {
