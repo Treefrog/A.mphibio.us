@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     jshint: {
   	  // define the files to lint
-  	  files: ['js/scripts.js'],
+  	  files: ['advanced/js/scripts.js'],
   	  // configure JSHint (documented at http://www.jshint.com/docs/)
   	  options: {
   	      // more options here if you want to override JSHint defaults
@@ -23,9 +23,9 @@ module.exports = function(grunt) {
 //	  },
 	  dist: {
 		    // the files to concatenate
-		    src: ['js/lib/*.js','js/*.js'],
+		    src: ['advanced/js/libs/*.js','advanced/js/*.js'],
 		    // the location of the resulting JS file
-		    dest: 'dist/<%= pkg.name %>.js'
+		    dest: 'js/<%= pkg.name %>.concat.js'
 	  },
 	  css: {
 		    // the files to concatenate
@@ -39,8 +39,8 @@ module.exports = function(grunt) {
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
       },
       build: {
-        src: 'dist/<%= pkg.name %>.js',
-        dest: 'build/<%= pkg.name %>.min.js'
+        src: 'js/<%= pkg.name %>.concat.js',
+        dest: 'js/<%= pkg.name %>.min.js'
       }
     },
     cssmin: {
