@@ -838,47 +838,75 @@ textarea {
 *
 /* Reset (kudos Eric Meyer)
 ================================================== */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-	margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline; 
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline; 
 }
 
-blockquote, q {
+blockquote, q
+{
 	quotes: none; 
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';content: none; 
+blockquote:before,
+blockquote:after,
+q:before, q:after
+{
+	content: '';
+	content: none; 
 }
 
-table {
-	border-collapse: collapse;border-spacing: 0; 
+table
+{
+	border-collapse: collapse;
+	border-spacing: 0; 
 }
 
 /* HTML5 (kudos Paul Irish and the h5bp.com team
 ================================================== */
-article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section
+{
 	display: block; 
 }
 
-audio, canvas, video {
+audio,
+canvas,
+video
+{
 	display: inline-block;
 	*display: inline; 
 	*zoom: 1; 
 }
 
-audio:not([controls]) {
+audio:not([controls])
+{
 	display: none; 
 }
 
-[hidden] {
+[hidden]
+{
 	display: none; 
 }
 
 
 /* Base Styles & Typography
 ================================================== */
-body {
+body
+{
 	background: #fff;
 	font-family: "Lucida Grande", "Lucida Sans", Lucida, Arial, Helvetica, sans-serif;
 	font-weight: normal;
@@ -894,13 +922,33 @@ body {
 
 /* Using proportional font sizes for proper cascade
 ================================================== */
-h1, h2, h3, h4, h5, h6 {
+
+@font-face
+{
+    font-family: 'RokkittRegular';
+    src: url('../../fonts/Rokkitt-webfont.eot');
+    src: url('../../fonts/Rokkitt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/Rokkitt-webfont.woff') format('woff'),
+         url('../../fonts/Rokkitt-webfont.ttf') format('truetype'),
+         url('../../fonts/Rokkitt-webfont.svg#RokkittRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6
+{
 	color: #181818;
-	font-family: "Lucida Grande", "Lucida Sans", Lucida, "Helvetica Neue", Arial, sans-serif;
+	font-family: "RokkittRegular", "Lucida Grande", "Lucida Sans", Lucida, "Helvetica Neue", Arial, sans-serif;
 	font-weight: normal;margin-bottom: .3em;
 }
 
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a
+{
 	font-weight: inherit; 
 }
 
@@ -920,69 +968,90 @@ h4 {
 	font-size: 1.3em;
 }
 
-h5, .intro {/* Often used for as you can imagine some call out text */
+h5,
+.intro 
+{
+	/* Often used for as you can imagine some call out text */
 	font-size: 1.2em;
 }
 
-h6 {
+h6
+{
 	font-size: 1em;font-weight: bold; 
 }
 
-.subheader {
+.subheader 
+{
 	color: #777; 
 }
 
-p {
+p
+{
 	margin: 0 0 1.4em 0; 
 }
 
-p img, img {
+p img,
+img
+{
 	margin: 0; 
 }
 
-p.lead {
+p.lead
+{
 	font-size: 1.5em; 
 	line-height: 1.6em; 
 	color: #777; 
 }
 
-abbr[title] {
+abbr[title]
+{
 	border-bottom: 1px dotted;
 	cursor: pointer; 
 }
 
-dfn {
+dfn
+{
 	font-style: italic; 
 }
 
-em, i {
+em, i
+{
 	font-style: italic; 
 }
 
-strong, b {
+strong, b
+{
 	font-weight: bold; 
 	color: #333; 
 }
 
-small, .small {
+small,
+.small
+{
 	font-size: .865em; 
 }
-sub, sup {
+
+sub,
+sup
+{
 	font-size: .675em; 
 	line-height: 0; 
 	position: relative; 
 	vertical-align: baseline; 
 }
 
-sup {
+sup
+{
 	top: -0.5em; 
 }
 
-sub {
+sub
+{
 	bottom: -0.25em; 
 }
 
-pre {
+pre
+{
 	text-wrap: wrap; 
 	white-space: pre-wrap; 
 	white-space: -moz-pre-wrap; 
@@ -992,7 +1061,8 @@ pre {
 	background: #e6f6fb; 
 }
 
-code {
+code
+{
 	display: block; 
 	padding: 0.5em 1em; 
 	border: 1px solid #81aed1; 
@@ -1000,35 +1070,45 @@ code {
 }
 
 /*	Blockquotes  */
-blockquote, blockquote p {
+blockquote,
+blockquote p {
 	font-size: 1.1em; 
 	font-style: italic; 
 }
 
-blockquote {
+blockquote
+{
 	margin: 0 0 1.6em; 
 	padding: .6em 1.6em 0 1.3em;
 }
 
-blockquote .author {
+blockquote .author
+{
 	font-size: 1em;
 	font-weight: bold;
 }
 
-blockquote cite {display: block; 
-font-size: .865em; 
-color: #555; 
-}
-
-blockquote cite:before 
-	{content: "\2014 \0020"; 
-}
-
-blockquote cite a, blockquote cite a:visited, blockquote cite a:visited {
+blockquote cite
+{
+	display: block; 
+	font-size: .865em; 
 	color: #555; 
 }
 
-hr {
+blockquote cite:before 
+{
+	content: "\2014 \0020"; 
+}
+
+blockquote cite a,
+blockquote cite a:visited,
+blockquote cite a:visited
+{
+	color: #555; 
+}
+
+hr
+{
 	border: solid #ececec; 
 	border-width: 1px 0 0; 
 	clear: both; 
@@ -1038,7 +1118,8 @@ hr {
 
 /* Link-o-matic
 ================================================== */
-a, a:visited {
+a, a:visited
+{
 	color: #1b378c; 
 	outline: 0;
 	/* Could alos easiley be: all .2s linear;
@@ -1048,11 +1129,16 @@ a, a:visited {
 	   -o-transition: color 0.3s ease-out;
 	      transition: color 0.3s ease-out;
 }
-a:hover, a:focus {
+
+a:hover,
+a:focus 
+{
 	color: #000; 
 }
 
-p a, p a:visited {
+p a,
+p a:visited
+{
 	line-height: inherit; 
 }
 
@@ -1060,135 +1146,172 @@ p a, p a:visited {
 /* Lists - Default 
 ================================================== */
 
-ul, ol {
+ul, ol
+{
+	margin-left: 2em; 
 	margin-bottom: 1.625em; 
 }
 
-ul {
+ul
+{
 	list-style: circle outside; 
 }
 
-ol {
+ol
+{
 	list-style: decimal; 
 }
 
-ol, ul.square, ul.circle, ul.disc {
+ol,
+ul.square,
+ul.circle,
+ul.disc
+{
 	margin-left: 2em; 
 }
 
-ul.square {
+ul.square
+{
 	list-style: square outside;
 }
 
-ul.circle {
+ul.circle
+{
 	list-style: circle outside;
 }
 
-ul.disc {
+ul.disc
+{
 	list-style: disc outside; 
 }
 
-ol.alpha {
+ol.alpha
+{
 	list-style: lower-alpha;
 }
 
-ol.upper_alpha {
+ol.upper_alpha
+{
 	list-style: upper-alpha;
 }
 
-ol.roman {
+ol.roman
+{
 	list-style: lower-roman; 
 }
 
-ol.upper_roman {
+ol.upper_roman
+{
 	list-style: upper-roman; 
 }
 
-ol.latin {
+ol.latin
+{
 	list-style: lower-latin;
 }
-ol.upper_latin {
+ol.upper_latin
+{
 	list-style: upper-latin; 
 }
 
-ul ul, ul ol,
-ol ol, ol ul {
+ul ul,
+ul ol,
+ol ol,
+ol ul
+{
 	margin: .2em 0 .3em 2em;
 	font-size: .925em; 
 }
 
-ul ul li, ul ol li,
-ol ol li, ol ul li {
+ul ul li,
+ul ol li,
+ol ol li,
+ol ul li
+{
 	margin-bottom: .5em; 
 }
 
-li {
+li
+{
 	margin-bottom: 1em; 
 }
 
-ol ol, ol ol ol ol {
+ol ol,
+ol ol ol ol
+{
 	list-style: lower-alpha;
 }
-ol ol ol {
+
+ol ol ol
+{
 	list-style: lower-roman;
 }
 	
-dl dt {
+dl dt
+{
 	font-weight: bold;
 	line-height: 1.2;
 }
 	
-dl dd {
-	margin: 0 0 10px 1em;
+dl dd
+{
+	margin: 0px 0px 1em 1.2em;
 	line-height: 1.4;
 	color: #666;
 }	
 
 /* Content Pea.rs http://pea.rs/
 	Pears are common patterns of markup & style
-================================================== */
+	================================================== */
 
-article {
-	margin: 0 0 20px 20%;
+article.aside
+{
+	margin: 0 0 1.6em 20%;
 }
 
-article header h2 {
-	margin: 0 0 15px 0;
-	font-size: 20px;
+article header h2
+{
+	margin: 0 0 1em 0;
 	font-weight: normal;
 	line-height: 1.3;
 }
 
-article aside {
+article aside
+{
 	float: left;
 	width: 20%;
 	margin-left: -25%;
-	font-size: 12px;
+	font-size: .825em;
 	line-height: 1.8;
 	color: #999;
 }
 
-.stats,.slats {
+.stats,.slats
+{
 	list-style: none;
 	margin-left: 0;
 }
-ul.stats li {
+ul.stats li
+{
 	float: left;
-	margin: 0 10px 0 0;
-	padding: 0 10px 0 0;
+	margin: 0 1em 0 0;
+	padding: 0 1em 0 0;
 	border-right: 1px solid #ccc;
 }
 
 /* This class (.last) is added via the a.mphibio.us file for ie capable
 last-child formating - Great for styling - copy/paste make your own */
+
 ul.stats li:last-child,
-ul.stats li.last {
+ul.stats li.last
+{
 	margin: 0;
 	padding: 0;
 	border: none;
 }
 
-ul.stats li {	
+ul.stats li
+{	
 	display: block;
 	float: left;
 	font-size: 1.6em;
@@ -1196,28 +1319,33 @@ ul.stats li {
 	text-decoration: none;
 }
 
-ul.stats li span {
+ul.stats li span
+{
 	display: block;
 	margin-top: .325em;
 	font-size: .625em;
 	font-weight: normal;
 }			
 		
-ol.slats li {
+ol.slats li
+{
 	margin: 0 0 1em 0;
 	padding: 0 0 1em 0;
 	border-bottom: 1px solid #eee;
 }
 
-ol.slats li:last-child {
+ol.slats li:last-child
+{
 	margin: 0;
 	padding: 0;
 	border-bottom: none;
 }
 
-ol.slats li a {
+ol.slats li a
+{
 	text-decoration: none;
 }
+
 ol.slats li a:hover {
 	opacity: .6;
 	filter: alpha(opacity=80);
@@ -1385,7 +1513,8 @@ img.scale-with-grid, img.swg {
 	background: rgba(0,0,0,.4);
 }
 
-.caption p, .caption h2 {
+.caption p,
+.caption h2 {
 	color: #fff;
 	text-shadow: #000 0 -1px 0;
 	text-shadow:
@@ -1420,7 +1549,8 @@ img.scale-with-grid, img.swg {
 	margin-bottom: 0;
 }
 
-.centered-btns_nav:hover, .centered-btns_nav:active {
+.centered-btns_nav:hover,
+.centered-btns_nav:active {
 	opacity: 1.0;
 	filter: alpha(opacity=100);
 }
@@ -1519,7 +1649,8 @@ img.scale-with-grid, img.swg {
 		-moz-border-radius: 15px;
 			border-radius: 15px;
 	background: #ccc; /* giving old browsers an option */
-	background: rgba(0,0,0, .2); /* giving good browsers what we really want */
+	background: rgba(0,0,0,
+.2); /* giving good browsers what we really want */
 	-webkit-box-shadow:
 		inset 0 0 2px 0 rgba(0,0,0,.3);
 		-moz-box-shadow:
@@ -1534,7 +1665,8 @@ img.scale-with-grid, img.swg {
 .transparent-btns_here a,
 .large-btns_here a {
 	background: #222;
-	background: rgba(0,0,0, .8);
+	background: rgba(0,0,0,
+.8);
 }
 
 /* Slider  "B" Modifications */
@@ -1602,7 +1734,8 @@ overflow: hidden;
 	border: 1px solid #8CC63F;
 }
 
-.dialog, .dialogue	{
+.dialog,
+.dialogue	{
 	padding: .5em;
 	margin:.5em 0;
 	background-color: #FAFAFA;
@@ -1612,7 +1745,13 @@ overflow: hidden;
 /* Buttons 
 ================================================== */
 
-.button, button, input[type="submit"], input[type="reset"], input[type="button"], input[type="file"],  .button_grp .active, .filter_nav>dd>a {
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="file"],  .button_grp .active,
+.filter_nav>dd>a {
 	position: relative;
 	display: inline-block;
 	margin-top: 0;
@@ -1623,7 +1762,8 @@ overflow: hidden;
 	font-weight: normal;
 	text-decoration: none;
 	text-shadow: 
-		0 1px rgba(255, 255, 255, .75);
+		0 1px rgba(255, 255, 255,
+.75);
 	cursor: pointer;
 	line-height: normal;
 	padding: .625em;
@@ -1667,10 +1807,18 @@ overflow: hidden;
 	transition: all 0.3s ease-out;
 }
 
-.button,a.button,.button a:visited.button:visited,.button a,.button a:visited, .pager a:visited{color: #444;text-decoration: none;
+.button,a.button,
+.button a:visited.button:visited,.button a,.button a:visited,
+.pager a:visited{color: #444;text-decoration: none;
 }
 
-.button:hover, button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover,  input[type="file"]:hover, .filter_nav>dt, .filter_nav>dd>a:hover {
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,  input[type="file"]:hover,
+.filter_nav>dt,
+.filter_nav>dd>a:hover {
 	color: #1b378c;
 	background-color: #efefef;
 	background-image: none;
@@ -1694,7 +1842,16 @@ overflow: hidden;
 		inset rgba(255,255,255,.6) 0 0 2px;
 }
 
-.button:active, button:active, input[type="submit"]:active, input[type="reset"]:active, input[type="button"]:active, input[type="file"]:active, .button_grp .active, .button_grp a.button:active, .button_grp a.button:focus, .filter_nav>dd>a:active {
+.button:active,
+button:active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+input[type="button"]:active,
+input[type="file"]:active,
+.button_grp .active,
+.button_grp a.button:active,
+.button_grp a.button:focus,
+.filter_nav>dd>a:active {
 	color: #fff;
 	text-shadow: #000 0 -1px 0;
 	border: 1px solid #7485b9;
@@ -1728,7 +1885,11 @@ overflow: hidden;
 		inset rgba(0,0,0,.2) 0 0 2px;
 }
 
-.button.full-width, button.full-width, input[type="submit"].full-width, input[type="reset"].full-width, input[type="button"].full-width {
+.button.full-width,
+button.full-width,
+input[type="submit"].full-width,
+input[type="reset"].full-width,
+input[type="button"].full-width {
 	width: 100%;
 	padding-left: 0 !important;
 	padding-right: 0 !important;
@@ -1740,7 +1901,11 @@ ul.button_grp, ul.button_grp li {
 	margin: 0;
 }
 
-ul.button_grp .button,  ul.button_grp .active, .pager_nav input[type="text"], .pager_nav button {
+ul.button_grp .button,
+ul.button_grp .active,
+.pager_nav input[type="text"],
+.pager_nav button
+{
 	padding: .425em;
 	margin: 0;
 	-webkit-border-radius: 0;
@@ -1750,12 +1915,22 @@ ul.button_grp .button,  ul.button_grp .active, .pager_nav input[type="text"], .p
 	border-radius: 0;
 }
 
-ul.button_grp .button {
+.filter_nav,
+.pager_nav,
+.pager_nav input[type="text"],
+.pager_nav button
+{
+	font: -webkit-control;
+}
+
+ul.button_grp .button
+{
 	border-top: 1px solid #ededed;
 	border-left: 1px solid #ededed;
 }
 
-.pager_nav .button.last {
+.pager_nav .button.last
+{
 	-webkit-border-radius: 0;
 	-khtml-border-radius: 0;
 	-moz-border-radius: 0;
@@ -1763,7 +1938,9 @@ ul.button_grp .button {
 	border-radius: 0;
 }
 
-.button_grp .first .button, ul.button_grp .first.button {
+.button_grp .first .button,
+ul.button_grp .first.button
+{
 	-webkit-border-bottom-left-radius: 6px;
 	-webkit-border-top-left-radius: 6px;
 	-khtml-border-bottom-left-radius: 6px;
@@ -1777,7 +1954,10 @@ ul.button_grp .button {
 
 }
 
-.button_grp .last .button,.button_grp .last.button, .pager_nav .button.last {
+.button_grp .last .button,
+.button_grp .last.button,
+.pager_nav .button.last
+{
 	-webkit-border-bottom-right-radius: 6px;
 	-webkit-border-top-right-radius: 6px;
 	-khtml-border-bottom-right-radius: 6px;
@@ -1791,13 +1971,16 @@ ul.button_grp .button {
 }
 
 /* Fix for odd Mozilla border & padding issues */
-button::-moz-focus-inner,input::-moz-focus-inner {
+button::-moz-focus-inner,
+input::-moz-focus-inner
+{
 	border: 0; 
 	padding: 0;
 }
 
 /* self clearing nav */
-nav ul:after {
+nav ul:after
+{
 	content: "\0020"; 
 	display: block; 
 	height: 0; 
@@ -1807,13 +1990,15 @@ nav ul:after {
 
 /* Tabs (activated by scripts.js)
 ================================================== */
-ul.tabs {
+ul.tabs
+{
 	display: block;
 	margin: 0;
 	padding: 0;
 }
 
-ul.tabs li {
+ul.tabs li
+{
 	display: block;
 	width: auto;
 	height: 30px;
@@ -1822,7 +2007,8 @@ ul.tabs li {
 	margin-bottom: 0;
 }
 
-ul.tabs li a {
+ul.tabs li a
+{
 	display: block;
 	width: auto;
 	height: 30px;
@@ -1867,11 +2053,17 @@ ul.tabs li a {
 		inset rgba(255,255,255,.4) 0 0 2px;
 }
 
-ul.tabs li.active a,.tabs li.active a:visted, .tabs li:active a, .tabs li a:active, .tabs li a:focus {
+ul.tabs li.active a,
+.tabs li.active a:visted,
+.tabs li:active a,
+.tabs li a:active,
+.tabs li a:focus
+{
 	color: #ffffff; 
 }
 
-ul.tabs li:hover a {
+ul.tabs li:hover a
+{
 	color: #1b378c;
 	background-color: #efefef;
 	background-image: none;
@@ -1892,7 +2084,8 @@ ul.tabs li:hover a {
 		inset rgba(255,255,255,.4) 0 0 2px;
 }
 
-ul.tabs li a.active {
+ul.tabs li a.active
+{
 	background: #fff;
 	height: 30px;
 	position: relative;
@@ -1904,30 +2097,38 @@ ul.tabs li a.active {
 	background-color: #1b378c;
 }
 
-ul.tabs li:first-child a.active {
+ul.tabs li:first-child a.active
+{
 	margin-left: 0; 
 
 }
 
-ul.tabs li:first-child a {
+ul.tabs li:first-child a
+{
 	-webkit-border-top-left-radius: 2px;
 	-moz-border-radius-topleft: 2px;
 	border-top-left-radius: 2px;
 }
 
-ul.tabs li:last-child a {}
+ul.tabs li:last-child a
+{
+	
+}
 
-ul.tabs-content {
+ul.tabs-content
+{
 	margin: 0; 
 	display: block;
 }
 
-ul.tabs-content > li {
+ul.tabs-content > li
+{
 	display:none;
 	padding: 20px; 
 }
 
-ul.tabs-content > li.active {
+ul.tabs-content > li.active
+{
 	display: block;
 	background-color: #fefefe;
 	-webkit-transition: all 0.3s ease-out;
@@ -1938,7 +2139,8 @@ ul.tabs-content > li.active {
 
 /* Clearfixing tabs for beautiful stacking */
 
-ul.tabs:before, ul.tabs:after {
+ul.tabs:before, ul.tabs:after
+{
 	content: '\0020';
 	display: block;
 	overflow: hidden;
@@ -1947,20 +2149,32 @@ ul.tabs:before, ul.tabs:after {
 	height: 0;
 }
 
-ul.tabs:after {clear: both; 
+ul.tabs:after
+{
+	clear: both; 
 }
 ul.tabs {zoom: 1; 
 }
 
 /* Navigation Styles
 ================================================== */
-nav ul, .nav ul, ul.nav {list-style: none outside; 
+nav ul,
+.nav ul,
+ul.nav
+{
+	list-style: none outside; 
 }
 
-.navbar{*position:relative;*z-index:2;margin-bottom:18px;overflow:visible;
+.navbar
+{
+	*position:relative;
+	*z-index:2;
+	margin-bottom:18px;
+	overflow:visible;
 }
 
-.navbar-inner{
+.navbar-inner
+{
 	font-size: 11px;
 	padding-right:20px;
 	padding-left:20px;
@@ -1992,7 +2206,9 @@ nav ul, .nav ul, ul.nav {list-style: none outside;
 		0 2px 4px rgba(0,0,0,.4);
 }
 
-.navbar.fixed.top,.navbar.fixed.bottom {
+.navbar.fixed.top,
+.navbar.fixed.bottom
+{
 	position:fixed;
 	right:0;
 	left:0;
@@ -2000,19 +2216,23 @@ nav ul, .nav ul, ul.nav {list-style: none outside;
 	margin-bottom:0;
 }
 
-.navbar.fixed.top {
+.navbar.fixed.top
+{
 	top:0;
 }
 
-.mainnav {
+.mainnav
+{
 	margin:.3em 0;
 }
 
-.mainnav.branded{
+.mainnav.branded
+{
 	padding-left: 32px;
 }
 
-.mainnav.branded:before {
+.mainnav.branded:before
+{
 	display: block;
 	float:left;
 	width: 24px;
@@ -2041,13 +2261,16 @@ nav ul, .nav ul, ul.nav {list-style: none outside;
 			0 0 4px rgba(255,255,255,.2);
 }
 
-.mainnav>li,.filter_nav>dt,.filter_nav>dd {
+.mainnav>li,.filter_nav>dt,.filter_nav>dd
+{
 	display:block;
 	float:left;
 	margin-bottom: 0;
+	margin-left: 0;
 }
 
-.mainnav>li>a,.filter_nav>dd>a {
+.mainnav>li>a,.filter_nav>dd>a
+{
 	display:inline-block;
 	float:none;
 	padding:.5em .865em;
@@ -2063,10 +2286,14 @@ nav ul, .nav ul, ul.nav {list-style: none outside;
 	      transition: all 0.3s ease-out;
 }
 
-.filter_nav {margin-top:.5em;font-size: .925em;
+.filter_nav
+{
+	margin-top:.5em;
+	font-size: .925em;
 }
 
-.filter_nav>dt {
+.filter_nav>dt
+{
 	border-color: #dadada;
 	padding:.5em .865em;
 	-webkit-border-bottom-left-radius: 6px;
@@ -2081,11 +2308,12 @@ nav ul, .nav ul, ul.nav {list-style: none outside;
 	border-bottom-left-radius: 6px;
 }
 
-.filter_nav>dd>a {
+.filter_nav>dd>a
+{
 	border-radius: 0;
 	color: #000;
 	text-shadow: 
-		0 1px rgba(255, 255, 255, .75);
+		0 1px rgba(255, 255, 255,.75);
 	margin-top: 0;
 	margin-left: 0;
 	margin-right: 0;
@@ -2094,7 +2322,8 @@ nav ul, .nav ul, ul.nav {list-style: none outside;
 	-khtml-border-radius: 0;
 	-webkit-border-radius: 0;
 }
-.filter_nav>dd:last-child>a {
+.filter_nav>dd:last-child>a
+{
 	-o-border-bottom-right-radius: 6px; 
 	-o-border-top-right-radius: 6px; 
 	-khtml-border-bottom-right-radius: 6px; 
@@ -2107,22 +2336,37 @@ nav ul, .nav ul, ul.nav {list-style: none outside;
 	border-bottom-right-radius: 6px; 
 }
 
-.mainnav>li>a:hover,.filter_nav>dd>a:hover{text-shadow:0 0 2px rgba(255,255,255,0.5);opacity: 1;filter:alpha(opacity=100);
+.mainnav>li>a:hover,
+.filter_nav>dd>a:hover
+{
+	text-shadow:0 0 2px rgba(255,255,255,0.5);
+	opacity: 1;
+	filter:alpha(opacity=100);
 }
 
-.section {padding-top: 50px;
-}
-#navigation .navbar-inner {margin-bottom: 2em;
+.section
+{
+	padding-top: 3em;
 }
 
-.breadcrumb {
+#navigation .navbar-inner
+{
+	margin-bottom: 2em;
+}
+
+.breadcrumb
+{
 	font-size: 1.1em;
 	color: #ccc;
 }
 	
-.breadcrumb li {display:block;float: left;
+.breadcrumb li
+{
+	display:block;float: left;
 }
-.breadcrumb a {
+
+.breadcrumb a
+{
 	margin: 0 .425em;
 	text-decoration: none;
 	color: #999;
@@ -2130,49 +2374,66 @@ nav ul, .nav ul, ul.nav {list-style: none outside;
 	float: left;
 }
 
-.breadcrumb li:first-child {
+.breadcrumb li:first-child
+{
 	margin-left: 0;
 }
 
 .breadcrumb a:hover,
-.breadcrumb a:focus {
+.breadcrumb a:focus
+{
 	color: #333;
 }
 
-.breadcrumb a:active {
+.breadcrumb a:active
+{
 	color: #666;
 }
 
-.breadcrumb .active {
+.breadcrumb .active
+{
 	margin-left: .425em;
 	font-weight: bold;
 	color: #333;
 }
 
-.breadcrumb li:after{
+.breadcrumb li:after
+{
 	display: inline-block;
 	content: '>';
 }
 
-.breadcrumb li:last-child:after{content: '';
+.breadcrumb li:last-child:after
+{
+	content: '';
+	content: none;
 }
 
 /* #Forms
 ================================================== */
 
-label {
+label
+{
 	cursor: pointer; 
 }
 
-form {
+form 
+{
 	margin-bottom: 1.625em;
 }
 
-fieldset {
+fieldset
+{
 	margin-bottom: 1.625em; 
 }
 
-input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="date"], textarea {
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="date"],
+textarea
+{
 	-o-box-shadow:
 		inset rgba(0,0,0,.2) 0 0 2px
 		inset rgba(0,0,0,.1) 0 -2px 6px;
@@ -2194,7 +2455,14 @@ input[type="text"], input[type="password"], input[type="email"], input[type="url
 	transition: all 0.3s ease-out;
 }
 
-input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="date"], textarea, select {
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="date"],
+textarea,
+select
+{
 	border: 1px solid #adadad;
 	padding: .625em .325em .675em;
 	outline: none;
@@ -2211,15 +2479,23 @@ input[type="text"], input[type="password"], input[type="email"], input[type="url
 	position: relative;
 }
 
-select {
+select 
+{
 	padding: .325em 0; 
 }
 
-.styled_select select {
+.styled_select select
+{
 	padding: 0; 
 }
 
-input[type="text"]:hover, input[type="password"]:hover, input[type="email"]:hover, input[type="url"]:hover, input[type="date"]:hover, textarea:hover {
+input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="email"]:hover,
+input[type="url"]:hover,
+input[type="date"]:hover,
+textarea:hover
+{
 	-webkit-box-shadow: 
 		0 0 3px rgba(0,0,0,.2);
 	-khtml-box-shadow: 
@@ -2232,7 +2508,13 @@ input[type="text"]:hover, input[type="password"]:hover, input[type="email"]:hove
 		0 0 3px rgba(0,0,0,.2);
 }
 
-input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="date"]:focus, textarea:focus {
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="date"]:focus,
+textarea:focus
+{
 	border: 1px solid #aaa;
 	background: #feffef;
 	color: #444;
@@ -2248,7 +2530,13 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focu
 		0 0 3px rgba(0,0,250,.6);
 }
 
-input[type="text"].error,input[type="password"].error,input[type="email"].error, input[type="url"].error, input[type="date"].error,textarea.error {
+input[type="text"].error,
+input[type="password"].error,
+input[type="email"].error,
+input[type="url"].error,
+input[type="date"].error,
+textarea.error 
+{
 	background-color: #FFE3E3;
 	border: 1px solid #C30300;
 	color: #C30300;
@@ -2264,39 +2552,49 @@ input[type="text"].error,input[type="password"].error,input[type="email"].error,
 		0 0 3px rgba(250,0,0,.6), 0 0 12px rgba(250,0,0,.2);
 }
 
-textarea {
+textarea
+{
 	min-height: 6em; 
 }
 
-label, legend {
+label,
+legend
+{
 	display: block; 
 	font-weight: normal; 
 }
 
-legend {
+legend
+{
 	font-weight: bold;
 	padding-bottom: .5em;
 }
 
-select {
+select
+{
 	width: 220px;
 	line-height: 13px; 
 }
 
-input[type="checkbox"] {
+input[type="checkbox"]
+{
 	display: inline; 
 }
 
-label span, legend span {
+label span,
+legend span
+{
 	font-weight: normal; 
 	color: #444; 
 }
 
-label.above {
+label.above
+{
 	margin-bottom: .425em;
 }
 
-form.search fieldset input[type="text"] {
+form.search fieldset input[type="text"]
+{
 	float:left;
 	background: #f5f5f5;
 	border: 1px solid #adadad;
@@ -2312,10 +2610,13 @@ form.search fieldset input[type="text"] {
 	border-bottom-right-radius: 0;
 }
 
-form.search fieldset input[type="text"]:focus {background: #ffffff;
+form.search fieldset input[type="text"]:focus
+{
+	background: #ffffff;
 }
 
-form.search fieldset input[type="submit"] {
+form.search fieldset input[type="submit"]
+{
 	float:left;
 	-webkit-border-bottom-left-radius: 0; 
 	-webkit-border-top-left-radius: 0; 
@@ -2329,117 +2630,92 @@ form.search fieldset input[type="submit"] {
 	border-bottom-left-radius: 0;
 }
 
-form fieldset {
-	margin: 0 0 10px 0;
-	padding: 0 0 10px 0;
-	font-size: 14px;
+form fieldset
+{
+	margin: 0 0 1em 0;
+	padding: 0 0 1em 0;
+	font-size: 1.1em;
 	border-bottom: 1px solid #eee;
 }
 
-form fieldset.form-actions {
+form fieldset.form-actions
+{
 	margin: 0 0 0 30%;
 	padding: 0;
 	border: none;
 }
 
-form fieldset.check {
+form fieldset.check 
+{
 	padding-left: 30%;
 }
 
-form fieldset label {
+form fieldset label
+{
 	font-weight: bold;
 }
 
-form.multi.beside fieldset label {
+form.multi.beside fieldset label
+{
 	float: left;
 	width: 30%;
 	margin: .25em 0 .325em 0;
 
 }
 
-form.multi.beside fieldset.check label {
+form.multi.beside fieldset.check label
+{
 	display: inline;
 	float: none;
 	width: auto;
 	font-weight: normal;
 }
 
-form.multi.beside fieldset.radio ul {
+form.multi.beside fieldset.radio ul
+{
 	list-style: none;
 }
 
-form.multi.beside fieldset.radio ul li label {
+form.multi.beside fieldset.radio ul li label
+{
 	display: inline;
 	float: none;
 	width: auto;
 	font-weight: normal;
 }
 
-form fieldset input.form-text,
-form fieldset textarea {
-	display: block;
-	width: 50%;
+form fieldset textarea
+{
+	height: 6.9em;
 }
 
-form fieldset input.form-text:focus {
-	border: 1px solid #ccc;
-	background: #fff;
+form fieldset.radio ul
+{
+	margin: .5em 0 0 30%;
 }
 
-form fieldset textarea {
-	height: 150px;
-}
-
-form fieldset select {
-	min-width: 25%;
-	margin: 0;
-}
-
-form fieldset.radio ul {
-	margin: 5px 0 0 20%;
-}
-
-form fieldset.radio ul li {
+form fieldset.radio ul li
+{
 	margin: 0 0 5px 0;
 }
 
-form fieldset.radio ul li:last-child {
+form fieldset.radio ul li:last-child
+{
 	margin: 0;
 }
 
-form fieldset p.form-help {
-	margin: 5px 0 0 20%;
+form fieldset p.form-help
+{
+	margin: .5em 0 0 30%;
 	font-size: 12px;
 	color: #999;
-}
-
-@media screen and (max-width: 480px) {
-	form fieldset label {
-		display: block;
-		float: none;
-		width: auto;
-		margin: 0 0 5px 0;
-	}
-	form fieldset.form-actions,
-	form fieldset.check,
-	form fieldset.radio ul,
-	form fieldset p.form-help {
-		margin-left: 0;
-		padding-left: 0;
-	}
-	form fieldset input.form-text,
-	form fieldset textarea {
-		width: 100%;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-	}
 }
 
 /* Icons by http://www.entypo.com
 ================================================== */
 
-@font-face {
+@font-face
+{
     font-family: 'entypo';
     src: url('../../fonts/entypo/entypo.eot');
     src: url('../../fonts/entypo/entypo.eot?#iefix') format('embedded-opentype'),
@@ -2448,9 +2724,10 @@ form fieldset p.form-help {
          url('../../fonts/entypo/entypo.svg#entypo') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
-@font-face {
+
+@font-face
+{
     font-family: 'entypo-social';
     src: url('../../fonts/entypo-social/entypo-social.eot');
     src: url('../../fonts/entypo-social/entypo-social.eot?#iefix') format('embedded-opentype'),
@@ -2459,88 +2736,60 @@ form fieldset p.form-help {
          url('../../fonts/entypo-social/entypo-social.svg#entypo-social') format('svg');
     font-weight: normal;
     font-style: normal;
-
-}
-.icons,.icon {list-style: none;margin:0;font-size: 40px;font-family: 'entypo';color: #000;text-shadow: 0 1px 0 #fff;}
-ul.icons {clear: both;}
-ul.icons:after,ul.icons:before{display: block;height: 0;width: 100%;content: "";}
-.icons li {float: left;margin:0;margin-right: 10px;height: 50px;width: 50px;text-align: center;}
-#entypo-social.icons li {font-family: 'entypo-social';}
-
-#icons {background: #fafafa;box-shadow: inset 0 0 2px #666;padding-top: 1em;}
-
-
-/*
-.north,.south,.east,.west {
-	margin-top: 5px;
-	display:inline-block;
-	width:0;
-	height:0;
-	vertical-align:top;
-	content:"";
-	opacity:.4;
-	filter:alpha(opacity=40);
 }
 
-.north{
-	border-bottom:4px solid #ffffff;
-	border-right:4px solid transparent;
-	border-left:4px solid transparent;
+.icons,
+.icon
+{
+	list-style: none;
+	margin:0;
+	font-size: 40px;
+	font-family: 'entypo';
+	color: #000;
+	text-shadow: 0 1px 0 #fff;
 }
 
-.east{
-	border-right:6px solid #000;
-	border-top:3px solid transparent;
-	border-bottom:3px solid transparent;
+ul.icons
+{
+clear: both;
 }
 
-.south{
-	margin-top: 6px;
-	border-top:4px solid #ffffff;
-	border-right:4px solid transparent;
-	border-left:4px solid transparent;
-}
-
-.west{
-	border-left:6px solid #000;
-	border-top:3px solid transparent;
-	border-bottom:3px solid transparent;
-}
-
-.button:active .west {
-	border-left:6px solid #fff;
-}
-
-.north:hover,.south:hover,.east:hover,.west:hover{
-	opacity:1;
-	filter:alpha(opacity=100);
-}
-
-.icon {
+ul.icons:after,
+ul.icons:before
+{
 	display: block;
-	width: 22px; 
-	height: 22px;
-	background: transparent url(../../img/brankic1979-icon-set.png) 0 0 no-repeat;
+	height: 0;
+	width: 100%;
+	content: "";
 }
 
-li .icon {
-	margin-right: 4px;
+.icons li
+{
+	float: left;
+	margin:0;
+	margin-right: 10px;
+	height: 50px;
+	width: 50px;
+	text-align: center;
 }
 
-.icon.pause{background-position: -284px -236px;}			.icon.pause:hover{background-position: -905px -236px;}
-.icon.resume{background-position: -221px -236px;}			.icon.resume:hover{background-position: -842px -236px;}
-.icon.edit{background-position:-97px -515px;}				.icon.edit:hover{background-position: -718px -515px;}
-.icon.delete{background-position: -97px -331px;}			.icon.delete:hover{background-position: -718px -331px;}
-.icon.showall{background-position: -535px -425px;}			.icon.showall:hover{background-position: -1156px -425px;}
-.icon.clear_error{background-position: -501px -612px;}		.icon.clear_error:hover{background-position: -1150px -612px;}
-.icon.edit_event{background-position:-255px -515px;}		.icon.edit_event:hover{background-position: -876px -515px;}
-.icon.show_related{background-position: -190px -670px;}		.icon.show_related:hover{background-position: -811px -670px;}
-*/
+#entypo-social.icons li
+{
+	font-family: 'entypo-social';
+}
+
+#icons
+{
+	background: #fafafa url(../../img/bgs/double_lined.png) 0 0 repeat;
+	box-shadow: inset 0 0 2px #666;
+	padding-top: 1em;
+}
 
 /* Fancy Selects
 ================================================== */
 
-.styled_select, .ui_tpicker_timezone {
+.styled_select,
+.ui_tpicker_timezone {
 	float:left;
 	height: 25px;
 	width:220px;
@@ -2574,7 +2823,9 @@ li .icon {
 	-o-transition: opacity 0.3s ease;
 	transition: opacity 0.3s ease;
 }
-.styled_select:hover {
+
+.styled_select:hover
+{
 	-o-box-shadow: 
 		0 0 3px rgba(0,0,250,.6);
 	-moz-box-shadow: 
@@ -2589,24 +2840,31 @@ li .icon {
 	filter:alpha(opacity=90);
 }
 
-.ui_tpicker_timezone {
+.ui_tpicker_timezone
+{
 	width: 110px;
 	float: none;
 }
 
-.styled_select:active, .styled_select:focus {
+.styled_select:active,
+.styled_select:focus
+{
 	background-position: right -38px;
 	border: 1px solid #4c4c4c;
 	opacity: 1;
 	filter:alpha(opacity=100);
 }
 
-.ui_tpicker_timezone:active, .ui_tpicker_timezone:focus {
+.ui_tpicker_timezone:active,
+.ui_tpicker_timezone:focus
+{
 	background-position: right -38px;
 	border: 1px solid #4c4c4c;
 }
 
-.styled_select select, .ui_tpicker_timezone select {
+.styled_select select,
+.ui_tpicker_timezone select
+{
 	height: 25px;
 	margin-bottom: 0;
 	padding-left: 8px;
@@ -2616,7 +2874,9 @@ li .icon {
 	border-color: transparent;
 	cursor: pointer;
 }
-.ui_tpicker_timezone select {
+
+.ui_tpicker_timezone select
+{
 	width: 138px;
 }
 
@@ -2659,19 +2919,49 @@ Class Name						Shorthand					Styles
 .double_rule_above,					.dra					{border-top:3px double #ececec;}
 .rule_below,						.rb						{border-bottom:1px solid #ececec;}
 .double_rule_below,					.drb					{border-bottom:3px double #ececec;}
-.hide, .hfp, .print-only,
-.assistive-text{display: none !important;}
-.full	.fl	{width: 100%;}
-.meta{color: #a9a9a9;}
+
+
+
+.hide,
+.hfp,
+.print-only,
+.assistive-text
+{
+	display: none !important;
+}
+
+.full,
+.fl
+{
+	width: 100%;
+}
+
+.meta
+{
+	color: #a9a9a9;
+}
 
 /* Positioning overrides use these in context of parent elements with margins for quick layout */
+
 .absolute.top						.a.t,
-.absolute.t							.a.top
-.fixed.top							.f.t
-.fixed.t							.f.top					{top: 0;}
-.a.r,.f.r	{right: 0;}
-.a.b,.f.b	{bottom: 0;}
-.a.l,.f.l	{left: 0;}
+.absolute.t,						.a.top,
+.fixed.top,							.f.t,
+.fixed.t,							.f.top					{top: 0;}
+
+.absolute.right,					.a.r,
+.absolute.r,						.a.right,
+.fixed.right,						.f.r,
+.fixed.r,							.f.right				{right: 0;}
+
+.absolute.bottom,					.a.b,
+.absolute.b,						.a.bottom,
+.fixed.bottom,						.f.b,
+.fixed.b,							.f.bottom				{bottom: 0;}
+
+.absolute.left,						.a.l,
+.absolute.l,						.a.left,
+.fixed.left,						.f.l,
+.fixed.l,							.f.left					{left: 0;}
 
 /* The Grid ala 960.gs
 ================================================== */
@@ -2683,22 +2973,26 @@ Class Name						Shorthand					Styles
 	padding: 0;
 }
 
-.container .col {
+.container .col
+{
 	float: left; 
 	display: inline; 
 	margin-left: 10px; 
 	margin-right: 10px;
 }
 
-.row {
-	margin-bottom: 1.3em;
+.row
+{
+	
 }
 
 /* Nested col Classes */
-.col.first {
+.col.first
+{
 	margin-left: 0;
 }
-.col.last {
+.col.last
+{
 	margin-right: 0;
 }
 
@@ -2726,6 +3020,14 @@ Class Name						Shorthand					Styles
 .container .one-third.col,		.container table th.one-third,		.container table td.one-third						{width: 300px;}
 .container .two-thirds.col,		.container table th.two-thirds,		.container table td.two-thirds						{width: 620px;}
 
+.container .fluid .one-third.col
+{
+	width: 31.11%;
+	margin-left:1%;
+	margin-right:1%;
+}
+.container .two-thirds.col,		.container table th.two-thirds,		.container table td.two-thirds						{width: 620px;}
+
 /* Offsets */
 .container .push_one						{padding-left: 60px;}
 .container .push_two						{padding-left: 120px;}
@@ -2746,30 +3048,36 @@ Class Name						Shorthand					Styles
 /* ALL
 ================================================== */
 
-@media only screen and (max-width: 959px) {
+@media only screen and (max-width: 959px)
+{
 	
-	.container .one-third.col {
+	.container .one-third.col
+	{
 		width: 32.11%;
 		margin-left:1%;
 		margin-right:1%;
 	}
 	
-	.container .two-thirds.col  {
+	.container .two-thirds.col
+	{
 		width: 66%; 
 		margin-left:1%;
 		margin-right:1%;
-		}
+	}
 	
-	.container .one-quarter.col {
+	.container .one-quarter.col
+	{
 		width: 23.625%;
 		margin-left:1%;
 		margin-right:1%;
 	}
+	
 	.container .half.col {
 		width: 49%;
 		margin-left:1%;
 		margin-right:1%;
 	}
+	
 	.container .three-quarters.col {
 		width: 74.5%;
 		margin-left:1%;
@@ -2845,21 +3153,29 @@ Class Name						Shorthand					Styles
 }
 
 
-/*  #Mobile (Portrait) Note: Design for a width of 320px
+/*  Mobile (Portrait) 
 ================================================== */
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) 
+{
 
-	.container {
+	.container
+	{
 		width: 300px;
 	}
-	.container .col {
+	
+	.container .col
+	{
 		margin: 0;
 	}
-	.container .col.first{
+	
+	.container .col.first
+	{
 		margin-left: 0 !important;
 	}
-	.container .col.last{
+	
+	.container .col.last
+	{
 		margin-right: 0 !important;
 	}
 	
@@ -2878,7 +3194,8 @@ Class Name						Shorthand					Styles
 	.container .thirteen.col,
 	.container .fourteen.col,
 	.container .fifteen.col,
-	.container .sixteen.col {
+	.container .sixteen.col
+	{
 		width: 300px;
 	}
 	
@@ -2897,10 +3214,13 @@ Class Name						Shorthand					Styles
 	.container .push_twelve,
 	.container .push_thirteen,
 	.container .push_fourteen,
-	.container .push_fifteen {
+	.container .push_fifteen
+	{
 		padding-left: 0;
 	}
-	.fixed{
+	
+	.fixed
+	{
 		position: relative !important;
 	}
 }
@@ -2914,16 +3234,20 @@ Class Name						Shorthand					Styles
 only screen and (min-width: 1536px) and (-webkit-device-pixel-ratio: 2), /* I'm Special for iPad Retina */
 only screen and (-webkit-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
-only screen and (min-device-pixel-ratio: 1.5) {
+only screen and (min-device-pixel-ratio: 1.5)
+{
 
-	.container {
+	.container
+	{
 		width: 94%; 
 		margin: 0 auto;
 	}
 	
-	.container .col {
+	.container .col
+	{
 		margin: 0;
 	}
+	
 	.container .one.col,
 	.container .two.col,
 	.container .three.col,
@@ -2939,41 +3263,49 @@ only screen and (min-device-pixel-ratio: 1.5) {
 	.container .thirteen.col,
 	.container .fourteen.col,
 	.container .fifteen.col,
-	.container .sixteen.col {
+	.container .sixteen.col
+	{
 		width: 100%;
 	}
 	
-	.container .one-third.col {
+	.container .one-third.col
+	{
 		width: 32.11%;
 		margin-left:1%;
 		margin-right:1%;
 	}
 	
-	.container .two-thirds.col  {
+	.container .two-thirds.col
+	{
 		width: 66%; 
 		margin-left:1%;
 		margin-right:1%;
 		}
 	
-	.container .one-quarter.col {
+	.container .one-quarter.col
+	{
 		width: 23.625%;
 		margin-left:1%;
 		margin-right:1%;
 	}
-	.container .half.col {
+	.container .half.col
+	{
 		width: 49%;
 		margin-left:1%;
 		margin-right:1%;
 	}
-	.container .three-quarters.col {
+	.container .three-quarters.col
+	{
 		width: 74.5%;
 		margin-left:1%;
 		margin-right:1%;
 	}
-	.fixed {
+	.fixed
+	{
 		position: relative !important;
 	}
-	.container .pager_nav .one.col {
+	.container .pager_nav .one.col
+	{
 		width: 28px;
 	}
 }
@@ -2983,7 +3315,8 @@ only screen and (min-device-pixel-ratio: 1.5) {
 ================================================== */
 
 /* Self Clearing Goodness */
-.container:after {
+.container:after
+{
 	content: "\0020"; 
 	display: block; 
 	height: 0; 
@@ -2999,7 +3332,8 @@ or wrap each row of col in a <div class="row"> makes sense doesn't it? */
 .cfx:before,
 .cfx:after,
 .row:before,
-.row:after {
+.row:after
+{
 	content: '\0020';
 	display: block;
 	overflow: hidden;
@@ -3012,13 +3346,17 @@ or wrap each row of col in a <div class="row"> makes sense doesn't it? */
 	clear: both;
 }
 
-.row, .cfx,.clearfix {
+.row,
+.cfx,
+.clearfix
+{
 	zoom: 1;
 }
 
 /* You can also use a <br(or <hr>) class="clear"> to clear columns */
 
-.clear {
+.clear
+{
 	clear: both;
 	display: block;
 	overflow: hidden;
@@ -3029,17 +3367,23 @@ or wrap each row of col in a <div class="row"> makes sense doesn't it? */
 
 /* #Tooltip CSS
 ================================================== */
-.icon.tooltip{}
-.tooltip {
+.icon.tooltip
+{
+	
+}
+.tooltip
+{
 	display:inline;
 	position:relative;
 }
 
-.tooltip:hover {
+.tooltip:hover
+{
 	text-decoration:none;
 }
 
-.tooltip:hover:after {
+.tooltip:hover:after
+{
 	text-indent: 0;
 	top:40px;
 	display:block;
@@ -3070,7 +3414,9 @@ or wrap each row of col in a <div class="row"> makes sense doesn't it? */
 	opacity:.925;
 	filter:alpha(opacity=90);
 }
-.tooltip:hover:before{
+
+.tooltip:hover:before
+{
 	border:solid;
 	border-color:#fefefe transparent;
 	border-width: 0 6px 7px 6px;
@@ -3088,6 +3434,99 @@ or wrap each row of col in a <div class="row"> makes sense doesn't it? */
 	background-clip:padding-box;
 	opacity:.825;
 	filter:alpha(opacity=80);
+}
+
+
+@media print,
+	(-o-min-device-pixel-ratio: 5/4),
+	(-webkit-min-device-pixel-ratio: 1.25),
+	(min-resolution: 120dpi)
+	{
+	/* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+	Print styles.
+	Inlined to avoid required HTTP connection: h5bp.com/r
+	========================================================================== */
+
+@media print
+{
+	* {
+		background: transparent !important;
+		color: #000 !important; /* Black prints faster: h5bp.com/s */
+		box-shadow: none !important;
+		text-shadow: none !important;
+	}
+	
+	a,
+	a:visited
+	{
+		text-decoration: underline;
+	}
+	
+	a[href]:after
+	{
+		content: " (" attr(href) ")";
+	}
+	
+	abbr[title]:after
+	{
+		content: " (" attr(title) ")";
+	}
+	
+	/*
+	* Don't show links for images, or javascript/internal links
+	*/
+	
+	.ir a:after,
+	a[href^="javascript:"]:after,
+	a[href^="#"]:after
+	{
+		content: "";
+	}
+	
+	pre,
+	blockquote
+	{
+		border: 1px solid #999;
+		page-break-inside: avoid;
+	}
+	
+	thead
+	{
+		display: table-header-group; /* h5bp.com/t */
+	}
+	
+	tr,
+	img
+	{
+		page-break-inside: avoid;
+	}
+	
+	img
+	{
+		max-width: 100% !important;
+	}
+	
+	@page
+	{
+		margin: 0.5cm;
+	}
+	
+	p,
+	h2,
+	h3
+	{
+		orphans: 3;
+		widows: 3;
+	}
+	
+	h2,
+	h3
+	{
+		page-break-after: avoid;
+	}
 }
 /* Theme Styles 
 /* odd/even classes are added via /js/scripts.js
