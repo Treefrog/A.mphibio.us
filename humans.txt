@@ -4,7 +4,7 @@
 # TEAM
 
     Clive Moore -- User Experience Lead -- @cliveMoore
-    Jon Guthrie -- Technical Lead -- @iamjono
+    Jono Guthrie -- Technical Lead -- @iamjono
     
 # THANKS
 
