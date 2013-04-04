@@ -52,6 +52,8 @@ amp.bindlisteners = function() {
 	 * Bind Listeners 
 	 * These are bound once the scripts, css and DOM are fully loaded
 	 * ================================================================== */
+	 
+	/* General layoy helpers */
 	$('table td:first-child').addClass('first');
 	$('table tr:nth-child(2n+1)').addClass('odd');
 	$('table tr:nth-child(2n)').addClass('even');
@@ -61,7 +63,29 @@ amp.bindlisteners = function() {
 	$('table td:last-child').addClass('last');
 	$('table th:first-child').addClass('first');
 	$('table th:last-child').addClass('last');
-	$('.ie ul.stats li:last-child').addClass('last');
+	$('ul li:last-child').addClass('last');
+	
+	/* 
+	 * jQuery snippet that globally enables placeholder attribute in older browsers:
+	 *
+	 * ================================================================== */
+	 
+	$(function(){
+		var d = 'placeholder' in document.createElement('input');
+		if (!d){
+			$('input[placeholder]').each(function(){
+				$(this).val(element.attr('placeholder')).addClass('placeholder');
+				}).bind('focus',function(){
+					if ($(this).val() == element.attr('placeholder')){
+						$(this).val('').removeClass('placeholder');
+						}
+		}).bind('blur',function(){
+				if ($(this).val() === ''){
+					$(this).val(element.attr('placeholder')).addClass('placeholder');
+				}
+			});
+		}
+	});
 	
 	$.localScroll();
 	
@@ -116,7 +140,7 @@ amp.bindlisteners = function() {
 			jQuery('#'+thisOfCourse+'').addClass('hide');
 		}
 	});
-	
+
 };
 
 amp.mobilelisteners = function() {
@@ -126,7 +150,11 @@ amp.mobilelisteners = function() {
 	 * ================================================================== */
 	$('body').on('click', 'a[href^="tel:"]', function() {
 		$(this).attr('href', 
+<<<<<<< HEAD:advanced/js/scripts.js
 				$(this).attr('href').replace(/^tel:/, 'callto:'));
+=======
+			$(this).attr('href').replace(/^tel:/, 'callto:'));
+>>>>>>> made some upgrades to the scripts.:js/scripts.js
 	});
 };
 

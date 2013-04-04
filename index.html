@@ -46,7 +46,13 @@
 <meta name="apple-mobile-web-app-title" content="A.mphibio.us">
 
 
+<link rel="stylesheet" href="css/lib/a.mphibio.us.css">
+<link rel="stylesheet" href="css/skin/iOS5.css">
+<!--//
+
 <link rel="stylesheet" href="css/a.mphibio.us.min.css">
+
+//-->
 
 <link rel="stylesheet" type="text/css" media="screen" href="css/lib/sequencejs-theme.modern-slide-in.css" />
 <!--[if lt IE 9]><link rel="stylesheet" type="text/css" media="screen" href="css/lib/sequencejs-theme.modern-slide-in.ie.css" /><![endif]-->
@@ -182,8 +188,500 @@
 			</nav>
 		</div>
 </div>
+<div class="row dpb hide">
+<ul class="tabs pager_nav mb">
+	<li class="label">Show Source</li>
+	<li class="smaller r"><a href="#sequence_css"><abbr title="Casscading Style Sheets">CSS</abbr></a></li>
+	<li class="smaller r"><a href="#sequence_html"><abbr title="Hypertext Markup Language">HTML</abbr></a></li>
+</ul>
+<ul class="tabs-content">
+	<li id="sequence_html"><pre class="prettyprint"><code>&lt;div id="sequence"&gt;
+	&lt;ul&gt;
+		&lt;li id="intro"&gt;
+			&lt;h2 class="title animate-in"&gt;Responsive Design Layout from Mobile Up&lt;/h2&gt;
+			&lt;h3 class="subtitle animate-in"&gt;Using Sequence.js Responsive Slider with Advanced CSS3 Transitions&lt;/h3&gt;
+			&lt;p class="woop animate-in"&gt;A.mphibio.us has a familiar, lightweight 960 grid as its base, but elegantly scales down to downsized browser windows, tablets, mobile phones (in landscape and portrait).&lt;/p&gt;
+			&lt;img class="model animate-in" src="img/iphone.png" alt=" " /&gt;
+		&lt;/li&gt;
+		&lt;li id="rapid"&gt;
+			&lt;h2 class="title"&gt;Fast Start =&gt; Rapid Development&lt;/h2&gt;
+			&lt;h3 class="subtitle"&gt;A.mphibio.us is a tool for rapid development.&lt;/h3&gt;
+			&lt;p class="woop animate-in"&gt;Get started fast with CSS best practices, a well-structured grid that makes mobile consideration easy, an organized file structure and super basic UI elements like lightly styled forms, buttons, tabs and more. Simple human readable code and shorthand classes makes coding a snap!&lt;/p&gt;
+			&lt;img class="model" src="img/code.png" alt=" " /&gt;
+		&lt;/li&gt;
+		&lt;li id="agnostic" class="frame3"&gt;
+			&lt;h2 class="title"&gt;Design Agnostic&lt;/h2&gt;
+			&lt;h3 class="subtitle"&gt;A.mphibio.us is not intended for use as a UI framework.&lt;/h3&gt;
+			&lt;p class="woop animate-in"&gt; a RDK that provides the most basic styles as a foundation, it is ready to adapt to whatever your design or style is.&lt;/p&gt;
+			&lt;img class="model" src="img/agnostic.png" alt=" " /&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+&lt;nav role="navigation"&gt; 
+&lt;ul id="nav"&gt;
+	&lt;li&gt;&lt;img src="img/tn-iphone.png" alt="Mobile" /&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;img src="img/tn-code.png" alt="Rapid" /&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;img src="img/tn-design.png" alt="Agnostic" /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/nav&gt;
+&lt;/div&gt;
+</code></pre></li>
+	<li id="sequence_css"><pre class="prettyprint" lang-css><code>/*
+Theme created for use with Sequence.js (http://www.sequencejs.com/)
 
-<br class="clear">
+Theme:   Sliding Horizontal Parallax (Responsive)
+Version:   0.2.2 Beta
+Theme Author:   Ian Lunn @IanLunn
+Author URL:   http://www.ianlunn.co.uk/
+Theme URL:   http://www.sequencejs.com/themes/sliding-horizontal-parallax/
+
+This is a FREE theme and is dual licensed under the following: 
+http://www.opensource.org/licenses/mit-license.php | http://www.gnu.org/licenses/gpl.html
+
+Sequence.js and its dependencies are (c) Ian Lunn Design 2012 unless otherwise stated.
+Aside from these comments, you may modify and distribute this file as you please. Have fun!
+ */
+#header-container{
+	background: #f7f7f7;
+	border-bottom: black solid 5px;
+	width: 100%;
+	padding-top: 50px;
+}
+
+#header {
+	background:  #f7f7f7;
+	height: 700px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	max-width: 1280px;
+	width: 100%;
+}
+.next,.prev {
+	color: white;
+	cursor: pointer;
+	display: none;
+	font-weight: bold;
+	position: absolute;
+	top: 45%;
+	z-index: 1000;
+	height: 75px;
+	margin-top: -47.5px;
+}
+#header .next,#header .prev{ padding: 10px 15px; }
+
+.pause {
+	bottom: 0;
+	cursor: pointer;
+	position: absolute;
+	z-index: 1000;
+}
+
+.paused {
+	opacity: 0.3;
+}
+
+.prev {
+	left: .2%;
+}
+
+.next {
+	right: 0.2%;
+}
+
+.prev img, .next img{
+	height: 100%;
+	width: auto;
+}
+
+#sequence-preloader{
+	background: #d9d9d9;
+}
+
+#nav {
+	bottom: 1%;
+	display: none;
+	right: 6%;
+	position: absolute;
+
+	-webkit-transition-duration: .5s;
+	-moz-transition-duration: .5s;
+	-o-transition-duration: .5s;
+	-ms-transition-duration: .5s;
+	transition-duration: .5s;
+}
+
+#nav li {
+	display: inline-block;
+	height: 140px;
+}
+
+#nav li img {
+	cursor: pointer;
+	opacity: 0.2;
+
+	-webkit-transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-o-transition-duration: 1s;
+	-ms-transition-duration: 1s;
+	transition-duration: 1s;
+}
+
+#nav li img.active {
+	opacity: 1;
+}
+
+@media only screen and (min-width : 1224px) {
+	/*only display the hover effect on desktops/laptops*/
+	#nav li img:hover {
+		opacity: 1;
+	
+		-webkit-transition-duration: 1s;
+		-moz-transition-duration: 1s;
+		-o-transition-duration: 1s;
+		-ms-transition-duration: 1s;
+		transition-duration: 1s;
+	}
+
+}
+
+#sequence li{
+	height: 100%;
+	position: absolute;
+	top: -50%;
+	width: 100%;
+}
+
+#sequence li * {
+	position: absolute;
+}
+
+#sequence li img{
+	height: 96%;
+}
+
+#sequence {
+	display: block;
+	background: url("../../img/bg-sequence.jpg") no-repeat 50% 100%;
+	height: 100%;
+	margin: 0;
+	position: absolute;
+	max-width: 1280px;
+	width: 100%;
+	
+	/*backface-visibility prevents graphical glitches when frames are animating*/
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+
+.next,.prev {
+	position: absolute;
+	opacity: 0.3;
+
+	-webkit-transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-o-transition-duration: 1s;
+	-ms-transition-duration: 1s;
+	transition-duration: 1s;
+}
+
+.next:hover,.prev:hover {
+	opacity: 1;
+
+	-webkit-transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-o-transition-duration: 1s;
+	-ms-transition-duration: 1s;
+	transition-duration: 1s;
+}
+
+.title {
+	font-size: 2em;
+	left: 65%;
+	width: 35%;
+	opacity: 0;
+	bottom: 20%;
+	
+	font-family: 'RokkittRegular';
+	font-weight: normal;
+	z-index: 50;
+}
+.woop {
+	width: 35%;
+	opacity: 0;
+	z-index: 51;
+	top:106%;}
+	
+.title.animate-in, .woop.animate-in {
+	left: 50%;
+	opacity: 1;
+
+	-webkit-transition-duration: .5s;
+	-moz-transition-duration: .5s;
+	-o-transition-duration: .5s;
+	-ms-transition-duration: .5s;
+	transition-duration: .5s;
+}
+
+.title.animate-out, .woop.animate-out {
+	left: 35%;
+	opacity: 0;
+
+	-webkit-transition-duration: .5s;
+	-moz-transition-duration: .5s;
+	-o-transition-duration: .5s;
+	-ms-transition-duration: .5s;
+	transition-duration: .5s;
+}
+
+.subtitle {
+	color: black;
+	font-family: 'RokkittRegular';
+	font-weight: normal;
+	font-size: 1.6em;
+	left: 35%;
+	width: 35%;
+	opacity: 0;
+	top: 90%;
+}
+
+.subtitle.animate-in {
+	left: 50%;
+	opacity: 1;
+
+	-webkit-transition-duration: .5s;
+	-moz-transition-duration: .5s;
+	-o-transition-duration: .5s;
+	-ms-transition-duration: .5s;
+	transition-duration: .5s;
+}
+
+.subtitle.animate-out {
+	left: 65%;
+	opacity: 0;
+
+	-webkit-transition-duration: .5s;
+	-moz-transition-duration: .5s;
+	-o-transition-duration: .5s;
+	-ms-transition-duration: .5s;
+	transition-duration: .5s;
+}
+
+.model {
+	left: -20%;
+	top:50%;
+	opacity: 0;
+	position: relative;
+	height: auto !important;
+	max-height: 700px !important;
+	width: 100%;
+	min-width: 225px; /*prevents the model from shrinking when the browser is resized*/
+	max-width: 266px;
+}
+
+.model.animate-in {
+	left: 15%;
+	opacity: 1;
+
+	-webkit-transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-o-transition-duration: 1s;
+	-ms-transition-duration: 1s;
+	transition-duration: 1s;
+}
+
+.model.animate-out {
+	left: 15%;
+	opacity: 0;
+
+	-webkit-transition-duration: .5s;
+	-moz-transition-duration: .5s;
+	-o-transition-duration: .5s;
+	-ms-transition-duration: .5s;
+	transition-duration: .5s;
+}
+
+@media only screen and (min-width : 992px) {
+	.title{
+		width: 42%;
+	}
+}
+
+@media only screen and (max-width : 838px) {
+	#header{
+		/* height: 550px; */
+	}
+	
+	.model{
+		max-height: 530px !important;
+		width: auto;
+	}
+}
+
+@media only screen and (max-width : 768px) {
+	#header{
+		height: 500px;
+	}
+	
+	.title{
+		font-size: 2.8em;
+	}
+	
+	.subtitle{
+		font-size: 1.6em;
+	}
+	
+	.next,.prev {
+		height: 60px;
+		margin-top: -40px;
+	}
+	
+	.model{
+		max-height: 480px !important;
+		width: auto;
+	}
+}
+
+@media only screen
+and (max-width : 568px) {
+	.model{
+		left: 50%;
+		min-width: 40%; /*prevents the model from shrinking when the browser is resized*/
+			width: 40%;	
+	}
+	
+	.model.animate-in {
+		left: 50%;
+		margin-left: -20%;
+	}
+	
+	.model.animate-out {
+		left: 50%;
+		margin-left: -20%;
+	}
+	
+	.title{
+		background: #a1a1a1;
+		background: rgba(0,0,0,0.3);
+		bottom: 0;
+		left: 100%;
+		padding: 4%;
+		bottom: -52%;
+		width: 100%;
+		z-index: 10;
+	}
+	
+	.title.animate-in{
+		left: 0%;
+	}
+	
+	.title.animate-out{
+		left: -100%;	
+	}
+	
+	.subtitle, .woop{
+		visibility: hidden;
+	}
+	
+	#nav{
+		bottom: 40px;
+	}
+	
+	#nav li img{
+		height: 100px;
+	}
+}
+
+@media only screen
+and (max-width : 518px) {
+	#header{
+		height: 450px;
+	}
+}
+
+@media only screen
+and (max-width : 468px) {
+	#header{
+		height: 415px;
+	}
+	
+	#nav{
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+@media only screen
+and (max-width : 418px) {
+	#header{
+		height: 375px;
+	}
+}
+
+@media only screen
+and (max-width : 368px) {
+	#header{
+		height: 325px;
+	}
+	.title{
+		font-size: 2.2em;
+	}
+}
+
+@media 	only screen
+		and (max-width : 320px)
+		and (orientation : portrait) { /*iphone portrait*/
+	#header{
+		height: 320px;
+	}
+	
+	.model{
+		min-width: 45%;
+		width: 45%;
+	}
+	
+	.model.animate-in{
+		margin-left: -22.5%;
+	}
+	
+	.model.animate-out{
+		margin-left: -22.5%;
+	}
+}
+
+@media 	only screen
+		and (min-width : 321px)
+		and (max-width : 480px)
+		and (orientation : landscape) {
+		#header{
+			height: 260px;
+		}
+		
+		.model{
+			min-width: 24%;
+			width: 24%;
+		}
+		
+		.model.animate-in{
+			left: 17.5%;
+			margin-left: 0;
+		}
+		
+		.model.animate-out{
+			left: 17.5%;
+			margin-left: 0;
+		}
+		
+		#nav{
+			right: 17.5%;
+		}
+}</code></pre></li>
+</ul>
+</div>
 <header>
 	<div id="top" role="banner" class="container">
 		<hgroup>
@@ -376,9 +874,10 @@
 		</div>
 		
 		<div class="section cfx" id="pears">
-			<h3>Content <a href="http://pea.rs">Pea.rs</a></h3>
+			<h3>Content Pea.rs</h3>
+			<p><a href="http://pea.rs">Pea.rs</a> are common patterns of markup and style.</p>
 			
-			<div class="row pb drb">
+			<div class="row pb">
 				<h5 class="mb drb">Article</h5>
 				
 				<article class="aside">
@@ -398,6 +897,58 @@
 				</article>			
 								
 			</div>
+			<div class="row dpb">
+			<ul class="tabs mini rb">
+				<li class="label">Show Source</li>
+				<li class="r"><a href="#html"><span class="copy icon" style="height:20px;" rel="html">&#59156;</span> <abbr title="Hypertext Markup Language">HTML</abbr></a></li>
+				<li class="r"><a href="#css"><span class="copy icon" style="height:20px;" rel="css">&#59146;</span> <abbr title="Casscading Style Sheets">CSS</abbr></a></li>
+			</ul>
+			<ul class="tabs-content">
+				<li id="html"><pre class="prettyprint"><code>&lt;div class="row pb drb"&gt;
+	&lt;h5 class="mb drb"&gt;Article&lt;/h5&gt;
+	
+	&lt;article class="aside"&gt;
+		&lt;header&gt;
+			&lt;h2&gt;The Title Goes Here&lt;/h2&gt;	
+		&lt;/header&gt;
+		
+		&lt;aside&gt;
+			This is aside text lorem ipsum dolor sit amet consectetur adipisicing.
+		&lt;/aside&gt;
+		
+		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis &lt;a href="#"&gt;nostrud exercitation&lt;/a&gt; ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod &lt;a href="#"&gt;tempor incididunt&lt;/a&gt; ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.&lt;/p&gt;
+		&lt;footer class="meta"&gt;
+			&lt;small&gt;Posted August 22, 2011&lt;/small&gt;
+		&lt;/footer&gt;
+	&lt;/article&gt;			
+					
+&lt;/div&gt;</code></pre></li>
+			<li id="css"><pre class="prettyprint"><code>article.aside
+{
+	margin: 0 0 1.6em 20%;
+}
+
+article header h2
+{
+	margin: 0 0 1em 0;
+	font-weight: normal;
+	line-height: 1.3;
+}
+
+article aside
+{
+	float: left;
+	width: 20%;
+	margin-left: -25%;
+	font-size: .825em;
+	line-height: 1.8;
+	color: #999;
+}
+			</code></pre></li>
+		</ul>
+			</div>
+				
 		<div class="row">
 			<div class="col nine first">
 				
@@ -1316,5 +1867,6 @@
   })();
 
 </script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;skin=sons-of-obsidian&amp;lang=css" defer="defer"></script>
 </body>
 </html>

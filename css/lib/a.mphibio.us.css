@@ -124,11 +124,11 @@ h6 a
 }
 
 h1 {
-	font-size: 2.3em;
+	font-size: 2.6em;
 }
 
 h2 {
-	font-size: 1.8em;
+	font-size: 2em;
 }
 
 h3 {
@@ -237,7 +237,7 @@ code
 	display: block; 
 	padding: 0.5em 1em; 
 	border: 1px solid #81aed1; 
-	font-family: "Courier New", Courier, Monaco, monospace; 
+	font-family: 'Lucida Console', 'Andale Mono', 'Nimbus Mono L', 'Liberation Mono', FreeMono, 'Osaka Monospaced', Courier, 'New Courier', monospace;
 }
 
 /*	Blockquotes  */
@@ -354,6 +354,12 @@ ul.circle
 ul.disc
 {
 	list-style: disc outside; 
+}
+
+ul.img
+{
+	list-style-image: url(../../img/a.bullet.png);
+	list-style-position: outside; 
 }
 
 ol.alpha
@@ -1166,6 +1172,7 @@ ul.tabs
 	display: block;
 	margin: 0;
 	padding: 0;
+	list-style: none;
 }
 
 ul.tabs li
@@ -1268,6 +1275,20 @@ ul.tabs li a.active
 	background-color: #1b378c;
 }
 
+ul.tabs.mini li,
+ul.tabs.mini li a,
+ul.tabs.mini li a.active
+{
+	height: 22px;
+}
+
+ul.tabs.mini li,
+ul.tabs.mini li a
+{
+	font: -webkit-control;
+	font-size: .826em; 
+}
+
 ul.tabs li:first-child a.active
 {
 	margin-left: 0; 
@@ -1290,6 +1311,7 @@ ul.tabs-content
 {
 	margin: 0; 
 	display: block;
+	list-style: none;
 }
 
 ul.tabs-content > li
@@ -1914,10 +1936,15 @@ form fieldset p.form-help
 {
 	list-style: none;
 	margin:0;
-	font-size: 40px;
+	font-size: 1.6em;
 	font-family: 'entypo';
 	color: #000;
 	text-shadow: 0 1px 0 #fff;
+}
+
+#icons .icons
+{
+	font-size: 2.6em;
 }
 
 ul.icons
