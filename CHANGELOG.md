@@ -1,4 +1,4 @@
-### Release 1.0.1
+### Release 1.0.1 (Wednesday, April 17, 2013)
 
 * Refactored Repository Structure to optimize my own work flow.
 * Added build directory inside docs folder for grunt root 
@@ -8,7 +8,7 @@
 * m.index blank mobile index optimized for yep... mobile only
 * a.index.html the one index to bind them all
 
-### Initial Release 1.0.0
+### Initial Release 1.0.0 (Thursday, April 11, 2013)
 
 * Refactored Site Structure Launched new website, and RDK. 
 * Updated Main Slide Series to Sequence.js v0.8.5
