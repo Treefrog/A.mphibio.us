@@ -3,6 +3,10 @@
 * Refactored Repository Structure to optimize my own work flow.
 * Added build directory inside docs folder for grunt root 
 * Updated Project Page to include isotope gallery samples
+* Removed theme assets from RDK and split into 3 indexes
+* index.html blank desktop only template use with caution
+* m.index blank mobile index optimized for yep... mobile only
+* a.index.html the one index to bind them all
 
 ### Initial Release 1.0.0
 
