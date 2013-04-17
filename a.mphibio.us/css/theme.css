@@ -1,0 +1,63 @@
+/*!
+/*	A.mphibio.us  1.0.1
+/*	Copyright 2013, @cliveMoore @Treefrog
+/*	http://a.mphibio.us
+/*	Free to use under the MIT license.
+/*	http://www.opensource.org/licenses/mit-license.php
+/*	04/17/2013
+/*
+/*	This one is totally up to you...
+/*	change the above copyright to reflect that
+/*	I'm guessing but I'll get you started with 
+/*	background, base font color, link colors
+================================================== */
+body
+{
+	background: #fff;
+	color: #4D4D4D;
+	font-family:
+		"Lucida Grande",
+		"Lucida Sans",
+		Lucida,
+		Arial,
+		Helvetica,
+		sans-serif;
+}
+
+/* Link-o-matic
+================================================== */
+a, a:visited
+{
+	color: #1b378c; 
+	outline: 0;
+	/*	Sexy Rrogressive Enhancment link styles
+	/*	CSS3 Please: http://css3please.com
+	/*	Could also easily be: all .2s linear;
+	/*	if you were looking to change background, image etc,
+	/*	by default as well */
+	-webkit-transition: color 0.3s linear;
+	 -moz-transition: color 0.3s ease-out;
+	   -o-transition: color 0.3s ease-out;
+	      transition: color 0.3s ease-out;
+}
+
+a:hover,
+a:focus 
+{
+	color: #000; 
+}
+
+#colophon a:hover,
+#colophon a:focus 
+{
+	color: #fff; 
+}
+
+p a,
+p a:visited
+{
+	line-height: inherit; 
+}
+
+
+			

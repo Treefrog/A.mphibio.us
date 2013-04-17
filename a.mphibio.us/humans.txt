@@ -3,14 +3,22 @@
 
 # TEAM
 
-    Clive Moore -- User Experience Lead -- @cliveMoore
-    Jono Guthrie -- Technical Lead -- @iamjono
+	Clive Moore -- User Experience Lead -- @cliveMoore
+	Jono Guthrie -- Technical Lead -- @iamjono
     
 # THANKS
 
-    Paul Irish, Dan Cederholm, Ian Lunn, Ariel Flesler, @viljamis
+	Paul Irish, Dan Cederholm, Ian Lunn, Ariel Flesler, @viljamis
+
+# DOCUMENTATION
+
+	http://a.mphibio.us/
+	http://github.com/Treefrog-Interactive/A.mphibio.us
 
 # TECHNOLOGY COLOPHON
 
-    HTML5, CSS3
-    Normalize.css, jQuery, Modernizer
+	HTML5,
+	CSS3
+	Normalize.css,
+	jQuery,
+	Modernizer
