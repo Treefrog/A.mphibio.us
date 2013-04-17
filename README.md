@@ -9,8 +9,12 @@ Leverages jQuery 1.9.1 and GruntJS
 
 ## Installation
 
-Download and use as a webroot for you next front end project and start prototyping
-your html immediately, get to the browser quicker.
+#Easy Install
+Download the lastest RDK release and use as a webroot for you next 
+front end project and start prototyping your html immediately, 
+get to the browser in minutes.
+
+#Github Project Installation
 
 ## Authors
 

@@ -1,0 +1,911 @@
+/*
+* A.mphibio.us public site theme V1.0
+* Copyright 2013, @cliveMoore @Treefrog
+* http://a.mphibio.us
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 04/10/2013
+
+*/
+
+/* Font-Face
+================================================== */
+
+/*
+ * Web Fonts from fontspring.com
+ *
+ * All OpenType features and all extended glyphs have been removed.
+ * Fully installable fonts can be purchased at http://www.fontspring.com
+ *
+ * The fonts included in this stylesheet are subject to the End User License you purchased
+ * from Fontspring. The fonts are protected under domestic and international trademark and 
+ * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+ * distributing this font software.
+ *
+ * (c) 2010-2012 Fontspring
+ *
+ *
+ *
+ *
+ * The fonts included are copyrighted by the vendor listed below.
+ *
+ * Vendor:      Typodermic
+ * License URL: http://www.fontspring.com/fflicense/typodermic
+ *
+ *
+ */
+ 
+@font-face {
+    font-family: 'BlueHighwayRegular';
+    src: url('../fonts/blue_highway/blue_highway_rg-webfont.eot');
+    src: url('../fonts/blue_highway/blue_highway_rg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/blue_highway/blue_highway_rg-webfont.woff') format('woff'),
+         url('../fonts/blue_highway/blue_highway_rg-webfont.ttf') format('truetype'),
+         url('../fonts/blue_highway/blue_highway_rg-webfont.svg#BlueHighwayRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'BlueHighwayCondensedRegular';
+    src: url('../fonts/blue_highway/blue_highway_cd-webfont.eot');
+    src: url('../fonts/blue_highway/blue_highway_cd-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/blue_highway/blue_highway_cd-webfont.woff') format('woff'),
+         url('../fonts/blue_highway/blue_highway_cd-webfont.ttf') format('truetype'),
+         url('../fonts/blue_highway/blue_highway_cd-webfont.svg#BlueHighwayCondensedRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'BlueHighwayDRegular';
+    src: url('../fonts/blue_highway/blue_highway_d-webfont.eot');
+    src: url('../fonts/blue_highway/blue_highway_d-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/blue_highway/blue_highway_d-webfont.woff') format('woff'),
+         url('../fonts/blue_highway/blue_highway_d-webfont.ttf') format('truetype'),
+         url('../fonts/blue_highway/blue_highway_d-webfont.svg#BlueHighwayDRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/* Link-o-matic theme overrides
+================================================== */
+
+a, 
+a:visited
+{
+	color: #0081c6;
+	text-decoration: none;
+	outline: 0;
+}
+
+.active a, .
+a:hover,
+a:focus
+{
+	color: #b2bb1e;
+}
+
+p a,
+p a:visited
+{
+	line-height: inherit;
+}
+
+/* Site Styles
+================================================== */
+
+* html body,
+html,
+body
+{
+	/* These styles are handy for making sticky footers
+	/* Feel free to delete these if you really want */
+	height: 100%;
+	min-height: 100%;
+}
+
+body
+{
+	background: #ededed url(../images/bgs/natural_paper.png) 0 0 repeat;
+	color: #4d4d4d;
+	text-shadow: #fff 0 1px 1px; /* for older browsers */
+	text-shadow: rgba(255,255,255,.4) 0 1px 1px;
+}
+
+/* Theme Helper rules
+================================================== */
+.whtt,
+.orgt
+{
+	color: #fff;
+	text-shadow: 0 -1px 0 #000;
+}
+.orgt
+{
+	color: #f6921e;
+}
+.dgryt
+{
+	color: #4d4d4d;
+}
+.bgwht
+{
+	background: #fff;
+}
+.bgorg
+{
+	background: #f6921e;
+}
+
+.bxshw
+{
+	box-shadow: 
+		rgba(0,0,0,.2)0 0 10px,
+		rgba(0,0,0,.4)0 0 5px,
+		rgba(0,0,0,.6)0 0 2px;
+}
+
+/* Typography
+/* These are additional styles for this site only
+/* sizes and line-heights etc, inherited from core
+/* Using proportional font sizes for proper cascade
+================================================== */
+
+@font-face
+{
+    font-family: 'RokkittRegular';
+    src: url('../fonts/Rokkitt-webfont.eot');
+    src: url('../fonts/Rokkitt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Rokkitt-webfont.woff') format('woff'),
+         url('../fonts/Rokkitt-webfont.ttf') format('truetype'),
+         url('../fonts/Rokkitt-webfont.svg#RokkittRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	color: #181818;
+	font-family: "RokkittRegular", "Lucida Grande", "Lucida Sans", Lucida, "Helvetica Neue", Arial, sans-serif;
+	text-shadow:
+		rgba(0,0,0,.4)0 0 1px,
+		rgba(0,0,0,.6)0 0 1px,
+		rgba(255,255,255,1)0 1px 0,
+		rgba(255,255,255,.6) 0 0 2px,
+		rgba(255,255,255,.3) 0 1px 1px;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a
+{
+	font-weight: inherit; 
+}
+
+h1 {
+	font-size: 3em;
+	text-shadow:
+		rgba(0,0,0,.3)0 0 1px,
+		rgba(0,0,0,.4)0 0 1px,
+		rgba(0,0,0,.3)0 0 2px,
+		rgba(0,0,0,.1)0 1px 3px,
+		rgba(255,255,255,1)0 1px 0,
+		rgba(255,255,255,.8)0 1px 1px,
+		rgba(255,255,255,.8)0 1px 2px;
+}
+
+h2 {
+	font-size: 2.6em;
+}
+
+h3 {
+	font-size: 2em; 
+}
+
+h4 {
+	font-size: 1.6em;
+}
+
+h5,
+.intro 
+{
+	/* Often used for as you can imagine some call out text */
+	font-size: 1.3em;
+}
+
+h6
+{
+	font-size: 1.1em;
+	font-weight: bold; 
+}
+
+h1#project_title 
+{
+	font-family: 'BlueHighwayDRegular';
+	color: #fff;
+	position: fixed;
+	font-size: 9em;
+	line-height: 1;
+	opacity: .2; 
+	text-shadow:
+		rgba(0,0,0,.6)0 0 1px,
+		rgba(0,0,0,.8)0 0 1px,
+		rgba(0,0,0,.6)0 0 2px,
+		rgba(0,0,0,.3)0 1px 3px,
+		rgba(255,255,255,1)0 1px 0,
+		rgba(255,255,255,1)0 1px 1px,
+		rgba(255,255,255,1)0 1px 2px;
+	z-index: 100;
+}
+
+p#tagline
+{
+	position: absolute;
+	padding-left: 117px;
+}
+
+.adot
+{ 
+	color:#fff;
+	background-color: #f6921e; 
+	background-image:
+		-webkit-gradient(
+			linear,
+			left top,
+			left bottom,
+			color-stop(0,#ca7819),
+			color-stop(1,#f6921e)
+		);
+	background-image:
+		-o-linear-gradient(
+			top,
+			#ca7819,
+			#f6921e;
+		);
+	background-image:
+		-moz-linear-gradient(
+			top,
+			#ca7819,
+			#f6921e
+			); 
+	background-image:
+		linear-gradient(
+			top,
+			#ca7819,
+			#f6921e;
+		);
+	
+	filter:
+		progid:DXImageTransform.Microsoft.gradient(
+			startColorStr=#ca7819,
+			EndColorStr=#f6921e
+		);
+		 
+	-ms-filter:
+		progid:DXImageTransform.Microsoft.gradient(
+			startColorStr=#ca7819,
+			EndColorStr=#f6921e
+		);
+}
+
+h2 .adot
+{
+	text-shadow:
+		rgba(0,0,0,.4) 0 -1px 0 !important;
+}
+
+blockquote cite span
+{
+	font-weight: bold;
+} 
+
+.pedigree:hover
+{
+	cursor: pointer;
+}
+
+blockquote
+{
+	margin-left: 0;
+	padding-bottom: .6em;
+	text-shadow:
+		rgba(0,0,0,.6)0 0 1px,
+		rgba(0,0,0,.8)0 0 1px,
+		rgba(0,0,0,.6)0 0 2px,
+		rgba(0,0,0,.3)0 1px 3px,
+		rgba(255,255,255,1)0 1px 0;
+	-webkit-box-shadow:
+		inset rgba(0,0,0,.6)0 0 1px,
+		inset rgba(0,0,0,.3)0 0 2px;
+	box-shadow:
+		inset rgba(0,0,0,.6)0 0 2px,
+		inset rgba(0,0,0,.3)0 0 12px;
+}
+
+blockquote p
+{
+	font-style: normal;
+}
+blockquote cite
+{
+	text-shadow: none;
+	color: #fff;
+	font-size: .865em;
+	font-style: normal;
+}
+
+
+/* Download Button Styles
+================================================== */
+          
+.dotted
+{
+	padding: 5px;
+	margin: 5px;
+	margin-bottom: 0;
+	border: 1px dashed #000000;
+}
+
+#intro_left .button
+{
+	display: inline-block;
+	cursor: pointer;
+	margin-bottom: 1.625em;
+	padding: .4em .825em;
+	line-height: normal;
+	background: url(../images/bgs/1440x900.png) 50% 50% no-repeat;
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow:
+		0 -1px 0 rgba(0,0,0, .6);
+	-o-box-shadow:
+		rgba(0,0,0,.6) 0 1px 2px,
+		rgba(0,0,0,.3) 0 1px 8px,
+		inset rgba(255,255,255,.2) 0 0 12px;
+	-moz-box-shadow:
+		rgba(0,0,0,.6) 0 1px 2px,
+		rgba(0,0,0,.3) 0 1px 8px,
+		inset rgba(255,255,255,.4) 0 0 2px;
+	-webkit-box-shadow:
+		rgba(0,0,0,.6) 0 1px 2px,
+		rgba(0,0,0,.3) 0 1px 8px,
+		inset rgba(0,0,0,.4) 0 0 6px;
+	-khtml-box-shadow:
+		rgba(0,0,0,.6) 0 1px 2px,
+		rgba(0,0,0,.3) 0 1px 8px,
+		inset rgba(255,255,255,.4) 0 0 2px;
+	box-shadow:
+		rgba(0,0,0,.6) 0 1px 2px,
+		rgba(0,0,0,.3) 0 1px 8px,
+		inset rgba(0,0,0,.4) 0 0 6px;
+	border-color: transparent;
+	
+	-webkit-border-radius: 12px;
+	 -khtml-border-radius: 12px;
+	   -moz-border-radius: 12px;
+	   	 -o-border-radius: 12px;
+	   		border-radius: 12px;
+	
+	  -webkit-transition: all 0.3s ease-out; 
+	     -moz-transition: all 0.3s ease-out; 
+	       -o-transition: all 0.3s ease-out; 
+	          transition: all 0.3s ease-out; 
+}
+ 
+
+#intro_left .button .icon
+{
+	bottom: -1em;
+	text-transform: uppercase;
+	font-size: 2.3em;
+	margin: 0 0 0 6px;
+	font-family: 'entypo', 'entypo-social';
+	color: #fff;
+	text-shadow:
+		0 -1px 0 rgba(0,0,0, .6);
+}
+
+#intro_left .button:hover
+{
+	background:url(../images/bgs/1440x900.png) 50% 55% no-repeat;
+	-o-box-shadow:
+		rgba(0,0,0,.6) 0 1px 2px,
+		inset rgba(255,255,255,.4) 0 0 2px;
+	-moz-box-shadow:
+		rgba(0,0,0,.6) 0 1px 2px,
+		inset rgba(255,255,255,.4) 0 0 2px;
+	-webkit-box-shadow:
+		rgba(0,0,0,.6) 0 1px 2px,
+		inset rgba(255,255,255,.4) 0 0 2px;
+	-khtml-box-shadow:
+		rgba(0,0,0,.6) 0 1px 2px,
+		inset rgba(255,255,255,.4) 0 0 2px;
+	box-shadow:
+		rgba(255,255,255,.6) 0 1px 2px,
+		inset rgba(0,0,0,.4) 0 0 2px;
+}
+
+/* Navigation Styles
+================================================== */
+
+#to_top
+{
+	position: fixed;
+	height: .6em;
+	right: 0;
+	bottom:0;
+	margin-top: -20px;
+	color: #fff;
+	background: #cfcfcf;
+	background: rgba(0,0,0,.4);
+	text-shadow: 0 1px 0 #fff;
+	text-shadow: 0 1px 0 rgba(255,255,255,.8), 0 -1px 0 rgba(0,0,0,.6);
+	font-size:6em;
+	z-index: 1011;
+}
+#to_top,
+.more
+{
+	-webkit-transition: all 0.3s ease-out; 
+	   -moz-transition: all 0.3s ease-out; 
+	     -o-transition: all 0.3s ease-out; 
+	        transition: all 0.3s ease-out; 
+}
+#to_top
+{
+	opacity: .6;
+}
+.more
+{
+	opacity: .6;
+}
+
+#to_top:hover
+{
+	opacity: 1;
+}
+.more:hover
+{
+	opacity: 1;
+}
+#nav
+{
+	list-style: none;
+	position: fixed;
+	top:20px;
+	right: 20px;
+	z-index: 500;
+}
+
+#nav li
+{
+	margin: 0;
+	padding: .325em 0;
+	opacity: .7;
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -ms-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+
+#nav li:hover
+{
+	opacity: 1;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -ms-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    transition-duration: 0.4s; 
+}
+
+.morenav
+{
+	display: none;
+}
+
+#navbar
+{
+	background: #4d4d4d;
+	background: rgba(0,0,0,.3);
+	
+	-webkit-transition: all 0.3s ease-out; 
+	   -moz-transition: all 0.3s ease-out; 
+	     -o-transition: all 0.3s ease-out; 
+	        transition: all 0.3s ease-out; 
+}
+
+#navbar:hover,
+#navbar:focus
+{
+	background: #888;
+	background: rgba(0,0,0,.6);
+}
+
+#navbar.f,
+#navbar.b
+{
+	z-index: 1000;
+}
+.mainnav > li > a
+{
+	padding: .25em .865em;
+	font-size: .862em;
+	color: #ffffff;
+}
+
+.mainnav > li > ul
+{
+    position: absolute;
+	height: 0;
+	width: auto;
+	
+	-webkit-transition: all 0.3s ease-out; 
+	   -moz-transition: all 0.3s ease-out; 
+	     -o-transition: all 0.3s ease-out; 
+	        transition: all 0.3s ease-out; 
+	        
+	display: none;
+}
+
+.mainnav > li:hover > ul
+{
+	height: auto;
+	display: block;
+	margin-left: 0;
+	margin-top: -0.125em;
+	background: #fff;
+	background: rgba(255,255,255,.6);
+	-o-box-shadow:
+		rgba(0,0,0,.6) 0 0 6px,
+		rgba(0,0,0,.4) 0 0 2px;
+	-khtml-box-shadow:
+		rgba(0,0,0,.6) 0 0 6px,
+		rgba(0,0,0,.4) 0 0 2px;
+	-moz-box-shadow:
+		rgba(0,0,0,.6) 0 0 6px,
+		rgba(0,0,0,.4) 0 0 2px;
+	-webkit-box-shadow:
+		rgba(0,0,0,.6) 0 0 6px,
+		rgba(0,0,0,.4) 0 0 2px;
+	box-shadow:
+		rgba(0,0,0,.6) 0 0 6px,
+		rgba(0,0,0,.4) 0 0 2px;
+	
+}
+.mainnav.b > li > ul
+{
+    position: absolute;
+	top: 500px;	
+	direction: rtl;
+}
+
+
+.mainnav > li > ul,
+.mainnav > li > ul > li
+{
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.mainnav > li > ul > li > a
+{
+	display: block;
+	padding: .325em .825em;
+}
+
+
+.mainnav > li > ul > li:hover > a
+{
+	background: #ccc;	
+	background: rgba(0,0,0,.4);
+	color: #fff;
+}
+.mainnav.branded
+{
+	padding-left: 11px;
+	margin: 0;
+}
+
+/* Parallax Styles
+/* Spinning the shovel... because it's cool
+================================================== */
+
+#intro,
+#what_is_it,
+#how_its_made,
+#slides,
+#gallery,
+#evolution
+{
+	height: 900px;
+	margin-bottom: 300px;
+	border-bottom: 10px solid #000;
+	-o-box-shadow:
+		inset rgba(0,0,0,.6) 0 0 16px,
+		rgba(0,0,0,.6) 0 0 6px,
+		rgba(0,0,0,.4) 0 0 2px,
+		rgba(0,0,0,.2) 0 2px 2px;
+	-khtml-box-shadow:
+		inset rgba(0,0,0,.6) 0 0 16px,
+		rgba(0,0,0,.6) 0 0 6px,
+		rgba(0,0,0,.4) 0 0 2px,
+		rgba(0,0,0,.2) 0 2px 2px;
+	-moz-box-shadow:
+		inset rgba(0,0,0,.6) 0 0 16px,
+		rgba(0,0,0,.6) 0 0 6px,
+		rgba(0,0,0,.4) 0 0 2px,
+		rgba(0,0,0,.2) 0 2px 2px;
+	-webkit-box-shadow:
+		inset rgba(0,0,0,.6) 0 0 16px,
+		rgba(0,0,0,.6) 0 0 6px,
+		rgba(0,0,0,.4) 0 0 2px,
+		rgba(0,0,0,.2) 0 2px 2px;
+	box-shadow:
+		inset rgba(0,0,0,.6) 0 0 16px,
+		rgba(0,0,0,.6) 0 0 6px,
+		rgba(0,0,0,.4) 0 0 2px,
+		rgba(0,0,0,.2) 0 2px 2px;
+}
+
+#intro
+{
+	background-color:#fff;
+	background:
+		url(../images/bgs/1440x900.png) 50% 0 no-repeat,
+		url(../images/bgs/low_contrast_linen.png) 50% 0 repeat;		
+	background-size: 100% 100%;
+	height: 900px;
+	margin: 0 auto;
+	padding: 0;
+	color: #000;
+}
+
+#intro blockquote
+{
+	font-size: 1.3em;
+	background: rgba(0,0,0,.1) url(../images/bgs/1440x900.png) 100% 0 no-repeat;
+	margin-top: 1em;
+	color: #fff;
+}
+
+#what_is_it
+{
+	background:
+		url(../images/bg-sky.png) 0 0 repeat-x,
+		url(../images/bgs/project_paper_a.png) 0 0 repeat;
+	color: white;
+	height: 900px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 0;
+	color: #333;
+}
+
+#how_its_made
+{
+	background: url(../images/bgs/tiny_grid.png) 0 0 repeat;
+	color: white;
+	height: 1200px;
+	padding: 0;	
+	color: #333;
+}
+
+#more_than_a_grid,
+#intro_left,
+#intro_right,
+#gallery
+{
+	padding-top: 180px;
+	z-index: 101;
+}
+
+#intro_left h2
+{
+	margin-bottom: .325em;
+	line-height: 1.1;
+}
+.bg,
+.bg2,
+.bg3,
+.bg4
+{
+	height: 1200px;
+	margin: 0 auto;
+	padding: 0;
+	position: absolute;
+	width: 600px;
+}
+
+#how_its_made .bg
+{
+	background: url(../images/CSS3_Badge_512.png) 25% 50%  no-repeat fixed;
+	z-index: 200;
+}
+
+#how_its_made .bg2
+{
+	background: url(../images/HTML5_Badge_512.png) 25% 50%  no-repeat fixed;
+	z-index: 201;
+}
+
+#how_its_made .bg3
+{
+	background: url(../images/base.png) 25% 50% no-repeat fixed;
+	z-index: 202;
+}
+
+#how_its_made .bg4
+{
+	background: url(../images/final.png) 25% 50% no-repeat fixed;
+	z-index: 203;
+}
+
+#gallery #container
+{
+	width: 960px;
+}
+
+#gallery .element
+{
+	float: left;
+	margin: 20px;
+}
+
+#gallery .title
+{
+	text-transform: uppercase;
+	font-family: 'BlueHighwayCondensedRegular';
+	font-size: 1.3em;
+}
+
+#evolution
+{
+	background: url(../images/bgs/natural_paper.png) 0 50% repeat;
+	margin: 0 auto;
+	padding: 40px 0 0 0;
+}
+
+#evolution .container
+{
+	min-height: 600px;
+	padding-top: 180px;
+}
+
+#colophon
+{
+	color: #fff;
+	background: url(../images/bgs/low_contrast_linen.png) 0 0 repeat;
+	min-height: 600px;
+	margin: 0 auto;
+	padding: 40px 0 0 0;
+	text-shadow: #000 0 -1px 0;
+}
+
+#amp_overlay
+{
+	position: fixed;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #fff;
+	background: rgba(255,255,255,.8);
+	z-index: 1010;
+}
+
+#disqus_thread
+{
+	width: 71.4285%;
+	margin: 5% auto;
+	padding: 1.6em;
+}
+
+#forkme
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	border: 0;
+	z-index: 1005;
+}
+
+/**** Isotope filtering ****/
+
+.isotope-item
+{
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item
+{
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:         top, left, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+/* End: Recommended Isotope styles */
+
+
+
+/* Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {
+	}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+		#forkme /* Kill it before it grows */
+		{
+			display: none;
+			visibility: hidden;
+		}
+	}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {
+	}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+	}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {
+	}

@@ -1,0 +1,677 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="ie ie9" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]>
+<!--[if IEMobile 7 ]>    <html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js"> <!--<![endif]-->
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Amphibious | Simply Elegant HTML5/CSS3 Responsive Web Development Kit | 1.0.1 April 11, 2013</title>
+<meta name="description" content="A.mphibio.us is a responsive design tool for rapid development has a familiar sixteen column, lightweight 960 grid as its base, but elegantly scales down to downsized browser windows">
+<meta name="keywords" content="css3, html5, responsive, web, design, mobile layout, responsive design">
+
+<link rel="canonical" href="http://a.mphibio.us/index.html" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/touch/apple-touch-icon-144x144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/touch/apple-touch-icon-114x114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/touch/apple-touch-icon-72x72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="/images/touch/apple-touch-icon-57x57-precomposed.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon-precomposed.png">
+<!-- iPhone SPLASHSCREEN-->
+<link href="/images/startup/startup.png" media="(device-width: 320px)" rel="apple-touch-startup-image">
+<!-- iPhone (Retina) SPLASHSCREEN-->
+<link href="/images/startup/startup-retina.png" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+<!-- iPad (portrait) SPLASHSCREEN-->
+<link href="/images/startup/startup-tablet-portrait.png" media="(device-width: 768px) and (orientation: portrait)" rel="apple-touch-startup-image">
+<!-- iPad (landscape) SPLASHSCREEN-->
+<link href="/images/startup/startup-tablet-landscape.png" media="(device-width: 768px) and (orientation: landscape)" rel="apple-touch-startup-image">
+<!-- iPad (Retina, portrait) SPLASHSCREEN-->
+<link href="/images/startup/startup-tablet-portrait-retina.png" media="(device-width: 1536px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+<!-- iPad (Retina, landscape) SPLASHSCREEN-->
+<link href="/images/startup/startup-tablet-landscape-retina.png" media="(device-width: 1536px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+<!-- Tile icon for Win8 (144x144 + tile color) -->
+<meta name="msapplication-TileImage" content="/images/touch/apple-touch-icon-144x144-precomposed.png">
+<meta name="msapplication-TileColor" content="#000000">
+
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, , maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="cleartype" content="on">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="A.mphibio.us">
+
+<link rel="stylesheet" href="../css/a.mphibio.us.css">
+<link rel="stylesheet" href="../css/a.mphibio.us.docs.css">
+
+<script src="js/libs/modernizr-2.6.2.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<script>window.jQuery || document.write('<script src="js/libs/jquery-1.9.1.min.js"><\/script>')</script>
+<!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
+<script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
+
+
+
+<script src="js/plugins.js"></script>
+<script src="js/scripts.js"></script>
+
+<style type="text/css">
+  /* Grid */
+.example-grid .col {
+    background: #efefef;
+    background: rgba(0,0,0,.1);
+    min-height: 25px;
+    line-height: 25px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold; }
+.example-grid .col:hover {background: #fefefe;background: rgba(0,129,198,.1); }
+.example-grid { overflow: hidden; }
+</style>
+  
+</head>
+<body>
+<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+<div id="navbar" class="navbar fixed top">
+		<div class="container">
+			<nav>
+				<ul class="mainnav branded">
+					<li><a href="../index.html#intro" class="hpl">mphibio.us</a></li>
+					<li><a href="foundation.html">Foundation</a></li>
+					<li><a href="form.html">Form(s)</a></li>
+					<li><a href="function.html">Function</a></li>
+					<li class="active"><a href="features.html">Features</a></li>					
+				</ul>
+			</nav>
+		</div>
+</div>
+<div id="main" role="main" class="container">
+
+	<div id="maincontent" class="col sixteen content">
+		<header>
+			<span id="download_button" class="r mr">
+			<a class="button" href="releases/a.mphibio.us_1.0.1.zip" title="Download A.mphibio.us Release 1.0.1(.zip )">A.mphibio.us &darr;</a>
+			</span>
+				<h1 class="rmb mt">A.mphibio.us</h1>
+				<p class="meta v">1.0.1 <span class="date ml">Release <span class="mo">April</span> 11<sup>th</sup> 2013</span></p>
+			<h5></h5>
+		</header>
+
+
+		
+		<div class="section cfx" id="pears">
+			<h3>Content Pea.rs</h3>
+			<p><a href="http://pea.rs">Pea.rs</a> are common patterns of markup and style. A.mphibio.us uses Pea.rs markup to create intuitive and clean definition lists, content slats, and stat listings. </p>
+			
+			<div class="row pb">
+				<h5 class="mb drb">Article</h5>
+				
+				<article class="aside">
+					<header>
+						<h2>The Title Goes Here</h2>	
+					</header>
+					
+					<aside>
+						This is aside text lorem ipsum dolor sit amet consectetur adipisicing.
+					</aside>
+					
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis <a href="#">nostrud exercitation</a> ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
+					<footer class="meta">
+						<small>Posted August 22, 2011</small>
+					</footer>
+				</article>			
+								
+			</div>
+			<div class="row dpb">
+			<ul class="tabs mini rb">
+				<li class="label">Show Source</li>
+				<li class="r"><a href="#html"><span class="copy icon" style="height:20px;" rel="html">&#59156;</span> <abbr title="Hypertext Markup Language">HTML</abbr></a></li>
+				<li class="r"><a href="#css"><span class="copy icon" style="height:20px;" rel="css">&#59146;</span> <abbr title="Casscading Style Sheets">CSS</abbr></a></li>
+			</ul>
+			<ul class="tabs-content">
+				<li id="html"><pre class="prettyprint"><code>&lt;div class="row pb drb"&gt;
+	&lt;h5 class="mb drb"&gt;Article&lt;/h5&gt;
+	
+	&lt;article class="aside"&gt;
+		&lt;header&gt;
+			&lt;h2&gt;The Title Goes Here&lt;/h2&gt;	
+		&lt;/header&gt;
+		
+		&lt;aside&gt;
+			This is aside text lorem ipsum dolor sit amet consectetur adipisicing.
+		&lt;/aside&gt;
+		
+		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis &lt;a href="#"&gt;nostrud exercitation&lt;/a&gt; ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod &lt;a href="#"&gt;tempor incididunt&lt;/a&gt; ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.&lt;/p&gt;
+		&lt;footer class="meta"&gt;
+			&lt;small&gt;Posted August 22, 2011&lt;/small&gt;
+		&lt;/footer&gt;
+	&lt;/article&gt;			
+					
+&lt;/div&gt;</code></pre></li>
+			<li id="css"><pre class="prettyprint"><code>article.aside
+{
+	margin: 0 0 1.6em 20%;
+}
+
+article header h2
+{
+	margin: 0 0 1em 0;
+	font-weight: normal;
+	line-height: 1.3;
+}
+
+article aside
+{
+	float: left;
+	width: 20%;
+	margin-left: -25%;
+	font-size: .825em;
+	line-height: 1.8;
+	color: #999;
+}
+			</code></pre></li>
+		</ul>
+			</div>
+				
+		<div class="row">
+			<div class="col nine first">
+				
+				<h5 class="mb rb">Content Slats</h5>
+				
+				<ol class="slats">
+					<li class="group">
+						<h3><a href="#">This is the title</a></h3>
+						
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="meta">August 10, 2011</span></p>
+					</li>
+					<li class="group">
+						<h3><a href="#">This is the title</a></h3>
+						
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="meta">August 10, 2011</span></p>
+					</li>
+					<li class="group">
+						<h3><a href="#">This is the title</a></h3>
+						
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="meta">August 10, 2011</span></p>
+					</li>
+				</ol>			
+										
+				
+			</div>
+			<div class="col seven last">
+				<h5 class="mb rb">Definition Lists</h5>
+				
+				<dl>
+					<dt>am·phib·i·ous <sub class="meta">noun <i>\am-ˈfi-bē-əs\</i></sub></dt>
+					<dd>: simply the most elegant css framework</dd>
+					<dd><b>a</b> : relating to or adapted for both desktop and mobile<br>
+					&lt;a.mphibio.us devices&gt;<br>
+					<b>b</b> : design executed by the coordinated action of HTML5, CSS3, and JavaScript organized for rapid development &lt;<abbr title="Rapid Development Tool Kit">RDK</abbr>&gt;;<br>
+					also : architected to optimize the inherent strenghts of &lt;casscading style sheets&gt;</dd>
+					
+					<dt>am·phib·i·ous <sub class="meta">adjective <i>\am-ˈfi-bē-əs\</i></sub></dt>
+					<dd>: combining two characteristics</dd>
+					<dd><b>a</b> : relating to or adapted for both land and water<br>
+					&lt;amphibious vehicles&gt;<br>
+					<b>b</b> : executed by coordinated action of land, sea, and air forces organized for invasion &lt;an amphibious landing&gt;; also : trained or organized for such action <amphibious forces></dd>
+					
+				</dl>
+				
+				<h5 class="mb rb">Stats Listing</h5>
+				
+				<ul class="stats">
+					<li><a href="#">1,234 <span>donuts</span></a></li>
+					<li><a href="#">567 <span>kayaks</span></a></li>
+					<li><a href="#">23,456 <span>kittens</span></a></li>
+				</ul>	
+
+			</div>
+			</div>
+			<div class="row pt dra">
+			
+			
+				
+				<h5 class="mb rb">Content Slats with image</h5>
+				
+				<ol class="slats image">
+					<li class="group">
+						<a href="#">
+							<img src="images/touch/apple-touch-icon-72x72-precomposed.png" alt="thumbnail" />
+							<h3>This is the title</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="meta">August 10, 2011</span></p>
+						</a>
+					</li>
+					<li class="group">
+						<a href="#">
+							<img src="images/touch/apple-touch-icon-72x72-precomposed.png" alt="thumbnail" />
+							<h3>This is the title</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="meta">August 10, 2011</span></p>
+						</a>
+					</li>
+					<li class="group">
+						<a href="#">
+							<img src="images/touch/apple-touch-icon-72x72-precomposed.png" alt="thumbnail" />
+							<h3>This is the title</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="meta">August 10, 2011</span></p>
+						</a>
+					</li>
+				</ol>	
+				
+			</div>
+
+		</div>
+		
+
+<section id="icons" class="content panel inset cfx">
+		<div class="row pb rb">
+				
+				<header class="pb rb pl">
+					<h3>The Entypo Pictogram Suite</h3>
+					<p><a href="http://www.entypo.com">Entypo</a> is a set of 250+ carefully crafted pictograms. The package contains an icon font — OpenType, TrueType and @font-face — EPS, PDF and PSD files. All released for free under the license <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.</p>
+				</header>
+			<ul class="icons">
+				<li title="phone">📞</li>
+				<li title="mobile">📱</li>
+				<li title="mouse"></li>
+				<li title="address"></li>
+				<li title="mail">✉</li>
+				<li title="paper-plane">🔿</li>
+				<li title="pencil">✎</li>
+				<li title="feather">✒</li>
+				<li title="attach">📎</li>
+				<li title="inbox"></li>
+				<li title="reply"></li>
+				<li title="reply-all"></li>
+				<li title="forward">➦</li>
+				<li title="user">👤</li>
+				<li title="users">👥</li>
+				<li title="add-user"></li>
+				<li title="vcard"></li>
+				<li title="export"></li>
+				<li title="location"></li>
+				<li title="map"></li>
+				<li title="compass">➢</li>
+				<li title="direction"></li>
+				<li title="hair-cross">🎯</li>
+				<li title="share"></li>
+				<li title="shareable"></li>
+				<li title="heart">♥</li>
+				<li title="heart-empty">♡</li>
+				<li title="star">★</li>
+				<li title="star-empty">☆</li>
+				<li title="thumbs-up">👍</li>
+				<li title="thumbs-down">👎</li>
+				<li title="chat"></li>
+				<li title="comment"></li>
+				<li title="quote">❞</li>
+				<li title="home">⌂</li>
+				<li title="popup"></li>
+				<li title="search">🔍</li>
+				<li title="flashlight">🔦</li>
+				<li title="print"></li>
+				<li title="bell">🔔</li>
+				<li title="link">🔗</li>
+				<li title="flag">⚑</li>
+				<li title="cog">⚙</li>
+				<li title="tools">⚒</li>
+				<li title="trophy">🏆</li>
+				<li title="tag"></li>
+				<li title="camera">📷</li>
+				<li title="megaphone">📣</li>
+				<li title="moon">☽</li>
+				<li title="palette">🎨</li>
+				<li title="leaf">🍂</li>
+				<li title="note">♪</li>
+				<li title="beamed-note">♫</li>
+				<li title="new">💥</li>
+				<li title="graduation-cap">🎓</li>
+				<li title="book">📕</li>
+				<li title="newspaper">📰</li>
+				<li title="bag">👜</li>
+				<li title="airplane">✈</li>
+				<li title="lifebuoy"></li>
+				<li title="eye"></li>
+				<li title="clock">🕔</li>
+				<li title="mic">🎤</li>
+				<li title="calendar">📅</li>
+				<li title="flash">⚡</li>
+				<li title="thunder-cloud">⛈</li>
+				<li title="droplet">💧</li>
+				<li title="cd">💿</li>
+				<li title="briefcase">💼</li>
+				<li title="air">💨</li>
+				<li title="hourglass">⏳</li>
+				<li title="gauge">🛇</li>
+				<li title="language">🎔</li>
+				<li title="network"></li>
+				<li title="key">🔑</li>
+				<li title="battery">🔋</li>
+				<li title="bucket">📾</li>
+				<li title="magnet"></li>
+				<li title="drive">📽</li>
+				<li title="cup">☕</li>
+				<li title="rocket">🚀</li>
+				<li title="brush"></li>
+				<li title="suitcase">🛆</li>
+				<li title="traffic-cone">🛈</li>
+				<li title="globe">🌎</li>
+				<li title="keyboard">⌨</li>
+				<li title="browser"></li>
+				<li title="publish"></li>
+				<li title="progress-3"></li>
+				<li title="progress-2"></li>
+				<li title="progress-1"></li>
+				<li title="progress-0"></li>
+				<li title="light-down">🔅</li>
+				<li title="light-up">🔆</li>
+				<li title="adjust">◑</li>
+				<li title="code"></li>
+				<li title="monitor">💻</li>
+				<li title="infinity">∞</li>
+				<li title="light-bulb">💡</li>
+				<li title="credit-card">💳</li>
+				<li title="database">📸</li>
+				<li title="voicemail">✇</li>
+				<li title="clipboard">📋</li>
+				<li title="cart"></li>
+				<li title="box">📦</li>
+				<li title="ticket">🎫</li>
+				<li title="rss"></li>
+				<li title="signal">📶</li>
+				<li title="thermometer">📿</li>
+				<li title="water">💦</li>
+				<li title="sweden"></li>
+				<li title="line-graph">📈</li>
+				<li title="pie-chart">◴</li>
+				<li title="bar-graph">📊</li>
+				<li title="area-graph">🔾</li>
+				<li title="lock">🔒</li>
+				<li title="lock-open">🔓</li>
+				<li title="logout"></li>
+				<li title="login"></li>
+				<li title="check">✓</li>
+				<li title="cross">❌</li>
+				<li title="squared-minus">⊟</li>
+				<li title="squared-plus">⊞</li>
+				<li title="squared-cross">❎</li>
+				<li title="circled-minus">⊖</li>
+				<li title="circled-plus">⊕</li>
+				<li title="circled-cross">✖</li>
+				<li title="minus">➖</li>
+				<li title="plus">➕</li>
+				<li title="erase">⌫</li>
+				<li title="block">🚫</li>
+				<li title="info">ℹ</li>
+				<li title="circled-info"></li>
+				<li title="help"> ❓ </li>
+				<li title="circled-help"></li>
+				<li title="warning">⚠</li>
+				<li title="cycle">🔄</li>
+				<li title="cw">⟳</li>
+				<li title="ccw">⟲</li>
+				<li title="shuffle">🔀</li>
+				<li title="back">🔙</li>
+				<li title="level-down">↳</li>
+				<li title="retweet"></li>
+				<li title="loop">🔁</li>
+				<li title="back-in-time"></li>
+				<li title="level-up">↰</li>
+				<li title="switch">⇆</li>
+				<li title="numbered-list"></li>
+				<li title="add-to-list"></li>
+				<li title="layout">⚏</li>
+				<li title="list">☰</li>
+				<li title="text-doc">📄</li>
+				<li title="text-doc-inverted"></li>
+				<li title="doc"></li>
+				<li title="docs"></li>
+				<li title="landscape-doc"></li>
+				<li title="picture">🌄</li>
+				<li title="video">🎬</li>
+				<li title="music">🎵</li>
+				<li title="folder">📁</li>
+				<li title="archive"></li>
+				<li title="trash"></li>
+				<li title="upload">📤</li>
+				<li title="download">📥</li>
+				<li title="save">💾</li>
+				<li title="install"></li>
+				<li title="cloud">☁</li>
+				<li title="upload-cloud"></li>
+				<li title="bookmark">🔖</li>
+				<li title="bookmarks">📑</li>
+				<li title="open-book">📖</li>
+				<li title="play">▶</li>
+				<li title="paus">‖</li>
+				<li title="record">●</li>
+				<li title="stop">■</li>
+				<li title="ff">⏩</li>
+				<li title="fb">⏪</li>
+				<li title="to-start">⏮</li>
+				<li title="to-end">⏭</li>
+				<li title="resize-full"></li>
+				<li title="resize-small"></li>
+				<li title="volume">⏷</li>
+				<li title="sound">🔊</li>
+				<li title="mute">🔇</li>
+				<li title="flow-cascade">🕨</li>
+				<li title="flow-branch">🕩</li>
+				<li title="flow-tree">🕪</li>
+				<li title="flow-line">🕫</li>
+				<li title="flow-parallel">🕬</li>
+				<li title="left-bold"></li>
+				<li title="down-bold"></li>
+				<li title="up-bold"></li>
+				<li title="right-bold"></li>
+				<li title="left">⬅</li>
+				<li title="down">⬇</li>
+				<li title="up">⬆</li>
+				<li title="right">➡</li>
+				<li title="circled-left"></li>
+				<li title="circled-down"></li>
+				<li title="circled-up"></li>
+				<li title="circled-right"></li>
+				<li title="triangle-left">◂</li>
+				<li title="triangle-down">▾</li>
+				<li title="triangle-up">▴</li>
+				<li title="triangle-right">▸</li>
+				<li title="chevron-left"></li>
+				<li title="chevron-down"></li>
+				<li title="chevron-up"></li>
+				<li title="chevron-right"></li>
+				<li title="chevron-small-left"></li>
+				<li title="chevron-small-down"></li>
+				<li title="chevron-small-up"></li>
+				<li title="chevron-small-right"></li>
+				<li title="chevron-thin-left"></li>
+				<li title="chevron-thin-down"></li>
+				<li title="chevron-thin-up"></li>
+				<li title="chevron-thin-right"></li>
+				<li title="left-thin">←</li>
+				<li title="down-thin">↓</li>
+				<li title="up-thin">↑</li>
+				<li title="right-thin">→</li>
+				<li title="arrow-combo"></li>
+				<li title="three-dots">⏶</li>
+				<li title="two-dots">⏵</li>
+				<li title="dot">⏴</li>
+				<li title="cc">🕅</li>
+				<li title="cc-by">🕆</li>
+				<li title="cc-nc">🕇</li>
+				<li title="cc-nc-eu">🕈</li>
+				<li title="cc-nc-jp">🕉</li>
+				<li title="cc-sa">🕊</li>
+				<li title="cc-nd">🕋</li>
+				<li title="cc-pd">🕌</li>
+				<li title="cc-zero">🕍</li>
+				<li title="cc-share">🕎</li>
+				<li title="cc-remix">🕏</li>
+				<li title="db-logo">🗹</li>
+				<li title="db-shape">🗺</li>
+			</ul>	
+		</div>
+				
+		<div class="row">
+				<h3 class="pb rb pl">The Entypo Social Extention</h3>
+			
+			<ul id="entypo-social" class="icons">
+				<li title="github">&#62208;</li>
+				<li title="c-github">&#62209;</li>
+				<li title="flickr">&#62211;</li>
+				<li title="c-flickr">&#62212;</li>
+				<li title="vimeo">&#62214;</li>
+				<li title="c-vimeo">&#62215;</li>
+				<li title="twitter">&#62217;</li>
+				<li title="c-twitter">&#62218;</li>
+				<li title="facebook">&#62220;</li>
+				<li title="c-facebook"></li>
+				<li title="s-facebook"></li>
+				<li title="google+"></li>
+				<li title="c-google+"></li>
+				<li title="pinterest"></li>
+				<li title="c-pinterest"></li>
+				<li title="tumblr"></li>
+				<li title="c-tumblr"></li>
+				<li title="linkedin"></li>
+				<li title="c-linkedin"></li>
+				<li title="dribbble"></li>
+				<li title="c-dribbble"></li>
+				<li title="stumbleupon"></li>
+				<li title="c-stumbleupon"></li>
+				<li title="lastfm"></li>
+				<li title="c-lastfm"></li>
+				<li title="rdio"></li>
+				<li title="c-rdio"></li>
+				<li title="spotify"></li>
+				<li title="c-spotify"></li>
+				<li title="qq"></li>
+				<li title="instagram"></li>
+				<li title="dropbox"></li>
+				<li title="evernote"></li>
+				<li title="flattr"></li>
+				<li title="skype"></li>
+				<li title="c-skype"></li>
+				<li title="renren"></li>
+				<li title="sina-weibo"></li>
+				<li title="paypal"></li>
+				<li title="picasa"></li>
+				<li title="soundcloud"></li>
+				<li title="mixi"></li>
+				<li title="behance"></li>
+				<li title="google-circles"></li>
+				<li title="vk"></li>
+				<li title="smashing"></li>
+			</ul>		
+		</div>		
+		<div class="row fluid pt dra">
+			<div class="col one-third first">
+				<article>
+					<hgroup>
+						<h3>Credits</h3>
+						<h5>Entypo made this</h5>
+					</hgroup>
+					
+					<p class="small">Pictograms and site designed by<br> <a href="http://danielbruce.se" target="_blank">Daniel Bruce</a> — <a href="http://twitter.com/danielbruce_" target="_blank">Twitter</a>, <a href="http://dribbble.com/danielbruce" target="_blank">Dribbble</a> &amp; <a href="mailto:info@entypo.com">e-mail</a></p>
+					<p class="small">Web design and development by<br> <a href="http://blomback.se" target="_blank">Andreas Blombäck</a> — <a href="http://twitter.com/blomback" target="_blank">Twitter</a>, <a href="http://dribbble.com/blomback" target="_blank">Dribbble</a> &amp; <a href="mailto:andreas@blomback.se">e-mail</a></p>
+				</article>
+			</div>
+			<div class="col one-third">
+				<article>
+					<hgroup>
+						<h3>License</h3>
+						<h5>How to use it</h5>
+					</hgroup>
+					
+					<p class="small">Current release is 2.0. The Entypo pictograms are licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" target="_blank">CC BY 3.0</a> and the font under <a href="http://scripts.sil.org/OFL" target="_blank">SIL Open Font License</a>.</p>
+					<p class="small">The rights to each pictogram in the social extention are either trademarked or copyrighted by the respective company.</p>
+				</article>
+			</div>
+			<div class="col one-third last">
+				<article>
+					<hgroup>
+						<h3>About</h3>
+						<h5>New in Entypo 2.0</h5>
+					</hgroup>
+					
+					<ul class="small">
+						<li>Over 150 new pictograms.</li>
+						<li>The Entypo Social Extention.</li>
+						<li>Improved old pictograms</li>
+						<li class="seperator">Character map</li>
+						<li>Glyph guide as RTF</li>
+						<li>Improved hinting</li>
+					</ul>
+				</article>
+			</div>
+								<p class="small meta">A mention like "Entypo pictograms by Daniel Bruce — www.entypo.com" is considered acceptable attribution.</p>
+
+		</div>	
+		</section>
+
+
+		</div>
+		
+	</div><!-- content -->
+
+</div><!-- container -->
+
+</div>
+<footer>
+	<div class="container" id="attribution">
+		<div class="col sixteen dpt">
+		<p class="remove-bottom"><small>Created by <a href="http://www.clivemoore.ca">Clive Moore</a>, at <a href="http://www.treefrog.ca">Treefrog Inc.</a> <span class="r"><small><a href="#header-container">Back to top &#x2191;</a></span></p>
+		
+		</div>
+	</div>
+</footer>
+<div id="amp_overlay" style="display:none;" onclick="$('#amp_overlay').fadeOut();">
+	<h3 class="a t r intro" onclick="$('#amp_overlay').fadeOut();">&#10006;</h3>
+	<div class="container inner">
+		<div id="disqus_thread" class="bgwht bxshw"></div>
+		<script type="text/javascript">
+		    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+		    var disqus_shortname = 'amphibiouscss'; // required: replace example with your forum shortname
+		
+		    /* * * DON'T EDIT BELOW THIS LINE * * */
+		    (function() {
+		        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+		        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		    })();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	</div>
+</div>
+
+
+<a href="http://github.com/Treefrog-Interactive/A.mphibio.us">
+  <img id="forkme" src="http://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt="Fork me on GitHub">
+</a>
+
+<a id="to_top" class="icon reset" href="#intro">&#11014;</a>
+  
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-35159096-Y']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;skin=sons-of-obsidian&amp;lang=css" defer="defer"></script>
+</body>
+</html>

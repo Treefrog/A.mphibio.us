@@ -1,3 +1,14 @@
+### Release 1.0.1
+
+* Refactored Repository Structure to optimize my own work flow.
+* Added build directory inside docs folder for grunt root 
+* Updated Project Page to include isotope gallery samples
+
+### Initial Release 1.0.0
+
+* Refactored Site Structure Launched new website, and RDK. 
+* Updated Main Slide Series to Sequence.js v0.8.5
+
 ### Alpha Release 1.0.0-a.2
 
 * Refactored JavaScript to advanced/js directory. 
