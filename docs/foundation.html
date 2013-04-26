@@ -59,8 +59,9 @@
 <body>
 <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
+
 <span id="download_button" class="a r dmt mr">
-<a class="button" href="http://a.mphibio.us/releases/a.mphibio.us.rdk.zip" title="Download A.mphibio.us Rapid Developmet Kit(.zip )">A.mphibio.us &darr;</a>
+<a class="button" href="http://a.mphibio.us/releases/a.mphibio.us.rdk.zip" title="Download A.mphibio.us Rapid Developmet Kit(.zip )">A.mphibio.us RDK &darr;</a>
 </span>
 
 <div id="main" role="main" class="container">
@@ -396,6 +397,25 @@
 			
 		</section>
 
+		<section id="mediaQueries">
+		
+			<div class="row">
+				<article>
+					<h3>Media Queries</h3>
+					<p>A.mphibio.us uses a <strong>lot</strong> of media queries to serve the scalable grid, but also for the convenience of styling your site on different size screens. A.mphibio.us' media queries are almost exclusively targeted at max and min widths rather than device sizes or orientations. The advantage of this is browsers and future mobile devices that don't map to exact set dimensions will still benefit from the styles. That being said, all of the queries were written to be optimal on Apple iOS devices. The built in media queries include:</p>
+					<ul class="square">
+						<li><strong>Smaller than 960</strong>: Smaller than the standard base grid</li>
+						<li><strong>Tablet Portrait</strong>: Between 768px and 959px</li>
+						<li><strong>All Mobile Sizes</strong>: Less than 767px</li>
+						<li><strong>Just Mobile Landscape</strong>: Between 480px and 767px</li>
+						<li><strong>Just Mobile Portrait</strong>: Less than 479px</li>
+					</ul>
+	
+				</article>
+			</div>
+				
+		</section>
+
 	</div><!-- content -->
 
 </div><!-- container -->
@@ -440,6 +460,7 @@ postion:fixed;top:0;left:0;right:0;
 						<li><a href="foundation.html#padded_col">Padded Columns</a></li>
 						<li><a href="foundation.html#golden_section">Golden ratio grids</a></li>
 						<li><a href="foundation.html#push_pull">Source Ordering</a></li>
+						<li><a href="foundation.html#mediaQueries">Media Queries</a></li>
 					</ul>
 				</li>
 				<li><a href="form.html">Form</a>
@@ -451,8 +472,24 @@ postion:fixed;top:0;left:0;right:0;
 						<li><a href="form.html#tables">Tables <sub>not for layout</sub></a></li>
 					</ul>
 				</li>
-				<li><a href="function.html">Function</a></li>
-				<li><a href="features.html">Features</a></li>
+				<li><a href="function.html">Function</a>
+					<ul>
+						
+						<li><a href="function.html#navigation">Horiztotal Nav <sub>with tertiary</sub></a></li>
+						<li><a href="function.html#horizcss">Horiztotal Nav <sub>css</sub></a></li>
+						<li><a href="function.html#breadcrumbs">Breadcrumbs</a></li>
+						<li><a href="function.html#tabmagic">Tabs</a></li>
+						<li><a href="function.html#pagination">Pagination nav</a></li>
+					</ul>
+				</li>
+				<li><a href="features.html">Features</a>
+					<ul>
+						
+						<li><a href="features.html#helpers">Layout Helpers <sub>& shorthand classes</sub></a></li>
+						<li><a href="features.html#pears">Content Pea.rs</a></li>
+						<li><a href="features.html#icons">Webfont Icons <sub>by entypo</sub></a></li>
+					</ul>
+				</li>
 				<li onclick="$('#amp_overlay').fadeIn();"><a>Feedback</a></li>					
 			</ul>
 		</nav>

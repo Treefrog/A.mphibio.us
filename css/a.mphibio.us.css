@@ -1457,7 +1457,7 @@ ul.nav
 
 .mainnav
 {
-	margin:.3em 0;
+	margin:0;
 }
 
 .mainnav.branded
@@ -1598,7 +1598,7 @@ ul.nav
 	
 .breadcrumb li
 {
-	display:block;float: left;
+	display:inline-block;
 }
 
 .breadcrumb a,
@@ -1830,6 +1830,7 @@ label.above
 form.search fieldset input[type="text"]
 {
 	float:left;
+	width: 250px;
 	background: #f5f5f5;
 	border: 1px solid #adadad;
 	-webkit-border-bottom-right-radius: 0; 

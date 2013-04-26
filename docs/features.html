@@ -60,17 +60,92 @@
 <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
 <span id="download_button" class="a r dmt mr">
-<a class="button" href="http://a.mphibio.us/releases/a.mphibio.us.rdk.zip" title="Download A.mphibio.us Rapid Developmet Kit(.zip )">A.mphibio.us &darr;</a>
+<a class="button" href="http://a.mphibio.us/releases/a.mphibio.us.rdk.zip" title="Download A.mphibio.us Rapid Developmet Kit(.zip )">A.mphibio.us RDK &darr;</a>
 </span>
 
 <div id="main" role="main" class="container">
 
 	<div id="maincontent" class="col sixteen content">
 		<header>
-				<h1 class="rmb mt">A.mphibio.us</h1>
-				<p class="meta v">1.0.1 <span class="date ml">Release <span class="mo">April</span> 11<sup>th</sup> 2013</span></p>
-			<h5></h5>
+			<h1 class="rmb mt">Features</h1>
+			<h3>Amphibious has at its core a series of regularily used css properties available via shorthand classes to speed up your html prototyping.</h3>
 		</header>
+		
+		<section id="helpers">
+			<h4>Layout Helpers</h4>
+			<p>Ever have to bump a particular element over a little, down a little, to the right, to the left?</p>
+			<p>Need some extra padding between things maybe a seperator between those elements?</p>
+			
+			
+			<p>Try a <strong>rule</strong> not an extra <kbd>hr</kbd>. That's what these are for, regularily used layout helpers with shorthand options, some of the class names come from a typesetting perspective, think rule-below rule-above, most are simply the name of the css value you want to affect (margin-top for example). Need to remove a margin, easy... but be specific, remove margin top, or a half margin top.</p>
+			<p>We use underscores becuse they are easy to copy/paste. </p>
+			<pre class="prettyprint linenums">
+/* Layout Helper Rules
+
+Class Name			Shorthand		Styles
+==================================================================================== */
+.absolute,			.a			{position: absolute;}
+.fixed,				.f			{position: fixed;}
+.left,				.l			{float:left;}
+.right,				.r			{float:right;}
+.align_left,			.al			{text-align:left;}
+.align_right,			.ar			{text-align: right;}
+.align_center,			.ac			{text-align: center;}
+.align_just,			.aj			{text-align: justify;}
+.remove_margin_top,		.rmt			{margin-top: 0 !important;}
+.half_margin_top,		.hmt			{margin-top: .5em !important;}
+.margin_top,			.mt			{margin-top: 1em !important;}
+.double_margin_top,		.dmt			{margin-top: 2em !important;}
+.half_margin_left,		.hml			{margin-left: .5em !important;}
+.margin_left,			.ml			{margin-left: 1em !important;}
+.double_margin_left,		.dml			{margin-left: 2em !important;}
+.remove_margin_bottom,		.rmb			{margin-bottom: 0 !important;}
+.half_margin_bottom,		.hmb			{margin-bottom: .5em !important;}
+.margin_bottom,			.mb			{margin-bottom: 1em !important;}
+.double_margin_bottom,		.dmb			{margin-bottom: 2em !important;}
+.half_margin_right,		.hmr			{margin-right: .5em !important;}
+.margin_right,			.mr			{margin-right: 1em !important;}
+.double_margin_right,		.dmr			{margin-right: 2em !important;}
+.inset,				.pd			{padding: 1em !important;}
+.pad_top,			.pt			{padding-top: 1em !important;}
+.double_pad_top			.dpt			{padding-top: 2em !important;}
+.pad_left,			.pl			{padding-left: 1em !important;}
+.double_pad_left,		.dpl			{padding-left: 2em !important;}
+.half_pad_left,			.hpl			{padding-left: .5em !important;}
+.pad_bottom,			.pb			{padding-bottom: 1em !important;}
+.double_pad_bottom,		.dpb			{padding-bottom: 2em !important;}
+.pad_right,			.pr			{padding-right: 1em !important;}
+.double_pad_right,		.dpr			{padding-right: 2em !important;}
+.rule_above,			.ra			{border-top:1px solid #ececec;}
+.double_rule_above,		.dra			{border-top:3px double #ececec;}
+.rule_below,			.rb			{border-bottom:1px solid #ececec;}
+.double_rule_below,		.drb			{border-bottom:3px double #ececec;}
+
+
+/* Positioning overrides use these in context of parent elements with margins for quick layout */
+
+.absolute.top,			.a.t,
+.absolute.t,			.a.top,
+.fixed.top,			.f.t,
+.fixed.t,			.f.top		{top: 0;}
+
+.absolute.right,		.a.r,
+.absolute.r,			.a.right,
+.fixed.right,			.f.r,
+.fixed.r,			.f.right	{right: 0;}
+
+.absolute.bottom,		.a.b,
+.absolute.b,			.a.bottom,
+.fixed.bottom,			.f.b,
+.fixed.b,			.f.bottom	{bottom: 0;}
+
+.absolute.left,			.a.l,
+.absolute.l,			.a.left,
+.fixed.left,			.f.l,
+.fixed.l,			.f.left		{left: 0;}
+</pre>
+		
+		</section>
 
 
 		
@@ -78,6 +153,26 @@
 			<h3>Content Pea.rs</h3>
 			<p><a href="http://pea.rs">Pea.rs</a> are common patterns of markup and style. A.mphibio.us uses Pea.rs markup to create intuitive and clean definition lists, content slats, and stat listings. </p>
 			
+			<div class="row pb">
+				<h5 class="mb drb">Article</h5>
+				
+				<article class="aside">
+					<header>
+						<h2>The Title Goes Here</h2>	
+					</header>
+					
+					<aside>
+						This is aside text lorem ipsum dolor sit amet consectetur adipisicing.
+					</aside>
+					
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis <a href="#">nostrud exercitation</a> ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
+					<footer class="meta">
+						<small>Posted August 22, 2011</small>
+					</footer>
+				</article>			
+								
+			</div>
 			<div class="row pb">
 				<h5 class="mb drb">Article</h5>
 				
@@ -137,7 +232,7 @@ article header h2
 	line-height: 1.3;
 }
 
-article aside
+article.aside aside
 {
 	float: left;
 	width: 20%;
@@ -213,21 +308,21 @@ article aside
 				<ol class="slats image">
 					<li class="group">
 						<a href="#">
-							<img src="images/touch/apple-touch-icon-72x72-precomposed.png" alt="thumbnail" />
+							<img src="../images/touch/apple-touch-icon-72x72-precomposed.png" alt="thumbnail" />
 							<h3>This is the title</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="meta">August 10, 2011</span></p>
 						</a>
 					</li>
 					<li class="group">
 						<a href="#">
-							<img src="images/touch/apple-touch-icon-72x72-precomposed.png" alt="thumbnail" />
+							<img src="../images/touch/apple-touch-icon-72x72-precomposed.png" alt="thumbnail" />
 							<h3>This is the title</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="meta">August 10, 2011</span></p>
 						</a>
 					</li>
 					<li class="group">
 						<a href="#">
-							<img src="images/touch/apple-touch-icon-72x72-precomposed.png" alt="thumbnail" />
+							<img src="../images/touch/apple-touch-icon-72x72-precomposed.png" alt="thumbnail" />
 							<h3>This is the title</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="meta">August 10, 2011</span></p>
 						</a>
@@ -237,7 +332,6 @@ article aside
 			</div>
 
 		</div>
-		
 
 <section id="icons" class="content panel inset cfx">
 		<div class="row pb rb">
@@ -631,6 +725,7 @@ postion:fixed;top:0;left:0;right:0;
 						<li><a href="foundation.html#padded_col">Padded Columns</a></li>
 						<li><a href="foundation.html#golden_section">Golden ratio grids</a></li>
 						<li><a href="foundation.html#push_pull">Source Ordering</a></li>
+						<li><a href="foundation.html#mediaQueries">Media Queries</a></li>
 					</ul>
 				</li>
 				<li><a href="form.html">Form</a>
@@ -642,8 +737,25 @@ postion:fixed;top:0;left:0;right:0;
 						<li><a href="form.html#tables">Tables <sub>not for layout</sub></a></li>
 					</ul>
 				</li>
-				<li><a href="function.html">Function</a></li>
-				<li><a href="features.html">Features</a></li>
+				<li><a href="function.html">Function</a>
+					<ul>
+						
+						<li><a href="function.html#navigation">Horiztotal Nav <sub>with tertiary</sub></a></li>
+						<li><a href="function.html#horizcss">Horiztotal Nav <sub>css</sub></a></li>
+						<li><a href="function.html#breadcrumbs">Breadcrumbs</a></li>
+						<li><a href="function.html#tabmagic">Tabs</a></li>
+						<li><a href="function.html#pagination">Pagination nav</a></li>
+					</ul>
+				</li>
+				<li><a href="features.html">Features</a>
+					<ul>
+						
+						<li><a href="features.html#helpers">Layout Helpers <sub>& shorthand classes</sub></a></li>
+						<li><a href="features.html#pears">Content Pea.rs</a></li>
+						<li><a href="features.html#icons">Webfont Icons <sub>by entypo</sub></a></li>
+						<li><span class="meta">Font Awesome Icons <sub>coming soon</sub></span></li>
+					</ul>
+				</li>
 				<li onclick="$('#amp_overlay').fadeIn();"><a>Feedback</a></li>					
 			</ul>
 		</nav>

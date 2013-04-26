@@ -60,7 +60,7 @@
 <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
 <span id="download_button" class="a r dmt mr">
-<a class="button" href="http://a.mphibio.us/releases/a.mphibio.us.rdk.zip" title="Download A.mphibio.us Rapid Developmet Kit(.zip )">A.mphibio.us &darr;</a>
+<a class="button" href="http://a.mphibio.us/releases/a.mphibio.us.rdk.zip" title="Download A.mphibio.us Rapid Developmet Kit(.zip )">A.mphibio.us RDK &darr;</a>
 </span>
 
 <div id="main" role="main" class="container">
@@ -71,85 +71,664 @@
 			<p class="meta v">1.0.1 <span class="date ml">Release <span class="mo">April</span> 11<sup>th</sup> 2013</span></p>
 		</header>
 			
-		<div class="section cfx" id="navigation">
-			<h3>Navigation</h3>
-			<p>Create sleek, clean navigation bars and menu lists. Simple JQuery is used to link tabs and buttons to destination content. Create calls to action that are clearly defined and easy to identify.</p>
-			<h4>Horzintal menu bar</h4>
-			<div class="navbar-inner ios">
-			<nav role="navigation">
-				<ul class="mainnav">
-					<li class="what"><a href="#whatAndWhy">What &amp; Why</a></li>
-					<li class="grid"><a href="#grid">Grid</a></li>
-					<li class="typo"><a href="#typography">Typography</a></li>
-					<li class="buttons"><a href="#buttons">Buttons</a></li>
-					<li class="tabs"><a href="#tabs">Tabs</a></li>
-					<li class="forms"><a href="#forms">Forms</a></li>
-					<li class="media_queries"><a href="#mediaQueries">Media Queries</a></li>
-					<li class="support"><a href="#support">Support</a></li>
-				</ol>
-			</nav>		
+		<section id="navigation">
+			<div class="row">
+				<h3>Navigation</h3>
+				<p>Create sleek, clean navigation bars and menu lists. Simple JQuery is used to link tabs and buttons to destination content. Create calls to action that are clearly defined and easy to identify.</p>
+				<h4>Horzintal menu bar</h4>
+				<div class="navbar">
+					<div class="navbar-inner">
+						<nav role="navigation">
+							<ul class="mainnav">
+								<li><a>Link One</a>
+									<ul>
+										<li><a>Link One</a>
+											<ul>
+												<li><a>Link One</a></li>
+												<li><a>Link Two</a></li>
+												<li><a>Link Three</a></li>
+												<li><a>Link Four</a></li>
+											</ul>
+										</li>
+										<li><a>Link Two</a></li>
+										<li><a>Link Three</a></li>
+										<li><a>Link Four</a></li>
+									</ul>
+								</li>
+								<li><a>Link Two</a></li>
+								<li><a>Link Three</a></li>
+								<li><a>Link Four</a></li>
+							</ul>
+						</nav>		
+					</div>
+				</div>
+				<div class="row mt">
+						<pre class="prettyprint linenums">
+&lt;div class=&quot;navbar&quot;&gt;
+	&lt;div class=&quot;navbar-inner&quot;&gt;
+		&lt;nav role=&quot;navigation&quot;&gt;
+			&lt;ul class=&quot;mainnav&quot;&gt;
+				&lt;li&gt;&lt;a&gt;Link One&lt;/a&gt;
+					&lt;ul&gt;
+						&lt;li&gt;&lt;a&gt;Link One&lt;/a&gt;
+							&lt;ul&gt;
+								&lt;li&gt;&lt;a&gt;Link One&lt;/a&gt;&lt;/li&gt;
+								&lt;li&gt;&lt;a&gt;Link Two&lt;/a&gt;&lt;/li&gt;
+								&lt;li&gt;&lt;a&gt;Link Three&lt;/a&gt;&lt;/li&gt;
+								&lt;li&gt;&lt;a&gt;Link Four&lt;/a&gt;&lt;/li&gt;
+							&lt;/ul&gt;
+						&lt;/li&gt;
+						&lt;li&gt;&lt;a&gt;Link Two&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a&gt;Link Three&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a&gt;Link Four&lt;/a&gt;&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/li&gt;
+				&lt;li&gt;&lt;a&gt;Link Two&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a&gt;Link Three&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a&gt;Link Four&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/nav&gt;		
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+						<pre id="horizcss" class="prettyprint linenums">
+.navbar
+{
+	*position:relative;
+	*z-index:2;
+	margin-bottom:18px;
+	overflow:visible;
+}
+
+.navbar-inner
+{
+	padding-right:20px;
+	padding-left:20px;
+	background-color:#cfcfcf;
+	border-top: 1px solid #efefef;
+	border-bottom: 1px solid #fefefe;
+	background-image:-webkit-gradient(linear,0 0,0 100%,from(#0080c6),to(#005583));
+	background-image:-webkit-linear-gradient(top,#0080c6,#005583);
+	background-image:   -moz-linear-gradient(top,#0080c6,#005583);
+	background-image:    -ms-linear-gradient(top,#0080c6,#005583);
+	background-image:	  -o-linear-gradient(top,#0080c6,#005583);
+	background-image: linear-gradient(top,#0080c6,#005583);
+	
+	filter:progid:dximagetransform.microsoft.gradient(startColorstr='#0080c6',endColorstr='#005583',GradientType=0);
+	
+	-webkit-box-shadow:
+		0 1px 3px rgba(0,0,0,0.25),
+		inset 0 0 2px rgba(255,255,255,.4),
+		inset 0 -1px 0 rgba(0,0,0,0.1), 
+		0 2px 4px rgba(0,0,0,.4);
+	-moz-box-shadow:
+		0 1px 3px rgba(0,0,0,0.25),
+		inset 0 -1px 0 rgba(0,0,0,0.1),
+		0 2px 4px rgba(0,0,0,.4);
+	box-shadow:
+		0 1px 3px rgba(0,0,0,0.25),
+		inset 0 0 2px rgba(255,255,255,.4),
+		inset 0 -1px 0 rgba(0,0,0,0.1), 
+		0 2px 4px rgba(0,0,0,.4);
+}
+
+.mainnav>li>a
+{
+	border-right: 1px solid #0080c6;
+	border-left: 1px solid #005583;
+	
+}
+.mainnav>li>a:hover
+{
+	background: #89ac4c;
+	background: rgba(0,0,0,.1);
+}
+
+.mainnav > li > ul,
+.mainnav > li > ul > li,
+.mainnav > li > ul > li > ul,
+.mainnav > li > ul > li > ul > li
+{ 
+	margin: 0 !important;
+	font-size: 1em;
+	list-style: none;
+}
+
+.mainnav > li > ul > li > a,
+.mainnav > li > ul > li > ul > li > a
+{ 
+	display: block;
+	background: #ffffff;
+	color: #0080c6;
+	font-weight: bold;
+	opacity: 1;
+	text-decoration: none;
+	white-space: nowrap;
+	border-top: 1px solid #fefefe;
+	border-bottom: 1px solid #efefef;
+	opacity: .8;
+	filter: alpha(opacity=80);
+}
+
+.mainnav > li > ul > li > a,
+.mainnav > li > ul > li > ul > li > a
+{ 
+	padding: .625em 3em .625em 1.125em;
+}
+.mainnav > li > ul > li > a:hover,
+.mainnav > li > ul > li > ul > li > a:hover
+{ 
+	background: #0080c6;
+	color: #fff;
+	border-top: 1px solid #005583;
+	border-bottom: 1px solid #0080c6;
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+.mainnav > li > ul
+{
+	position: absolute;
+	z-index: 5000;
+	height: 0;
+	width: auto;
+	margin-left: 0;
+	margin-top: 0;
+	border: 1px solid #cfcfcf;
+	
+	-webkit-box-shadow:
+		0 1px 3px rgba(0,0,0,0.25);
+	-moz-box-shadow:
+		0 1px 3px rgba(0,0,0,0.25);
+	box-shadow:
+		0 1px 3px rgba(0,0,0,0.25);
+	
+	-webkit-transition: all 0.3s ease-out; 
+	   -moz-transition: all 0.3s ease-out; 
+	     -o-transition: all 0.3s ease-out; 
+	        transition: all 0.3s ease-out; 
+	        
+	display: none;
+}
+
+.mainnav > li:hover > ul
+{
+	height: auto;
+	display: block;	
+}
+
+.mainnav > li:hover > ul:before,
+.mainnav > li > ul > li:hover > ul:before
+{
+	border:solid;
+	border-color:#cfcfcf transparent;
+	border-width: 0 6px 6px 6px;
+	top:-6px;
+	content:"";
+	display:block;
+	left:12%;
+	position:absolute;
+	z-index:301;
+	-webkit-box-shadow:0 5px 10px rgba(0,0,0,0.2);
+	-moz-box-shadow:0 5px 10px rgba(0,0,0,0.2);
+	box-shadow:0 5px 10px rgba(0,0,0,0.2);
+	-webkit-background-clip:padding-box;
+	-moz-background-clip:padding;
+	background-clip:padding-box;
+	opacity:.825;
+	filter:alpha(opacity=80);
+}
+.mainnav > li > ul > li:hover > ul:before
+{
+	top:1.125em;
+	left: -6px;
+	border-color:transparent #cfcfcf;
+	border-width: 6px 6px 6px 0;
+}
+
+.mainnav > li > ul > li
+{
+	/* This is the important rule for positioning the nav
+	/* you need to give the third level a place to start */
+	position: relative;
+}
+
+.mainnav > li > ul > li > ul
+{
+	position: absolute;
+	top:0%;
+	z-index: 5005;
+	height: 0;
+	width: auto;
+	border: 1px solid #cfcfcf;
+	
+	-webkit-box-shadow:
+		0 1px 3px rgba(0,0,0,0.25);
+	-moz-box-shadow:
+		0 1px 3px rgba(0,0,0,0.25);
+	box-shadow:
+		0 1px 3px rgba(0,0,0,0.25);
+	
+	-webkit-transition: all 0.3s ease-out; 
+	   -moz-transition: all 0.3s ease-out; 
+	     -o-transition: all 0.3s ease-out; 
+	        transition: all 0.3s ease-out; 
+	        
+	display: none;
+}
+
+.mainnav > li > ul > li:hover > ul
+{
+	display: block;
+	left:100%;
+	height: auto;
+}
+						
+						</pre>
+						<pre class="prettyprint linenums">		
+$('nav li').click(function(){
+	if ($(this).hasClass('active')) {
+	} else {
+		$('nav li').removeClass('active');
+		$(this).addClass('active');
+	}
+});				
+						</pre>
+				</div>
 			</div>
-			<h5>Breadcrumbs</h5>
-			<nav>
-				<ul class="breadcrumb">
-					<li><a href="#">This is a link</a></li>
-					<li><a href="#">Lorem link</a></li>
-					<li><a href="#">Dolor link two</a></li>
-					<li><a href="#">Here is a link</a></li>
-					<li class="active">Active Link</li>
-				</ol>			
-			</nav>	
+			<div id="breadcrumbs" class="row">
+				<h5>Breadcrumbs</h5>
+				<nav role="navigation">
+					<ul class="breadcrumb">
+						<li><a href="#">This is a link</a></li>
+						<li><a href="#">Lorem link</a></li>
+						<li><a href="#">Dolor link two</a></li>
+						<li><a href="#">Here is a link</a></li>
+						<li class="active">Active Link</li>
+					</ol>			
+				</nav>	
+				
+				<div class="row mt">
+						<pre class="prettyprint linenums">
+&lt;nav role=&quot;navigation&quot;&gt;
+	&lt;ul class=&quot;breadcrumb&quot;&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;This is a link&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Lorem link&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Dolor link two&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Here is a link&lt;/a&gt;&lt;/li&gt;
+		&lt;li class=&quot;active&quot;&gt;Active Link&lt;/li&gt;
+	&lt;/ol&gt;			
+&lt;/nav&gt;	
+						</pre>
+						<pre class="prettyprint linenums">
+.breadcrumb
+{
+	font-size: 1.1em;
+	color: #ccc;
+	margin: 0;
+	font-size: .865em;
+}
+	
+.breadcrumb li
+{
+	display: inline-block;
+}
+
+.breadcrumb a,
+.breadcrumb a:visited
+{
+	margin: 0 .425em;
+	text-decoration: none;
+	color: #999;
+	white-space: nowrap;
+	float: left;
+}
+
+.breadcrumb li:first-child
+{
+	margin-left: 0;
+}
+
+.breadcrumb a:hover,
+.breadcrumb a:focus
+{
+	color: #333;
+}
+
+.breadcrumb a:active,
+.breadcrumb .active a
+{
+	color: #333;
+}
+
+
+.breadcrumb li:after
+{
+	display: inline-block;
+	content: '>';
+}
+
+.breadcrumb li:last-child:after
+{
+	content: '';
+	content: none;
+}
+						</pre>
+				</div>
+			</div>
 					
-			<h3>Tabs</h3>
-			<p>Some very simple tabs that have dead simple jQuery that hook them up to their corresponding content.</p>
-			<ul class="tabs">
-				<li><a class="active" href="#simple">Simple</a></li>
-				<li><a href="#lightweight">Lightweight</a></li>
-				<li><a href="#mobileFriendly">Mobile</a></li>
-			</ul>
-			<ul class="tabs-content">
-				<li class="active" id="simple">The tabs are clean and simple unordered-list markup and basic CSS.</li>
-				<li id="lightweight">The tabs are cross-browser, but don't need a ton of hacky CSS or markup.</li>
-				<li id="mobileFriendly">The tabs work like a charm even on mobile devices. If there are too many they will stack (it's not completely awesome, but still retains functionality).</li>
-			</ul>
-					
-			<div class="col eight first">
-			<h4>Pagination</h4>
-			<nav role="navigation">
-			<ul class="pager_nav">
-				<li>
-					<ul class="button_grp">
-						<li><a class="button first" href="#">First</a></li>
-						<li class="active">1</li>
-						<li><a class="button" href="#">2</a></li>
-						<li><a class="button" href="#">3</a></li>
-						<li><a class="button" href="#">4</a></li>
-						<li><a class="button" href="#">5</a></li>
-						<li><a class="button" href="#">...</a></li>
-						<li><a class="button" href="#">Last</a></li>
+			<div id="tabmagic" class="row mt">
+			
+				<h3>Tabs</h3>
+				<p>Some very simple tabs that have dead simple jQuery that hook them up to their corresponding content.</p>
+				<menu>
+					<ul class="tabs">
+						<li><a class="active" href="#simple">Simple</a></li>
+						<li><a href="#lightweight">Lightweight</a></li>
+						<li><a href="#mobileFriendly">Mobile</a></li>
 					</ul>
-				</li>
-				<li><input type="text" class="rmb rmt first last col one"> <button type="button" class="button last">Jump</button></li>
-			</ul>
-			</nav>
-			<nav role="navigation">
-				<ul class="button_grp">
-					<li><a class="button first" href="#"><b class="east"></b> Prev</a></li>
-					<li><a class="button last" href="#">Next <b class="west"></b></a></li>
-				</ul>
-			</nav>
+					<ul class="tabs-content">
+						<li class="active" id="simple">The tabs are clean and simple unordered-list markup and basic CSS.</li>
+						<li id="lightweight">The tabs are cross-browser, but don't need a ton of hacky CSS or markup.</li>
+						<li id="mobileFriendly">The tabs work like a charm even on mobile devices. If there are too many they will stack (it's not completely awesome, but still retains functionality).</li>
+					</ul>
+				</menu>
+					
+				<div class="row mt">
+						<pre class="prettyprint linenums">
+&lt;menu&gt;
+	&lt;ul class=&quot;tabs&quot;&gt;
+		&lt;li&gt;&lt;a class=&quot;active&quot; href=&quot;#simple&quot;&gt;Simple&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#lightweight&quot;&gt;Lightweight&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#mobileFriendly&quot;&gt;Mobile&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;ul class=&quot;tabs-content&quot;&gt;
+		&lt;li class=&quot;active&quot; id=&quot;simple&quot;&gt;The tabs are clean and simple unordered-list markup and basic CSS.&lt;/li&gt;
+		&lt;li id=&quot;lightweight&quot;&gt;The tabs are cross-browser, but don't need a ton of hacky CSS or markup.&lt;/li&gt;
+		&lt;li id=&quot;mobileFriendly&quot;&gt;The tabs work like a charm even on mobile devices. If there are too many they will stack (it's not completely awesome, but still retains functionality).&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/menu&gt;
+						</pre>
+						<pre class="prettyprint linenums">
+/* Tabs (activated by scripts.js)
+================================================== */
+ul.tabs
+{
+	display: block;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+ul.tabs li
+{
+	display: inline-block;
+	float: left;
+	width: auto;
+	height: 30px;
+	padding: 0;
+	margin: 0;
+}
+
+ul.tabs li.r
+{
+	float: right;
+}
+ul.tabs.bg
+{
+	display: block;
+	height: 32px;
+	background-color: #fbfbfb;
+	background-image:
+		-webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#c9c9c9));
+	background-image:
+		-webkit-linear-gradient(top, #fbfbfb, #c9c9c9);
+	background-image:
+		-moz-linear-gradient(top, #fbfbfb, #c9c9c9);
+	background-image:
+		-o-linear-gradient(top, #fbfbfb, #c9c9c9);
+	background-image:
+		linear-gradient(to bottom, #fbfbfb, #c9c9c9);
+	-webkit-box-shadow:
+		rgba(0,0,0,.3) 0 0 2px,
+		rgba(0,0,0,.4) 0 0 1px,
+		inset rgba(255,255,255,.4) 0 0 2px;
+	-khtml-box-shadow:
+		rgba(0,0,0,.3) 0 0 2px,
+		rgba(0,0,0,.4) 0 0 1px,
+		inset rgba(255,255,255,.4) 0 0 2px;
+	-moz-box-shadow:
+		rgba(0,0,0,.3) 0 0 2px,
+		rgba(0,0,0,.4) 0 0 1px,
+		inset rgba(255,255,255,.4) 0 0 2px;
+	-o-box-shadow:
+		rgba(0,0,0,.3) 0 0 2px,
+		rgba(0,0,0,.4) 0 0 1px,
+		inset rgba(255,255,255,.4) 0 0 2px;
+	box-shadow:
+		rgba(0,0,0,.3) 0 0 2px,
+		rgba(0,0,0,.4) 0 0 1px,
+		inset rgba(255,255,255,.4) 0 0 2px;
+}
+
+
+ul.tabs li a
+{
+	display: block;
+	width: auto;
+	height: 30px;
+	padding: 0px 20px;
+	line-height: 30px;
+	margin: 0;
+	font-size: 13px;
+	color:#4d4d4d;
+	text-decoration: none;
+	text-shadow:
+		rgba(255,255,255,.8) 0 1px 1px;
+	background-color: #fbfbfb;
+	background-image:
+		-webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#c9c9c9));
+	background-image:
+		-webkit-linear-gradient(top, #fbfbfb, #c9c9c9);
+	background-image:
+		-moz-linear-gradient(top, #fbfbfb, #c9c9c9);
+	background-image:
+		-o-linear-gradient(top, #fbfbfb, #c9c9c9);
+	background-image:
+		linear-gradient(to bottom, #fbfbfb, #c9c9c9);
+	-webkit-box-shadow:
+		rgba(0,0,0,.3) 0 0 2px,
+		rgba(0,0,0,.4) 0 0 1px,
+		inset rgba(255,255,255,.4) 0 0 2px;
+	-khtml-box-shadow:
+		rgba(0,0,0,.3) 0 0 2px,
+		rgba(0,0,0,.4) 0 0 1px,
+		inset rgba(255,255,255,.4) 0 0 2px;
+	-moz-box-shadow:
+		rgba(0,0,0,.3) 0 0 2px,
+		rgba(0,0,0,.4) 0 0 1px,
+		inset rgba(255,255,255,.4) 0 0 2px;
+	-o-box-shadow:
+		rgba(0,0,0,.3) 0 0 2px,
+		rgba(0,0,0,.4) 0 0 1px,
+		inset rgba(255,255,255,.4) 0 0 2px;
+	box-shadow:
+		rgba(0,0,0,.3) 0 0 2px,
+		rgba(0,0,0,.4) 0 0 1px,
+		inset rgba(255,255,255,.4) 0 0 2px;
+}
+
+ul.tabs li.active a,
+.tabs li.active a:visted,
+.tabs li:active a,
+.tabs li a:active,
+.tabs li a:focus
+{
+	color: #ffffff; 
+}
+
+ul.tabs li:hover a
+{
+	color: #1b378c;
+	background-color: #efefef;
+	background-image: none;
+	-webkit-box-shadow:
+		rgba(0,0,0,.4) 0 0 1px, 
+		inset rgba(255,255,255,.4) 0 0 2px;
+	-khtml-box-shadow:
+		rgba(0,0,0,.4) 0 0 1px,
+		inset rgba(255,255,255,.4) 0 0 2px;
+	-moz-box-shadow:
+		rgba(0,0,0,.4) 0 0 1px,
+		inset rgba(255,255,255,.4) 0 0 2px;
+	-o-box-shadow:
+		rgba(0,0,0,.4) 0 0 1px, 
+		inset rgba(255,255,255,.4) 0 0 2px;
+	box-shadow: 
+		rgba(0,0,0,.4) 0 0 1px, 
+		inset rgba(255,255,255,.4) 0 0 2px;
+}
+
+ul.tabs li a.active
+{
+	background: #fff;
+	height: 30px;
+	position: relative;
+	border-left-width: 1px;
+	margin: 0;
+	color: #111;
+	color: #fff;
+	text-shadow: #000 0 -1px 0;
+	background-color: #1b378c;
+}
+
+ul.tabs.mini li,
+ul.tabs.mini li a,
+ul.tabs.mini li a.active
+{
+	height: 22px;
+}
+
+ul.tabs.mini li,
+ul.tabs.mini li a
+{
+	font: -webkit-control;
+	font-size: .826em; 
+}
+
+ul.tabs li:first-child a.active
+{
+	margin-left: 0; 
+
+}
+
+ul.tabs li:first-child a
+{
+	-webkit-border-top-left-radius: 2px;
+	-moz-border-radius-topleft: 2px;
+	border-top-left-radius: 2px;
+}
+
+ul.tabs li:last-child a
+{
+	
+}
+
+ul.tabs-content
+{
+	margin: 0; 
+	display: block;
+	list-style: none;
+}
+
+ul.tabs-content > li
+{
+	display:none;
+	padding: 20px; 
+}
+
+ul.tabs-content > li.active
+{
+	display: block;
+	background-color: #fefefe;
+	-webkit-transition: all 0.3s ease-out;
+	 -moz-transition: all 0.3s ease-out;
+	   -o-transition: all 0.3s ease-out;
+	      transition: all 0.3s ease-out;
+}
+
+/* Clearfixing tabs for beautiful stacking */
+
+ul.tabs:before, ul.tabs:after
+{
+	content: '\0020';
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+ul.tabs:after
+{
+	clear: both; 
+}
+ul.tabs {zoom: 1; 
+}
+						
+						</pre>
+						<pre class="prettyprint linenums">		
+$('.tabs li a').click(function(){
+	var content = $(this).attr('href');
+	if ($(this).hasClass('active') && content.length) {
+	} else {
+		$('.tabs li a').removeClass('active');
+		$(this).addClass('active');
+		$(content).show().addClass('active').siblings().hide().removeClass('active');
+	}
+});			
+						</pre>
+					</div>
+				</div>
 			</div>
-			<div class="col eight last">
-			<h4>Filter Nav</h4>
-				<nav>
-				<dl class="filter_nav cfx">
-				  <dt>Filter by:</dt>
-				  <dd class="active"><a href="#">Option 1</a></dd>
-				  <dd><a href="#">Option 2</a></dd>
-				  <dd><a href="#">Option 3</a></dd>
-				</dl>
-				</nav>
-			</div>
+			<section id="pagination">		
+				<div class="col eight first">
+					<h4>Pagination</h4>
+					<nav role="navigation">
+					<ul class="pager_nav">
+						<li>
+							<ul class="button_grp">
+								<li><a class="button first" href="#">First</a></li>
+								<li class="active">1</li>
+								<li><a class="button" href="#">2</a></li>
+								<li><a class="button" href="#">3</a></li>
+								<li><a class="button" href="#">4</a></li>
+								<li><a class="button" href="#">5</a></li>
+								<li><a class="button" href="#">...</a></li>
+								<li><a class="button" href="#">Last</a></li>
+							</ul>
+						</li>
+						<li><input type="text" class="rmb rmt first last col one"> <button type="button" class="button last">Jump</button></li>
+					</ul>
+					</nav>
+					<nav role="navigation">
+						<ul class="button_grp">
+							<li><a class="button first" href="#"><b class="east"></b> Prev</a></li>
+							<li><a class="button last" href="#">Next <b class="west"></b></a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="col eight last">
+					<h4>Filter Nav</h4>
+					<nav>
+						<dl class="filter_nav cfx">
+							<dt>Filter by:</dt>
+							<dd class="active"><a href="#">Option 1</a></dd>
+							<dd><a href="#">Option 2</a></dd>
+							<dd><a href="#">Option 3</a></dd>
+						</dl>
+					</nav>
+				</div>
+			</section>
 		</div>
 
 		<div class="section hide" id="slides">
@@ -204,18 +783,7 @@
 
 		</div>
 		
-		<div class="section" id="mediaQueries">
-			<h3>Media Queries</h3>
-			<p>A.mphibio.us uses a <strong>lot</strong> of media queries to serve the scalable grid, but also for the convenience of styling your site on different size screens. A.mphibio.us' media queries are almost exclusively targeted at max and min widths rather than device sizes or orientations. The advantage of this is browsers and future mobile devices that don't map to exact set dimensions will still benefit from the styles. That being said, all of the queries were written to be optimal on Apple iOS devices. The built in media queries include:</p>
-			<ul class="square">
-				<li><strong>Smaller than 960</strong>: Smaller than the standard base grid</li>
-				<li><strong>Tablet Portrait</strong>: Between 768px and 959px</li>
-				<li><strong>All Mobile Sizes</strong>: Less than 767px</li>
-				<li><strong>Just Mobile Landscape</strong>: Between 480px and 767px</li>
-				<li><strong>Just Mobile Portrait</strong>: Less than 479px</li>
-			</ul>
-		</div>
-		
+				
 	</div><!-- content -->
 
 </div><!-- container -->
@@ -259,6 +827,7 @@ postion:fixed;top:0;left:0;right:0;
 						<li><a href="foundation.html#padded_col">Padded Columns</a></li>
 						<li><a href="foundation.html#golden_section">Golden ratio grids</a></li>
 						<li><a href="foundation.html#push_pull">Source Ordering</a></li>
+						<li><a href="foundation.html#mediaQueries">Media Queries</a></li>
 					</ul>
 				</li>
 				<li><a href="form.html">Form</a>
@@ -270,8 +839,24 @@ postion:fixed;top:0;left:0;right:0;
 						<li><a href="form.html#tables">Tables <sub>not for layout</sub></a></li>
 					</ul>
 				</li>
-				<li><a href="function.html">Function</a></li>
-				<li><a href="features.html">Features</a></li>
+				<li><a href="function.html">Function</a>
+					<ul>
+						
+						<li><a href="function.html#navigation">Horiztotal Nav <sub>with tertiary</sub></a></li>
+						<li><a href="function.html#horizcss">Horiztotal Nav <sub>css</sub></a></li>
+						<li><a href="function.html#breadcrumbs">Breadcrumbs</a></li>
+						<li><a href="function.html#tabmagic">Tabs</a></li>
+						<li><a href="function.html#pagination">Pagination nav</a></li>
+					</ul>
+				</li>
+				<li><a href="features.html">Features</a>
+					<ul>
+						
+						<li><a href="features.html#helpers">Layout Helpers <sub>& shorthand classes</sub></a></li>
+						<li><a href="features.html#pears">Content Pea.rs</a></li>
+						<li><a href="features.html#icons">Webfont Icons <sub>by entypo</sub></a></li>
+					</ul>
+				</li>
 				<li onclick="$('#amp_overlay').fadeIn();"><a>Feedback</a></li>					
 			</ul>
 		</nav>
