@@ -257,7 +257,7 @@ $(document).ready(function() {
 			options[ key ] = value;
 			if ( key === 'layoutMode' && typeof changeLayoutMode === 'function' ) {
 			// changes in layout modes need extra logic
-			changeLayoutMode( $this, options )
+			changeLayoutMode( $this, options );
 			} else {
 			// otherwise, apply new options
 			$container.isotope( options );

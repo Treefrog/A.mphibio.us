@@ -32,12 +32,12 @@ module.exports = function(grunt) {
 		    src: [
 		    	'../../css/sequencejs-theme.sliding-horizontal-parallax.css',
 		    	'../../css/a.mphibio.us.css',
-		    	'../../css/a.mphibio.us.demo.css',
+		    	'../../css/a.mphibio.us.doc.css',
 		    	'../../css/a.mphibio.us.public.skin.css',
 		    	'../../css/flexslider.css'
 		    	],
 		    // the location of the resulting CSS file
-		    dest: '../../amp/css/a.mphibio.us.css'
+		    dest: '../../a.mphibio.us/css/a.mphibio.us.css'
 		  }
 	},
     uglify: {
@@ -55,8 +55,8 @@ module.exports = function(grunt) {
                 '<%= grunt.template.today("yyyy-mm-dd") %> */'
         },
         my_target: {
-            src: '../../amp/css/a.mphibio.us.css',
-            dest: '../../amp/css/a.mphibio.us.min.css'
+            src: '../../a.mphibio.us/css/a.mphibio.us.css',
+            dest: '../../a.mphibio.us/css/a.mphibio.us.min.css'
         }
     }
   });
