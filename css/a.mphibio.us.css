@@ -2338,6 +2338,13 @@ Class Name						Shorthand					Styles
 .container .pull_fifteen					{margin-left: -900px;}
 .container .pull_sixteen					{margin-left: -950px;}
 
+	.container .one-third.col
+	{
+		width: 31.125%;
+		margin-left:1%;
+		margin-right:1%;
+	}
+
 	.container .one-third.col.padded
 	{
 		width: 31.25%;
@@ -2346,8 +2353,6 @@ Class Name						Shorthand					Styles
 	.container .two-thirds.col
 	{
 		width: 66%; 
-		margin-left:1%;
-		margin-right:1%;
 	}
 
 	
