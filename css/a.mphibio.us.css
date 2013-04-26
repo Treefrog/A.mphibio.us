@@ -7,39 +7,16 @@
 * 04/11/2013
 *
 *
-/* Reset (kudos Eric Meyer)
-================================================== */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
-{
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline; 
-}
+/*! normalize.css v1.1.0 | MIT License | git.io/normalize */
 
-blockquote, q
-{
-	quotes: none; 
-}
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
 
-blockquote:before,
-blockquote:after,
-q:before, q:after
-{
-	content: '';
-	content: none; 
-}
+/**
+ * Correct `block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
 
-table
-{
-	border-collapse: collapse;
-	border-spacing: 0; 
-}
-
-/* HTML5 (kudos Paul Irish and the h5bp.com team
-================================================== */
 article,
 aside,
 details,
@@ -48,36 +25,104 @@ figure,
 footer,
 header,
 hgroup,
+main,
 nav,
-section
-{
-	display: block; 
+section,
+summary {
+    display: block;
 }
+
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
 
 audio,
 canvas,
-video
-{
+video {
 	display: inline-block;
-	*display: inline; 
-	*zoom: 1; 
+	*display: inline;
+	*zoom: 1;
 }
 
-audio:not([controls])
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+
+[hidden] {
+	display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+/**
+ * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+html {
+	font-size: 100%; /* 1 */
+	-webkit-text-size-adjust: 100%; /* 2 */
+	-ms-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Address `font-family` inconsistency between `textarea` and other form
+ * elements.
+ */
+
+html,
+button,
+input,
+select,
+textarea {
+	font-family: sans-serif;
+}
+
+/* ==========================================================================
+ * Modified HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ *
+ * You too Mr. Paul Irish !
+ *
+ *
+/*	==========================================================================
+	Base Styles & Typography 
+	========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea
 {
-	display: none; 
+    color: #4d4d4d;
 }
 
-[hidden]
-{
-	display: none; 
-}
-
-
-/* Base Styles & Typography
-================================================== */
 body
 {
+
+	/**
+	 * Address margins handled incorrectly in IE 6/7.
+	 */
+	margin: 0;
 	background: #fff;
 	font-family:
 		"Lucida Grande",
@@ -92,7 +137,7 @@ body
 		========================================== */
 		
 	font-weight: normal;
-	font-size: 100.5%;
+	font-size: 1em;
 	
 	/* For the most device agnostic renderings
 		leave units out of line height
@@ -107,13 +152,40 @@ body
 	-ms-text-size-adjust: 100%;
 }
 
-/* Using proportional font sizes for proper cascade
-================================================== */
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+	background: #dcebfd;
+	text-shadow: none;
+}
+
+::selection {
+	background: #dcebfd;
+	text-shadow: none;
+}
+
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+/**
+ * Address font sizes and margins set differently in IE 6/7.
+ * Address font sizes within `section` and `article` in Firefox 4+, Safari 5,
+ * and Chrome.
+ *
+ * Using proportional font sizes for proper cascade
+   ========================================================================== */
 
 h1, h2, h3, h4, h5, h6
 {
 	color: #181818;
-	font-weight: normal;margin-bottom: .3em;
+	font-weight: normal;
+	margin-bottom: .3em;
 }
 
 h1 a,
@@ -126,20 +198,28 @@ h6 a
 	font-weight: inherit; 
 }
 
-h1 {
+h1
+{
 	font-size: 2.6em;
+	margin:0 0 0.67em 0;
 }
 
-h2 {
+h2
+{
 	font-size: 2em;
+	margin: 0.83em 0;
 }
 
-h3 {
+h3
+{
 	font-size: 1.6em; 
+	margin: 1em 0;
 }
 
-h4 {
+h4
+{
 	font-size: 1.3em;
+	margin: 1.33em 0;
 }
 
 h5,
@@ -147,11 +227,13 @@ h5,
 {
 	/* Often used for as you can imagine some call out text */
 	font-size: 1.2em;
+	margin: 1.67em 0;
 }
 
 h6
 {
-	font-size: 1em;font-weight: bold; 
+	font-size: 1em;
+	font-weight: bold; 
 }
 
 .subheader 
@@ -177,11 +259,20 @@ p.lead
 	color: #777; 
 }
 
+/**
+ * Address styling not present in IE 7/8/9, Safari 5, and Chrome.
+ */
+
 abbr[title]
 {
 	border-bottom: 1px dotted;
 	cursor: pointer; 
 }
+
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
 
 dfn
 {
@@ -193,16 +284,30 @@ em, i
 	font-style: italic; 
 }
 
-strong, b
+/**
+ * Address style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
+ */
+
+b,
+strong
 {
 	font-weight: bold; 
 }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
 
 small,
 .small
 {
 	font-size: .865em; 
 }
+
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
 
 sub,
 sup
@@ -223,22 +328,41 @@ sub
 	bottom: -0.25em; 
 }
 
+/**
+ * Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
+ */
+
+code,
+kbd,
+pre,
+samp {
+	font-family: monospace, serif;
+	_font-family: 'courier new', monospace;
+	font-size: 1em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+ 
 pre
 {
+	/**
+	 * Address margins set differently in IE 6/7.
+	 */
+	margin: 1em 0;
 	text-wrap: wrap; 
 	white-space: pre-wrap; 
 	white-space: -moz-pre-wrap; 
 	white-space: -pre-wrap; 
 	white-space: -o-pre-wrap; 
 	word-wrap: break-word; 
-	background: #e6f6fb; 
+	background: #fafafa; 
 }
 
 code
 {
 	display: block; 
-	padding: 0.5em 1em; 
-	border: 1px solid #81aed1;
 	font-family:
 		'Lucida Console',
 		'Andale Mono',
@@ -293,22 +417,43 @@ blockquote cite a:visited
 	color: #555; 
 }
 
+/**
+ * Address differences between Firefox and other browsers.
+ * Known issue: no IE 6/7 normalization.
+ */
 hr
 {
-	border: solid #ececec; 
-	border-width: 1px 0 0; 
-	clear: both; 
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+
+/*
+ * A better looking default horizontal rule
+ */
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #dedede; 
 	margin: 1em 0 2em; 
-	height: 0; 
+	clear: both; 
 }
 
-/* Link-o-matic
-================================================== */
+/**
+ * Address styling not present in IE 6/7/8/9.
+ */
+
+mark {
+	background: #ff0;
+	color: #000;
+}
+
+/* ==========================================================================
+   Link-o-matic
+   ========================================================================== */
 a, a:visited
 {
 	color: #1b378c; 
 	outline: 0;
-	/* Could alos easiley be: all .2s linear;
+	/* Could also easiley be: all .2s linear;
 	if you were looking to change background by default as well */
 	-webkit-transition: color 0.3s linear;
 	 -moz-transition: color 0.3s ease-out;
@@ -316,14 +461,27 @@ a, a:visited
 	      transition: color 0.3s ease-out;
 }
 
-a:hover,
-a:focus 
-{
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+
+a:focus {
+	outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+	outline: 0;
 	color: #000; 
 }
 
 #colophon a:hover,
-#colophon a:focus 
+#colophon a:focus,
+#colophon a:active 
 {
 	color: #fff; 
 }
@@ -335,18 +493,54 @@ p a:visited
 }
 
 
-/* Lists - Default 
-================================================== */
+/* ==========================================================================
+   Lists
+   ========================================================================== */
 
+/**
+ * Address margins set differently in IE 6/7.
+ */
+
+dl,
+menu,
+ol,
+ul {
+	margin: 1em 0;
+}
+
+dd {
+	margin: 0 0 0 2.6em;
+}
+
+/**
+ * Address paddings set differently in IE 6/7.
+ */
+
+menu,
+ol,
+ul {
+	padding: 0;
+}
+
+/**
+ * Correct list images handled incorrectly in IE 7.
+ */
+
+nav ul,
+nav ol {
+	margin-left: 0;
+	list-style: none;
+	list-style-image: none;
+}
 ul, ol
 {
-	margin-left: 2em; 
+	margin-left: 1.6em; 
 	margin-bottom: 1.625em; 
 }
 
 ul
 {
-	list-style: circle outside; 
+	list-style: disc outside; 
 }
 
 ol
@@ -382,6 +576,10 @@ ul.img
 	list-style-image: url(../images/a.bullet.png);
 	list-style-position: outside; 
 }
+ul.img ul
+{
+	list-style-image: url(../images/bullet.png);
+}
 
 ol.alpha
 {
@@ -410,6 +608,18 @@ ol.latin
 ol.upper_latin
 {
 	list-style: upper-latin; 
+}
+
+ul ul
+{
+	list-style: circle outside; 
+
+}
+
+ul ul ul
+{
+	list-style: square outside; 
+
 }
 
 ul ul,
@@ -467,14 +677,7 @@ article.aside
 	margin: 0 0 1.6em 20%;
 }
 
-article header h2
-{
-	margin: 0 0 1em 0;
-	font-weight: normal;
-	line-height: 1.3;
-}
-
-article aside
+article.aside aside
 {
 	float: left;
 	width: 20%;
@@ -497,16 +700,28 @@ ul.stats li
 	border-right: 1px solid #ccc;
 }
 
-/* This class (.last) is added via the a.mphibio.us file for ie capable
-last-child formating - Great for styling - copy/paste make your own */
+/* Source:
+http://verboselogging.com/2010/01/17/making-nth-child-work-everywhere
 
-ul.stats li:last-child,
-ul.stats li.last
+Now you can change your CSS rule to something poor IE can understand:
+like .last for example :P */
+
+ul.stats li.last,
+ul.stats li:last-child
 {
 	margin: 0;
 	padding: 0;
 	border: none;
 }
+
+/* Top it off with some jQuery sauce...
+
+This class (.last) is added via the a.mphibio.us.js (scripts.js in development mode) 
+for ie capable last-child formating - Great for table styling too - copy/paste make your own 
+
+$('ul li:last-child').addClass('last');
+
+*/
 
 ul.stats li
 {	
@@ -704,6 +919,7 @@ input[type="reset"],
 input[type="button"],
 input[type="file"],  .button_grp .active,
 .filter_nav>dd>a {
+	font-size: 1em;
 	position: relative;
 	display: inline-block;
 	margin-top: 0;
@@ -759,16 +975,24 @@ input[type="file"],  .button_grp .active,
 	transition: all 0.3s ease-out;
 }
 
-.button,a.button,
-.button a:visited.button:visited,.button a,.button a:visited,
-.pager a:visited{color: #444;text-decoration: none;
+.button,
+a.button,
+.button a:visited,
+.button:visited,
+.button a,
+.button a:visited,
+.pager a:visited
+{
+	color: #444;
+	text-decoration: none;
 }
 
 .button:hover,
 button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
-input[type="button"]:hover,  input[type="file"]:hover,
+input[type="button"]:hover,
+input[type="file"]:hover,
 .filter_nav>dt,
 .filter_nav>dd>a:hover {
 	color: #1b378c;
@@ -952,13 +1176,55 @@ ul.tabs
 
 ul.tabs li
 {
-	display: block;
+	display: inline-block;
+	float: left;
 	width: auto;
 	height: 30px;
 	padding: 0;
-	float: left;
-	margin-bottom: 0;
+	margin: 0;
 }
+
+ul.tabs li.r
+{
+	float: right;
+}
+ul.tabs.bg
+{
+	display: block;
+	height: 32px;
+	background-color: #fbfbfb;
+	background-image:
+		-webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#c9c9c9));
+	background-image:
+		-webkit-linear-gradient(top, #fbfbfb, #c9c9c9);
+	background-image:
+		-moz-linear-gradient(top, #fbfbfb, #c9c9c9);
+	background-image:
+		-o-linear-gradient(top, #fbfbfb, #c9c9c9);
+	background-image:
+		linear-gradient(to bottom, #fbfbfb, #c9c9c9);
+	-webkit-box-shadow:
+		rgba(0,0,0,.3) 0 0 2px,
+		rgba(0,0,0,.4) 0 0 1px,
+		inset rgba(255,255,255,.4) 0 0 2px;
+	-khtml-box-shadow:
+		rgba(0,0,0,.3) 0 0 2px,
+		rgba(0,0,0,.4) 0 0 1px,
+		inset rgba(255,255,255,.4) 0 0 2px;
+	-moz-box-shadow:
+		rgba(0,0,0,.3) 0 0 2px,
+		rgba(0,0,0,.4) 0 0 1px,
+		inset rgba(255,255,255,.4) 0 0 2px;
+	-o-box-shadow:
+		rgba(0,0,0,.3) 0 0 2px,
+		rgba(0,0,0,.4) 0 0 1px,
+		inset rgba(255,255,255,.4) 0 0 2px;
+	box-shadow:
+		rgba(0,0,0,.3) 0 0 2px,
+		rgba(0,0,0,.4) 0 0 1px,
+		inset rgba(255,255,255,.4) 0 0 2px;
+}
+
 
 ul.tabs li a
 {
@@ -1137,18 +1403,17 @@ ul.nav
 {
 	*position:relative;
 	*z-index:2;
-	margin-bottom:18px;
 	overflow:visible;
 }
 
 .navbar-inner
 {
-	font-size: 11px;
 	padding-right:20px;
 	padding-left:20px;
-	background-color:#0080c6;
-	border-top: 1px solid #005583;
-	border-bottom: 1px solid #003e69;
+	background-color:#cfcfcf;
+	border-top: 1px solid #efefef;
+	border-bottom: 1px solid #fefefe;
+/*
 	background-image:-webkit-gradient(linear,0 0,0 100%,from(#0080c6),to(#005583));
 	background-image:-webkit-linear-gradient(top,#0080c6,#005583);
 	background-image:   -moz-linear-gradient(top,#0080c6,#005583);
@@ -1172,6 +1437,7 @@ ul.nav
 		inset 0 0 2px rgba(255,255,255,.4),
 		inset 0 -1px 0 rgba(0,0,0,0.1), 
 		0 2px 4px rgba(0,0,0,.4);
+*/
 }
 
 .navbar.fixed.top,
@@ -1242,7 +1508,7 @@ ul.nav
 	display:inline-block;
 	float:none;
 	padding:.5em .865em;
-	font-size:1.1;
+	font-size:1.1em;
 	color:#ffffff;
 	text-decoration:none;
 	text-shadow:0 -1px 0 rgba(0,0,0,0.5);
@@ -1263,7 +1529,7 @@ ul.nav
 .filter_nav>dt
 {
 	border-color: #dadada;
-	padding:.5em .865em;
+	padding:.625em .865em;
 	-webkit-border-bottom-left-radius: 6px;
 	-webkit-border-top-left-radius: 6px;
 	-moz-border-radius-bottomleft: 6px;
@@ -1326,6 +1592,8 @@ ul.nav
 {
 	font-size: 1.1em;
 	color: #ccc;
+	margin: 0;
+	font-size: .865em;
 }
 	
 .breadcrumb li
@@ -1333,7 +1601,8 @@ ul.nav
 	display:block;float: left;
 }
 
-.breadcrumb a
+.breadcrumb a,
+.breadcrumb a:visited
 {
 	margin: 0 .425em;
 	text-decoration: none;
@@ -1353,17 +1622,12 @@ ul.nav
 	color: #333;
 }
 
-.breadcrumb a:active
+.breadcrumb a:active,
+.breadcrumb .active a
 {
-	color: #666;
-}
-
-.breadcrumb .active
-{
-	margin-left: .425em;
-	font-weight: bold;
 	color: #333;
 }
+
 
 .breadcrumb li:after
 {
@@ -1392,6 +1656,7 @@ form
 
 fieldset
 {
+	border: 0;
 	margin-bottom: 1.625em; 
 }
 
@@ -1402,6 +1667,7 @@ input[type="url"],
 input[type="date"],
 textarea
 {
+	font-size: 1em;
 	-o-box-shadow:
 		inset rgba(0,0,0,.2) 0 0 2px
 		inset rgba(0,0,0,.1) 0 -2px 6px;
@@ -1439,7 +1705,7 @@ select
 	border-radius: 2px;
 	color: #777;
 	margin: 0;
-	width: 210px;
+	width: 320px;
 	max-width: 100%;
 	display: block;
 	margin-bottom: 1.625em;
@@ -1631,6 +1897,18 @@ form.multi.beside fieldset label
 
 }
 
+form.multi.beside fieldset input[type="text"],
+form.multi.beside fieldset input[type="email"],
+form.multi.beside fieldset input[type="password"],
+form.multi.beside fieldset input[type="url"],
+form.multi.beside fieldset input[type="date"],
+form.multi.beside fieldset textarea
+{
+	width: 60%;
+	margin: 0 0 0 30%;
+
+}
+
 form.multi.beside fieldset.check label
 {
 	display: inline;
@@ -1639,7 +1917,7 @@ form.multi.beside fieldset.check label
 	font-weight: normal;
 }
 
-form.multi.beside fieldset.radio ul
+form fieldset.radio ul
 {
 	list-style: none;
 }
@@ -1657,7 +1935,7 @@ form fieldset textarea
 	height: 6.9em;
 }
 
-form fieldset.radio ul
+form.multi.beside fieldset.radio ul
 {
 	margin: .5em 0 0 30%;
 }
@@ -1712,14 +1990,24 @@ form fieldset p.form-help
 	list-style: none;
 	margin:0;
 	font-size: 1.6em;
+	line-height: .5 !important;
 	font-family: 'entypo', 'entypo-social';
 	color: #000;
 	text-shadow: 0 1px 0 #fff;
 }
-
 #icons .icons
 {
 	font-size: 2.6em;
+}
+.button.icon,
+button.icon,
+input[type="submit"].icon,
+input[type="reset"].icon,
+input[type="button"].icon,
+input[type="file"].icon
+{
+	font-size: 2.6em;
+	padding: .236em;
 }
 
 ul.icons
@@ -1763,9 +2051,10 @@ ul.icons:before
 
 .styled_select,
 .ui_tpicker_timezone {
+	font-size: 1em;
 	float:left;
-	height: 25px;
-	width:220px;
+	height: 1.6em;
+	width:280px;
 	overflow: hidden;
 	margin-left: 0;
 	margin-bottom: 1.1em;
@@ -1838,7 +2127,8 @@ ul.icons:before
 .styled_select select,
 .ui_tpicker_timezone select
 {
-	height: 25px;
+	font-size: 1em;
+	height: 1em;
 	margin-bottom: 0;
 	padding-left: 8px;
 	width: 248px;
@@ -1955,19 +2245,30 @@ Class Name						Shorthand					Styles
 	margin-right: 10px;
 }
 
+.container .col.padded
+{
+	margin-left: 0; 
+	margin-right: 0;
+	padding-left: 10px; 
+	padding-right: 10px;
+}
 .row
 {
 	
 }
 
 /* Nested col Classes */
+.col.sixteen .col.sixteen,
 .col.first
 {
-	margin-left: 0;
+	margin-left: 0 !important;
+	padding-left: 0;
 }
-.col.last
+.col.last,
+.col.sixteen .col.sixteen
 {
-	margin-right: 0;
+	margin-right: 0 !important;
+	padding-right: 0;
 }
 
 /* Base Grid */
@@ -2003,21 +2304,103 @@ Class Name						Shorthand					Styles
 .container .two-thirds.col,		.container table th.two-thirds,		.container table td.two-thirds						{width: 620px;}
 
 /* Offsets */
-.container .push_one						{padding-left: 60px;}
-.container .push_two						{padding-left: 120px;}
-.container .push_three						{padding-left: 180px;}
-.container .push_four						{padding-left: 240px;}
-.container .push_five						{padding-left: 300px;}
-.container .push_six						{padding-left: 360px;}
-.container .push_seven						{padding-left: 420px;}
-.container .push_eight						{padding-left: 480px;}
-.container .push_nine						{padding-left: 540px;}
-.container .push_ten						{padding-left: 600px;}
-.container .push_eleven						{padding-left: 660px;}
-.container .push_twelve						{padding-left: 720px;}
-.container .push_thirteen					{padding-left: 780px;}
-.container .push_fourteen					{padding-left: 840px;}
-.container .push_fifteen					{padding-left: 900px;}
+.container .push_one						{margin-left: 60px;}
+.container .push_two						{margin-left: 120px;}
+.container .push_three						{margin-left: 180px;}
+.container .push_four						{margin-left: 240px;}
+.container .push_five						{margin-left: 300px;}
+.container .push_six						{margin-left: 360px;}
+.container .push_seven						{margin-left: 420px;}
+.container .push_eight						{margin-left: 480px;}
+.container .push_nine						{margin-left: 540px;}
+.container .push_ten						{margin-left: 600px;}
+.container .push_eleven						{margin-left: 660px;}
+.container .push_twelve						{margin-left: 720px;}
+.container .push_thirteen					{margin-left: 780px;}
+.container .push_fourteen					{margin-left: 840px;}
+.container .push_fifteen					{margin-left: 900px;}
+
+.container .pull_one						{margin-left: -60px;}
+.container .pull_two						{margin-left: -120px;}
+.container .pull_three						{margin-left: -180px;}
+.container .pull_four						{margin-left: -240px;}
+.container .pull_five						{margin-left: -300px;}
+.container .pull_six						{margin-left: -360px;}
+.container .pull_seven						{margin-left: -420px;}
+.container .pull_eight						{margin-left: -480px;}
+.container .pull_nine						{margin-left: -540px;}
+.container .pull_ten						{margin-left: -600px;}
+.container .pull_eleven						{margin-left: -660px;}
+.container .pull_twelve						{margin-left: -720px;}
+.container .pull_thirteen					{margin-left: -780px;}
+.container .pull_fourteen					{margin-left: -840px;}
+.container .pull_fifteen					{margin-left: -900px;}
+.container .pull_sixteen					{margin-left: -950px;}
+
+	.container .one-third.col.padded
+	{
+		width: 31.25%;
+	}
+	
+	.container .two-thirds.col
+	{
+		width: 66%; 
+		margin-left:1%;
+		margin-right:1%;
+	}
+
+	
+	.container .two-thirds.col.padded
+	{
+		width: 64.5%; 
+	}
+	
+	.container .one-quarter.col
+	{
+		width: 23.6125%;
+		margin-left:1%;
+		margin-right:1%;
+	}
+	
+	.container .one-quarter.col.padded
+	{
+		width: 22.875%;
+	}
+	
+	.container .half.col
+	{
+		width: 49%;
+		margin-left:1%;
+		margin-right:1%;
+	}
+	
+	.container .half.col.padded
+	{
+		width: 47.875%;
+	}
+	
+	.container .three-quarters.col
+	{
+		width: 74.5%;
+		margin-left:1%;
+		margin-right:1%;
+	}
+	
+	.container .three-quarters.col.padded
+	{
+		width: 72.875%;
+	}
+	
+	.container .one-third.col.padded,
+	.container .two-thirds.col.padded,
+	.container .one-quarter.col.padded,
+	.container .half.col.padded,
+	.container .three-quarters.col.padded
+	{
+		margin-left:0;
+		margin-right:0;
+		margin-bottom: 0;
+	}
 
 /* ALL
 ================================================== */
@@ -2046,16 +2429,28 @@ Class Name						Shorthand					Styles
 		margin-right:1%;
 	}
 	
-	.container .half.col {
+	.container .half.col
+	{
 		width: 49%;
 		margin-left:1%;
 		margin-right:1%;
 	}
 	
-	.container .three-quarters.col {
+	.container .three-quarters.col
+	{
 		width: 74.5%;
 		margin-left:1%;
 		margin-right:1%;
+	}
+	
+	.container .one-third.col.padded,
+	.container .two-thirds.col.padded,
+	.container .one-quarter.col.padded,
+	.container .half.col.padded,
+	.container .three-quarters.col.padded
+	{
+		margin-left:0;
+		margin-right:0;
 	}
 
 }
@@ -2074,6 +2469,11 @@ Class Name						Shorthand					Styles
 		margin-right: 10px; 
 	}
 	
+	.container .col.padded {
+		margin-left: 0;
+		margin-right: 0; 
+	}
+	
 	.col.first{
 		margin-left: 0 !important;
 		margin-right: 10px;
@@ -2084,10 +2484,45 @@ Class Name						Shorthand					Styles
 		margin-left: 10px;
 	}
 	
-	.first.last{
+	.container .one-third.col.padded
+	{
+		width: 30.625%;
+	}
+	
+	.container .two-thirds.col.padded
+	{
+		width: 64%; 
+	}
+		
+	.container .one-quarter.col.padded
+	{
+		width: 22.3625%;
+	}
+	
+	.container .half.col.padded
+	{
+		width: 47.325%;
+	}
+	
+	.container .three-quarters.col.padded
+	{
+		width: 72.325%;
+	}
+	
+	.container .first.last,
+	.container .col.first.padded,
+	.container .col.last.padded,
+	.container .one-third.col.padded,
+	.container .two-thirds.col.padded,
+	.container .one-quarter.col.padded,
+	.container .half.col.padded,
+	.container .three-quarters.col.padded
+	{
 		margin-left: 0 !important;
 		margin-right: 0 !important;
+		margin-bottom: 0;
 	}
+	
 	
 	.container .one.col						{width: 28px;}
 	.container .two.col						{width: 76px;}
@@ -2109,21 +2544,38 @@ Class Name						Shorthand					Styles
 
 	
 	/* Offsets */
-	.container .push_one                   {padding-left: 48px;}
-	.container .push_two                   {padding-left: 96px;}
-	.container .push_three                 {padding-left: 144px;}
-	.container .push_four                  {padding-left: 192px;}
-	.container .push_five                  {padding-left: 240px;}
-	.container .push_six                   {padding-left: 288px;}
-	.container .push_seven                 {padding-left: 336px;}
-	.container .push_eight                 {padding-left: 384px;}
-	.container .push_nine                  {padding-left: 432px;}
-	.container .push_ten                   {padding-left: 480px;}
-	.container .push_eleven                {padding-left: 528px;}
-	.container .push_twelve                {padding-left: 576px;}
-	.container .push_thirteen              {padding-left: 624px;}
-	.container .push_fourteen              {padding-left: 672px;}
-	.container .push_fifteen               {padding-left: 720px;}
+	.container .push_one                   {margin-left: 48px;}
+	.container .push_two                   {margin-left: 96px;}
+	.container .push_three                 {margin-left: 144px;}
+	.container .push_four                  {margin-left: 192px;}
+	.container .push_five                  {margin-left: 240px;}
+	.container .push_six                   {margin-left: 288px;}
+	.container .push_seven                 {margin-left: 336px;}
+	.container .push_eight                 {margin-left: 384px;}
+	.container .push_nine                  {margin-left: 432px;}
+	.container .push_ten                   {margin-left: 480px;}
+	.container .push_eleven                {margin-left: 528px;}
+	.container .push_twelve                {margin-left: 576px;}
+	.container .push_thirteen              {margin-left: 624px;}
+	.container .push_fourteen              {margin-left: 672px;}
+	.container .push_fifteen               {margin-left: 720px;}
+	
+	.container .pull_one                   {margin-left: -48px;}
+	.container .pull_two                   {margin-left: -96px;}
+	.container .pull_three                 {margin-left: -144px;}
+	.container .pull_four                  {margin-left: -192px;}
+	.container .pull_five                  {margin-left: -240px;}
+	.container .pull_six                   {margin-left: -288px;}
+	.container .pull_seven                 {margin-left: -336px;}
+	.container .pull_eight                 {margin-left: -384px;}
+	.container .pull_nine                  {margin-left: -432px;}
+	.container .pull_ten                   {margin-left: -480px;}
+	.container .pull_eleven                {margin-left: -528px;}
+	.container .pull_twelve                {margin-left: -576px;}
+	.container .pull_thirteen              {margin-left: -624px;}
+	.container .pull_fourteen              {margin-left: -672px;}
+	.container .pull_fifteen               {margin-left: -720px;}
+	.container .pull_sixteen               {margin-left: -760px;}
 }
 
 
@@ -2242,38 +2694,45 @@ only screen and (min-device-pixel-ratio: 1.5)
 		width: 100%;
 	}
 	
-	.container .one-third.col
+	.container .one-third.col.padded
 	{
-		width: 32.11%;
-		margin-left:1%;
-		margin-right:1%;
+		width: 30.625%;
 	}
 	
-	.container .two-thirds.col
+	.container .two-thirds.col.padded
 	{
-		width: 66%; 
-		margin-left:1%;
-		margin-right:1%;
-		}
+		width: 64%; 
+	}
+		
+	.container .one-quarter.col.padded
+	{
+		width: 22.3625%;
+	}
 	
-	.container .one-quarter.col
+	.container .half.col.padded
 	{
-		width: 23.625%;
-		margin-left:1%;
-		margin-right:1%;
+		width: 47.325%;
 	}
-	.container .half.col
+	
+	.container .three-quarters.col.padded
 	{
-		width: 49%;
-		margin-left:1%;
-		margin-right:1%;
+		width: 72.325%;
 	}
-	.container .three-quarters.col
+	
+	.container .first.last,
+	.container .col.first.padded,
+	.container .col.last.padded,
+	.container .one-third.col.padded,
+	.container .two-thirds.col.padded,
+	.container .one-quarter.col.padded,
+	.container .half.col.padded,
+	.container .three-quarters.col.padded
 	{
-		width: 74.5%;
-		margin-left:1%;
-		margin-right:1%;
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+		margin-bottom: 0;
 	}
+	
 	.fixed
 	{
 		position: relative !important;
@@ -2501,4 +2960,50 @@ or wrap each row of col in a <div class="row"> makes sense doesn't it? */
 	{
 		page-break-after: avoid;
 	}
+}
+
+/* Only for you Seano */
+.spin
+{
+	display: inline-block;
+	-moz-animation: spin 2s infinite linear;
+	-o-animation: spin 2s infinite linear;
+	-webkit-animation: spin 2s infinite linear;
+	animation: spin 2s infinite linear;
+}
+
+@-moz-keyframes spin
+{
+  0% { -moz-transform: rotate(0deg); }
+  100% { -moz-transform: rotate(359deg); }
+}
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(359deg); }
+}
+@-o-keyframes spin {
+  0% { -o-transform: rotate(0deg); }
+  100% { -o-transform: rotate(359deg); }
+}
+@-ms-keyframes spin {
+  0% { -ms-transform: rotate(0deg); }
+  100% { -ms-transform: rotate(359deg); }
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(359deg); }
+}
+@-moz-document url-prefix() {
+  .icon-spin {
+    height: .9em;
+  }
+  .btn .icon-spin {
+    height: auto;
+  }
+  .icon-spin.icon-large {
+    height: 1.25em;
+  }
+  .btn .icon-spin.icon-large {
+    height: .75em;
+  }
 }

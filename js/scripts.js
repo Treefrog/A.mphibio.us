@@ -87,10 +87,10 @@ amp.bindlisteners = function() {
 		}
 	});
 		
-	$('#nav li').click(function(){
+	$('nav li').click(function(){
 		if ($(this).hasClass('active')) {
 		} else {
-			$('#nav li').removeClass('active');
+			$('nav li').removeClass('active');
 			$(this).addClass('active');
 			/* I May use this later
 			$(content).show().addClass('active').siblings().hide().removeClass('active'); */
@@ -165,13 +165,15 @@ $(document).ready(function() {
 		* ================================================================== */			
 		$.localScroll();
 			
+		/*
 		$('.set').click(function(){
-			$('#navbar').removeClass('a').removeClass('b').addClass('f').addClass('t');
-		});
-
-		$('.reset').click(function(){
-			$('#navbar').removeClass('f').removeClass('t').addClass('b').addClass('a');
-		});
+					$('#navbar').removeClass('a').removeClass('b').addClass('f').addClass('t');
+				});
+		
+				$('.reset').click(function(){
+					$('#navbar').removeClass('f').removeClass('t').addClass('b').addClass('a');
+				});
+		*/
 	
 	/* ==================================================================
 		* These are added for the parallax effect

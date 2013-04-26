@@ -10,11 +10,13 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>Amphibious | Simply Elegant HTML5/CSS3 Responsive Web Development Kit | 1.0.1 April 11, 2013</title>
+<title>Amphibious | Simply Elegant HTML5/CSS3 Responsive Front End Development Kit | 1.0.1 April 11, 2013</title>
 <meta name="description" content="A.mphibio.us is a responsive design tool for rapid development has a familiar sixteen column, lightweight 960 grid as its base, but elegantly scales down to downsized browser windows">
 <meta name="keywords" content="css3, html5, responsive, web, design, mobile layout, responsive design">
 
 <link rel="canonical" href="http://a.mphibio.us/index.html" />
+
+
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/touch/apple-touch-icon-144x144-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/touch/apple-touch-icon-114x114-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/touch/apple-touch-icon-72x72-precomposed.png">
@@ -49,270 +51,414 @@
 <link rel="stylesheet" href="../css/a.mphibio.us.docs.css">
 
 <script src="js/libs/modernizr-2.6.2.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
-<script>window.jQuery || document.write('<script src="js/libs/jquery-1.9.1.min.js"><\/script>')</script>
 <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
 <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
-
-
-
-<script src="js/plugins.js"></script>
-<script src="js/scripts.js"></script>
-
-<style type="text/css">
-  /* Grid */
-.example-grid .col {
-    background: #efefef;
-    background: rgba(0,0,0,.1);
-    min-height: 25px;
-    line-height: 25px;
-    margin-bottom: 20px;
-    text-align: center;
-    font-size: 12px;
-    font-weight: bold; }
-.example-grid .col:hover {background: #fefefe;background: rgba(0,129,198,.1); }
-.example-grid { overflow: hidden; }
-</style>
   
 </head>
 <body>
 <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
-<div id="navbar" class="navbar fixed top">
-		<div class="container">
-			<nav>
-				<ul class="mainnav branded">
-				<li class="active"><a href="../index.html#intro" class="hpl">mphibio.us</a>
-				</li>
-				<li><a href="foundation.html">Foundation</a></li>
-				<li><a href="form.html">Form(s)</a></li>
-				<li><a href="function.html">Function</a></li>
-				<li><a href="features.html">Features</a></li>
-				<li onclick="$('#amp_overlay').fadeIn();"><a>Feedback</a></li>		
-					
-				</ul>
-			</nav>
-		</div>
-</div>
+
+<span id="download_button" class="a r dmt mr">
+<a class="button" href="releases/a.mphibio.us.rdk.zip" title="Download A.mphibio.us Release 1.0.1(.zip )">A.mphibio.us &darr;</a>
+</span>
+
 <div id="main" role="main" class="container">
 
 	<div id="maincontent" class="col sixteen content">
 		<header>
-			<span id="download_button" class="r mr">
-			<a class="button" href="releases/a.mphibio.us_1.0.1.zip" title="Download A.mphibio.us Release 1.0.1(.zip )">A.mphibio.us &darr;</a>
-			</span>
-				<h1 class="rmb mt">A.mphibio.us</h1>
-				<p class="meta v">1.0.1 <span class="date ml">Release <span class="mo">April</span> 11<sup>th</sup> 2013</span></p>
-			<h5></h5>
+			<h1 class="rmb mt">Foundation</h1>
+			<h3>Amphibious has a fluid and responsive layout system based on a solid sixteen column grid system.</h3>
 		</header>
 
-		<div class="section cfx" id="grid">
-			<h3>The Grid</h3>
-			<p>A.mphibio.us' base grid is a sixteen column variation of the 960 grid system. The syntax is simple, elegant, and lightweight columns, (or col for short) act like columns and <b>rows</b> well um... they act like rows and clear all the colomns inside. It's effective and cross-browser, so you don’t have to worry about compatibility issues or page load inconsistencies.</p>
-			
-			<p>A.mphibio.us has the flexibility to go mobile like a champ.<br>
-			<strong>Go ahead, resize the browser and watch as the layout reacts!</strong></p>
-			
-			<div class="example-grid">
-				<div class="one col first">One</div>
-				<div class="fifteen col last">Fifteen</div>
-				<div class="fourteen col first">Fourteen</div>
-				<div class="two col last">Two</div>
-				<div class="three col first">Three</div>
-				<div class="thirteen col last">Thirteen</div>
-				<div class="twelve col first">Twelve</div>
-				<div class="four col last">Four</div>
-				<div class="five col first">Five</div>
-				<div class="eleven col last">Eleven</div>
-				<div class="ten col first">Ten</div>
-				<div class="six col last">Six</div>
-				<div class="seven col first">Seven</div>
-				<div class="nine col last">Nine</div>
-				<div class="eight col first">Eight</div>
-				<div class="eight col last">Eight</div>
-				<div class="sixteen col first last">Sixteen</div>
-				<div class="one-third col first">One Third</div>
-				<div class="one-third col">One Third</div>
-				<div class="one-third col last">One Third</div>
-				<div class="one-third col first">One Third</div>
-				<div class="two-thirds col last">Two Thirds</div>
-				<div class="one-quarter col first equalize">One Quarter</div>
-				<div class="one-quarter col equalize">One Quarter</div>
-				<div class="one-quarter col equalize">One Quarter</div>
-				<div class="one-quarter col equalize last">One Quarter</div>
-				<div class="one-quarter col first equalize">One Quarter</div>
-				<div class="three-quarters col last equalize">Three Quarters</div>
-				<div class="one-quarter col first equalize">One Quarter</div>
-				<div class="half col equalize">Half</div>
-				<div class="one-quarter col last equalize">One Quarter</div>
-				<div class="half col first">Half</div>
-				<div class="half col last">Half</div>
-				
-			</div>
-			
-		</div>
+		<section class="cfx" id="core">
+			<article>
+				<header>
+					<h2>The Core</h2>
+				</header>
+				<h4>Built on the HTML5 Boilerplate</h4>
+				<p>Amphibious inherits all of strengths and years of cross browser research of the html5 boilerplate and helps you build fast, robust, and adaptable web apps or sites.</p>
+				<ol class="roman">
+					<li>Conditionl html classes not extra style sheets for browser behaviour</li>
+					<li>Minimal http requests</li>
+					<li>Mobile first approach</li>
+					<li>Modernizr feature detection and HTML5 Shiv</li>
+					<li>Favicons and Touch Icons</li>
+					<li>Google Chrome Frame</li>
+					<li>and....</li>
+				</ol>
+				<div class="row">
+<pre class="prettyprint linenums">
+&lt;!doctype html&gt;
+&lt;!--[if lt IE 7]&gt; &lt;html class=&quot;no-js ie lt-ie7&quot; lang=&quot;en&quot;&gt; &lt;![endif]--&gt;
+&lt;!--[if IE 7]&gt;    &lt;html class=&quot;no-js ie ie7&quot; lang=&quot;en&quot;&gt; &lt;![endif]--&gt;
+&lt;!--[if IE 8]&gt;    &lt;html class=&quot;no-js ie ie8&quot; lang=&quot;en&quot;&gt; &lt;![endif]--&gt;
+&lt;!--[if IE 9]&gt;    &lt;html class=&quot;ie ie9&quot; lang=&quot;en&quot;&gt; &lt;![endif]--&gt;
+&lt;!--[if (gt IE 9)|!(IE)]&gt;
+&lt;!--[if IEMobile 7 ]&gt;    &lt;html class=&quot;no-js iem7&quot;&gt; &lt;![endif]--&gt;
+&lt;!--[if (gt IEMobile 7)|!(IEMobile)]&gt;&lt;!--&gt; &lt;html class=&quot;no-js&quot;&gt; &lt;!--&lt;![endif]--&gt;
 
-		<div class="section clearfix" id="typography">
-			<h3>Typography</h3>
-			
-			<p>The typography of A.mphibio.us is designed to create a strong hierarchy with basic styles. The primary font is Lucida Grande, but the font stack can be easily changed with just a couple adjustments. Regular paragraphs are set at a 13px base with 1.3 line height.</p>
-			
-				<div class="seven col first headings">
-					<h1>Heading &lt;h1&gt;</h1>
-					<h2>Heading &lt;h2&gt;</h2>
-					<h3>Heading &lt;h3&gt;</h3>
-					<h4>Heading &lt;h4&gt;</h4>
-					<h5>Heading &lt;h5&gt;</h5>
-					<h6>Heading &lt;h6&gt;</h6>
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;&quot;&gt;
+
+&lt;link rel=&quot;canonical&quot; href=&quot;http://a.mphibio.us/index.html&quot; /&gt;
+</pre>
 					
-					<br>
+				</div>
+			</article>
+			<footer>
+				<p>Complete documentation on the boilerplate elements can be found at <a href="https://github.com/h5bp/html5-boilerplate/blob/v4.2.0/doc/html.md">https://github.com/h5bp/html5-boilerplate/blob/v4.2.0/doc/html.md</a>
+			</footer>
+		</section>
+
+		<section class="cfx" id="grid">
+		
+			<article>
+				<header>
+					<h2>The Grid</h2>
+				</header>
+				
+				<p>A.mphibio.us' base grid is a sixteen column variation of the 960 grid system. The syntax is simple, elegant, and lightweight columns, (or col for short) act like columns and <b>rows</b> well um... they act like rows and keep all the columns inside that row. It's effective and cross-browser, so you don’t have to worry about compatibility issues or page load inconsistencies.</p>
+				
+				<p>Amphibious relies on the combination of classes to determine the layout, <span class="class tag">.col</span> for example floats the element, while  <span class="class tag">.ten</span> determines that it spans ten columns of the grid. All column spans are name spaced to happen inside a container element to remian adaptpable.</p>
+				
+				<p>A simple layout example:</p>
+				<div class="example-grid">
+					<div class="sixteen col first last">Header</div>
+					<div class="six col first">Left Column</div>
+					<div class="ten col last">Right Column</div>
+					<div class="sixteen col first last">Footer</div>
+				</div>
+				<small>would be marked up like</small>
+					<div class="row dpb">
+<pre class="prettyprint linenums">
+&lt;div class=&quot;container&quot;&gt;
+	&lt;div class=&quot;sixteen col&quot;&gt;Header&lt;/div&gt;
+	&lt;div class=&quot;one six&quot;&gt;Left Column&lt;/div&gt;
+	&lt;div class=&quot;one ten&quot;&gt;Right Column&lt;/div&gt;
+	&lt;div class=&quot;sixteen col&quot;&gt;Footer&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+					</div>	
 					
-					<h6 class="mt">Blockquote Example</h6>
+				<p>A more complex layout might include a row element for example:</p>
+				<div class="example-grid">
+					<div class="sixteen col first last">Header</div>
+					<div class="six col first" style="height:200px;">
+						<nav>
+							<ul>
+								<li>Nav Item</li>
+								<li>Nav Item</li>
+								<li>Nav Item</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="ten col last" style="height:200px;">
+						<div class="row">
+							<div class="six col first">
+								<h2>Main Content</h2>
+								<p>Some Copy</p>
+							</div>
+							<div class="four col last">
+								<h4>Inner sidebar</h4>
+								<p>Some Copy</p>
+							</div>
+						</div>
+						
+					</div>
+					<div class="sixteen col first last">Footer</div>
+				</div>
+				<small>would be marked up like</small>
+					<div class="row dpb">
+<pre class="prettyprint linenums">
+&lt;div class=&quot;container&quot;&gt;
+&lt;div class=&quot;sixteen col first last&quot;&gt;Header&lt;/div&gt;
+&lt;div class=&quot;six col first&quot;&gt;
+	&lt;nav&gt;
+		&lt;ul&gt;
+			&lt;li&gt;Nav Item&lt;/li&gt;
+			&lt;li&gt;Nav Item&lt;/li&gt;
+			&lt;li&gt;Nav Item&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/nav&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ten col last&quot;&gt;
+	&lt;div class=&quot;row&quot;&gt;
+		&lt;div class=&quot;six col first&quot;&gt;
+			&lt;h2&gt;Main Content&lt;/h2&gt;
+			&lt;p&gt;Some Copy&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;four col last&quot;&gt;
+			&lt;h4&gt;Inner sidebar&lt;/h4&gt;
+			&lt;p&gt;Some Copy&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	
+&lt;/div&gt;
+&lt;div class=&quot;sixteen col first last&quot;&gt;Footer&lt;/div&gt;
+&lt;/div&gt;
+
+</pre>
+					</div>
+				
+				<div id="responsive_col">
+					<p>A.mphibio.us has the flexibility to go mobile like a champ. <strong>Go ahead, resize the browser and watch as the layout reacts!</strong></p>
 					
-					<blockquote class="vcard row mb">
-						<p>It strikes me as obvious now that &ldquo;responsive web&rdquo; should actually be called &ldquo;amphibious web&rdquo;. It works here, it works there.<br>
-					Where else would you like it to work?</p>
-					<cite class="r"><span class="author fn">Sean Stephens</span>, CEO, <span class="org">Treefrog Interactive Inc.</span></cite>
-					</blockquote>
-					
-					<h6>Microformats <a href="http://microformats.org/wiki/hcard">hCard</a> Example</h6>
-					
-					<div class="vcard">
-						<h6 class="org"><a class="url" href="#">Treefrog Interactive Inc</a><h6>
-						<p class="n"><a class="url nickname" href="https://twitter.com/cliveMoore"><span class="given-name">Clive</span> <span>Moore</span></a><p>
-						<p class="adr">
-							<span class="street-address">My Favourite Place</span><br>
-							<span class="region">Whotown</span>, <span class="postal-code">R0F LMA</span>, <span class="country-name">Canada</span>
-						</p>
-						<p class="tel"><a href="tel:9058364442">(905) 836 4442</a></p>
+					<h3>Responsive Columns</h3>
+					<p>These set of column classes repond to two different grid size and casscade down to blocks for mobile devices.</p>
+					<div class="row example-grid">
+						<div class="one col first">One</div>
+						<div class="fifteen col last">Fifteen</div>
+						<div class="fourteen col first">Fourteen</div>
+						<div class="two col last">Two</div>
+						<div class="three col first">Three</div>
+						<div class="thirteen col last">Thirteen</div>
+						<div class="twelve col first">Twelve</div>
+						<div class="four col last">Four</div>
+						<div class="five col first">Five</div>
+						<div class="eleven col last">Eleven</div>
+						<div class="ten col first">Ten</div>
+						<div class="six col last">Six</div>
+						<div class="seven col first">Seven</div>
+						<div class="nine col last">Nine</div>
+						<div class="eight col first">Eight</div>
+						<div class="eight col last">Eight</div>
+						<div class="sixteen col first last">Sixteen</div>
+					</div>
+				</div>
+				
+				<div id="fluid_col">
+					<h3>Fluid Columns</h3>
+					<p>These set of column classes repond fluidly for all container sizes including mobile devices.</p>
+					<div class="row example-grid">
+						<div class="one-third col first">One Third</div>
+						<div class="one-third col">One Third</div>
+						<div class="one-third col last">One Third</div>
+						<div class="one-third col first">One Third</div>
+						<div class="two-thirds col last">Two Thirds</div>
+						<div class="one-quarter col first equalize">One Quarter</div>
+						<div class="one-quarter col equalize">One Quarter</div>
+						<div class="one-quarter col equalize">One Quarter</div>
+						<div class="one-quarter col equalize last">One Quarter</div>
+						<div class="one-quarter col first equalize">One Quarter</div>
+						<div class="three-quarters col last equalize">Three Quarters</div>
+						<div class="one-quarter col first equalize">One Quarter</div>
+						<div class="half col equalize">Half</div>
+						<div class="one-quarter col last equalize">One Quarter</div>
+						<div class="half col first">Half</div>
+						<div class="half col last">Half</div>
 					</div>
 					
-					<aside>
-						<div class="vcard">
-						 <address class="author"><span class="">example address block by </span>
-							<em class="fn"><a title="Stuff by Clive Moore" href="#">Clive Moore</a></em>
-						</address><span> on </span>
-							 <time datetime="2013-19-03" class="published updated">March 19<sup>th</sup>, 2013</time>
-						</div>
-					</aside>
 				</div>
 				
-				<div class="col first four mt">
-					<h5 class="mb rb">Standard Lists</h5>
-					<ul>
-						<li>Unordered Lists
-						<ul>
-							<li>Including Some
-							<ul>
-								<li>Nesting Styles</li>
-							</ul></li>
-							<li>Including Some
-							<ul>
-								<li>Nesting Styles</li>
-								<li>Nesting Styles</li>
-							</ul></li>
-						</ul></li>
-					</ul>
-					<h6>Classed Lists</h6>
-					<ul class="disc">
-						<li>Disc Bullets
-						<ul class="circle">
-							<li>Circle Bullets
-							<ul class="square">
-								<li>Square Bullets</li>
-							</ul></li>
-						</ul></li>
-					</ul>
-					<h6>In any order</h6>
-					<ul class="square">
-						<li>Square Bullets
-						<ul class="disc">
-							<li>Disc Bullets
-							<ul class="circle">
-								<li>Circle Bullets</li>
-							</ul></li>
-						</ul></li>
-					</ul>
-					<ul class="img">
-						<li>Image Bullets</li>
-					</ul>						
+				<div id="padded_col">
+					<h3>Padded Columns</h3>
+					<div class="row">
+						<p>These set of column simply have the class <kbd>padded</kbd> added to them. Really handy for blocking out sections of colour.</p>
+					</div>
+					<div class="row example-grid">
+						<div class="one-third col padded first al">One Third column with more text so you can see the reflow with more text so you can see the reflow.</div>
+						<div class="one-third col padded first al">One Third column with more text so you can see the reflow with more text so you can see the reflow.</div>
+						<div class="one-third col padded first al">One Third column with more text so you can see the reflow with more text so you can see the reflow.</div>
+						<div class="one-third col padded first al">One Third column with more text so you can see the reflow with more text so you can see the reflow.</div>
+						<div class="two-thirds col padded last al">Two Thirds column with more text so you can see the reflow with more text so you can see the reflow. column with more text so you can see the reflow with more text so you can see the reflow. column with more text so you can.</div>
+						<div class="one-quarter col padded first equalize ">One Quarter</div>
+						<div class="three-quarters padded col last equalize">Three Quarters</div>
+						<div class="one-quarter col padded equalize">One Quarter</div>
+						<div class="one-quarter col padded first equalize">One Quarter</div>
+						<div class="half col padded equalize">Half</div>
+						<div class="one-quarter col padded equalize">One Quarter</div>
+						<div class="one-quarter col padded equalize">One Quarter</div>
+						<div class="one-quarter col padded equalize">One Quarter</div>
+						<div class="one-quarter col padded last equalize">One Quarter</div>
+					</div>
+					
 				</div>
 				
-				<div class="col four last mt">
-					<ol>
-						<li>Ordered Lists
-						<ol>
-							<li>Including Some
-							<ol>
-								<li>Deeply Nesting
-									<ol>
-										<li>&lt;ol&gt; Styles</li>
-									</ol></li>
-							</ol></li>
-							<li>Including
-								<ol>
-									<li>Deeply Nesting</li>
-									<li>Deeply Nesting</li>
-									<li>Deeply Nesting</li>
-								</ol>
-						</ol></li>
-						<li>Default Bullets
-						<ol>
-							<li>Including Some
-							<ol>
-								<li>Deeply Nesting
-									<ol>
-										<li>&lt;ol&gt; Styles</li>
-									</ol></li>
-							</ol></li>
-						</ol></li>
-					</ol>
-					<ol class="upper_roman">
-						<li>Upper Roman
-						<ol class="roman">
-							<li>Roman
-							<ol class="upper_latin">
-								<li>Upper Latin
-									<ol class="latin">
-										<li>Latin</li>
-									</ol></li>
-							</ol></li>
-						</ol></li>
-					</ol>
-							
-		</div>
-		<div class="col eight last">
-			
-					
-				<h5 class="mb rb">Definition Lists</h5>
-				
-				<dl>
-					<dt>am·phib·i·ous <sub class="meta">noun <i>\am-ˈfi-bē-əs\</i></sub></dt>
-					<dd>: simply the most elegant css framework</dd>
-					<dd><b>a</b> : relating to or adapted for both desktop and mobile<br>
-					&lt;a.mphibio.us devices&gt;<br>
-					<b>b</b> : design executed by the coordinated action of HTML5, CSS3, and JavaScript organized for rapid development &lt;<abbr title="Rapid Development Tool Kit">RDK</abbr>&gt;;<br>
-					also : architected to optimize the inherent strenghts of &lt;casscading style sheets&gt;</dd>
-					
-				</dl>
-							
-		</div>
-		<hr>    
 
-		</div>
+<!--
+				<div id="liquid_col">
+					<h3>Liquid Columns</h3>
+					<p>One simple addition makes all column classes fluid all the time, use with caution&mdash;nesting gets a little tricky.</p>
+					
+					<p><strong>Add</strong> the class liquid to the container like so:</p>
+						<div class="row dpb">
+<pre class="prettyprint linenums">
+&lt;div class=&quot;container liquid&quot;&gt;
+</pre>
+						</div>
+				</div>
+-->
+					
+				<footer id="golden_section">
+					<div class="row mb rb pb">
+					
+						<h3>Golden Section Layouts</h3>
+						<p>The sixteen column grid is flexible for most layouts and it allows us easily use the <a href="http://en.wikipedia.org/wiki/Golden_ratio">golden ratio</a> in our layouts for our human friends, you know... <i>a+b</i> is to <em>a</em> as <i>a</i> is to <em>b</em>. I don't always enjoy the math but <em>I see the natural order</em> well enough.</p>
+						
+						<p>Nesting columns is also a snap by adding <span class="class tag">first</span> or  <span class="class tag">last</span> class to, either the... you guessed it! <b>first</b> or <b>last</b> inset columns;</p>
+						
+						<div class="example-grid">
+						
+							<div class="sixteen col first last">
+								Sixteen
+								<div class="row" style="margin-top:15px;">
+									<div class="ten col first rmb match">Ten
+										<div class="row">
+											<div class="six col first">six</div>	
+											<div class="four col last">four</div>
+										</div>
+									</div>
+									<div class="six col last rmb match">Six
+										<div class="row">
+											<div class="two col first">Two</div>
+											<div class="four col last">four</div>		
+										</div>						
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						
+						<div class="row">
+							<small>look something like</small>
+<pre class="prettyprint linenums">
+&lt;div id=&quot;maincontent&quot; class=&quot;col sixteen content&quot;&gt;
+&lt;!--// A whole bunch of stuff above the fold
+
+//--&gt;
+	&lt;section&gt;
+		&lt;div class=&quot;sixteen col first last&quot;&gt;
+			Sixteen
+			&lt;div class=&quot;row mt pt&quot;&gt;
+				&lt;div class=&quot;ten col first rmb match&quot;&gt;Ten
+					&lt;div class=&quot;row&quot;&gt;
+						&lt;div class=&quot;six col first&quot;&gt;six&lt;/div&gt;	
+						&lt;div class=&quot;four col last&quot;&gt;four&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;div class=&quot;six col last rmb match&quot;&gt;Six
+					&lt;div class=&quot;row&quot;&gt;
+						&lt;div class=&quot;two col first&quot;&gt;Two&lt;/div&gt;
+						&lt;div class=&quot;four col last&quot;&gt;four&lt;/div&gt;		
+					&lt;/div&gt;						
+				&lt;/div&gt;
+			&lt;/div&gt;
+			
+		&lt;/div&gt;
+	&lt;/section&gt;
+&lt;/div&gt;
+</pre>
+	
+						</div>
+					</div>
+							
+				</footer>
+				
+			</article>
+			
+		</section>
+
+		<section id="push_pull">
+		
+			<article>
+				<header>
+					<h2>SEO Optimization</h2>
+				</header>
+				<p>Source Ordering of content for maximum load efficiency.</p>
+				<div class="example-grid">
+					<div class="six col push_ten">
+						<span>&lt;div class=&quot;six col push_ten&quot;&gt;&lt;/div&gt;</span>
+					</div>
+					<div class="ten col pull_sixteen absolute">
+					<span>&lt;div class=&quot;ten col pull_sixteen absolute&quot;&gt;&lt;/div&gt;</span>	
+					</div>
+					<div class="sixteen col">sixteen col</div>
+				</div>
+				<footer>
+<pre class="prettyprint linenums">
+&lt;div class=&quot;six col push_ten&quot;&gt;
+	&lt;div class=&quot;six col push_ten&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ten col pull_sixteen absolute&quot;&gt;
+	&lt;div class=&quot;ten col pull_sixteen absolute&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sixteen col&quot;&gt;
+	sixteen col
+&lt;/div&gt;
+</pre>
+				</footer>
+			</article>
+			
+		</section>
+
 	</div><!-- content -->
 
 </div><!-- container -->
 
 </div>
-<footer>
-	<div class="container" id="attribution">
-		<div class="col sixteen dpt">
-		<p class="remove-bottom"><small>Created by <a href="http://www.clivemoore.ca">Clive Moore</a>, at <a href="http://www.treefrog.ca">Treefrog Inc.</a></p>
-		
-		</div>
+
+	<footer id="amp_footer" class="row">
+		            <p>Curated by Clive Moore, at <a href="http://www.treefrog.ca">Treefrog Inc.</a> <strong>Twitter</strong>: <a href="http://www.twitter.com/cliveMoore" title="Follow Clive on Twitter">@cliveMoore</a> <strong>Website</strong>: <a href="http://www.clivemoore.me/" title="Clive Moore">www.clivemoore.me</a></p>
+		        </footer>
+
+<div id="navbar" class="f t l r">
+<!--// WTF? 
+
+.f.t.l.r == .fixed .top .left .right
+
+// .left (.l) or .right (.r) no longer floats left/right respectively
+when used in combination with the fixed or the absolute class
+they inherit different properties the result is
+
+postion:fixed;top:0;left:0;right:0;
+
+//-->
+	<div class="container">
+		<nav>
+			<ul id="mainnav" class="mainnav branded">
+				<li class="active"><a href="../index.html#intro" class="hpl">mphibio.us</a>
+					<ul>
+						<li><a href="../index.html#what_is_it">What is A.mphibio.us</a></li>
+						<li><a href="../index.html#hows_it_made">What is it made of?</a></li>
+						<li><a href="../index.html#slides">Flexslider Slideshows</a></li>
+<!-- 							<li><a href="../index.html#gallery">A.mphibio.us Examples</a></li> -->
+						<li><a href="../index.html#evolution">The E.volution of A.mphibio.us</a></li>
+						<li><a href="../index.html#colophon">The A.mphibio.us Colophon</a></li>
+					</ul>
+				</li>
+				<li><a href="foundation.html">Foundation</a>
+					<ul>
+						<li><a href="foundation.html#core">Core</a></li>
+						<li><a href="foundation.html#grid">Symantic Grid</a></li>
+						<li><a href="foundation.html#responsive_col">Responsive Columns</a></li>
+						<li><a href="foundation.html#fluid_col">Fluid Columns</a></li>
+						<li><a href="foundation.html#padded_col">Padded Columns</a></li>
+						<li><a href="foundation.html#golden_section">Golden ratio grids</a></li>
+						<li><a href="foundation.html#push_pull">Source Ordering</a></li>
+					</ul>
+				</li>
+				<li><a href="form.html">Form</a>
+					<ul>
+						
+						<li><a href="form.html#typography">Typography <sub>and the golden ratio</sub></a></li>
+						<li><a href="form.html#forms">Basic Forms</a></li>
+						<li><a href="form.html#multi_forms">Mutli Beside Forms</a></li>
+						<li><a href="form.html#tables">Tables <sub>not for layout</sub></a></li>
+					</ul>
+				</li>
+				<li><a href="function.html">Function</a></li>
+				<li><a href="features.html">Features</a></li>
+				<li onclick="$('#amp_overlay').fadeIn();"><a>Feedback</a></li>					
+			</ul>
+		</nav>
 	</div>
-</footer>
+</div>
+
 <div id="amp_overlay" style="display:none;" onclick="$('#amp_overlay').fadeOut();">
 	<h3 class="a t r intro" onclick="$('#amp_overlay').fadeOut();">&#10006;</h3>
 	<div class="container inner">
@@ -338,12 +484,30 @@
   <img id="forkme" src="http://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt="Fork me on GitHub">
 </a>
 
-<a id="to_top" class="icon reset" href="#intro">&#11014;</a>
+<a id="to_top" class="icon reset" href="#maincontent">&#11014;</a>  
   
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/libs/jquery-1.9.1.min.js"><\/script>')</script>
+
+<!-- // These should be all rolled into one plugin.js for fewer http requests
+
+<script type="text/javascript" src="js/libs/jquery.localscroll-1.2.7-min.js"></script>
+<script type="text/javascript" src="js/libs/jquery.scrollTo-1.4.2-min.js"></script>
+<script type="text/javascript" src="js/libs/jquery.parallax-1.1.3.js"></script>
+//-->
+
+<script type="text/javascript" src="../js/libs/sequence.jquery-min.js"></script>
+<script type="text/javascript" src="../js/libs/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="../js/libs/jquery.isotope.min.js"></script>
+<script type="text/javascript" src="../js/libs/run_prettify.js"></script>
+<script src="../js/plugins.js"></script>
+
+<script src="../js/scripts.js"></script>
+
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-35159096-Y']);
+  _gaq.push(['_setAccount', 'UA-35159096-1']);
   _gaq.push(['_trackPageview']);
 
   (function() {
@@ -353,6 +517,5 @@
   })();
 
 </script>
-<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;skin=sons-of-obsidian&amp;lang=css" defer="defer"></script>
 </body>
 </html>

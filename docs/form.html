@@ -10,11 +10,13 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>Amphibious | Simply Elegant HTML5/CSS3 Responsive Web Development Kit | 1.0.1 April 11, 2013</title>
+<title>Amphibious | Simply Elegant HTML5/CSS3 Responsive Front End Development Kit | 1.0.1 April 11, 2013</title>
 <meta name="description" content="A.mphibio.us is a responsive design tool for rapid development has a familiar sixteen column, lightweight 960 grid as its base, but elegantly scales down to downsized browser windows">
 <meta name="keywords" content="css3, html5, responsive, web, design, mobile layout, responsive design">
 
 <link rel="canonical" href="http://a.mphibio.us/index.html" />
+
+
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/touch/apple-touch-icon-144x144-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/touch/apple-touch-icon-114x114-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/touch/apple-touch-icon-72x72-precomposed.png">
@@ -47,166 +49,499 @@
 
 <link rel="stylesheet" href="../css/a.mphibio.us.css">
 <link rel="stylesheet" href="../css/a.mphibio.us.docs.css">
-<link rel="stylesheet" href="../css/skin/iOS5.css">
 
 <script src="js/libs/modernizr-2.6.2.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
-<script>window.jQuery || document.write('<script src="js/libs/jquery-1.9.1.min.js"><\/script>')</script>
 <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
 <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
-
-
-
-<script src="js/plugins.js"></script>
-<script src="js/scripts.js"></script>
   
 </head>
 <body>
 <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
-<div id="navbar" class="navbar fixed top">
-		<div class="container">
-			<nav>
-				<ul class="mainnav branded">
-				<li class=""><a href="../index.html#intro" class="hpl">mphibio.us</a>
-				</li>
-				<li><a href="foundation.html">Foundation</a></li>
-				<li class="active"><a href="form.html">Form(s)</a></li>
-				<li><a href="function.html">Function</a></li>
-				<li><a href="features.html">Features</a></li>
-				<li onclick="$('#amp_overlay').fadeIn();"><a>Feedback</a></li>		
-					
-				</ul>
-			</nav>
-		</div>
-</div>
+
+<span id="download_button" class="a r dmt mr">
+<a class="button" href="releases/a.mphibio.us.rdk.zip" title="Download A.mphibio.us Release 1.0.1(.zip )">A.mphibio.us &darr;</a>
+</span>
+
 <div id="main" role="main" class="container">
 
 	<div id="maincontent" class="col sixteen content">
 		<header>
-			<span id="download_button" class="r mr">
-			<a class="button" href="releases/a.mphibio.us_1.0.1.zip" title="Download A.mphibio.us Release 1.0.1(.zip )">A.mphibio.us &darr;</a>
-			</span>
-				<h1 class="rmb mt">A.mphibio.us</h1>
-				<p class="meta v">1.0.1 <span class="date ml">Release <span class="mo">April</span> 11<sup>th</sup> 2013</span></p>
-			<h5></h5>
+			<h1 class="rmb mt">Form</h1>
+			<blockquote class="l">
+					<p>&ldquo;Form follows function &ndash; that has been misunderstood. Form and function should be one, joined in a sacred union.&rdquo;</p>
+					<cite class="r"><span class="author fn">Frank Lloyd Wright</span>, Architect, <span class="date">circa. 1906</span></cite>
+				</blockquote>
 		</header>
+
+	
+		<section id="typography" class="row">
+			<div class="row">
+				<h3>Typography</h3>
+				
+				<p class="intro">The typography of A.mphibio.us is designed to create a strong visual hierarchy based on the golden ratio with basic styles, with h6, h3, and h1 as the proportional steps. The primary font is Lucida Grande, but the font stack can be easily changed with just a couple adjustments. Regular paragraphs are set at the equilvalent of 16px base with 22px line height.</p>
+				<p>Margins and line heights are set relative to the base for the most adaptive/scalable user experience indepentant of what device you are using</p>
+			</div>
+			<div class="row">
+				<div class="eight col first headings">
+					<h1>Heading &lt;h1&gt;</h1>
+					<h2>Heading &lt;h2&gt;</h2>
+					<h3>Heading &lt;h3&gt;</h3>
+					<h4>Heading &lt;h4&gt;</h4>
+					<h5>Heading &lt;h5&gt;</h5>
+					<h6>Heading &lt;h6&gt;</h6>
+					
+					<div class="row mt">
+						<pre class="prettyprint linenums">
+&lt;h1&gt;Heading &amp;lt;h1&amp;gt;&lt;/h1&gt;
+&lt;h2&gt;Heading &amp;lt;h2&amp;gt;&lt;/h2&gt;
+&lt;h3&gt;Heading &amp;lt;h3&amp;gt;&lt;/h3&gt;
+&lt;h4&gt;Heading &amp;lt;h4&amp;gt;&lt;/h4&gt;
+&lt;h5&gt;Heading &amp;lt;h5&amp;gt;&lt;/h5&gt;
+&lt;h6&gt;Heading &amp;lt;h6&amp;gt;&lt;/h6&gt;
+</pre>
+					</div>
+					
+					<h6 class="mt">Blockquote Example</h6>
+					
+					<blockquote class="vcard row mb">
+						<p>It strikes me as obvious now that &ldquo;responsive web&rdquo; should actually be called &ldquo;amphibious web&rdquo;. It works here, it works there.<br>
+					Where else would you like it to work?</p>
+					<cite class="r"><span class="author fn">Sean Stephens</span>, CEO, <span class="org">Treefrog Interactive Inc.</span></cite>
+					</blockquote>
+					
+					<div class="row mt">
+						<pre class="prettyprint linenums">
+&lt;blockquote class=&quot;vcard row mb&quot;&gt;
+	&lt;p&gt;It strikes me as obvious now that &amp;ldquo;responsive web&amp;rdquo; should actually be called &amp;ldquo;amphibious web&amp;rdquo;. It works here, it works there.&lt;br&gt;
+Where else would you like it to work?&lt;/p&gt;
+	&lt;cite class=&quot;r&quot;&gt;&lt;span class=&quot;author fn&quot;&gt;Sean Stephens&lt;/span&gt;, CEO, &lt;span class=&quot;org&quot;&gt;Treefrog Interactive Inc.&lt;/span&gt;&lt;/cite&gt;
+&lt;/blockquote class=&quot;
+</pre>
+					</div>
+					
+					<h6>Microformats <a href="http://microformats.org/wiki/hcard">hCard</a> Example</h6>
+					
+					<div class="vcard row">
+						<h6 class="org"><a class="url" href="#">Treefrog Interactive Inc</a><h6>
+						<p class="n"><a class="url nickname" href="https://twitter.com/cliveMoore"><span class="given-name">Clive</span> <span>Moore</span></a><p>
+						<p class="adr">
+							<span class="street-address">My Favourite Place</span><br>
+							<span class="region">Whotown</span>, <span class="postal-code">R0F LMA</span>, <span class="country-name">Canada</span>
+						</p>
+						<p class="tel"><a href="tel:9058364442">(905) 836 4442</a></p>
+					</div>
+				<div class="row">
+<pre class="prettyprint linenums">
+&lt;div class=&quot;vcard row&quot;&gt;
+	&lt;h6 class=&quot;org&quot;&gt;&lt;a class=&quot;url&quot; href=&quot;#&quot;&gt;Treefrog Interactive Inc&lt;/a&gt;&lt;h6&gt;
+	&lt;p class=&quot;n&quot;&gt;&lt;a class=&quot;url nickname&quot; href=&quot;https://twitter.com/cliveMoore&quot;&gt;&lt;span class=&quot;given-name&quot;&gt;Clive&lt;/span&gt; &lt;span&gt;Moore&lt;/span&gt;&lt;/a&gt;&lt;p&gt;
+	&lt;p class=&quot;adr&quot;&gt;
+		&lt;span class=&quot;street-address&quot;&gt;My Favourite Place&lt;/span&gt;&lt;br&gt;
+		&lt;span class=&quot;region&quot;&gt;Whotown&lt;/span&gt;, &lt;span class=&quot;postal-code&quot;&gt;R0F LMA&lt;/span&gt;, &lt;span class=&quot;country-name&quot;&gt;Canada&lt;/span&gt;
+	&lt;/p&gt;
+	&lt;p class=&quot;tel&quot;&gt;&lt;a href=&quot;tel:9058364442&quot;&gt;(905) 836 4442&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+				</div>
+					
+					<aside>
+						<div class="vcard">
+						 <address class="author"><span class="">Example address block pea.rs by </span>
+							<em class="fn"><a title="Stuff by Clive Moore" href="#">Clive Moore</a></em>
+						</address><span> on </span>
+							 <time datetime="2013-19-03" class="published updated">March 19<sup>th</sup>, 2013</time>
+						</div>
+				<div class="row">
+<pre class="prettyprint linenums">
+&lt;div class=&quot;vcard&quot;&gt;
+	&lt;address class=&quot;author&quot;&gt;
+	&lt;span class=&quot;&quot;&gt;Example address block pea.rs by &lt;/span&gt;
+		&lt;em class=&quot;fn&quot;&gt;&lt;a title=&quot;Stuff by Clive Moore&quot; href=&quot;#&quot;&gt;Clive Moore&lt;/a&gt;&lt;/em&gt;
+	&lt;/address&gt;&lt;span&gt; on &lt;/span&gt;
+	&lt;time datetime=&quot;2013-19-03&quot; class=&quot;published updated&quot;&gt;March 19&lt;sup&gt;th&lt;/sup&gt;, 2013&lt;/time&gt;
+&lt;/div&gt;
+</pre>
+				</div>
+					</aside>
+					
+				</div>
+				
+				<div class="col last eight">
+				
+					<h5 class="rmt">Standard Lists</h5>
+					
+					<div class="row">
+				
+						<div class="col first four">
+							<ul>
+								<li>Unordered Lists
+								<ul>
+									<li>Including Some
+									<ul>
+										<li>Nesting Styles</li>
+									</ul></li>
+									<li>Including Some
+									<ul>
+										<li>Nesting Styles</li>
+										<li>Nesting Styles</li>
+									</ul></li>
+								</ul></li>
+							</ul>
+										
+							<h6>Classes</h6>
+							<ul class="disc">
+								<li>Disc Bullets
+								<ul class="circle">
+									<li>Circle Bullets
+									<ul class="square">
+										<li>Square Bullets</li>
+									</ul></li>
+								</ul></li>
+							</ul>
+							<ul class="img">
+								<li>Image Bullets
+									<ul>
+										<li>Image Bullets</li>
+									</ul></li>
+							</ul>	
+						</div>
+						
+						<div class="col four last">
+							<ol>
+								<li>Ordered Lists
+								<ol>
+									<li>Including Some
+									<ol>
+										<li>Deeply Nesting
+											<ol>
+												<li>&lt;ol&gt; Styles</li>
+											</ol></li>
+									</ol></li>
+									<li>Including
+										<ol>
+											<li>Deeply Nesting</li>
+											<li>Deeply Nesting</li>
+											<li>Deeply Nesting</li>
+										</ol>
+								</ol></li>
+								<li>Default Bullets
+								<ol>
+									<li>Including Some
+									<ol>
+										<li>Deeply Nesting
+											<ol>
+												<li>&lt;ol&gt; Styles</li>
+											</ol></li>
+									</ol></li>
+								</ol></li>
+							</ol>
+							
+							<h6>Classes</h6>
+							<ol class="upper_roman">
+								<li>Upper Roman
+								<ol class="roman">
+									<li>Roman
+									<ol class="upper_latin">
+										<li>Upper Latin
+											<ol class="latin">
+												<li>Latin</li>
+											</ol></li>
+									</ol></li>
+								</ol></li>
+							</ol>
+						</div>
+						</div>	
+						<div class="row">
+							<pre class="prettyprint linenums">
+&lt;ul class=&quot;disc&quot;&gt;
+	&lt;li&gt;Disc Bullets
+	&lt;ul class=&quot;circle&quot;&gt;
+		&lt;li&gt;Circle Bullets
+		&lt;ul class=&quot;square&quot;&gt;
+			&lt;li&gt;Square Bullets&lt;/li&gt;
+		&lt;/ul&gt;&lt;/li&gt;
+	&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class=&quot;img&quot;&gt;
+	&lt;li&gt;Image Bullets
+		&lt;ul&gt;
+			&lt;li&gt;Image Bullets&lt;/li&gt;
+		&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;	
+							</pre>
+							<pre class="prettyprint linenums">
+&lt;ol class=&quot;upper_roman&quot;&gt;
+	&lt;li&gt;Upper Roman
+	&lt;ol class=&quot;roman&quot;&gt;
+		&lt;li&gt;Roman
+		&lt;ol class=&quot;upper_latin&quot;&gt;
+			&lt;li&gt;Upper Latin
+				&lt;ol class=&quot;latin&quot;&gt;
+					&lt;li&gt;Latin&lt;/li&gt;
+				&lt;/ol&gt;&lt;/li&gt;
+		&lt;/ol&gt;&lt;/li&gt;
+	&lt;/ol&gt;&lt;/li&gt;
+&lt;/ol&gt;
+							</pre>
+						</div>
+			
+					
+				<h5 class="mb rb">Definition Lists</h5>
+				
+				<dl>
+					<dt>am·phib·i·ous <sub class="meta">noun <i>\am-ˈfi-bē-əs\</i></sub></dt>
+					<dd>: simply the most elegant css framework</dd>
+					<dd><b>a</b> : relating to or adapted for both desktop and mobile<br>
+					&lt;a.mphibio.us devices&gt;<br>
+					<b>b</b> : design executed by the coordinated action of HTML5, CSS3, and JavaScript organized for rapid development &lt;<abbr title="Rapid Development Tool Kit">RDK</abbr>&gt;;<br>
+					also : architected to optimize the inherent strenghts of &lt;casscading style sheets&gt;</dd>
+					
+				</dl>
+				<div class="row">
+<pre class="prettyprint linenums">
+&lt;dl&gt;
+	&lt;dt&gt;am&middot;phib&middot;i&middot;ous &lt;sub class=&quot;meta&quot;&gt;noun &lt;i&gt;\am-&#712;fi-b&#275;-&#601;s\&lt;/i&gt;&lt;/sub&gt;&lt;/dt&gt;
+	&lt;dd&gt;: simply the most elegant css framework&lt;/dd&gt;
+	&lt;dd&gt;&lt;b&gt;a&lt;/b&gt; : relating to or adapted for both desktop and mobile&lt;br&gt;
+	&amp;lt;a.mphibio.us devices&amp;gt;&lt;br&gt;
+	&lt;b&gt;b&lt;/b&gt; : design executed by the coordinated action of HTML5, CSS3, and JavaScript organized for rapid development &amp;lt;&lt;abbr title=&quot;Rapid Development Tool Kit&quot;&gt;RDK&lt;/abbr&gt;&amp;gt;;&lt;br&gt;
+	also : architected to optimize the inherent strengths of &amp;lt;casscading style sheets&amp;gt;&lt;/dd&gt;
+	
+&lt;/dl&gt;
+</pre>
+				</div>
+							
+		</div>
+
+		</section>
+
 
 						
 		
-			<div class="section clearfix" id="forms">
-			<h3>Buttons</h3>
-			<p>A.mphibio.us treats buttons as they are meant to be treated, giving them the right amount of weight and a powerful hover effect to make them irresistibly clickable. Calls to action have never been more apparent.</p>
-			<a href="#" class="button">Click Me For Action</a>
-			<div class="col sixteen">
-			<h3>Forms</h3>
-			<p>Web developers often fear the form. They are usually a pain in the neck to code. But with A.mphibio.us’ versatile naming convention and time-saving style attributes, forms are a cinch to program and implement. </p>
-			
-			<div class="col eight first">
-			<h4>Search Field</h4>
-			<form action="/" class="search">
-				<fieldset>
-					<input type="text" placeholder="Search" />
-					<input type="submit" value="Go" />
-				</fieldset>
-			</form>	
-			
-			<h4>Standard Fields</h4>
-				<form>
-					<fieldset>
-						<label class="above" for="regularInput">Regular Input</label>
-						<input type="text" id="regularInput" placeholder="Sample Placeholder Text" />
-					</fieldset>
-					
-					<fieldset>
-						<label class="above" for="regularInputError">Regular Input with error class</label>
-						<input type="text" id="regularInputError" class="error" placeholder="Sample of an error field" />
-					</fieldset>
-			</div>
-			<div class="col eight last">
-					
-					<fieldset>
-						<label class="above" for="regularTextarea">Regular Textarea</label>
-						<textarea id="regularTextarea"></textarea>
-					</fieldset>
-					
-					<fieldset>
-					<label class="above" for="selectList">Select List</label>
-					<div class="styled_select">
-					<select id="selectList">
-						<option value="Option 1">Option 1</option>
-						<option value="Option 2">Option 2</option>
-						<option value="Option 3">Option 3</option>
-						<option value="Option 4">Option 4</option>
-					</select>
-					</div>
-					</fieldset>
-					<fieldset>
-					  <legend>Check in:</legend>
-					  <p><label>Date: <input type="date" name="checkin-date"></label>
-					</fieldset>
-					
-					<button type="submit">Submit Form</button>
-				</form>
-			</div>
-			<div class="col sixteen">
-			<h4>Multi Form</h4>
-			<form action="/" class="multi beside">
-			<fieldset>
-				<label for="name">Name</label>
-				<input type="text" id="name" class="form-text" />
-				<p class="form-help">This is help text under the form field.</p>
-			</fieldset>
-			
-			<fieldset>
-				<label for="email">Email</label>
-				<input type="email" id="email" class="form-text" />
-			</fieldset>
-			
-			<fieldset>
-				<label for="gender">Gender</label>
-				<div class="styled_select">
-				<select id="gender">
-					<option>Male</option>
-					<option>Female</option>
-					<option>Cylon</option>
-				</select>
+		<section id="forms">
+			<div class="row">
+				<h3>Buttons</h3>
+				<p>A.mphibio.us treats buttons as they are meant to be treated, giving them the right amount of weight and a powerful hover effect to make them irresistibly clickable. Calls to action have never been more apparent. Did I mention easy to use, just add a button or submit or even add the class <kbd>button</kbd> to a link</p>
+				<a class="button" onclick="$('#amp_overlay').fadeIn();">Click Me For Action</a>
+				<div class="row">
+<pre class="prettyprint linenums">
+&lt;a class=&quot;button&quot; onclick=&quot;$('#amp_overlay').fadeIn();&quot;&gt;Click Me For Action&lt;/a&gt;
+</pre>
 				</div>
-			</fieldset>
-		
-			<fieldset class="radio">
-				<label for="notifications">Notifications</label>
-				<ul>
-					<li><label><input type="radio" name="notifications" /> Send me email</label></li>
-					<li><label><input type="radio" name="notifications" /> Don't send me email</label></li>
-					<li><label><input type="radio" name="notifications" /> Send me flowers</label></li>
-				</ul>
-			</fieldset>
-		
-			<fieldset>
-				<label for="url">URL</label>
-				<input type="url" id="url" class="form-text" placeholder="http://yourdomain.com" />
-			</fieldset>
-		
-			<fieldset>
-				<label for="bio">Bio</label>
-				<textarea id="bio"></textarea>
-			</fieldset>
-			
-			<fieldset class="check">
-				<label><input type="checkbox" /> I accept the terms of service.</label>
-			</fieldset>
-		
-			<fieldset class="form-actions">
-				<input type="submit" value="Submit" />
-			</fieldset>
-		</form>			
-						
-			
 			</div>
+			<div class="row">
+				<h3>Forms</h3>
+				<p><del>Web developers</del> <strong>I</strong> often fear the form itself. They are usually a pain in the neck to code. But with A.mphibio.us’ versatile naming convention basic sytatic structure and time-saving style attributes, forms are a cinch to program and implement. </p>
+				
+			</div>
+			<div class="row">
+				
+			<h4>Standard Fields</h4>
+				<div class="col seven first">
+					
+					<form>
+						<fieldset>
+							<label class="above" for="regularInput">Regular Input</label>
+							<input type="text" id="regularInput" placeholder="Sample Placeholder Text" />
+						</fieldset>
+						
+						<fieldset>
+							<label class="above" for="regularInputError">Regular Input with error class</label>
+							<input type="text" id="regularInputError" class="error" placeholder="Sample of an error field" />
+						</fieldset>
+						
+						<fieldset>
+							<label class="above" for="regularTextarea">Regular Textarea</label>
+							<textarea id="regularTextarea"></textarea>
+						</fieldset>
+						
+						<fieldset class="radio">
+							<label for="notifications">Notifications</label>
+							<ul>
+								<li><label><input type="radio" name="notifications" /> Send me email</label></li>
+								<li><label><input type="radio" name="notifications" /> Don't send me email</label></li>
+								<li><label><input type="radio" name="notifications" /> Send me flowers</label></li>
+							</ul>
+						</fieldset>
+						
+						<button type="submit">Submit Form</button>
+					</form>	
+				</div>
+				
+				<div class="col nine last">
+<pre class="prettyprint linenums">
+&lt;form&gt;
+	&lt;fieldset&gt;
+		&lt;label class=&quot;above&quot; for=&quot;regularInput&quot;&gt;Regular Input&lt;/label&gt;
+		&lt;input type=&quot;text&quot; id=&quot;regularInput&quot; placeholder=&quot;Sample Placeholder Text&quot; /&gt;
+	&lt;/fieldset&gt;
+	
+	&lt;fieldset&gt;
+		&lt;label class=&quot;above&quot; for=&quot;regularInputError&quot;&gt;Regular Input with error class&lt;/label&gt;
+		&lt;input type=&quot;text&quot; id=&quot;regularInputError&quot; class=&quot;error&quot; placeholder=&quot;Sample of an error field&quot; /&gt;
+	&lt;/fieldset&gt;
+	
+	&lt;fieldset&gt;
+		&lt;label class=&quot;above&quot; for=&quot;regularTextarea&quot;&gt;Regular Textarea&lt;/label&gt;
+		&lt;textarea id=&quot;regularTextarea&quot;&gt;&lt;/textarea&gt;
+	&lt;/fieldset&gt;
+						
+	&lt;fieldset class=&quot;radio&quot;&gt;
+		&lt;label for=&quot;notifications&quot;&gt;Notifications&lt;/label&gt;
+		&lt;ul&gt;
+			&lt;li&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;notifications&quot; /&gt; Send me email&lt;/label&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;notifications&quot; /&gt; Don't send me email&lt;/label&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;notifications&quot; /&gt; Send me flowers&lt;/label&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/fieldset&gt;
+	
+	&lt;button type=&quot;submit&quot;&gt;Submit Form&lt;/button&gt;
+&lt;/form&gt;	
+</pre>
+				</div>
+			</div>
+			<div class="row">
+				
+				<div class="col seven first">
+				<h4>Search Field</h4>
+					<form action="/" class="search">
+						<fieldset>
+							<input type="text" placeholder="Search" />
+							<input type="submit" class="icon" value="&#128269;" />
+						</fieldset>
+					</form>
+				</div>
+				<div class="col nine last">
+<pre class="prettyprint linenums">
+&lt;form action=&quot;/&quot; class=&quot;search&quot;&gt;
+	&lt;fieldset&gt;
+		&lt;input type=&quot;text&quot; placeholder=&quot;Search&quot; /&gt;
+		&lt;input type=&quot;submit&quot; class=&quot;icon&quot; value=&quot;&amp;#128269;&quot; /&gt;
+	&lt;/fieldset&gt;
+&lt;/form&gt;
+</pre>
+				</div>
+			</div>
+									
+
+					
+			</section>
+			
+			<section id="multi_forms">
+				<h4>Multi Form</h4>
+				
+				<p>Simply by adding the class(es) <kbd>multi</kbd> and <kbd>beside</kbd> to the form itself everything is new again</p>
+				
+				<form class="multi beside">
+					<fieldset>
+						<label for="name">Name</label>
+						<input type="text" id="name" class="form-text" />
+						<p class="form-help">This is help text under the form field.</p>
+					</fieldset>
+					
+					<fieldset>
+						<label for="email">Email</label>
+						<input type="email" id="email" class="form-text" />
+					</fieldset>
+					
+					<fieldset>
+						<label for="gender">Gender</label>
+						<div class="styled_select">
+						<select id="gender">
+							<option>Male</option>
+							<option>Female</option>
+							<option>Cylon</option>
+						</select>
+						</div>
+					</fieldset>
+				
+					<fieldset class="radio">
+						<label for="notifications">Notifications</label>
+						<ul>
+							<li><label><input type="radio" name="notifications" /> Send me email</label></li>
+							<li><label><input type="radio" name="notifications" /> Don't send me email</label></li>
+							<li><label><input type="radio" name="notifications" /> Send me flowers</label></li>
+						</ul>
+					</fieldset>
+				
+					<fieldset>
+						<label for="url">URL</label>
+						<input type="url" id="url" class="form-text" placeholder="http://yourdomain.com" />
+					</fieldset>
+				
+					<fieldset>
+						<label for="bio">Bio</label>
+						<textarea id="bio"></textarea>
+					</fieldset>
+					
+					<fieldset class="check">
+						<label><input type="checkbox" /> I accept the terms of service.</label>
+					</fieldset>
+				
+					<fieldset class="form-actions">
+						<input type="submit" value="Submit" />
+					</fieldset>
+				</form>			
+				<div class="row">
+<pre class="prettyprint linenums">
+&lt;form class=&quot;multi beside&quot;&gt;
+	&lt;fieldset&gt;
+		&lt;label for=&quot;name&quot;&gt;Name&lt;/label&gt;
+		&lt;input type=&quot;text&quot; id=&quot;name&quot; class=&quot;form-text&quot; /&gt;
+		&lt;p class=&quot;form-help&quot;&gt;This is help text under the form field.&lt;/p&gt;
+	&lt;/fieldset&gt;
+	
+	&lt;fieldset&gt;
+		&lt;label for=&quot;email&quot;&gt;Email&lt;/label&gt;
+		&lt;input type=&quot;email&quot; id=&quot;email&quot; class=&quot;form-text&quot; /&gt;
+	&lt;/fieldset&gt;
+	
+	&lt;fieldset&gt;
+		&lt;label for=&quot;gender&quot;&gt;Gender&lt;/label&gt;
+		&lt;div class=&quot;styled_select&quot;&gt;
+		&lt;select id=&quot;gender&quot;&gt;
+			&lt;option&gt;Male&lt;/option&gt;
+			&lt;option&gt;Female&lt;/option&gt;
+			&lt;option&gt;Cylon&lt;/option&gt;
+		&lt;/select&gt;
+		&lt;/div&gt;
+	&lt;/fieldset&gt;
+
+	&lt;fieldset class=&quot;radio&quot;&gt;
+		&lt;label for=&quot;notifications&quot;&gt;Notifications&lt;/label&gt;
+		&lt;ul&gt;
+			&lt;li&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;notifications&quot; /&gt; Send me email&lt;/label&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;notifications&quot; /&gt; Don't send me email&lt;/label&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;notifications&quot; /&gt; Send me flowers&lt;/label&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/fieldset&gt;
+
+	&lt;fieldset&gt;
+		&lt;label for=&quot;url&quot;&gt;URL&lt;/label&gt;
+		&lt;input type=&quot;url&quot; id=&quot;url&quot; class=&quot;form-text&quot; placeholder=&quot;http://yourdomain.com&quot; /&gt;
+	&lt;/fieldset&gt;
+
+	&lt;fieldset&gt;
+		&lt;label for=&quot;bio&quot;&gt;Bio&lt;/label&gt;
+		&lt;textarea id=&quot;bio&quot;&gt;&lt;/textarea&gt;
+	&lt;/fieldset&gt;
+	
+	&lt;fieldset class=&quot;check&quot;&gt;
+		&lt;label&gt;&lt;input type=&quot;checkbox&quot; /&gt; I accept the terms of service.&lt;/label&gt;
+	&lt;/fieldset&gt;
+
+	&lt;fieldset class=&quot;form-actions&quot;&gt;
+		&lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+	&lt;/fieldset&gt;
+&lt;/form&gt;			
+</pre>
+				</div>
+								
+			
+		</section>
 		
-		</div>
-		<div class="section" id="tables">
+		<section id="tables">
 			<h3>Table Styles</h3>
 			<p>We hate tables for layout </p>
 			<table width="100%">
@@ -344,7 +679,7 @@
 				</tfoot>
 			</table>
 						
-		</div>
+		</section>
 
 		
 	</div><!-- content -->
@@ -352,14 +687,64 @@
 </div><!-- container -->
 
 </div>
-<footer>
-	<div class="container" id="attribution">
-		<div class="col sixteen dpt">
-		<p class="remove-bottom"><small>Created by <a href="http://www.clivemoore.ca">Clive Moore</a>, at <a href="http://www.treefrog.ca">Treefrog Inc.</a> <span class="r"><small><a href="#header-container">Back to top &#x2191;</a></span></p>
-		
-		</div>
+
+	<footer id="amp_footer" class="row">
+	    <p>Curated by Clive Moore, at <a href="http://www.treefrog.ca">Treefrog Inc.</a> <strong>Twitter</strong>: <a href="http://www.twitter.com/cliveMoore" title="Follow Clive on Twitter">@cliveMoore</a> <strong>Website</strong>: <a href="http://www.clivemoore.me/" title="Clive Moore">www.clivemoore.me</a></p>
+		        </footer>
+
+<div id="navbar" class="f t l r">
+<!--// WTF? 
+
+.f.t.l.r == .fixed .top .left .right
+
+// .left (.l) or .right (.r) no longer floats left/right respectively
+when used in combination with the fixed or the absolute class
+they inherit different properties the result is
+
+postion:fixed;top:0;left:0;right:0;
+
+//-->
+	<div class="container">
+		<nav>
+			<ul id="mainnav" class="mainnav branded">
+				<li class="active"><a href="../index.html#intro" class="hpl">mphibio.us</a>
+					<ul>
+						<li><a href="../index.html#what_is_it">What is A.mphibio.us</a></li>
+						<li><a href="../index.html#hows_it_made">What is it made of?</a></li>
+						<li><a href="../index.html#slides">Flexslider Slideshows</a></li>
+<!-- 							<li><a href="../index.html#gallery">A.mphibio.us Examples</a></li> -->
+						<li><a href="../index.html#evolution">The E.volution of A.mphibio.us</a></li>
+						<li><a href="../index.html#colophon">The A.mphibio.us Colophon</a></li>
+					</ul>
+				</li>
+				<li><a href="foundation.html">Foundation</a>
+					<ul>
+						<li><a href="foundation.html#core">Core</a></li>
+						<li><a href="foundation.html#grid">Symantic Grid</a></li>
+						<li><a href="foundation.html#responsive_col">Responsive Columns</a></li>
+						<li><a href="foundation.html#fluid_col">Fluid Columns</a></li>
+						<li><a href="foundation.html#padded_col">Padded Columns</a></li>
+						<li><a href="foundation.html#golden_section">Golden ratio grids</a></li>
+						<li><a href="foundation.html#push_pull">Source Ordering</a></li>
+					</ul>
+				</li>
+				<li><a href="form.html">Form</a>
+					<ul>
+						
+						<li><a href="form.html#typography">Typography <sub>and the golden ratio</sub></a></li>
+						<li><a href="form.html#forms">Basic Forms</a></li>
+						<li><a href="form.html#multi_forms">Mutli Beside Forms</a></li>
+						<li><a href="form.html#tables">Tables <sub>not for layout</sub></a></li>
+					</ul>
+				</li>
+				<li><a href="function.html">Function</a></li>
+				<li><a href="features.html">Features</a></li>
+				<li onclick="$('#amp_overlay').fadeIn();"><a>Feedback</a></li>					
+			</ul>
+		</nav>
 	</div>
-</footer>
+</div>
+
 <div id="amp_overlay" style="display:none;" onclick="$('#amp_overlay').fadeOut();">
 	<h3 class="a t r intro" onclick="$('#amp_overlay').fadeOut();">&#10006;</h3>
 	<div class="container inner">
@@ -385,12 +770,30 @@
   <img id="forkme" src="http://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt="Fork me on GitHub">
 </a>
 
-<a id="to_top" class="icon reset" href="#intro">&#11014;</a>
+<a id="to_top" class="icon reset" href="#maincontent">&#11014;</a>  
   
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/libs/jquery-1.9.1.min.js"><\/script>')</script>
+
+<!-- // These should be all rolled into one plugin.js for fewer http requests
+
+<script type="text/javascript" src="js/libs/jquery.localscroll-1.2.7-min.js"></script>
+<script type="text/javascript" src="js/libs/jquery.scrollTo-1.4.2-min.js"></script>
+<script type="text/javascript" src="js/libs/jquery.parallax-1.1.3.js"></script>
+//-->
+
+<script type="text/javascript" src="../js/libs/sequence.jquery-min.js"></script>
+<script type="text/javascript" src="../js/libs/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="../js/libs/jquery.isotope.min.js"></script>
+<script type="text/javascript" src="../js/libs/run_prettify.js"></script>
+<script src="../js/plugins.js"></script>
+
+<script src="../js/scripts.js"></script>
+
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-35159096-Y']);
+  _gaq.push(['_setAccount', 'UA-35159096-1']);
   _gaq.push(['_trackPageview']);
 
   (function() {
@@ -400,6 +803,5 @@
   })();
 
 </script>
-<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;skin=sons-of-obsidian&amp;lang=css" defer="defer"></script>
 </body>
 </html>

@@ -86,35 +86,29 @@ body
 		rgba(0,0,0,.6)0 0 2px;
 }
 
+/* Layout Helper rules
+================================================== */
+
+#core,
+#grid,
+#responsive_col,
+#fluid_col,
+#padded_col,
+#golden_section,
+#push_pull,
+#typography,
+#forms,
+#multi_forms,
+#tables
+{
+	padding-top: 30px;
+}
+
 /* Typography
 /* These are additional styles for this site only
 /* sizes and line-heights etc, inherited from core
 /* Using proportional font sizes for proper cascade
 ================================================== */
-
-@font-face
-{
-    font-family: 'RokkittRegular';
-    src: url('../fonts/Rokkitt-webfont.eot');
-    src: url('../fonts/Rokkitt-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/Rokkitt-webfont.woff') format('woff'),
-         url('../fonts/Rokkitt-webfont.ttf') format('truetype'),
-         url('../fonts/Rokkitt-webfont.svg#RokkittRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-h1, h2, h3, h4, h5, h6
-{
-	color: #181818;
-	font-family: "RokkittRegular", "Lucida Grande", "Lucida Sans", Lucida, "Helvetica Neue", Arial, sans-serif;
-	text-shadow:
-		rgba(0,0,0,.4)0 0 1px,
-		rgba(0,0,0,.6)0 0 1px,
-		rgba(255,255,255,1)0 1px 0,
-		rgba(255,255,255,.6) 0 0 2px,
-		rgba(255,255,255,.3) 0 1px 1px;
-}
 
 h1 a,
 h2 a,
@@ -213,17 +207,26 @@ h2 .adot
 		rgba(0,0,0,.4) 0 -1px 0 !important;
 }
 
+
 /* Navigation Styles
 ================================================== */
-
+#download_button
+{
+	z-index: 1010;
+}
 #to_top
 {
 	position: fixed;
+	height: .6em;
 	right: 0;
-	bottom:-25px;
-	color: #000;
+	bottom:0;
+	color: #fff;
+	background: #cfcfcf;
+	background: rgba(0,0,0,.4);
 	text-shadow: 0 1px 0 #fff;
+	text-shadow: 0 1px 0 rgba(255,255,255,.8), 0 -1px 0 rgba(0,0,0,.6);
 	font-size:6em;
+	line-height: .5em;
 	z-index: 1011;
 }
 #to_top,
@@ -236,7 +239,7 @@ h2 .adot
 }
 #to_top
 {
-	opacity: .3;
+	opacity: .6;
 }
 .more
 {
@@ -245,7 +248,7 @@ h2 .adot
 
 #to_top:hover
 {
-	opacity: .5;
+	opacity: 1;
 }
 .more:hover
 {
@@ -295,7 +298,7 @@ h2 .adot
 #navbar
 {
 	background: #4d4d4d;
-	background: rgba(0,0,0,.3);
+	background: rgba(0,0,0,.4);
 	
 	-webkit-transition: all 0.3s ease-out; 
 	   -moz-transition: all 0.3s ease-out; 
@@ -307,13 +310,13 @@ h2 .adot
 #navbar:focus
 {
 	background: #888;
-	background: rgba(0,0,0,.6);
+	background: rgba(0,0,0,.8);
 }
 
 #navbar.f,
 #navbar.b
 {
-	z-index: 1000;
+	z-index: 1006;
 }
 .mainnav > li > a
 {
@@ -343,7 +346,7 @@ h2 .adot
 	margin-left: 0;
 	margin-top: -0.125em;
 	background: #fff;
-	background: rgba(255,255,255,.6);
+	background: rgba(255,255,255,.9);
 	-o-box-shadow:
 		rgba(0,0,0,.6) 0 0 6px,
 		rgba(0,0,0,.4) 0 0 2px;
@@ -395,160 +398,6 @@ h2 .adot
 	margin: 0;
 }
 
-/* Parallax Styles
-/* Spinning the shovel... because it's cool
-================================================== */
-
-#intro,
-#second,
-#third,
-#fourth
-{
-	height: 900px;
-	margin-bottom: 300px;
-	border-bottom: 10px solid #000;
-	-o-box-shadow:
-		inset rgba(0,0,0,.6) 0 0 16px,
-		rgba(0,0,0,.6) 0 0 6px,
-		rgba(0,0,0,.4) 0 0 2px,
-		rgba(0,0,0,.2) 0 2px 2px;
-	-khtml-box-shadow:
-		inset rgba(0,0,0,.6) 0 0 16px,
-		rgba(0,0,0,.6) 0 0 6px,
-		rgba(0,0,0,.4) 0 0 2px,
-		rgba(0,0,0,.2) 0 2px 2px;
-	-moz-box-shadow:
-		inset rgba(0,0,0,.6) 0 0 16px,
-		rgba(0,0,0,.6) 0 0 6px,
-		rgba(0,0,0,.4) 0 0 2px,
-		rgba(0,0,0,.2) 0 2px 2px;
-	-webkit-box-shadow:
-		inset rgba(0,0,0,.6) 0 0 16px,
-		rgba(0,0,0,.6) 0 0 6px,
-		rgba(0,0,0,.4) 0 0 2px,
-		rgba(0,0,0,.2) 0 2px 2px;
-	box-shadow:
-		inset rgba(0,0,0,.6) 0 0 16px,
-		rgba(0,0,0,.6) 0 0 6px,
-		rgba(0,0,0,.4) 0 0 2px,
-		rgba(0,0,0,.2) 0 2px 2px;
-}
-
-#intro
-{
-	background-color:#fff;
-	background:
-		url(../images/bgs/1440x900.png) 50% 0 no-repeat,
-		url(../images/bgs/low_contrast_linen.png) 50% 0 repeat;		
-	background-size: 100% 100%;
-	height: 900px;
-	margin: 0 auto;
-	padding: 0;
-	color: #000;
-}
-
-#intro blockquote
-{
-	font-size: 1.3em;
-	background: rgba(0,0,0,.1);
-	margin-top: 1em;
-	color: #fff;
-}
-
-#second
-{
-	background:
-		url(../images/bg-sky.png) 0 0 repeat-x,
-		url(../images/bgs/project_paper_a.png) 0 0 repeat;
-	color: white;
-	height: 900px;
-	margin: 0 auto;
-	overflow: hidden;
-	padding: 0;
-	color: #333;
-}
-
-#third
-{
-	background: url(../images/bgs/tiny_grid.png) 0 0 repeat;
-	color: white;
-	height: 1200px;
-	padding: 0;	
-	color: #333;
-}
-
-#more_than_a_grid,
-#intro_left,
-#intro_right
-{
-	padding-top: 180px;
-	z-index: 101;
-}
-
-#intro_left h2
-{
-	margin-bottom: .325em;
-	line-height: 1.1;
-}
-.bg,
-.bg2,
-.bg3,
-.bg4
-{
-	height: 1200px;
-	margin: 0 auto;
-	padding: 0;
-	position: absolute;
-	width: 600px;
-}
-
-#third .bg
-{
-	background: url(../images/HTML5_Badge_512.png) 25% 50%  no-repeat fixed;
-	z-index: 200;
-}
-
-#third .bg2
-{
-	background: url(../images/CSS3_Badge_512.png) 25% 50%  no-repeat fixed;
-	z-index: 201;
-}
-
-#third .bg3
-{
-	background: url(../images/base.png) 25% 50% no-repeat fixed;
-	z-index: 202;
-}
-
-#third .bg4
-{
-	background: url(../images/final.png) 25% 50% no-repeat fixed;
-	z-index: 203;
-}
-
-#fourth
-{
-	background: url(../images/bgs/natural_paper.png) 0 50% repeat;
-	margin: 0 auto;
-	padding: 40px 0 0 0;
-}
-
-#fourth .container
-{
-	min-height: 600px;
-	padding-top: 180px;
-}
-
-#colophon
-{
-	color: #fff;
-	background: url(../images/bgs/low_contrast_linen.png) 0 0 repeat;
-	min-height: 600px;
-	margin: 0 auto;
-	padding: 40px 0 0 0;
-	text-shadow: #000 0 -1px 0;
-}
-
 #amp_overlay
 {
 	position: fixed;
@@ -576,11 +425,110 @@ h2 .adot
 	z-index: 1005;
 }
 
+#forkme:hover
+{
+	z-index: 1008;
+}
+
+/* Grid */
+.example-grid .col
+{
+	background: #efefef;
+	background: rgba(0,0,0,.1);
+	min-height: 25px;
+	line-height: 25px;
+	margin-bottom: 20px;
+	text-align: center;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.example-grid .col:hover
+{
+	background: #fefefe;
+	background: rgba(0,129,198,.1);
+}
+
+.example-grid
+{
+	overflow: hidden;
+}
+
+.col.match
+{
+	height: 580px;
+	vertical-align: bottom
+}
+.col.match .col.two,
+.col.match .col.four,
+.col.match .col.six
+{
+	height: 340px;
+	margin-top: 216px;
+	bottom: 100%;
+}
+
+
+pre {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 20px;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre;
+  white-space: pre-wrap;
+}
+
+pre.prettyprint {
+  margin-bottom: 20px;
+}
+
+pre code {
+  padding: 0;
+  color: inherit;
+  white-space: pre;
+  white-space: pre-wrap;
+  background-color: transparent;
+  border: 0;
+}
+pre ol,
+pre ol>li
+{
+margin-bottom: 0;
+}
+ol.linenums {
+display: block;
+list-style-type: decimal;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+-webkit-padding-start: 2em;
+margin: 0 0 0 1em;
+}
+ol.linenums li 
+{
+	border-left: 1px solid gold;
+}
 /* Media Queries
 ================================================== */
 
 	/* Smaller than standard 960 (devices and browsers) */
-	@media only screen and (max-width: 959px) {
+	@media only screen and (max-width: 959px)
+	{
+		.example-grid .col
+		{
+			margin-bottom: 5px;
+		}
+		.col.match,
+		.col.match .col.two,
+		.col.match .col.four,
+		.col.match .col.six
+		{
+			height: auto;
+		}
 	}
 
 	/* Tablet Portrait size to standard 960 (devices and browsers) */

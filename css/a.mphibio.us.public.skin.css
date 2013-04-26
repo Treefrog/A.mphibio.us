@@ -443,13 +443,13 @@ blockquote cite
 	height: .6em;
 	right: 0;
 	bottom:0;
-	margin-top: -20px;
 	color: #fff;
 	background: #cfcfcf;
 	background: rgba(0,0,0,.4);
 	text-shadow: 0 1px 0 #fff;
 	text-shadow: 0 1px 0 rgba(255,255,255,.8), 0 -1px 0 rgba(0,0,0,.6);
 	font-size:6em;
+	line-height: .5em;
 	z-index: 1011;
 }
 #to_top,
@@ -540,7 +540,7 @@ blockquote cite
 #navbar.f,
 #navbar.b
 {
-	z-index: 1000;
+	z-index: 1006;
 }
 .mainnav > li > a
 {
@@ -554,6 +554,7 @@ blockquote cite
     position: absolute;
 	height: 0;
 	width: auto;
+	
 	
 	-webkit-transition: all 0.3s ease-out; 
 	   -moz-transition: all 0.3s ease-out; 
@@ -570,7 +571,7 @@ blockquote cite
 	margin-left: 0;
 	margin-top: -0.125em;
 	background: #fff;
-	background: rgba(255,255,255,.6);
+	background: rgba(255,255,255,.8);
 	-o-box-shadow:
 		rgba(0,0,0,.6) 0 0 6px,
 		rgba(0,0,0,.4) 0 0 2px;
@@ -607,13 +608,19 @@ blockquote cite
 {
 	display: block;
 	padding: .325em .825em;
+	text-shadow: none;
+	
+	-webkit-transition: all 0.3s ease-out; 
+	   -moz-transition: all 0.3s ease-out; 
+	     -o-transition: all 0.3s ease-out; 
+	        transition: all 0.3s ease-out; 
 }
 
 
 .mainnav > li > ul > li:hover > a
 {
 	background: #ccc;	
-	background: rgba(0,0,0,.4);
+	background: rgba(0,0,0,.6);
 	color: #fff;
 }
 .mainnav.branded
@@ -755,6 +762,14 @@ blockquote cite
 	background: url(../images/final.png) 25% 50% no-repeat fixed;
 	z-index: 203;
 }
+#slides
+{
+	background: url(../images/bgs/brillant.png) 0 50% repeat;
+}
+#gallery
+{
+	background: url(../images/bgs/brillant.png) 0 50% repeat;
+}
 
 #gallery #container
 {
@@ -773,6 +788,7 @@ blockquote cite
 	font-family: 'BlueHighwayCondensedRegular';
 	font-size: 1.3em;
 }
+
 
 #evolution
 {
