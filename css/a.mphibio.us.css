@@ -168,6 +168,22 @@ body
 	text-shadow: none;
 }
 
+::-webkit-input-placeholder {
+   color: #8a8a8a;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #8a8a8a;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #8a8a8a;  
+}
+
+:-ms-input-placeholder {  
+   color: #8a8a8a;  
+}
+
 
 /* ==========================================================================
    Typography
@@ -453,8 +469,14 @@ a, a:visited
 {
 	color: #1b378c; 
 	outline: 0;
-	/* Could also easiley be: all .2s linear;
-	if you were looking to change background by default as well */
+	/*	Sexy Shorthand Progressive Enhancement link styles
+	/*	CSS3 Please: http://css3please.com
+	/*	Could also easily be: all .2s linear;
+	/*	if you were looking to change background,
+	/*	image etc, by default as well
+	/* 	an excellent article on the subject by Dan Cederhome
+	/*  http://alistapart.com/article/understanding-css3-transitions 
+	*/
 	-webkit-transition: color 0.3s linear;
 	 -moz-transition: color 0.3s ease-out;
 	   -o-transition: color 0.3s ease-out;
@@ -2338,12 +2360,6 @@ Class Name						Shorthand					Styles
 .container .pull_fifteen					{margin-left: -900px;}
 .container .pull_sixteen					{margin-left: -950px;}
 
-	.container .one-third.col
-	{
-		width: 31.125%;
-		margin-left:1%;
-		margin-right:1%;
-	}
 
 	.container .one-third.col.padded
 	{
