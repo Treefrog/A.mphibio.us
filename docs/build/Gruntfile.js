@@ -30,11 +30,7 @@ module.exports = function(grunt) {
 	  css: {
 		    // the files to concatenate
 		    src: [
-		    	'../../css/sequencejs-theme.sliding-horizontal-parallax.css',
-		    	'../../css/a.mphibio.us.css',
-		    	'../../css/a.mphibio.us.doc.css',
-		    	'../../css/a.mphibio.us.public.skin.css',
-		    	'../../css/flexslider.css'
+		    	'../../css/a.mphibio.us.css'
 		    	],
 		    // the location of the resulting CSS file
 		    dest: '../../a.mphibio.us/css/a.mphibio.us.css'
