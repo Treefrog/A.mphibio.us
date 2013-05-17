@@ -64,6 +64,16 @@ audio:not([controls]) {
 	display: none;
 }
 
+[draggable] {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  /* Required to make elements draggable in old WebKit */
+  -khtml-user-drag: element;
+  -webkit-user-drag: element;
+}
+
 /* ==========================================================================
    Base
    ========================================================================== */
@@ -1510,11 +1520,7 @@ ul.nav
 	float:none;
 	padding:.5em .865em;
 	font-size:1.1em;
-	color:#ffffff;
 	text-decoration:none;
-	text-shadow:0 -1px 0 rgba(0,0,0,0.5);
-	opacity: .6;
-	filter:alpha(opacity=60);
 	-webkit-transition: all 0.3s ease-out;
 	 -moz-transition: all 0.3s ease-out;
 	   -o-transition: all 0.3s ease-out;
@@ -1706,12 +1712,13 @@ select
 	border-radius: 2px;
 	color: #777;
 	margin: 0;
-	width: 320px;
+	min-width: 320px;
 	max-width: 100%;
 	display: block;
 	background: #fff;
 	position: relative;
 }
+
 
 input[type="search"] {
   -webkit-box-sizing: content-box;
@@ -1879,10 +1886,9 @@ form.search fieldset input[type="submit"]
 
 form fieldset
 {
-	margin: 0 0 1em 0;
+	margin: 0;
 	padding: 0 0 1em 0;
 	font-size: 1.1em;
-	border-bottom: 1px solid #eee;
 }
 
 form fieldset.form-actions
@@ -2167,6 +2173,7 @@ Class Name						Shorthand					Styles
 .align_center,						.ac						{text-align: center;}
 .align_just,						.aj						{text-align: justify;}
 .remove_margin_top,					.rmt					{margin-top: 0 !important;}
+.remove_margin_right,				.rmr					{margin-right: 0 !important;}
 .half_margin_top,					.hmt					{margin-top: .5em !important;}
 .margin_top,						.mt						{margin-top: 1em !important;}
 .double_margin_top,					.dmt					{margin-top: 2em !important;}
@@ -2226,7 +2233,7 @@ Class Name						Shorthand					Styles
 .absolute.right,					.a.r,
 .absolute.r,						.a.right,
 .fixed.right,						.f.r,
-.fixed.r,							.f.right				{right: 0;}
+.fixed.r,							.f.right				{float: none;right: 0;}
 
 .absolute.bottom,					.a.b,
 .absolute.b,						.a.bottom,
@@ -2236,7 +2243,7 @@ Class Name						Shorthand					Styles
 .absolute.left,						.a.l,
 .absolute.l,						.a.left,
 .fixed.left,						.f.l,
-.fixed.l,							.f.left					{left: 0;}
+.fixed.l,							.f.left					{float: none;left: 0;}
 
 /* The Grid ala 960.gs
 ================================================== */
@@ -2349,6 +2356,10 @@ Class Name						Shorthand					Styles
 .container .pull_sixteen					{margin-left: -950px;}
 
 
+	.container .one-third.col
+	{
+		width: 31.865%;
+	}
 	.container .one-third.col.padded
 	{
 		width: 31.25%;
