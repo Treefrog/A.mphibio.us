@@ -2844,7 +2844,7 @@ or wrap each row of col in a <div class="row"> makes sense doesn't it? */
 	color: #333;
 	font-size: 11px;
 	text-shadow: #fff 0 1px 0;
-	content:attr(title);
+	content:attr(amp-tip);
 	left: -25%;
 	padding:.3em 1em;
 	position:absolute;
