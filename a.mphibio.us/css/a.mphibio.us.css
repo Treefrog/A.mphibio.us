@@ -136,6 +136,7 @@ body
 	margin: 0;
 	background: #fff;
 	font-family:
+		"Myriad Pro",
 		"Lucida Grande",
 		"Lucida Sans",
 		Lucida,
@@ -965,9 +966,6 @@ input[type="file"],  .button_grp .active,
 	color: #4d4d4d;
 	font-weight: normal;
 	text-decoration: none;
-	text-shadow: 
-		0 1px rgba(255, 255, 255,
-.75);
 	cursor: pointer;
 	line-height: normal;
 	padding: .625em;
@@ -990,21 +988,6 @@ input[type="file"],  .button_grp .active,
 	-moz-border-radius: 6px;
 	-o-border-radius: 6px;
 	border-radius: 6px;
-	-webkit-box-shadow:
-		rgba(0,0,0,.3) 0 1px 3px,
-		inset rgba(255,255,255,.2) 0 0 2px;
-	-khtml-box-shadow:
-		rgba(0,0,0,.3) 0 1px 3px,
-		inset rgba(255,255,255,.2) 0 0 2px;
-	-moz-box-shadow:
-		rgba(0,0,0,.3) 0 1px 3px,
-		inset rgba(255,255,255,.2) 0 0 2px;
-	-o-box-shadow:
-		rgba(0,0,0,.3) 0 1px 3px,
-		inset rgba(255,255,255,.2) 0 0 2px;
-	box-shadow:
-		rgba(0,0,0,.3) 0 1px 3px,
-		inset rgba(255,255,255,.2) 0 0 2px;
 	-webkit-transition: all 0.3s ease-out;
 	-moz-transition: all 0.3s ease-out;
 	-o-transition: all 0.3s ease-out;
@@ -1037,22 +1020,7 @@ input[type="file"]:hover,
 	border: 1px solid #888;
 	border-top: 1px solid #aaa;
 	border-left: 1px solid #aaa;
-	-webkit-box-shadow:
-		rgba(0,0,0,.4) 0 0 1px,
-		inset rgba(255,255,255,.6) 0 0 2px;
-	-khtml-box-shadow:
-		rgba(0,0,0,.4) 0 0 1px,
-		inset rgba(255,255,255,.6) 0 0 2px;
-	-moz-box-shadow:
-		rgba(0,0,0,.4) 0 0 1px,
-		inset rgba(255,255,255,.6) 0 0 2px;
-	-o-box-shadow:
-		rgba(0,0,0,.4) 0 0 1px,
-		inset rgba(255,255,255,.6) 0 0 2px;
-	box-shadow:
-		rgba(0,0,0,.4) 0 0 1px,
-		inset rgba(255,255,255,.6) 0 0 2px;
-}
+	}
 
 .button:active,
 button:active,
@@ -1065,7 +1033,6 @@ input[type="file"]:active,
 .button_grp a.button:focus,
 .filter_nav>dd>a:active {
 	color: #fff;
-	text-shadow: #000 0 -1px 0;
 	border: 1px solid #7485b9;
 	border-top: 1px solid #1b378c;
 	border-left: 1px solid #1b378c;
@@ -1080,21 +1047,6 @@ input[type="file"]:active,
 		-o-linear-gradient(top, #1b378c, #7485b9);
 	background-image:
 		linear-gradient(to bottom, #1b378c, #7485b9);
-	-webkit-box-shadow:
-		inset rgba(0,0,0,.4) 0 0 1px
-		inset rgba(0,0,0,.2) 0 0 2px;
-	 -khtml-box-shadow:
-		inset rgba(0,0,0,.4) 0 0 1px
-		inset rgba(0,0,0,.2) 0 0 2px;
-	-moz-box-shadow:
-		inset rgba(0,0,0,.4) 0 0 1px
-		inset rgba(0,0,0,.2) 0 0 2px;
-	-o-box-shadow:
-		inset rgba(0,0,0,.4) 0 0 1px
-		inset rgba(0,0,0,.2) 0 0 2px;
-	box-shadow:
-		inset rgba(0,0,0,.4) 0 0 1px
-		inset rgba(0,0,0,.2) 0 0 2px;
 }
 
 .button.full-width,
@@ -1279,10 +1231,9 @@ ul.tabs li a
 	margin: 0;
 	color:#4d4d4d;
 	text-decoration: none;
-	text-shadow:
-		rgba(255,255,255,.8) 0 1px 1px;
 	background-color: #fbfbfb;
-	background-image:
+	/*
+background-image:
 		-webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#c9c9c9));
 	background-image:
 		-webkit-linear-gradient(top, #fbfbfb, #c9c9c9);
@@ -1292,6 +1243,7 @@ ul.tabs li a
 		-o-linear-gradient(top, #fbfbfb, #c9c9c9);
 	background-image:
 		linear-gradient(to bottom, #fbfbfb, #c9c9c9);
+*/
 	}
 
 ul.tabs li.active a,
@@ -1300,19 +1252,24 @@ ul.tabs li.active a,
 .tabs li a:active,
 .tabs li a:focus
 {
+	background-color: #6e574c;
 	color: #ffffff; 
 }
 
 ul.tabs li:hover a
 {
+/*
 	color: #1b378c;
 	background-color: #efefef;
+*/
 	background-image: none;
+/* 	z-index: 2; */
 	
 	-webkit-transition: all 0.3s ease-out;
 	 -moz-transition: all 0.3s ease-out;
 	   -o-transition: all 0.3s ease-out;
-	      transition: all 0.3s ease-out;}
+	      transition: all 0.3s ease-out;
+}
 
 ul.tabs li a.active
 {
@@ -1323,7 +1280,6 @@ ul.tabs li a.active
 	margin: 0;
 	color: #111;
 	color: #fff;
-	text-shadow: #000 0 -1px 0;
 	background-color: #1b378c;
 }
 
@@ -1369,7 +1325,6 @@ ul.tabs-content
 ul.tabs-content > li
 {
 	display:none;
-	padding: 20px; 
 }
 
 ul.tabs-content > li.active
@@ -1708,12 +1663,14 @@ input[type="date"],
 textarea,
 select
 {
-	border: 1px solid #adadad;
+	border: 1px solid #dcd7d1;
 	padding: .625em .325em .675em;
 	outline: none;
-	-moz-border-radius: 2px;
-	-webkit-border-radius: 2px;
-	border-radius: 2px;
+	-webkit-border-radius: 6px;
+	-khtml-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-o-border-radius: 6px;
+	border-radius: 6px;
 	color: #777;
 	margin: 0;
 	min-width: 320px;
@@ -1907,11 +1864,6 @@ form fieldset.check
 	padding-left: 30%;
 }
 
-form fieldset label
-{
-	font-weight: bold;
-}
-
 form.multi.beside fieldset label
 {
 	float: left;
@@ -1928,6 +1880,17 @@ form.multi.beside fieldset input[type="date"],
 form.multi.beside fieldset textarea
 {
 	width: 60%;
+	margin: 0 0 0 30%;
+
+}
+form.multi.beside fieldset input[type="text"].half,
+form.multi.beside fieldset input[type="email"].half,
+form.multi.beside fieldset input[type="password"].half,
+form.multi.beside fieldset input[type="url"].half,
+form.multi.beside fieldset input[type="date"].half,
+form.multi.beside fieldset textarea.half
+{
+	width: 30%;
 	margin: 0 0 0 30%;
 
 }
@@ -1981,7 +1944,7 @@ form fieldset p.form-help
 }
 
 /* Icons by http://www.entypo.com
-================================================== */
+================================================== 
 
 @font-face
 {
@@ -2019,7 +1982,7 @@ form fieldset p.form-help
 	font-family: 'entypo', 'entypo-social';
 	color: inherit;
 }
-
+*/
 .button.icon,
 button.icon,
 input[type="submit"].icon,
@@ -2074,7 +2037,7 @@ ul.icons:before
 .ui_tpicker_timezone {
 	font-size: 1em;
 	float:left;
-	height: 1.6em;
+	height: 1.7em;
 	width:280px;
 	overflow: hidden;
 	margin-left: 0;
@@ -2101,6 +2064,7 @@ ul.icons:before
 	box-shadow:
 		rgba(0,0,0,.3) 0 1px 3px
 		inset rgba(255,255,255,.2) 0 0 2px;
+		
 	-webkit-transition: opacity 0.3s ease;
 	-moz-transition: opacity 0.3s ease;
 	-o-transition: opacity 0.3s ease;
@@ -2133,7 +2097,7 @@ ul.icons:before
 .styled_select:focus
 {
 	background-position: right -38px;
-	border: 1px solid #4c4c4c;
+	border: 1px solid #dcd7d1;
 	opacity: 1;
 	filter:alpha(opacity=100);
 }
@@ -2149,7 +2113,7 @@ ul.icons:before
 .ui_tpicker_timezone select
 {
 	font-size: 1em;
-	height: 1em;
+	height: 1.6em;
 	margin-bottom: 0;
 	padding-left: 8px;
 	width: 248px;
@@ -2251,11 +2215,17 @@ Class Name						Shorthand					Styles
 /* The Grid ala 960.gs
 ================================================== */
 
-.container {
+.container
+{
 	position: relative; 
 	width: 960px; 
 	margin: 0 auto; 
 	padding: 0;
+}
+
+.container.fluid
+{
+	width: 96%;
 }
 
 .container .col
@@ -2982,7 +2952,6 @@ or wrap each row of col in a <div class="row"> makes sense doesn't it? */
 	}
 }
 
-/* Only for you Seano */
 .spin
 {
 	display: inline-block;
