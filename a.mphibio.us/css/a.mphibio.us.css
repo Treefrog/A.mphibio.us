@@ -155,7 +155,6 @@ body
 		leave units out of line height
 		========================================== */
 	line-height: 1.4; 
-	color: #4D4D4D;
 	-webkit-font-smoothing: antialiased; 
 	
 	/* Fix for webkit rendering
@@ -211,7 +210,6 @@ body
 
 h1, h2, h3, h4, h5, h6
 {
-	color: #181818;
 	font-weight: normal;
 	margin-bottom: .3em;
 }
@@ -980,9 +978,7 @@ input[type="file"],  .button_grp .active,
 		-o-linear-gradient(top, #fdfdfd, #cfcfcf);
 	background-image:
 		linear-gradient(to bottom, #fdfdfd, #cfcfcf);
-	border: 1px solid #aaa;
-	border-top: 1px solid #ededed;
-	border-left: 1px solid #ededed;
+	border: 1px solid transparent;
 	-webkit-border-radius: 6px;
 	-khtml-border-radius: 6px;
 	-moz-border-radius: 6px;
@@ -1673,7 +1669,7 @@ select
 	border-radius: 6px;
 	color: #777;
 	margin: 0;
-	min-width: 320px;
+	min-width: 275px;
 	max-width: 100%;
 	display: block;
 	background: #fff;
@@ -1890,7 +1886,7 @@ form.multi.beside fieldset input[type="url"].half,
 form.multi.beside fieldset input[type="date"].half,
 form.multi.beside fieldset textarea.half
 {
-	width: 30%;
+	width: 20%;
 	margin: 0 0 0 30%;
 
 }
@@ -1941,6 +1937,11 @@ form fieldset p.form-help
 	margin: .5em 0 0 30%;
 	font-size: 12px;
 	color: #999;
+}
+
+form fieldset p.form-help.after
+{
+	margin: -1.5em 0 0 62%;
 }
 
 /* Icons by http://www.entypo.com
