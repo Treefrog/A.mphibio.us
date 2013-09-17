@@ -136,6 +136,7 @@ body
 	margin: 0;
 	background: #fff;
 	font-family:
+		"Myriad Pro",
 		"Lucida Grande",
 		"Lucida Sans",
 		Lucida,
@@ -154,7 +155,6 @@ body
 		leave units out of line height
 		========================================== */
 	line-height: 1.4; 
-	color: #4D4D4D;
 	-webkit-font-smoothing: antialiased; 
 	
 	/* Fix for webkit rendering
@@ -210,7 +210,6 @@ body
 
 h1, h2, h3, h4, h5, h6
 {
-	color: #181818;
 	font-weight: normal;
 	margin-bottom: .3em;
 }
@@ -480,7 +479,8 @@ a, a:visited
 {
 	color: #1b378c; 
 	outline: 0;
-	/*	Sexy Shorthand Progressive Enhancement link styles
+	
+	/*	Sexy Progressive Enhancement link styles
 	/*	CSS3 Please: http://css3please.com
 	/*	Could also easily be: all .2s linear;
 	/*	if you were looking to change background,
@@ -488,7 +488,7 @@ a, a:visited
 	/* 	an excellent article on the subject by Dan Cederhome
 	/*  http://alistapart.com/article/understanding-css3-transitions 
 	*/
-	-webkit-transition: color 0.3s linear;
+	-webkit-transition: color 0.3s ease-out;
 	 -moz-transition: color 0.3s ease-out;
 	   -o-transition: color 0.3s ease-out;
 	      transition: color 0.3s ease-out;
@@ -796,7 +796,7 @@ ol.slats li a
 }
 
 ol.slats li a:hover {
-	opacity: .6;
+	opacity:0.8;
 	filter: alpha(opacity=80);
 }
 
@@ -837,8 +837,8 @@ table {
 }
 
 table caption {
-	background: #fefefe;
 	color: #747474;
+	font-style: italic;
 	text-align: left;
 	padding:.625em 0;
 	padding-bottom: .825em;
@@ -965,13 +965,12 @@ input[type="file"],  .button_grp .active,
 	color: #4d4d4d;
 	font-weight: normal;
 	text-decoration: none;
-	text-shadow: 
-		0 1px rgba(255, 255, 255,
-.75);
 	cursor: pointer;
 	line-height: normal;
 	padding: .625em;
 	background-color: #fdfdfd;
+	border: 1px solid transparent;
+/*
 	background-image: 
 		-webkit-gradient(linear, left top, left bottom, from(#fdfdfd), to(#cfcfcf));
 	background-image:
@@ -982,29 +981,12 @@ input[type="file"],  .button_grp .active,
 		-o-linear-gradient(top, #fdfdfd, #cfcfcf);
 	background-image:
 		linear-gradient(to bottom, #fdfdfd, #cfcfcf);
-	border: 1px solid #aaa;
-	border-top: 1px solid #ededed;
-	border-left: 1px solid #ededed;
 	-webkit-border-radius: 6px;
 	-khtml-border-radius: 6px;
 	-moz-border-radius: 6px;
 	-o-border-radius: 6px;
 	border-radius: 6px;
-	-webkit-box-shadow:
-		rgba(0,0,0,.3) 0 1px 3px,
-		inset rgba(255,255,255,.2) 0 0 2px;
-	-khtml-box-shadow:
-		rgba(0,0,0,.3) 0 1px 3px,
-		inset rgba(255,255,255,.2) 0 0 2px;
-	-moz-box-shadow:
-		rgba(0,0,0,.3) 0 1px 3px,
-		inset rgba(255,255,255,.2) 0 0 2px;
-	-o-box-shadow:
-		rgba(0,0,0,.3) 0 1px 3px,
-		inset rgba(255,255,255,.2) 0 0 2px;
-	box-shadow:
-		rgba(0,0,0,.3) 0 1px 3px,
-		inset rgba(255,255,255,.2) 0 0 2px;
+*/
 	-webkit-transition: all 0.3s ease-out;
 	-moz-transition: all 0.3s ease-out;
 	-o-transition: all 0.3s ease-out;
@@ -1037,22 +1019,7 @@ input[type="file"]:hover,
 	border: 1px solid #888;
 	border-top: 1px solid #aaa;
 	border-left: 1px solid #aaa;
-	-webkit-box-shadow:
-		rgba(0,0,0,.4) 0 0 1px,
-		inset rgba(255,255,255,.6) 0 0 2px;
-	-khtml-box-shadow:
-		rgba(0,0,0,.4) 0 0 1px,
-		inset rgba(255,255,255,.6) 0 0 2px;
-	-moz-box-shadow:
-		rgba(0,0,0,.4) 0 0 1px,
-		inset rgba(255,255,255,.6) 0 0 2px;
-	-o-box-shadow:
-		rgba(0,0,0,.4) 0 0 1px,
-		inset rgba(255,255,255,.6) 0 0 2px;
-	box-shadow:
-		rgba(0,0,0,.4) 0 0 1px,
-		inset rgba(255,255,255,.6) 0 0 2px;
-}
+	}
 
 .button:active,
 button:active,
@@ -1065,11 +1032,11 @@ input[type="file"]:active,
 .button_grp a.button:focus,
 .filter_nav>dd>a:active {
 	color: #fff;
-	text-shadow: #000 0 -1px 0;
 	border: 1px solid #7485b9;
 	border-top: 1px solid #1b378c;
 	border-left: 1px solid #1b378c;
 	background-color: #1b378c;
+/*
 	background-image:
 		-webkit-gradient(linear, left top, left bottom, from(#1b378c), to(#7485b9));
 	background-image:
@@ -1080,21 +1047,7 @@ input[type="file"]:active,
 		-o-linear-gradient(top, #1b378c, #7485b9);
 	background-image:
 		linear-gradient(to bottom, #1b378c, #7485b9);
-	-webkit-box-shadow:
-		inset rgba(0,0,0,.4) 0 0 1px
-		inset rgba(0,0,0,.2) 0 0 2px;
-	 -khtml-box-shadow:
-		inset rgba(0,0,0,.4) 0 0 1px
-		inset rgba(0,0,0,.2) 0 0 2px;
-	-moz-box-shadow:
-		inset rgba(0,0,0,.4) 0 0 1px
-		inset rgba(0,0,0,.2) 0 0 2px;
-	-o-box-shadow:
-		inset rgba(0,0,0,.4) 0 0 1px
-		inset rgba(0,0,0,.2) 0 0 2px;
-	box-shadow:
-		inset rgba(0,0,0,.4) 0 0 1px
-		inset rgba(0,0,0,.2) 0 0 2px;
+*/
 }
 
 .button.full-width,
@@ -1160,6 +1113,7 @@ ul.button_grp .button
 .button_grp .first .button,
 ul.button_grp .first.button
 {
+/*
 	-webkit-border-bottom-left-radius: 6px;
 	-webkit-border-top-left-radius: 6px;
 	-khtml-border-bottom-left-radius: 6px;
@@ -1170,6 +1124,7 @@ ul.button_grp .first.button
 	-o-border-top-left-radius: 6px;
 	border-top-left-radius: 6px;
 	border-bottom-left-radius: 6px; 
+*/
 
 }
 
@@ -1177,7 +1132,8 @@ ul.button_grp .first.button
 .button_grp .last.button,
 .pager_nav .button.last
 {
-	-webkit-border-bottom-right-radius: 6px;
+	/*
+-webkit-border-bottom-right-radius: 6px;
 	-webkit-border-top-right-radius: 6px;
 	-khtml-border-bottom-right-radius: 6px;
 	-khtml-border-top-right-radius: 6px;
@@ -1187,6 +1143,7 @@ ul.button_grp .first.button
 	-o-border-top-right-radius: 6px;
 	border-top-right-radius: 6px;
 	border-bottom-right-radius: 6px;
+*/
 }
 
 /* Fix for odd Mozilla border & padding issues */
@@ -1236,7 +1193,8 @@ ul.tabs.bg
 	display: block;
 	height: 32px;
 	background-color: #fbfbfb;
-	background-image:
+	/*
+background-image:
 		-webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#c9c9c9));
 	background-image:
 		-webkit-linear-gradient(top, #fbfbfb, #c9c9c9);
@@ -1266,6 +1224,7 @@ ul.tabs.bg
 		rgba(0,0,0,.3) 0 0 2px,
 		rgba(0,0,0,.4) 0 0 1px,
 		inset rgba(255,255,255,.4) 0 0 2px;
+*/
 }
 
 
@@ -1279,10 +1238,9 @@ ul.tabs li a
 	margin: 0;
 	color:#4d4d4d;
 	text-decoration: none;
-	text-shadow:
-		rgba(255,255,255,.8) 0 1px 1px;
 	background-color: #fbfbfb;
-	background-image:
+	/*
+background-image:
 		-webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#c9c9c9));
 	background-image:
 		-webkit-linear-gradient(top, #fbfbfb, #c9c9c9);
@@ -1292,6 +1250,7 @@ ul.tabs li a
 		-o-linear-gradient(top, #fbfbfb, #c9c9c9);
 	background-image:
 		linear-gradient(to bottom, #fbfbfb, #c9c9c9);
+*/
 	}
 
 ul.tabs li.active a,
@@ -1300,19 +1259,24 @@ ul.tabs li.active a,
 .tabs li a:active,
 .tabs li a:focus
 {
+	background-color: #6e574c;
 	color: #ffffff; 
 }
 
 ul.tabs li:hover a
 {
+/*
 	color: #1b378c;
 	background-color: #efefef;
+*/
 	background-image: none;
+/* 	z-index: 2; */
 	
 	-webkit-transition: all 0.3s ease-out;
 	 -moz-transition: all 0.3s ease-out;
 	   -o-transition: all 0.3s ease-out;
-	      transition: all 0.3s ease-out;}
+	      transition: all 0.3s ease-out;
+}
 
 ul.tabs li a.active
 {
@@ -1323,7 +1287,6 @@ ul.tabs li a.active
 	margin: 0;
 	color: #111;
 	color: #fff;
-	text-shadow: #000 0 -1px 0;
 	background-color: #1b378c;
 }
 
@@ -1369,7 +1332,6 @@ ul.tabs-content
 ul.tabs-content > li
 {
 	display:none;
-	padding: 20px; 
 }
 
 ul.tabs-content > li.active
@@ -1419,8 +1381,8 @@ ul.nav
 
 .navbar-inner
 {
-	padding-right:20px;
-	padding-left:20px;
+/* 	padding-right:20px; */
+/* 	padding-left:20px; */
 	background-color:#cfcfcf;
 	border-top: 1px solid #efefef;
 	border-bottom: 1px solid #fefefe;
@@ -1466,17 +1428,17 @@ ul.nav
 	top:0;
 }
 
-.mainnav
+.horizontal
 {
 	margin:0;
 }
 
-.mainnav.branded
+.horizontal.branded
 {
-	padding-left: 32px;
+	padding-left: 11px;
 }
 
-.mainnav.branded:before
+.horizontal.branded:before
 {
 	display: block;
 	float:left;
@@ -1486,27 +1448,11 @@ ul.nav
 	content: '';
 	background-image: url(../images/a.icon.png);
 	background-repeat: no-repeat;
-	-webkit-box-shadow:
-		inset 0 1px 3px rgba(0,0,0,0.4),
-		inset 0 0 2px rgba(255,255,255,.6),
-		inset 0 1px 0 rgba(0,0,0,0.6),
-		0 1px 2px rgba(255,255,255,.4),
-		0 0 4px rgba(255,255,255,.2);
-	-moz-box-shadow:
-			inset 0 1px 3px rgba(0,0,0,0.4),
-			inset 0 0 2px rgba(255,255,255,.6),
-			inset 0 1px 0 rgba(0,0,0,0.6),
-			0 1px 2px rgba(255,255,255,.4),
-			0 0 4px rgba(255,255,255,.2);
-	box-shadow:
-			inset 0 1px 3px rgba(0,0,0,0.4),
-			inset 0 0 2px rgba(255,255,255,.6),
-			inset 0 1px 0 rgba(0,0,0,0.6),
-			0 1px 2px rgba(255,255,255,.4),
-			0 0 4px rgba(255,255,255,.2);
 }
 
-.mainnav>li,.filter_nav>dt,.filter_nav>dd
+.horizontal>li,
+.filter_nav>dt,
+.filter_nav>dd
 {
 	display:block;
 	float:left;
@@ -1514,23 +1460,178 @@ ul.nav
 	margin-left: 0;
 }
 
-.mainnav>li>a,.filter_nav>dd>a
+.horizontal>li>a,
+.filter_nav>dd>a
 {
 	display:inline-block;
 	float:none;
 	padding:.5em .865em;
-	font-size:1.1em;
+	font-size:1em;
+	color:#ffffff;
 	text-decoration:none;
+	text-shadow:0 -1px 0 rgba(0,0,0,0.5);
 	-webkit-transition: all 0.3s ease-out;
 	 -moz-transition: all 0.3s ease-out;
 	   -o-transition: all 0.3s ease-out;
 	      transition: all 0.3s ease-out;
 }
+#navigation .horizontal>li>a
+{
+	border-right: 1px solid #0080c6;
+	border-left: 1px solid #005583;
+	
+}
+.horizontal>li>a:hover
+{
+	background: #89ac4c;
+	background: rgba(0,0,0,.1);
+}
+#navbar .horizontal > li > a {
+padding: .25em .865em;
+}
+.horizontal > li > ul,
+.horizontal > li > ul > li,
+.horizontal > li > ul > li > ul,
+.horizontal > li > ul > li > ul > li
+{ 
+	margin: 0 !important;
+	font-size: 1em;
+	list-style: none;
+}
+
+.horizontal > li > ul > li > a,
+.horizontal > li > ul > li > ul > li > a
+{ 
+	display: block;
+	background: #ffffff;
+	color: #0080c6;
+	font-weight: bold;
+	text-decoration: none;
+	white-space: nowrap;
+	border-top: 1px solid #fefefe;
+	border-bottom: 1px solid #efefef;
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+}
+
+.horizontal > li > ul > li > a,
+.horizontal > li > ul > li > ul > li > a
+{ 
+	padding: .625em 3em .625em 1.125em;
+}
+.horizontal > li > ul > li > a:hover,
+.horizontal > li > ul > li > ul > li > a:hover
+{ 
+	background: #0080c6;
+	color: #fff;
+	border-top: 1px solid #005583;
+	border-bottom: 1px solid #0080c6;
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+.horizontal > li > ul
+{
+	position: absolute;
+	z-index: 5000;
+	height: 0;
+	width: auto;
+	margin-left: 0;
+	margin-top: 0;
+	border: 1px solid #cfcfcf;
+	
+	-webkit-box-shadow:
+		0 1px 9px rgba(0,0,0,0.25);
+	-moz-box-shadow:
+		0 1px 9px rgba(0,0,0,0.25);
+	box-shadow:
+		0 1px 9px rgba(0,0,0,0.25);
+	
+	-webkit-transition: all 0.3s ease-out; 
+	   -moz-transition: all 0.3s ease-out; 
+	     -o-transition: all 0.3s ease-out; 
+	        transition: all 0.3s ease-out; 
+	        
+	display: none;
+}
+
+.horizontal > li:hover > ul
+{
+	height: auto;
+	display: block;	
+}
+
+.horizontal > li:hover > ul:before,
+.horizontal > li > ul > li:hover > ul:before
+{
+	border:solid;
+	border-color:#cfcfcf transparent;
+	border-width: 0 6px 6px 6px;
+	top:-6px;
+	content:"";
+	display:block;
+	left:12%;
+	position:absolute;
+	z-index:301;
+	-webkit-box-shadow:0 5px 10px rgba(0,0,0,0.2);
+	-moz-box-shadow:0 5px 10px rgba(0,0,0,0.2);
+	box-shadow:0 5px 10px rgba(0,0,0,0.2);
+	-webkit-background-clip:padding-box;
+	-moz-background-clip:padding;
+	background-clip:padding-box;
+	opacity:0.9;
+	filter:alpha(opacity=90);
+}
+.horizontal > li > ul > li:hover > ul:before
+{
+	top:1.125em;
+	left: -6px;
+	border-color:transparent #cfcfcf;
+	border-width: 6px 6px 6px 0;
+}
+
+.horizontal > li > ul > li
+{
+	/* This is the important rule for positioning the nav
+	/* you need to give the third level a place to start */
+	position: relative;
+}
+
+.horizontal > li > ul > li > ul
+{
+	position: absolute;
+	top:0%;
+	z-index: 5005;
+	height: 0;
+	width: auto;
+	border: 1px solid #cfcfcf;
+	
+	-webkit-box-shadow:
+		0 1px 6px rgba(0,0,0,0.25);
+	-moz-box-shadow:
+		0 1px 6px rgba(0,0,0,0.25);
+	box-shadow:
+		0 1px 6px rgba(0,0,0,0.25);
+	
+	-webkit-transition: all 0.3s ease-out; 
+	   -moz-transition: all 0.3s ease-out; 
+	     -o-transition: all 0.3s ease-out; 
+	        transition: all 0.3s ease-out; 
+	        
+	display: none;
+}
+
+.horizontal > li > ul > li:hover > ul
+{
+	display: block;
+	left:100%;
+	height: auto;
+}
+
+
 
 .filter_nav
 {
 	margin-top:.5em;
-	font-size: .925em;
 }
 
 .filter_nav>dt
@@ -1577,12 +1678,10 @@ ul.nav
 	border-bottom-right-radius: 6px; 
 }
 
-.mainnav>li>a:hover,
+.horizontal>li>a:hover,
 .filter_nav>dd>a:hover
 {
 	text-shadow:0 0 2px rgba(255,255,255,0.5);
-	opacity: 1;
-	filter:alpha(opacity=100);
 }
 
 .section
@@ -1597,10 +1696,9 @@ ul.nav
 
 .breadcrumb
 {
-	font-size: 1.1em;
 	color: #ccc;
 	margin: 0;
-	font-size: .865em;
+	font-size: 0.865em;
 }
 	
 .breadcrumb li
@@ -1704,15 +1802,17 @@ input[type="date"],
 textarea,
 select
 {
-	border: 1px solid #adadad;
+	border: 1px solid #dcd7d1;
 	padding: .625em .325em .675em;
 	outline: none;
-	-moz-border-radius: 2px;
-	-webkit-border-radius: 2px;
-	border-radius: 2px;
+	-webkit-border-radius: 6px;
+	-khtml-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-o-border-radius: 6px;
+	border-radius: 6px;
 	color: #777;
 	margin: 0;
-	min-width: 320px;
+	min-width: 275px;
 	max-width: 100%;
 	display: block;
 	background: #fff;
@@ -1903,11 +2003,6 @@ form fieldset.check
 	padding-left: 30%;
 }
 
-form fieldset label
-{
-	font-weight: bold;
-}
-
 form.multi.beside fieldset label
 {
 	float: left;
@@ -1924,6 +2019,17 @@ form.multi.beside fieldset input[type="date"],
 form.multi.beside fieldset textarea
 {
 	width: 60%;
+	margin: 0 0 0 30%;
+
+}
+form.multi.beside fieldset input[type="text"].half,
+form.multi.beside fieldset input[type="email"].half,
+form.multi.beside fieldset input[type="password"].half,
+form.multi.beside fieldset input[type="url"].half,
+form.multi.beside fieldset input[type="date"].half,
+form.multi.beside fieldset textarea.half
+{
+	width: 20%;
 	margin: 0 0 0 30%;
 
 }
@@ -1976,8 +2082,14 @@ form fieldset p.form-help
 	color: #999;
 }
 
+form fieldset p.form-help.after
+{
+	margin: -1.5em 0 0 62%;
+}
+
 /* Icons by http://www.entypo.com
-================================================== */
+================================================== 
+*/
 
 @font-face
 {
@@ -2070,7 +2182,7 @@ ul.icons:before
 .ui_tpicker_timezone {
 	font-size: 1em;
 	float:left;
-	height: 1.6em;
+	height: 1.7em;
 	width:280px;
 	overflow: hidden;
 	margin-left: 0;
@@ -2097,6 +2209,7 @@ ul.icons:before
 	box-shadow:
 		rgba(0,0,0,.3) 0 1px 3px
 		inset rgba(255,255,255,.2) 0 0 2px;
+		
 	-webkit-transition: opacity 0.3s ease;
 	-moz-transition: opacity 0.3s ease;
 	-o-transition: opacity 0.3s ease;
@@ -2115,7 +2228,7 @@ ul.icons:before
 		0 0 3px rgba(0,0,250,.6);
 	box-shadow: 
 		0 0 3px rgba(0,0,250,.6);
-	opacity: .9;
+	opacity: 0.9;
 	filter:alpha(opacity=90);
 }
 
@@ -2129,7 +2242,7 @@ ul.icons:before
 .styled_select:focus
 {
 	background-position: right -38px;
-	border: 1px solid #4c4c4c;
+	border: 1px solid #dcd7d1;
 	opacity: 1;
 	filter:alpha(opacity=100);
 }
@@ -2145,7 +2258,7 @@ ul.icons:before
 .ui_tpicker_timezone select
 {
 	font-size: 1em;
-	height: 1em;
+	height: 1.6em;
 	margin-bottom: 0;
 	padding-left: 8px;
 	width: 248px;
@@ -2173,7 +2286,6 @@ Class Name						Shorthand					Styles
 .align_center,						.ac						{text-align: center;}
 .align_just,						.aj						{text-align: justify;}
 .remove_margin_top,					.rmt					{margin-top: 0 !important;}
-.remove_margin_right,				.rmr					{margin-right: 0 !important;}
 .half_margin_top,					.hmt					{margin-top: .5em !important;}
 .margin_top,						.mt						{margin-top: 1em !important;}
 .double_margin_top,					.dmt					{margin-top: 2em !important;}
@@ -2248,11 +2360,17 @@ Class Name						Shorthand					Styles
 /* The Grid ala 960.gs
 ================================================== */
 
-.container {
+.container
+{
 	position: relative; 
 	width: 960px; 
 	margin: 0 auto; 
 	padding: 0;
+}
+
+.container.fluid
+{
+	width: 96%;
 }
 
 .container .col
@@ -2356,18 +2474,18 @@ Class Name						Shorthand					Styles
 .container .pull_sixteen					{margin-left: -950px;}
 
 
-	.container .one-third.col
+	.container .one-third.col.padded
 	{
-		width: 31.865%;
+		width: 31%;
 	}
 	.container .one-third.col.padded
 	{
-		width: 31.25%;
+		width: 31%;
 	}
 	
 	.container .two-thirds.col
 	{
-		width: 66%; 
+		width: 64%; 
 	}
 
 	
@@ -2378,7 +2496,7 @@ Class Name						Shorthand					Styles
 	
 	.container .one-quarter.col
 	{
-		width: 23.6125%;
+		width: 22.875%;
 		margin-left:1%;
 		margin-right:1%;
 	}
@@ -2390,7 +2508,7 @@ Class Name						Shorthand					Styles
 	
 	.container .half.col
 	{
-		width: 49%;
+		width: 47.5%;
 		margin-left:1%;
 		margin-right:1%;
 	}
@@ -2402,14 +2520,14 @@ Class Name						Shorthand					Styles
 	
 	.container .three-quarters.col
 	{
-		width: 74.5%;
+		width: 72.5%;
 		margin-left:1%;
 		margin-right:1%;
 	}
 	
 	.container .three-quarters.col.padded
 	{
-		width: 72.875%;
+		width: 71.875%;
 	}
 	
 	.container .one-third.col.padded,
@@ -2424,7 +2542,7 @@ Class Name						Shorthand					Styles
 	}
 
 /* ALL
-================================================== */
+================================================== 
 
 @media only screen and (max-width: 959px)
 {
@@ -2475,7 +2593,7 @@ Class Name						Shorthand					Styles
 	}
 
 }
-
+*/
 /* #Tablet (Portrait)Design for a width of 768px
 ================================================== */
 
@@ -2845,7 +2963,7 @@ or wrap each row of col in a <div class="row"> makes sense doesn't it? */
 	color: #333;
 	font-size: 11px;
 	text-shadow: #fff 0 1px 0;
-	content:attr(title);
+	content:attr(amp-tip);
 	left: -25%;
 	padding:.3em 1em;
 	position:absolute;
@@ -2865,7 +2983,7 @@ or wrap each row of col in a <div class="row"> makes sense doesn't it? */
 	-webkit-background-clip:padding-box;
 	-moz-background-clip:padding;
 	background-clip:padding-box;
-	opacity:.925;
+	opacity:0.925;
 	filter:alpha(opacity=90);
 }
 
@@ -2886,7 +3004,7 @@ or wrap each row of col in a <div class="row"> makes sense doesn't it? */
 	-webkit-background-clip:padding-box;
 	-moz-background-clip:padding;
 	background-clip:padding-box;
-	opacity:.825;
+	opacity:0.825;
 	filter:alpha(opacity=80);
 }
 
@@ -2983,7 +3101,6 @@ or wrap each row of col in a <div class="row"> makes sense doesn't it? */
 	}
 }
 
-/* Only for you Seano */
 .spin
 {
 	display: inline-block;

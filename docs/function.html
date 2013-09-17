@@ -79,7 +79,7 @@
 				<div class="navbar">
 					<div class="navbar-inner">
 						<nav role="navigation">
-							<ul class="mainnav">
+							<ul class="horizontal">
 								<li><a>Link One</a>
 									<ul>
 										<li><a>Link One</a>
@@ -107,7 +107,7 @@
 &lt;div class=&quot;navbar&quot;&gt;
 	&lt;div class=&quot;navbar-inner&quot;&gt;
 		&lt;nav role=&quot;navigation&quot;&gt;
-			&lt;ul class=&quot;mainnav&quot;&gt;
+			&lt;ul class=&quot;horizontal&quot;&gt;
 				&lt;li&gt;&lt;a&gt;Link One&lt;/a&gt;
 					&lt;ul&gt;
 						&lt;li&gt;&lt;a&gt;Link One&lt;/a&gt;
@@ -172,30 +172,30 @@
 		0 2px 4px rgba(0,0,0,.4);
 }
 
-.mainnav>li>a
+.horizontal>li>a
 {
 	border-right: 1px solid #0080c6;
 	border-left: 1px solid #005583;
 	
 }
-.mainnav>li>a:hover
+.horizontal>li>a:hover
 {
 	background: #89ac4c;
 	background: rgba(0,0,0,.1);
 }
 
-.mainnav > li > ul,
-.mainnav > li > ul > li,
-.mainnav > li > ul > li > ul,
-.mainnav > li > ul > li > ul > li
+.horizontal > li > ul,
+.horizontal > li > ul > li,
+.horizontal > li > ul > li > ul,
+.horizontal > li > ul > li > ul > li
 { 
 	margin: 0 !important;
 	font-size: 1em;
 	list-style: none;
 }
 
-.mainnav > li > ul > li > a,
-.mainnav > li > ul > li > ul > li > a
+.horizontal > li > ul > li > a,
+.horizontal > li > ul > li > ul > li > a
 { 
 	display: block;
 	background: #ffffff;
@@ -210,13 +210,13 @@
 	filter: alpha(opacity=80);
 }
 
-.mainnav > li > ul > li > a,
-.mainnav > li > ul > li > ul > li > a
+.horizontal > li > ul > li > a,
+.horizontal > li > ul > li > ul > li > a
 { 
 	padding: .625em 3em .625em 1.125em;
 }
-.mainnav > li > ul > li > a:hover,
-.mainnav > li > ul > li > ul > li > a:hover
+.horizontal > li > ul > li > a:hover,
+.horizontal > li > ul > li > ul > li > a:hover
 { 
 	background: #0080c6;
 	color: #fff;
@@ -225,7 +225,7 @@
 	opacity: 1;
 	filter: alpha(opacity=100);
 }
-.mainnav > li > ul
+.horizontal > li > ul
 {
 	position: absolute;
 	z-index: 5000;
@@ -250,14 +250,14 @@
 	display: none;
 }
 
-.mainnav > li:hover > ul
+.horizontal > li:hover > ul
 {
 	height: auto;
 	display: block;	
 }
 
-.mainnav > li:hover > ul:before,
-.mainnav > li > ul > li:hover > ul:before
+.horizontal > li:hover > ul:before,
+.horizontal > li > ul > li:hover > ul:before
 {
 	border:solid;
 	border-color:#cfcfcf transparent;
@@ -277,7 +277,7 @@
 	opacity:.825;
 	filter:alpha(opacity=80);
 }
-.mainnav > li > ul > li:hover > ul:before
+.horizontal > li > ul > li:hover > ul:before
 {
 	top:1.125em;
 	left: -6px;
@@ -285,14 +285,14 @@
 	border-width: 6px 6px 6px 0;
 }
 
-.mainnav > li > ul > li
+.horizontal > li > ul > li
 {
 	/* This is the important rule for positioning the nav
 	/* you need to give the third level a place to start */
 	position: relative;
 }
 
-.mainnav > li > ul > li > ul
+.horizontal > li > ul > li > ul
 {
 	position: absolute;
 	top:0%;
@@ -316,7 +316,7 @@
 	display: none;
 }
 
-.mainnav > li > ul > li:hover > ul
+.horizontal > li > ul > li:hover > ul
 {
 	display: block;
 	left:100%;
@@ -807,13 +807,13 @@ postion:fixed;top:0;left:0;right:0;
 //-->
 	<div class="container">
 		<nav>
-			<ul id="mainnav" class="mainnav branded">
-				<li class="active"><a href="../index.html#intro" class="hpl">mphibio.us</a>
+			<ul id="horizontal" class="horizontal branded">
+				<li class="active"><a href="../index.html#intro" class="hpl">a.mphibio.us</a>
 					<ul>
 						<li><a href="../index.html#what_is_it">What is A.mphibio.us</a></li>
 						<li><a href="../index.html#hows_it_made">What is it made of?</a></li>
-						<li><a href="../index.html#slides">Flexslider Slideshows</a></li>
-<!-- 							<li><a href="../index.html#gallery">A.mphibio.us Examples</a></li> -->
+<!--						<li><a href="../index.html#slides">Flexslider Slideshows</a></li>
+ 							<li><a href="../index.html#gallery">A.mphibio.us Examples</a></li> -->
 						<li><a href="../index.html#evolution">The E.volution of A.mphibio.us</a></li>
 						<li><a href="../index.html#colophon">The A.mphibio.us Colophon</a></li>
 					</ul>
@@ -824,7 +824,7 @@ postion:fixed;top:0;left:0;right:0;
 						<li><a href="foundation.html#grid">Symantic Grid</a></li>
 						<li><a href="foundation.html#responsive_col">Responsive Columns</a></li>
 						<li><a href="foundation.html#fluid_col">Fluid Columns</a></li>
-						<li><a href="foundation.html#padded_col">Padded Columns</a></li>
+<!--//					<li><a href="foundation.html#padded_col">Padded Columns</a></li> //-->
 						<li><a href="foundation.html#golden_section">Golden ratio grids</a></li>
 						<li><a href="foundation.html#push_pull">Source Ordering</a></li>
 						<li><a href="foundation.html#mediaQueries">Media Queries</a></li>

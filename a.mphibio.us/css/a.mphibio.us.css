@@ -1417,17 +1417,17 @@ ul.nav
 	top:0;
 }
 
-.mainnav
+.horizontal
 {
 	margin:0;
 }
 
-.mainnav.branded
+.horizontal.branded
 {
 	padding-left: 32px;
 }
 
-.mainnav.branded:before
+.horizontal.branded:before
 {
 	display: block;
 	float:left;
@@ -1437,27 +1437,9 @@ ul.nav
 	content: '';
 	background-image: url(../images/a.icon.png);
 	background-repeat: no-repeat;
-	-webkit-box-shadow:
-		inset 0 1px 3px rgba(0,0,0,0.4),
-		inset 0 0 2px rgba(255,255,255,.6),
-		inset 0 1px 0 rgba(0,0,0,0.6),
-		0 1px 2px rgba(255,255,255,.4),
-		0 0 4px rgba(255,255,255,.2);
-	-moz-box-shadow:
-			inset 0 1px 3px rgba(0,0,0,0.4),
-			inset 0 0 2px rgba(255,255,255,.6),
-			inset 0 1px 0 rgba(0,0,0,0.6),
-			0 1px 2px rgba(255,255,255,.4),
-			0 0 4px rgba(255,255,255,.2);
-	box-shadow:
-			inset 0 1px 3px rgba(0,0,0,0.4),
-			inset 0 0 2px rgba(255,255,255,.6),
-			inset 0 1px 0 rgba(0,0,0,0.6),
-			0 1px 2px rgba(255,255,255,.4),
-			0 0 4px rgba(255,255,255,.2);
 }
 
-.mainnav>li,.filter_nav>dt,.filter_nav>dd
+.horizontal>li,.filter_nav>dt,.filter_nav>dd
 {
 	display:block;
 	float:left;
@@ -1465,7 +1447,7 @@ ul.nav
 	margin-left: 0;
 }
 
-.mainnav>li>a,.filter_nav>dd>a
+.horizontal>li>a,.filter_nav>dd>a
 {
 	display:inline-block;
 	float:none;
@@ -1532,7 +1514,7 @@ ul.nav
 	border-bottom-right-radius: 6px; 
 }
 
-.mainnav>li>a:hover,
+.horizontal>li>a:hover,
 .filter_nav>dd>a:hover
 {
 	text-shadow:0 0 2px rgba(255,255,255,0.5);
@@ -1946,6 +1928,7 @@ form fieldset p.form-help.after
 
 /* Icons by http://www.entypo.com
 ================================================== 
+*/
 
 @font-face
 {
@@ -1983,7 +1966,7 @@ form fieldset p.form-help.after
 	font-family: 'entypo', 'entypo-social';
 	color: inherit;
 }
-*/
+
 .button.icon,
 button.icon,
 input[type="submit"].icon,
