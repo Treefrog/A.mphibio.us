@@ -183,15 +183,15 @@ body
    color: #8a8a8a;
 }
 
-:-moz-placeholder { /* Firefox 18- */
+:-moz-placeholder {/* Firefox 18- */
    color: #8a8a8a;  
 }
 
-::-moz-placeholder {  /* Firefox 19+ */
+::-moz-placeholder { /* Firefox 19+ */
    color: #8a8a8a;  
 }
 
-:-ms-input-placeholder {  
+:-ms-input-placeholder { 
    color: #8a8a8a;  
 }
 
@@ -1493,7 +1493,7 @@ padding: .25em .865em;
 .horizontal > li > ul > li,
 .horizontal > li > ul > li > ul,
 .horizontal > li > ul > li > ul > li
-{ 
+{
 	margin: 0 !important;
 	font-size: 1em;
 	list-style: none;
@@ -1501,7 +1501,7 @@ padding: .25em .865em;
 
 .horizontal > li > ul > li > a,
 .horizontal > li > ul > li > ul > li > a
-{ 
+{
 	display: block;
 	background: #ffffff;
 	color: #0080c6;
@@ -1516,12 +1516,12 @@ padding: .25em .865em;
 
 .horizontal > li > ul > li > a,
 .horizontal > li > ul > li > ul > li > a
-{ 
+{
 	padding: .625em 3em .625em 1.125em;
 }
 .horizontal > li > ul > li > a:hover,
 .horizontal > li > ul > li > ul > li > a:hover
-{ 
+{
 	background: #0080c6;
 	color: #fff;
 	border-top: 1px solid #005583;
@@ -2473,19 +2473,18 @@ Class Name						Shorthand					Styles
 .container .pull_fifteen					{margin-left: -900px;}
 .container .pull_sixteen					{margin-left: -950px;}
 
+/* Always Fluid Classes
+/*
+================================================== */
 
 	.container .one-third.col.padded
 	{
-		width: 31%;
-	}
-	.container .one-third.col.padded
-	{
-		width: 31%;
+		width: 31.25%;
 	}
 	
 	.container .two-thirds.col
 	{
-		width: 64%; 
+		width: 66%; 
 	}
 
 	
@@ -2496,7 +2495,13 @@ Class Name						Shorthand					Styles
 	
 	.container .one-quarter.col
 	{
-		width: 22.875%;
+		width: 23.5%;
+		margin-left:1%;
+		margin-right:1%;
+	}
+	.container .one-fifth.col
+	{
+		width: 18.3625%;
 		margin-left:1%;
 		margin-right:1%;
 	}
@@ -2508,7 +2513,7 @@ Class Name						Shorthand					Styles
 	
 	.container .half.col
 	{
-		width: 47.5%;
+		width: 49%;
 		margin-left:1%;
 		margin-right:1%;
 	}
@@ -2520,14 +2525,14 @@ Class Name						Shorthand					Styles
 	
 	.container .three-quarters.col
 	{
-		width: 72.5%;
+		width: 74.5%;
 		margin-left:1%;
 		margin-right:1%;
 	}
 	
 	.container .three-quarters.col.padded
 	{
-		width: 71.875%;
+		width: 72.875%;
 	}
 	
 	.container .one-third.col.padded,
@@ -2540,8 +2545,15 @@ Class Name						Shorthand					Styles
 		margin-right:0;
 		margin-bottom: 0;
 	}
+
 	
-/* Fluid 
+/* Fully Fluid Columns
+/* Be Carefull nesting fluid columns.
+/* In Fact Don't unless your handy with math
+/* percentages work on parent elements
+/* Use the preceeding Always Fluid classes
+/* i.e. .container .one-third.col etc.
+/*
 ================================================== */
 
 .container.fluid
@@ -2584,167 +2596,39 @@ Class Name						Shorthand					Styles
 	margin-right:  0 !important;
 }
 
-.container.fluid .col.one
-{
-	width: 4.25%;
-}
+.container.fluid .col.one					{width: 4.25%;}
+.container.fluid .col.two					{width: 10.5%;}
+.container.fluid .col.three					{width: 16.75%;}
+.container.fluid .col.four					{width: 23%;}
+.container.fluid .col.five					{width: 29.25%;}
+.container.fluid .col.six					{width: 35.5%;}
+.container.fluid .col.seven					{width: 41.75%;}
+.container.fluid .col.eight					{width: 48%;}
+.container.fluid .col.nine					{width: 54.25%;}
+.container.fluid .col.ten					{width: 60.5%;}
+.container.fluid .col.eleven				{width: 66.75%;}
+.container.fluid .col.twelve				{width: 73%;}
+.container.fluid .col.thirteen				{width: 79.25%;}
+.container.fluid .col.fourteen				{width: 85.5%;}
+.container.fluid .col.fifteen				{width: 91.75%;}
+.container.fluid .col.sixteen				{width: 98%;}
 
-.container.fluid .col.two
-{
-	width: 10.5%;
-}
 
-.container.fluid .col.three
-{
-	width: 16.75%;
-}
-
-.container.fluid .col.four
-{
-	width: 23%;
-}
-
-.container.fluid .col.five
-{
-	width: 29.25%;
-}
-
-.container.fluid .col.six
-{
-	width: 35.5%;
-}
-
-.container.fluid .col.seven
-{
-	width: 41.75%;
-}
-
-.container.fluid .col.eight
-{
-	width: 48%;
-}
-
-.container.fluid .col.nine
-{
-	width: 54.25%;
-}
-
-.container.fluid .col.ten
-{
-	width: 60.5%;
-}
-
-.container.fluid .col.eleven
-{
-	width: 66.75%;
-}
-
-.container.fluid .col.twelve	
-{
-	width: 73%;
-}
-
-.container.fluid .col.thirteen	
-{
-	width: 79.25%;
-}
-
-.container.fluid .col.fourteen
-{
-	width: 85.5%;
-}
-
-.container.fluid .col.fifteen	
-{
-	width: 91.75%;
-}
-
-.container.fluid .col.sixteen
-{
-	width: 98%;
-}
-
-input.col.one
-{
-	width: 30px;
-	text-indent: 8px;
-}
-
-.container.fluid .push_one
-{
-	padding-left: 4.25%;
-}
-
-.container.fluid .push_two
-{
-	padding-left: 10.5%;
-}
-
-.container.fluid .push_three
-{
-	padding-left: 16.75%;
-}
-
-.container.fluid .push_four
-{
-	padding-left: 23%;
-}
-
-.container.fluid .push_five
-{
-	padding-left: 29.25%;
-}
-
-.container.fluid .push_six
-{
-	padding-left: 35.5%;
-}
-
-.container.fluid .push_seven
-{
-	padding-left: 41.75%;
-}
-
-.container.fluid .push_eight
-{
-	padding-left: 48%;
-}
-
-.container.fluid .push_nine
-{
-	padding-left: 54.25%;
-}
-
-.container.fluid .push_ten
-{
-	padding-left: 60.5%;
-}
-
-.container.fluid .push_eleven
-{
-	padding-left: 66.75%;
-}
-
-.container.fluid .push_twelve	
-{
-	padding-left: 73%;
-}
-
-.container.fluid .push_thirteen	
-{
-	padding-left: 79.25%;
-}
-
-.container.fluid .push_fourteen
-{
-	padding-left: 85.5%;
-}
-
-.container.fluid .push_fifteen
-{
-	padding-left: 91.75%;
-}
-
+.container.fluid .push_one					{padding-left: 4.25%;}
+.container.fluid .push_two					{padding-left: 10.5%;}
+.container.fluid .push_three				{padding-left: 16.75%;}
+.container.fluid .push_four					{padding-left: 23%;}
+.container.fluid .push_five					{padding-left: 29.25%;}
+.container.fluid .push_six					{padding-left: 35.5%;}
+.container.fluid .push_seven				{padding-left: 41.75%;}
+.container.fluid .push_eight				{padding-left: 48%;}
+.container.fluid .push_nine					{padding-left: 54.25%;}
+.container.fluid .push_ten					{padding-left: 60.5%;}
+.container.fluid .push_eleven				{padding-left: 66.75%;}
+.container.fluid .push_twelve				{padding-left: 73%;}
+.container.fluid .push_thirteen				{padding-left: 79.25%;}
+.container.fluid .push_fourteen				{padding-left: 85.5%;}
+.container.fluid .push_fifteen				{padding-left: 91.75%;}
 
 /* ALL
 ================================================== */
@@ -3316,36 +3200,36 @@ or wrap each row of col in a <div class="row"> makes sense doesn't it? */
 
 @-moz-keyframes spin
 {
-  0% { -moz-transform: rotate(0deg); }
-  100% { -moz-transform: rotate(359deg); }
+  0% {-moz-transform: rotate(0deg);}
+  100% {-moz-transform: rotate(359deg);}
 }
 @-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(359deg); }
+  0% {-webkit-transform: rotate(0deg);}
+  100% {-webkit-transform: rotate(359deg);}
 }
 @-o-keyframes spin {
-  0% { -o-transform: rotate(0deg); }
-  100% { -o-transform: rotate(359deg); }
+  0% {-o-transform: rotate(0deg);}
+  100% {-o-transform: rotate(359deg);}
 }
 @-ms-keyframes spin {
-  0% { -ms-transform: rotate(0deg); }
-  100% { -ms-transform: rotate(359deg); }
+  0% {-ms-transform: rotate(0deg);}
+  100% {-ms-transform: rotate(359deg);}
 }
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(359deg); }
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(359deg);}
 }
 @-moz-document url-prefix() {
   .icon-spin {
     height: .9em;
-  }
+ }
   .btn .icon-spin {
     height: auto;
-  }
+ }
   .icon-spin.icon-large {
     height: 1.25em;
-  }
+ }
   .btn .icon-spin.icon-large {
     height: .75em;
-  }
+ }
 }
