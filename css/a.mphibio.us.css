@@ -2540,9 +2540,214 @@ Class Name						Shorthand					Styles
 		margin-right:0;
 		margin-bottom: 0;
 	}
+	
+/* Fluid 
+================================================== */
+
+.container.fluid
+{
+	width: 92%;
+	margin-left: 4%;
+	margin-right: 4%;
+}
+
+.container.fluid .col.one,
+.container.fluid .col.two,
+.container.fluid .col.three,
+.container.fluid .col.four,
+.container.fluid .col.five,
+.container.fluid .col.six,
+.container.fluid .col.seven,
+.container.fluid .col.eight,
+.container.fluid .col.nine,
+.container.fluid .col.ten,
+.container.fluid .col.eleven,
+.container.fluid .col.twelve,
+.container.fluid .col.thirteen,
+.container.fluid .col.fourteen,
+.container.fluid .col.fifteen,
+.container.fluid .col.sixteen
+{
+	display: inline;
+	float: left;
+	margin-left: 1%;
+	margin-right: 1%;
+}
+
+.container.fluid .col.first
+{
+	margin-left: 0 !important;
+}
+
+.container.fluid .col.last
+{
+	margin-right:  0 !important;
+}
+
+.container.fluid .col.one
+{
+	width: 4.25%;
+}
+
+.container.fluid .col.two
+{
+	width: 10.5%;
+}
+
+.container.fluid .col.three
+{
+	width: 16.75%;
+}
+
+.container.fluid .col.four
+{
+	width: 23%;
+}
+
+.container.fluid .col.five
+{
+	width: 29.25%;
+}
+
+.container.fluid .col.six
+{
+	width: 35.5%;
+}
+
+.container.fluid .col.seven
+{
+	width: 41.75%;
+}
+
+.container.fluid .col.eight
+{
+	width: 48%;
+}
+
+.container.fluid .col.nine
+{
+	width: 54.25%;
+}
+
+.container.fluid .col.ten
+{
+	width: 60.5%;
+}
+
+.container.fluid .col.eleven
+{
+	width: 66.75%;
+}
+
+.container.fluid .col.twelve	
+{
+	width: 73%;
+}
+
+.container.fluid .col.thirteen	
+{
+	width: 79.25%;
+}
+
+.container.fluid .col.fourteen
+{
+	width: 85.5%;
+}
+
+.container.fluid .col.fifteen	
+{
+	width: 91.75%;
+}
+
+.container.fluid .col.sixteen
+{
+	width: 98%;
+}
+
+input.col.one
+{
+	width: 30px;
+	text-indent: 8px;
+}
+
+.container.fluid .push_one
+{
+	padding-left: 4.25%;
+}
+
+.container.fluid .push_two
+{
+	padding-left: 10.5%;
+}
+
+.container.fluid .push_three
+{
+	padding-left: 16.75%;
+}
+
+.container.fluid .push_four
+{
+	padding-left: 23%;
+}
+
+.container.fluid .push_five
+{
+	padding-left: 29.25%;
+}
+
+.container.fluid .push_six
+{
+	padding-left: 35.5%;
+}
+
+.container.fluid .push_seven
+{
+	padding-left: 41.75%;
+}
+
+.container.fluid .push_eight
+{
+	padding-left: 48%;
+}
+
+.container.fluid .push_nine
+{
+	padding-left: 54.25%;
+}
+
+.container.fluid .push_ten
+{
+	padding-left: 60.5%;
+}
+
+.container.fluid .push_eleven
+{
+	padding-left: 66.75%;
+}
+
+.container.fluid .push_twelve	
+{
+	padding-left: 73%;
+}
+
+.container.fluid .push_thirteen	
+{
+	padding-left: 79.25%;
+}
+
+.container.fluid .push_fourteen
+{
+	padding-left: 85.5%;
+}
+
+.container.fluid .push_fifteen
+{
+	padding-left: 91.75%;
+}
+
 
 /* ALL
-================================================== 
+================================================== */
 
 @media only screen and (max-width: 959px)
 {
@@ -2593,7 +2798,6 @@ Class Name						Shorthand					Styles
 	}
 
 }
-*/
 /* #Tablet (Portrait)Design for a width of 768px
 ================================================== */
 
