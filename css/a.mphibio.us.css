@@ -2548,9 +2548,11 @@ Class Name						Shorthand					Styles
 
 	
 /* Fully Fluid Columns
+/*
 /* Be Carefull nesting fluid columns.
 /* In Fact Don't unless your handy with math
-/* percentages work on parent elements
+/* since percentages are inherent from parent elements.
+/*
 /* Use the preceeding Always Fluid classes
 /* i.e. .container .one-third.col etc.
 /*
