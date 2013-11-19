@@ -1,0 +1,74 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="ie ie9" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]>
+<!--[if IEMobile 7 ]>    <html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js"> <!--<![endif]-->
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title></title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<link rel="stylesheet" href="../css/a.mphibio.us.css">
+<link rel="stylesheet" href="../css/float_labels.css">
+  
+<script src="../js/js/modernizr-2.6.2.min.js"></script>
+
+</head>
+<body>
+	<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+	
+     <!-- Add your site or application content here -->
+        
+    	<header id="amp_header" role="banner" class="row">
+	        <div class="container">
+	        	<h1>Float Labels Demo <small>by Peter Sorowka</small></h1>
+	        	<p>http://peter.freilicht.net/float-label-implementation/</p>
+	        </div>
+    	</header>
+    	<section id="amp_content" role="main" class="row">
+	        <div class="container" role="main">
+	        <form>
+			   <fieldset class="float_label">
+			       <input id="title" name="title" size="40" />
+			       <label for="title">Title</label>
+			   </fieldset>
+			   <fieldset class="float_label">
+			       <input id="author" name="author" size="40" />
+			       <label for="author">Author</label>
+			   </fieldset>
+			</form>
+	        </div>
+    	</section>
+    	<footer id="amp_footer" class="row">
+	        <div class="container">
+	        </div>
+    	</footer>
+
+  
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="../js/js/jquery-1.9.1.min.js"><\/script>')</script>
+
+	
+
+<script>
+$(function(){
+	/* Initialization */
+	$("input:not([value]),input[value='']").addClass('empty');
+	
+	/* Input event handling */
+	$('input').on('input keyup', function() {
+	  
+	      $(this).toggleClass('empty', !Boolean($(this).val()));
+	});
+});
+
+</script>
+	
+</body>
+</html>

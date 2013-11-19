@@ -831,12 +831,14 @@ ol.slats li a p span.meta {
 /* Tables
 ================================================== */
 
-table {
+table
+{
 	width: 100%;
 	margin: 1.3em 0;
 }
 
-table caption {
+table caption
+{
 	color: #747474;
 	font-style: italic;
 	text-align: left;
@@ -844,69 +846,84 @@ table caption {
 	padding-bottom: .825em;
 }
 
-table td, table th {
+table td, table th
+{
 	margin:0;
 	padding: .3em .425em;
 	text-align: left;
 }
 
-table td {
+table td
+{
 	border-top: 1px solid #cfcfcf;
 }
-table th {
+table th
+{
 	font-weight: bold;
 	text-shadow: #fff 0 1px 0;
 	border-top: 0px;
 }
 
-table thead th {
+table thead th
+{
 	border-bottom: 2px solid #cfcfcf;
 }
-table tfoot th {
+table tfoot th
+{
 	border-top: 3px double #cfcfcf;
 }
 
-table tfoot th {
+table tfoot th 
+{
 	background: #ffffff;
 	font-weight: bold;
 	text-shadow: #fff 0 1px 0;
 }
 
-td.no-wrap {
+td.no-wrap 
+{
 	white-space: nowrap;
 }
 
-table.amp thead th {
+table.amp thead th 
+{
 	background: #efefef;
 }
 
-table.amp tr.odd td {
+table.amp tr.odd td 
+{
 	background: #fff;
 }
 
-table.amp tr.even td {
+table.amp tr.even td 
+{
 	background: #efefef;
 }
 
 /* Images
 ================================================== */
 
-img {
+img 
+{
 	border: 0; 
 	-ms-interpolation-mode: bicubic; 
 	vertical-align: middle; 
 }
-svg:not(:root) {
+svg:not(:root) 
+{
 	overflow: hidden; 
 }
-figure {
+figure 
+{
 	margin: 0; 
 }
+
 /* Marginally responsive images server side options are usually better 
 	however, this can produce excellent results with some fore thought and
 	a clipping div flip the max-width/height attributtes if you have portrait images
 ================================================== */
-img.scale-with-grid, img.swg {
+img.scale-with-grid, img.swg 
+{
 	max-width: 100%;
 	height: auto; 
 }
@@ -916,21 +933,24 @@ img.scale-with-grid, img.swg {
 /* Messaging
 ================================================== */
 
-.error {
+.error 
+{
 	padding: .5em;
 	margin:.5em 0;
 	background-color: #FFE3E3;
 	border: 1px solid #C30300;
 }
 
-.attn {
+.attn
+{
 	padding: .5em;
 	margin:.5em 0;
 	background-color: #ffffe1;
 	border: 1px solid #b3b3b3;
 }
 
-.confirm {
+.confirm 
+{
 	padding: .5em;
 	margin:.5em 0;
 	background-color: #D9E021;
@@ -938,11 +958,118 @@ img.scale-with-grid, img.swg {
 }
 
 .dialog,
-.dialogue	{
+.dialogue	
+{
 	padding: .5em;
 	margin:.5em 0;
 	background-color: #FAFAFA;
 	border: 1px solid #E6E6E6;
+}
+
+/* Notifications, Flags and Tags
+================================================== */
+
+.notify 
+{
+    display: inline-block;
+    min-width: 1em;
+    padding: 0.3em 0.7em;
+    font-size: 0.8em;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    background-color: #D9E021;
+    border-radius: 1em;
+}
+
+.flag,
+.tag
+{
+    display: inline;
+    padding: 0.2em 0.6em 0.3em;
+    font-size: 0.8em;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25em;
+    background-color: #E6E6E6;
+}
+/* Adapted from http://css-tricks.com/downloads/css-stuff/ Breadcrumbs with CSS Triangles */
+.tag:after
+{
+	content: " "; 
+	display: block; 
+	width: 0; 
+	height: 0;
+	border-top: 50px solid transparent;           
+	/* Go big on the size, and let overflow hide */
+	border-bottom: 50px solid transparent;
+	border-left: 30px solid #E6E6E6;
+	position: absolute;
+	top: 50%;
+	margin-top: -50px; 
+	left: 100%;
+	z-index: 2; 
+}	
+
+.tag:before 
+{
+	content: " "; 
+	display: block; 
+	width: 0; 
+	height: 0;
+	border-top: 50px solid transparent;
+	/* Go big on the size, and let overflow hide */
+	border-bottom: 50px solid transparent;
+	border-left: 30px solid white;
+	position: absolute;
+	top: 50%;
+	margin-top: -50px; 
+	margin-left: 1px;
+	left: 100%;
+	z-index: 1; 
+}	
+
+.notify.sq,
+.flag.sq,
+.tag.sq
+{
+	border-radius: 0;
+}
+
+.notify.error, 
+.flag.error, 
+.tag.error 
+{
+	background-color: #C30300;
+}
+
+.notify.attn, 
+.flag.attn,
+.tag.attn 
+{
+	background-color: #f2a706;
+}
+
+.notify.dialog,
+.notify.dialogue	
+{
+	background-color: #E6E6E6;
+}
+
+
+
+.notify:empty,
+.flag:empty,
+.tag:empty
+{
+    display: none;
 }
 
 /* Buttons 
@@ -1381,11 +1508,12 @@ ul.nav
 
 .navbar-inner
 {
-/* 	padding-right:20px; */
-/* 	padding-left:20px; */
 	background-color:#cfcfcf;
 	border-top: 1px solid #efefef;
 	border-bottom: 1px solid #fefefe;
+	
+/* 	padding-right:20px; */
+/* 	padding-left:20px; */
 /*
 	background-image:-webkit-gradient(linear,0 0,0 100%,from(#0080c6),to(#005583));
 	background-image:-webkit-linear-gradient(top,#0080c6,#005583);
@@ -1487,7 +1615,7 @@ ul.nav
 	background: rgba(0,0,0,.1);
 }
 #navbar .horizontal > li > a {
-padding: .25em .865em;
+	padding: .25em .865em;
 }
 .horizontal > li > ul,
 .horizontal > li > ul > li,
@@ -1626,8 +1754,6 @@ padding: .25em .865em;
 	left:100%;
 	height: auto;
 }
-
-
 
 .filter_nav
 {
