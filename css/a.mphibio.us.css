@@ -230,6 +230,12 @@ h1
 	margin:0 0 0.67em 0;
 }
 
+h1 small
+{
+	font-size: 0.625em;
+	margin:0 0 0.67em 0;
+}
+
 h2
 {
 	font-size: 2em;

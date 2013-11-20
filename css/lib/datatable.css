@@ -1,0 +1,136 @@
+div.dataTables_length,
+div.dataTables_filter,
+div.dataTables_info,
+div.dataTables_paginate
+{
+	float:left;
+	width:50%;
+	margin-bottom: 1.25em;
+}
+
+div.dataTables_length label
+{
+	float: left;
+}
+
+div.dataTables_filter label
+{
+	float: right;
+}
+
+div.dataTables_length select,
+div.dataTables_filter input[type="text"]
+{
+	display: inline;
+}
+
+div.dataTables_length select
+{
+	font-size: 1em;
+	height: 2em;
+	min-width: 80px;
+	width:120px;
+	overflow: hidden;
+	background-image: none;
+	background-image: url(../../images/flat_select.png);
+	background-repeat: no-repeat;
+	background-position: left -1px;
+	border: 1px solid #ddd;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+}
+div.dataTables_filter input[type="text"]
+{
+	padding: 0.425em;
+}	
+
+div.dataTables_paginate,
+div.dataTables_filter
+{
+	text-align: right;
+}
+
+div.dataTables_paginate a
+{
+	font-size: 1em;
+	position: relative;
+	display: inline-block;
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 1.625em;
+	margin-left: 0.25em;
+	color: #4d4d4d;
+	font-weight: normal;
+	text-decoration: none;
+	cursor: pointer;
+	line-height: normal;
+	padding: 0.325em 0.625em;
+	background-color: #fdfdfd;
+	border: 1px solid #cdcdcd;
+	border-top-color: #ededed;
+	border-left-color: #ededed;
+}
+
+div.dataTables_paginate a:hover
+{
+	color: #1b378c;
+	background-color: #efefef;
+	background-image: none;
+	border: 1px solid #888;
+	border-top: 1px solid #aaa;
+	border-left: 1px solid #aaa;
+}
+
+div.dataTables_paginate a:active,
+div.dataTables_paginate a:focus
+{
+	color: #fff;
+	border: 1px solid #7485b9;
+	border-top: 1px solid #1b378c;
+	border-left: 1px solid #1b378c;
+	background-color: #1b378c;
+}
+
+table.datatable thead tr th
+{
+	position: relative;
+	color: #666;
+}
+
+table.datatable thead tr th:before,
+table.datatable thead tr th:after
+{
+	position:absolute;
+	border:solid;
+	border-color:#8a8a8a transparent;
+	border-width: 0 4px 5px 4px;
+	top:8px;
+	content:"";
+	display:block;
+	right:5px;
+	width: 0;
+	z-index:301;
+}
+
+table.datatable thead tr th:after
+{
+	border-width: 5px 4px 0 4px;
+	top:15px;
+}
+
+table.datatable thead tr th.sorting_desc,
+table.datatable thead tr th.sorting_asc
+{
+	color: #000;
+}
+
+table.datatable thead tr th.sorting_asc:before
+{
+	border-color:#333 transparent;
+}
+
+table.datatable thead tr th.sorting_desc:after
+{
+	border-color:#333 transparent;
+}
