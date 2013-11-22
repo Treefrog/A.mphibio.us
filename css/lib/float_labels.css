@@ -2,7 +2,7 @@
 http://peter.freilicht.net/float-label-implementation/
  */
 
-fieldset.float_label
+.float_label fieldset
 {
 	position: relative;
 	margin: 1.2em;
