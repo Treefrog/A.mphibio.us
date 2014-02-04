@@ -143,7 +143,7 @@ $(document).ready(function() {
 		* These are site specific for the a.mphibio.us public site
 		* ================================================================== */			
 		$.localScroll();
-			
+		
 		/*
 		$('.set').click(function(){
 					$('#navbar').removeClass('a').removeClass('b').addClass('f').addClass('t');

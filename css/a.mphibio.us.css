@@ -2315,7 +2315,7 @@ ul.icons:before
 	font-size: 1em;
 	float:left;
 	height: 1.7em;
-	width:280px;
+	max-width:280px;
 	overflow: hidden;
 	margin-left: 0;
 	margin-bottom: 1.1em;
@@ -2393,7 +2393,7 @@ ul.icons:before
 	height: 1.6em;
 	margin-bottom: 0;
 	padding-left: 8px;
-	width: 248px;
+	max-width: 248px;
 	background: transparent;
 	-webkit-appearance: none;
 	border-color: transparent;
