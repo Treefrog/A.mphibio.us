@@ -2394,15 +2394,22 @@ ul.icons:before
 	margin-bottom: 0;
 	padding-left: 8px;
 	max-width: 248px;
-	background: transparent;
 	-webkit-appearance: none;
+	-moz-appearance: none;
+	text-indent: 0.01px;
+	text-overflow: "";
 	border-color: transparent;
+	background: transparent;
 	cursor: pointer;
 }
 
 .ui_tpicker_timezone select
 {
 	width: 138px;
+}
+.styled_select select::-ms-expand
+{
+	display: none;
 }
 
 /* Layout Helper Rules
