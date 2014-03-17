@@ -2407,6 +2407,7 @@ ul.icons:before
 {
 	width: 138px;
 }
+
 .styled_select select::-ms-expand
 {
 	display: none;
