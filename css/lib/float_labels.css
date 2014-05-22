@@ -14,13 +14,15 @@ http://peter.freilicht.net/float-label-implementation/
 }
 
 .float_label input {
-    padding: 0.1em 0em;
+    padding: 0.6em 1em;
     border: none;
-    border-radius: 0px;
-    border-bottom: 1px solid #555;
+    border-radius: 6px;
+    border: 1px solid transparent;
     outline: none;
     margin: 0px;
-    background: none;
+    background: #0f3955;
+    color: #4eb7f0;
+    width: 100%;
 }
 
 /**** HERE THE MAGIC STARTS *****/

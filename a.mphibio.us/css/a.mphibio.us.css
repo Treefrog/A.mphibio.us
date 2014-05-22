@@ -183,15 +183,15 @@ body
    color: #8a8a8a;
 }
 
-:-moz-placeholder { /* Firefox 18- */
+:-moz-placeholder {/* Firefox 18- */
    color: #8a8a8a;  
 }
 
-::-moz-placeholder {  /* Firefox 19+ */
+::-moz-placeholder { /* Firefox 19+ */
    color: #8a8a8a;  
 }
 
-:-ms-input-placeholder {  
+:-ms-input-placeholder { 
    color: #8a8a8a;  
 }
 
@@ -227,6 +227,12 @@ h6 a
 h1
 {
 	font-size: 2.6em;
+	margin:0 0 0.67em 0;
+}
+
+h1 small
+{
+	font-size: 0.625em;
 	margin:0 0 0.67em 0;
 }
 
@@ -479,7 +485,8 @@ a, a:visited
 {
 	color: #1b378c; 
 	outline: 0;
-	/*	Sexy Shorthand Progressive Enhancement link styles
+	
+	/*	Sexy Progressive Enhancement link styles
 	/*	CSS3 Please: http://css3please.com
 	/*	Could also easily be: all .2s linear;
 	/*	if you were looking to change background,
@@ -487,7 +494,7 @@ a, a:visited
 	/* 	an excellent article on the subject by Dan Cederhome
 	/*  http://alistapart.com/article/understanding-css3-transitions 
 	*/
-	-webkit-transition: color 0.3s linear;
+	-webkit-transition: color 0.3s ease-out;
 	 -moz-transition: color 0.3s ease-out;
 	   -o-transition: color 0.3s ease-out;
 	      transition: color 0.3s ease-out;
@@ -795,7 +802,7 @@ ol.slats li a
 }
 
 ol.slats li a:hover {
-	opacity: .6;
+	opacity:0.8;
 	filter: alpha(opacity=80);
 }
 
@@ -830,82 +837,99 @@ ol.slats li a p span.meta {
 /* Tables
 ================================================== */
 
-table {
+table
+{
 	width: 100%;
 	margin: 1.3em 0;
 }
 
-table caption {
-	background: #fefefe;
+table caption
+{
 	color: #747474;
+	font-style: italic;
 	text-align: left;
 	padding:.625em 0;
 	padding-bottom: .825em;
 }
 
-table td, table th {
+table td, table th
+{
 	margin:0;
 	padding: .3em .425em;
 	text-align: left;
 }
 
-table td {
+table td
+{
 	border-top: 1px solid #cfcfcf;
 }
-table th {
+table th
+{
 	font-weight: bold;
 	text-shadow: #fff 0 1px 0;
 	border-top: 0px;
 }
 
-table thead th {
+table thead th
+{
 	border-bottom: 2px solid #cfcfcf;
 }
-table tfoot th {
+table tfoot th
+{
 	border-top: 3px double #cfcfcf;
 }
 
-table tfoot th {
+table tfoot th 
+{
 	background: #ffffff;
 	font-weight: bold;
 	text-shadow: #fff 0 1px 0;
 }
 
-td.no-wrap {
+td.no-wrap 
+{
 	white-space: nowrap;
 }
 
-table.amp thead th {
+table.amp thead th 
+{
 	background: #efefef;
 }
 
-table.amp tr.odd td {
+table.amp tr.odd td 
+{
 	background: #fff;
 }
 
-table.amp tr.even td {
+table.amp tr.even td 
+{
 	background: #efefef;
 }
 
 /* Images
 ================================================== */
 
-img {
+img 
+{
 	border: 0; 
 	-ms-interpolation-mode: bicubic; 
 	vertical-align: middle; 
 }
-svg:not(:root) {
+svg:not(:root) 
+{
 	overflow: hidden; 
 }
-figure {
+figure 
+{
 	margin: 0; 
 }
+
 /* Marginally responsive images server side options are usually better 
 	however, this can produce excellent results with some fore thought and
 	a clipping div flip the max-width/height attributtes if you have portrait images
 ================================================== */
-img.scale-with-grid, img.swg {
+img.scale-with-grid, img.swg 
+{
 	max-width: 100%;
 	height: auto; 
 }
@@ -915,21 +939,24 @@ img.scale-with-grid, img.swg {
 /* Messaging
 ================================================== */
 
-.error {
+.error 
+{
 	padding: .5em;
 	margin:.5em 0;
 	background-color: #FFE3E3;
 	border: 1px solid #C30300;
 }
 
-.attn {
+.attn
+{
 	padding: .5em;
 	margin:.5em 0;
 	background-color: #ffffe1;
 	border: 1px solid #b3b3b3;
 }
 
-.confirm {
+.confirm 
+{
 	padding: .5em;
 	margin:.5em 0;
 	background-color: #D9E021;
@@ -937,11 +964,118 @@ img.scale-with-grid, img.swg {
 }
 
 .dialog,
-.dialogue	{
+.dialogue	
+{
 	padding: .5em;
 	margin:.5em 0;
 	background-color: #FAFAFA;
 	border: 1px solid #E6E6E6;
+}
+
+/* Notifications, Flags and Tags
+================================================== */
+
+.notify 
+{
+    display: inline-block;
+    min-width: 1em;
+    padding: 0.3em 0.7em;
+    font-size: 0.8em;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    background-color: #D9E021;
+    border-radius: 1em;
+}
+
+.flag,
+.tag
+{
+    display: inline;
+    padding: 0.2em 0.6em 0.3em;
+    font-size: 0.8em;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25em;
+    background-color: #E6E6E6;
+}
+/* Adapted from http://css-tricks.com/downloads/css-stuff/ Breadcrumbs with CSS Triangles */
+.tag:after
+{
+	content: " "; 
+	display: block; 
+	width: 0; 
+	height: 0;
+	border-top: 50px solid transparent;           
+	/* Go big on the size, and let overflow hide */
+	border-bottom: 50px solid transparent;
+	border-left: 30px solid #E6E6E6;
+	position: absolute;
+	top: 50%;
+	margin-top: -50px; 
+	left: 100%;
+	z-index: 2; 
+}	
+
+.tag:before 
+{
+	content: " "; 
+	display: block; 
+	width: 0; 
+	height: 0;
+	border-top: 50px solid transparent;
+	/* Go big on the size, and let overflow hide */
+	border-bottom: 50px solid transparent;
+	border-left: 30px solid white;
+	position: absolute;
+	top: 50%;
+	margin-top: -50px; 
+	margin-left: 1px;
+	left: 100%;
+	z-index: 1; 
+}	
+
+.notify.sq,
+.flag.sq,
+.tag.sq
+{
+	border-radius: 0;
+}
+
+.notify.error, 
+.flag.error, 
+.tag.error 
+{
+	background-color: #C30300;
+}
+
+.notify.attn, 
+.flag.attn,
+.tag.attn 
+{
+	background-color: #f2a706;
+}
+
+.notify.dialog,
+.notify.dialogue	
+{
+	background-color: #E6E6E6;
+}
+
+
+
+.notify:empty,
+.flag:empty,
+.tag:empty
+{
+    display: none;
 }
 
 /* Buttons 
@@ -968,6 +1102,8 @@ input[type="file"],  .button_grp .active,
 	line-height: normal;
 	padding: .625em;
 	background-color: #fdfdfd;
+	border: 1px solid transparent;
+/*
 	background-image: 
 		-webkit-gradient(linear, left top, left bottom, from(#fdfdfd), to(#cfcfcf));
 	background-image:
@@ -978,12 +1114,12 @@ input[type="file"],  .button_grp .active,
 		-o-linear-gradient(top, #fdfdfd, #cfcfcf);
 	background-image:
 		linear-gradient(to bottom, #fdfdfd, #cfcfcf);
-	border: 1px solid transparent;
 	-webkit-border-radius: 6px;
 	-khtml-border-radius: 6px;
 	-moz-border-radius: 6px;
 	-o-border-radius: 6px;
 	border-radius: 6px;
+*/
 	-webkit-transition: all 0.3s ease-out;
 	-moz-transition: all 0.3s ease-out;
 	-o-transition: all 0.3s ease-out;
@@ -1033,6 +1169,7 @@ input[type="file"]:active,
 	border-top: 1px solid #1b378c;
 	border-left: 1px solid #1b378c;
 	background-color: #1b378c;
+/*
 	background-image:
 		-webkit-gradient(linear, left top, left bottom, from(#1b378c), to(#7485b9));
 	background-image:
@@ -1043,6 +1180,7 @@ input[type="file"]:active,
 		-o-linear-gradient(top, #1b378c, #7485b9);
 	background-image:
 		linear-gradient(to bottom, #1b378c, #7485b9);
+*/
 }
 
 .button.full-width,
@@ -1108,6 +1246,7 @@ ul.button_grp .button
 .button_grp .first .button,
 ul.button_grp .first.button
 {
+/*
 	-webkit-border-bottom-left-radius: 6px;
 	-webkit-border-top-left-radius: 6px;
 	-khtml-border-bottom-left-radius: 6px;
@@ -1118,6 +1257,7 @@ ul.button_grp .first.button
 	-o-border-top-left-radius: 6px;
 	border-top-left-radius: 6px;
 	border-bottom-left-radius: 6px; 
+*/
 
 }
 
@@ -1125,7 +1265,8 @@ ul.button_grp .first.button
 .button_grp .last.button,
 .pager_nav .button.last
 {
-	-webkit-border-bottom-right-radius: 6px;
+	/*
+-webkit-border-bottom-right-radius: 6px;
 	-webkit-border-top-right-radius: 6px;
 	-khtml-border-bottom-right-radius: 6px;
 	-khtml-border-top-right-radius: 6px;
@@ -1135,6 +1276,7 @@ ul.button_grp .first.button
 	-o-border-top-right-radius: 6px;
 	border-top-right-radius: 6px;
 	border-bottom-right-radius: 6px;
+*/
 }
 
 /* Fix for odd Mozilla border & padding issues */
@@ -1184,7 +1326,8 @@ ul.tabs.bg
 	display: block;
 	height: 32px;
 	background-color: #fbfbfb;
-	background-image:
+	/*
+background-image:
 		-webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#c9c9c9));
 	background-image:
 		-webkit-linear-gradient(top, #fbfbfb, #c9c9c9);
@@ -1214,6 +1357,7 @@ ul.tabs.bg
 		rgba(0,0,0,.3) 0 0 2px,
 		rgba(0,0,0,.4) 0 0 1px,
 		inset rgba(255,255,255,.4) 0 0 2px;
+*/
 }
 
 
@@ -1370,11 +1514,12 @@ ul.nav
 
 .navbar-inner
 {
-	padding-right:20px;
-	padding-left:20px;
 	background-color:#cfcfcf;
 	border-top: 1px solid #efefef;
 	border-bottom: 1px solid #fefefe;
+	
+/* 	padding-right:20px; */
+/* 	padding-left:20px; */
 /*
 	background-image:-webkit-gradient(linear,0 0,0 100%,from(#0080c6),to(#005583));
 	background-image:-webkit-linear-gradient(top,#0080c6,#005583);
@@ -1424,7 +1569,7 @@ ul.nav
 
 .horizontal.branded
 {
-	padding-left: 32px;
+	padding-left: 11px;
 }
 
 .horizontal.branded:before
@@ -1439,7 +1584,9 @@ ul.nav
 	background-repeat: no-repeat;
 }
 
-.horizontal>li,.filter_nav>dt,.filter_nav>dd
+.horizontal>li,
+.filter_nav>dt,
+.filter_nav>dd
 {
 	display:block;
 	float:left;
@@ -1447,27 +1594,173 @@ ul.nav
 	margin-left: 0;
 }
 
-.horizontal>li>a,.filter_nav>dd>a
+.horizontal>li>a,
+.filter_nav>dd>a
 {
 	display:inline-block;
 	float:none;
 	padding:.5em .865em;
-	font-size:1.1em;
+	font-size:1em;
 	color:#ffffff;
 	text-decoration:none;
 	text-shadow:0 -1px 0 rgba(0,0,0,0.5);
-	opacity: .6;
-	filter:alpha(opacity=60);
 	-webkit-transition: all 0.3s ease-out;
 	 -moz-transition: all 0.3s ease-out;
 	   -o-transition: all 0.3s ease-out;
 	      transition: all 0.3s ease-out;
 }
+#navigation .horizontal>li>a
+{
+	border-right: 1px solid #0080c6;
+	border-left: 1px solid #005583;
+}
+.horizontal>li>a:hover
+{
+	background: #89ac4c;
+	background: rgba(0,0,0,0.1);
+}
+#navbar .horizontal > li > a {
+	padding: .25em .865em;
+}
+.horizontal > li > ul,
+.horizontal > li > ul > li,
+.horizontal > li > ul > li > ul,
+.horizontal > li > ul > li > ul > li
+{
+	margin: 0 !important;
+	font-size: 1em;
+	list-style: none;
+}
+
+.horizontal > li > ul > li > a,
+.horizontal > li > ul > li > ul > li > a
+{
+	display: block;
+	background: #ffffff;
+	background: rgba(255,255,255,0.9);
+	color: #0080c6;
+	font-weight: bold;
+	text-decoration: none;
+	white-space: nowrap;
+	border-top: 1px solid #fefefe;
+	border-bottom: 1px solid #efefef;
+}
+
+.horizontal > li > ul > li > a,
+.horizontal > li > ul > li > ul > li > a
+{
+	padding: .625em 3em .625em 1.125em;
+}
+.horizontal > li > ul > li > a:hover,
+.horizontal > li > ul > li > ul > li > a:hover
+{
+	background: #0080c6;
+	background: rgba(0,128,198,1);
+	color: #fff;
+	border-top: 1px solid #005583;
+	border-bottom: 1px solid #0080c6;
+}
+.horizontal > li > ul
+{
+	position: absolute;
+	z-index: 5000;
+	height: 0;
+	width: auto;
+	margin-left: 0;
+	margin-top: 0;
+	border: 1px solid #cfcfcf;
+	
+	-webkit-box-shadow:
+		0 1px 9px rgba(0,0,0,0.25);
+	-moz-box-shadow:
+		0 1px 9px rgba(0,0,0,0.25);
+	box-shadow:
+		0 1px 9px rgba(0,0,0,0.25);
+	
+	-webkit-transition: all 0.3s ease-out; 
+	   -moz-transition: all 0.3s ease-out; 
+	     -o-transition: all 0.3s ease-out; 
+	        transition: all 0.3s ease-out; 
+	        
+	display: none;
+}
+
+.horizontal > li:hover > ul
+{
+	height: auto;
+	display: block;	
+}
+
+.horizontal > li:hover > ul:before,
+.horizontal > li > ul > li:hover > ul:before
+{
+	border:solid;
+	border-color:#cfcfcf transparent;
+	border-width: 0 6px 6px 6px;
+	top:-6px;
+	content:"";
+	display:block;
+	left:12%;
+	position:absolute;
+	z-index:301;
+	-webkit-box-shadow:0 5px 10px rgba(0,0,0,0.2);
+	-moz-box-shadow:0 5px 10px rgba(0,0,0,0.2);
+	box-shadow:0 5px 10px rgba(0,0,0,0.2);
+	-webkit-background-clip:padding-box;
+	-moz-background-clip:padding;
+	background-clip:padding-box;
+	opacity:0.9;
+	filter:alpha(opacity=90);
+}
+.horizontal > li > ul > li:hover > ul:before
+{
+	top:1.125em;
+	left: -6px;
+	border-color:transparent #cfcfcf;
+	border-width: 6px 6px 6px 0;
+}
+
+.horizontal > li > ul > li
+{
+	/* This is the important rule for positioning the nav
+	/* you need to give the third level a place to start */
+	position: relative;
+}
+
+.horizontal > li > ul > li > ul
+{
+	position: absolute;
+	top:0%;
+	z-index: 5005;
+	height: 0;
+	width: auto;
+	border: 1px solid #cfcfcf;
+	
+	-webkit-box-shadow:
+		0 1px 6px rgba(0,0,0,0.25);
+	-moz-box-shadow:
+		0 1px 6px rgba(0,0,0,0.25);
+	box-shadow:
+		0 1px 6px rgba(0,0,0,0.25);
+	
+	-webkit-transition: all 0.3s ease-out; 
+	   -moz-transition: all 0.3s ease-out; 
+	     -o-transition: all 0.3s ease-out; 
+	        transition: all 0.3s ease-out; 
+	        
+	display: none;
+}
+
+.horizontal > li > ul > li:hover > ul
+{
+	display: block;
+	left:100%;
+	height: auto;
+}
 
 .filter_nav
 {
 	margin-top:.5em;
-	font-size: .925em;
 }
 
 .filter_nav>dt
@@ -1518,8 +1811,6 @@ ul.nav
 .filter_nav>dd>a:hover
 {
 	text-shadow:0 0 2px rgba(255,255,255,0.5);
-	opacity: 1;
-	filter:alpha(opacity=100);
 }
 
 .section
@@ -1534,10 +1825,9 @@ ul.nav
 
 .breadcrumb
 {
-	font-size: 1.1em;
 	color: #ccc;
 	margin: 0;
-	font-size: .865em;
+	font-size: 0.865em;
 }
 	
 .breadcrumb li
@@ -2022,7 +2312,7 @@ ul.icons:before
 	font-size: 1em;
 	float:left;
 	height: 1.7em;
-	width:280px;
+	max-width:280px;
 	overflow: hidden;
 	margin-left: 0;
 	margin-bottom: 1.1em;
@@ -2067,7 +2357,7 @@ ul.icons:before
 		0 0 3px rgba(0,0,250,.6);
 	box-shadow: 
 		0 0 3px rgba(0,0,250,.6);
-	opacity: .9;
+	opacity: 0.9;
 	filter:alpha(opacity=90);
 }
 
@@ -2100,16 +2390,24 @@ ul.icons:before
 	height: 1.6em;
 	margin-bottom: 0;
 	padding-left: 8px;
-	width: 248px;
-	background: transparent;
+	max-width: 248px;
 	-webkit-appearance: none;
+	-moz-appearance: none;
+	text-indent: 0.01px;
+	text-overflow: "";
 	border-color: transparent;
+	background: transparent;
 	cursor: pointer;
 }
 
 .ui_tpicker_timezone select
 {
 	width: 138px;
+}
+
+.styled_select select::-ms-expand
+{
+	display: none;
 }
 
 /* Layout Helper Rules
@@ -2312,6 +2610,9 @@ Class Name						Shorthand					Styles
 .container .pull_fifteen					{margin-left: -900px;}
 .container .pull_sixteen					{margin-left: -950px;}
 
+/* Always Fluid Classes
+/*
+================================================== */
 
 	.container .one-third.col.padded
 	{
@@ -2331,7 +2632,13 @@ Class Name						Shorthand					Styles
 	
 	.container .one-quarter.col
 	{
-		width: 23.6125%;
+		width: 23.5%;
+		margin-left:1%;
+		margin-right:1%;
+	}
+	.container .one-fifth.col
+	{
+		width: 18.3625%;
 		margin-left:1%;
 		margin-right:1%;
 	}
@@ -2375,6 +2682,92 @@ Class Name						Shorthand					Styles
 		margin-right:0;
 		margin-bottom: 0;
 	}
+
+	
+/* Fully Fluid Columns
+/*
+/* Be Carefull nesting fluid columns.
+/* In Fact Don't unless your handy with math
+/* since percentages are inherent from parent elements.
+/*
+/* Use the preceeding Always Fluid classes
+/* i.e. .container .one-third.col etc.
+/*
+================================================== */
+
+.container.fluid
+{
+	width: 92%;
+	margin-left: 4%;
+	margin-right: 4%;
+}
+
+.container.fluid .col.one,
+.container.fluid .col.two,
+.container.fluid .col.three,
+.container.fluid .col.four,
+.container.fluid .col.five,
+.container.fluid .col.six,
+.container.fluid .col.seven,
+.container.fluid .col.eight,
+.container.fluid .col.nine,
+.container.fluid .col.ten,
+.container.fluid .col.eleven,
+.container.fluid .col.twelve,
+.container.fluid .col.thirteen,
+.container.fluid .col.fourteen,
+.container.fluid .col.fifteen,
+.container.fluid .col.sixteen
+{
+	display: inline;
+	float: left;
+	margin-left: 1%;
+	margin-right: 1%;
+}
+
+.container.fluid .col.first
+{
+	margin-left: 0 !important;
+}
+
+.container.fluid .col.last
+{
+	margin-right:  0 !important;
+}
+
+.container.fluid .col.one					{width: 4.25%;}
+.container.fluid .col.two					{width: 10.5%;}
+.container.fluid .col.three					{width: 16.75%;}
+.container.fluid .col.four					{width: 23%;}
+.container.fluid .col.five					{width: 29.25%;}
+.container.fluid .col.six					{width: 35.5%;}
+.container.fluid .col.seven					{width: 41.75%;}
+.container.fluid .col.eight					{width: 48%;}
+.container.fluid .col.nine					{width: 54.25%;}
+.container.fluid .col.ten					{width: 60.5%;}
+.container.fluid .col.eleven				{width: 66.75%;}
+.container.fluid .col.twelve				{width: 73%;}
+.container.fluid .col.thirteen				{width: 79.25%;}
+.container.fluid .col.fourteen				{width: 85.5%;}
+.container.fluid .col.fifteen				{width: 91.75%;}
+.container.fluid .col.sixteen				{width: 98%;}
+
+
+.container.fluid .push_one					{padding-left: 4.25%;}
+.container.fluid .push_two					{padding-left: 10.5%;}
+.container.fluid .push_three				{padding-left: 16.75%;}
+.container.fluid .push_four					{padding-left: 23%;}
+.container.fluid .push_five					{padding-left: 29.25%;}
+.container.fluid .push_six					{padding-left: 35.5%;}
+.container.fluid .push_seven				{padding-left: 41.75%;}
+.container.fluid .push_eight				{padding-left: 48%;}
+.container.fluid .push_nine					{padding-left: 54.25%;}
+.container.fluid .push_ten					{padding-left: 60.5%;}
+.container.fluid .push_eleven				{padding-left: 66.75%;}
+.container.fluid .push_twelve				{padding-left: 73%;}
+.container.fluid .push_thirteen				{padding-left: 79.25%;}
+.container.fluid .push_fourteen				{padding-left: 85.5%;}
+.container.fluid .push_fifteen				{padding-left: 91.75%;}
 
 /* ALL
 ================================================== */
@@ -2428,7 +2821,6 @@ Class Name						Shorthand					Styles
 	}
 
 }
-
 /* #Tablet (Portrait)Design for a width of 768px
 ================================================== */
 
@@ -2818,7 +3210,7 @@ or wrap each row of col in a <div class="row"> makes sense doesn't it? */
 	-webkit-background-clip:padding-box;
 	-moz-background-clip:padding;
 	background-clip:padding-box;
-	opacity:.925;
+	opacity:0.925;
 	filter:alpha(opacity=90);
 }
 
@@ -2839,7 +3231,7 @@ or wrap each row of col in a <div class="row"> makes sense doesn't it? */
 	-webkit-background-clip:padding-box;
 	-moz-background-clip:padding;
 	background-clip:padding-box;
-	opacity:.825;
+	opacity:0.825;
 	filter:alpha(opacity=80);
 }
 
@@ -2947,36 +3339,36 @@ or wrap each row of col in a <div class="row"> makes sense doesn't it? */
 
 @-moz-keyframes spin
 {
-  0% { -moz-transform: rotate(0deg); }
-  100% { -moz-transform: rotate(359deg); }
+  0% {-moz-transform: rotate(0deg);}
+  100% {-moz-transform: rotate(359deg);}
 }
 @-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(359deg); }
+  0% {-webkit-transform: rotate(0deg);}
+  100% {-webkit-transform: rotate(359deg);}
 }
 @-o-keyframes spin {
-  0% { -o-transform: rotate(0deg); }
-  100% { -o-transform: rotate(359deg); }
+  0% {-o-transform: rotate(0deg);}
+  100% {-o-transform: rotate(359deg);}
 }
 @-ms-keyframes spin {
-  0% { -ms-transform: rotate(0deg); }
-  100% { -ms-transform: rotate(359deg); }
+  0% {-ms-transform: rotate(0deg);}
+  100% {-ms-transform: rotate(359deg);}
 }
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(359deg); }
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(359deg);}
 }
 @-moz-document url-prefix() {
   .icon-spin {
     height: .9em;
-  }
+ }
   .btn .icon-spin {
     height: auto;
-  }
+ }
   .icon-spin.icon-large {
     height: 1.25em;
-  }
+ }
   .btn .icon-spin.icon-large {
     height: .75em;
-  }
+ }
 }
