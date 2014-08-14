@@ -50,7 +50,8 @@
 <link rel="stylesheet" href="css/sequencejs-theme.sliding-horizontal-parallax.css">
 <link rel="stylesheet" href="css/flexslider.css">
 <link rel="stylesheet" href="css/a.mphibio.us.css">
-<link rel="stylesheet" href="css/a.mphibio.us.public.skin.css">
+<!-- <link rel="stylesheet" href="css/a.mphibio.us.public.skin.css"> -->
+<link rel="stylesheet" href="css/a.mphibio.us.min.skin.css">
   
 <script src="js/libs/modernizr-2.6.2.min.js"></script>
 <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
@@ -60,34 +61,34 @@
 <body>
 <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 <div id="content">
-<img src="images/a.mphobio.us.icon.png" alt="a.mphobio.us.icon" width="" height="" class="a r t" style="margin-top:-100px;" />
+<img src="images/a.mphobio.us.icon.png" alt="a.mphobio.us.icon" width="256" height="256" class="a r t" style="margin-top:-50px;" />
 <div id="intro">
-	<div class="container">
+	<div class="container" style="padding-top:30px;">
 		<div class="sixteen col dmb">
 			<header id="top">
 				<hgroup>
-					<h1 id="project_title" class="rm"><span class="adot">a.</span>mphibio.us</h1>
+					<h1 id="project_title" class="rmb"><span class="adot">a.</span>mphibio.us</h1>
 					<p id="tagline" class="rmt">Built by designers who code.</p>
 				</hgroup>
 			</header>
 		</div>
 		
 		<section class="row">
-			<article id="intro_left" class="col ten">
+			<article id="intro_left" class="col eight">
 				<header>
-					<h1>The Simple, Elegant, Responsive, Front End Rapid Development Kit.</h1>
+					<h2>The Simple, Elegant, Responsive, Front End Rapid Development Kit.</h2>
 				</header>
 					
-				<p class="intro">A.mphibio.us adapts to the way you work, it allows you to develop and design your concepts within a browser faster, with less effort. 
+				<p class="intro whtt">A.mphibio.us adapts to the way you work, it allows you to develop and design your concepts within a browser faster, with less effort. 
 					Its adoptable set of shorthand classes dramatically speed up your prototyping process.</p>
 				
-				<footer class="mr">
+				<footer class="row mr">
 					<a class="button grn" href="http://a.mphibio.us/releases/a.mphibio.us.rdk.zip" title="The Rapid Design Kit includes evrything you need to get you up and running right away">Get the <abbr title="Rapid Application Development Kit">RDK</abbr><span class="icon">&#59256;</span></a>
 					<a class="button blu" href="https://github.com/Treefrog-Interactive/A.mphibio.us/archive/master.zip" title="The project files include all the source files and documentation and examples allowing you to customize and control the toolkit with your own libraries">Download the Project<span class="icon" amp-icon="&#62208;"></span></a>
 				</footer>
 			
 			</article>
-			<aside id="intro_right" class="col six">
+			<aside id="intro_right" class="col eight">
 <!--
 			
 				<blockquote class="l">
@@ -95,7 +96,7 @@
 					<cite class="r"><span class="author fn">Frank Lloyd Wright</span>, Architect, <span class="date">circa. 1906</span></cite>
 				</blockquote>
 -->
-				<iframe width="340" height="260" src="//www.youtube.com/embed/2aRUy_Fc1nk" frameborder="0" allowfullscreen></iframe>
+				<iframe width="460" height="340" src="http://www.youtube.com/embed/2aRUy_Fc1nk" frameborder="0" allowfullscreen></iframe>
 				
 				<a class="dotted whtt more set" href="#what_is_it"><span class="icon whtt" style="font-size:6em;">&#11015;</span></a>
 							
@@ -345,7 +346,7 @@ A.mphibio.us uses lightweight, basic styles as its foundation. It is ready to ad
 	</div> <!--#fifth-->
 </div><!-- //#content -->
 
-<div id="navbar" class="f t l r">
+<div id="navbar" class="f t l r cfx">
 
 <!--// WTF? 
 
@@ -359,17 +360,6 @@ postion:fixed;top:0;left:0;right:0;
 
 //-->
 
-<nav>
-	<ol id="nav">
-		<li class="reset"><a href="#intro" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
-	    <li class="set"><a href="#what_is_it" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
-	    <li class="set"><a href="#how_its_made" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
-<!-- 	    <li class="set"><a href="#slides" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li> -->
-	    <li class="set"><a href="#gallery" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
-	    <li class="set"><a href="#evolution" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
-	    <li class="set"><a href="#colophon" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
-	</ol>
-</nav>
 
 	<div class="container">
 		<nav>
@@ -429,7 +419,19 @@ postion:fixed;top:0;left:0;right:0;
 	</div>
 </div>
 
-<div id="amp_overlay" style="display:none;" onclick="$('#amp_overlay').fadeOut();">
+<nav class="f t r hmr" style="z-index:99999;">
+	<ol id="nav">
+		<li class="reset"><a href="#intro" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
+	    <li class="set"><a href="#what_is_it" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
+	    <li class="set"><a href="#how_its_made" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
+<!-- 	    <li class="set"><a href="#slides" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li> -->
+	    <li class="set"><a href="#gallery" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
+	    <li class="set"><a href="#evolution" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
+	    <li class="set"><a href="#colophon" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
+	</ol>
+</nav>
+
+<div id="amp_overlay" class="overlay" style="display:none;" onclick="$(this).fadeOut();">
 	<h3 class="a t r intro" onclick="$('#amp_overlay').fadeOut();">&#10006;</h3>
 	<div class="container inner">
 		<div id="disqus_thread" class="bgwht bxshw"></div>

@@ -1,4 +1,5 @@
 /*
+/*
 * A.mphibio.us public site theme V1.0
 * Copyright 2013, @cliveMoore @Treefrog
 * http://a.mphibio.us
@@ -14,9 +15,20 @@
 @font-face { font-family: 'allerbold'; src: url('../fonts/aller/aller_bd-webfont.eot'); src: url('../fonts/aller/aller_bd-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/aller/aller_bd-webfont.woff') format('woff'), url('../fonts/aller/aller_bd-webfont.ttf') format('truetype'), url('../fonts/aller/aller_bd-webfont.svg#allerbold') format('svg'); font-weight: normal; font-style: normal; } @font-face { font-family: 'allerbold_italic'; src: url('../fonts/aller/aller_bdit-webfont.eot'); src: url('../fonts/aller/aller_bdit-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/aller/aller_bdit-webfont.woff') format('woff'), url('../fonts/aller/aller_bdit-webfont.ttf') format('truetype'), url('../fonts/aller/aller_bdit-webfont.svg#allerbold_italic') format('svg'); font-weight: normal; font-style: normal; } @font-face { font-family: 'alleritalic'; src: url('../fonts/aller/aller_it-webfont.eot'); src: url('../fonts/aller/aller_it-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/aller/aller_it-webfont.woff') format('woff'), url('../fonts/aller/aller_it-webfont.ttf') format('truetype'), url('../fonts/aller/aller_it-webfont.svg#alleritalic') format('svg'); font-weight: normal; font-style: normal; } @font-face { font-family: 'aller_lightregular'; src: url('../fonts/aller/aller_lt-webfont.eot'); src: url('../fonts/aller/aller_lt-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/aller/aller_lt-webfont.woff') format('woff'), url('../fonts/aller/aller_lt-webfont.ttf') format('truetype'), url('../fonts/aller/aller_lt-webfont.svg#aller_lightregular') format('svg'); font-weight: normal; font-style: normal; } @font-face { font-family: 'aller_lightitalic'; src: url('../fonts/aller/aller_ltit-webfont.eot'); src: url('../fonts/aller/aller_ltit-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/aller/aller_ltit-webfont.woff') format('woff'), url('../fonts/aller/aller_ltit-webfont.ttf') format('truetype'), url('../fonts/aller/aller_ltit-webfont.svg#aller_lightitalic') format('svg'); font-weight: normal; font-style: normal; } @font-face { font-family: 'allerregular'; src: url('../fonts/aller/aller_rg-webfont.eot'); src: url('../fonts/aller/aller_rg-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/aller/aller_rg-webfont.woff') format('woff'), url('../fonts/aller/aller_rg-webfont.ttf') format('truetype'), url('../fonts/aller/aller_rg-webfont.svg#allerregular') format('svg'); font-weight: normal; font-style: normal; }
 
 
+/* base */
+body
+{
+	background-color: #efefef;
+}
+#navbar
+{
+	z-index: 9999;
+}
+
 /* Link-o-matic theme overrides
 ================================================== */
 
+/*
 a, 
 a:visited
 {
@@ -37,60 +49,7 @@ p a:visited
 {
 	line-height: inherit;
 }
-
-/* Site Styles
-================================================== */
-
-* html body,
-html,
-body
-{
-	/* These styles are handy for making sticky footers
-	/* Feel free to delete these if you really want */
-	height: 100%;
-	min-height: 100%;
-}
-
-body
-{
-	background: #ededed url(../images/bgs/natural_paper.png) 0 0 repeat;
-	color: #4d4d4d;
-	text-shadow: #fff 0 1px 1px; /* for older browsers */
-	text-shadow: rgba(255,255,255,.4) 0 1px 1px;
-}
-
-/* Theme Helper rules
-================================================== */
-.whtt,
-.orgt
-{
-	color: #fff;
-	text-shadow: 0 -1px 0 #000;
-}
-.orgt
-{
-	color: #f6921e;
-}
-.dgryt
-{
-	color: #4d4d4d;
-}
-.bgwht
-{
-	background: #fff;
-}
-.bgorg
-{
-	background: #f6921e;
-}
-
-.bxshw
-{
-	box-shadow: 
-		rgba(0,0,0,.2)0 0 10px,
-		rgba(0,0,0,.4)0 0 5px,
-		rgba(0,0,0,.6)0 0 2px;
-}
+*/
 
 /* Typography
 /* These are additional styles for this site only
@@ -98,10 +57,11 @@ body
 /* Using proportional font sizes for proper cascade
 ================================================== */
 
+/*
 h1, h2, h3, h4, h5, h6
 {
 	color: #181818;
-	font-family: "Aller", "Lucida Grande", "Lucida Sans", Lucida, "Helvetica Neue", Arial, sans-serif;
+	font-family: "allerlight", "Lucida Grande", "Lucida Sans", Lucida, "Helvetica Neue", Arial, sans-serif;
 	text-shadow:
 		rgba(0,0,0,.4)0 0 1px,
 		rgba(0,0,0,.6)0 0 1px,
@@ -150,7 +110,6 @@ h4
 h5,
 .intro 
 {
-	/* Often used for as you can imagine some call out text */
 	font-size: 1.3em;
 }
 
@@ -275,10 +234,12 @@ blockquote cite
 	font-style: normal;
 }
 
+*/
 
 /* Download Button Styles
 ================================================== */
           
+/*
 .dotted
 {
 	padding: 5px;
@@ -366,10 +327,12 @@ blockquote cite
 		rgba(255,255,255,.6) 0 1px 2px,
 		inset rgba(0,0,0,.4) 0 0 2px;
 }
+*/
 
 /* Navigation Styles
 ================================================== */
 
+/*
 #to_top
 {
 	position: fixed;
@@ -475,13 +438,14 @@ blockquote cite
 {
 	z-index: 1006;
 }
-.horizontal > li > a
+.mainnav > li > a
 {
 	padding: .25em .865em;
+	font-size: .862em;
 	color: #ffffff;
 }
 
-.horizontal > li > ul
+.mainnav > li > ul
 {
     position: absolute;
 	height: 0;
@@ -496,7 +460,7 @@ blockquote cite
 	display: none;
 }
 
-.horizontal > li:hover > ul
+.mainnav > li:hover > ul
 {
 	height: auto;
 	display: block;
@@ -521,7 +485,7 @@ blockquote cite
 		rgba(0,0,0,.4) 0 0 2px;
 	
 }
-.horizontal.b > li > ul
+.mainnav.b > li > ul
 {
     position: absolute;
 	top: 500px;	
@@ -529,14 +493,14 @@ blockquote cite
 }
 
 
-.horizontal > li > ul,
-.horizontal > li > ul > li
+.mainnav > li > ul,
+.mainnav > li > ul > li
 {
 	margin-bottom: 0;
 	padding-bottom: 0;
 }
 
-.horizontal > li > ul > li > a
+.mainnav > li > ul > li > a
 {
 	display: block;
 	padding: .325em .825em;
@@ -549,13 +513,18 @@ blockquote cite
 }
 
 
-.horizontal > li > ul > li:hover > a
+.mainnav > li > ul > li:hover > a
 {
 	background: #ccc;	
 	background: rgba(0,0,0,.6);
 	color: #fff;
 }
-
+.mainnav.branded
+{
+	padding-left: 11px;
+	margin: 0;
+}
+*/
 
 /* Parallax Styles
 /* Spinning the shovel... because it's cool
@@ -568,7 +537,9 @@ blockquote cite
 #gallery,
 #evolution
 {
-/* 	height: 900px; */
+	padding: 0 0 2.6em 0;
+	height: 900px;
+/*
 	margin-bottom: 300px;
 	border-bottom: 10px solid #000;
 	-o-box-shadow:
@@ -596,8 +567,18 @@ blockquote cite
 		rgba(0,0,0,.6) 0 0 6px,
 		rgba(0,0,0,.4) 0 0 2px,
 		rgba(0,0,0,.2) 0 2px 2px;
+*/
 }
 
+#intro
+{
+	padding-top: 3em;
+}
+#how_its_made .container
+{
+/* 	margin-top: 100px; */
+}
+/*
 #intro
 {
 	background-color:#fff;
@@ -618,6 +599,7 @@ blockquote cite
 	margin-top: 1em;
 	color: #fff;
 }
+*/
 
 #what_is_it
 {
@@ -625,13 +607,16 @@ blockquote cite
 		url(../images/bg-sky.png) 0 0 repeat-x,
 		url(../images/bgs/project_paper_a.png) 0 0 repeat;
 	color: white;
+/*
 	height: 900px;
 	margin: 0 auto;
 	overflow: hidden;
 	padding: 0;
 	color: #333;
+*/
 }
 
+/*
 #how_its_made
 {
 	background: url(../images/bgs/tiny_grid.png) 0 0 repeat;
@@ -650,34 +635,38 @@ blockquote cite
 	z-index: 101;
 }
 
-#intro_right .icon
-{
-	position: relative;
-	top:25px;
-}
-
-#intro_right iframe
-{
-	z-index: 900;
-}
-
 #intro_left h2
 {
 	margin-bottom: .325em;
 	line-height: 1.1;
+}
+*/
+#intro_right .icon
+{
+top: 25px;
+}
+a.dotted.more
+{
+display: block;
+text-decoration: none;
+}
+#wrp
+{
+	height: 900px;
+	position: absolute;
+	width: 600px;
 }
 .bg,
 .bg2,
 .bg3,
 .bg4
 {
-	height: 1200px;
+	height: 900px;
 	margin: 0 auto;
 	padding: 0;
 	position: absolute;
 	width: 600px;
 }
-
 #how_its_made .bg
 {
 	background: url(../images/CSS3_Badge_512.png) 25% 50%  no-repeat fixed;
@@ -709,7 +698,7 @@ blockquote cite
 {
 	background: url(../images/bgs/brillant.png) 0 50% repeat;
 }
-
+/*
 #gallery #container
 {
 	width: 960px;
@@ -770,11 +759,12 @@ blockquote cite
 	margin: 5% auto;
 	padding: 1.6em;
 }
+*/
 
 #forkme
 {
 	position: fixed;
-	top: 30px;
+	top: 0px;
 	left: 0;
 	border: 0;
 	z-index: 1005;
@@ -840,11 +830,21 @@ blockquote cite
 ================================================== */
 
 	/* Smaller than standard 960 (devices and browsers) */
-	@media only screen and (max-width: 959px) {
+	@media only screen and (max-width: 959px), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
+		#forkme /* Kill it before it grows */
+		{
+			display: none;
+			visibility: hidden;
+		}
 	}
 
 	/* Tablet Portrait size to standard 960 (devices and browsers) */
-	@media only screen and (min-width: 768px) and (max-width: 959px) {
+	@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+	}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {
 
 		#forkme /* Kill it before it grows */
 		{
@@ -853,14 +853,23 @@ blockquote cite
 		}
 	}
 
-	/* All Mobile Sizes (devices and browser) */
-	@media only screen and (max-width: 767px) {
-	}
-
 	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 	@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+		#forkme /* Kill it before it grows */
+		{
+			display: none;
+			visibility: hidden;
+		}
 	}
 
 	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 	@media only screen and (max-width: 479px) {
+
+		#forkme /* Kill it before it grows */
+		{
+			display: none;
+			visibility: hidden;
+		}
 	}
+*/
