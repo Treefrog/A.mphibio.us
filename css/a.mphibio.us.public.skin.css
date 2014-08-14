@@ -650,6 +650,17 @@ blockquote cite
 	z-index: 101;
 }
 
+#intro_right .icon
+{
+	position: relative;
+	top:25px;
+}
+
+#intro_right iframe
+{
+	z-index: 900;
+}
+
 #intro_left h2
 {
 	margin-bottom: .325em;
