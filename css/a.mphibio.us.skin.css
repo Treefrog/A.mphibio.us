@@ -570,14 +570,13 @@ blockquote cite
 */
 }
 
-#intro
+#intro,
+#more_than_a_grid,
+#galery
 {
-	padding-top: 3em;
+	padding-top: 50px;
 }
-#how_its_made .container
-{
-/* 	margin-top: 100px; */
-}
+
 /*
 #intro
 {
