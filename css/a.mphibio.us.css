@@ -1303,9 +1303,11 @@ ul.nav {
     float: none;
     padding: .5em .865em;
     font-size: 1em;
-    color: #ffffff;
     text-decoration: none;
+/*
+    color: #ffffff;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+*/
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
     -o-transition: all 0.3s ease-out;
