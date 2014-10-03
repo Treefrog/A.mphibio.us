@@ -2301,6 +2301,7 @@ Class Name                        Shorthand                    Styles
 .container table td.sixteen {
     width: 940px;
 }
+/*
 .container .one-third.col,
 .container table th.one-third,
 .container table td.one-third {
@@ -2311,16 +2312,19 @@ Class Name                        Shorthand                    Styles
 .container table td.two-thirds {
     width: 620px;
 }
+*/
 .container .fluid .one-third.col {
-    width: 31.11%;
+    width: 31.89%;
     margin-left: 1%;
     margin-right: 1%;
 }
+/*
 .container .two-thirds.col,
 .container table th.two-thirds,
 .container table td.two-thirds {
     width: 620px;
 }
+*/
 /* Offsets */
 
 .container .push_one {
@@ -2421,7 +2425,7 @@ Class Name                        Shorthand                    Styles
 ================================================== */
 
 .container .one-third.col.padded {
-    width: 31.25%;
+    width: 31.1875%;
 }
 .container .two-thirds.col {
     width: 66%;
@@ -2440,7 +2444,7 @@ Class Name                        Shorthand                    Styles
     margin-right: 1%;
 }
 .container .one-quarter.col.padded {
-    width: 22.875%;
+    width: 22.825%;
 }
 .container .half.col {
     width: 49%;
@@ -2451,12 +2455,12 @@ Class Name                        Shorthand                    Styles
     width: 47.875%;
 }
 .container .three-quarters.col {
-    width: 74.5%;
+    width: 74.125%;
     margin-left: 1%;
     margin-right: 1%;
 }
 .container .three-quarters.col.padded {
-    width: 72.875%;
+    width: 72.85%;
 }
 .container .one-third.col.padded,
 .container .two-thirds.col.padded,
