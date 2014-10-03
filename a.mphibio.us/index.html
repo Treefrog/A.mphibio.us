@@ -54,21 +54,6 @@
 <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
 <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
 
-<style>
-.pager span,
-.pager a
-{
-	padding: 0.2em 0.3em;
-}
-.pager-counter,
-.pager-nav
-{
-	float: left;
-}
-.pager-nav ul {list-style: none; display: inline;margin: 0;}
-.pager-nav ul li {display: inline;}
-</style>
-
 </head>
 <body>
 	<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
@@ -76,17 +61,17 @@
      <!-- Add your site or application content here -->
         
     	<header id="amp_header" role="banner" class="row">
-	        <div class="container">
+	        <div class="container focus">
 	        	<h1>Hello World</h1>
 	        </div>
     	</header>
     	<section id="amp_content" role="main" class="row">
-	        <div class="container" role="main">
-	        <div class=""><div class="pager "><span class="pager-counter">Showing 1 - 100 of 718 </span><div class="pager-nav"><a class="LEAP_next-link" href="/bizadmin/list.lasso?sk=100">Next</a><ul><li><span class="active">1</span></li><li><a href="/bizadmin/list.lasso?sk=100">2</a></li><li><a href="/bizadmin/list.lasso?sk=200">3</a></li><li><a href="/bizadmin/list.lasso?sk=300">4</a></li><li><a href="/bizadmin/list.lasso?sk=400">5</a></li><li><a href="/bizadmin/list.lasso?sk=500">6</a></li><li><a href="/bizadmin/list.lasso?sk=600">7</a></li><li><a href="/bizadmin/list.lasso?sk=700">8</a></li></ul> <a class="LEAP_next-link" href="/bizadmin/list.lasso?sk=100">Next</a> </div></div></div>
+	        <div class="container focus" role="main">
+	        	<button class="modal_opener" amp-target="eventDetail">Open</button>
 	        </div>
     	</section>
     	<footer id="amp_footer" class="row">
-	        <div class="container">
+	        <div class="container focus">
 	        </div>
     	</footer>
 
@@ -96,13 +81,21 @@
 	<script src="js/plugins.js"></script>	
 	<script src="js/scripts.js"></script>
 	
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-        var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(g,s)}(document,'script'));
-    </script>
-    
-</body>
+
+<div id="eventDetail" class="overlay">
+	<div class="modal">
+		<header style="background:#cecece;">
+			<button class="button right rmr modal_kill" amp-target="eventDetail" type="button">X</button>
+			<h3>Header</h3>
+		</header>
+		<section>
+			...
+		</section>
+		<footer>
+			<button id="eventDetailActionBtn" type="button" class="">Action</button>
+			<button type="reset" class="modal_kill" amp-target="eventDetail">Stäng</button>
+		</footer>
+	</div>
+</div>
+	</body>
 </html>

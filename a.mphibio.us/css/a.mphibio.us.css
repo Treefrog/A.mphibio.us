@@ -883,7 +883,7 @@ input[type="file"],
     cursor: pointer;
     line-height: normal;
     padding: .625em;
-    background-color: #fdfdfd;
+    background-color: #efefef;
     border: 1px solid transparent;
     /*
     background-image:
@@ -1589,6 +1589,91 @@ ul.nav {
 .progress_bar>.progress {
     width: 10%;
 }
+/* General Modals
+================================================== */
+
+.overlay {
+	width:100%;
+	height:100%;
+	display:none;
+	position:fixed;
+	top:0;
+	left:0;
+	right: 0;
+	bottom:0;
+	z-index:9999;
+	background-color: #efefef;
+	background-color: rgba(255,255,255,0.5);
+	overflow: auto;
+}
+.overlay.show
+{
+	display: block;
+}
+.overlay .modal {
+	background:#FFF;
+	border-radius: 6px;
+	box-shadow: 0 0 12px #555;
+	box-shadow: rgba(0,0,0,.4) 0 0 12px;
+	margin:1em auto;
+	position:relative;
+	min-width:500px;
+	min-height:200px;
+	width: 90%;
+	max-width: 940px;
+	*height:500px;
+	overflow:auto;
+	z-index:99999;
+	margin-top: 15%;
+}
+.overlay .modal.medium
+{
+	width: 60%;
+}
+
+.overlay .modal.small
+{
+	width: 30%;
+}
+
+.overlay .modal header,
+.overlay .modal section,
+.overlay .modal footer
+{
+	padding:10px 20px;
+}
+.overlay .modal footer
+{
+	position: absolute;
+	bottom: 0;
+}
+.overlay .modal header h3
+{
+	margin: 0;
+}
+.focus
+{
+	-webkit-filter: blur(0);
+	filter: blur(0);
+	opacity: 1;
+	-webkit-transition: all 600ms ease-out;
+	-moz-transition: all 600ms ease-out;
+	-o-transition: all 600ms ease-out;
+	-ms-transition: all 600ms ease-out;
+	transition: all 600ms ease-out;
+}
+.focus.blur
+{
+	-webkit-filter: blur(1px);
+	filter: blur(1px);
+	opacity: 0.9;
+	-webkit-transition: all 400ms ease-in;
+	-moz-transition: all 400ms ease-in;
+	-o-transition: all 400ms ease-in;
+	-ms-transition: all 400ms ease-in;
+	transition: all 400ms ease-in;
+}
+
 /* #Forms
 ================================================== */
 
@@ -1985,14 +2070,8 @@ Class Name                        Shorthand                    Styles
 .f {
     position: fixed;
 }
-.left,
-.l {
-    float: left;
-}
-.right,
-.r {
-    float: right;
-}
+.left,								.l						{float:left;margin-left: 0 !important;}
+.right,								.r						{float:right;margin-right: 0 !important;}
 .align_left,
 .al {
     text-align: left;
