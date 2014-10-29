@@ -183,18 +183,6 @@ h6
 			#ca7819,
 			#f6921e;
 		);
-	
-	filter:
-		progid:DXImageTransform.Microsoft.gradient(
-			startColorStr=#ca7819,
-			EndColorStr=#f6921e
-		);
-		 
-	-ms-filter:
-		progid:DXImageTransform.Microsoft.gradient(
-			startColorStr=#ca7819,
-			EndColorStr=#f6921e
-		);
 }
 
 h2 .adot
@@ -433,6 +421,35 @@ margin: 0 0 0 1em;
 ol.linenums li 
 {
 	border-left: 1px solid gold;
+}
+
+.glyph
+{
+	float: left;
+	width: 210px;
+	margin-right: 10px;
+}
+.glyph input
+{
+	width: 4em;
+	background: transparent;
+	float: left;
+}
+.glyph input.unitRight
+{
+	font-family: entypo;
+	width: 2em;
+	text-align: right;
+}
+
+.glyph:nth-child(4n)
+{
+	margin-right: 0;
+}
+
+.glyph .hidden-true
+{
+	display: none;
 }
 
 /* Nav-o-matic

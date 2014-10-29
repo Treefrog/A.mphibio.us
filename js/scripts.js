@@ -1,10 +1,10 @@
 /*!
-* A.mphibio.us  V1.0.0-a.2
-* Copyright 2013, @cliveMoore @Treefrog
+* A.mphibio.us  Relesase Candidate 2.0a
+* Copyright 2014, @cliveMoore @Treefrog
 * http://a.mphibio.us
 * Free to use under the MIT license.
 * http://www.opensource.org/licenses/mit-license.php
-* 03/21/2013
+* 10/29/2014
 *
 */
 
@@ -114,10 +114,7 @@ amp.mobilelisteners = function() {
 		* Mobile browser specific listeners are placed here 
 		* *** NOT *** executed by desktop browsers. See amp.desktoplisteners instead.
 		* ================================================================== */
-	$('body').on('click', 'a[href^="tel:"]', function() {
-		$(this).attr('href', 
-			$(this).attr('href').replace(/^tel:/, 'callto:'));
-	});
+
 };
 
 amp.desktoplisteners = function() {
@@ -143,16 +140,6 @@ $(document).ready(function() {
 		* These are site specific for the a.mphibio.us public site
 		* ================================================================== */			
 		$.localScroll();
-		
-		/*
-		$('.set').click(function(){
-					$('#navbar').removeClass('a').removeClass('b').addClass('f').addClass('t');
-				});
-		
-				$('.reset').click(function(){
-					$('#navbar').removeClass('f').removeClass('t').addClass('b').addClass('a');
-				});
-		*/
 	
 	/* ==================================================================
 		* These are added for the parallax effect
@@ -191,7 +178,7 @@ $(document).ready(function() {
 		* This is added for the isotope gallery
 		* using css3 transitions only
 		* in true progressive enhancement style
-		* You don't know, what you don't know
+		* You don't know, what you don't know...
 		* ================================================================== */
 		
 		var $container = $('#container');
@@ -209,7 +196,6 @@ $(document).ready(function() {
 			}
 		});
 		
-		
 		var $optionSets = $('.option-set'),
 		
 		$optionLinks = $optionSets.find('a');
@@ -220,6 +206,7 @@ $(document).ready(function() {
 			if ( $this.hasClass('selected') ) {
 			return false;
 		}
+		
 		var $optionSet = $this.parents('.option-set');
 		
 			$optionSet.find('.selected').removeClass('selected');

@@ -50,30 +50,33 @@
 <link rel="stylesheet" href="css/a.mphibio.us.css">
   
 <script src="js/js/modernizr-2.6.2.min.js"></script>
+<script src="js/js/prefixfree.min.js"></script>
 
 <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
 <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
 
 </head>
 <body>
-	<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+	<!--[if lt IE 7]>
+		<p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
+	<![endif]-->
 	
      <!-- Add your site or application content here -->
         
-    	<header id="amp_header" role="banner" class="row">
-	        <div class="container focus">
-	        	<h1>Hello World</h1>
-	        </div>
-    	</header>
-    	<section id="amp_content" role="main" class="row">
-	        <div class="container focus" role="main">
-	        	<button class="modal_opener" amp-target="eventDetail">Open</button>
-	        </div>
-    	</section>
-    	<footer id="amp_footer" class="row">
-	        <div class="container focus">
-	        </div>
-    	</footer>
+	<header id="amp_header" role="banner" class="row">
+        <div class="container focus">
+        	<h1>Hello World</h1>
+        </div>
+	</header>
+	<section id="amp_content" role="main" class="row">
+        <div class="container focus" role="main">
+        	<button class="modal_opener" amp-target="eventDetail">Open</button>
+        </div>
+	</section>
+	<footer id="amp_footer" class="row">
+        <div class="container focus">
+        </div>
+	</footer>
 
   
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -81,21 +84,22 @@
 	<script src="js/plugins.js"></script>	
 	<script src="js/scripts.js"></script>
 	
-
-<div id="eventDetail" class="overlay">
-	<div class="modal">
-		<header style="background:#cecece;">
-			<button class="button right rmr modal_kill" amp-target="eventDetail" type="button">X</button>
-			<h3>Header</h3>
-		</header>
-		<section>
-			...
-		</section>
-		<footer>
-			<button id="eventDetailActionBtn" type="button" class="">Action</button>
-			<button type="reset" class="modal_kill" amp-target="eventDetail">Stäng</button>
-		</footer>
+     <!-- Sample Modal Structure -->
+	<div id="amp_overlay" class="overlay">
+		<div class="modal">
+			<header>
+				<button class="button right rmr modal_kill" amp-target="amp_overlay" type="button">X</button>
+				<h3>Modal Header</h3>
+			</header>
+			<section>
+				...
+			</section>
+			<footer>
+				<button type="button" class="">Action</button>
+				<button type="reset" class="modal_kill" amp-target="amp_overlay">Cancel</button>
+			</footer>
+		</div>
 	</div>
-</div>
+	
 	</body>
 </html>

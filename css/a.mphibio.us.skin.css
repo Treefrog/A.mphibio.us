@@ -25,6 +25,11 @@ body
 	z-index: 9999;
 }
 
+section
+{
+	padding-top: 3em;
+}
+
 /* Link-o-matic theme overrides
 ================================================== */
 
@@ -537,7 +542,7 @@ blockquote cite
 #gallery,
 #evolution
 {
-	padding: 0 0 2.6em 0;
+	padding: 2.6em 0;
 	height: 900px;
 /*
 	margin-bottom: 300px;
