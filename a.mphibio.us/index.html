@@ -70,7 +70,7 @@
 	</header>
 	<section id="amp_content" role="main" class="row">
         <div class="container focus" role="main">
-        	<button class="modal_opener" amp-target="eventDetail">Open</button>
+        	<button class="modal_opener" amp-target="amp_overlay">Open</button>
         </div>
 	</section>
 	<footer id="amp_footer" class="row">
@@ -88,7 +88,7 @@
 	<div id="amp_overlay" class="overlay">
 		<div class="modal">
 			<header>
-				<button class="button right rmr modal_kill" amp-target="amp_overlay" type="button">X</button>
+				<span class="icon-cross2 large right rmr modal_kill" amp-target="amp_overlay"></span>
 				<h3>Modal Header</h3>
 			</header>
 			<section>
@@ -97,6 +97,7 @@
 			<footer>
 				<button type="button" class="">Action</button>
 				<button type="reset" class="modal_kill" amp-target="amp_overlay">Cancel</button>
+				<button type="submit" class="">Action</button>
 			</footer>
 		</div>
 	</div>

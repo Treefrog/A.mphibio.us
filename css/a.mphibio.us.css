@@ -670,6 +670,11 @@ h6
 	font-weight: bold;
 }
 
+.large
+{
+	font-size: 2em;
+}
+
 .subheader
 {
 	color: #777;
