@@ -1133,11 +1133,11 @@ ol.slats li a p span.meta
 
 table
 {
-	width: 100%;
+	width: 99.9%;
 	margin: 1.3em 0;
 }
 
-table caption
+table.amp caption
 {
 	color: #747474;
 	font-style: italic;
@@ -1146,37 +1146,37 @@ table caption
 	padding-bottom: 0.825em;
 }
 
-table td,
-table th
+table.amp td,
+table.amp th
 {
 	margin: 0;
 	padding: 0.3em 0.425em;
 	text-align: left;
 }
 
-table td
+table.amp td
 {
 	border-top: 1px solid #cfcfcf;
 }
 
-table th
+table.amp th
 {
 	font-weight: bold;
 	text-shadow: #fff 0 1px 0;
 	border-top: 0px;
 }
 
-table thead th
+table.amp thead th
 {
 	border-bottom: 2px solid #cfcfcf;
 }
 
-table tfoot th
+table.amp tfoot th
 {
 	border-top: 3px double #cfcfcf;
 }
 
-table tfoot th
+table.amp tfoot th
 {
 	background: #ffffff;
 	font-weight: bold;
@@ -1188,19 +1188,19 @@ td.no-wrap
 	white-space: nowrap;
 }
 
-table.amp thead th
+table.amp.stripped thead th
 {
 	background: #efefef;
 }
 
-table.amp tr.odd td
+table.amp.stripped tr.odd td
+{
+	background: #efefef;
+}
+
+table.amp.stripped tr.even td
 {
 	background: #fff;
-}
-
-table.amp tr.even td
-{
-	background: #efefef;
 }
 
 /* Images
