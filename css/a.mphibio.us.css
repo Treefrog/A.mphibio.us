@@ -1,5 +1,5 @@
 /*!
-* A.mphibio.us  Relesase Candidate 2.0a
+* A.mphibio.us  1.5
 * Copyright 2014, @cliveMoore @Treefrog
 * http://a.mphibio.us
 * Free to use under the MIT license.
@@ -5253,44 +5253,55 @@ only screen and (min-device-pixel-ratio: 1.5)
 /* #Clearing
 ================================================== */
 
-/* Self Clearing Goodness */
 
-.container:after {
-	content: "\0020";
-	display: block;
-	height: 0;
-	clear: both;
-	visibility: hidden;
-}
-
-/* Use clearfix (cfx shorthand) class on parent to clear nested columns,
-or wrap each row of col in a <div class="row"> makes sense doesn't it? */
-
+/** A new micro clearfix hack – Nicolas Gallagher 
+ * http://nicolasgallagher.com/micro-clearfix-hack/
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after,
+.container:before,
+.container:after,
 .clearfix:before,
 .clearfix:after,
 .cfx:before,
 .cfx:after,
 .row:before,
-.row:after {
-	content: '\0020';
-	display: block;
-	overflow: hidden;
-	visibility: hidden;
-	width: 0;
-	height: 0;
+.row:after
+{
+    content: " "; /* 1 */
+    display: table; /* 2 */
 }
 
-.row:after,
+.cf:after,
+.container:after,
 .clearfix:after,
-.cfx:after {
-	clear: both;
+.cfx:after,
+.row:after
+{
+    clear: both;
 }
 
-.row,
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf
+.container,
+.clearfix,
 .cfx,
-.clearfix {
-	*zoom: 1;
+.row
+{
+    *zoom: 1;
 }
+
 /* You can also use a <br(or <hr>) class="clear"> to clear columns */
 
 .clear {
@@ -5301,6 +5312,7 @@ or wrap each row of col in a <div class="row"> makes sense doesn't it? */
 	width: 0;
 	height: 0;
 }
+
 /* #Tooltip CSS
 ================================================== */
 

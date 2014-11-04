@@ -1,10 +1,10 @@
 /*!
-* A.mphibio.us  V1.0.1
-* Copyright 2013, @cliveMoore @Treefrog
+* A.mphibio.us  V1.5
+* Copyright 2014, @cliveMoore @Treefrog
 * http://a.mphibio.us
 * Free to use under the MIT license.
 * http://www.opensource.org/licenses/mit-license.php
-* 04/17/2013
+* 10/31/2014
 *
 */
 
