@@ -1,0 +1,408 @@
+
+
+/* Theme CSS Table of Contents
+   ==========================================================================
+   
+   1. Base Theme Colours
+   2. Typography & Lists
+   3. Navigation / #navbar
+   4. Masthead / #hero_panel
+   5. Content / #amp_content
+   6. Secondary Content / #leftcolumn
+   7. Sidebar / #sidebar
+   8. RSS / #rss
+   9. Search / #search
+   10. Boxes / .box
+   11. Sideblog / #sideblog
+   12. Advertisements / .ads
+   13. Footer / #footer
+   
+   ========================================================================== */
+   
+/* ------------------------------------------------------------------
+	
+[1. Base Theme Colours]
+
+*/
+
+body
+{
+	font-family: 'helvetica nueue', helvetica, arial, sans-serif;
+	color: #323232;
+}
+
+.w_bg
+{
+	background-color: #ffffff;
+}
+
+.lg_bg
+{
+	background-color: #f1f1f1;
+}
+
+.k_bg
+{
+	background-color: #252525;
+	color: #fff;
+}
+
+.g_bg
+{
+	background-color: #beb442;
+	color: #fff;
+}
+
+.b_bg
+{
+	background-color: #4a697f;
+	color: #fff;
+}
+
+.w_bg h3
+{
+	color: #4a697f;
+}
+   
+/* ------------------------------------------------------------------
+	
+[2. Typography]
+
+*/
+h1,
+h2,
+h3,
+.upper
+{
+	text-transform: uppercase;
+}
+
+ul.custom
+{
+	font-size: 1.4em;
+	list-style: none;
+	color: #beb442;
+}
+
+ul.custom li
+{
+	margin-bottom: 0.5em;
+}
+
+ul.custom li:before
+{
+	font-size: 0.8em;
+	color: #beb442;
+	font-family: 'entypo';
+	content: '\e6d0';
+}
+
+/* ------------------------------------------------------------------
+	
+[3. Navigation]
+
+*/
+#navbar
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 60px;
+}
+.horizontal>li>a
+{
+	color: #fff;
+	padding: 20px 0 18px;
+}
+
+.horizontal>li>a
+{
+	text-align: center;
+	width: 90px;
+}
+.horizontal>li:first-child>a
+{
+	width: 32px;
+}
+
+.horizontal>li>a:hover
+{
+	color: #beb442;
+}
+.horizontal>li>a:before
+{
+	display: block;
+	position: absolute;
+	top: -13px;
+	width: 90px;
+	height: 13px;
+	background-color: #4a697f;
+	content: '';
+}
+.horizontal>li:first-child>a:before
+{
+	width: 32px;
+}
+.horizontal>li:hover>a:before
+{
+	top: auto;
+	bottom: 0;
+}
+
+/* Drop down styles */
+.horizontal > li > ul > li > a,
+.horizontal > li > ul > li > ul > li > a
+{
+	display: block;
+	font-weight: normal;
+	background: #252525;
+	background: rgba(37, 37, 37, 0.8);
+	color: #fff;
+}
+.horizontal > li > ul > li > a:hover,
+.horizontal > li > ul > li > ul > li > a:hover
+{
+	background: #252525;
+	background: rgba(37, 37, 37, 1);
+	color: #beb442;
+}
+
+/* Drop down caret edits */
+
+.horizontal > li:hover > ul:before,
+.horizontal > li > ul > li:hover > ul:before
+{
+	border-color: #252525 transparent;
+	border-width: 0 10px 10px 10px;
+	top: -10px;
+	left: 20%;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+.horizontal > li > ul > li:hover > ul:before
+{
+	top: 10px;
+	left: -10px;
+	border-color: transparent #323232;
+	border-width: 10px 10px 10px 0;
+}
+
+/* ------------------------------------------------------------------
+	
+[3. Masthead]
+
+*/
+
+#hero_panel,
+#masthead
+{
+	margin-top: 60px;
+}
+#masthead
+{
+	height: 200px;
+	overflow: hidden;
+}
+
+#hero_panel
+{
+	height: 425px;
+}
+#hero_panel .featurette
+{
+	padding: 1.3em;
+	margin-left: -1.3em;
+	background-color: #888;
+	background-color: rgba(0,0,0,0.4);
+	color: #fff;
+	margin-top: 180px;
+}
+#hero_panel h1,
+#masthead h1
+{
+	display: none;
+}
+#hero_panel .featurette h2
+{
+	text-transform: none;
+	font-size: 1.2em;
+	margin: 0;
+}
+#hero_panel .featurette + button
+{
+	margin-top: -1.3em;
+}
+#hero_panel figure
+{
+	z-index: -1;
+}
+
+/* ------------------------------------------------------------------
+	
+[4. Content]
+
+*/
+
+header.banner h2
+{
+	margin: 1em 0;
+}
+
+/* ------------------------------------------------------------------
+	
+[5. Secondary Content]
+
+*/
+
+figure.pull_top
+{
+	margin-top: -120px;
+	box-shadow: 0 0 6px rgba(0,0,0,0.4);
+}
+
+/* ------------------------------------------------------------------
+	
+[6. Buttons]
+
+*/
+
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"]
+{
+/*
+	background-color: #252525;
+	border-color: #252525;
+	color: #fff;
+*/
+}
+
+.button:active,
+.button:focus,
+button:active,
+button:focus,
+input[type="submit"]:active,
+input[type="submit"]:focus,
+input[type="reset"]:active,
+input[type="reset"]:focus,
+input[type="button"]:active,
+input[type="button"]:focus
+{
+	background-color: #4a697f;
+}
+
+.button.k_btn,
+button.k_btn,
+input[type="submit"].k_btn,
+input[type="reset"].k_btn,
+input[type="button"].k_btn
+{
+	background-color: #252525;
+	border-color: #252525;
+	color: #fff;
+}
+
+.button.k_btn:hover,
+button.k_btn:hover,
+input[type="submit"].k_btn:hover,
+input[type="reset"].k_btn:hover,
+input[type="button"].k_btn:hover
+{
+	background-color: #585858;
+/* 	border-color: #4c4b4b; */
+	
+}
+
+.button.k_btn:active,
+.button.k_btn:focus,
+button.k_btn:active,
+button.k_btn:focus,
+input[type="submit"].k_btn:active,
+input[type="submit"].k_btn:focus,
+input[type="reset"].k_btn:active,
+input[type="reset"].k_btn:focus,
+input[type="button"].k_btn:active,
+input[type="button"].k_btn:focus
+{
+	background-color: #252525;
+	color: #beb442;
+	border-color: #beb442;
+}
+
+.button.g_btn,
+button.g_btn,
+input[type="submit"].g_btn,
+input[type="reset"].g_btn,
+input[type="button"].g_btn
+{
+	background-color: #beb442;
+	border-color: #beb442;
+	color: #fff;
+}
+
+.button.g_btn:hover,
+button.g_btn:hover,
+input[type="submit"].g_btn:hover,
+input[type="reset"].g_btn:hover,
+input[type="button"].g_btn:hover
+{
+	background-color: #d8d28e;
+	
+}
+
+.button.g_btn:active,
+.button.g_btn:focus,
+button.g_btn:active,
+button.g_btn:focus,
+input[type="submit"].g_btn:active,
+input[type="submit"].g_btn:focus,
+input[type="reset"].g_btn:active,
+input[type="reset"].g_btn:focus,
+input[type="button"].g_btn:active,
+input[type="button"].g_btn:focus
+{
+	background-color: #4a697f;
+	border-color: #4a697f;
+}
+
+/* ------------------------------------------------------------------
+	
+[6. Form Elements]
+
+*/
+
+/* ------------------------------------------------------------------
+	
+[6. Footer Content]
+
+*/
+
+#amp_footer,
+#amp_footer a
+{
+	color: #fff;
+	text-decoration: none;
+}
+#amp_footer a:hover,
+#amp_footer a:focus
+{
+	color: #beb442;
+}
+
+/* ------------------------------------------------------------------
+	
+[6. Modal Overwrites]
+
+*/
+
+.overlay .modal header
+{
+	color: #fff;
+	background-color: #252525;
+	background-image: none;
+}

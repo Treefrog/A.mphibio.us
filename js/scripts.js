@@ -63,50 +63,105 @@ amp.bindlisteners = function() {
 	$('table td:last-child').addClass('last');
 	$('table th:first-child').addClass('first');
 	$('table th:last-child').addClass('last');
+	$('ul li:first-child').addClass('first');
 	$('ul li:last-child').addClass('last');
 	
 	
-	$('nav li').click(function(){
+		$(function(){
+		var d = 'placeholder' in document.createElement('input');
+		if (!d){
+			$('input[placeholder]').each(function(){
+				$(this).val(element.attr('placeholder')).addClass('placeholder');
+				}).bind('focus',function(){
+					if ($(this).val() == element.attr('placeholder')){
+						$(this).val('').removeClass('placeholder');
+						}
+		}).bind('blur',function(){
+				if ($(this).val() === ''){
+					$(this).val(element.attr('placeholder')).addClass('placeholder');
+				}
+			});
+		}
+	});
+		
+	$(function () {
+		$('.checkall').on('click', function () {
+			$(this).closest('fieldset').find(':checkbox').prop('checked', this.checked);
+		});
+	});
+	
+	$('#nav li').click(function(){
 		if ($(this).hasClass('active')) {
 		} else {
-			$('nav li').removeClass('active');
+			$('#nav li').removeClass('active');
 			$(this).addClass('active');
 			/* I May use this later
 			$(content).show().addClass('active').siblings().hide().removeClass('active'); */
 		}
 	});
-		
+
 	$('.tabs li a').click(function(){
-		var content = $(this).attr('href');
+		var content = '#'+$(this).attr('amp-tab-content');
 		if ($(this).hasClass('active') && content.length) {
 		} else {
 			$('.tabs li a').removeClass('active');
 			$(this).addClass('active');
 			$(content).show().addClass('active').siblings().hide().removeClass('active');
 		}
+		return false;
 	});
-	
+
 	$('.options_select').change(function(){
+		var target = '';
 		$('.options_div').each(function(){
-			$(this).css('display','none');
+			$(this).addClass('hide');
 		});
-		var target = '#options_' + $('.options_select').val();
+		var target = '.options_div.' + $(this).val();
+		console.log(target);
 		if( $(target).length > 0 ){
-			$(target).css('display','block');
+			$(target).removeClass('hide');
 		}
 	});
 	
-	$('.openWhat').click(function(){
-		var thisOfCourse = $(this).attr("rel");
-		if(jQuery('#'+$(this).attr("rel")).hasClass('hide')){
-			jQuery('#'+thisOfCourse+'').slideDown('fast');
-			jQuery('#'+thisOfCourse+'').removeClass('hide');
+
+	$('.opener').click(function(){
+		var thisOfCourse = $(this).attr('amp-target');
+		if($('#'+$(this).attr('amp-target')).hasClass('hide')){
+			$('#'+thisOfCourse+'').removeClass('hide');
 		} else {
-			jQuery('#'+thisOfCourse+'').slideUp('fast');
-			jQuery('#'+thisOfCourse+'').addClass('hide');
+			$('#'+thisOfCourse+'').addClass('hide');
 		}
 	});
 
+	$('.modal_opener').on( 'click', (function(){
+		var thisOfCourse = $(this).attr('amp-target');
+		if($('#'+$(this).attr('amp-target')).hasClass('show')){
+			$('body').css('overflow','auto');
+			$('#'+thisOfCourse+'').removeClass('show');
+			$('.focus').removeClass('blur');
+		} else {
+			$('body').css('overflow','hidden');
+			$('#'+thisOfCourse+'').addClass('show').css('overflow','auto');
+			$('.focus').addClass('blur');
+			
+			var content = '#'+$(this).attr('amp-tab-content');
+			var contenttabheader = '#trigger_'+$(this).attr('amp-tab-content');
+			if ($(contenttabheader).hasClass('active') && content.length) {
+			} else {
+				$('.tabs li a').removeClass('active');
+				$(contenttabheader).addClass('active');
+				$(content).show().addClass('active').siblings().hide().removeClass('active');
+			}
+			
+		}
+	}));
+
+	$('.modal_kill').on( 'click', (function(){
+		var killIt = $(this).attr('amp-target');
+			$('body').css('overflow','auto');
+			$('#'+killIt+'').removeClass('show');
+			$('.focus').removeClass('blur');
+	}));
 };
 
 amp.mobilelisteners = function() {
@@ -140,96 +195,4 @@ $(document).ready(function() {
 		* These are site specific for the a.mphibio.us public site
 		* ================================================================== */			
 		$.localScroll();
-	
-	/* ==================================================================
-		* These are added for the parallax effect
-		* 
-		* parallax(xPosition, speedFactor, outerHeight) options:
-		* xPosition - Horizontal position of the element
-		* inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
-		* outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
-		* ================================================================== */
-		var sqoptions = {
-			autoPlay: false,
-			nextButton: true,
-			prevButton: true,
-			preloader: true,
-			navigationSkipThreshold: 1000,
-			fadeFrameWhenSkipped: false
-		};
-		var sequence = $("#sequence").sequence(sqoptions).data("sequence");
-		
-		sequence.afterLoaded = function(){
-			$(".prev, next").fadeIn(500);
-		};
-
-		$('body').parallax("50%", 0.4);
-		$('#intro').parallax("50%", 2.6);
-		$('#what_is_it').parallax("50%", 0.6);
-		$('#how_its_made').parallax("50%", 0.3);
-		$('.bg').parallax("40%", 0.4);
-		$('.bg2').parallax("40%", 0.8);
-		$('.bg3').parallax("40%", 1.2);
-		$('.bg4').parallax("40%", 3.2);
-		
-		
-	
-	/* ==================================================================
-		* This is added for the isotope gallery
-		* using css3 transitions only
-		* in true progressive enhancement style
-		* You don't know, what you don't know...
-		* ================================================================== */
-		
-		var $container = $('#container');
-	
-		$container.isotope(
-			{
-			itemSelector : '.element',
-			getSortData : {
-				symbol : function( $elem ) {
-				return $elem.attr('data-symbol');
-				},
-				category : function( $elem ) {
-				return $elem.attr('data-category');
-				}
-			}
-		});
-		
-		var $optionSets = $('.option-set'),
-		
-		$optionLinks = $optionSets.find('a');
-		
-		$optionLinks.click(function(){
-			var $this = $(this);
-			// don't proceed if already selected
-			if ( $this.hasClass('selected') ) {
-			return false;
-		}
-		
-		var $optionSet = $this.parents('.option-set');
-		
-			$optionSet.find('.selected').removeClass('selected');
-			$optionSet.find('.active').removeClass('active');
-			$this.addClass('selected');
-			$this.parent().addClass('active');
-		
-			// make option object dynamically, i.e. { filter: '.my-filter-class' }
-			var options = {},
-			key = $optionSet.attr('data-option-key'),
-			value = $this.attr('data-option-value');
-			// parse 'false' as false boolean
-			value = value === 'false' ? false : value;
-			options[ key ] = value;
-			if ( key === 'layoutMode' && typeof changeLayoutMode === 'function' ) {
-			// changes in layout modes need extra logic
-			changeLayoutMode( $this, options );
-			} else {
-			// otherwise, apply new options
-			$container.isotope( options );
-		}
-		
-		return false;
-		});	
-
 });

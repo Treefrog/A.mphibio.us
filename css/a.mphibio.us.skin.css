@@ -531,6 +531,19 @@ blockquote cite
 }
 */
 
+.horizontal > li > ul > li > a,
+.horizontal > li > ul > li > ul > li > a
+{
+	border-top: 1px solid #fefefe;
+	border-bottom: 1px solid #efefef;
+}
+.horizontal > li > ul > li > a:hover,
+.horizontal > li > ul > li > ul > li > a:hover
+{
+	border-top: 1px solid #005583;
+	border-bottom: 1px solid #0080c6;
+}
+
 /* Parallax Styles
 /* Spinning the shovel... because it's cool
 ================================================== */

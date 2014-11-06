@@ -613,6 +613,7 @@ h5,
 h6
 {
 	font-weight: normal;
+	margin: 0;
 	margin-bottom: 0.3em;
 }
 
@@ -641,19 +642,16 @@ h1 small
 h2
 {
 	font-size: 2em;
-	margin: 0.83em 0;
 }
 
 h3
 {
 	font-size: 1.6em;
-	margin: 1em 0;
 }
 
 h4
 {
 	font-size: 1.3em;
-	margin: 1.33em 0;
 }
 
 h5,
@@ -1088,15 +1086,17 @@ ol.slats li a
 	text-decoration: none;
 }
 
+/*
 ol.slats li a:hover
 {
 	opacity: 0.8;
 	filter: alpha(opacity=80);
 }
+*/
 
 ol.slats li a h3
 {
-	font-weight: bold;
+/* 	font-weight: bold; */
 	line-height: 1.1;
 }
 
@@ -1118,6 +1118,7 @@ ol.slats.image li a p
 /* There is one small trick to catch you up here
 	you'll need to adjust this left margin based on the width
 	of your image plus your desired margin padding and borders etc. */
+	
 	margin: 0 0 0 100px;
 	color: #555;
 }
@@ -1412,8 +1413,8 @@ input[type="file"],
 	cursor: pointer;
 	line-height: normal;
 	padding: .625em;
-	background-color: #fdfdfd;
-	border: 3px solid #4d4d4d;
+	background-color: #f1f1f1;
+	border: 1px solid #4d4d4d;
 	-webkit-transition: all 0.3s ease-out;
 	-moz-transition: all 0.3s ease-out;
 	-o-transition: all 0.3s ease-out;
@@ -1443,7 +1444,7 @@ input[type="file"]:hover,
 	color: #1b378c;
 	background-color: #fff;
 	background-image: none;
-	border: 3px solid #1b378c;
+	border: 1px solid #1b378c;
 }
 
 .button:active,
@@ -1458,7 +1459,7 @@ input[type="file"]:active,
 .filter_nav>dd>a:active
 {
 	color: #fff;
-	border: 3px solid #7485b9;
+	border: 1px solid #7485b9;
 	background-color: #1b378c;
 }
 
@@ -1784,21 +1785,10 @@ ul.nav
 	transition: all 0.3s ease-out;
 }
 
-#navigation .horizontal>li>a
-{
-	border-right: 1px solid #0080c6;
-	border-left: 1px solid #005583;
-}
-
 .horizontal>li>a:hover
 {
 	background: #89ac4c;
 	background: rgba(0, 0, 0, 0.1);
-}
-
-#navbar .horizontal > li > a
-{
-	padding: .25em .865em;
 }
 
 .horizontal > li > ul,
@@ -1821,8 +1811,6 @@ ul.nav
 	font-weight: bold;
 	text-decoration: none;
 	white-space: nowrap;
-	border-top: 1px solid #fefefe;
-	border-bottom: 1px solid #efefef;
 }
 
 .horizontal > li > ul > li > a,
@@ -1837,8 +1825,6 @@ ul.nav
 	background: #0080c6;
 	background: rgba(0, 128, 198, 1);
 	color: #fff;
-	border-top: 1px solid #005583;
-	border-bottom: 1px solid #0080c6;
 }
 
 .horizontal > li > ul
@@ -1849,7 +1835,7 @@ ul.nav
 	width: auto;
 	margin-left: 0;
 	margin-top: 0;
-	border: 1px solid #cfcfcf;
+/* 	border: 1px solid #cfcfcf; */
 	-webkit-box-shadow: 0 1px 9px rgba(0, 0, 0, 0.25);
 	-moz-box-shadow: 0 1px 9px rgba(0, 0, 0, 0.25);
 	box-shadow: 0 1px 9px rgba(0, 0, 0, 0.25);
@@ -1908,7 +1894,7 @@ ul.nav
 	z-index: 5005;
 	height: 0;
 	width: auto;
-	border: 1px solid #cfcfcf;
+/* 	border: 1px solid #cfcfcf; */
 	-webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
 	-moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
 	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
@@ -5293,7 +5279,7 @@ only screen and (min-device-pixel-ratio: 1.5)
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
  */
-.cf
+.cf,
 .container,
 .clearfix,
 .cfx,

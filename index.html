@@ -47,11 +47,11 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="apple-mobile-web-app-title" content="A.mphibio.us">
 
-<link rel="stylesheet" href="css/sequencejs-theme.sliding-horizontal-parallax.css">
-<link rel="stylesheet" href="css/flexslider.css">
+<link rel="stylesheet" href="css/lib/sequencejs-theme.sliding-horizontal-parallax.css">
+<link rel="stylesheet" href="css/lib/flexslider.css">
 <link rel="stylesheet" href="css/a.mphibio.us.css">
 <!-- <link rel="stylesheet" href="css/a.mphibio.us.public.skin.css"> -->
-<link rel="stylesheet" href="css/a.mphibio.us.min.skin.css">
+<link rel="stylesheet" href="css/a.mphibio.us.skin.css">
   
 <script src="js/libs/modernizr-2.6.2.min.js"></script>
 <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
@@ -331,7 +331,7 @@ A.mphibio.us uses lightweight, basic styles as its foundation. It is ready to ad
 			            <li><a href="http://www.sequencejs.com" title="Sequence.js">Sequence.js</a> and <a href="https://github.com/IanLunn/jQuery-Parallax" title="Parallax.js">parallax.js</a> for parallax effects and a whole lot more!</li>
 			            <li><a href="http://www.subtlepatterns.com/" title="Background Textures">Subtle Patterns</a> | Free textures for your next web project</li>
 			            <li><a href="http://downloads.dvq.co.nz" title="Large Background Images">Hand Crafted Wood</a> | <sub>DESIGNED BY DIGITAL VISIONS QUEENSTOWN</sub></li>
-			            <li>A.mphibo.us base styles inspired by the work of <a href="https://twitter.com/jezhawk">Jen Hawkyard</a> and <a href="https://twitter.com/gabbycosco">Gabrielle Cosco</a></li>
+			            <li>A.mphibio.us base styles inspired by the work of <a href="https://twitter.com/jezhawk">Jen Hawkyard</a></li>
 			            
 			        </ol>
 			        
@@ -474,16 +474,116 @@ postion:fixed;top:0;left:0;right:0;
 <script src="js/plugins.js"></script>
 
 <script src="js/scripts.js"></script>
-  <script type="text/javascript">
-    $(window).load(function(){
-      $('.flexslider').flexslider({
-        animation: "slide",
-        start: function(slider){
-          $('body').removeClass('loading');
-        }
-      });
-    });
-  </script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+		
+	/* ==================================================================
+		* These are added for the parallax effect
+		* 
+		* parallax(xPosition, speedFactor, outerHeight) options:
+		* xPosition - Horizontal position of the element
+		* inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
+		* outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
+		* ================================================================== */
+		var sqoptions = {
+			autoPlay: false,
+			nextButton: true,
+			prevButton: true,
+			preloader: true,
+			navigationSkipThreshold: 1000,
+			fadeFrameWhenSkipped: false
+		};
+		var sequence = $("#sequence").sequence(sqoptions).data("sequence");
+		
+		sequence.afterLoaded = function(){
+			$(".prev, next").fadeIn(500);
+		};
+
+		$('body').parallax("50%", 0.4);
+		$('#intro').parallax("50%", 2.6);
+		$('#what_is_it').parallax("50%", 0.6);
+		$('#how_its_made').parallax("50%", 0.3);
+		$('.bg').parallax("40%", 0.4);
+		$('.bg2').parallax("40%", 0.8);
+		$('.bg3').parallax("40%", 1.2);
+		$('.bg4').parallax("40%", 3.2);
+		
+		
+	
+	/* ==================================================================
+		* This is added for the isotope gallery
+		* using css3 transitions only
+		* in true progressive enhancement style
+		* You don't know, what you don't know...
+		* ================================================================== */
+		
+		var $container = $('#container');
+	
+		$container.isotope(
+			{
+			itemSelector : '.element',
+			getSortData : {
+				symbol : function( $elem ) {
+				return $elem.attr('data-symbol');
+				},
+				category : function( $elem ) {
+				return $elem.attr('data-category');
+				}
+			}
+		});
+		
+		var $optionSets = $('.option-set'),
+		
+		$optionLinks = $optionSets.find('a');
+		
+		$optionLinks.click(function(){
+			var $this = $(this);
+			// don't proceed if already selected
+			if ( $this.hasClass('selected') ) {
+			return false;
+		}
+		
+		var $optionSet = $this.parents('.option-set');
+		
+			$optionSet.find('.selected').removeClass('selected');
+			$optionSet.find('.active').removeClass('active');
+			$this.addClass('selected');
+			$this.parent().addClass('active');
+		
+			// make option object dynamically, i.e. { filter: '.my-filter-class' }
+			var options = {},
+			key = $optionSet.attr('data-option-key'),
+			value = $this.attr('data-option-value');
+			// parse 'false' as false boolean
+			value = value === 'false' ? false : value;
+			options[ key ] = value;
+			if ( key === 'layoutMode' && typeof changeLayoutMode === 'function' ) {
+			// changes in layout modes need extra logic
+			changeLayoutMode( $this, options );
+			} else {
+			// otherwise, apply new options
+			$container.isotope( options );
+		}
+		
+		return false;
+		});	
+
+});
+
+</script>
+
+<script type="text/javascript">
+$(window).load(function(){
+  $('.flexslider').flexslider({
+    animation: "slide",
+    start: function(slider){
+      $('body').removeClass('loading');
+    }
+  });
+});
+</script>
+
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
