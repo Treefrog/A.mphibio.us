@@ -64,6 +64,18 @@
      <!-- Add your site or application content here -->
         
 	<header id="amp_header" role="banner" class="row">
+		<div id="nav_toggle" class="k_bg">
+			<div id="search_wrap" class="r hmr">
+				<form action="/" class="search">
+					<fieldset>
+						<input type="text" placeholder="Search">
+						<input type="submit" class="icon-search" value="">
+					</fieldset>
+				</form>
+			</div>
+			<a href="#navbar"><span class="icon-list2"></span></a>
+			<a href="home.html"><img src="assets/theme_logo.png" class="logo left"></a>
+		</div>
 		<div id="masthead">
 			<div class="container focus">
         		<h1>SEO Title Not shown on screen</h1>
@@ -82,7 +94,7 @@
 	        </div>
 		</header>
 		<article class="lg_bg">
-			<div class="container focus w_bg">
+			<div class="container focus">
 				<div class="col nine">
 					<div class="inset dpt">
 						<p>Bacon ipsum dolor amet venison short loin shankle beef bacon pancetta, meatloaf landjaeger tail prosciutto sirloin. Beef t-bone pig, chuck drumstick doner sausage. Rump turkey sirloin strip steak, kevin filet mignon pork loin chicken andouille shankle bacon beef ribs chuck. Short loin short ribs tri-tip meatball ham pastrami chicken salami hamburger. Filet mignon rump sausage ground round jowl short loin.</p>
@@ -103,25 +115,28 @@
 					</figure>
 					<button class="g_btn full" type="button">Call to Action</button>
 					<ol class="slats">
-					<li class="row">
-						<a href="#">
-							<h4>This is the title</h4>
-						</a>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="meta">August 10, 2011</span></p>
-					</li>
-					<li class="row">
-						<a href="#">
-							<h4>This is the title</h4>
-						</a>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="meta">August 10, 2011</span></p>
-					</li>
-					<li class="row">
-						<a href="#">
-							<h4>This is the title</h4>
-						</a>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="meta">August 10, 2011</span></p>
-					</li>
-				</ol>
+						<li class="row">
+							<a href="#">
+								<h4>This is the title</h4>
+							</a>
+								<p>Bacon ipsum dolor amet venison short loin shankle beef bacon pancetta, meatloaf landjaeger tail prosciutto sirloin <span class="meta">August 10, 2011</span></p>
+								<a class="small button r" href="#">Read More <span class="icon-arrow-right"></span></a>
+						</li>
+						<li class="row">
+							<a href="#">
+								<h4>This is the title</h4>
+							</a>
+								<p>Rump turkey sirloin strip steak, kevin filet mignon pork loin chicken andouille shankle bacon beef ribs chuck <span class="meta">August 10, 2011</span></p>
+								<a class="small button r" href="#">Read More <span class="icon-arrow-right"></span></a>
+						</li>
+						<li class="row">
+							<a href="#">
+								<h4>This is the title</h4>
+							</a>
+								<p>Filet mignon rump sausage ground round jowl short loin <span class="meta">August 10, 2011</span></p>
+								<a class="small button r" href="#">Read More <span class="icon-arrow-right"></span></a>
+						</li>
+					</ol>
 				</div>				
 			</div>
 		</article>
@@ -164,8 +179,8 @@
 	<div id="navbar" class="k_bg">
     	<div class="container focus">
         	<div class="row">
-				<a href="home.html"><img src="assets/theme_logo.png" class="logo left"></a>
-				<nav class="left">
+				<a href="home.html"><img src="assets/theme_logo.png" class="logo"></a>
+				<nav>
 					<ul class="mainnav horizontal">
 						<li><a href="home.html"><span class="icon-house"></span></a></li>
 						<li><a href="interior.html">About Us</a>
@@ -185,6 +200,13 @@
 						<li><a href="store.html">Products</a></li>
 						<li><a href="interior.html">Careers</a></li>
 						<li><a href="contact.html">Contact</a></li>
+						<li class="nav_toggle">
+							<a href="#amp_header">
+								<span class="icon-arrow-up7 l hml"></span>
+								To Top 
+								<span class="icon-arrow-up7 r hmr"></span>
+							</a>
+						</li>
 					</ul>
 				</nav>
         	</div>

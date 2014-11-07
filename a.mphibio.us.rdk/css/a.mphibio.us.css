@@ -4,10 +4,46 @@
 * http://a.mphibio.us
 * Free to use under the MIT license.
 * http://www.opensource.org/licenses/mit-license.php
-* 10/31/2014
+* 11/7/2014
 *
 *
+/* CSS Table of Contents
+   ==========================================================================
+   
+   1. Custom Normalize / v3.0.2
+   2. Base Styles and Modified HTML5 Boiler Plate
+   3. Typography
+   4. Content Pea.rs / Common patterns of Markup and style
+   5. Table Styles
+   6. Images
+   7. Messaging, Notifications & Tags
+   8. Buttons
+   9. Tabs (activated by scripts.js)
+   10. Navigation Styles
+   11. Social Media Nav Styles
+   12. Progress Bar
+   13. General Modal Styles
+   14. Forms & Input Styles
+   15. Append/Prepend Icons to Form Elements
+   16. Custom Selects, Checkboxes & Radios
+   17. jQueryUI Datepicker Styles
+   18. Icons by http://www.entypo.com
+   19. Layout Helpers and shorthand classes
+   20. The 960 Grid
+   21. Always Fluid Classes and fluid grid
+   22. Tablet (Portrait) Design for a width of 768px
+   23. Mobile (Portrait) max width of 767px
+   24. Mobile (Landscape) Design for a width of 480px
+   25. Clearing Floats
+   26. Tooltip CSS
+   27. Print CSS
+   
+   ========================================================================== */
+   
 
+/* ==========================================================================
+   1. Custom Normalize / v3.0.2
+   ========================================================================== */
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 
@@ -182,7 +218,7 @@ mark
 small,
 .small
 {
-	font-size: 0.865em;
+	font-size: 0.865em !important;
 }
 
 /**
@@ -516,7 +552,7 @@ th
  *
  *
 /*	==========================================================================
-	Base Styles & Typography
+	2. Base Styles
 	========================================================================== */
 
 html,
@@ -594,7 +630,7 @@ body
 }
 
 /* ==========================================================================
-   Typography
+   3. Typography
    ========================================================================== */
 
 /**
@@ -613,6 +649,7 @@ h5,
 h6
 {
 	font-weight: normal;
+	margin: 0;
 	margin-bottom: 0.3em;
 }
 
@@ -641,19 +678,16 @@ h1 small
 h2
 {
 	font-size: 2em;
-	margin: 0.83em 0;
 }
 
 h3
 {
 	font-size: 1.6em;
-	margin: 1em 0;
 }
 
 h4
 {
 	font-size: 1.3em;
-	margin: 1.33em 0;
 }
 
 h5,
@@ -810,11 +844,6 @@ a:focus
 	color: #000;
 }
 
-#colophon a:hover,
-#colophon a:focus,
-#colophon a:active {
-	color: #fff;
-}
 p a,
 p a:visited {
 	line-height: inherit;
@@ -995,9 +1024,10 @@ dl dd
 }
 
 
-/* Content Pea.rs http://pea.rs/
-	Pears are common patterns of markup & style
-	================================================== */
+/* ==========================================================================
+   4. Content Pea.rs http://pea.rs/
+      Pears are common patterns of markup & style
+   ========================================================================== */
 
 article.aside
 {
@@ -1088,15 +1118,8 @@ ol.slats li a
 	text-decoration: none;
 }
 
-ol.slats li a:hover
-{
-	opacity: 0.8;
-	filter: alpha(opacity=80);
-}
-
 ol.slats li a h3
 {
-	font-weight: bold;
 	line-height: 1.1;
 }
 
@@ -1118,6 +1141,7 @@ ol.slats.image li a p
 /* There is one small trick to catch you up here
 	you'll need to adjust this left margin based on the width
 	of your image plus your desired margin padding and borders etc. */
+	
 	margin: 0 0 0 100px;
 	color: #555;
 }
@@ -1128,16 +1152,17 @@ ol.slats li a p span.meta
 	color: #999;
 }
 
-/* Tables
-================================================== */
+/* ==========================================================================
+   5. Table Styles
+   ========================================================================== */
 
 table
 {
-	width: 100%;
+	width: 99.9%;
 	margin: 1.3em 0;
 }
 
-table caption
+table.amp caption
 {
 	color: #747474;
 	font-style: italic;
@@ -1146,39 +1171,39 @@ table caption
 	padding-bottom: 0.825em;
 }
 
-table td,
-table th
+table.amp td,
+table.amp th
 {
 	margin: 0;
 	padding: 0.3em 0.425em;
 	text-align: left;
 }
 
-table td
+table.amp td
 {
 	border-top: 1px solid #cfcfcf;
 }
 
-table th
+table.amp th
 {
 	font-weight: bold;
 	text-shadow: #fff 0 1px 0;
 	border-top: 0px;
 }
 
-table thead th
+table.amp thead th
 {
+	background-color: #f1f1f1;
 	border-bottom: 2px solid #cfcfcf;
 }
 
-table tfoot th
+table.amp tfoot th
 {
 	border-top: 3px double #cfcfcf;
 }
 
-table tfoot th
+table.amp tfoot th
 {
-	background: #ffffff;
 	font-weight: bold;
 	text-shadow: #fff 0 1px 0;
 }
@@ -1188,23 +1213,29 @@ td.no-wrap
 	white-space: nowrap;
 }
 
-table.amp thead th
+table.amp.stripped thead th
 {
-	background: #efefef;
+	background: #dedede;
 }
 
-table.amp tr.odd td
+table.amp.stripped tr.odd td
+{
+	background: #f3f3f3;
+}
+
+table.amp.stripped tr.even td
 {
 	background: #fff;
 }
 
-table.amp tr.even td
+table.amp.stripped tfoot th
 {
-	background: #efefef;
+	background: #f7f7f7;
 }
 
-/* Images
-================================================== */
+/* ==========================================================================
+   6. Images
+   ========================================================================== */
 
 img
 {
@@ -1235,8 +1266,11 @@ img.swg
 	height: auto;
 }
 
-/* Messaging
-================================================== */
+
+
+/* ==========================================================================
+   7. Messaging
+   ========================================================================== */
 
 .error,
 .attn,
@@ -1302,7 +1336,7 @@ img.swg
 }
 
 .flag,
-.tag
+.amp_tag
 {
 	display: inline;
 	padding: 0.2em 0.6em 0.3em;
@@ -1318,7 +1352,7 @@ img.swg
 }
 /* Adapted from http://css-tricks.com/downloads/css-stuff/ Breadcrumbs with CSS Triangles */
 
-.tag:after
+.amp_tag:after
 {
 	content: " ";
 	display: block;
@@ -1335,7 +1369,7 @@ img.swg
 	z-index: 2;
 }
 
-.tag:before
+.amp_tag:before
 {
 	content: " ";
 	display: block;
@@ -1355,21 +1389,21 @@ img.swg
 
 .notify.sq,
 .flag.sq,
-.tag.sq
+.amp_tag.sq
 {
 	border-radius: 0;
 }
 
 .notify.error,
 .flag.error,
-.tag.error
+.amp_tag.error
 {
 	background-color: #C30300;
 }
 
 .notify.attn,
 .flag.attn,
-.tag.attn
+.amp_tag.attn
 {
 	background-color: #f2a706;
 }
@@ -1382,13 +1416,15 @@ img.swg
 
 .notify:empty,
 .flag:empty,
-.tag:empty
+.amp_tag:empty
 {
 	display: none;
 }
 
-/* Buttons
-================================================== */
+
+/* ==========================================================================
+   8. Buttons
+   ========================================================================== */
 
 .button,
 button,
@@ -1403,8 +1439,6 @@ input[type="file"],
 	position: relative;
 	display: inline-block;
 	margin-top: 0;
-	margin-right: 1.625em;
-	margin-bottom: 1.625em;
 	margin-left: 0;
 	color: #4d4d4d;
 	font-weight: normal;
@@ -1412,8 +1446,8 @@ input[type="file"],
 	cursor: pointer;
 	line-height: normal;
 	padding: .625em;
-	background-color: #fdfdfd;
-	border: 3px solid #4d4d4d;
+	background-color: #f1f1f1;
+	border: 1px solid #4d4d4d;
 	-webkit-transition: all 0.3s ease-out;
 	-moz-transition: all 0.3s ease-out;
 	-o-transition: all 0.3s ease-out;
@@ -1440,10 +1474,10 @@ input[type="button"]:hover,
 input[type="file"]:hover,
 .filter_nav>dd>a:hover
 {
-/* 	color: #1b378c; */
-	background-color: #f0f0f0;
+	color: #1b378c;
+	background-color: #fff;
 	background-image: none;
-	border: 3px solid #1b378c;
+	border: 1px solid #1b378c;
 }
 
 .button:active,
@@ -1458,7 +1492,7 @@ input[type="file"]:active,
 .filter_nav>dd>a:active
 {
 	color: #fff;
-	border: 3px solid #1b378c;
+	border: 1px solid #7485b9;
 	background-color: #1b378c;
 }
 
@@ -1547,8 +1581,10 @@ nav ul:after
 	visibility: hidden;
 }
 
-/* Tabs (activated by scripts.js)
-================================================== */
+/* ==========================================================================
+   9. Tabs (activated by scripts.js)
+   ========================================================================== */
+
 
 ul.tabs
 {
@@ -1699,8 +1735,10 @@ ul.tabs
 {
 	zoom: 1;
 }
-/* Navigation Styles
-================================================== */
+
+/* ==========================================================================
+   10. Navigation Styles
+   ========================================================================== */
 
 nav ul,
 .nav ul,
@@ -1784,21 +1822,10 @@ ul.nav
 	transition: all 0.3s ease-out;
 }
 
-#navigation .horizontal>li>a
-{
-	border-right: 1px solid #0080c6;
-	border-left: 1px solid #005583;
-}
-
 .horizontal>li>a:hover
 {
 	background: #89ac4c;
 	background: rgba(0, 0, 0, 0.1);
-}
-
-#navbar .horizontal > li > a
-{
-	padding: .25em .865em;
 }
 
 .horizontal > li > ul,
@@ -1821,8 +1848,6 @@ ul.nav
 	font-weight: bold;
 	text-decoration: none;
 	white-space: nowrap;
-	border-top: 1px solid #fefefe;
-	border-bottom: 1px solid #efefef;
 }
 
 .horizontal > li > ul > li > a,
@@ -1837,8 +1862,6 @@ ul.nav
 	background: #0080c6;
 	background: rgba(0, 128, 198, 1);
 	color: #fff;
-	border-top: 1px solid #005583;
-	border-bottom: 1px solid #0080c6;
 }
 
 .horizontal > li > ul
@@ -1849,7 +1872,7 @@ ul.nav
 	width: auto;
 	margin-left: 0;
 	margin-top: 0;
-	border: 1px solid #cfcfcf;
+/* 	border: 1px solid #cfcfcf; */
 	-webkit-box-shadow: 0 1px 9px rgba(0, 0, 0, 0.25);
 	-moz-box-shadow: 0 1px 9px rgba(0, 0, 0, 0.25);
 	box-shadow: 0 1px 9px rgba(0, 0, 0, 0.25);
@@ -1908,7 +1931,7 @@ ul.nav
 	z-index: 5005;
 	height: 0;
 	width: auto;
-	border: 1px solid #cfcfcf;
+/* 	border: 1px solid #cfcfcf; */
 	-webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
 	-moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
 	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
@@ -1933,7 +1956,7 @@ ul.nav
 
 .filter_nav>dt
 {
-	border: 3px solid #4d4d4d;
+	border: 1px solid #4d4d4d;
 	padding: 0.5em 0.865em;
 	-webkit-border-bottom-left-radius: 6px;
 	-webkit-border-top-left-radius: 6px;
@@ -2041,8 +2064,11 @@ ul.nav
 	content: '';
 	content: none;
 }
-/* Social Media Nav Styles
-================================================== */
+
+
+/* ==========================================================================
+   11. Social Media Nav Styles
+   ========================================================================== */
 
 .socialnav,
 .socialnav li
@@ -2069,8 +2095,9 @@ ul.nav
 	text-decoration: none;
 }
 
-/*  Progress Bars
-/*============================================= */
+/* ==========================================================================
+   12. Progress Bars
+   ========================================================================== */
 
 .slider dt,
 .slider dd
@@ -2139,8 +2166,10 @@ ul.nav
 	width: 10%;
 }
 
-/* General Modals
-================================================== */
+
+/* ==========================================================================
+   13. General Modals
+   ========================================================================== */
 
 .overlay {
 	width:100%;
@@ -2241,8 +2270,10 @@ ul.nav
 	transition: all 400ms ease-in;
 }
 
-/* #Forms
-================================================== */
+
+/* ==========================================================================
+   14. Forms
+   ========================================================================== */
 
 label
 {
@@ -2354,6 +2385,7 @@ textarea.error
 	background-color: #ffffff;
 	border: 1px solid #C30300;
 	color: #C30300;
+	display: block;
 	-webkit-box-shadow: 0 0 3px rgba(250, 0, 0, .6), 0 0 12px rgba(250, 0, 0, .2);
 	-khtml-box-shadow: 0 0 3px rgba(250, 0, 0, .6), 0 0 12px rgba(250, 0, 0, .2);
 	-moz-box-shadow: 0 0 3px rgba(250, 0, 0, .6), 0 0 12px rgba(250, 0, 0, .2);
@@ -2405,9 +2437,10 @@ label.above
 form.search fieldset input[type="text"]
 {
 	float: left;
-	width: 250px;
+	width: 50%;
 	background: #f5f5f5;
 	border: 1px solid #adadad;
+/*
 	-webkit-border-bottom-right-radius: 0;
 	-webkit-border-top-right-radius: 0;
 	-khtml-border-bottom-right-radius: 0;
@@ -2418,15 +2451,28 @@ form.search fieldset input[type="text"]
 	-o-border-top-right-radius: 0;
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
+*/
 }
 
 form.search fieldset input[type="text"]:focus
 {
 	background: #ffffff;
+	width: 250px;
 }
 
 form.search fieldset input[type="submit"]
 {
+	background: transparent;
+	position: relative;
+	top: 0;
+	left: -1.6em;
+	font-size: 1.6em;
+	margin: 0;
+	padding: 0.3em;
+	border: 1px solid transparent;
+	color: #000;
+	z-index: 5000;
+/*
 	float: left;
 	-webkit-border-bottom-left-radius: 0;
 	-webkit-border-top-left-radius: 0;
@@ -2438,12 +2484,17 @@ form.search fieldset input[type="submit"]
 	-o-border-top-left-radius: 0;
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
+*/
+}
+
+form,
+form fieldset
+{
+	margin-bottom: 0;
 }
 
 form fieldset
 {
-	margin: 0;
-	padding: 0 0 1em 0;
 	font-size: 1.1em;
 }
 
@@ -2457,6 +2508,11 @@ form fieldset.form-actions
 form fieldset.check
 {
 	padding-left: 30%;
+}
+
+form.multi.beside fieldset
+{
+	margin-bottom: 1em;
 }
 
 form.multi.beside fieldset label
@@ -2541,9 +2597,403 @@ form fieldset p.form-help.after
 	margin: -1.5em 0 0 62%;
 }
 
-/* Icons by http://www.entypo.com
-==================================================
+
+/* ==========================================================================
+   15. Custom Form Elements Append/Prend Icon
+   ========================================================================== */
+
+.append_icon
+{
+	padding-right: 1.6em;
+}
+input[type="text"].datepicker,
+input[type="text"].hasDatepicker
+{
+	min-width: 236px;
+}
+input[type="text"].prepend_icon
+{
+	text-indent: 2.8em;
+}
+label.append_to
+{
+	display: inline;
+	position: relative;
+	z-index: 1;
+	top: 0.5em;
+	margin-left: -2.2em;
+}
+label.prepend_to
+{
+	display: inline;
+	position: absolute;
+	z-index: 1;
+	left: 0.2em;
+}
+form.multi.beside fieldset,
+form.multi.beside fieldset .form_group
+{
+	position: relative;
+}
+form.multi.beside fieldset .form_group
+{
+	display: inline-block;
+}
+form.multi.beside label.append_to
+{
+	top: -0.2em;
+	margin-left: -2.2em;
+	width: auto;
+}
+form.multi.beside label.prepend_to
+{
+	top: -0.2em;
+	left: 30%;
+	margin-left: 0.2em;
+	width: auto;
+}
+form.multi.beside .date_picker_set .form_group label
+{
+	width: 40px;
+	padding-right: 0;
+}
+form.multi.beside .date_picker_set .form_group:nth-child(2n) label
+{
+	text-align: center;
+} 
+form.multi.beside .date_picker_set .form_group label.prepend_to
+{
+	margin-top: 0.2em;
+	left: 44px;
+	margin-left: 0;
+}
+form.multi.beside .date_picker_set .form_group:nth-child(2n) label.prepend_to
+{
+	left: 38px;
+} 
+form.multi.beside .date_picker_set .form_group label.append_to
+{
+	margin-left: -3em;
+}
+form.multi.beside .date_picker_set .form_group:nth-child(2n) label.append_to
+{
+	margin-left: -3.2em;
+}
+
+
+.append_to [class^="icon-"],
+.append_to [class*=" icon-"],
+.prepend_to [class^="icon-"],
+.prepend_to [class*=" icon-"]
+{
+	opacity: 0.7;
+	-webkit-transition: opacity 0.3s ease-in;
+	 -moz-transition: opacity 0.3s ease-in;
+	   -o-transition: opacity 0.3s ease-in;
+		  transition: opacity 0.3s ease-in;
+}
+.append_to [class^="icon-"]:hover,
+.append_to [class*=" icon-"]:hover,
+.prepend_to [class^="icon-"]:hover,
+.prepend_to [class*=" icon-"]:hover
+{
+	opacity: 1;
+	-webkit-transition: opacity 0.3s ease-in;
+	 -moz-transition: opacity 0.3s ease-in;
+	   -o-transition: opacity 0.3s ease-in;
+		  transition: opacity 0.3s ease-in;
+}
+
+/* ==========================================================================
+   16. Custom Selects
+   ========================================================================== */
+
+.styled_select,
+.ui_tpicker_timezone
+{
+	font-size: 1em;
+	float: left;
+	height: 1.7em;
+	max-width: 280px;
+	overflow: hidden;
+	margin-left: 0;
+	margin-bottom: 1.1em;
+	background-image: url(../images/styled_elements.png);
+	background-repeat: no-repeat;
+	background-position: right -1px;
+	border: 1px solid #ababab;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	-o-box-shadow: rgba(0, 0, 0, .3) 0 1px 3px inset rgba(255, 255, 255, .2) 0 0 2px;
+	-moz-box-shadow: rgba(0, 0, 0, .3) 0 1px 3px inset rgba(255, 255, 255, .2) 0 0 2px;
+	-khtml-box-shadow: rgba(0, 0, 0, .3) 0 1px 3px inset rgba(255, 255, 255, .2) 0 0 2px;
+	-webkit-box-shadow: rgba(0, 0, 0, .3) 0 1px 3px inset rgba(255, 255, 255, .2) 0 0 2px;
+	box-shadow: rgba(0, 0, 0, .3) 0 1px 3px inset rgba(255, 255, 255, .2) 0 0 2px;
+	-webkit-transition: opacity 0.3s ease;
+	-moz-transition: opacity 0.3s ease;
+	-o-transition: opacity 0.3s ease;
+	transition: opacity 0.3s ease;
+}
+
+.styled_select:hover
+{
+	-o-box-shadow: 0 0 3px rgba(0, 0, 250, .6);
+	-moz-box-shadow: 0 0 3px rgba(0, 0, 250, .6);
+	-webkit-box-shadow: 0 0 3px rgba(0, 0, 250, .6);
+	-khtml-box-shadow: 0 0 3px rgba(0, 0, 250, .6);
+	box-shadow: 0 0 3px rgba(0, 0, 250, .6);
+}
+
+.ui_tpicker_timezone
+{
+	width: 110px;
+	float: none;
+}
+
+.styled_select:active,
+.styled_select:focus
+{
+	background-position: right -38px;
+	border: 1px solid #dcd7d1;
+}
+
+.ui_tpicker_timezone:active,
+.ui_tpicker_timezone:focus
+{
+	background-position: right -38px;
+	border: 1px solid #4c4c4c;
+}
+
+.styled_select select,
+.ui_tpicker_timezone select
+{
+	font-size: 1em;
+	height: 1.6em;
+	margin-bottom: 0;
+	padding-left: 8px;
+	max-width: 248px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	text-indent: 0.01px;
+	text-overflow: "";
+	border-color: transparent;
+	background: transparent;
+	cursor: pointer;
+}
+
+.ui_tpicker_timezone select
+{
+	width: 138px;
+}
+
+.styled_select select::-ms-expand
+{
+	display: none;
+}
+
+/* 
+	Custom Checkboxes and Radios
+	We are using the css3 :root element here
+	so these will only be displayed by competent browsers.
+	Older browsers will use standard radios and checkboxes
+	
 */
+
+:root input[type="checkbox"].custom,
+:root input[type="radio"].custom
+{
+	opacity: 0;
+	position: absolute;
+}
+
+:root input[type="checkbox"].custom + span,
+:root input[type="radio"].custom + span
+{
+	font-family: 'entypo';
+	font-size: 1.2em;
+	position: relative;
+	top: 0.1em;
+	margin-right: 0.3em;
+}
+
+:root input[type="checkbox"].custom + span
+{
+	top: 0.13em;
+}
+
+:root input[type="checkbox"].custom + span:before,
+:root input[type="radio"].custom + span:before
+{
+	color: #39b3cb;
+	-webkit-transition: color 0.3s ease-out;
+	-moz-transition: color 0.3s ease-out;
+	-o-transition: color 0.3s ease-out;
+	transition: color 0.3s ease-out;
+}
+
+:root input[type="checkbox"].custom + span:before
+{
+	content: "\e71d";
+}
+
+:root input[type="radio"].custom + span:before
+{
+	content: "\e71f";
+}
+
+:root input[type="checkbox"].custom:hover + span:before,
+:root input[type="radio"].custom:hover + span:before
+{
+	color: #0f3955;
+	-webkit-transition: color 0.3s ease-out;
+	-moz-transition: color 0.3s ease-out;
+	-o-transition: color 0.3s ease-out;
+	transition: color 0.3s ease-out;
+}
+
+:root input[type="checkbox"].custom:checked + span:before
+{
+	color: #0f3955;
+	content: "\e71c";
+}
+:root input[type="radio"].custom:checked + span:before
+{
+	color: #0f3955;
+	content: "\e71e";
+}
+
+
+/* ==========================================================================
+   7. jQueryUI Datepicker minimum styles
+   ========================================================================== */ 
+   
+.ui-datepicker
+{
+	background: #fff;
+	box-shadow: rgba(0,0,0,0.3) 0 0 4px;
+}
+.ui-datepicker-header
+{
+	padding: 0.2em 0;
+}
+
+.ui-datepicker-title
+{
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    right: 0;
+    text-align: center;
+	z-index: -1;
+}
+
+.ui-datepicker-next,
+.ui-datepicker-prev
+{
+	display: block;
+	height: 22px;
+	width: 22px;
+}
+.ui-icon.ui-icon-circle-triangle-e,
+.ui-icon.ui-icon-circle-triangle-w
+{
+    display: inline-block;
+	text-indent: -9000px;
+}
+.ui-icon.ui-icon-circle-triangle-w
+{
+    float: left;
+}
+.ui-icon.ui-icon-circle-triangle-e
+{
+    float: right;
+}
+
+.ui-icon.ui-icon-circle-triangle-w:after,
+.ui-icon.ui-icon-circle-triangle-e:after
+{
+	position: absolute;
+	top: 0;
+	font-family: 'entypo';
+	display: block;
+	text-indent: 0;
+	font-size: 1.6em;
+
+}
+
+.ui-icon.ui-icon-circle-triangle-w:after
+{
+	content: "\e6c5";
+	left: 3px;
+}
+
+.ui-icon.ui-icon-circle-triangle-e:after
+{
+	content: "\e6c8";
+	left: auto;
+	right: 3px;
+}
+
+.ui-datepicker table
+{
+	margin: 0.3em 0 0;
+	box-shadow: rgba(0,0,0,0.4) 0 0 6px;
+}
+
+.ui-datepicker table thead tr th,
+.ui-datepicker table tbody tr td
+{
+	padding: 0;
+	width: 25px;
+	text-align: center;
+}
+.ui-datepicker table tbody tr:nth-child(odd) td,
+.ui-datepicker table tbody tr:nth-child(even) td
+{
+	background-color: #fefefe;
+	text-align: center;
+}
+.ui-datepicker table thead tr th span,
+.ui-datepicker table tbody tr td span
+{
+	display: block;
+	padding: 0.6em;
+	text-align: center;
+}
+.ui-datepicker table tbody tr td a
+{
+	display: block;
+	padding: 0.6em;
+	text-align: center;
+	
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+.ui-datepicker table tbody tr td a:hover
+{
+	background-color: #39b3cb;
+	
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+.ui-datepicker table tbody tr td a.ui-state-active,
+.ui-datepicker table tbody tr td a.ui-state-active:hover
+{
+	color: #fff;
+	background-color: #39b3cb;
+}
+
+
+/* ==========================================================================
+   18. Icons by http://www.entypo.com
+   ========================================================================== */
+
 @font-face
 {
 	font-family: 'entypo';
@@ -2569,6 +3019,15 @@ form fieldset p.form-help.after
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+.button>[class^="icon-"],
+.button>[class*=" icon-"],
+button>[class^="icon-"],
+button>[class*=" icon-"]
+{
+	position: relative;
+	top: 0.16em;
 }
 
 .icon-phone:before
@@ -3750,102 +4209,12 @@ ul.icons:before
 	font-family: 'entypo-social';
 }
 
-#icons
-{
-	background: #fafafa url(../images/bgs/double_lined.png) 0 0 repeat;
-	box-shadow: inset 0 0 2px #666;
-	padding-top: 1em;
-}
 
-/* Fancy Selects
-================================================== */
+/* ==========================================================================
+   19. Layout Helper Rules
+   ========================================================================== */
 
-.styled_select,
-.ui_tpicker_timezone
-{
-	font-size: 1em;
-	float: left;
-	height: 1.7em;
-	max-width: 280px;
-	overflow: hidden;
-	margin-left: 0;
-	margin-bottom: 1.1em;
-	background-image: url(../images/styled_elements.png);
-	background-repeat: no-repeat;
-	background-position: right -1px;
-	border: 1px solid #ababab;
-	-moz-border-radius: 6px;
-	-webkit-border-radius: 6px;
-	border-radius: 6px;
-	-o-box-shadow: rgba(0, 0, 0, .3) 0 1px 3px inset rgba(255, 255, 255, .2) 0 0 2px;
-	-moz-box-shadow: rgba(0, 0, 0, .3) 0 1px 3px inset rgba(255, 255, 255, .2) 0 0 2px;
-	-khtml-box-shadow: rgba(0, 0, 0, .3) 0 1px 3px inset rgba(255, 255, 255, .2) 0 0 2px;
-	-webkit-box-shadow: rgba(0, 0, 0, .3) 0 1px 3px inset rgba(255, 255, 255, .2) 0 0 2px;
-	box-shadow: rgba(0, 0, 0, .3) 0 1px 3px inset rgba(255, 255, 255, .2) 0 0 2px;
-	-webkit-transition: opacity 0.3s ease;
-	-moz-transition: opacity 0.3s ease;
-	-o-transition: opacity 0.3s ease;
-	transition: opacity 0.3s ease;
-}
-
-.styled_select:hover
-{
-	-o-box-shadow: 0 0 3px rgba(0, 0, 250, .6);
-	-moz-box-shadow: 0 0 3px rgba(0, 0, 250, .6);
-	-webkit-box-shadow: 0 0 3px rgba(0, 0, 250, .6);
-	-khtml-box-shadow: 0 0 3px rgba(0, 0, 250, .6);
-	box-shadow: 0 0 3px rgba(0, 0, 250, .6);
-}
-
-.ui_tpicker_timezone
-{
-	width: 110px;
-	float: none;
-}
-
-.styled_select:active,
-.styled_select:focus
-{
-	background-position: right -38px;
-	border: 1px solid #dcd7d1;
-}
-
-.ui_tpicker_timezone:active,
-.ui_tpicker_timezone:focus
-{
-	background-position: right -38px;
-	border: 1px solid #4c4c4c;
-}
-
-.styled_select select,
-.ui_tpicker_timezone select
-{
-	font-size: 1em;
-	height: 1.6em;
-	margin-bottom: 0;
-	padding-left: 8px;
-	max-width: 248px;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	text-indent: 0.01px;
-	text-overflow: "";
-	border-color: transparent;
-	background: transparent;
-	cursor: pointer;
-}
-
-.ui_tpicker_timezone select
-{
-	width: 138px;
-}
-
-.styled_select select::-ms-expand
-{
-	display: none;
-}
-
-/* Layout Helper Rules
-
+/* 
 Class Name						Shorthand					Styles
 ==================================================================================== */
 
@@ -4135,8 +4504,9 @@ Class Name						Shorthand					Styles
 	left: 0;
 }
 
-/* The Grid ala 960.gs
-================================================== */
+/* ==========================================================================
+   20. The Grid ala 960.gs
+   ========================================================================== */ 
 
 .container
 {
@@ -4457,10 +4827,13 @@ Class Name						Shorthand					Styles
 {
 	margin-left: -950px;
 }
-/* Always Fluid Classes
-/*
-================================================== */
 
+
+
+/* ==========================================================================
+   21. Always Fluid Classes
+   ========================================================================== */ 
+   
 .container .one-fifth.col,
 .container .one-quarter.col,
 .container .one-third.col,
@@ -4797,8 +5170,11 @@ Class Name						Shorthand					Styles
 		margin-right: 0;
 	}
 }
-/* #Tablet (Portrait)Design for a width of 768px
-================================================== */
+
+
+/* ==========================================================================
+   22. Tablet (Portrait) Design for a width of 768px
+   ========================================================================== */ 
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
 	.container
@@ -5106,8 +5482,9 @@ Class Name						Shorthand					Styles
 	}
 }
 
-/*  Mobile (Portrait)
-================================================== */
+/* ==========================================================================
+   23. Mobile (Portrait) max width of 767px
+   ========================================================================== */ 
 
 @media only screen and (max-width: 767px)
 {
@@ -5177,10 +5554,10 @@ Class Name						Shorthand					Styles
 	}
 }
 
-/* Mobile (Landscape)
-================================================== */
 
-/* Note: Design for a width of 480px */
+/* ==========================================================================
+   24. Mobile (Landscape) Design for a width of 480px
+   ========================================================================== */ 
 
 @media only screen and (min-width: 480px) and (max-width: 767px),
 only screen and (min-width: 1536px) and (-webkit-device-pixel-ratio: 2),
@@ -5250,50 +5627,64 @@ only screen and (min-device-pixel-ratio: 1.5)
 		width: 28px;
 	}
 }
-/* #Clearing
-================================================== */
 
-/* Self Clearing Goodness */
+/* ==========================================================================
+   25. Clearing Floats
+   ========================================================================== */ 
 
-.container:after {
-	content: "\0020";
-	display: block;
-	height: 0;
-	clear: both;
-	visibility: hidden;
-}
 
-/* Use clearfix (cfx shorthand) class on parent to clear nested columns,
-or wrap each row of col in a <div class="row"> makes sense doesn't it? */
-
+/** A new micro clearfix hack – Nicolas Gallagher 
+ * http://nicolasgallagher.com/micro-clearfix-hack/
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after,
+.container:before,
+.container:after,
 .clearfix:before,
 .clearfix:after,
 .cfx:before,
 .cfx:after,
 .row:before,
-.row:after {
-	content: '\0020';
-	display: block;
-	overflow: hidden;
-	visibility: hidden;
-	width: 0;
-	height: 0;
+.row:after
+{
+    content: " "; /* 1 */
+    display: table; /* 2 */
 }
 
-.row:after,
+.cf:after,
+.container:after,
 .clearfix:after,
-.cfx:after {
-	clear: both;
+.cfx:after,
+.row:after
+{
+    clear: both;
 }
 
-.row,
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf,
+.container,
+.clearfix,
 .cfx,
-.clearfix {
-	*zoom: 1;
+.row
+{
+    *zoom: 1;
 }
+
 /* You can also use a <br(or <hr>) class="clear"> to clear columns */
 
-.clear {
+.clear
+{
 	clear: both;
 	display: block;
 	overflow: hidden;
@@ -5301,19 +5692,26 @@ or wrap each row of col in a <div class="row"> makes sense doesn't it? */
 	width: 0;
 	height: 0;
 }
-/* #Tooltip CSS
-================================================== */
 
-.icon.tooltip {} .tooltip {
+/* ==========================================================================
+   26. Tooltip CSS
+   ========================================================================== */ 
+
+.icon.tooltip {}
+
+.tooltip
+{
 	display: inline;
 	position: relative;
 }
 
-.tooltip:hover {
+.tooltip:hover
+{
 	text-decoration: none;
 }
 
-.tooltip:hover:after {
+.tooltip:hover:after
+{
 	text-indent: 0;
 	top: 40px;
 	display: block;
@@ -5365,7 +5763,12 @@ or wrap each row of col in a <div class="row"> makes sense doesn't it? */
 	opacity: 0.825;
 	filter: alpha(opacity=80);
 }
-		
+
+
+/* ==========================================================================
+   27. Tooltip CSS
+   ========================================================================== */ 
+   		
 @media print,
 	(-o-min-device-pixel-ratio: 5/4),
 	(-webkit-min-device-pixel-ratio: 1.25),

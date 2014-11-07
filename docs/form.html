@@ -10,7 +10,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>Amphibious | Simply Elegant HTML5/CSS3 Responsive Front End Development Kit | 1.0.1 April 11, 2013</title>
+<title>Amphibious | Simply Elegant HTML5/CSS3 Responsive Front End Development Kit | 1.5.0 November 7, 2014</title>
 <meta name="description" content="A.mphibio.us is a responsive design tool for rapid development has a familiar sixteen column, lightweight 960 grid as its base, but elegantly scales down to downsized browser windows">
 <meta name="keywords" content="css3, html5, responsive, web, design, mobile layout, responsive design">
 
@@ -407,8 +407,8 @@ Where else would you like it to work?&lt;/p&gt;
 				<h4>Search Field</h4>
 					<form action="/" class="search">
 						<fieldset>
-							<input type="text" placeholder="Search" />
-							<input type="submit" class="icon" value="&#128269;" />
+							<input type="text" placeholder="Search">
+							<input type="submit"  class="icon-search" value="">
 						</fieldset>
 					</form>
 				</div>
@@ -459,9 +459,9 @@ Where else would you like it to work?&lt;/p&gt;
 					<fieldset class="radio">
 						<label for="notifications">Notifications</label>
 						<ul>
-							<li><label><input type="radio" name="notifications" /> Send me email</label></li>
-							<li><label><input type="radio" name="notifications" /> Don't send me email</label></li>
-							<li><label><input type="radio" name="notifications" /> Send me flowers</label></li>
+							<li><label><input type="radio" name="notifications" class="custom"><span></span>Send me email</label></li>
+							<li><label><input type="radio" name="notifications" class="custom"><span></span>Don't send me email</label></li>
+							<li><label><input type="radio" name="notifications" class="custom"><span></span>Send me flowers</label></li>
 						</ul>
 					</fieldset>
 				
@@ -476,7 +476,7 @@ Where else would you like it to work?&lt;/p&gt;
 					</fieldset>
 					
 					<fieldset class="check">
-						<label><input type="checkbox" /> I accept the terms of service.</label>
+						<label><input type="checkbox" class="custom"><span></span>I accept the terms of service.</label>
 					</fieldset>
 				
 					<fieldset class="form-actions">
@@ -541,55 +541,32 @@ Where else would you like it to work?&lt;/p&gt;
 			
 		</section>
 		
+		<section id="datepicker_fields" class="hide">
+			<h3>Append Prepend Icons</h3>
+			<p>Like fancy form layouts we do to...</p>
+			
+			<form class="multi beside">
+				<fieldset class="date_picker_set">
+					<fieldset class="form_group">
+						<label for="startdateB">From</label>
+						<input type="text" id="startdateB" class="datepicker prepend_icon">
+						<label for="startdateB" class="prepend_to"><span class="icon-calendar"></span></label>
+					</fieldset>
+					<fieldset class="form_group">
+						<label for="enddateB">To</label>
+						<input type="text" id="enddateB" class="datepicker prepend_icon">
+						<label for="enddateB" class="prepend_to"><span class="icon-calendar"></span></label>
+					</fieldset>
+				</fieldset>
+			</form>
+			
+		</section>
+		
 		<section id="tables">
 			<h3>Table Styles</h3>
-			<p>We hate tables for layout </p>
-			<table width="100%">
-				<caption>Using caption is always a good idea for accessibility; this is a default table</caption>
-				<thead>
-					<tr>
-						<th>TH 1</th>
-						<th>TH Two</th>
-						<th>TH Three</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Col 1</td>
-						<td>Col 2</td>
-						<td>Col 3</td>
-					</tr>
-					<tr>
-						<td>Col 1</td>
-						<td>Col 2</td>
-						<td>Col 3</td>
-					</tr>
-					<tr>
-						<td>Col 1</td>
-						<td>Col 2</td>
-						<td>Col 3</td>
-					</tr>
-					<tr>
-						<td>Col 1</td>
-						<td>Col 2</td>
-						<td>Col 3</td>
-					</tr>
-					<tr>
-						<td>Col 1</td>
-						<td>Col 2</td>
-						<td>Col 3</td>
-					</tr>
-				</tbody>
-				<tfoot>
-					<tr>
-						<th>TF 1</th>
-						<th>TF 2</th>
-						<th>TF 3</th>
-					</tr>
-				</tfoot>
-			</table>
-			
-			<table class="amp" width="100%">
+			<p>We hate tables for layout but they do come in handy when building and application. A.mphibio.us has some default styles to help get you started but they do require you to add the class <kbd>amp</kbd> to the table. We do this on purpose to avoid conflicting table styles with third party plugins like datepickers and calendars you may wish to use in your next project.</p>
+						
+			<table class="amp">
 				<caption>This table has the class "amp" so inehrits certain properties from the base.</caption>
 				<thead>
 					<tr>
@@ -634,8 +611,8 @@ Where else would you like it to work?&lt;/p&gt;
 				</tfoot>
 			</table>
 			
-			<table class="amp ios" width="100%">
-				<caption>This table has the class "amp ios" inehrits both base and theme files.</caption>
+			<table class="amp stripped">
+				<caption>This table has the classes <kbd>amp</kbd> and <kbd>stripped</kbd> so inehrits both base and stripped styles.</caption>
 				<thead>
 					<tr>
 						<th>TH 1</th>
@@ -803,9 +780,16 @@ postion:fixed;top:0;left:0;right:0;
 <script type="text/javascript" src="../js/libs/jquery.flexslider-min.js"></script>
 <script type="text/javascript" src="../js/libs/jquery.isotope.min.js"></script>
 <script type="text/javascript" src="../js/libs/run_prettify.js"></script>
+<script type="text/javascript" src="../js/libs/jquery-ui.min.js"></script>
 <script src="../js/plugins.js"></script>
 
 <script src="../js/scripts.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.datepicker').datepicker();
+	});
+</script>
 
 <script type="text/javascript">
 
