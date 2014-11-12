@@ -422,30 +422,48 @@ $('nav li').click(function(){
 				<p>Some very simple tabs that have dead simple jQuery that hook them up to their corresponding content.</p>
 				<menu>
 					<ul class="tabs">
-						<li><a class="active" href="#simple">Simple</a></li>
-						<li><a href="#lightweight">Lightweight</a></li>
-						<li><a href="#mobileFriendly">Mobile</a></li>
+						<li><a href="#tabmagic" class="active" amp-tab-content="simple">Simple</a></li>
+						<li><a href="#tabmagic" amp-tab-content="lightweight">Lightweight</a></li>
+						<li><a href="#tabmagic" amp-tab-content="mobileFriendly">Mobile</a></li>
 					</ul>
 					<ul class="tabs-content">
-						<li class="active" id="simple">The tabs are clean and simple unordered-list markup and basic CSS.</li>
-						<li id="lightweight">The tabs are cross-browser, but don't need a ton of hacky CSS or markup.</li>
-						<li id="mobileFriendly">The tabs work like a charm even on mobile devices. If there are too many they will stack (it's not completely awesome, but still retains functionality).</li>
+						<li id="simple" class="active">
+							<div class="inset">
+								<p>The tabs are clean and simple unordered-list markup and basic CSS.</p>
+							</div></li>
+						<li id="lightweight">
+							<div class="inset">
+								<p>The tabs are cross-browser, but don't need a ton of hacky CSS or markup.</p>
+							</div></li>
+						<li id="mobileFriendly">
+							<div class="inset">
+								<p>The tabs work like a charm even on mobile devices. If there are too many they will stack (it's not completely awesome, but still retains functionality).</p>
+							</div></li>
 					</ul>
 				</menu>
 					
 				<div class="row mt">
 						<pre class="prettyprint linenums">
 &lt;menu&gt;
-	&lt;ul class=&quot;tabs&quot;&gt;
-		&lt;li&gt;&lt;a class=&quot;active&quot; href=&quot;#simple&quot;&gt;Simple&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&quot;#lightweight&quot;&gt;Lightweight&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&quot;#mobileFriendly&quot;&gt;Mobile&lt;/a&gt;&lt;/li&gt;
-	&lt;/ul&gt;
-	&lt;ul class=&quot;tabs-content&quot;&gt;
-		&lt;li class=&quot;active&quot; id=&quot;simple&quot;&gt;The tabs are clean and simple unordered-list markup and basic CSS.&lt;/li&gt;
-		&lt;li id=&quot;lightweight&quot;&gt;The tabs are cross-browser, but don't need a ton of hacky CSS or markup.&lt;/li&gt;
-		&lt;li id=&quot;mobileFriendly&quot;&gt;The tabs work like a charm even on mobile devices. If there are too many they will stack (it's not completely awesome, but still retains functionality).&lt;/li&gt;
-	&lt;/ul&gt;
+  &lt;ul class=&quot;tabs&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#tabmagic&quot; class=&quot;active&quot; amp-tab-content=&quot;simple&quot;&gt;Simple&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#tabmagic&quot; amp-tab-content=&quot;lightweight&quot;&gt;Lightweight&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#tabmagic&quot; amp-tab-content=&quot;mobileFriendly&quot;&gt;Mobile&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;ul class=&quot;tabs-content&quot;&gt;
+    &lt;li id=&quot;simple&quot; class=&quot;active&quot;&gt;
+      &lt;div class=&quot;inset&quot;&gt;
+        &lt;p&gt;The tabs are clean and simple unordered-list markup and basic CSS.&lt;/p&gt;
+    &lt;/div&gt;&lt;/li&gt;
+    &lt;li id=&quot;lightweight&quot;&gt;
+      &lt;div class=&quot;inset&quot;&gt;
+        &lt;p&gt;The tabs are cross-browser, but don't need a ton of hacky CSS or markup.&lt;/p&gt;
+    &lt;/div&gt;&lt;/li&gt;
+    &lt;li id=&quot;mobileFriendly&quot;&gt;
+      &lt;div class=&quot;inset&quot;&gt;
+        &lt;p&gt;The tabs work like a charm even on mobile devices. If there are too many they will stack (it's not completely awesome, but still retains functionality).&lt;/p&gt;
+    &lt;/div&gt;&lt;/li&gt;
+  &lt;/ul&gt;
 &lt;/menu&gt;
 						</pre>
 						<pre class="prettyprint linenums">
@@ -690,43 +708,57 @@ $('.tabs li a').click(function(){
 					</div>
 				</div>
 			</div>
-			<section id="pagination">		
+			<section id="uxnav" class="row mt">		
 				<div class="col eight first">
 					<h4>Pagination</h4>
-					<nav role="navigation">
-					<ul class="pager_nav">
-						<li>
-							<ul class="button_grp">
-								<li><a class="button first" href="#">First</a></li>
-								<li class="active">1</li>
-								<li><a class="button" href="#">2</a></li>
-								<li><a class="button" href="#">3</a></li>
-								<li><a class="button" href="#">4</a></li>
-								<li><a class="button" href="#">5</a></li>
-								<li><a class="button" href="#">...</a></li>
-								<li><a class="button" href="#">Last</a></li>
-							</ul>
-						</li>
-						<li><input type="text" class="rmb rmt first last col one"> <button type="button" class="button last">Jump</button></li>
-					</ul>
-					</nav>
-					<nav role="navigation">
-						<ul class="button_grp">
-							<li><a class="button first" href="#"><b class="east"></b> Prev</a></li>
-							<li><a class="button last" href="#">Next <b class="west"></b></a></li>
+					<menu role="navigation">
+						<ul class="pager_nav">
+							<li><a class="button" href="#uxnav">First</a></li>
+							<li><span class="button active">1</span></li>
+							<li><a class="button" href="#uxnav">2</a></li>
+							<li><a class="button" href="#uxnav">3</a></li>
+							<li><a class="button" href="#uxnav">4</a></li>
+							<li><a class="button" href="#uxnav">5</a></li>
+							<li><a class="button" href="#uxnav">...</a></li>
+							<li><a class="button" href="#uxnav">Last</a></li>
+							<li><input type="text"><button type="button" class="button">Jump</button></li>
 						</ul>
-					</nav>
+					</menu>
+					
+					<pre class="prettyprint linenums">
+&lt;menu role=&quot;navigation&quot;&gt;
+  &lt;ul class=&quot;pager_nav&quot;&gt;
+    &lt;li&gt;&lt;a class=&quot;button&quot; href=&quot;#&quot;&gt;First&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span class=&quot;button active&quot;&gt;1&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&quot;button&quot; href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&quot;button&quot; href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&quot;button&quot; href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&quot;button&quot; href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&quot;button&quot; href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&quot;button&quot; href=&quot;#&quot;&gt;Last&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;input type=&quot;text&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;button&quot;&gt;Jump&lt;/button&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/menu&gt;
+					</pre>
 				</div>
 				<div class="col eight last">
 					<h4>Filter Nav</h4>
-					<nav>
-						<dl class="filter_nav cfx">
+					<menu role="navigation">
+						<dl class="filter_nav">
 							<dt>Filter by:</dt>
-							<dd class="active"><a href="#">Option 1</a></dd>
-							<dd><a href="#">Option 2</a></dd>
-							<dd><a href="#">Option 3</a></dd>
+							<dd class="active"><a href="#uxnav">Option 1</a></dd>
+							<dd><a href="#uxnav">Option 2</a></dd>
+							<dd><a href="#uxnav">Option 3</a></dd>
 						</dl>
-					</nav>
+					</menu>
+					
+					<h4>Button Group</h4>
+					<menu role="navigation">
+						<ul class="button_grp">
+							<li><a class="button" href="#uxnav"><span class="icon-arrow-left hmr"></span>Prev</a></li>
+							<li><a class="button" href="#uxnav">Next<span class="icon-arrow-right hml"></span></a></li>
+						</ul>
+					</menu>
 				</div>
 			</section>
 		</div>
@@ -846,7 +878,7 @@ postion:fixed;top:0;left:0;right:0;
 						<li><a href="function.html#horizcss">Horiztotal Nav <sub>css</sub></a></li>
 						<li><a href="function.html#breadcrumbs">Breadcrumbs</a></li>
 						<li><a href="function.html#tabmagic">Tabs</a></li>
-						<li><a href="function.html#pagination">Pagination nav</a></li>
+						<li><a href="function.html#uxnav">Pagination nav</a></li>
 					</ul>
 				</li>
 				<li><a href="features.html">Features</a>

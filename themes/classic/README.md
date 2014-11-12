@@ -1,9 +1,9 @@
 Classic theme for A.mphibio.us
 ===============================================
 
-###Classic Black and White Theme for A.mphibio.us
+###Classic Theme for A.mphibio.us
 
-This theme is to provide a quick start to your project.
+This theme is provided for a quick start to your project.
 
 ## Authors
 

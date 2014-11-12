@@ -1,10 +1,10 @@
 /*!
-* A.mphibio.us  1.5.1
+* A.mphibio.us  1.5.1a
 * Copyright 2014, @cliveMoore @Treefrog
 * http://a.mphibio.us
 * Free to use under the MIT license.
 * http://www.opensource.org/licenses/mit-license.php
-* 11/11/2014
+* 12/11/2014
 *
 *
 /* CSS Table of Contents
@@ -1540,9 +1540,11 @@ ul.pager_nav
 {
     list-style: none;
     display: inline-block;
+    margin: 0;
 }
 
-ul.pager_nav li
+ul.pager_nav li,
+ul.button_grp li
 {
 	display: inline;
 	float: none;
@@ -1554,12 +1556,14 @@ ul.pager_nav li input[type="text"]
 	width: 3em;
 }
 
+/*
 ul.button_grp,
 ul.button_grp li
 {
     float: left;
     margin: 0;
 }
+*/
 
 ul.button_grp .button,
 ul.button_grp .active,
@@ -1568,7 +1572,7 @@ ul.button_grp .active,
 .pager_nav .button
 {
     padding: 0.425em;
-    border: 1px solid #dcd7d1;
+/*     border: 1px solid #dcd7d1; */
     margin: 0;
     -webkit-border-radius: 0;
     -khtml-border-radius: 0;
@@ -1583,12 +1587,6 @@ ul.button_grp .active,
 .pager_nav button
 {
     font: -webkit-control;
-}
-
-ul.button_grp .button
-{
-    border-top: 1px solid #ededed;
-    border-left: 1px solid #ededed;
 }
 
 .pager_nav .button.last
@@ -1613,7 +1611,10 @@ ul.button_grp .first.button
 
 /* self clearing nav */
 
-nav ul:after
+nav ul:after,
+nav dl:after,
+menu ul:after,
+menu dl:after
 {
     content: "\0020";
     display: block;
@@ -4494,7 +4495,7 @@ Class Name                      Shorthand                   Styles
 /* Offsets */
 
 .container .push_one
-{
+{	
     margin-left: 60px;
 }
 
@@ -4520,7 +4521,7 @@ Class Name                      Shorthand                   Styles
 
 .container .push_six
 {
-    margin-left: 360px;
+    margin-left: 370px;
 }
 
 .container .push_seven
@@ -4540,7 +4541,7 @@ Class Name                      Shorthand                   Styles
 
 .container .push_ten
 {
-    margin-left: 600px;
+    margin-left: 610px;
 }
 
 .container .push_eleven
@@ -4615,7 +4616,7 @@ Class Name                      Shorthand                   Styles
 
 .container .pull_ten
 {
-    margin-left: -600px;
+    margin-left: -590px;
 }
 
 .container .pull_eleven

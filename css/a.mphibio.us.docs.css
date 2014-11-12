@@ -195,7 +195,10 @@ h2 .adot
 /* Navigation Styles
 ================================================== */
 
-
+#navigation .horizontal>li>a
+{
+	color: #fff;
+}
 .horizontal.branded
 {
 	padding-left: 11px;

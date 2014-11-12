@@ -1,10 +1,10 @@
 /*!
-* A.mphibio.us  V1.5
+* A.mphibio.us  1.5.1a
 * Copyright 2014, @cliveMoore @Treefrog
 * http://a.mphibio.us
 * Free to use under the MIT license.
 * http://www.opensource.org/licenses/mit-license.php
-* 10/31/2014
+* 11/12/2014
 *
 */
 
@@ -20,18 +20,18 @@ var amp = {};
  * ================================================================== */
 amp.init = function() {
 	/* ==================================================================
-	 * cache: uncomment if you wish to enable and add content caching only. 
-	 * ================================================================== */
+		* cache: uncomment if you wish to enable and add content caching only. 
+		* ================================================================== */
 	// amp.cache();
 	
 	/* ==================================================================
-	 * amp.bindlisteners() is an essential function. Do not remove or comment out. 
-	 * ================================================================== */
+		* amp.bindlisteners() is an essential function. Do not remove or comment out. 
+		* ================================================================== */
 	amp.bindlisteners();
 	
 	/* ==================================================================
-	 * Discern mobile or desktop and init specific behaviour for each. 
-	 * ================================================================== */
+		* Discern mobile or desktop and init specific behaviour for each. 
+		* ================================================================== */
 	if (!jQuery.browser.mobile) {
 		amp.desktoplisteners();
 	} else {
@@ -42,18 +42,18 @@ amp.init = function() {
 
 amp.cache = function() {
 	/* ==================================================================
-	 * Add content caching here 
-	 * ================================================================== */
+		* Add content caching here 
+		* ================================================================== */
 	amp.dom = {};
 };
 
 amp.bindlisteners = function() {
 	/* ==================================================================
-	 * Bind Listeners 
-	 * These are bound once the scripts, css and DOM are fully loaded
-	 * ================================================================== */
-	 
-	/* General layoy helpers */
+		* Bind Listeners 
+		* These are bound once the scripts, css and DOM are fully loaded
+		* ================================================================== */
+		
+	/* General layout helpers */
 	$('table td:first-child').addClass('first');
 	$('table tr:nth-child(2n+1)').addClass('odd');
 	$('table tr:nth-child(2n)').addClass('even');
@@ -63,13 +63,10 @@ amp.bindlisteners = function() {
 	$('table td:last-child').addClass('last');
 	$('table th:first-child').addClass('first');
 	$('table th:last-child').addClass('last');
+	$('ul li:first-child').addClass('first');
 	$('ul li:last-child').addClass('last');
 	
-	/* 
-	 * jQuery snippet that globally enables placeholder attribute in older browsers:
-	 *
-	 * ================================================================== */
-	 
+	
 	$(function(){
 		var d = 'placeholder' in document.createElement('input');
 		if (!d){
@@ -161,40 +158,36 @@ amp.bindlisteners = function() {
 
 	$('.modal_kill').on( 'click', (function(){
 		var killIt = $(this).attr('amp-target');
+			$('body').css('overflow','auto');
 			$('#'+killIt+'').removeClass('show');
 			$('.focus').removeClass('blur');
 	}));
-
 };
 
 amp.mobilelisteners = function() {
 	/* ==================================================================
-	 * Mobile browser specific listeners are placed here 
-	 * *** NOT *** executed by desktop browsers. See amp.desktoplisteners instead.
-	 * ================================================================== */
-	$('body').on('click', 'a[href^="tel:"]', function() {
-		$(this).attr('href', 
-			$(this).attr('href').replace(/^tel:/, 'callto:'));
-	});
+		* Mobile browser specific listeners are placed here 
+		* *** NOT *** executed by desktop browsers. See amp.desktoplisteners instead.
+		* ================================================================== */
+
 };
 
 amp.desktoplisteners = function() {
 	/* ==================================================================
-	 * Desktop browser specific listeners are placed here 
-	 * *** NOT *** executed by mobile browsers. See amp.mobilelisteners instead.
-	 * ================================================================== */
+		* Desktop browser specific listeners are placed here 
+		* *** NOT *** executed by mobile browsers. See amp.mobilelisteners instead.
+		* ================================================================== */
 };
 
 $(document).ready(function() {
 	/* ==================================================================
-	 * The document.ready is executed once all scripts and CSS are loaded 
-	 * and the DOM has been readied.
-	 * Generally is used to bind listeners for responsive web
-	 * Generally a good thing to add listeners to the object, 
-	 * however it is ok to be putting listeners directly in here.
-	 * ================================================================== */
+		* The document.ready is executed once all scripts and CSS are loaded 
+		* and the DOM has been readied.
+		* Generally is used to bind listeners for responsive web
+		* Generally a good thing to add listeners to the object, 
+		* however it is ok to be putting listeners directly in here.
+		* ================================================================== */
+		
 	amp.init(); // don't delete this - it is part of the A.mphibio.us startup
 	
-	
-	
-}); 
+});
