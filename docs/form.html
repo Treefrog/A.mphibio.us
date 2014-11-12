@@ -59,8 +59,8 @@
 <body>
 <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
-<span id="download_button" class="a r dmt mr">
-<a class="button" href="http://a.mphibio.us/releases/a.mphibio.us.rdk.zip" title="Download A.mphibio.us Rapid Developmet Kit(.zip )">A.mphibio.us RDK &darr;</a>
+<span id="download_button">
+<a class="button" href="http://a.mphibio.us/releases/a.mphibio.us.rdk.zip" title="Download A.mphibio.us Rapid Developmet Kit(.zip )">A.mphibio.us RDK <span class="icon-github hml"></span></a>
 </span>
 
 <div id="main" role="main" class="container">
@@ -134,13 +134,13 @@ Where else would you like it to work?&lt;/p&gt;
 				<div class="row">
 <pre class="prettyprint linenums">
 &lt;div class=&quot;vcard row&quot;&gt;
-	&lt;h6 class=&quot;org&quot;&gt;&lt;a class=&quot;url&quot; href=&quot;#&quot;&gt;Treefrog Interactive Inc&lt;/a&gt;&lt;h6&gt;
-	&lt;p class=&quot;n&quot;&gt;&lt;a class=&quot;url nickname&quot; href=&quot;https://twitter.com/cliveMoore&quot;&gt;&lt;span class=&quot;given-name&quot;&gt;Clive&lt;/span&gt; &lt;span&gt;Moore&lt;/span&gt;&lt;/a&gt;&lt;p&gt;
-	&lt;p class=&quot;adr&quot;&gt;
-		&lt;span class=&quot;street-address&quot;&gt;My Favourite Place&lt;/span&gt;&lt;br&gt;
-		&lt;span class=&quot;region&quot;&gt;Whotown&lt;/span&gt;, &lt;span class=&quot;postal-code&quot;&gt;R0F LMA&lt;/span&gt;, &lt;span class=&quot;country-name&quot;&gt;Canada&lt;/span&gt;
-	&lt;/p&gt;
-	&lt;p class=&quot;tel&quot;&gt;&lt;a href=&quot;tel:9058364442&quot;&gt;(905) 836 4442&lt;/a&gt;&lt;/p&gt;
+  &lt;h6 class=&quot;org&quot;&gt;&lt;a class=&quot;url&quot; href=&quot;#&quot;&gt;Treefrog Interactive Inc&lt;/a&gt;&lt;h6&gt;
+  &lt;p class=&quot;n&quot;&gt;&lt;a class=&quot;url nickname&quot; href=&quot;https://twitter.com/cliveMoore&quot;&gt;&lt;span class=&quot;given-name&quot;&gt;Clive&lt;/span&gt; &lt;span&gt;Moore&lt;/span&gt;&lt;/a&gt;&lt;p&gt;
+  &lt;p class=&quot;adr&quot;&gt;
+    &lt;span class=&quot;street-address&quot;&gt;My Favourite Place&lt;/span&gt;&lt;br&gt;
+    &lt;span class=&quot;region&quot;&gt;Whotown&lt;/span&gt;, &lt;span class=&quot;postal-code&quot;&gt;R0F LMA&lt;/span&gt;, &lt;span class=&quot;country-name&quot;&gt;Canada&lt;/span&gt;
+  &lt;/p&gt;
+  &lt;p class=&quot;tel&quot;&gt;&lt;a href=&quot;tel:9058364442&quot;&gt;(905) 836 4442&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 </pre>
 				</div>
@@ -323,7 +323,7 @@ Where else would you like it to work?&lt;/p&gt;
 			<div class="row">
 				<h3>Buttons</h3>
 				<p>A.mphibio.us treats buttons as they are meant to be treated, giving them the right amount of weight and a powerful hover effect to make them irresistibly clickable. Calls to action have never been more apparent. Did I mention easy to use, just add a button or submit or even add the class <kbd>button</kbd> to a link</p>
-				<a class="button" onclick="$('#amp_overlay').fadeIn();">Click Me For Action</a>
+				<a class="button modal_opener" amp-target="amp_overlay">Click Me For Action</a>
 				<div class="row">
 <pre class="prettyprint linenums">
 &lt;a class=&quot;button&quot; onclick=&quot;$('#amp_overlay').fadeIn();&quot;&gt;Click Me For Action&lt;/a&gt;
@@ -733,38 +733,41 @@ postion:fixed;top:0;left:0;right:0;
 						<li><a href="features.html#icons">Webfont Icons <sub>by entypo</sub></a></li>
 					</ul>
 				</li>
-				<li onclick="$('#amp_overlay').fadeIn();"><a>Feedback</a></li>					
+				<li class="modal_opener" amp-target="amp_overlay"><a>Feedback</a></li>					
 			</ul>
 		</nav>
 	</div>
 </div>
 
-<div id="amp_overlay" style="display:none;" onclick="$('#amp_overlay').fadeOut();">
-	<h3 class="a t r intro" onclick="$('#amp_overlay').fadeOut();">&#10006;</h3>
-	<div class="container inner">
-		<div id="disqus_thread" class="bgwht bxshw"></div>
-		<script type="text/javascript">
-		    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-		    var disqus_shortname = 'amphibiouscss'; // required: replace example with your forum shortname
-		
-		    /* * * DON'T EDIT BELOW THIS LINE * * */
-		    (function() {
-		        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-		        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-		        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-		    })();
-		</script>
-		<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-		<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-	</div>
-</div>
-
-
 <a href="http://github.com/Treefrog-Interactive/A.mphibio.us">
   <img id="forkme" src="http://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt="Fork me on GitHub">
 </a>
 
-<a id="to_top" class="icon reset" href="#maincontent">&#11014;</a>  
+<a id="to_top" class="icon reset" href="#maincontent"><span class=" icon-arrow-up7"></span></a>
+
+<!-- Sample Modal Structure -->
+<div id="amp_overlay" class="overlay">
+	<div class="modal">
+		<section>
+			<span class="icon-cross2 large right rmr modal_kill" amp-target="amp_overlay"></span>
+			<div id="disqus_thread"></div>
+
+			<script type="text/javascript">
+			    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+			    var disqus_shortname = 'amphibiouscss'; // required: replace example with your forum shortname
+			
+			    /* * * DON'T EDIT BELOW THIS LINE * * */
+			    (function() {
+			        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+			        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			    })();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		</section>
+	</div>
+</div>
   
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/libs/jquery-1.9.1.min.js"><\/script>')</script>
@@ -804,5 +807,6 @@ postion:fixed;top:0;left:0;right:0;
   })();
 
 </script>
+
 </body>
 </html>

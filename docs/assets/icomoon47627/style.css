@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'entypo';
-	src:url('fonts/entypo.eot?-usn495');
-	src:url('fonts/entypo.eot?#iefix-usn495') format('embedded-opentype'),
-		url('fonts/entypo.woff?-usn495') format('woff'),
-		url('fonts/entypo.ttf?-usn495') format('truetype'),
-		url('fonts/entypo.svg?-usn495#entypo') format('svg');
+	src:url('fonts/entypo.eot?-4av651');
+	src:url('fonts/entypo.eot?#iefix-4av651') format('embedded-opentype'),
+		url('fonts/entypo.woff?-4av651') format('woff'),
+		url('fonts/entypo.ttf?-4av651') format('truetype'),
+		url('fonts/entypo.svg?-4av651#entypo') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -886,4 +886,19 @@
 }
 .icon-smashing:before {
 	content: "\e71b";
+}
+.icon-lassosoft:before {
+	content: "\e720";
+}
+.icon-treefrog:before {
+	content: "\e721";
+}
+.icon-amphibious:before {
+	content: "\e722";
+}
+.icon-mergini:before {
+	content: "\e723";
+}
+.icon-leap:before {
+	content: "\e724";
 }

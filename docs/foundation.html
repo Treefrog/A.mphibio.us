@@ -60,20 +60,20 @@
 <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
 
-<span id="download_button" class="a r dmt mr">
-<a class="button" href="http://a.mphibio.us/releases/a.mphibio.us.rdk.zip" title="Download A.mphibio.us Rapid Developmet Kit(.zip )">A.mphibio.us RDK &darr;</a>
+<span id="download_button">
+<a class="button" href="http://a.mphibio.us/releases/a.mphibio.us.rdk.zip" title="Download A.mphibio.us Rapid Developmet Kit(.zip )">A.mphibio.us RDK <span class="icon-github hml"></span></a>
 </span>
 
 <div id="main" role="main" class="container">
 
-	<div id="maincontent" class="col sixteen content">
-		<header>
+	<div id="maincontent" class="content">
+		<header class="sixteen col">
 			<h1 class="rmb mt">Foundation</h1>
 			<h3>Amphibious has a fluid and responsive layout system based on a solid sixteen column grid system.</h3>
 		</header>
 
 		<section class="cfx" id="core">
-			<article>
+			<article class="sixteen col">
 				<header>
 					<h2>The Core</h2>
 				</header>
@@ -120,182 +120,209 @@
 		
 			<article>
 				<header>
+				<div class="sixteen col">
 					<h2>The Grid</h2>
+				</div>
 				</header>
-				
-				<p>A.mphibio.us' base grid is a sixteen column variation of the 960 grid system. The syntax is simple, elegant, and lightweight columns, (or col for short) act like columns and <b>rows</b> well um... they act like rows and keep all the columns inside that row. It's effective and cross-browser, so you don’t have to worry about compatibility issues or page load inconsistencies.</p>
-				
-				<p>Amphibious relies on the combination of classes to determine the layout, <span class="class tag">.col</span> for example floats the element, while  <span class="class tag">.ten</span> determines that it spans ten columns of the grid. All column spans are name spaced to happen inside a container element to remian adaptpable.</p>
-				
-				<p>A simple layout example:</p>
-				<div class="example-grid">
-					<div class="sixteen col first last">Header</div>
-					<div class="six col first">Left Column</div>
-					<div class="ten col last">Right Column</div>
-					<div class="sixteen col first last">Footer</div>
-				</div>
-				<small>would be marked up like</small>
-					<div class="row dpb">
-<pre class="prettyprint linenums">
-&lt;div class=&quot;container&quot;&gt;
-	&lt;div class=&quot;sixteen col&quot;&gt;Header&lt;/div&gt;
-	&lt;div class=&quot;one six&quot;&gt;Left Column&lt;/div&gt;
-	&lt;div class=&quot;one ten&quot;&gt;Right Column&lt;/div&gt;
-	&lt;div class=&quot;sixteen col&quot;&gt;Footer&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-					</div>	
-					
-				<p>A more complex layout might include a row element for example:</p>
-				<div class="example-grid">
-					<div class="sixteen col first last">Header</div>
-					<div class="six col first" style="height:200px;">
-						<nav>
-							<ul>
-								<li>Nav Item</li>
-								<li>Nav Item</li>
-								<li>Nav Item</li>
-							</ul>
-						</nav>
-					</div>
-					<div class="ten col last" style="height:200px;">
-						<div class="row">
-							<div class="six col first">
-								<h2>Main Content</h2>
-								<p>Some Copy</p>
-							</div>
-							<div class="four col last">
-								<h4>Inner sidebar</h4>
-								<p>Some Copy</p>
-							</div>
-						</div>
+				<div class="row">
+					<div class="sixteen col">
 						
+						<p>A.mphibio.us' base grid is a sixteen column variation of the 960 grid system. The syntax is simple, elegant, and lightweight columns, (or col for short) act like columns and <b>rows</b> well um... they act like rows and keep all the columns inside that row. It's effective and cross-browser, so you don’t have to worry about compatibility issues or page load inconsistencies.</p>
+						
+						<p>Amphibious relies on the combination of classes to determine the layout, <span class="class tag">.col</span> for example floats the element, while  <span class="class tag">.ten</span> determines that it spans ten columns of the grid. All column spans are name spaced to happen inside a container element to remian adaptpable.</p>
+						
+						<p>A simple layout example:</p>
+					
 					</div>
-					<div class="sixteen col first last">Footer</div>
 				</div>
-				<small>would be marked up like</small>
-					<div class="row dpb">
-<pre class="prettyprint linenums">
-&lt;div class=&quot;container&quot;&gt;
-&lt;div class=&quot;sixteen col first last&quot;&gt;Header&lt;/div&gt;
-&lt;div class=&quot;six col first&quot;&gt;
-	&lt;nav&gt;
-		&lt;ul&gt;
-			&lt;li&gt;Nav Item&lt;/li&gt;
-			&lt;li&gt;Nav Item&lt;/li&gt;
-			&lt;li&gt;Nav Item&lt;/li&gt;
-		&lt;/ul&gt;
-	&lt;/nav&gt;
-&lt;/div&gt;
-&lt;div class=&quot;ten col last&quot;&gt;
-	&lt;div class=&quot;row&quot;&gt;
-		&lt;div class=&quot;six col first&quot;&gt;
-			&lt;h2&gt;Main Content&lt;/h2&gt;
-			&lt;p&gt;Some Copy&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;div class=&quot;four col last&quot;&gt;
-			&lt;h4&gt;Inner sidebar&lt;/h4&gt;
-			&lt;p&gt;Some Copy&lt;/p&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
+				<div class="row example-grid">
+					<div class="sixteen col">Header</div>
+					<div class="six col">Left Column</div>
+					<div class="ten col">Right Column</div>
+					<div class="sixteen col">Footer</div>
+				</div>
+				
+				<div class="row">
+					<div class="sixteen col">
+						<div class="row dpb">
+							<small>would be marked up like</small>
 	
-&lt;/div&gt;
-&lt;div class=&quot;sixteen col first last&quot;&gt;Footer&lt;/div&gt;
-&lt;/div&gt;
-
-</pre>
+							<pre class="prettyprint linenums">
+	&lt;div class=&quot;container&quot;&gt;
+	  &lt;div class=&quot;sixteen col&quot;&gt;Header&lt;/div&gt;
+	  &lt;div class=&quot;one six&quot;&gt;Left Column&lt;/div&gt;
+	  &lt;div class=&quot;one ten&quot;&gt;Right Column&lt;/div&gt;
+	  &lt;div class=&quot;sixteen col&quot;&gt;Footer&lt;/div&gt;
+	&lt;/div&gt;
+							</pre>
+							
+						</div>	
+						
+						<p>A more complex layout might include a row element for example:</p>
 					</div>
+				</div>
+				
+				
+				<div class="row example-grid">
+					<div class="sixteen col">Header</div>
+						<div class="six col" style="height:200px;">
+							<nav>
+								<ul>
+									<li>Nav Item</li>
+									<li>Nav Item</li>
+									<li>Nav Item</li>
+								</ul>
+							</nav>
+						</div>
+						<div class="ten col" style="height:200px;">
+							<div class="row">
+								<div class="six col first">
+									<h2>Main Content</h2>
+									<p>Some Copy</p>
+								</div>
+								<div class="four col last">
+									<h4>Inner sidebar</h4>
+									<p>Some Copy</p>
+								</div>
+							</div>
+							
+						</div>
+						<div class="sixteen col">Footer</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="sixteen col">
+						<div class="row dpb">
+							<small>would be marked up like</small>
+	
+							<pre class="prettyprint linenums">
+	&lt;div class=&quot;container&quot;&gt;
+		&lt;div class=&quot;sixteen col first last&quot;&gt;Header&lt;/div&gt;
+		&lt;div class=&quot;six col first&quot;&gt;
+		    &lt;nav&gt;
+		        &lt;ul&gt;
+		            &lt;li&gt;Nav Item&lt;/li&gt;
+		            &lt;li&gt;Nav Item&lt;/li&gt;
+		            &lt;li&gt;Nav Item&lt;/li&gt;
+		        &lt;/ul&gt;
+		    &lt;/nav&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;ten col last&quot;&gt;
+		    &lt;div class=&quot;row&quot;&gt;
+		        &lt;div class=&quot;six col first&quot;&gt;
+		            &lt;h2&gt;Main Content&lt;/h2&gt;
+		            &lt;p&gt;Some Copy&lt;/p&gt;
+		        &lt;/div&gt;
+		        &lt;div class=&quot;four col last&quot;&gt;
+		            &lt;h4&gt;Inner sidebar&lt;/h4&gt;
+		            &lt;p&gt;Some Copy&lt;/p&gt;
+		        &lt;/div&gt;
+		    &lt;/div&gt;
+		    
+		&lt;/div&gt;
+		&lt;div class=&quot;sixteen col first last&quot;&gt;Footer&lt;/div&gt;
+	&lt;/div&gt;
+							
+							</pre>
+						</div>
+					</div>
+				</div>
 				
 				<div id="responsive_col">
-					<p>A.mphibio.us has the flexibility to go mobile like a champ. <strong>Go ahead, resize the browser and watch as the layout reacts!</strong></p>
-					
-					<h3>Responsive Columns</h3>
-					<p>These set of column classes repond to two different grid size and casscade down to blocks for mobile devices.</p>
+					<div class="row">
+						<div class="sixteen col">
+							<p>A.mphibio.us has the flexibility to go mobile like a champ. <strong>Go ahead, resize the browser and watch as the layout reacts!</strong></p>
+							
+							<h3>Responsive Columns</h3>
+							<p>These set of column classes repond to two different grid size and casscade down to blocks for mobile devices.</p>
+						</div>
+					</div>
 					<div class="row example-grid">
-						<div class="one col first">One</div>
-						<div class="fifteen col last">Fifteen</div>
-						<div class="fourteen col first">Fourteen</div>
-						<div class="two col last">Two</div>
-						<div class="three col first">Three</div>
-						<div class="thirteen col last">Thirteen</div>
-						<div class="twelve col first">Twelve</div>
-						<div class="four col last">Four</div>
-						<div class="five col first">Five</div>
-						<div class="eleven col last">Eleven</div>
-						<div class="ten col first">Ten</div>
-						<div class="six col last">Six</div>
-						<div class="seven col first">Seven</div>
-						<div class="nine col last">Nine</div>
-						<div class="eight col first">Eight</div>
-						<div class="eight col last">Eight</div>
-						<div class="sixteen col first last">Sixteen</div>
+						<div class="one col">One</div>
+						<div class="fifteen col">Fifteen</div>
+						<div class="fourteen col">Fourteen</div>
+						<div class="two col">Two</div>
+						<div class="three col">Three</div>
+						<div class="thirteen col">Thirteen</div>
+						<div class="twelve col">Twelve</div>
+						<div class="four col">Four</div>
+						<div class="five col">Five</div>
+						<div class="eleven col">Eleven</div>
+						<div class="ten col">Ten</div>
+						<div class="six col">Six</div>
+						<div class="seven col">Seven</div>
+						<div class="nine col">Nine</div>
+						<div class="eight col">Eight</div>
+						<div class="eight col">Eight</div>
+						<div class="sixteen col">Sixteen</div>
+					</div>
+					<h4>Padded Columns</h4>
+					<div class="row example-grid">
+						<div class="one col padded">One</div>
+						<div class="fifteen col padded">Fifteen</div>
+						<div class="fourteen col padded">Fourteen</div>
+						<div class="two col padded">Two</div>
+						<div class="three col padded">Three</div>
+						<div class="thirteen col padded">Thirteen</div>
+						<div class="twelve col padded">Twelve</div>
+						<div class="four col padded">Four</div>
+						<div class="five col padded">Five</div>
+						<div class="eleven col padded">Eleven</div>
+						<div class="ten col padded">Ten</div>
+						<div class="six col padded">Six</div>
+						<div class="seven col padded">Seven</div>
+						<div class="nine col padded">Nine</div>
+						<div class="eight col padded">Eight</div>
+						<div class="eight col padded">Eight</div>
+						<div class="sixteen col padded">Sixteen</div>
 					</div>
 				</div>
 				
 				<div id="fluid_col" class="fluid">
 					<h3>Fluid Columns</h3>
-					<p>These set of column classes repond fluidly for all container sizes including mobile devices.</p>
+					<p>These set of column classes repond fluidly for all container sizes excluding mobile devices.</p>
 					<div class="row example-grid">
 						<div class="one-third col first">One Third</div>
 						<div class="one-third col">One Third</div>
 						<div class="one-third col last">One Third</div>
 						<div class="one-third col first">One Third</div>
 						<div class="two-thirds col last">Two Thirds</div>
-						<div class="one-quarter col first equalize">One Quarter</div>
-						<div class="one-quarter col equalize">One Quarter</div>
-						<div class="one-quarter col equalize">One Quarter</div>
-						<div class="one-quarter col equalize last">One Quarter</div>
-						<div class="one-quarter col first equalize">One Quarter</div>
-						<div class="three-quarters col last equalize">Three Quarters</div>
-						<div class="one-quarter col first equalize">One Quarter</div>
-						<div class="half col equalize">Half</div>
-						<div class="one-quarter col last equalize">One Quarter</div>
+						<div class="one-quarter col first">One Quarter</div>
+						<div class="one-quarter col">One Quarter</div>
+						<div class="one-quarter col">One Quarter</div>
+						<div class="one-quarter col last">One Quarter</div>
+						<div class="one-quarter col first">One Quarter</div>
+						<div class="three-quarters col last">Three Quarters</div>
+						<div class="one-quarter col first">One Quarter</div>
+						<div class="half col">Half</div>
+						<div class="one-quarter col last">One Quarter</div>
 						<div class="half col first">Half</div>
 						<div class="half col last">Half</div>
 					</div>
-					
-				</div>
-				
-
-<!--				<div id="padded_col">
-					<h3>Padded Columns</h3>
-					<div class="row">
-						<p>These set of column simply have the class <kbd>padded</kbd> added to them. Really handy for blocking out sections of colour.</p>
-					</div>
+					<h4>Padded Columns</h4>
 					<div class="row example-grid">
-						<div class="one-third col padded first al">One Third column with more text so you can see the reflow with more text so you can see the reflow.</div>
-						<div class="one-third col padded first al">One Third column with more text so you can see the reflow with more text so you can see the reflow.</div>
-						<div class="one-third col padded first al">One Third column with more text so you can see the reflow with more text so you can see the reflow.</div>
-						<div class="one-third col padded first al">One Third column with more text so you can see the reflow with more text so you can see the reflow.</div>
-						<div class="two-thirds col padded last al">Two Thirds column with more text so you can see the reflow with more text so you can see the reflow. column with more text so you can see the reflow with more text so you can see the reflow. column with more text so you can.</div>
-						<div class="one-quarter col padded first equalize ">One Quarter</div>
-						<div class="three-quarters padded col last equalize">Three Quarters</div>
-						<div class="one-quarter col padded equalize">One Quarter</div>
-						<div class="one-quarter col padded first equalize">One Quarter</div>
-						<div class="half col padded equalize">Half</div>
-						<div class="one-quarter col padded equalize">One Quarter</div>
-						<div class="one-quarter col padded equalize">One Quarter</div>
-						<div class="one-quarter col padded equalize">One Quarter</div>
-						<div class="one-quarter col padded last equalize">One Quarter</div>
+						<div class="one-third col padded">One Third</div>
+						<div class="one-third col padded">One Third</div>
+						<div class="one-third col padded">One Third</div>
+						<div class="one-third col padded">One Third</div>
+						<div class="two-thirds col padded">Two Thirds</div>
+						<div class="one-quarter col padded">One Quarter</div>
+						<div class="one-quarter col padded">One Quarter</div>
+						<div class="one-quarter col padded">One Quarter</div>
+						<div class="one-quarter col padded">One Quarter</div>
+						<div class="one-quarter col padded">One Quarter</div>
+						<div class="three-quarters col padded">Three Quarters</div>
+						<div class="one-quarter col padded">One Quarter</div>
+						<div class="half col padded">Half</div>
+						<div class="one-quarter col padded">One Quarter</div>
+						<div class="half col padded">Half</div>
+						<div class="half col padded">Half</div>
 					</div>
 					
 				</div>
 				
 
-				<div id="liquid_col">
-					<h3>Liquid Columns</h3>
-					<p>One simple addition makes all column classes fluid all the time, use with caution&mdash;nesting gets a little tricky.</p>
-					
-					<p><strong>Add</strong> the class liquid to the container like so:</p>
-						<div class="row dpb">
-<pre class="prettyprint linenums">
-&lt;div class=&quot;container liquid&quot;&gt;
-</pre>
-						</div>
-				</div>
--->
-					
-				<footer id="golden_section">
+				<footer id="golden_section" class="col sixteen">
 					<div class="row mb rb pb">
 					
 						<h3>Golden Section Layouts</h3>

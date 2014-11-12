@@ -301,6 +301,11 @@
 		'icon-circles': '&#xe719;',
 		'icon-vk': '&#xe71a;',
 		'icon-smashing': '&#xe71b;',
+		'icon-lassosoft': '&#xe720;',
+		'icon-treefrog': '&#xe721;',
+		'icon-amphibious': '&#xe722;',
+		'icon-mergini': '&#xe723;',
+		'icon-leap': '&#xe724;',
 		'0': 0
 		},
 		els = document.getElementsByTagName('*'),

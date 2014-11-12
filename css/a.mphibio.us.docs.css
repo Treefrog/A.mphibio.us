@@ -194,9 +194,32 @@ h2 .adot
 
 /* Navigation Styles
 ================================================== */
+
+
+.horizontal.branded
+{
+	padding-left: 11px;
+}
+
+.horizontal.branded:before
+{
+	display: block;
+	float: left;
+	width: 24px;
+	height: 24px;
+	margin-top: 1px;
+	content: '';
+	background-image: url(../images/a.icon.png);
+	background-repeat: no-repeat;
+}
+
 #download_button
 {
+	position: absolute;
+	top: 40px;
+	right:15px;
 	z-index: 1010;
+
 }
 #to_top
 {
