@@ -1,7 +1,7 @@
-Classic theme for A.mphibio.us
+Treefrog styled theme for A.mphibio.us
 ===============================================
 
-###Classic Black and White Theme for A.mphibio.us
+###Basic Green Theme for A.mphibio.us
 
 This theme is to provide a quick start to your project.
 

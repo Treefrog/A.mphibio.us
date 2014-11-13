@@ -6,7 +6,7 @@
   3. Navigation / #navbar
   4. Masthead / #hero_panel
   5. Content Styles / #amp_content
-  6. Secondary Content Styles
+  6. Secondary Content Styles / .tabs
   7. Buttons
   8. Form Elements
   9. Footer Content / #amp_footer
@@ -86,6 +86,12 @@ a:focus
 .pixels
 {
 	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPwAAADmCAYAAADx5uiaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA+FpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCIgeG1wOkNyZWF0ZURhdGU9IjIwMTEtMTAtMTJUMTg6MTM6MTgrMDI6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDExLTEwLTEyVDE2OjE3KzAyOjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDExLTEwLTEyVDE2OjE3KzAyOjAwIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpEN0ZDMjJERkVEMTAxMUUwODA4OEY5QUFEQTQzOTFCNyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpEN0ZDMjJFMEVEMTAxMUUwODA4OEY5QUFEQTQzOTFCNyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkQ3RkMyMkRERUQxMDExRTA4MDg4RjlBQURBNDM5MUI3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkQ3RkMyMkRFRUQxMDExRTA4MDg4RjlBQURBNDM5MUI3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+59nK8wAABF5JREFUeNrs3FturDAURFHzmP+MwTdIaekOwKVQ6rWk/FqN8Sbwc7YxxvHzt4/1rsXrbT9/9+I1j8B1P3s57efS/bwL9jNx34/EZgJfQvAgeEDwgOABwQOCBwQPCB4QPCB4QPCA4EHwgOABwQOCBwQP/KntN/otsO4MrDlKfmfDmo+75B413Pc5CkaGnSMzLyz1EBkFN6llVlzCHXrYbYHzOULnaaVrlFw44BseEDwgeEDwgOABwQOCB8EDggcEDwgeEDwgeEDwgOABwQOCBwQPX+uZaZeYFdcyMywxL20L7ekI/M695B7Ngv2cDffo/G/hhg1dPRwydeBnwZqJa99DB79hwmzqoeyVHhA8IHhA8CB4QPCA4AHBA4IHBA8IHhA8IHhA8IDgQfCA4AHBA4IH3uz8jX717KxnzbtkDxLXnlgzcd33y/fys+YsuEePqyH4xI2aocPUML009RBpGQ45CtZMPpxe/RDxSg++4QHBA4IHBA8IHhA8IHhA8IDgAcEDggfBA4IHBA8IHhA8IHhA8MBin5l2iSGB5+I1E0MX99CaM3DtiTX3kt+52izZz+XXf/4e+IbJrVvo5jccpuceXYF71DB08h6Zgair1zy80gOCBwQPCB4QPCB4QPCA4EHwgOABwQOCBwQPCB4QPCB4QPCA4AHBwxc6R2a2WWJWWmKmXcuAxJTE9d8l9/0ouT/76uATA/3uwKE/QhuaeNg1DJxMxX6VBJ9wvf3Me6UH3/CA4AHBA4IHBA8IHhA8IHhA8IDgAcGD4AHBA4IHBA8IHhA8IHhgsc9Mu9WzsxKDHFODMUfBuqm5bomBk4nZgw1DQRPXfiSCT23m6nWvkoO0jQ53IPh9dEzCTfxDOkIP5bn6BgG+4QHBA4IHBA8IHhA8IHhA8IDgAcEDggfBA4IHBA8IHhA8IHhA8MBCyZl2LcMMG+batczJ20rWTHn9WXqCv0fHQL/EhiauPTFhtmXQ6CwJdAudpfvtZ8krPfiGBwQPCB4QPCB4QPCA4AHBA4IHBA8IHgQPCB4QPCB4QPCA4AHBA4s9M+2e+XNXwW/dQg+olsGYif1cPWh0L7n2xG/cR8Hw0nNkhi6OwEPkCN2kO7DuHTig3zpodAbOUurBtL39LHmlB9/wgOABwQOCBwQPCB4QPCB4QPCA4AHBg+ABwQOCBwQPCB4QPCB4YLEzGP7q+V6JGWR36LqPwLXPgv3cQuc0MRwyseb99v08R8eU0U+cs+DGp96aVl/7VfAbkw+RxPl8/fBSr/TgGx4QPCB4QPCA4AHBA4IHBA8IHhA8IHgQPCB4QPCA4AHBA4IHBA8sdgYfJIlZZIkhgQ0z/VKz4vaC3zpL7lHFfp6hDU0Ev5XENEdmGu744v1MDPD8yuGlXunBNzwgeEDwgOABwQOCBwQPCB4QPCB4QPAgeEDwgOABwQOCBwQPCB5Y7Jlpd4QeJImBk4k5eQ3z/B5XwXlqGYyZWjOxn0v7/CfAAMrKqB7xcqi5AAAAAElFTkSuQmCC');
+}
+
+.ra,
+.rb
+{
+	border-color: #e7e7e6;
 }
 /* ------------------------------------------------------------------
 	
@@ -185,7 +191,7 @@ p .meta
 	text-align: center;
 	width: 90px;
 }
-.horizontal>li:first-child>a
+.mainnav.horizontal>li:first-child>a
 {
 	width: 48px;
 }
@@ -205,7 +211,7 @@ p .meta
 	content: '';
 	opacity: 0;
 }
-.horizontal>li:first-child>a:before
+.mainnav.horizontal>li:first-child>a:before
 {
 	width: 48px;
 }
@@ -233,6 +239,11 @@ p .meta
 	background: #464646;
 	background: rgba(37, 37, 37, 1);
 	color: #8cc63e;
+}
+
+.horizontal > li > ul > li.divider
+{
+	border-top: 2px solid #000;
 }
 
 /* Drop down caret edits */
@@ -274,18 +285,15 @@ p .meta
 	overflow: hidden;
 }
 
-#hero_panel
-{
-	height: 425px;
-}
 #hero_panel .featurette
 {
 	padding: 1.3em;
-	margin-left: -1.3em;
 	background-color: #888;
 	background-color: rgba(0,0,0,0.4);
 	color: #fff;
-	margin-top: 180px;
+	top: 180px;
+	position: absolute;
+	z-index: 2;
 }
 #hero_panel h1,
 #masthead h1
@@ -300,7 +308,9 @@ p .meta
 }
 #hero_panel .featurette + button
 {
-	margin-top: -1.3em;
+	position: absolute;
+	top: 280px;
+	z-index: 3;
 }
 #hero_panel figure
 {
@@ -376,6 +386,54 @@ figure.pull_top
 	box-shadow: 0 0 6px rgba(0,0,0,0.4);
 }
 
+ul.tabs
+{
+	z-index: -1;
+	margin-bottom: 2px;
+}
+
+ul.tabs li a
+{
+	position: relative;
+	top: 0;
+	background-color: #e7e7e6;
+	border: 1px solid #dfdfdf;
+	border-bottom: 1px solid #fcfcfc;
+}
+ul.tabs li a:hover,
+ul.tabs li a:active,
+ul.tabs li a.active
+{
+	top: -2px;
+	padding-bottom: 2px;
+	color: #5d5d5d;
+	background-color: #fcfcfc;
+}
+ul.tabs li a.active
+{
+	top: -4px;
+	padding-bottom: 4px;
+	color: #8cc63e;
+	z-index: 2;
+}
+
+ul.tabs-content
+{
+	border: 1px solid #e7e7e6;
+	margin-top: -1px;
+	margin-bottom: 2em;
+	z-index: 5;
+}
+
+ul.tabs-content li
+{
+	margin-bottom: 0;
+}
+ul.tabs-content li.active
+{
+	background-color: #fcfcfc;
+}
+
 /* ------------------------------------------------------------------
 	
 [6. Store Front Styles]
@@ -434,11 +492,24 @@ figure.pull_top
 	overflow: hidden;
 }
 
+.element .detail a
+{
+	color: #fff;
+	text-decoration: none;
+	border-bottom: none;
+}
+
+.element .detail a:hover
+{
+	color: #8cc63e;
+}
+
 .element .detail p,
 .element .preview p
 {
 	margin-bottom: 0;
 }
+
 .element .detail
 {
 	position: absolute;
@@ -647,8 +718,7 @@ form.search fieldset input[type="submit"]
 
 .overlay .modal header
 {
-	color: #fff;
-	background-color: #464646;
+	background-color: #fff;
 	background-image: none;
 }
 

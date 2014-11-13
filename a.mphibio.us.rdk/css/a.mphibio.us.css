@@ -1,10 +1,10 @@
 /*!
-* A.mphibio.us  1.5.1a
+* A.mphibio.us  1.5.1b
 * Copyright 2014, @cliveMoore @Treefrog
 * http://a.mphibio.us
 * Free to use under the MIT license.
 * http://www.opensource.org/licenses/mit-license.php
-* 12/11/2014
+* 13/11/2014
 *
 *
 /* CSS Table of Contents
@@ -1365,11 +1365,12 @@ img.swg
 .flag,
 .amp_tag
 {
-    display: inline;
+	position: relative;
+    display: inline-block;
     padding: 0.2em 0.6em 0.3em;
     font-size: 0.8em;
     font-weight: bold;
-    line-height: 1;
+    line-height: 1.3;
     color: #fff;
     text-align: center;
     white-space: nowrap;
@@ -1377,7 +1378,16 @@ img.swg
     border-radius: 0.25em;
     background-color: #E6E6E6;
 }
-/* Adapted from http://css-tricks.com/downloads/css-stuff/ Breadcrumbs with CSS Triangles */
+.amp_tags .amp_tag
+{
+	margin: 0 0.2em 0.4em 0;
+	text-decoration: none;
+}
+.amp_tags
+{
+	
+}
+/* Adapted from http://css-tricks.com/downloads/css-stuff/ Breadcrumbs with CSS Triangles
 
 .amp_tag:after
 {
@@ -1386,7 +1396,6 @@ img.swg
     width: 0;
     height: 0;
     border-top: 50px solid transparent;
-    /* Go big on the size, and let overflow hide */
     border-bottom: 50px solid transparent;
     border-left: 30px solid #E6E6E6;
     position: absolute;
@@ -1403,7 +1412,6 @@ img.swg
     width: 0;
     height: 0;
     border-top: 50px solid transparent;
-    /* Go big on the size, and let overflow hide */
     border-bottom: 50px solid transparent;
     border-left: 30px solid white;
     position: absolute;
@@ -1413,7 +1421,7 @@ img.swg
     left: 100%;
     z-index: 1;
 }
-
+ */
 .notify.sq,
 .flag.sq,
 .amp_tag.sq
@@ -2353,11 +2361,13 @@ select
     border: 1px solid #dcd7d1;
     padding: 0.625em 2% 0.675em;
     outline: none;
+/*
     -webkit-border-radius: 6px;
     -khtml-border-radius: 6px;
     -moz-border-radius: 6px;
     -o-border-radius: 6px;
     border-radius: 6px;
+*/
     color: #777;
     margin: 0;
     width: 96%;
@@ -2520,6 +2530,10 @@ form,
 form fieldset
 {
     margin-bottom: 0;
+}
+form fieldset + fieldset
+{
+	margin-top: 0.5em;
 }
 
 form fieldset
@@ -4950,7 +4964,8 @@ Class Name                      Shorthand                   Styles
 /* ALL
 ================================================== */
 
-@media only screen and (max-width: 959px) {
+@media only screen and (max-width: 959px)
+{
     .container .one-third.col
     {
         width: 32.11%;
@@ -5002,7 +5017,8 @@ Class Name                      Shorthand                   Styles
    22. Tablet (Portrait) Design for a width of 768px
    ========================================================================== */
 
-@media only screen and (min-width: 768px) and (max-width: 959px) {
+@media only screen and (min-width: 768px) and (max-width: 959px)
+{
     .container
     {
         width: 768px;
@@ -5385,13 +5401,7 @@ Class Name                      Shorthand                   Styles
    24. Mobile (Landscape) Design for a width of 480px
    ========================================================================== */
 
-@media only screen and (min-width: 480px) and (max-width: 767px),
-only screen and (min-width: 1536px) and (-webkit-device-pixel-ratio: 2),
-/* Special Sauce for Retina */
-
-only screen and (-webkit-min-device-pixel-ratio: 1.5),
-only screen and (-o-min-device-pixel-ratio: 3/2),
-only screen and (min-device-pixel-ratio: 1.5)
+@media only screen and (min-width: 480px) and (max-width: 767px)
 {
     .container
     {

@@ -9,6 +9,8 @@ Leverages jQuery 1.9.1 and GruntJS
 
 ## Installation
 
+## Installation
+
 #Easy Install
 Download the lastest RDK release and use as a webroot for you next 
 front end project and start prototyping your html immediately, 
@@ -18,7 +20,7 @@ get to the browser in minutes.
 
 ## Authors
 
-Authored by Clive Moore (clive@lassosoft.com) and Jonathan Guthrie (jono@lassosoft.com) 
+Authored by Clive Moore (clive@lassosoft.com) and Jonathan Guthrie (jono@lassosoft.com)
 
 ## License Information
 

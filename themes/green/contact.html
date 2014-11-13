@@ -55,6 +55,49 @@
 <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
 <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
 
+<style type="text/css">
+            /* Set a size for our map container, the Google Map will take up 100% of this container */
+            #map {
+                width: 100%;
+                height: 500px;
+            }
+        </style>
+        
+        <!-- 
+            You need to include this script on any page that has a Google Map.
+            When using Google Maps on your own site you MUST signup for your own API key at:
+                https://developers.google.com/maps/documentation/javascript/tutorial#api_key
+            After your sign up replace the key in the URL below or paste in the new script tag that Google provides.
+        -->
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8gFApOxhcm511GGI2YgeUVZdOWjtPk1E"></script>
+        
+        <script type="text/javascript">
+            // When the window has finished loading create our google map below
+            google.maps.event.addDomListener(window, 'load', init);
+        
+            function init() {
+                // Basic options for a simple Google Map
+                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+                var mapOptions = {
+                    // How zoomed in you want the map to start at (always required)
+                    zoom: 17,
+
+                    // The latitude and longitude to center the map (always required)
+                    center: new google.maps.LatLng(44.0606836,-79.4543147), // New York
+
+                    // How you would like to style the map. 
+                    // This is where you would paste any style found on Snazzy Maps.
+                    styles: [{featureType:"water",elementType:"all",stylers:[{hue:"#76aee3"},{saturation:38},{lightness:-11},{visibility:"on"}]},{featureType:"road.highway",elementType:"all",stylers:[{hue:"#8dc749"},{saturation:-47},{lightness:-17},{visibility:"on"}]},{featureType:"poi.park",elementType:"all",stylers:[{hue:"#c6e3a4"},{saturation:17},{lightness:-2},{visibility:"on"}]},{featureType:"road.arterial",elementType:"all",stylers:[{hue:"#cccccc"},{saturation:-100},{lightness:13},{visibility:"on"}]},{featureType:"administrative.land_parcel",elementType:"all",stylers:[{hue:"#5f5855"},{saturation:6},{lightness:-31},{visibility:"on"}]},{featureType:"road.local",elementType:"all",stylers:[{hue:"#ffffff"},{saturation:-100},{lightness:100},{visibility:"simplified"}]},{featureType:"water",elementType:"all",stylers:[]}]
+                };
+
+                // Get the HTML DOM element that will contain your map 
+                // We are using a div with id="map" seen below in the <body>
+                var mapElement = document.getElementById('map');
+
+                // Create the Google Map using out element and options defined above
+                var map = new google.maps.Map(mapElement, mapOptions);
+            }
+        </script>
 </head>
 <body>
 	<!--[if lt IE 7]>
@@ -76,8 +119,10 @@
 			<a href="#navbar"><span class="icon-list2"></span></a>
 			<a href="home.html"><img src="assets/theme_logo.png" class="logo left"></a>
 		</div>
+		<div id="map">
+        </div>
 	</header>
-	<section id="amp_content" role="main" class="row store_front">
+	<section id="amp_content" role="main" class="row">
 		<header class="banner pixels g_bg">
 	        <div class="container focus">
 		        <div class="col sixteen last pl">
@@ -85,158 +130,66 @@
 		        </div>
 	        </div>
 		</header>
-		<section class="lg_bg">
-			<div id="container" class="container focus pt pb">
-				
-				<div class="row">
-				
-					<div class="element col one-quarter first">
-						<div class="inset preview">
-							<figure>
-								<img src="assets/old_castle.jpg" class="swg">
-							</figure>
-							<figcaption>
-								<h4>Product Name</h4>
-								<p class="ar cost">$9.<sup>97</sup></p>
-							</figcaption>
-						</div>
-						<div class="inset detail">
-							<a href="product.html">
-								<h3>Product Name</h3>
-							</a>
-							<button type="button" class="modal_opener full mb" amp-target="amp_overlay"><span class="icon-search hmr"></span>Quick View</button>
-							<button type="button" class="add_to_cart g_btn full"><span class="icon-cart hmr"></span>Add to Cart</button>
-						</div>
-					</div>	
-					
-					<div class="element col one-quarter">
-						<div class="inset preview">
-							<figure>
-								<img src="assets/old_castle.jpg" class="swg">
-							</figure>
-							<figcaption>
-								<h4>Product Name</h4>
-								<p class="ar cost">$9.<sup>97</sup></p>
-							</figcaption>
-						</div>
-						<div class="inset detail">
-							<a href="product.html">
-								<h3>Product Name</h3>
-							</a>
-							<button type="button" class="modal_opener full mb" amp-target="amp_overlay"><span class="icon-search hmr"></span>Quick View</button>
-							<button type="button" class="add_to_cart g_btn full"><span class="icon-cart hmr"></span>Add to Cart</button>
-						</div>
-					</div>	
-					
-					
-					<div class="element col one-quarter">
-						<div class="inset preview">
-							<figure>
-								<img src="assets/old_castle.jpg" class="swg">
-							</figure>
-							<figcaption>
-								<h4>Product Name</h4>
-								<p class="ar cost">$9.<sup>97</sup></p>
-							</figcaption>
-						</div>
-						<div class="inset detail">
-							<a href="product.html">
-								<h3>Product Name</h3>
-							</a>
-							<button type="button" class="modal_opener full mb" amp-target="amp_overlay"><span class="icon-search hmr"></span>Quick View</button>
-							<button type="button" class="add_to_cart g_btn full"><span class="icon-cart hmr"></span>Add to Cart</button>
-						</div>
-					</div>	
-					
-					
-					<div class="element col one-quarter last">
-						<div class="inset preview">
-							<figure>
-								<img src="assets/old_castle.jpg" class="swg">
-							</figure>
-							<figcaption>
-								<h4>Product Name</h4>
-								<p class="ar cost">$9.<sup>97</sup></p>
-							</figcaption>
-						</div>
-						<div class="inset detail">
-							<a href="product.html">
-								<h3>Product Name</h3>
-							</a>
-							<button type="button" class="modal_opener full mb" amp-target="amp_overlay"><span class="icon-search hmr"></span>Quick View</button>
-							<button type="button" class="add_to_cart g_btn full"><span class="icon-cart hmr"></span>Add to Cart</button>
-						</div>
-					</div>	
-					
-					
-					<div class="element col one-quarter first">
-						<div class="inset preview">
-							<figure>
-								<img src="assets/old_castle.jpg" class="swg">
-							</figure>
-							<figcaption>
-								<h4>Product Name</h4>
-								<p class="ar cost">$9.<sup>97</sup></p>
-							</figcaption>
-						</div>
-						<div class="inset detail">
-							<a href="product.html">
-								<h3>Product Name</h3>
-							</a>
-							<button type="button" class="modal_opener full mb" amp-target="amp_overlay"><span class="icon-search hmr"></span>Quick View</button>
-							<button type="button" class="add_to_cart g_btn full"><span class="icon-cart hmr"></span>Add to Cart</button>
-						</div>
-					</div>	
-					
-					
-					<div class="element col one-quarter">
-						<div class="inset preview">
-							<figure>
-								<img src="assets/old_castle.jpg" class="swg">
-							</figure>
-							<figcaption>
-								<h4>Product Name</h4>
-								<p class="ar cost">$9.<sup>97</sup></p>
-							</figcaption>
-						</div>
-						<div class="inset detail">
-							<a href="product.html">
-								<h3>Product Name</h3>
-							</a>
-							<button type="button" class="modal_opener full mb" amp-target="amp_overlay"><span class="icon-search hmr"></span>Quick View</button>
-							<button type="button" class="add_to_cart g_btn full"><span class="icon-cart hmr"></span>Add to Cart</button>
-						</div>
+		<article class="lg_bg">
+			<div class="container focus">
+				<div class="col nine">
+					<div class="inset dpt">
+						<form>
+							<fieldset>
+								<label class="above" for="regularInput">Name</label>
+								<input type="text" id="regularInput" placeholder="First Name">
+							</fieldset>
+							
+							<fieldset>
+								<label class="above" for="regularInputError">Email</label>
+								<input type="email" id="regularInputError" placeholder="you@domian.com">
+							</fieldset>
+							
+							<fieldset>
+								<label class="above" for="regularTextarea">Regular Textarea</label>
+								<textarea id="regularTextarea"></textarea>
+							</fieldset>
+							
+							<fieldset class="checklist">
+								<label for="notifications">Keep me notified</label>
+								<ul>
+									<li><label><input type="checkbox" name="notifications" class="custom"><span></span>About Site Updates</label></li>
+									<li><label><input type="checkbox" name="notifications" class="custom"><span></span>About Product updates</label></li>
+									<li><label><input type="checkbox" name="notifications" class="custom"><span></span>Send me Newsletters</label></li>
+								</ul>
+							</fieldset>
+							
+							<button type="submit">Sign Me Up</button>
+						</form>						
 					</div>
+				</div>
+				<div class="col six">
+					<figure class="dmt mb">
+						<img src="assets/WEP11901.jpg" class="swg">
+					</figure>
+					<button class="g_btn full" type="button">Quick Quote</button>
 					
-				</div>
-				
-				<div class="row dmt ra pt">
-					<menu>
-						<ul class="pager_nav">
-							<li><a class="button" href="#">First</a></li>
-							<li><span class="button active">1</span></li>
-							<li><a class="button" href="#">2</a></li>
-							<li><a class="button" href="#">3</a></li>
-							<li><a class="button" href="#">4</a></li>
-							<li><a class="button" href="#">5</a></li>
-							<li><a class="button" href="#">...</a></li>
-							<li><a class="button" href="#">Last</a></li>
-							<li><input type="text"><button type="button" class="button">Jump</button></li>
-						</ul>
-					</menu>
-				</div>
-				
-				
-				
+					<div class="h-card row">
+					  <h5 class="p-name"><a class="u-url" href="#">Treefrog Inc</a></h5>
+					 
+					  <p class="h-adr">
+					    <span class="p-street-address">567 Davis Drive</span><br>
+					    <span class="p-locality">Newmarket</span>, 
+					    <span class="p-region hmr">ON</span>
+					    <span class="p-postal-code">L3Y 2P5</span>,<br>
+					    <span class="p-country-name">Canada</span>
+					  </p>
+					  <p class="p-tel"><a href="tel:9058364442">(905) 836 4442</a></p>
+					</div>
+							
+				</div>				
 			</div>
-		</section>
-		<footer>
-		</footer>
+		</article>
 	</section>
 	<section class="mg_bg pixels dpt">
 		<div class="container focus">
 			<div class="col nine">
-				<h3>Recently Viewed</h3>
+				<h3>Check Out Our Services</h3>
 				<p>Venison pastrami pancetta pork chop, meatball pig t-bone chicken tail pork belly. Ham hock tenderloin beef ribs, corned beef ham frankfurter biltong pork t-bone pastrami ground round strip steak pork belly ball tip turkey.</p>
 				<ul class="custom">
 					<li>Bullet No 1</li>
@@ -245,7 +198,6 @@
 				</ul>
 			</div>
 			<div class="col seven">
-				<h3 class="align_center">Featured Item</h3>
 				<div class="row">
 					<figure class="col five push_one">
 						<img src="assets/old_castle.jpg" class="swg">
@@ -260,9 +212,16 @@
 	</section>
 	<section class="w_bg">
 		<div class="container focus ac">
+			<figure class="col ten push_three pull_top">
+				<img src="assets/old_castle.jpg" class="swg">
+			</figure>
+			<br class="clear">
+			<div class="row pt dpb">
+				<h3>Bacon ipsum dolor amet pancetta andouille fatback</h3>
+			</div>
 		</div>
 	</section>
-	<div id="navbar" class="k_bg pixels">
+<div id="navbar" class="k_bg pixels">
     	<div class="container focus">
         	<div class="row">
 				<a href="home.html"><img src="assets/theme_logo.png" class="logo"></a>
@@ -273,9 +232,10 @@
 								<li><a href="#"><span class="icon-paperplane hmr"></span>Shipping Address</a>
 								<li><a href="#"><span class="icon-vcard hmr"></span>Billing Information</a></li>
 								<li class="divider"></li>
-								<li><a href="#"><span class="icon-logout hmr"></span>Loggout</a></li>
+								<li><a href="#"><span class="icon-logout hmr"></span>Logout</a></li>
 							</ul>
 						</li>
+						<li class="divider"></li>
 						<li><a href="cart.html"><span class="icon-cart"></span></a></li>
 					</ul>
 					<ul class="mainnav horizontal">
@@ -310,6 +270,7 @@
     	</div>
 	</div>
 
+
 	<footer id="amp_footer" class="row pt k_bg">
         <div class="container focus">
 	        <p class="attribution right"><a href="http://treefrog.ca" target="_blank">Design by Treefrog Inc.</a></p>
@@ -322,55 +283,22 @@
 	<script>window.jQuery || document.write('<script src="../../js/js/jquery-1.9.1.min.js"><\/script>')</script>
 	<script src="../../js/plugins.js"></script>	
 	<script src="../../js/scripts.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$('.add_to_cart').click(function(
-				alert('Something Added to the cart');	
-			););
-		});
-	</script>
 	
      <!-- Sample Modal Structure -->
 	<div id="amp_overlay" class="overlay">
-		<div class="modal medium">
-			<section>
+		<div class="modal">
+			<header>
 				<span class="icon-cross2 large right rmr modal_kill" amp-target="amp_overlay"></span>
-				<div class="container fluid">
-					<div class="col one-third first">
-						<figure class="pt">
-							<img src="assets/old_castle.jpg" class="swg">
-						</figure>
-						<figcaption>
-							<ul class="inline quarters">
-								<li><a href="#"><img src="assets/old_castle.jpg" class="swg"></a></li>
-								<li><a href="#"><img src="assets/old_castle.jpg" class="swg"></a></li>
-								<li><a href="#"><img src="assets/old_castle.jpg" class="swg"></a></li>
-								<li><a href="#"><img src="assets/old_castle.jpg" class="swg"></a></li>
-								<li><a href="#"><img src="assets/old_castle.jpg" class="swg"></a></li>
-							</ul>
-						</figcaption>
-					</div>
-					<div class="two-thirds col last">
-						<section class="overview pb rb mb">
-							<h2>Product Name YAY!</h2>
-							<h3>$9.97</h3>
-							<h4>SKU: 83989jk2</h4>
-						</section>
-						<section class="add_to_cart_form pb rb mb">
-							<form>
-								<fieldset>
-									<label>Quantity</label>
-									<input type="text" class="small" placeholder="1">
-									<button class="g_btn r" type="button">Add<span class="icon-plus hml"></span></button>
-								</fieldset>
-							</form>
-						</section>
-						<p><a href="#" title="Full Product Info">Details <span class="icon-arrow-right4"></span></a></p>
-						
-					</div>
-						
-				</div>
+				<h3>Modal Header</h3>
+			</header>
+			<section>
+				...
 			</section>
+			<footer>
+				<button type="button" class="">Action</button>
+				<button type="reset" class="modal_kill" amp-target="amp_overlay">Cancel</button>
+				<button type="submit" class="">Action</button>
+			</footer>
 		</div>
 	</div>
 	
