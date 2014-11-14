@@ -1,10 +1,10 @@
 /*!
-* A.mphibio.us  Relesase Candidate 2.0a
+* A.mphibio.us  1.5.1c
 * Copyright 2014, @cliveMoore @Treefrog
 * http://a.mphibio.us
 * Free to use under the MIT license.
 * http://www.opensource.org/licenses/mit-license.php
-* 10/29/2014
+* 14/11/2014
 *
 */
 
@@ -32,7 +32,7 @@ amp.init = function() {
 	/* ==================================================================
 		* Discern mobile or desktop and init specific behaviour for each. 
 		* ================================================================== */
-	if (!jQuery.browser.mobile) {
+	if (!Modernizr.touch) {
 		amp.desktoplisteners();
 	} else {
 		amp.mobilelisteners();
@@ -101,11 +101,18 @@ amp.bindlisteners = function() {
 	});
 
 	$('.tabs li a').click(function(){
+		var parent = $(this).closest('ul').attr('id');
 		var content = '#'+$(this).attr('amp-tab-content');
 		if ($(this).hasClass('active') && content.length) {
 		} else {
-			$('.tabs li a').removeClass('active');
-			$(this).addClass('active');
+			if (parent > 0)
+			{
+				$('#'+parent+'.tabs li a').removeClass('active');
+				$(this).addClass('active');
+			} else {
+				$('.tabs li a').removeClass('active');
+				$(this).addClass('active');
+			}
 			$(content).show().addClass('active').siblings().hide().removeClass('active');
 		}
 		return false;

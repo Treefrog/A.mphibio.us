@@ -449,12 +449,13 @@
 
 </div>
 
-	<footer id="amp_footer" class="row">
-		            <p>Curated by Clive Moore, at <a href="http://www.treefrog.ca">Treefrog Inc.</a> <strong>Twitter</strong>: <a href="http://www.twitter.com/cliveMoore" title="Follow Clive on Twitter">@cliveMoore</a></p>
-		        </footer>
+
+<footer id="amp_footer" class="row">
+	<p><a href="/"><span class="icon-amphibious hmr"></span></a> <a href="http://www.lassosoft.com/"><span class="icon-lassosoft hmr"></span></a> <a href="http://www.mergini.com/"><span class="icon-mergini hmr"></span></a> Curated by Clive Moore, at <a href="http://www.treefrog.ca"><span class="icon-treefrog hmr"></span>Treefrog Inc.</a> <strong>Twitter</strong>: <a href="http://www.twitter.com/cliveMoore" title="Follow Clive on Twitter">@cliveMoore</a></p>
+</footer>
 
 <div id="navbar" class="f t l r">
-<!--// WTF? 
+<!--// WTF?
 
 .f.t.l.r == .fixed .top .left .right
 
@@ -492,7 +493,7 @@ postion:fixed;top:0;left:0;right:0;
 				</li>
 				<li><a href="form.html">Form</a>
 					<ul>
-						
+
 						<li><a href="form.html#typography">Typography <sub>and the golden ratio</sub></a></li>
 						<li><a href="form.html#forms">Basic Forms</a></li>
 						<li><a href="form.html#multi_forms">Mutli Beside Forms</a></li>
@@ -501,9 +502,10 @@ postion:fixed;top:0;left:0;right:0;
 				</li>
 				<li><a href="function.html">Function</a>
 					<ul>
-						
-						<li><a href="function.html#navigation">Horiztotal Nav <sub>with tertiary</sub></a></li>
-						<li><a href="function.html#horizcss">Horiztotal Nav <sub>css</sub></a></li>
+
+						<li><a href="function.html#navigation">Horizontal Nav <sub>with tertiary</sub></a></li>
+						<li><a href="function.html#horizcss">Horizontal Nav <sub>css</sub></a></li>
+						<li><a href="function.html#vertnav">Vertical Nav <sub>with tertiary</sub></a></li>
 						<li><a href="function.html#breadcrumbs">Breadcrumbs</a></li>
 						<li><a href="function.html#tabmagic">Tabs</a></li>
 						<li><a href="function.html#pagination">Pagination nav</a></li>
@@ -511,35 +513,39 @@ postion:fixed;top:0;left:0;right:0;
 				</li>
 				<li><a href="features.html">Features</a>
 					<ul>
-						
+						<li><a href="features.html#slides">Responsive Slide Shows</a></li>
 						<li><a href="features.html#helpers">Layout Helpers <sub>& shorthand classes</sub></a></li>
 						<li><a href="features.html#pears">Content Pea.rs</a></li>
 						<li><a href="features.html#icons">Webfont Icons <sub>by entypo</sub></a></li>
 					</ul>
 				</li>
-				<li onclick="$('#amp_overlay').fadeIn();"><a>Feedback</a></li>					
+				<li><a href="javascript:;" class="modal_opener" amp-target="amp_overlay">Feedback</a></li>
 			</ul>
 		</nav>
 	</div>
 </div>
 
-<div id="amp_overlay" style="display:none;" onclick="$('#amp_overlay').fadeOut();">
-	<h3 class="a t r intro" onclick="$('#amp_overlay').fadeOut();">&#10006;</h3>
-	<div class="container inner">
-		<div id="disqus_thread" class="bgwht bxshw"></div>
-		<script type="text/javascript">
-		    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-		    var disqus_shortname = 'amphibiouscss'; // required: replace example with your forum shortname
-		
-		    /* * * DON'T EDIT BELOW THIS LINE * * */
-		    (function() {
-		        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-		        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-		        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-		    })();
-		</script>
-		<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-		<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<div id="amp_overlay" class="overlay">
+	<div class="modal mt">
+		<section>
+			<div class="row">
+				<span class="icon-cross2 large right rmr modal_kill" amp-target="amp_overlay"></span>
+			</div>
+			<div id="disqus_thread"></div>
+			<script type="text/javascript">
+			    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+			    var disqus_shortname = 'amphibiouscss'; // required: replace example with your forum shortname
+			
+			    /* * * DON'T EDIT BELOW THIS LINE * * */
+			    (function() {
+			        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+			        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			    })();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		</section>
 	</div>
 </div>
 
@@ -550,8 +556,8 @@ postion:fixed;top:0;left:0;right:0;
 
 <a id="to_top" class="icon reset" href="#maincontent">&#11014;</a>  
   
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/libs/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/libs/jquery-1.11.1.min.js"><\/script>')</script>
 
 <!-- // These should be all rolled into one plugin.js for fewer http requests
 

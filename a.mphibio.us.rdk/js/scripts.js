@@ -1,10 +1,10 @@
 /*!
-* A.mphibio.us  1.5.1a
+* A.mphibio.us  1.5.1c
 * Copyright 2014, @cliveMoore @Treefrog
 * http://a.mphibio.us
 * Free to use under the MIT license.
 * http://www.opensource.org/licenses/mit-license.php
-* 11/12/2014
+* 14/11/2014
 *
 */
 
@@ -32,7 +32,7 @@ amp.init = function() {
 	/* ==================================================================
 		* Discern mobile or desktop and init specific behaviour for each. 
 		* ================================================================== */
-	if (!jQuery.browser.mobile) {
+	if (!Modernizr.touch) {
 		amp.desktoplisteners();
 	} else {
 		amp.mobilelisteners();
@@ -67,7 +67,7 @@ amp.bindlisteners = function() {
 	$('ul li:last-child').addClass('last');
 	
 	
-	$(function(){
+		$(function(){
 		var d = 'placeholder' in document.createElement('input');
 		if (!d){
 			$('input[placeholder]').each(function(){
@@ -101,11 +101,18 @@ amp.bindlisteners = function() {
 	});
 
 	$('.tabs li a').click(function(){
+		var parent = $(this).closest('ul').attr('id');
 		var content = '#'+$(this).attr('amp-tab-content');
 		if ($(this).hasClass('active') && content.length) {
 		} else {
-			$('.tabs li a').removeClass('active');
-			$(this).addClass('active');
+			if (parent > 0)
+			{
+				$('#'+parent+'.tabs li a').removeClass('active');
+				$(this).addClass('active');
+			} else {
+				$('.tabs li a').removeClass('active');
+				$(this).addClass('active');
+			}
 			$(content).show().addClass('active').siblings().hide().removeClass('active');
 		}
 		return false;
@@ -177,6 +184,8 @@ amp.desktoplisteners = function() {
 		* Desktop browser specific listeners are placed here 
 		* *** NOT *** executed by mobile browsers. See amp.mobilelisteners instead.
 		* ================================================================== */
+		
+		
 };
 
 $(document).ready(function() {
@@ -187,7 +196,10 @@ $(document).ready(function() {
 		* Generally a good thing to add listeners to the object, 
 		* however it is ok to be putting listeners directly in here.
 		* ================================================================== */
-		
 	amp.init(); // don't delete this - it is part of the A.mphibio.us startup
 	
+	/* ==================================================================
+		* These are site specific for the a.mphibio.us public site
+		* ================================================================== */			
+		$.localScroll();
 });

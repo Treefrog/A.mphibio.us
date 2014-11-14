@@ -1,10 +1,10 @@
 /*!
-* A.mphibio.us  1.5.1b
+* A.mphibio.us  1.5.1c
 * Copyright 2014, @cliveMoore @Treefrog
 * http://a.mphibio.us
 * Free to use under the MIT license.
 * http://www.opensource.org/licenses/mit-license.php
-* 13/11/2014
+* 14/11/2014
 *
 *
 /* CSS Table of Contents
@@ -1524,7 +1524,8 @@ input[type="file"]:active,
 .button_grp .active,
 .button_grp a.button:active,
 .button_grp a.button:focus,
-.filter_nav>dd>a:active
+.filter_nav>dd>a:active,
+.pager_nav .active
 {
     color: #fff;
     border: 1px solid #7485b9;
@@ -1577,7 +1578,8 @@ ul.button_grp .button,
 ul.button_grp .active,
 .pager_nav input[type="text"],
 .pager_nav button,
-.pager_nav .button
+.pager_nav .button,
+.pager_nav .active
 {
     padding: 0.425em;
 /*     border: 1px solid #dcd7d1; */
@@ -1663,67 +1665,45 @@ ul.tabs li.r
 ul.tabs.big,
 ul.tabs.bg
 {
-    display: block;
-    height: 32px;
-    background-color: #fbfbfb;
+    font-size: 1.3em;
 }
 
 ul.tabs li a
 {
+    position: relative;
+    top: 3px;
     display: block;
     width: auto;
-    height: 30px;
     padding: 0px 20px;
     line-height: 30px;
     margin: 0;
     color: #4d4d4d;
     text-decoration: none;
-    background-color: #fbfbfb;
+    background-color: #f1f1f1;
+    border: 1px solid #ededed;
+    border-bottom: 3px solid #fff;
 }
 
-ul.tabs li.active a,
-.tabs li.active a:visted,
-.tabs li:active a,
-.tabs li a:active,
-.tabs li a:focus
+ul.tabs li a:hover
 {
-    background-color: #6e574c;
-    color: #ffffff;
-}
-
-ul.tabs li:hover a
-{
-    background-image: none;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
+    top: 2px;
+	background-color: #fafafa;
 }
 
 ul.tabs li a.active
 {
-    background: #fff;
-    height: 30px;
-    position: relative;
+	top: 0;
     border-left-width: 1px;
     margin: 0;
-    color: #111;
-    color: #fff;
-    background-color: #1b378c;
-}
-
-ul.tabs.mini li,
-ul.tabs.mini li a,
-ul.tabs.mini li a.active
-{
-    height: 22px;
+    color: #6e574c;
+    background-color: #fff;
 }
 
 ul.tabs.mini li,
 ul.tabs.mini li a
 {
     font: -webkit-control;
-    font-size: .826em;
+    font-size: 0.826em;
 }
 
 ul.tabs li:first-child a.active
@@ -1744,6 +1724,8 @@ ul.tabs li:last-child a
 
 ul.tabs-content
 {
+	position: relative;
+    top: 3px;
     margin: 0;
     display: block;
     list-style: none;
@@ -1758,11 +1740,8 @@ ul.tabs-content > li.active
 {
     display: block;
     background-color: #fefefe;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
 }
+
 /* Clearfixing tabs for beautiful stacking */
 
 ul.tabs:before,
@@ -1818,6 +1797,8 @@ ul.nav
 
 .horizontal>li,
 .vertical>li,
+.vertical>li>ul>li,
+.vertical>li>ul>li>ul>li,
 .filter_nav>dt,
 .filter_nav>dd
 {
@@ -1827,9 +1808,12 @@ ul.nav
     margin-left: 0;
 }
 
-.vertical>li
+.vertical>li,
+.vertical>li>ul>li,
+.vertical>li>ul>li>ul>li
 {
 	float: none;
+	position: relative;
 }
 
 .horizontal>li>a,
@@ -1841,10 +1825,6 @@ ul.nav
     padding: 0.5em 0.865em;
     font-size: 1em;
     text-decoration: none;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
 }
 .vertical>li>a
 {
@@ -1869,7 +1849,9 @@ ul.nav
 }
 
 .horizontal > li > ul > li > a,
-.horizontal > li > ul > li > ul > li > a
+.vertical > li > ul > li > a,
+.horizontal > li > ul > li > ul > li > a,
+.vertical > li > ul > li > ul > li > a
 {
     display: block;
     background: #ffffff;
@@ -1878,27 +1860,25 @@ ul.nav
     font-weight: bold;
     text-decoration: none;
     white-space: nowrap;
-}
-
-.horizontal > li > ul > li > a,
-.horizontal > li > ul > li > ul > li > a
-{
     padding: .625em 3em .625em 1.125em;
 }
 
 .horizontal > li > ul > li > a:hover,
-.horizontal > li > ul > li > ul > li > a:hover
+.vertical > li > ul > li > a:hover,
+.horizontal > li > ul > li > ul > li > a:hover,
+.vertical > li > ul > li > ul > li > a:hover
 {
     background: #0080c6;
     background: rgba(0, 128, 198, 1);
     color: #fff;
 }
 
-.horizontal > li > ul
+.horizontal > li > ul,
+.vertical > li > ul
 {
     position: absolute;
     z-index: 5000;
-    height: 0;
+    max-height: 0;
     width: auto;
     margin-left: 0;
     margin-top: 0;
@@ -1912,15 +1892,24 @@ ul.nav
     transition: all 0.3s ease-out;
     display: none;
 }
+.vertical > li > ul
+{
+	top: 0;
+	left: 100%;
+    display: block;
+}
 
-.horizontal > li:hover > ul
+.horizontal > li:hover > ul,
+.vertical > li:hover > ul
 {
     height: auto;
     display: block;
 }
 
 .horizontal > li:hover > ul:before,
-.horizontal > li > ul > li:hover > ul:before
+.vertical > li:hover > ul:before,
+.horizontal > li > ul > li:hover > ul:before,
+.vertical > li > ul > li:hover > ul:before
 {
     border: solid;
     border-color: #cfcfcf transparent;
@@ -1939,7 +1928,9 @@ ul.nav
     background-clip: padding-box;
 }
 
-.horizontal > li > ul > li:hover > ul:before
+.vertical > li:hover > ul:before,
+.horizontal > li > ul > li:hover > ul:before,
+.vertical > li > ul > li:hover > ul:before
 {
     top: 1.125em;
     left: -6px;
@@ -1954,13 +1945,16 @@ ul.nav
     position: relative;
 }
 
-.horizontal > li > ul > li > ul
+.horizontal > li > ul > li > ul,
+.vertical > li > ul > li > ul,
+.vertical > li > ul
 {
     position: absolute;
     top: 0%;
     z-index: 5005;
+    margin: 0;
     height: 0;
-    width: auto;
+    width: inherit;
 /*  border: 1px solid #cfcfcf; */
     -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
@@ -1972,7 +1966,16 @@ ul.nav
     display: none;
 }
 
-.horizontal > li > ul > li:hover > ul
+.horizontal > li > ul > li > ul,
+.vertical > li > ul > li > ul
+{
+	list-style: none;
+    left: 100%;
+}
+
+
+.horizontal > li > ul > li:hover > ul,
+.vertical > li > ul > li:hover > ul
 {
     display: block;
     left: 100%;

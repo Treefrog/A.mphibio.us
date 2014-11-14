@@ -86,7 +86,7 @@ border: 4px solid #fff;
 	height: 30px;
 	margin: -20px 0 0;
 	display: block;
-	background: url(../images/bg_direction_nav.png) no-repeat 0 0;
+	background: url(../../images/bg_direction_nav.png) no-repeat 0 0;
 	position: absolute;
 	top: 50%;
 	z-index: 10;
@@ -99,7 +99,7 @@ border: 4px solid #fff;
 	}
 .flex-direction-nav .flex-prev {left: -36px;}
 .flexslider:hover .flex-next {opacity: 0.8;
-	right: 5px;}
+	right: 20px;}
 .flexslider:hover .flex-prev {opacity: 0.8;
 	left: 5px;}
 .flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover {opacity: 1;}
