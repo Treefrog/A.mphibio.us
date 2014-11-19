@@ -119,7 +119,7 @@
 			<a href="#navbar"><span class="icon-list2"></span></a>
 			<a href="home.html"><img src="assets/theme_logo.png" class="logo left"></a>
 		</div>
-		<div id="map">
+		<div id="map" class="focus">
         </div>
 	</header>
 	<section id="amp_content" role="main" class="row">
@@ -142,7 +142,7 @@
 							
 							<fieldset>
 								<label class="above" for="regularInputError">Email</label>
-								<input type="email" id="regularInputError" placeholder="you@domian.com">
+								<input type="email" id="regularInputError" placeholder="you@domain.com">
 							</fieldset>
 							
 							<fieldset>
@@ -167,9 +167,9 @@
 					<figure class="dmt mb">
 						<img src="assets/WEP11901.jpg" class="swg">
 					</figure>
-					<button class="g_btn full" type="button">Quick Quote</button>
+					<button class="g_btn full modal_opener" amp-target="amp_overlay" type="button">Quick Quote</button>
 					
-					<div class="h-card row">
+					<div class="h-card row mt">
 					  <h5 class="p-name"><a class="u-url" href="#">Treefrog Inc</a></h5>
 					 
 					  <p class="h-adr">
@@ -285,7 +285,7 @@
 	<script src="../../js/scripts.js"></script>
 	
      <!-- Sample Modal Structure -->
-	<div id="amp_overlay" class="overlay">
+	<div id="amp_overlay" class="modal_overlay">
 		<div class="modal">
 			<header>
 				<span class="icon-cross2 large right rmr modal_kill" amp-target="amp_overlay"></span>

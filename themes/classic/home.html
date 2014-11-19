@@ -64,9 +64,21 @@
      <!-- Add your site or application content here -->
         
 	<header id="amp_header" role="banner" class="row">
+		<div id="nav_toggle" class="k_bg">
+			<div id="search_wrap" class="r hmr">
+				<form action="/" class="search">
+					<fieldset>
+						<input type="text" placeholder="Search">
+						<input type="submit" class="icon-search" value="">
+					</fieldset>
+				</form>
+			</div>
+			<a href="#navbar"><span class="icon-list2"></span></a>
+			<a href="home.html"><img src="assets/theme_logo.png" class="logo left"></a>
+		</div>
 		<div id="hero_panel">
 			<div class="container focus">
-				<div class="col eight push_one">
+				<div class="col eight push_nine">
         			<h1>SEO Title Not shown on screen</h1>
 					<div class="col six featurette">
 						<h2>Bacon ipsum dolor amet pancetta andouille fatback, tail tongue sausage swine kevin filet mignon shank</h2>
@@ -75,7 +87,7 @@
 			
 					
 				</div>
-				<figure class="a">
+				<figure>
 					<img src="assets/tiki_huts.jpg" class="swg">
 				</figure>
 			</div>
@@ -87,8 +99,8 @@
 	        	<h2 class="align_center upper">Secondary Page Header and Attention Getter</h2>
 	        </div>
 		</header>
-		<article class="lg_bg">
-			<div class="container focus w_bg">
+		<article class="w_bg">
+			<div class="container focus">
 				<div class="col nine">
 					<div class="inset dpt">
 						<p>Bacon ipsum dolor amet pancetta andouille fatback, tail tongue sausage swine kevin filet mignon shank. Drumstick kevin spare ribs, leberkas corned beef porchetta pork belly jerky tri-tip short loin biltong tail short ribs. Tail t-bone andouille corned beef prosciutto kielbasa. Tail ribeye pork belly andouille tri-tip cow beef brisket drumstick fatback kevin turkey jerky. Jerky cow venison fatback beef ribs shankle.</p>
@@ -99,33 +111,43 @@
 			</div>
 		</article>
 	</section>
-	<section>
-		<div class="b_bg">
-			<div class="container focus">
-				<div class="col nine">
-					<h3>Check Out Our Services</h3>
-					<ul class="custom">
-						<li>Bullet No 1</li>
-						<li>Bullet No 2</li>
-						<li>Bullet No 3</li>
-					</ul>
+	<section class="mg_bg pt">
+		<div class="container focus">
+			<div class="col nine">
+				<h3>Check Out Our Services</h3>
+				<ul class="custom">
+					<li>Bullet No 1</li>
+					<li>Bullet No 2</li>
+					<li>Bullet No 3</li>
+				</ul>
+			</div>
+			<div class="col seven">
+				<div class="row">
+					<figure class="col five push_one pull_top">
+						<img src="assets/old_castle.jpg" class="swg">
+					</figure>
 				</div>
-				<div class="col seven">
-					<div class="row">
-						<figure class="col five push_one pull_top">
-							<img src="assets/old_castle.jpg" class="swg">
-						</figure>
-					</div>
-					<h4 class="align_center upper">Sample sub header call to action</h4>
-				</div>
+				<h4 class="align_center upper">Sample sub header call to action</h4>
 			</div>
 		</div>
 	</section>
 	<div id="navbar" class="k_bg">
     	<div class="container focus">
         	<div class="row">
-				<a href="home.html"><img src="assets/theme_logo.png" class="logo left"></a>
-				<nav class="left">
+				<a href="home.html"><img src="assets/theme_logo.png" class="logo"></a>
+				<nav>
+					<ul class="utility horizontal a r">
+						<li><a href=""><span class="icon-user hmr"></span>Profile</a>
+							<ul>
+								<li><a href="#"><span class="icon-paperplane hmr"></span>Shipping Address</a>
+								<li><a href="#"><span class="icon-vcard hmr"></span>Billing Information</a></li>
+								<li class="divider"></li>
+								<li><a href="#"><span class="icon-logout hmr"></span>Logout</a></li>
+							</ul>
+						</li>
+						<li class="divider"></li>
+						<li><a href="cart.html"><span class="icon-cart"></span></a></li>
+					</ul>
 					<ul class="mainnav horizontal">
 						<li><a href="home.html"><span class="icon-house"></span></a></li>
 						<li><a href="interior.html">About Us</a>
@@ -142,9 +164,16 @@
 								<li><a href="#">Sub menu Link</a></li>
 							</ul>
 						</li>
-						<li><a href="interior2.html">Products</a></li>
-						<li><a href="interior2.html">Careers</a></li>
-						<li><a href="interior2.html">Contact</a></li>
+						<li><a href="store.html">Products</a></li>
+						<li><a href="interior.html">Careers</a></li>
+						<li><a href="contact.html">Contact</a></li>
+						<li class="nav_toggle">
+							<a href="#amp_header">
+								<span class="icon-arrow-up7 l hml"></span>
+								To Top 
+								<span class="icon-arrow-up7 r hmr"></span>
+							</a>
+						</li>
 					</ul>
 				</nav>
         	</div>
@@ -165,20 +194,48 @@
 	<script src="../../js/scripts.js"></script>
 	
      <!-- Sample Modal Structure -->
-	<div id="amp_overlay" class="overlay">
-		<div class="modal">
-			<header>
-				<span class="icon-cross2 large right rmr modal_kill" amp-target="amp_overlay"></span>
-				<h3>Modal Header</h3>
-			</header>
-			<section>
-				...
+	<div id="amp_overlay" class="modal_overlay">
+		<div class="modal small">
+			<section class="row">
+				
+				<div class="row">
+					<span class="icon-cross2 large right rmr modal_kill" amp-target="amp_overlay"></span>
+				</div>
+				
+				<form>
+					<fieldset>
+						<label class="above" for="regularInput">Name</label>
+						<input type="text" id="regularInput" placeholder="First Name">
+					</fieldset>
+					
+					<fieldset>
+						<label class="above" for="regularInputError">Email</label>
+						<input type="email" id="regularInputError" placeholder="you@domian.com">
+					</fieldset>
+					
+					<fieldset>
+						<label class="above" for="regularTextarea">Regular Textarea</label>
+						<textarea id="regularTextarea"></textarea>
+					</fieldset>
+					
+					<fieldset class="checklist">
+						<label for="notifications">Keep me notified</label>
+						<ul>
+							<li><label><input type="checkbox" name="notifications" class="custom"><span></span>About Site Updates</label></li>
+							<li><label><input type="checkbox" name="notifications" class="custom"><span></span>About Product updates</label></li>
+							<li><label><input type="checkbox" name="notifications" class="custom"><span></span>Send me Newsletters</label></li>
+						</ul>
+					</fieldset>		
+					
+					<fieldset>
+						<button type="button" class="">Sign Me Up</button>
+						<button type="button" class="k_btn">Another Action</button>
+						<button type="reset" class="modal_kill k_btn" amp-target="amp_overlay">Cancel</button>
+					</fieldset>
+				</form>		
+	
 			</section>
-			<footer>
-				<button type="button" class="">Action</button>
-				<button type="button" class="g_btn">Action</button>
-				<button type="reset" class="modal_kill k_btn" amp-target="amp_overlay">Cancel</button>
-			</footer>
+						
 		</div>
 	</div>
 	

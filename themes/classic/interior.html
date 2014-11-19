@@ -64,6 +64,18 @@
      <!-- Add your site or application content here -->
         
 	<header id="amp_header" role="banner" class="row">
+		<div id="nav_toggle" class="k_bg">
+			<div id="search_wrap" class="r hmr">
+				<form action="/" class="search">
+					<fieldset>
+						<input type="text" placeholder="Search">
+						<input type="submit" class="icon-search" value="">
+					</fieldset>
+				</form>
+			</div>
+			<a href="#navbar"><span class="icon-list2"></span></a>
+			<a href="home.html"><img src="assets/theme_logo.png" class="logo left"></a>
+		</div>
 		<div id="masthead">
 			<div class="container focus">
         		<h1>SEO Title Not shown on screen</h1>
@@ -81,10 +93,12 @@
 		        </div>
 	        </div>
 		</header>
-		<article class="lg_bg">
-			<div class="container focus w_bg">
+		<article>
+			<div class="container focus">
 				<div class="col nine">
 					<div class="inset dpt">
+						<h3>Tail turkey sirloin chuck</h3>
+						
 						<p>Bacon ipsum dolor amet venison short loin shankle beef bacon pancetta, meatloaf landjaeger tail prosciutto sirloin. Beef t-bone pig, chuck drumstick doner sausage. Rump turkey sirloin strip steak, kevin filet mignon pork loin chicken andouille shankle bacon beef ribs chuck. Short loin short ribs tri-tip meatball ham pastrami chicken salami hamburger. Filet mignon rump sausage ground round jowl short loin.</p>
 						
 						<p>Tail ribeye flank pig meatloaf, beef swine cow prosciutto t-bone ham pork. Ground round pastrami pork belly short loin tail. Short ribs beef pork belly cow. Pancetta swine tail doner bresaola salami.</p>
@@ -101,32 +115,35 @@
 					<figure class="dmt mb">
 						<img src="assets/old_castle.jpg" class="swg">
 					</figure>
-					<button class="g_btn full" type="button">Call to Action</button>
+					<button class="k_btn full" type="button">Call to Action</button>
 					<ol class="slats">
-					<li class="row">
-						<a href="#">
-							<h4>This is the title</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="meta">August 10, 2011</span></p>
-						</a>
-					</li>
-					<li class="row">
-						<a href="#">
-							<h4>This is the title</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="meta">August 10, 2011</span></p>
-						</a>
-					</li>
-					<li class="row">
-						<a href="#">
-							<h4>This is the title</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="meta">August 10, 2011</span></p>
-						</a>
-					</li>
-				</ol>
+						<li class="row">
+							<a href="#">
+								<h4>This is the title</h4>
+							</a>
+								<p>Bacon ipsum dolor amet venison short loin shankle beef bacon pancetta, meatloaf landjaeger tail prosciutto sirloin <span class="meta">August 10, 2011</span></p>
+								<a class="small button r" href="#">Read More <span class="icon-arrow-right"></span></a>
+						</li>
+						<li class="row">
+							<a href="#">
+								<h4>This is the title</h4>
+							</a>
+								<p>Rump turkey sirloin strip steak, kevin filet mignon pork loin chicken andouille shankle bacon beef ribs chuck <span class="meta">August 10, 2011</span></p>
+								<a class="small button r" href="#">Read More <span class="icon-arrow-right"></span></a>
+						</li>
+						<li class="row">
+							<a href="#">
+								<h4>This is the title</h4>
+							</a>
+								<p>Filet mignon rump sausage ground round jowl short loin <span class="meta">August 10, 2011</span></p>
+								<a class="small button r" href="#">Read More <span class="icon-arrow-right"></span></a>
+						</li>
+					</ol>
 				</div>				
 			</div>
 		</article>
 	</section>
-	<section class="b_bg dpt">
+	<section class="w_bg dpt">
 		<div class="container focus">
 			<div class="col nine">
 				<h3>Check Out Our Services</h3>
@@ -150,7 +167,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="w_bg">
+	<section>
 		<div class="container focus ac">
 			<figure class="col ten push_three pull_top">
 				<img src="assets/old_castle.jpg" class="swg">
@@ -164,8 +181,20 @@
 	<div id="navbar" class="k_bg">
     	<div class="container focus">
         	<div class="row">
-				<a href="home.html"><img src="assets/theme_logo.png" class="logo left"></a>
-				<nav class="left">
+				<a href="home.html"><img src="assets/theme_logo.png" class="logo"></a>
+				<nav>
+					<ul class="utility horizontal a r">
+						<li><a href=""><span class="icon-user hmr"></span>Profile</a>
+							<ul>
+								<li><a href="#"><span class="icon-paperplane hmr"></span>Shipping Address</a>
+								<li><a href="#"><span class="icon-vcard hmr"></span>Billing Information</a></li>
+								<li class="divider"></li>
+								<li><a href="#"><span class="icon-logout hmr"></span>Logout</a></li>
+							</ul>
+						</li>
+						<li class="divider"></li>
+						<li><a href="cart.html"><span class="icon-cart"></span></a></li>
+					</ul>
 					<ul class="mainnav horizontal">
 						<li><a href="home.html"><span class="icon-house"></span></a></li>
 						<li><a href="interior.html">About Us</a>
@@ -182,9 +211,16 @@
 								<li><a href="#">Sub menu Link</a></li>
 							</ul>
 						</li>
-						<li><a href="interior2.html">Products</a></li>
-						<li><a href="interior2.html">Careers</a></li>
-						<li><a href="interior2.html">Contact</a></li>
+						<li><a href="store.html">Products</a></li>
+						<li><a href="interior.html">Careers</a></li>
+						<li><a href="contact.html">Contact</a></li>
+						<li class="nav_toggle">
+							<a href="#amp_header">
+								<span class="icon-arrow-up7 l hml"></span>
+								To Top 
+								<span class="icon-arrow-up7 r hmr"></span>
+							</a>
+						</li>
 					</ul>
 				</nav>
         	</div>
@@ -205,7 +241,7 @@
 	<script src="../../js/scripts.js"></script>
 	
      <!-- Sample Modal Structure -->
-	<div id="amp_overlay" class="overlay">
+	<div id="amp_overlay" class="modal_overlay">
 		<div class="modal">
 			<header>
 				<span class="icon-cross2 large right rmr modal_kill" amp-target="amp_overlay"></span>
