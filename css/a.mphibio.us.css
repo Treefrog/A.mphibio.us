@@ -15,7 +15,7 @@
    3. Typography
    4. Content Pea.rs / Common patterns of Markup and style
    5. Table Styles
-   6. Images
+   6. Responsive Images
    7. Messaging, Notifications & Tags
    8. Buttons
    9. Tabs (activated by scripts.js)
@@ -698,7 +698,6 @@ h5,
 {
     /* Often used for, as you can imagine, some call out text */
     font-size: 1.2em;
-    margin: 1.67em 0;
 }
 
 h6
@@ -2204,7 +2203,7 @@ ul.nav
    13. General Modals
    ========================================================================== */
 
-.overlay {
+.modal_overlay {
     width:100%;
     height:100%;
     display:none;
@@ -2219,12 +2218,12 @@ ul.nav
     overflow: auto;
 }
 
-.overlay.show
+.modal_overlay.show
 {
     display: block;
 }
 
-.overlay .modal
+.modal_overlay .modal
 {
     background:#FFF;
     border-radius: 6px;
@@ -2242,24 +2241,24 @@ ul.nav
     margin-top: 15%;
 }
 
-.overlay .modal.medium
+.modal_overlay .modal.medium
 {
     width: 60%;
 }
 
-.overlay .modal.small
+.modal_overlay .modal.small
 {
     width: 30%;
 }
 
-.overlay .modal header,
-.overlay .modal section,
-.overlay .modal footer
+.modal_overlay .modal header,
+.modal_overlay .modal section,
+.modal_overlay .modal footer
 {
     padding:10px 20px;
 }
 
-.overlay .modal header
+.modal_overlay .modal header
 {
     background-color: #d5d5d5;
     background-image: -webkit-linear-gradient(top, #ebebeb, #d5d5d5);
@@ -2268,13 +2267,13 @@ ul.nav
     background-image: linear-gradient(to bottom, #ebebeb, #d5d5d5);
 }
 
-.overlay .modal footer
+.modal_overlay .modal footer
 {
     position: absolute;
     bottom: 0;
 }
 
-.overlay .modal header h3
+.modal_overlay .modal header h3
 {
     margin: 0;
 }
@@ -2347,10 +2346,12 @@ input[type="text"].small,
 input[type="password"].small,
 input[type="email"].small,
 input[type="url"].small,
-input[type="date"].small
+input[type="date"].small,
+.styled_select.small
 {
 	font-size: 1em;
 	width: 10%;
+	min-width: 3em;
 }
 
 input[type="text"],
@@ -2565,7 +2566,7 @@ form.multi.beside fieldset label
 {
     float: left;
     width: 30%;
-    margin: 0.25em 0 0.325em 0;
+    padding: 0.625em 0;
 }
 
 form.multi.beside fieldset label + label
@@ -2582,7 +2583,7 @@ form.multi.beside fieldset input[type="date"],
 form.multi.beside fieldset textarea,
 form.multi.beside fieldset .styled_select
 {
-    width: 60%;
+    width: 65%;
     margin: 0;
 }
 
@@ -2669,87 +2670,92 @@ form fieldset p.form-help.after
 
 
 /* ==========================================================================
-   15. Custom Form Elements Append/Prend Icon
+   15. Custom Form Elements Append/Prepend Icons to Inputs
    ========================================================================== */
 
-.append_icon
+fieldset
 {
-    padding-right: 1.6em;
+    position: relative;
 }
-input[type="text"].datepicker,
-input[type="text"].hasDatepicker
+
+input.append_icon,
+input.prepend_icon
 {
-    min-width: 236px;
+	margin:0;
 }
-input[type="text"].prepend_icon
+
+input.prepend_icon
 {
-    text-indent: 2.8em;
+    text-indent: 2em;
 }
+
+label.prepend_to,
 label.append_to
 {
-    display: inline;
-    position: relative;
-    z-index: 1;
-    top: 0.5em;
-    margin-left: -2.2em;
-}
-label.prepend_to
-{
-    display: inline;
+    display: block;
     position: absolute;
+    top:1.4em;
+	padding: 0.625em !important;
+	text-align: center;
+	background: #cecece;
     z-index: 1;
-    left: 0.2em;
 }
-form.multi.beside fieldset,
-form.multi.beside fieldset .form_group
+
+label.append_to
 {
-    position: relative;
+	right: -2px;
 }
-form.multi.beside fieldset .form_group
+
+form.multi.beside fieldset.form_group
 {
     display: inline-block;
 }
+form.multi.beside label.prepend_to,
 form.multi.beside label.append_to
 {
-    top: -0.2em;
-    margin-left: -2.2em;
+	top:0;
     width: auto;
+}
+
+form.multi.beside label.append_to
+{
+    left: auto;
+    right: 0.325em;
 }
 form.multi.beside label.prepend_to
 {
-    top: -0.2em;
     left: 30%;
-    margin-left: 0.2em;
-    width: auto;
 }
-form.multi.beside .date_picker_set .form_group label
+form.multi.beside fieldset.date_picker_set fieldset label
 {
-    width: 40px;
-    padding-right: 0;
+	margin-bottom: -1px;
 }
-form.multi.beside .date_picker_set .form_group:nth-child(2n) label
+
+form.multi.beside fieldset.date_picker_set fieldset label
+{
+    width: 60px;
+}
+
+form.multi.beside fieldset.date_picker_set fieldset label.prepend_to,
+form.multi.beside fieldset.date_picker_set fieldset label.append_to
+{
+    width: auto;
+	padding: 0.6em 0.625em !important;
+}
+
+form.multi.beside fieldset.date_picker_set fieldset label.prepend_to
+{
+    left: 60px;
+}
+form.multi.beside fieldset.date_picker_set fieldset label.append_to
+{
+    right: 1em;
+}
+
+form.multi.beside fieldset.date_picker_set fieldset:nth-child(2n) label
 {
     text-align: center;
 }
-form.multi.beside .date_picker_set .form_group label.prepend_to
-{
-    margin-top: 0.2em;
-    left: 44px;
-    margin-left: 0;
-}
-form.multi.beside .date_picker_set .form_group:nth-child(2n) label.prepend_to
-{
-    left: 38px;
-}
-form.multi.beside .date_picker_set .form_group label.append_to
-{
-    margin-left: -3em;
-}
-form.multi.beside .date_picker_set .form_group:nth-child(2n) label.append_to
-{
-    margin-left: -3.2em;
-}
-
 
 .append_to [class^="icon-"],
 .append_to [class*=" icon-"],
@@ -5552,17 +5558,19 @@ Class Name                      Shorthand                   Styles
 .tooltip:hover:after
 {
     text-indent: 0;
-    top: 40px;
+    text-align: left;
+    bottom: 27px;
+    left: -100%;
     display: block;
-    min-width: 50px;
+    min-width: 100px;
+    max-width: 400px;
     color: #333;
     font-size: 11px;
     text-shadow: #fff 0 1px 0;
     content: attr(amp-tip);
-    left: -25%;
     padding: .3em 1em;
     position: absolute;
-    white-space: nowrap;
+/*     white-space: nowrap; */
     z-index: 300;
     background-color: #fff;
     border: 1px solid #ccc;
@@ -5585,17 +5593,14 @@ Class Name                      Shorthand                   Styles
 .tooltip:hover:before
 {
     border: solid;
-    border-color: #fefefe transparent;
-    border-width: 0 6px 7px 6px;
-    top: 34px;
+    border-color: #666 transparent;
+    border-width: 7px 6px 0 6px;
+    bottom: 20px;
     content: "";
     display: block;
-    left: 50%;
+    left: 20%;
     position: absolute;
     z-index: 301;
-    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     -webkit-background-clip: padding-box;
     -moz-background-clip: padding;
     background-clip: padding-box;

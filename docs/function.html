@@ -10,7 +10,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>Amphibious | Simply Elegant HTML5/CSS3 Responsive Front End Development Kit | 1.5.0 November 7, 2014</title>
+<title>Amphibious | Simply Elegant HTML5/CSS3 Responsive Front End Development Kit | 1.5.1 November 14, 2014</title>
 <meta name="description" content="A.mphibio.us is a responsive design tool for rapid development has a familiar sixteen column, lightweight 960 grid as its base, but elegantly scales down to downsized browser windows">
 <meta name="keywords" content="css3, html5, responsive, web, design, mobile layout, responsive design">
 
@@ -68,7 +68,7 @@
 <div id="maincontent" class="col sixteen content">
 	<header>
 		<h1 class="rmb mt">A.mphibio.us</h1>
-		<p class="meta v">1.0.1 <span class="date ml">Release <span class="mo">April</span> 11<sup>th</sup> 2013</span></p>
+		<p class="meta v">1.5.1 <span class="date ml">Release <span class="mo">November</span> 14<sup>th</sup> 2014</span></p>
 	</header>
   
 	<section id="navigation">
@@ -135,156 +135,172 @@
 		</div>
 		<div class="row mt">
 			<pre id="horizcss" class="prettyprint linenums">
+nav ul,
+.nav ul,
+ul.nav
+{
+  list-style: none outside;
+}
+
 .navbar
 {
-  *position:relative;
-  *z-index:2;
-  margin-bottom:18px;
-  overflow:visible;
+  *position: relative;
+  *z-index: 2;
+  overflow: visible;
 }
 
 .navbar-inner
 {
-  padding-right:20px;
-  padding-left:20px;
-  background-color:#cfcfcf;
+  background-color: #cfcfcf;
   border-top: 1px solid #efefef;
   border-bottom: 1px solid #fefefe;
-  background-image:-webkit-gradient(linear,0 0,0 100%,from(#0080c6),to(#005583));
-  background-image:-webkit-linear-gradient(top,#0080c6,#005583);
-  background-image:   -moz-linear-gradient(top,#0080c6,#005583);
-  background-image:  -ms-linear-gradient(top,#0080c6,#005583);
-  background-image:  -o-linear-gradient(top,#0080c6,#005583);
-  background-image: linear-gradient(top,#0080c6,#005583);
-  
-  filter:progid:dximagetransform.microsoft.gradient(startColorstr='#0080c6',endColorstr='#005583',GradientType=0);
-  
-  -webkit-box-shadow:
-  0 1px 3px rgba(0,0,0,0.25),
-  inset 0 0 2px rgba(255,255,255,.4),
-  inset 0 -1px 0 rgba(0,0,0,0.1), 
-  0 2px 4px rgba(0,0,0,.4);
-  -moz-box-shadow:
-  0 1px 3px rgba(0,0,0,0.25),
-  inset 0 -1px 0 rgba(0,0,0,0.1),
-  0 2px 4px rgba(0,0,0,.4);
-  box-shadow:
-  0 1px 3px rgba(0,0,0,0.25),
-  inset 0 0 2px rgba(255,255,255,.4),
-  inset 0 -1px 0 rgba(0,0,0,0.1), 
-  0 2px 4px rgba(0,0,0,.4);
 }
 
-.horizontal>li>a
+.horizontal
 {
-  border-right: 1px solid #0080c6;
-  border-left: 1px solid #005583;
-  
+  margin: 0;
 }
-.horizontal>li>a:hover
+
+.horizontal>li,
+.vertical>li,
+.vertical>li>ul>li,
+.vertical>li>ul>li>ul>li,
+.filter_nav>dt,
+.filter_nav>dd
+{
+  display: block;
+  float: left;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+.vertical>li,
+.vertical>li>ul>li,
+.vertical>li>ul>li>ul>li
+{
+	float: none;
+	position: relative;
+}
+
+.horizontal>li>a,
+.vertical>li>a,
+.filter_nav>dd>a
+{
+  display: inline-block;
+  float: none;
+  padding: 0.5em 0.865em;
+  font-size: 1em;
+  text-decoration: none;
+}
+.vertical>li>a
+{
+	display: block;
+}
+
+.horizontal>li>a:hover,
+.vertical>li>a:hover
 {
   background: #89ac4c;
-  background: rgba(0,0,0,.1);
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .horizontal > li > ul,
 .horizontal > li > ul > li,
 .horizontal > li > ul > li > ul,
 .horizontal > li > ul > li > ul > li
-{ 
+{
   margin: 0 !important;
   font-size: 1em;
   list-style: none;
 }
 
 .horizontal > li > ul > li > a,
-.horizontal > li > ul > li > ul > li > a
-{ 
+.vertical > li > ul > li > a,
+.horizontal > li > ul > li > ul > li > a,
+.vertical > li > ul > li > ul > li > a
+{
   display: block;
   background: #ffffff;
+  background: rgba(255, 255, 255, 0.9);
   color: #0080c6;
   font-weight: bold;
-  opacity: 1;
   text-decoration: none;
   white-space: nowrap;
-  border-top: 1px solid #fefefe;
-  border-bottom: 1px solid #efefef;
-  opacity: .8;
-  filter: alpha(opacity=80);
-}
-
-.horizontal > li > ul > li > a,
-.horizontal > li > ul > li > ul > li > a
-{ 
   padding: .625em 3em .625em 1.125em;
 }
+
 .horizontal > li > ul > li > a:hover,
-.horizontal > li > ul > li > ul > li > a:hover
-{ 
+.vertical > li > ul > li > a:hover,
+.horizontal > li > ul > li > ul > li > a:hover,
+.vertical > li > ul > li > ul > li > a:hover
+{
   background: #0080c6;
+  background: rgba(0, 128, 198, 1);
   color: #fff;
-  border-top: 1px solid #005583;
-  border-bottom: 1px solid #0080c6;
-  opacity: 1;
-  filter: alpha(opacity=100);
 }
-.horizontal > li > ul
+
+.horizontal > li > ul,
+.vertical > li > ul
 {
   position: absolute;
   z-index: 5000;
-  height: 0;
+  max-height: 0;
   width: auto;
   margin-left: 0;
   margin-top: 0;
-  border: 1px solid #cfcfcf;
-  
-  -webkit-box-shadow:
-  0 1px 3px rgba(0,0,0,0.25);
-  -moz-box-shadow:
-  0 1px 3px rgba(0,0,0,0.25);
-  box-shadow:
-  0 1px 3px rgba(0,0,0,0.25);
-  
-  -webkit-transition: all 0.3s ease-out; 
-   -moz-transition: all 0.3s ease-out; 
-   -o-transition: all 0.3s ease-out; 
-  transition: all 0.3s ease-out; 
-  
+/*  border: 1px solid #cfcfcf; */
+  -webkit-box-shadow: 0 1px 9px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 9px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 9px rgba(0, 0, 0, 0.25);
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
   display: none;
 }
+.vertical > li > ul
+{
+	top: 0;
+	left: 100%;
+  display: block;
+}
 
-.horizontal > li:hover > ul
+.horizontal > li:hover > ul,
+.vertical > li:hover > ul
 {
   height: auto;
-  display: block;  
+  display: block;
 }
 
 .horizontal > li:hover > ul:before,
-.horizontal > li > ul > li:hover > ul:before
+.vertical > li:hover > ul:before,
+.horizontal > li > ul > li:hover > ul:before,
+.vertical > li > ul > li:hover > ul:before
 {
-  border:solid;
-  border-color:#cfcfcf transparent;
+  border: solid;
+  border-color: #cfcfcf transparent;
   border-width: 0 6px 6px 6px;
-  top:-6px;
-  content:"";
-  display:block;
-  left:12%;
-  position:absolute;
-  z-index:301;
-  -webkit-box-shadow:0 5px 10px rgba(0,0,0,0.2);
-  -moz-box-shadow:0 5px 10px rgba(0,0,0,0.2);
-  box-shadow:0 5px 10px rgba(0,0,0,0.2);
-  -webkit-background-clip:padding-box;
-  -moz-background-clip:padding;
-  background-clip:padding-box;
-  opacity:.825;
-  filter:alpha(opacity=80);
+  top: -6px;
+  content: "";
+  display: block;
+  left: 12%;
+  position: absolute;
+  z-index: 301;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
 }
-.horizontal > li > ul > li:hover > ul:before
+
+.vertical > li:hover > ul:before,
+.horizontal > li > ul > li:hover > ul:before,
+.vertical > li > ul > li:hover > ul:before
 {
-  top:1.125em;
+  top: 1.125em;
   left: -6px;
-  border-color:transparent #cfcfcf;
+  border-color: transparent #cfcfcf;
   border-width: 6px 6px 6px 0;
 }
 
@@ -295,36 +311,43 @@
   position: relative;
 }
 
-.horizontal > li > ul > li > ul
+.horizontal > li > ul > li > ul,
+.vertical > li > ul > li > ul,
+.vertical > li > ul
 {
   position: absolute;
-  top:0%;
+  top: 0%;
   z-index: 5005;
+  margin: 0;
   height: 0;
-  width: auto;
-  border: 1px solid #cfcfcf;
-  
-  -webkit-box-shadow:
-  0 1px 3px rgba(0,0,0,0.25);
-  -moz-box-shadow:
-  0 1px 3px rgba(0,0,0,0.25);
-  box-shadow:
-  0 1px 3px rgba(0,0,0,0.25);
-  
-  -webkit-transition: all 0.3s ease-out; 
-   -moz-transition: all 0.3s ease-out; 
-   -o-transition: all 0.3s ease-out; 
-  transition: all 0.3s ease-out; 
-  
+  width: inherit;
+/*  border: 1px solid #cfcfcf; */
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
   display: none;
 }
 
-.horizontal > li > ul > li:hover > ul
+.horizontal > li > ul > li > ul,
+.vertical > li > ul > li > ul
+{
+	list-style: none;
+  left: 100%;
+}
+
+
+.horizontal > li > ul > li:hover > ul,
+.vertical > li > ul > li:hover > ul
 {
   display: block;
-  left:100%;
+  left: 100%;
   height: auto;
 }
+
   
 			</pre>
 			<pre class="prettyprint linenums">  
@@ -821,7 +844,7 @@ postion:fixed;top:0;left:0;right:0;
 	</div>
 </div>
 
-<div id="amp_overlay" class="overlay">
+<div id="amp_overlay" class="modal_overlay">
 	<div class="modal mt">
 		<section>
 			<div class="row">

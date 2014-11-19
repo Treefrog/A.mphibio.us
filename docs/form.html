@@ -10,7 +10,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>Amphibious | Simply Elegant HTML5/CSS3 Responsive Front End Development Kit | 1.5.0 November 7, 2014</title>
+<title>Amphibious | Simply Elegant HTML5/CSS3 Responsive Front End Development Kit | 1.5.1 November 14, 2014</title>
 <meta name="description" content="A.mphibio.us is a responsive design tool for rapid development has a familiar sixteen column, lightweight 960 grid as its base, but elegantly scales down to downsized browser windows">
 <meta name="keywords" content="css3, html5, responsive, web, design, mobile layout, responsive design">
 
@@ -541,25 +541,106 @@ Where else would you like it to work?&lt;/p&gt;
 			
 		</section>
 		
-		<section id="datepicker_fields" class="hide">
-			<h3>Append Prepend Icons</h3>
-			<p>Like fancy form layouts we do to...</p>
-			
-			<form class="multi beside">
-				<fieldset class="date_picker_set">
-					<fieldset class="form_group">
-						<label for="startdateB">From</label>
-						<input type="text" id="startdateB" class="datepicker prepend_icon">
-						<label for="startdateB" class="prepend_to"><span class="icon-calendar"></span></label>
+		<section id="datepicker_fields">
+			<div class="col sixteen">
+				<h3>Append and Prepend Icons</h3>
+				<p>Like fancy form layouts we do to, that's</p>
+				
+				<div class="row">
+					<div class="col eight first">
+						<form>
+							<fieldset>
+								<label for="user">Username</label>
+								<input type="text" id="user" class="prepend_icon">
+								<label for="user" class="prepend_to"><span class="icon-user"></span></label>
+							</fieldset>
+							<fieldset>
+								<label for="password">Password</label>
+								<input type="password" id="password" class="prepend_icon">
+								<label for="password" class="prepend_to"><span class="icon-lock"></span></label>
+							</fieldset>
+						</form>
+						
+					</div>
+					<div class="col eight first">
+						<form>
+							<fieldset>
+								<label for="user2">Username</label>
+								<input type="text" id="user2" class="append_icon">
+								<label for="user2" class="append_to"><span class="icon-user"></span></label>
+							</fieldset>
+							<fieldset>
+								<label for="password2">Password</label>
+								<input type="password" id="password2" class="append_icon">
+								<label for="password2" class="append_to"><span class="icon-lock"></span></label>
+							</fieldset>
+						</form>
+						
+					</div>
+				</div>
+				
+				<div class="row mt">
+					<form class="multi beside">
+						<fieldset>
+							<label for="user">Username</label>
+							<input type="text" id="user" class="prepend_icon">
+							<label for="user" class="prepend_to"><span class="icon-user"></span></label>
+						</fieldset>
+						<fieldset>
+							<label for="password">Password</label>
+							<input type="password" id="password" class="prepend_icon">
+							<label for="password" class="prepend_to"><span class="icon-lock"></span></label>
+						</fieldset>
+					</form>
+						
+				</div>
+				
+				<div class="row mt">
+					<form class="multi beside">
+						<fieldset>
+							<label for="user">Username</label>
+							<input type="text" id="user" class="append_icon">
+							<label for="user" class="append_to"><span class="icon-user"></span></label>
+						</fieldset>
+						<fieldset>
+							<label for="password">Password</label>
+							<input type="password" id="password" class="append_icon">
+							<label for="password" class="append_to"><span class="icon-lock"></span></label>
+						</fieldset>
+					</form>
+						
+				</div>
+				
+				<form class="multi beside">
+					<fieldset class="date_picker_set">
+						<fieldset class="form_group">
+							<label for="startdateB">From</label>
+							<input type="text" id="startdateB" class="datepicker prepend_icon">
+							<label for="startdateB" class="prepend_to"><span class="icon-calendar"></span></label>
+						</fieldset>
+						<fieldset class="form_group">
+							<label for="enddateB">To</label>
+							<input type="text" id="enddateB" class="datepicker prepend_icon">
+							<label for="enddateB" class="prepend_to"><span class="icon-calendar"></span></label>
+						</fieldset>
 					</fieldset>
-					<fieldset class="form_group">
-						<label for="enddateB">To</label>
-						<input type="text" id="enddateB" class="datepicker prepend_icon">
-						<label for="enddateB" class="prepend_to"><span class="icon-calendar"></span></label>
+				</form>
+				
+				<form class="multi beside">
+					<fieldset class="date_picker_set">
+						<fieldset class="form_group">
+							<label for="startdateB">From</label>
+							<input type="text" id="startdateB" class="datepicker append_icon">
+							<label for="startdateB" class="append_to"><span class="icon-calendar"></span></label>
+						</fieldset>
+						<fieldset class="form_group">
+							<label for="enddateB">To</label>
+							<input type="text" id="enddateB" class="datepicker append_icon">
+							<label for="enddateB" class="append_to"><span class="icon-calendar"></span></label>
+						</fieldset>
 					</fieldset>
-				</fieldset>
-			</form>
-			
+				</form>
+			</div>
 		</section>
 		
 		<section id="tables">
@@ -740,7 +821,7 @@ postion:fixed;top:0;left:0;right:0;
 	</div>
 </div>
 
-<div id="amp_overlay" class="overlay">
+<div id="amp_overlay" class="modal_overlay">
 	<div class="modal mt">
 		<section>
 			<div class="row">

@@ -10,7 +10,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>Amphibious | Simply Elegant HTML5/CSS3 Responsive Front End Development Kit | 1.5.0 November 7, 2014</title>
+<title>Amphibious | Simply Elegant HTML5/CSS3 Responsive Front End Development Kit | 1.5.1 November 14, 2014</title>
 <meta name="description" content="A.mphibio.us is a responsive design tool for rapid development has a familiar sixteen column, lightweight 960 grid as its base, but elegantly scales down to downsized browser windows">
 <meta name="keywords" content="css3, html5, responsive, web, design, mobile layout, responsive design">
 
@@ -84,28 +84,58 @@
 <div id="slides" class="row mb">
 	<div class="flexslider dmb">
 		<ul class="slides" id="demo_slider">
-			<li><img src="../images/bg_one.jpg" alt="" />
+			<!--// Responsive images in practice
+					http://alistapart.com/article/responsive-images-in-practice
+					
+					Requires Picturefill js poly fill for srcset to function
+					https://github.com/scottjehl/picturefill
+			//-->
+			<li><img
+					srcset="../images/bg_one_lrg.jpg 1920w, 
+							../images/bg_one.jpg 960w,
+							../images/bg_one_sml.jpg 480w"
+					src="../images/bg_one.jpg"
+					alt="">
+					
 				<div class="caption inset">
 					<h2>Featuring Flexslider responsive slide shows</h2>
 					<p>Powered buy the powerful flexslider javaacript engine, optional not required</p>
 					<p class="ar"><a class="button read_more small" href="#slides">Read more</a></p>
 				</div>
 			</li>
-			<li><img src="../images/bg_two.jpg" alt="" />
+			<li><img
+					srcset="../images/bg_two_lrg.jpg 1920w, 
+							../images/bg_two.jpg 960w,
+							../images/bg_two_sml.jpg 480w"
+					src="../images/bg_two.jpg"
+					alt="">
+					
 				<div class="caption inset">
 					<h2>Place them outside the main container</h2>
 					<p>And they be the full width of the screen</p>
 					<p class="ar"><a class="button read_more small" href="#slides">Read more</a></p>
 				</div>
 			</li>
-			<li><img src="../images/bg_three.jpg" alt="" />
+			<li><img
+					srcset="../images/bg_three_lrg.jpg 1920w, 
+							../images/bg_three.jpg 960w,
+							../images/bg_three_sml.jpg 480w"
+					src="../images/bg_three.jpg"
+					alt="">
+					
 				<div class="caption inset">
 					<h2>Resize the Window</h2>
 					<p>And watch as this slide show effortlessly resizes</p>
 					<p class="ar"><a class="button read_more small" href="#slides">Read more</a></p>
 				</div>
 			</li>
-			<li><img src="../images/bg_four.jpg" alt="" />
+			<li><img
+					srcset="../images/bg_four_lrg.jpg 1920w, 
+							../images/bg_four.jpg 960w,
+							../images/bg_four_sml.jpg 480w"
+					src="../images/bg_four.jpg"
+					alt="">
+					
 				<div class="caption inset">
 					<h2>Powerful and flexible</h2>
 					<p>An extensive api allows you to use this engine for much more tahn simple sliders.</p>
@@ -4334,7 +4364,7 @@ postion:fixed;top:0;left:0;right:0;
 	</div>
 </div>
 
-<div id="amp_overlay" class="overlay">
+<div id="amp_overlay" class="modal_overlay">
 	<div class="modal mt">
 		<section>
 			<div class="row">
