@@ -50,6 +50,7 @@
 <link rel="stylesheet" href="../css/a.mphibio.us.css">
 <link rel="stylesheet" href="../css/a.mphibio.us.docs.css">
 <link rel="stylesheet" href="../css/lib/flexslider.css">
+
 <style type="text/css">
 	.slides li img
 	{
@@ -67,8 +68,32 @@
 	    -o-transition: all 1.3s ease-in;
 	    transition: all 1.3s ease-in;
 	}
+	#slides
+	{
+		margin-bottom: -20px;
+	}
+	
+	#slides .caption
+	{
+		position: absolute;
+		top: 180px;
+		width: 440px;
+		margin-left: 40px;
+		background-color: #888;
+		background-color: rgba(0,0,0,0.4);
+		color: #fff;
+		z-index: 2;
+	}
+	
+	#slides .caption + button
+	{
+		position: absolute;
+	/* 	top: 280px; */
+		z-index: 3;
+	}
 </style>
-<script src="js/libs/modernizr-2.6.2.min.js"></script>
+
+<script src="../js/libs/modernizr-2.6.2.min.js"></script>
 
 <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
 <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
@@ -138,7 +163,7 @@
 					
 				<div class="caption inset">
 					<h2>Powerful and flexible</h2>
-					<p>An extensive api allows you to use this engine for much more tahn simple sliders.</p>
+					<p>An extensive api allows you to use this engine for much more than simple sliders.</p>
 					<p class="ar rmb"><a class="button read_more small" href="#slides">Read more</a></p>
 				</div>
 			</li>
@@ -236,8 +261,8 @@ Class Name			Shorthand		Styles
 			<h3>Content Pea.rs</h3>
 			<p><a href="http://pea.rs">Pea.rs</a> are common patterns of markup and style. A.mphibio.us uses Pea.rs markup to create intuitive and clean definition lists, content slats, and stat listings. </p>
 
-			<div class="row pb">
-				<h5 class="mb drb">Article</h5>
+			<div class="row pad_bottom">
+				<h5 class="margin_bottom double_rule_below">Article</h5>
 
 				<article class="aside">
 					<header>
@@ -256,8 +281,7 @@ Class Name			Shorthand		Styles
 				</article>
 
 			</div>
-			<div class="row pb">
-				<h5 class="mb drb">Article</h5>
+			<div class="row pad_bottom">
 
 				<article class="aside">
 					<header>
@@ -276,34 +300,35 @@ Class Name			Shorthand		Styles
 				</article>
 
 			</div>
-			<div class="row dpb">
-			<ul class="tabs mini rb">
+			<div class="row double_pad_bottom">
+			<ul class="tabs mini rule_below">
 				<li class="label">Show Source</li>
-				<li class="r"><a href="#html"><span class="copy icon" style="height:20px;" rel="html">&#59156;</span> <abbr title="Hypertext Markup Language">HTML</abbr></a></li>
-				<li class="r"><a href="#css"><span class="copy icon" style="height:20px;" rel="css">&#59146;</span> <abbr title="Casscading Style Sheets">CSS</abbr></a></li>
+				<li class="r"><a href="javascript:;" amp-tab-content="html"><span class="copy icon" style="height:20px;" rel="html">&#59156;</span> <abbr title="Hypertext Markup Language">HTML</abbr></a></li>
+				<li class="r"><a href="javascript:;" amp-tab-content="css"><span class="copy icon" style="height:20px;" rel="css">&#59146;</span> <abbr title="Casscading Style Sheets">CSS</abbr></a></li>
 			</ul>
 			<ul class="tabs-content">
-				<li id="html"><pre class="prettyprint linenums">&lt;div class="row pb drb"&gt;
-	&lt;h5 class="mb drb"&gt;Article&lt;/h5&gt;
+				<li id="html" class="row inset">
+					<pre class="prettyprint linenums rmt">&lt;div class="row pad_bottom"&gt;
+  &lt;h5 class="mb drb"&gt;Article&lt;/h5&gt;
 
-	&lt;article class="aside"&gt;
-		&lt;header&gt;
-			&lt;h2&gt;The Title Goes Here&lt;/h2&gt;
-		&lt;/header&gt;
+  &lt;article class="aside"&gt;
+    &lt;header&gt;
+      &lt;h2&gt;The Title Goes Here&lt;/h2&gt;
+    &lt;/header&gt;
 
-		&lt;aside&gt;
-			This is aside text lorem ipsum dolor sit amet consectetur adipisicing.
-		&lt;/aside&gt;
+    &lt;aside&gt;
+      This is aside text lorem ipsum dolor sit amet consectetur adipisicing.
+    &lt;/aside&gt;
 
-		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis &lt;a href="#"&gt;nostrud exercitation&lt;/a&gt; ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod &lt;a href="#"&gt;tempor incididunt&lt;/a&gt; ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.&lt;/p&gt;
-		&lt;footer class="meta"&gt;
-			&lt;small&gt;Posted August 22, 2011&lt;/small&gt;
-		&lt;/footer&gt;
-	&lt;/article&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis &lt;a href="#"&gt;nostrud exercitation&lt;/a&gt; ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod &lt;a href="#"&gt;tempor incididunt&lt;/a&gt; ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.&lt;/p&gt;
+    &lt;footer class="meta"&gt;
+      &lt;small&gt;Posted August 22, 2011&lt;/small&gt;
+    &lt;/footer&gt;
+  &lt;/article&gt;
 
 &lt;/div&gt;</pre></li>
-			<li id="css"><pre class="prettyprint linenums">article.aside
+			<li id="css" class="row inset"><pre class="prettyprint linenums rmt">article.aside
 {
 	margin: 0 0 1.6em 20%;
 }

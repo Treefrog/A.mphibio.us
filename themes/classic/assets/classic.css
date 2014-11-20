@@ -6,7 +6,7 @@
   1. Base Theme Colours
   2. Typography & Lists
   3. Navigation / #navbar
-  4. Masthead / #hero_panel
+  4. Masthead / #slides
   5. Content Styles / #amp_content
   6. Secondary Content Styles / .tabs
   7. Shopping Cart Styles
@@ -35,6 +35,13 @@ body
 	background-color: rgba(255,255,255,0.6);
 }
 
+a,
+a:visited
+{
+	color: #11b1ad;
+	text-decoration: none;
+}
+
 .w_bg
 {
 	background-color: #ffffff;
@@ -47,19 +54,21 @@ body
 
 .k_bg
 {
-	background-color: #252525;
+	background-color: #000;
+	background-color: rgba(0,0,0,0.9);
 	color: #fff;
 }
 
 .g_bg
 {
-	background-color: #666666;
+	background-color: #252525;
+	background-color: rgba(0,0,0,0.8);
 	color: #fff;
 }
 
-.b_bg
+.t_bg
 {
-	background-color: #4a697f;
+	background-color: #11b1ad;
 	color: #fff;
 }
 
@@ -212,12 +221,14 @@ h2
 i,
 em
 {
+	font-style: normal;
 	font-family: 'open_sansitalic';
 }
 
 b,
 strong
 {
+	font-weight: normal;
 	font-family: 'open_sanssemibold';
 }
 
@@ -225,7 +236,7 @@ ul.custom
 {
 	font-size: 1.4em;
 	list-style: none;
-	color: #beb442;
+	color: #11b1ad;
 }
 
 ul.custom li
@@ -236,7 +247,7 @@ ul.custom li
 ul.custom li:before
 {
 	font-size: 0.8em;
-	color: #beb442;
+	color: #11b1ad;
 	font-family: 'entypo';
 	content: '\e6d0';
 }
@@ -246,11 +257,6 @@ ul.custom li:before
 [3. Navigation]
 
 */
-
-#nav_toggle
-{
-	height: 60px;
-}
 
 #nav_toggle,
 .horizontal>li.nav_toggle
@@ -342,7 +348,7 @@ ul.custom li:before
 {
 	background: #252525;
 	background: rgba(37, 37, 37, 1);
-	color: #beb442;
+	color: #11b1ad;
 }
 
 /* Drop down caret edits */
@@ -373,47 +379,73 @@ ul.custom li:before
 
 */
 
-hero_panel,
 #masthead
 {
 	margin-top: 60px;
-}
-#masthead
-{
 	height: 200px;
 	overflow: hidden;
 }
+/*
 
-#hero_panel .featurette
+#slides,
+#slides .flexslider,
+#slides .flexslider .flex-viewport
 {
-	padding: 1.3em;
+	max-height: 666px;
+}
+*/
+
+#slides
+{
+	margin-bottom: -20px;
+}
+
+#slides .caption
+{
+	position: absolute;
+	top: 180px;
+	width: 440px;
+	margin-left: 40px;
 	background-color: #888;
 	background-color: rgba(0,0,0,0.4);
 	color: #fff;
-	top: 180px;
-	position: absolute;
 	z-index: 2;
 }
-#hero_panel h1,
+
+#slides .caption + button
+{
+	position: absolute;
+/* 	top: 280px; */
+	z-index: 3;
+}
+
 #masthead h1
 {
 	display: none;
 }
-#hero_panel .featurette h2
+
+.flex-control-nav
 {
-	text-transform: none;
-	font-size: 1.2em;
-	margin: 0;
+	bottom: 10px !important;
 }
-#hero_panel .featurette + button
+
+.flex-control-paging li a 
 {
-	position: absolute;
-	top: 280px;
-	z-index: 3;
+	background: #666;
+	background: rgba(0,0,0,0.5);
 }
-#hero_panel figure
+
+.flex-control-paging li a:hover
 {
-	z-index: -1;
+	background: #333;
+	background: rgba(0,0,0,0.7);
+}
+
+.flex-control-paging li a.flex-active
+{
+	background: #000;
+	background: rgba(0,0,0,0.9);
+}
 
 /* ------------------------------------------------------------------
 	
@@ -477,6 +509,59 @@ header.banner h2
 	margin-top: 60px;
 }
 
+.panel.inset
+{
+
+	background-image: url(ricepaper2.png);
+	-o-box-shadow: rgba(0,0,0,.6) 0 0 1px;
+	-khtml-box-shadow: rgba(0,0,0,.6) 0 0 1px;
+	-moz-box-shadow: rgba(0,0,0,.6) 0 0 1px;
+	-webkit-box-shadow: rgba(0,0,0,.6) 0 0 1px;
+	box-shadow: rgba(0,0,0,.6) 0 0 1px;
+}
+
+.panel.inset h4
+{
+	margin: 2.6em 0 0.5em;
+    font-family: 'open_sansextrabold';
+}
+
+.panel .feature
+{
+	background: #11b1ad;
+	color: #fff;
+	font-size: 4em;
+	padding:0.6em;
+	
+	/* http://css-tricks.com/almanac/properties/b/border-radius/
+	*/
+	-webkit-border-radius: 200px; /* Safari 3-4, iOS 1-3.2, Android 1.6- */
+	 -khtml-border-radius: 200px;
+	   -moz-border-radius: 200px; /* Firefox 1-3.6 */
+	   	 -o-border-radius: 200px;
+	   	 	border-radius: 200px;
+	   	 	
+	   	 	/* useful if you don't want a bg color from leaking outside the border: */
+		 	
+	 -webkit-background-clip: padding-box; /* Safari 3-4, iOS 1-3.2, Android 1.6- */
+		-moz-background-clip: padding; /* Firefox 1-3.6 */
+	   	 	
+			 background-clip: padding-box; /* Android 2.2+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 4+ */
+/*
+	padding:0.6em;
+	border: 2px solid #11b1ad;
+	height: 6em;
+*/
+	
+	
+}
+/*
+.panel .feature:before
+{
+	border: 2px solid #11b1ad;
+	height: 6em;
+}
+*/
 /* ------------------------------------------------------------------
 	
 [6. Secondary Content]
@@ -504,7 +589,7 @@ ul.tabs li a.active
 	top: 0;
 	background-color: #f8f8f8;
 	border-bottom: 1px solid #f8f8f8;
-	color: #beb442;
+	color: #11b1ad;
 }
 ul.tabs li a.active
 {
@@ -602,19 +687,22 @@ ul.tabs-content > li.active
 .element .detail
 {
 	position: absolute;
-	top: 100%;
+	top: 0;
+	bottom: 0;
 	left: 0;
 	right: 0;
-	bottom: auto;
+	bottom: 0;
 	z-index: 1;
 	background: rgba(0,0,0,0.6);
 	color: #fff;
+	opacity: 0;
 }
 
 .element:hover .detail
 {
-	top: 0;
-	bottom: 0;
+	-webkit-transition: opacity 0.35s;
+	transition: opacity 0.35s;
+	opacity: 0.96;
 }
 
 .element .preview
@@ -623,10 +711,18 @@ ul.tabs-content > li.active
     filter: none;
 }
 
-.element:hover .preview
+.element img
 {
-    -webkit-filter: blur(6px);
-    filter: blur(6px);
+	opacity: 1;
+}
+
+.element:hover img
+{
+	opacity: 0.8;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale(2) translateY(2em);
+	transform: scale(2) translateY(2em);
 	
 }
 
@@ -760,13 +856,25 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"]
 {
+	border-color: #11b1ad;
+	border-width: 3px;
+	color: #11b1ad;
 /*
 	background-color: #252525;
-	border-color: #252525;
 	color: #fff;
 */
 }
 
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover
+{
+	border-color: #252525;
+	color: #252525;
+	border-width: 3px;
+}
 .button:active,
 .button:focus,
 button:active,
@@ -776,9 +884,12 @@ input[type="submit"]:focus,
 input[type="reset"]:active,
 input[type="reset"]:focus,
 input[type="button"]:active,
-input[type="button"]:focus
+input[type="button"]:focus,
+.pager_nav .active
 {
-	background-color: #4a697f;
+	background-color: #11b1ad;
+	border-width: 3px;
+	color: #fff;
 }
 
 .button.k_btn,
@@ -815,8 +926,8 @@ input[type="button"].k_btn:active,
 input[type="button"].k_btn:focus
 {
 	background-color: #252525;
-	color: #beb442;
-	border-color: #beb442;
+	color: #11b1ad;
+	border-color: #11b1ad;
 }
 
 .button.g_btn,
@@ -825,8 +936,8 @@ input[type="submit"].g_btn,
 input[type="reset"].g_btn,
 input[type="button"].g_btn
 {
-	background-color: #beb442;
-	border-color: #beb442;
+	background-color: #11b1ad;
+	border-color: #11b1ad;
 	color: #fff;
 }
 
@@ -861,6 +972,61 @@ input[type="button"].g_btn:focus
 
 */
 
+
+.styled_select,
+.ui_tpicker_timezone
+{
+	border-width: 3px;
+}
+
+
+.styled_select:hover,
+.ui_tpicker_timezone:hover
+{
+    color: #11b1ad;
+    background-color: #fff;
+    background-image: none;
+    border: 3px solid #11b1ad;
+}
+
+.styled_select:active select,
+.styled_select:focus select,
+.styled_select:active,
+.styled_select:focus
+{
+    color: #fff;
+}
+
+.styled_select:active,
+.styled_select:focus
+{
+    border: 3px solid #11b1ad;
+    background-color: #11b1ad;
+}
+
+ul.pager_nav li input[type="text"]
+{
+	border-width: 3px;
+	border-right: none;
+}
+
+:root input[type="checkbox"].custom + span:before,
+:root input[type="radio"].custom + span:before
+{
+    color: #11b1ad;
+}
+
+
+:root input[type="checkbox"].custom:hover + span:before,
+:root input[type="radio"].custom:hover + span:before
+{
+    color: #252525;
+}
+:root input[type="checkbox"].custom:checked + span:before,
+:root input[type="radio"].custom:checked + span:before
+{
+    color: #000;
+}
 /* ------------------------------------------------------------------
 	
 [10. Footer Content]
@@ -876,12 +1042,12 @@ input[type="button"].g_btn:focus
 #amp_footer a:hover,
 #amp_footer a:focus
 {
-	color: #beb442;
+	color: #11b1ad;
 }
 
 /* ------------------------------------------------------------------
 	
-[6. Modal Overwrites]
+[11. Modal Overwrites]
 
 */
 
@@ -890,4 +1056,178 @@ input[type="button"].g_btn:focus
 	color: #fff;
 	background-color: #252525;
 	background-image: none;
+}
+
+/* ------------------------------------------------------------------
+	
+[12. @Media Styles High Resolution]
+
+*/
+
+@media
+    (-o-min-device-pixel-ratio: 5/4),
+    (-webkit-min-device-pixel-ratio: 1.25),
+    (min-resolution: 120dpi)
+{
+	
+}
+
+
+/* ------------------------------------------------------------------
+	
+[13. @Media Styles max-width: 959px]
+
+*/
+
+@media only screen and (max-width: 959px)
+{
+	#hero_panel
+	{
+		height: 340px;
+	}
+	#hero_panel .featurette
+	{
+		margin-top: 60px;
+	}
+}
+
+/* ------------------------------------------------------------------
+	
+[14. @Media Styles (min-width: 480px) and (max-width: 767px)]
+
+*/
+
+@media only screen and (min-width: 480px) and (max-width: 767px)
+{
+	#nav_toggle
+	{
+		height: 60px;
+	}
+	
+	#nav_toggle,
+	.horizontal>li.nav_toggle
+	{
+		display: block;
+	}
+	
+	#navbar .logo,
+	#navbar nav
+	{
+		float: none;
+	}
+	
+	#navbar .logo
+	{
+		margin: 0 auto;
+	}
+
+	#navbar
+	{
+		position: static;
+		display: block;
+		top: auto;
+		left: auto;
+		right: auto;
+		height: auto;
+		text-align: center;
+	}
+	
+	.horizontal>li
+	{
+		float: none;
+		text-align: center;
+	}
+	
+	.horizontal,
+	.horizontal>li,
+	.horizontal>li>a,
+	.horizontal>li:first-child>a,
+	.horizontal>li>a:before,
+	.horizontal>li:first-child>a:before,
+	.horizontal > li > ul,
+	.mainnav.horizontal>li:first-child>a,
+	.mainnav.horizontal>li:first-child>a:before
+
+	{
+		width: 100%;
+	}
+	
+	.horizontal > li:hover > ul,
+	.horizontal > li > ul > li:hover > ul
+	{
+		position: relative;
+		left: 0;
+		right: 0;
+	}
+	
+	.horizontal>li>a:before,
+	.horizontal>li:hover>a:before,
+	.cart_items li.titles
+	{
+		display: none;
+	}
+	
+	.utility.horizontal.a.r
+	{
+		position: relative;
+		float: none;
+	}
+	
+	.utility.horizontal.a.r>li
+	{
+		width: 50%;
+		float: left;
+	}
+	
+	#masthead
+	{
+		margin-top: 0;
+	}
+	
+
+	#slides .caption
+	{
+		position: relative;
+		top: 0;
+		height: 260px;
+		margin-left: 0;
+		width: 100%;
+	}
+	
+	.slats
+	{
+		margin-left: 1em;
+		margin-right: 1em;
+	}
+	
+	.panel.inset
+	{
+		margin-top: 3em;
+	}
+	
+	.store_front
+	{
+		margin-top: 0;
+	}
+	
+	.cart_items li .col.six,
+	.cart_items li .col.two,
+	.cart_items li.actions
+	{
+		text-align: left;
+	}
+	
+}
+/* ------------------------------------------------------------------
+	
+[14. @Media Styles print]
+
+*/
+
+@media print
+{
+	body
+	{
+		
+	}
 }

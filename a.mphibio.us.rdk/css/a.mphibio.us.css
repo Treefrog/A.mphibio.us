@@ -1,10 +1,10 @@
 /*!
-* A.mphibio.us  1.5.1c
+* A.mphibio.us  1.5.2
 * Copyright 2014, @cliveMoore @Treefrog
 * http://a.mphibio.us
 * Free to use under the MIT license.
 * http://www.opensource.org/licenses/mit-license.php
-* 14/11/2014
+* 21/11/2014
 *
 *
 /* CSS Table of Contents
@@ -2269,7 +2269,7 @@ ul.nav
 
 .modal_overlay .modal footer
 {
-    position: relative;
+    position: absolute;
     bottom: 0;
 }
 
@@ -4319,8 +4319,8 @@ Class Name                      Shorthand                   Styles
 .fixed.r,
 .f.right
 {
-    float: none;
-    right: 0;
+    float: none !important;
+    right: 0 !important;
 }
 
 .absolute.bottom,

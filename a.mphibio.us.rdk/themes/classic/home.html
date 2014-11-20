@@ -49,8 +49,27 @@
 
 <link rel="stylesheet" href="../../css/a.mphibio.us.css">
 <link rel="stylesheet" href="assets/classic.css">
+<link rel="stylesheet" href="../../css/lib/flexslider.css">
+<style type="text/css">
+	.slides li img
+	{
+		opacity: 0;
+	    -webkit-transition: all 1.3s ease-in;
+	    -moz-transition: all 1.3s ease-in;
+	    -o-transition: all 1.3s ease-in;
+	    transition: all 1.3s ease-in;
+	}
+	.slides li.flex-active-slide img
+	{
+		opacity: 1;
+	    -webkit-transition: all 1.3s ease-in;
+	    -moz-transition: all 1.3s ease-in;
+	    -o-transition: all 1.3s ease-in;
+	    transition: all 1.3s ease-in;
+	}
+</style>
   
-<script src="../../js/js/modernizr-2.6.2.min.js"></script>
+<script src="../../js/libs/modernizr-2.6.2.min.js"></script>
 
 <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
 <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
@@ -64,22 +83,90 @@
      <!-- Add your site or application content here -->
         
 	<header id="amp_header" role="banner" class="row">
-		<div id="hero_panel">
-			<div class="container focus">
-				<div class="col eight push_one">
-        			<h1>SEO Title Not shown on screen</h1>
-					<div class="col six featurette">
-						<h2>Bacon ipsum dolor amet pancetta andouille fatback, tail tongue sausage swine kevin filet mignon shank</h2>
-					</div>
-					<button class="k_btn r modal_opener" type="button" amp-target="amp_overlay">Contact Us To Learn More<span class="icon-arrow-right5 hml"></span></button>
-			
-					
-				</div>
-				<figure class="a">
-					<img src="assets/tiki_huts.jpg" class="swg">
-				</figure>
+		<div id="nav_toggle" class="k_bg">
+			<div id="search_wrap" class="r hmr">
+				<form action="/" class="search">
+					<fieldset>
+						<input type="text" placeholder="Search">
+						<input type="submit" class="icon-search" value="">
+					</fieldset>
+				</form>
 			</div>
-        </div>
+			<a href="#navbar"><span class="icon-list2"></span></a>
+			<a href="home.html"><img src="assets/theme_logo.png" class="logo left"></a>
+		</div>
+		<div id="slides" class="row">
+			<div class="flexslider">
+				<ul class="slides">
+					<!--// Responsive images in practice
+							http://alistapart.com/article/responsive-images-in-practice
+							
+							Requires Picturefill js poly fill for srcset to function
+							https://github.com/scottjehl/picturefill
+					//-->
+					<li><img
+							srcset="../../images/bg_one_lrg.jpg 1920w, 
+									../../images/bg_one.jpg 960w,
+									../../images/bg_one_sml.jpg 480w"
+							src="../../images/bg_one.jpg"
+							alt="">
+							
+						<div class="caption">
+							<div class="inset">
+								<h2>Featuring Flexslider responsive slide shows</h2>
+								<p>Powered by the powerful flexslider javaacript engine, optional not required</p>
+								<p class="ar"><a class="button read_more small" href="#slides">Read more</a></p>
+							</div>
+						</div>
+					</li>
+					<li><img
+							srcset="../../images/bg_two_lrg.jpg 1920w, 
+									../../images/bg_two.jpg 960w,
+									../../images/bg_two_sml.jpg 480w"
+							src="../../images/bg_two.jpg"
+							alt="">
+							
+						<div class="caption">
+							<div class="inset">
+								<h2>Place them outside the main container</h2>
+								<p>And they be the full width of the screen</p>
+								<p class="ar"><a class="button read_more small" href="#slides">Read more</a></p>
+							</div>
+						</div>
+					</li>
+					<li><img
+							srcset="../../images/bg_three_lrg.jpg 1920w, 
+									../../images/bg_three.jpg 960w,
+									../../images/bg_three_sml.jpg 480w"
+							src="../../images/bg_three.jpg"
+							alt="">
+							
+						<div class="caption">
+							<div class="inset">
+								<h2>Resize the Window</h2>
+								<p>And watch as this slide show effortlessly resizes</p>
+								<p class="ar"><a class="button read_more small" href="#slides">Read more</a></p>
+							</div>
+						</div>
+					</li>
+					<li><img
+							srcset="../../images/bg_four_lrg.jpg 1920w, 
+									../../images/bg_four.jpg 960w,
+									../../images/bg_four_sml.jpg 480w"
+							src="../../images/bg_four.jpg"
+							alt="">
+							
+						<div class="caption">
+							<div class="inset">
+								<h2>Powerful and flexible</h2>
+								<p>An extensive api allows you to use this engine for much more than simple sliders.</p>
+								<p class="ar rmb"><a class="button read_more small" href="#slides">Read more</a></p>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</header>
 	<section id="amp_content" role="main" class="row">
 		<header class="g_bg banner">
@@ -87,45 +174,82 @@
 	        	<h2 class="align_center upper">Secondary Page Header and Attention Getter</h2>
 	        </div>
 		</header>
-		<article class="lg_bg">
-			<div class="container focus w_bg">
-				<div class="col nine">
-					<div class="inset dpt">
-						<p>Bacon ipsum dolor amet pancetta andouille fatback, tail tongue sausage swine kevin filet mignon shank. Drumstick kevin spare ribs, leberkas corned beef porchetta pork belly jerky tri-tip short loin biltong tail short ribs. Tail t-bone andouille corned beef prosciutto kielbasa. Tail ribeye pork belly andouille tri-tip cow beef brisket drumstick fatback kevin turkey jerky. Jerky cow venison fatback beef ribs shankle.</p>
-						
-						<p>Strip steak fatback sirloin, chuck tenderloin shankle shoulder meatball. Tenderloin shank meatloaf fatback strip steak tail, pork belly pork chop sirloin. Andouille ham hock pork belly pork shank. Boudin biltong pork chop, tenderloin bacon meatball landjaeger. Flank shoulder shank jowl venison tenderloin short ribs prosciutto pancetta kevin ball tip. Kevin ball tip tail bacon pig short ribs, bresaola corned beef fatback t-bone.</p>
+		<article class="w_bg pt pb">
+			<div class="container focus ac dpt dpb">
+				<div class="col four">
+					<div class="inset panel">
+						<span class="icon-airplane feature"></span>
+						<h4>Things</h4>
+						<p>Bacon ipsum dolor amet pancetta andouille fatback, mignon shank. Drumstick kevin spare ribs, leberkas corned beef porchetta pork belly jerky tri-tip short loin biltong tail short ribs.</p>
+						<button class="full" type="button">Read more link</button>
+					</div>
+				</div>
+					
+				<div class="col four">
+					<div class="inset panel">
+						<span class="icon-rocket feature"></span>
+						<h4>We Do</h4>
+						<p>Andouille ham hock pork belly pork shank. Boudin biltong pork chop, tenderloin bacon meatball landjaeger. Flank shoulder shank jowl venison tenderloin Clive ball tip tail bacon.</p>
+						<button class="full" type="button">Read more link</button>
+					</div>
+				</div>
+				<div class="col four">
+					<div class="inset panel">
+						<span class="icon-amphibious feature"></span>
+						<h4>Well Go</h4>
+						<p>Tail ribeye pork belly andouille tri-tip cow beef brisket drumstick fatback kevin turkey jerky. Jerky cow venison fatback beef ribs shankle, bresaola corned beef fatback t-bone.</p>
+						<button class="full" type="button">Read more link</button>
+					</div>
+				</div>
+					
+				<div class="col four">
+					<div class="inset panel">
+						<span class="icon-lassosoft feature"></span>
+						<h4>Here</h4>
+						<p>Strip steak fatback sirloin, chuck tenderloin shankle shoulder meatball. Tenderloin shank meatloaf fatback strip steak tail, pork belly pork chop sirloin. Clive ball tip tail bacon.</p>
+						<button class="full" type="button">Read more link</button>
 					</div>
 				</div>				
 			</div>
 		</article>
 	</section>
-	<section>
-		<div class="b_bg">
-			<div class="container focus">
-				<div class="col nine">
-					<h3>Check Out Our Services</h3>
-					<ul class="custom">
-						<li>Bullet No 1</li>
-						<li>Bullet No 2</li>
-						<li>Bullet No 3</li>
-					</ul>
+	<section class="mg_bg pt">
+		<div class="container focus">
+			<div class="col nine">
+				<h3>Check Out Our Services</h3>
+				<ul class="custom">
+					<li>Bullet No 1</li>
+					<li>Bullet No 2</li>
+					<li>Bullet No 3</li>
+				</ul>
+			</div>
+			<div class="col seven">
+				<div class="row">
+					<figure class="col five push_one">
+						<img src="assets/old_castle.jpg" class="swg">
+					</figure>
 				</div>
-				<div class="col seven">
-					<div class="row">
-						<figure class="col five push_one pull_top">
-							<img src="assets/old_castle.jpg" class="swg">
-						</figure>
-					</div>
-					<h4 class="align_center upper">Sample sub header call to action</h4>
-				</div>
+				<h4 class="align_center upper">Sample sub header call to action</h4>
 			</div>
 		</div>
 	</section>
 	<div id="navbar" class="k_bg">
     	<div class="container focus">
         	<div class="row">
-				<a href="home.html"><img src="assets/theme_logo.png" class="logo left"></a>
-				<nav class="left">
+				<a href="home.html"><img src="assets/theme_logo.png" class="logo"></a>
+				<nav>
+					<ul class="utility horizontal a r">
+						<li><a href="interior_three.html"><span class="icon-user hmr"></span>Profile</a>
+							<ul>
+								<li><a href="#"><span class="icon-paperplane hmr"></span>Shipping Address</a>
+								<li><a href="#"><span class="icon-vcard hmr"></span>Billing Information</a></li>
+								<li class="divider"></li>
+								<li><a href="#"><span class="icon-logout hmr"></span>Logout</a></li>
+							</ul>
+						</li>
+						<li class="divider"></li>
+						<li><a href="cart.html"><span class="icon-cart"></span></a></li>
+					</ul>
 					<ul class="mainnav horizontal">
 						<li><a href="home.html"><span class="icon-house"></span></a></li>
 						<li><a href="interior.html">About Us</a>
@@ -142,9 +266,16 @@
 								<li><a href="#">Sub menu Link</a></li>
 							</ul>
 						</li>
-						<li><a href="interior2.html">Products</a></li>
-						<li><a href="interior2.html">Careers</a></li>
-						<li><a href="interior2.html">Contact</a></li>
+						<li><a href="store.html">Products</a></li>
+						<li><a href="interior_two.html">Careers</a></li>
+						<li><a href="contact.html">Contact</a></li>
+						<li class="nav_toggle">
+							<a href="#amp_header">
+								<span class="icon-arrow-up7 l hml"></span>
+								To Top 
+								<span class="icon-arrow-up7 r hmr"></span>
+							</a>
+						</li>
 					</ul>
 				</nav>
         	</div>
@@ -161,24 +292,63 @@
   
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="../../js/js/jquery-1.9.1.min.js"><\/script>')</script>
+	<script type="text/javascript" src="../../js/libs/jquery.flexslider-min.js"></script>
 	<script src="../../js/plugins.js"></script>	
 	<script src="../../js/scripts.js"></script>
+	<script type="text/javascript">
+		$(window).load(function(){
+		  $('.flexslider').flexslider({
+		    animation: "slide",
+		    start: function(slider){
+		      $('body').removeClass('loading');
+		    }
+		  });
+		});
+	</script>
 	
      <!-- Sample Modal Structure -->
-	<div id="amp_overlay" class="overlay">
-		<div class="modal">
-			<header>
-				<span class="icon-cross2 large right rmr modal_kill" amp-target="amp_overlay"></span>
-				<h3>Modal Header</h3>
-			</header>
-			<section>
-				...
+	<div id="amp_overlay" class="modal_overlay">
+		<div class="modal small">
+			<section class="row">
+				
+				<div class="row">
+					<span class="icon-cross2 large right rmr modal_kill" amp-target="amp_overlay"></span>
+				</div>
+				
+				<form>
+					<fieldset>
+						<label class="above" for="regularInput">Name</label>
+						<input type="text" id="regularInput" placeholder="First Name">
+					</fieldset>
+					
+					<fieldset>
+						<label class="above" for="regularInputError">Email</label>
+						<input type="email" id="regularInputError" placeholder="you@domian.com">
+					</fieldset>
+					
+					<fieldset>
+						<label class="above" for="regularTextarea">Regular Textarea</label>
+						<textarea id="regularTextarea"></textarea>
+					</fieldset>
+					
+					<fieldset class="checklist">
+						<label for="notifications">Keep me notified</label>
+						<ul>
+							<li><label><input type="checkbox" name="notifications" class="custom"><span></span>About Site Updates</label></li>
+							<li><label><input type="checkbox" name="notifications" class="custom"><span></span>About Product updates</label></li>
+							<li><label><input type="checkbox" name="notifications" class="custom"><span></span>Send me Newsletters</label></li>
+						</ul>
+					</fieldset>		
+					
+					<fieldset>
+						<button type="button" class="">Sign Me Up</button>
+						<button type="button" class="k_btn">Another Action</button>
+						<button type="reset" class="modal_kill k_btn" amp-target="amp_overlay">Cancel</button>
+					</fieldset>
+				</form>		
+	
 			</section>
-			<footer>
-				<button type="button" class="">Action</button>
-				<button type="button" class="g_btn">Action</button>
-				<button type="reset" class="modal_kill k_btn" amp-target="amp_overlay">Cancel</button>
-			</footer>
+						
 		</div>
 	</div>
 	

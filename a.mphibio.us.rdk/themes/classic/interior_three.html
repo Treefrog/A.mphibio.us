@@ -50,7 +50,7 @@
 <link rel="stylesheet" href="../../css/a.mphibio.us.css">
 <link rel="stylesheet" href="assets/classic.css">
   
-<script src="../../js/js/modernizr-2.6.2.min.js"></script>
+<script src="../../js/libs/modernizr-2.6.2.min.js"></script>
 
 <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
 <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
@@ -62,59 +62,65 @@
 	<![endif]-->
 	
      <!-- Add your site or application content here -->
-        
-	<header id="amp_header" role="banner" class="row">
-		<div id="nav_toggle" class="k_bg">
-			<div id="search_wrap" class="r hmr">
-				<form action="/" class="search">
-					<fieldset>
-						<input type="text" placeholder="Search">
-						<input type="submit" class="icon-search" value="">
-					</fieldset>
-				</form>
-			</div>
-			<a href="#navbar"><span class="icon-list2"></span></a>
-			<a href="home.html"><img src="assets/theme_logo.png" class="logo left"></a>
-		</div>
-		<div id="hero_panel">
-			<div class="container focus">
-				<div class="col eight push_nine">
-        			<h1>SEO Title Not shown on screen</h1>
-					<div class="col six featurette">
-						<h2>Bacon ipsum dolor amet pancetta andouille fatback, tail tongue sausage swine kevin filet mignon shank</h2>
-					</div>
-					<button class="k_btn r modal_opener" type="button" amp-target="amp_overlay">Contact Us To Learn More<span class="icon-arrow-right5 hml"></span></button>
-			
-					
-				</div>
-				<figure>
-					<img src="assets/tiki_huts.jpg" class="swg">
-				</figure>
-			</div>
-        </div>
-	</header>
-	<section id="amp_content" role="main" class="row">
-		<header class="g_bg banner">
+
+	<section id="amp_content" role="main" class="row inner">
+		<header class="banner t_bg">
 	        <div class="container focus">
-	        	<h2 class="align_center upper">Secondary Page Header and Attention Getter</h2>
+		        <div class="col sixteen last pl">
+		        	<h2 class="upper">Secondary Page Header and Attention Getter</h2>
+		        </div>
 	        </div>
 		</header>
 		<article class="w_bg">
-			<div class="container focus">
+			<div class="container focus w_bg">
 				<div class="col nine">
 					<div class="inset dpt">
-						<p>Bacon ipsum dolor amet pancetta andouille fatback, tail tongue sausage swine kevin filet mignon shank. Drumstick kevin spare ribs, leberkas corned beef porchetta pork belly jerky tri-tip short loin biltong tail short ribs. Tail t-bone andouille corned beef prosciutto kielbasa. Tail ribeye pork belly andouille tri-tip cow beef brisket drumstick fatback kevin turkey jerky. Jerky cow venison fatback beef ribs shankle.</p>
+						<p>Bacon ipsum dolor amet venison short loin shankle beef bacon pancetta, meatloaf landjaeger tail prosciutto sirloin. Beef t-bone pig, chuck drumstick doner sausage. Rump turkey sirloin strip steak, kevin filet mignon pork loin chicken andouille shankle bacon beef ribs chuck. Short loin short ribs tri-tip meatball ham pastrami chicken salami hamburger. Filet mignon rump sausage ground round jowl short loin.</p>
 						
-						<p>Strip steak fatback sirloin, chuck tenderloin shankle shoulder meatball. Tenderloin shank meatloaf fatback strip steak tail, pork belly pork chop sirloin. Andouille ham hock pork belly pork shank. Boudin biltong pork chop, tenderloin bacon meatball landjaeger. Flank shoulder shank jowl venison tenderloin short ribs prosciutto pancetta kevin ball tip. Kevin ball tip tail bacon pig short ribs, bresaola corned beef fatback t-bone.</p>
+						<p>Tail ribeye flank pig meatloaf, beef swine cow prosciutto t-bone ham pork. Ground round pastrami pork belly short loin tail. Short ribs beef pork belly cow. Pancetta swine tail doner bresaola salami.</p>
+						
+						<p>Jowl meatloaf t-bone tenderloin short loin tri-tip pig shank cow. Shankle chuck meatball sirloin kielbasa t-bone. Pork loin ham hock cow, kielbasa filet mignon tail jerky jowl beef pork pig frankfurter salami. Shank ball tip short loin, capicola pork loin meatball beef beef ribs ham bresaola cow t-bone. Tail turkey sirloin chuck pork chop meatball doner porchetta kevin boudin shoulder pork salami. Fatback corned beef ham hock sausage pancetta frankfurter doner brisket kielbasa pork chop. Capicola frankfurter jerky biltong landjaeger spare ribs shankle kielbasa strip steak shank leberkas short loin beef turducken.</p>
+						
+						<p>Pork chop ball tip corned beef rump, short loin landjaeger meatloaf ground round filet mignon ham hock. Tenderloin capicola shank flank prosciutto andouille landjaeger. Bresaola pancetta drumstick, biltong sirloin pork flank short loin tongue sausage swine porchetta spare ribs shankle ham hock. Corned beef fatback pig jowl kielbasa, flank filet mignon frankfurter ham. Hamburger venison short ribs pork belly ham leberkas t-bone kevin bresaola shankle jowl. Swine jowl sirloin beef meatball pork chop tongue tail, bresaola meatloaf ribeye pancetta.</p>
+						
+						<p>Venison pastrami pancetta pork chop, meatball pig t-bone chicken tail pork belly. Ham hock tenderloin beef ribs, corned beef ham frankfurter biltong pork t-bone pastrami ground round strip steak pork belly ball tip turkey. Shoulder t-bone landjaeger ham hock bresaola pork biltong kevin beef ribs ribeye spare ribs. Ball tip sirloin landjaeger tenderloin, rump swine capicola flank turkey ground round ham.</p>
+						
 					</div>
+				</div>
+				<div class="col six">
+					<figure class="dmt mb">
+						<img src="assets/old_castle.jpg" class="swg">
+					</figure>
+					<button class="k_btn full" type="button">Call to Action</button>
+					<ol class="slats">
+					<li class="row">
+						<a href="#">
+							<h4>This is the title</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="meta">August 10, 2011</span></p>
+						</a>
+					</li>
+					<li class="row">
+						<a href="#">
+							<h4>This is the title</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="meta">August 10, 2011</span></p>
+						</a>
+					</li>
+					<li class="row">
+						<a href="#">
+							<h4>This is the title</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="meta">August 10, 2011</span></p>
+						</a>
+					</li>
+				</ol>
 				</div>				
 			</div>
 		</article>
 	</section>
-	<section class="mg_bg pt">
+	<section class="b_bg dpt">
 		<div class="container focus">
 			<div class="col nine">
 				<h3>Check Out Our Services</h3>
+				<p>Venison pastrami pancetta pork chop, meatball pig t-bone chicken tail pork belly. Ham hock tenderloin beef ribs, corned beef ham frankfurter biltong pork t-bone pastrami ground round strip steak pork belly ball tip turkey.</p>
 				<ul class="custom">
 					<li>Bullet No 1</li>
 					<li>Bullet No 2</li>
@@ -123,11 +129,45 @@
 			</div>
 			<div class="col seven">
 				<div class="row">
-					<figure class="col five push_one pull_top">
+					<figure class="col five push_one">
 						<img src="assets/old_castle.jpg" class="swg">
 					</figure>
 				</div>
 				<h4 class="align_center upper">Sample sub header call to action</h4>
+			</div>
+			<div class="col sixteen ac">
+				<h4 style="margin-bottom:160px;">*Tenderloin shank meatloaf fatback strip steak tail</h4>
+			</div>
+		</div>
+	</section>
+	<section id="thirdPanel" class="w_bg">
+		<div class="container focus pt">
+			<div class="col sixteen">
+				<h4>Another Title</h4>
+				<p></p>
+				
+				<menu>
+					<ul class="tabs">
+						<li><a href="#thirdPanel" class="active" amp-tab-content="simple">Simple</a></li>
+						<li><a href="#thirdPanel" amp-tab-content="lightweight">Lightweight</a></li>
+						<li><a href="#thirdPanel" amp-tab-content="mobileFriendly">Mobile</a></li>
+					</ul>
+					<ul class="tabs-content">
+						<li id="simple" class="active">
+							<div class="inset">
+								<p>The tabs are clean and simple unordered-list markup and basic CSS.</p>
+							</div></li>
+						<li id="lightweight">
+							<div class="inset">
+								<p>The tabs are cross-browser, but don't need a ton of hacky CSS or markup.</p>
+							</div></li>
+						<li id="mobileFriendly">
+							<div class="inset">
+								<p>The tabs work like a charm even on mobile devices. If there are too many they will stack (it's not completely awesome, but still retains functionality).</p>
+							</div></li>
+					</ul>
+				</menu>
+				
 			</div>
 		</div>
 	</section>
@@ -137,7 +177,7 @@
 				<a href="home.html"><img src="assets/theme_logo.png" class="logo"></a>
 				<nav>
 					<ul class="utility horizontal a r">
-						<li><a href=""><span class="icon-user hmr"></span>Profile</a>
+						<li><a href="interior_three.html"><span class="icon-user hmr"></span>Profile</a>
 							<ul>
 								<li><a href="#"><span class="icon-paperplane hmr"></span>Shipping Address</a>
 								<li><a href="#"><span class="icon-vcard hmr"></span>Billing Information</a></li>
@@ -165,7 +205,7 @@
 							</ul>
 						</li>
 						<li><a href="store.html">Products</a></li>
-						<li><a href="interior.html">Careers</a></li>
+						<li><a href="interior_two.html">Careers</a></li>
 						<li><a href="contact.html">Contact</a></li>
 						<li class="nav_toggle">
 							<a href="#amp_header">
@@ -195,47 +235,19 @@
 	
      <!-- Sample Modal Structure -->
 	<div id="amp_overlay" class="modal_overlay">
-		<div class="modal small">
-			<section class="row">
-				
-				<div class="row">
-					<span class="icon-cross2 large right rmr modal_kill" amp-target="amp_overlay"></span>
-				</div>
-				
-				<form>
-					<fieldset>
-						<label class="above" for="regularInput">Name</label>
-						<input type="text" id="regularInput" placeholder="First Name">
-					</fieldset>
-					
-					<fieldset>
-						<label class="above" for="regularInputError">Email</label>
-						<input type="email" id="regularInputError" placeholder="you@domian.com">
-					</fieldset>
-					
-					<fieldset>
-						<label class="above" for="regularTextarea">Regular Textarea</label>
-						<textarea id="regularTextarea"></textarea>
-					</fieldset>
-					
-					<fieldset class="checklist">
-						<label for="notifications">Keep me notified</label>
-						<ul>
-							<li><label><input type="checkbox" name="notifications" class="custom"><span></span>About Site Updates</label></li>
-							<li><label><input type="checkbox" name="notifications" class="custom"><span></span>About Product updates</label></li>
-							<li><label><input type="checkbox" name="notifications" class="custom"><span></span>Send me Newsletters</label></li>
-						</ul>
-					</fieldset>		
-					
-					<fieldset>
-						<button type="button" class="">Sign Me Up</button>
-						<button type="button" class="k_btn">Another Action</button>
-						<button type="reset" class="modal_kill k_btn" amp-target="amp_overlay">Cancel</button>
-					</fieldset>
-				</form>		
-	
+		<div class="modal">
+			<header>
+				<span class="icon-cross2 large right rmr modal_kill" amp-target="amp_overlay"></span>
+				<h3>Modal Header</h3>
+			</header>
+			<section>
+				...
 			</section>
-						
+			<footer>
+				<button type="button" class="">Action</button>
+				<button type="reset" class="modal_kill" amp-target="amp_overlay">Cancel</button>
+				<button type="submit" class="">Action</button>
+			</footer>
 		</div>
 	</div>
 	

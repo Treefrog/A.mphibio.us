@@ -50,7 +50,7 @@
 <link rel="stylesheet" href="../../css/a.mphibio.us.css">
 <link rel="stylesheet" href="assets/classic.css">
   
-<script src="../../js/js/modernizr-2.6.2.min.js"></script>
+<script src="../../js/libs/modernizr-2.6.2.min.js"></script>
 
 <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
 <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
@@ -64,14 +64,14 @@
      <!-- Add your site or application content here -->
 
 	<section id="amp_content" role="main" class="row inner">
-		<header class="banner g_bg">
+		<header class="banner t_bg">
 	        <div class="container focus">
 		        <div class="col sixteen last pl">
 		        	<h2 class="upper">Secondary Page Header and Attention Getter</h2>
 		        </div>
 	        </div>
 		</header>
-		<article class="lg_bg">
+		<article class="w_bg">
 			<div class="container focus w_bg">
 				<div class="col nine">
 					<div class="inset dpt">
@@ -91,7 +91,7 @@
 					<figure class="dmt mb">
 						<img src="assets/old_castle.jpg" class="swg">
 					</figure>
-					<button class="g_btn full" type="button">Call to Action</button>
+					<button class="k_btn full" type="button">Call to Action</button>
 					<ol class="slats">
 					<li class="row">
 						<a href="#">
@@ -174,8 +174,20 @@
 	<div id="navbar" class="k_bg">
     	<div class="container focus">
         	<div class="row">
-				<a href="home.html"><img src="assets/theme_logo.png" class="logo left"></a>
-				<nav class="left">
+				<a href="home.html"><img src="assets/theme_logo.png" class="logo"></a>
+				<nav>
+					<ul class="utility horizontal a r">
+						<li><a href="interior_three.html"><span class="icon-user hmr"></span>Profile</a>
+							<ul>
+								<li><a href="#"><span class="icon-paperplane hmr"></span>Shipping Address</a>
+								<li><a href="#"><span class="icon-vcard hmr"></span>Billing Information</a></li>
+								<li class="divider"></li>
+								<li><a href="#"><span class="icon-logout hmr"></span>Logout</a></li>
+							</ul>
+						</li>
+						<li class="divider"></li>
+						<li><a href="cart.html"><span class="icon-cart"></span></a></li>
+					</ul>
 					<ul class="mainnav horizontal">
 						<li><a href="home.html"><span class="icon-house"></span></a></li>
 						<li><a href="interior.html">About Us</a>
@@ -192,9 +204,16 @@
 								<li><a href="#">Sub menu Link</a></li>
 							</ul>
 						</li>
-						<li><a href="interior2.html">Products</a></li>
-						<li><a href="interior2.html">Careers</a></li>
-						<li><a href="interior2.html">Contact</a></li>
+						<li><a href="store.html">Products</a></li>
+						<li><a href="interior_two.html">Careers</a></li>
+						<li><a href="contact.html">Contact</a></li>
+						<li class="nav_toggle">
+							<a href="#amp_header">
+								<span class="icon-arrow-up7 l hml"></span>
+								To Top 
+								<span class="icon-arrow-up7 r hmr"></span>
+							</a>
+						</li>
 					</ul>
 				</nav>
         	</div>
@@ -215,7 +234,7 @@
 	<script src="../../js/scripts.js"></script>
 	
      <!-- Sample Modal Structure -->
-	<div id="amp_overlay" class="overlay">
+	<div id="amp_overlay" class="modal_overlay">
 		<div class="modal">
 			<header>
 				<span class="icon-cross2 large right rmr modal_kill" amp-target="amp_overlay"></span>
