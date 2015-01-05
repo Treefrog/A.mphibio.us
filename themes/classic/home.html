@@ -214,7 +214,7 @@
 		</article>
 	</section>
 	<section class="mg_bg pt">
-		<div class="container focus">
+		<div id="products" class="container focus">
 			<div class="col nine">
 				<h3>Check Out Our Services</h3>
 				<ul class="custom">
@@ -250,8 +250,13 @@
 						<li class="divider"></li>
 						<li><a href="cart.html"><span class="icon-cart"></span></a></li>
 					</ul>
+					
 					<ul class="mainnav horizontal">
-						<li><a href="home.html"><span class="icon-house"></span></a></li>
+						<li><a href="home.html"><span class="icon-house"></span></a>
+							<ul>
+								<li><a href="#amp_content">Services</a></li>
+							</ul>
+						</li>
 						<li><a href="interior.html">About Us</a>
 							<ul>
 								<li><a href="#">Sub menu Link</a>
@@ -297,6 +302,14 @@
 	<script src="../../js/scripts.js"></script>
 	<script type="text/javascript">
 		$(window).load(function(){
+		  $('.flexslider').flexslider({
+		    animation: "slide",
+		    start: function(slider){
+		      $('body').removeClass('loading');
+		    }
+		  });
+		});
+		$(window).focus(function(){
 		  $('.flexslider').flexslider({
 		    animation: "slide",
 		    start: function(slider){
