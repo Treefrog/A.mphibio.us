@@ -139,6 +139,15 @@ amp.bindlisteners = function() {
 			$('#'+thisOfCourse+'').addClass('hide');
 		}
 	});
+	
+	$('.amp_trigger').click(function(){
+		var myLocal = $(this).attr('location');
+		if($(this).attr('clicktype') == 'out') {
+			window.open($(this).attr('location'));
+		} else {
+			document.location.href = $(this).attr('location');
+		}
+	});
 
 	$('.modal_opener').on( 'click', (function(){
 		var thisOfCourse = $(this).attr('amp-target');

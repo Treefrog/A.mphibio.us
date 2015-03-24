@@ -130,13 +130,21 @@ amp.bindlisteners = function() {
 		}
 	});
 
-
 	$('.opener').click(function(){
 		var thisOfCourse = $(this).attr('amp-target');
 		if($('#'+$(this).attr('amp-target')).hasClass('hide')){
 			$('#'+thisOfCourse+'').removeClass('hide');
 		} else {
 			$('#'+thisOfCourse+'').addClass('hide');
+		}
+	});
+	
+	$('.amp_trigger').click(function(){
+		var myLocal = $(this).attr('location');
+		if($(this).attr('clicktype') == 'out') {
+			window.open($(this).attr('location'));
+		} else {
+			document.location.href = $(this).attr('location');
 		}
 	});
 
