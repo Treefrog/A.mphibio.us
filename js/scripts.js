@@ -67,7 +67,7 @@ amp.bindlisteners = function() {
 	$('ul li:last-child').addClass('last');
 
 
-		$(function(){
+	$(function(){
 		var d = 'placeholder' in document.createElement('input');
 		if (!d){
 			$('input[placeholder]').each(function(){
@@ -84,13 +84,11 @@ amp.bindlisteners = function() {
 		}
 	});
 
-	$(function () {
-		$('.checkall').on('click', function () {
-			$(this).closest('fieldset').find(':checkbox').prop('checked', this.checked);
-		});
-	});
+	$('body').on('click', '.checkall', (function () {
+		$(this).closest('fieldset').find(':checkbox').prop('checked', this.checked);
+	}));
 
-	$('#nav li').click(function(){
+	$('body').on('click', '#nav li', (function(){
 		if ($(this).hasClass('active')) {
 		} else {
 			$('#nav li').removeClass('active');
@@ -98,9 +96,9 @@ amp.bindlisteners = function() {
 			/* I May use this later
 			$(content).show().addClass('active').siblings().hide().removeClass('active'); */
 		}
-	});
+	}));
 
-	$('.tabs li a').click(function(){
+	$('body').on( 'click', '.tabs li a', (function(){
 		var parent = $(this).closest('ul').attr('id');
 		var content = '#'+$(this).attr('amp-tab-content');
 		if ($(this).hasClass('active') && content.length) {
@@ -116,7 +114,7 @@ amp.bindlisteners = function() {
 			$(content).show().addClass('active').siblings().hide().removeClass('active');
 		}
 		return false;
-	});
+	}));
 
 	$('.options_select').change(function(){
 		var target = '';
@@ -130,25 +128,26 @@ amp.bindlisteners = function() {
 		}
 	});
 
-	$('.opener').click(function(){
+
+	$('body').on( 'click', '.opener', (function(){
 		var thisOfCourse = $(this).attr('amp-target');
 		if($('#'+$(this).attr('amp-target')).hasClass('hide')){
 			$('#'+thisOfCourse+'').removeClass('hide');
 		} else {
 			$('#'+thisOfCourse+'').addClass('hide');
 		}
-	});
+	}));
 	
-	$('.amp_trigger').click(function(){
+	$('body').on( 'click', '.amp_trigger', (function(){
 		var myLocal = $(this).attr('location');
 		if($(this).attr('clicktype') == 'out') {
 			window.open($(this).attr('location'));
 		} else {
 			document.location.href = $(this).attr('location');
 		}
-	});
+	}));
 
-	$('.modal_opener').on( 'click', (function(){
+	$('body').on( 'click', '.modal_opener', (function(){
 		var thisOfCourse = $(this).attr('amp-target');
 		if($('#'+$(this).attr('amp-target')).hasClass('show')){
 			$('body').css('overflow','auto');
@@ -171,12 +170,13 @@ amp.bindlisteners = function() {
 		}
 	}));
 
-	$('.modal_kill').on( 'click', (function(){
+	$('body').on( 'click', '.modal_kill', (function(){
 		var killIt = $(this).attr('amp-target');
 			$('body').css('overflow','auto');
 			$('#'+killIt+'').removeClass('show');
 			$('.focus').removeClass('blur');
 	}));
+
 };
 
 amp.mobilelisteners = function() {
@@ -192,7 +192,7 @@ amp.desktoplisteners = function() {
 		* Desktop browser specific listeners are placed here
 		* *** NOT *** executed by mobile browsers. See amp.mobilelisteners instead.
 		* ================================================================== */
-		$.localScroll();
+		// $.localScroll();
 
 };
 
