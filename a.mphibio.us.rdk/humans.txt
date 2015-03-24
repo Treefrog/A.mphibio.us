@@ -8,7 +8,7 @@
     
 # THANKS
 
-	Paul Irish, Dan Cederholm, Ian Lunn, Ariel Flesler, @viljamis
+	Paul Irish, Dan Cederholm, Scott Jehl, David DeSandro, Lea Verou
 
 # DOCUMENTATION
 
@@ -21,4 +21,7 @@
 	CSS3
 	Normalize.css,
 	jQuery,
-	Modernizer
+	Modernizer,
+	Prefixfree,
+	Picture Fill,
+	Respond JS
