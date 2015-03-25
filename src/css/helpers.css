@@ -1,0 +1,308 @@
+
+/* ==========================================================================
+   19. Layout Helper Rules
+   ========================================================================== */
+
+/*
+Class Name                      Shorthand                   Styles
+==================================================================================== */
+
+.absolute,
+.a
+{
+    position: absolute;
+}
+
+.fixed,
+.f
+{
+    position: fixed;
+}
+
+.left,
+.l
+{
+    float: left;
+}
+
+.container .col.right,
+.container .col.r,
+.right,
+.r
+{
+    float: right;
+}
+
+.align_left,
+.al
+{
+    text-align: left;
+}
+
+.align_right,
+.ar
+{
+    text-align: right;
+}
+
+.align_center,
+.ac
+{
+    text-align: center;
+}
+
+.align_just,
+.aj
+{
+    text-align: justify;
+}
+
+.remove_margin_top,
+.rmt
+{
+    margin-top: 0 !important;
+}
+
+.half_margin_top,
+.hmt
+{
+    margin-top: .5em !important;
+}
+
+.margin_top,
+.mt
+{
+    margin-top: 1em !important;
+}
+
+.double_margin_top,
+.dmt
+{
+    margin-top: 2em !important;
+}
+
+.half_margin_left,
+.hml
+{
+    margin-left: .5em !important;
+}
+
+.margin_left,
+.ml
+{
+    margin-left: 1em !important;
+}
+
+.double_margin_left,
+.dml
+{
+    margin-left: 2em !important;
+}
+
+.remove_margin_bottom,
+.rmb
+{
+    margin-bottom: 0 !important;
+}
+
+.half_margin_bottom,
+.hmb
+{
+    margin-bottom: .5em !important;
+}
+
+.margin_bottom,
+.mb
+{
+    margin-bottom: 1em !important;
+}
+
+.double_margin_bottom,
+.dmb
+{
+    margin-bottom: 2em !important;
+}
+
+.half_margin_right,
+.hmr
+{
+    margin-right: .5em !important;
+}
+
+.margin_right,
+.mr
+{
+    margin-right: 1em !important;
+}
+
+.double_margin_right,
+.dmr
+{
+    margin-right: 2em !important;
+}
+
+.inset,
+.pd
+{
+    padding: 1em !important;
+}
+
+.half_pad_top,
+.hpt
+{
+    padding-top: 0.5em !important;
+}
+
+.pad_top,
+.pt
+{
+    padding-top: 1em !important;
+}
+
+.double_pad_top,
+.dpt
+{
+    padding-top: 2em !important;
+}
+
+.pad_left,
+.pl
+{
+    padding-left: 1em !important;
+}
+
+.double_pad_left,
+.dpl
+{
+    padding-left: 2em !important;
+}
+
+.half_pad_left,
+.hpl
+{
+    padding-left: 0.5em !important;
+}
+
+.half_pad_bottom,
+.hpb
+{
+    padding-bottom:: 0.5em !important;
+}
+
+.pad_bottom,
+.pb
+{
+    padding-bottom: 1em !important;
+}
+
+.double_pad_bottom,
+.dpb
+{
+    padding-bottom: 2em !important;
+}
+
+.pad_right,
+.pr
+{
+    padding-right: 1em !important;
+}
+
+.double_pad_right,
+.dpr
+{
+    padding-right: 2em !important;
+}
+
+.rule_above,
+.ra
+{
+    border-top: 1px solid #ececec;
+}
+
+.double_rule_above,
+.dra
+{
+    border-top: 3px double #ececec;
+}
+
+.rule_below,
+.rb
+{
+    border-bottom: 1px solid #ececec;
+}
+
+.double_rule_below,
+.drb
+{
+    border-bottom: 3px double #ececec;
+}
+
+.hide,
+.hfp,
+.print-only,
+.assistive-text
+{
+    display: none !important;
+}
+
+.full,
+.fl
+{
+    width: 100%;
+}
+
+.meta
+{
+    color: #a9a9a9;
+}
+
+/* Positioning overrides use these in context of parent elements with margins for quick layout */
+
+.absolute.top .a.t,
+.absolute.t,
+.a.top,
+.fixed.top,
+.f.t,
+.fixed.t,
+.f.top
+{
+    top: 0;
+}
+
+.absolute.right,
+.a.r,
+.absolute.r,
+.a.right,
+.fixed.right,
+.f.r,
+.fixed.r,
+.f.right
+{
+    float: none !important;
+    right: 0 !important;
+}
+
+.absolute.bottom,
+.a.b,
+.absolute.b,
+.a.bottom,
+.fixed.bottom,
+.f.b,
+.fixed.b,
+.f.bottom
+{
+    bottom: 0;
+}
+
+.absolute.left,
+.a.l,
+.absolute.l,
+.a.left,
+.fixed.left,
+.f.l,
+.fixed.l,
+.f.left
+{
+    float: none;
+    left: 0;
+}

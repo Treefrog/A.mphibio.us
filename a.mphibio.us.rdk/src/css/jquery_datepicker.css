@@ -1,0 +1,124 @@
+/* ==========================================================================
+   17. jQueryUI Datepicker minimum styles
+   ========================================================================== */
+
+.ui-datepicker
+{
+    background: #fff;
+    box-shadow: rgba(0,0,0,0.3) 0 0 4px;
+}
+.ui-datepicker-header
+{
+    padding: 0.2em 0;
+}
+
+.ui-datepicker-title
+{
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: -1;
+}
+
+.ui-datepicker-next,
+.ui-datepicker-prev
+{
+    display: block;
+    height: 22px;
+    width: 22px;
+}
+.ui-icon.ui-icon-circle-triangle-e,
+.ui-icon.ui-icon-circle-triangle-w
+{
+    display: inline-block;
+    text-indent: -9000px;
+}
+.ui-icon.ui-icon-circle-triangle-w
+{
+    float: left;
+}
+.ui-icon.ui-icon-circle-triangle-e
+{
+    float: right;
+}
+
+.ui-icon.ui-icon-circle-triangle-w:after,
+.ui-icon.ui-icon-circle-triangle-e:after
+{
+    position: absolute;
+    top: 0;
+    font-family: 'entypo';
+    display: block;
+    text-indent: 0;
+    font-size: 1.6em;
+
+}
+
+.ui-icon.ui-icon-circle-triangle-w:after
+{
+    content: "\e6c5";
+    left: 3px;
+}
+
+.ui-icon.ui-icon-circle-triangle-e:after
+{
+    content: "\e6c8";
+    left: auto;
+    right: 3px;
+}
+
+.ui-datepicker table
+{
+    margin: 0.3em 0 0;
+    box-shadow: rgba(0,0,0,0.4) 0 0 6px;
+}
+
+.ui-datepicker table thead tr th,
+.ui-datepicker table tbody tr td
+{
+    padding: 0;
+    width: 25px;
+    text-align: center;
+}
+.ui-datepicker table tbody tr:nth-child(odd) td,
+.ui-datepicker table tbody tr:nth-child(even) td
+{
+    background-color: #fefefe;
+    text-align: center;
+}
+.ui-datepicker table thead tr th span,
+.ui-datepicker table tbody tr td span
+{
+    display: block;
+    padding: 0.6em;
+    text-align: center;
+}
+.ui-datepicker table tbody tr td a
+{
+    display: block;
+    padding: 0.6em;
+    text-align: center;
+
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.ui-datepicker table tbody tr td a:hover
+{
+    background-color: #39b3cb;
+
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.ui-datepicker table tbody tr td a.ui-state-active,
+.ui-datepicker table tbody tr td a.ui-state-active:hover
+{
+    color: #fff;
+    background-color: #39b3cb;
+}

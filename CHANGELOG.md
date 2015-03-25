@@ -1,3 +1,11 @@
+### Release 1.5.2 (Wednesday, April 1, 2015)
+
+# Sadly neglected changelog
+
+* Restructuring of project and re-integration with grunt
+* Minor issue repairs and code base updates 
+* Free themes have been added to rdk
+
 ### Release 1.0.1 (Wednesday, April 17, 2013)
 
 * Refactored Repository Structure to optimize my own work flow.

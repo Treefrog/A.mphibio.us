@@ -1,0 +1,575 @@
+/*
+	Variable Grid System.
+	Learn more ~ http://www.spry-soft.com/grids/
+	Based on 960 Grid System - http://960.gs/
+
+	Licensed under GPL and MIT.
+*/
+
+/*
+  Forces backgrounds to span full width,
+  even if there is horizontal scrolling.
+  Increase this if your layout is wider.
+
+  Note: IE6 works fine without this fix.
+*/
+
+body {
+  min-width: 960px;
+}
+
+/* Containers
+----------------------------------------------------------------------------------------------------*/
+.container
+{
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+}
+
+/* Grid >> Global
+----------------------------------------------------------------------------------------------------*/
+
+
+.col
+{
+	display:inline;
+	float: left;
+	position: relative;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+
+
+.push_one, .pull_one,
+.push_two, .pull_two,
+.push_three, .pull_four,
+.push_4, .pull_4,
+.push_5, .pull_5,
+.push_6, .pull_6,
+.push_7, .pull_7,
+.push_8, .pull_8,
+.push_9, .pull_9,
+.push_10, .pull_10,
+.push_11, .pull_11,
+.push_12, .pull_12,
+.push_13, .pull_13,
+.push_14, .pull_14,
+.push_15, .pull_15,
+.push_16, .pull_16,
+.push_17, .pull_17,
+.push_18, .pull_18,
+.push_19, .pull_19,
+.push_20, .pull_20,
+.push_21, .pull_21,
+.push_22, .pull_22,
+.push_23, .pull_23,
+.push_24, .pull_24 {
+	position:relative;
+}
+
+
+/* Grid >> Children (Alpha ~ First, Omega ~ Last)
+----------------------------------------------------------------------------------------------------*/
+
+.first {
+	margin-left: 0;
+}
+
+.last {
+	margin-right: 0;
+}
+
+/* Grid >> 24 Columns
+----------------------------------------------------------------------------------------------------*/
+
+
+.container .col.one {
+	width:30px;
+}
+
+.container .col.two {
+	width:70px;
+}
+
+.container .col.three {
+	width:110px;
+}
+
+.container .col.four {
+	width:150px;
+}
+
+.container .col.five {
+	width:190px;
+}
+
+.container .col.six {
+	width:230px;
+}
+
+.container .col.seven {
+	width:270px;
+}
+
+.container .col.8 {
+	width:310px;
+}
+
+.container .col.9 {
+	width:350px;
+}
+
+.container .col.one0 {
+	width:390px;
+}
+
+.container .col.one1 {
+	width:430px;
+}
+
+.container .col.one2 {
+	width:470px;
+}
+
+.container .col.one3 {
+	width:510px;
+}
+
+.container .col.one4 {
+	width:550px;
+}
+
+.container .col.one5 {
+	width:590px;
+}
+
+.container .col.one6 {
+	width:630px;
+}
+
+.container .col.one7 {
+	width:670px;
+}
+
+.container .col.one8 {
+	width:710px;
+}
+
+.container .col.one9 {
+	width:750px;
+}
+
+.container .col.twenty {
+	width:790px;
+}
+
+.container .col.twenty_one {
+	width:830px;
+}
+
+.container .col.twenty_two {
+	width:870px;
+}
+
+.container .col.twenty_three {
+	width:910px;
+}
+
+.container .col.twenty_four {
+	width:950px;
+}
+
+
+
+
+/* Prefix Extra Space >> 24 Columns
+----------------------------------------------------------------------------------------------------*/
+
+
+.container .prefix_1 {
+	padding-left:40px;
+}
+
+.container .prefix_2 {
+	padding-left:80px;
+}
+
+.container .prefix_3 {
+	padding-left:120px;
+}
+
+.container .prefix_4 {
+	padding-left:160px;
+}
+
+.container .prefix_5 {
+	padding-left:200px;
+}
+
+.container .prefix_6 {
+	padding-left:240px;
+}
+
+.container .prefix_7 {
+	padding-left:280px;
+}
+
+.container .prefix_8 {
+	padding-left:320px;
+}
+
+.container .prefix_9 {
+	padding-left:360px;
+}
+
+.container .prefix_10 {
+	padding-left:400px;
+}
+
+.container .prefix_11 {
+	padding-left:440px;
+}
+
+.container .prefix_12 {
+	padding-left:480px;
+}
+
+.container .prefix_13 {
+	padding-left:520px;
+}
+
+.container .prefix_14 {
+	padding-left:560px;
+}
+
+.container .prefix_15 {
+	padding-left:600px;
+}
+
+.container .prefix_16 {
+	padding-left:640px;
+}
+
+.container .prefix_17 {
+	padding-left:680px;
+}
+
+.container .prefix_18 {
+	padding-left:720px;
+}
+
+.container .prefix_19 {
+	padding-left:760px;
+}
+
+.container .prefix_20 {
+	padding-left:800px;
+}
+
+.container .prefix_21 {
+	padding-left:840px;
+}
+
+.container .prefix_22 {
+	padding-left:880px;
+}
+
+.container .prefix_23 {
+	padding-left:920px;
+}
+
+
+
+/* Suffix Extra Space >> 24 Columns
+----------------------------------------------------------------------------------------------------*/
+
+
+.container .suffix_1 {
+	padding-right:40px;
+}
+
+.container .suffix_2 {
+	padding-right:80px;
+}
+
+.container .suffix_3 {
+	padding-right:120px;
+}
+
+.container .suffix_4 {
+	padding-right:160px;
+}
+
+.container .suffix_5 {
+	padding-right:200px;
+}
+
+.container .suffix_6 {
+	padding-right:240px;
+}
+
+.container .suffix_7 {
+	padding-right:280px;
+}
+
+.container .suffix_8 {
+	padding-right:320px;
+}
+
+.container .suffix_9 {
+	padding-right:360px;
+}
+
+.container .suffix_10 {
+	padding-right:400px;
+}
+
+.container .suffix_11 {
+	padding-right:440px;
+}
+
+.container .suffix_12 {
+	padding-right:480px;
+}
+
+.container .suffix_13 {
+	padding-right:520px;
+}
+
+.container .suffix_14 {
+	padding-right:560px;
+}
+
+.container .suffix_15 {
+	padding-right:600px;
+}
+
+.container .suffix_16 {
+	padding-right:640px;
+}
+
+.container .suffix_17 {
+	padding-right:680px;
+}
+
+.container .suffix_18 {
+	padding-right:720px;
+}
+
+.container .suffix_19 {
+	padding-right:760px;
+}
+
+.container .suffix_20 {
+	padding-right:800px;
+}
+
+.container .suffix_21 {
+	padding-right:840px;
+}
+
+.container .suffix_22 {
+	padding-right:880px;
+}
+
+.container .suffix_23 {
+	padding-right:920px;
+}
+
+
+
+/* Push Space >> 24 Columns
+----------------------------------------------------------------------------------------------------*/
+
+
+.container .push_1 {
+	left:40px;
+}
+
+.container .push_2 {
+	left:80px;
+}
+
+.container .push_3 {
+	left:120px;
+}
+
+.container .push_4 {
+	left:160px;
+}
+
+.container .push_5 {
+	left:200px;
+}
+
+.container .push_6 {
+	left:240px;
+}
+
+.container .push_7 {
+	left:280px;
+}
+
+.container .push_8 {
+	left:320px;
+}
+
+.container .push_9 {
+	left:360px;
+}
+
+.container .push_10 {
+	left:400px;
+}
+
+.container .push_11 {
+	left:440px;
+}
+
+.container .push_12 {
+	left:480px;
+}
+
+.container .push_13 {
+	left:520px;
+}
+
+.container .push_14 {
+	left:560px;
+}
+
+.container .push_15 {
+	left:600px;
+}
+
+.container .push_16 {
+	left:640px;
+}
+
+.container .push_17 {
+	left:680px;
+}
+
+.container .push_18 {
+	left:720px;
+}
+
+.container .push_19 {
+	left:760px;
+}
+
+.container .push_20 {
+	left:800px;
+}
+
+.container .push_21 {
+	left:840px;
+}
+
+.container .push_22 {
+	left:880px;
+}
+
+.container .push_23 {
+	left:920px;
+}
+
+
+
+/* Pull Space >> 24 Columns
+----------------------------------------------------------------------------------------------------*/
+
+
+.container .pull_1 {
+	left:-40px;
+}
+
+.container .pull_2 {
+	left:-80px;
+}
+
+.container .pull_3 {
+	left:-120px;
+}
+
+.container .pull_4 {
+	left:-160px;
+}
+
+.container .pull_5 {
+	left:-200px;
+}
+
+.container .pull_6 {
+	left:-240px;
+}
+
+.container .pull_7 {
+	left:-280px;
+}
+
+.container .pull_8 {
+	left:-320px;
+}
+
+.container .pull_9 {
+	left:-360px;
+}
+
+.container .pull_10 {
+	left:-400px;
+}
+
+.container .pull_11 {
+	left:-440px;
+}
+
+.container .pull_12 {
+	left:-480px;
+}
+
+.container .pull_13 {
+	left:-520px;
+}
+
+.container .pull_14 {
+	left:-560px;
+}
+
+.container .pull_15 {
+	left:-600px;
+}
+
+.container .pull_16 {
+	left:-640px;
+}
+
+.container .pull_17 {
+	left:-680px;
+}
+
+.container .pull_18 {
+	left:-720px;
+}
+
+.container .pull_19 {
+	left:-760px;
+}
+
+.container .pull_20 {
+	left:-800px;
+}
+
+.container .pull_21 {
+	left:-840px;
+}
+
+.container .pull_22 {
+	left:-880px;
+}
+
+.container .pull_23 {
+	left:-920px;
+}

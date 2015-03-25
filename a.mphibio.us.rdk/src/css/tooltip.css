@@ -1,0 +1,70 @@
+/* ==========================================================================
+   26. Tooltip CSS
+   ========================================================================== */
+
+.icon.tooltip {}
+
+.tooltip
+{
+    display: inline;
+    position: relative;
+}
+
+.tooltip:hover
+{
+    text-decoration: none;
+}
+
+.tooltip:hover:after
+{
+    text-indent: 0;
+    text-align: left;
+    bottom: 27px;
+    left: -100%;
+    display: block;
+    min-width: 100px;
+    max-width: 400px;
+    color: #333;
+    font-size: 11px;
+    text-shadow: #fff 0 1px 0;
+    content: attr(amp-tip);
+    padding: .3em 1em;
+    position: absolute;
+/*     white-space: nowrap; */
+    z-index: 300;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    *border-right-width: 2px;
+    *border-bottom-width: 2px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    opacity: 0.925;
+    filter: alpha(opacity=90);
+}
+
+.tooltip:hover:before
+{
+    border: solid;
+    border-color: #666 transparent;
+    border-width: 7px 6px 0 6px;
+    bottom: 20px;
+    content: "";
+    display: block;
+    left: 20%;
+    position: absolute;
+    z-index: 301;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    opacity: 0.825;
+    filter: alpha(opacity=80);
+}
+

@@ -1,0 +1,33 @@
+/* ==========================================================================
+   6. Responsive Images
+   ========================================================================== */
+
+img
+{
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+    vertical-align: middle;
+}
+
+svg:not(:root)
+{
+    overflow: hidden;
+}
+
+figure
+{
+    margin: 0;
+}
+
+/* Marginally responsive images server side options are usually better
+    however, this can produce excellent results with some fore thought and
+    a clipping div flip the max-width/height attributtes if you have portrait images
+================================================== */
+
+img.scale-with-grid,
+img.swg
+{
+    max-width: 100%;
+    height: auto;
+}
+

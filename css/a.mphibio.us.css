@@ -1,47 +1,11 @@
 /*!
-* A.mphibio.us  1.5.2
-* Copyright 2014, @cliveMoore @Treefrog
-* http://a.mphibio.us
-* Free to use under the MIT license.
-* http://www.opensource.org/licenses/mit-license.php
-* 21/11/2014
-*
-*
-/* CSS Table of Contents
-   ==========================================================================
-
-   1. Custom Normalize / v3.0.2
-   2. Base Styles and Modified HTML5 Boiler Plate
-   3. Typography
-   4. Content Pea.rs / Common patterns of Markup and style
-   5. Table Styles
-   6. Responsive Images
-   7. Messaging, Notifications & Tags
-   8. Buttons
-   9. Tabs (activated by scripts.js)
-   10. Navigation Styles
-   11. Social Media Nav Styles
-   12. Progress Bar
-   13. General Modal Styles
-   14. Forms & Input Styles
-   15. Append/Prepend Icons to Form Elements
-   16. Custom Selects, Checkboxes & Radios
-   17. jQueryUI Datepicker Styles
-   18. Icons by http://www.entypo.com
-   19. Layout Helpers and shorthand classes
-   20. The 960 Grid
-   21. Always Fluid Classes and fluid grid
-
-   ==  Media Rules
-
-   22. Tablet (Portrait) Design for a width of 768px
-   23. Mobile (Portrait) max width of 767px
-   24. Mobile (Landscape) Design for a width of 480px
-   25. Clearing Floats
-   26. Tooltip CSS
-   27. Print CSS
-
-   ========================================================================== */
+ * A.mphibio.us v1.5.3
+ * Copyright 2015, Clive Moore @cliveMoore @Treefrog
+ * http://a.mphibio.us
+ * This content is released under the MIT license
+ * http://www.opensource.org/licenses/mit-license.php
+ * 25-03-2015
+ */
 
 
 /* ==========================================================================
@@ -536,6 +500,8 @@ th
 
 
 
+
+
 /* ==========================================================================
  * Modified HTML5 Boilerplate
  *
@@ -629,7 +595,6 @@ body
 {
     color: #8a8a8a;
 }
-
 /* ==========================================================================
    3. Typography
    ========================================================================== */
@@ -1259,7 +1224,7 @@ table.amp.stripped tfoot th
 }
 
 /* ==========================================================================
-   6. Images
+   6. Responsive Images
    ========================================================================== */
 
 img
@@ -1290,7 +1255,6 @@ img.swg
     max-width: 100%;
     height: auto;
 }
-
 
 
 /* ==========================================================================
@@ -1453,7 +1417,6 @@ img.swg
 {
     display: none;
 }
-
 
 /* ==========================================================================
    8. Buttons
@@ -2301,7 +2264,6 @@ ul.nav
     transition: all 400ms ease-in;
 }
 
-
 /* ==========================================================================
    14. Forms
    ========================================================================== */
@@ -2668,6 +2630,7 @@ form fieldset p.form-help.after
 }
 
 
+
 /* ==========================================================================
    15. Custom Form Elements Append/Prepend Icons to Inputs
    ========================================================================== */
@@ -2955,7 +2918,7 @@ form.multi.beside fieldset.date_picker_set fieldset:nth-child(2n) label
 
 
 /* ==========================================================================
-   7. jQueryUI Datepicker minimum styles
+   17. jQueryUI Datepicker minimum styles
    ========================================================================== */
 
 .ui-datepicker
@@ -4989,59 +4952,6 @@ Class Name                      Shorthand                   Styles
 {
     padding-left: 91.75%;
 }
-/* ALL
-================================================== */
-
-@media only screen and (max-width: 959px)
-{
-    /*
-.container .one-third.col
-    {
-        width: 32.11%;
-        margin-left: 1%;
-        margin-right: 1%;
-    }
-
-    .container .two-thirds.col
-    {
-        width: 66%;
-        margin-left: 1%;
-        margin-right: 1%;
-    }
-
-    .container .one-quarter.col
-    {
-        width: 23.625%;
-        margin-left: 1%;
-        margin-right: 1%;
-    }
-
-    .container .half.col
-    {
-        width: 49%;
-        margin-left: 1%;
-        margin-right: 1%;
-    }
-
-    .container .three-quarters.col
-    {
-        width: 74.5%;
-        margin-left: 1%;
-        margin-right: 1%;
-    }
-
-    .container .one-third.col.padded,
-    .container .two-thirds.col.padded,
-    .container .one-quarter.col.padded,
-    .container .half.col.padded,
-    .container .three-quarters.col.padded
-    {
-        margin-left: 0;
-        margin-right: 0;
-    }
-*/
-}
-
 
 /* ==========================================================================
    22. Tablet (Portrait) Design for a width of 768px
@@ -5494,6 +5404,7 @@ Class Name                      Shorthand                   Styles
     }
 }
 
+
 /* ==========================================================================
    25. Clearing Floats
    ========================================================================== */
@@ -5558,6 +5469,7 @@ Class Name                      Shorthand                   Styles
     width: 0;
     height: 0;
 }
+
 
 /* ==========================================================================
    26. Tooltip CSS

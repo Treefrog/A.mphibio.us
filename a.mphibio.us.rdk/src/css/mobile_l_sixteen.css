@@ -1,0 +1,72 @@
+/* ==========================================================================
+   23. Mobile (Portrait) max width of 767px
+   ========================================================================== */
+
+@media only screen and (max-width: 767px)
+{
+    .container
+    {
+        width: 300px;
+    }
+
+    .container .col
+    {
+        margin: 0;
+    }
+
+    .container .col.first
+    {
+        margin-left: 0 !important;
+    }
+
+    .container .col.last
+    {
+        margin-right: 0 !important;
+    }
+
+    .container .one.col,
+    .container .two.col,
+    .container .three.col,
+    .container .four.col,
+    .container .five.col,
+    .container .six.col,
+    .container .seven.col,
+    .container .eight.col,
+    .container .nine.col,
+    .container .ten.col,
+    .container .eleven.col,
+    .container .twelve.col,
+    .container .thirteen.col,
+    .container .fourteen.col,
+    .container .fifteen.col,
+    .container .sixteen.col
+    {
+        width: 300px;
+    }
+
+    /* Offsets */
+    .container .push_one,
+    .container .push_two,
+    .container .push_three,
+    .container .push_four,
+    .container .push_five,
+    .container .push_six,
+    .container .push_seven,
+    .container .push_eight,
+    .container .push_nine,
+    .container .push_ten,
+    .container .push_eleven,
+    .container .push_twelve,
+    .container .push_thirteen,
+    .container .push_fourteen,
+    .container .push_fifteen
+    {
+        padding-left: 0;
+    }
+
+    .fixed
+    {
+        position: relative !important;
+    }
+}
+

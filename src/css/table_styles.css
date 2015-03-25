@@ -1,0 +1,80 @@
+/* ==========================================================================
+   5. Table Styles
+   ========================================================================== */
+
+table
+{
+    width: 99.9%;
+    margin: 1.3em 0;
+}
+
+table.amp caption
+{
+    color: #747474;
+    font-style: italic;
+    text-align: left;
+    padding: 0.625em 0;
+    padding-bottom: 0.825em;
+}
+
+table.amp td,
+table.amp th
+{
+    margin: 0;
+    padding: 0.3em 0.425em;
+    text-align: left;
+}
+
+table.amp td
+{
+    border-top: 1px solid #cfcfcf;
+}
+
+table.amp th
+{
+    font-weight: bold;
+    text-shadow: #fff 0 1px 0;
+    border-top: 0px;
+}
+
+table.amp thead th
+{
+    background-color: #f1f1f1;
+    border-bottom: 2px solid #cfcfcf;
+}
+
+table.amp tfoot th
+{
+    border-top: 3px double #cfcfcf;
+}
+
+table.amp tfoot th
+{
+    font-weight: bold;
+    text-shadow: #fff 0 1px 0;
+}
+
+td.no-wrap
+{
+    white-space: nowrap;
+}
+
+table.amp.stripped thead th
+{
+    background: #dedede;
+}
+
+table.amp.stripped tr.odd td
+{
+    background: #f3f3f3;
+}
+
+table.amp.stripped tr.even td
+{
+    background: #fff;
+}
+
+table.amp.stripped tfoot th
+{
+    background: #f7f7f7;
+}

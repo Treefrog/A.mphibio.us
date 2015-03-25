@@ -1,0 +1,160 @@
+/* ==========================================================================
+   7. Messaging
+   ========================================================================== */
+
+.error,
+.attn,
+.confirm,
+.dialog,
+.dialogue
+{
+    padding: 0.5em;
+    margin: 0.5em 0;
+}
+
+.error
+{
+    background-color: #FFE3E3;
+    border: 1px solid #C30300;
+}
+
+.attn
+{
+    background-color: #ffffe1;
+    border: 1px solid #b3b3b3;
+}
+
+.confirm
+{
+    background-color: #D9E021;
+    border: 1px solid #8CC63F;
+}
+
+.dialog,
+.dialogue
+{
+    background-color: #FAFAFA;
+    border: 1px solid #E6E6E6;
+}
+
+.error:empty,
+.attn:empty,
+.confirm:empty,
+.dialog:empty,
+.dialogue:empty
+{
+    display: none;
+}
+
+/* Notifications, Flags and Tags
+================================================== */
+
+.notify
+{
+    display: inline-block;
+    min-width: 1em;
+    padding: 0.3em 0.7em;
+    font-size: 0.8em;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    background-color: #D9E021;
+    border-radius: 1em;
+}
+
+.flag,
+.amp_tag
+{
+	position: relative;
+    display: inline-block;
+    padding: 0.2em 0.6em 0.3em;
+    font-size: 0.8em;
+    font-weight: bold;
+    line-height: 1.3;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25em;
+    background-color: #E6E6E6;
+}
+.amp_tags .amp_tag
+{
+	margin: 0 0.2em 0.4em 0;
+	text-decoration: none;
+}
+.amp_tags
+{
+	
+}
+/* Adapted from http://css-tricks.com/downloads/css-stuff/ Breadcrumbs with CSS Triangles
+
+.amp_tag:after
+{
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 30px solid #E6E6E6;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    left: 100%;
+    z-index: 2;
+}
+
+.amp_tag:before
+{
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 30px solid white;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    margin-left: 1px;
+    left: 100%;
+    z-index: 1;
+}
+ */
+.notify.sq,
+.flag.sq,
+.amp_tag.sq
+{
+    border-radius: 0;
+}
+
+.notify.error,
+.flag.error,
+.amp_tag.error
+{
+    background-color: #C30300;
+}
+
+.notify.attn,
+.flag.attn,
+.amp_tag.attn
+{
+    background-color: #f2a706;
+}
+
+.notify.dialog,
+.notify.dialogue
+{
+    background-color: #E6E6E6;
+}
+
+.notify:empty,
+.flag:empty,
+.amp_tag:empty
+{
+    display: none;
+}

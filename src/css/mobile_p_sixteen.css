@@ -1,0 +1,67 @@
+/* ==========================================================================
+   24. Mobile (Landscape) Design for a width of 480px
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) and (max-width: 767px)
+{
+    .container
+    {
+        width: 94%;
+        margin: 0 auto;
+    }
+
+    .container .col
+    {
+        margin: 0;
+    }
+
+    .container .one-fifth.col,
+    .container .one-quarter.col,
+    .container .one-third.col,
+    .container .one-half.col,
+    .container .two-thirds.col,
+    .container .one.col,
+    .container .two.col,
+    .container .three.col,
+    .container .four.col,
+    .container .five.col,
+    .container .six.col,
+    .container .seven.col,
+    .container .eight.col,
+    .container .nine.col,
+    .container .ten.col,
+    .container .eleven.col,
+    .container .twelve.col,
+    .container .thirteen.col,
+    .container .fourteen.col,
+    .container .fifteen.col,
+    .container .sixteen.col
+    {
+        width: 100%;
+    }
+
+    .container .first.last,
+    .container .col.first.padded,
+    .container .col.last.padded,
+    .container .one-third.col.padded,
+    .container .two-thirds.col.padded,
+    .container .one-quarter.col.padded,
+    .container .half.col.padded,
+    .container .three-quarters.col.padded
+    {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-bottom: 0;
+    }
+
+    .fixed
+    {
+        position: relative !important;
+    }
+
+    .container .pager_nav .one.col
+    {
+        width: 28px;
+    }
+}
+
