@@ -85,7 +85,7 @@ module.exports = function(grunt) {
 					'src/css/print.css'
 				],
 				dest:
-					'css/<%= pkg.name %>.css'
+					'css/<%= pkg.name %>.new.css'
 				
 			}
 		},
@@ -166,8 +166,8 @@ module.exports = function(grunt) {
 		
 		watch:
 		{
-			files:['<%= concat.css.files %>'],
-			tasks:['concat']
+			files:['<%= concat.css.src %>'],
+			tasks:['concat:css']
 		},
 		
 		grunticon:

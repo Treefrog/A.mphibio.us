@@ -84,11 +84,11 @@ amp.bindlisteners = function() {
 		}
 	});
 	
-	$('document.body').on('click', '.checkall', (function () {
+	$(document).on('click', '.checkall', (function () {
 		$(this).closest('fieldset').find(':checkbox').prop('checked', this.checked);
 	}));
 
-	$('document.body').on('click', '#nav li', (function(){
+	$(document).on('click', '#nav li', (function(){
 		if ($(this).hasClass('active')) {
 		} else {
 			$('#nav li').removeClass('active');
@@ -98,7 +98,7 @@ amp.bindlisteners = function() {
 		}
 	}));
 
-	$('document.body').on( 'click', '.tabs li a', (function(){
+	$(document).on( 'click', '.tabs li a', (function(){
 		var parent = $(this).closest('ul').attr('id');
 		var content = '#'+$(this).attr('amp-tab-content');
 		if ($(this).hasClass('active') && content.length) {
@@ -116,7 +116,7 @@ amp.bindlisteners = function() {
 		return false;
 	}));
 
-	$('document.body').on('change', '.options_select', (function(){
+	$(document).on('change', '.options_select', (function(){
 		
 		var target = '.options_div.' + $(this).val();
 		
@@ -130,7 +130,7 @@ amp.bindlisteners = function() {
 	}));
 
 
-	$('document.body').on( 'click', '.opener', (function(){
+	$(document).on( 'click', '.opener', (function(){
 		
 		var thisOfCourse = $(this).attr('amp-target');
 		
@@ -141,7 +141,7 @@ amp.bindlisteners = function() {
 		}
 	}));
 	
-	$('document.body').on( 'click', '.amp_trigger', (function(){
+	$(document).on( 'click', '.amp_trigger', (function(){
 		
 		var myLocal = $(this).attr('location');
 		
@@ -152,7 +152,7 @@ amp.bindlisteners = function() {
 		}
 	}));
 
-	$('document.body').on( 'click', '.modal_opener', (function(){
+	$(document).on( 'click', '.modal_opener', (function(){
 		
 		var thisOfCourse = $(this).attr('amp-target');
 		
@@ -178,7 +178,7 @@ amp.bindlisteners = function() {
 		}
 	}));
 
-	$('document.body').on( 'click', '.modal_kill', (function(){
+	$(document).on( 'click', '.modal_kill', (function(){
 		var killIt = $(this).attr('amp-target');
 			$('body').css('overflow','auto');
 			$('#'+killIt+'').removeClass('show');

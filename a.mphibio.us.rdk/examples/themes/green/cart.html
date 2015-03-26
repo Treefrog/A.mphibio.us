@@ -16,11 +16,11 @@
 
 <link rel="canonical" href="http://a.mphibio.us/index.html" />
 
-<link rel="/images/touch/apple-touch-icon-precomposed" sizes="144x144" href="/images/touch/apple-touch-icon-144x144-precomposed.png">
-<link rel="/images/touch/apple-touch-icon-precomposed" sizes="114x114" href="/images/touch/apple-touch-icon-114x114-precomposed.png">
-<link rel="/images/touch/apple-touch-icon-precomposed" sizes="72x72" href="/images/touch/apple-touch-icon-72x72-precomposed.png">
-<link rel="/images/touch/apple-touch-icon-precomposed" href="/images/touch/apple-touch-icon-57x57-precomposed.png">
-<link rel="/images/touch/apple-touch-icon" href="/apple-touch-icon-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/touch/apple-touch-icon-144x144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/touch/apple-touch-icon-114x114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/touch/apple-touch-icon-72x72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="/images/touch/apple-touch-icon-57x57-precomposed.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon-precomposed.png">
 
 <!-- iPhone SPLASHSCREEN-->
 <link href="/images/startup/startup.png" media="(device-width: 320px)" rel="apple-touch-startup-image">
@@ -47,10 +47,10 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="apple-mobile-web-app-title" content="A.mphibio.us">
 
-<link rel="stylesheet" href="../../css/a.mphibio.us.css">
+<link rel="stylesheet" href="../../../css/a.mphibio.us.css">
 <link rel="stylesheet" href="assets/green.css">
   
-<script src="../../js/js/modernizr-2.6.2.min.js"></script>
+<script src="../../../js/js/modernizr-2.6.2.min.js"></script>
 
 <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
 <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
@@ -73,7 +73,7 @@
 					</fieldset>
 				</form>
 			</div>
-			<a href="#navbar"><span class="icon-list2"></span></a>
+			<a href="#navbar"><span class="icon-menu-list"></span></a>
 			<a href="home.html"><img src="assets/theme_logo.png" class="logo left"></a>
 		</div>
 	</header>
@@ -347,10 +347,10 @@
 	</footer>
 
   
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="../../js/js/jquery-1.9.1.min.js"><\/script>')</script>
-	<script src="../../js/plugins.js"></script>	
-	<script src="../../js/scripts.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="../../../js/js/jquery-1.11.1.min.js"><\/script>')</script>
+	<script src="../../../js/plugins.js"></script>	
+	<script src="../../../js/scripts.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$('.add_to_cart').click(function(
@@ -363,7 +363,7 @@
 	<div id="amp_overlay" class="modal_overlay">
 		<div class="modal medium">
 			<section>
-				<span class="icon-cross2 large right rmr modal_kill" amp-target="amp_overlay"></span>
+				<span class="icon-cross-square large right rmr modal_kill" amp-target="amp_overlay"></span>
 				<div class="container fluid">
 					<div class="col one-third first">
 						<figure class="pt">
@@ -390,7 +390,7 @@
 								<fieldset>
 									<label>Quantity</label>
 									<input type="text" class="small" placeholder="1">
-									<button class="g_btn r" type="button">Add<span class="icon-plus hml"></span></button>
+									<button class="g_btn r modal_kill" type="button" amp-target="amp_overlay">Add<span class="icon-plus hml"></span></button>
 								</fieldset>
 							</form>
 						</section>

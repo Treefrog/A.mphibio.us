@@ -159,17 +159,3 @@ ul.button_grp .first.button
 .pager_nav .button.last
 {
 }
-
-/* self clearing nav */
-
-nav ul:after,
-nav dl:after,
-menu ul:after,
-menu dl:after
-{
-    content: "\0020";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-}

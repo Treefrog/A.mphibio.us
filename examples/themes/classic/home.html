@@ -47,9 +47,9 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="apple-mobile-web-app-title" content="A.mphibio.us">
 
-<link rel="stylesheet" href="../../css/a.mphibio.us.css">
+<link rel="stylesheet" href="../../../css/a.mphibio.us.css">
 <link rel="stylesheet" href="assets/classic.css">
-<link rel="stylesheet" href="../../css/lib/flexslider.css">
+<link rel="stylesheet" href="../../../src/css/flexslider.css">
 <style type="text/css">
 	.slides li img
 	{
@@ -69,7 +69,7 @@
 	}
 </style>
   
-<script src="../../js/libs/modernizr-2.6.2.min.js"></script>
+<script src="../../../js/js/modernizr-2.6.2.min.js"></script>
 
 <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
 <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
@@ -92,7 +92,7 @@
 					</fieldset>
 				</form>
 			</div>
-			<a href="#navbar"><span class="icon-list2"></span></a>
+			<a href="#navbar"><span class="icon-menu-list"></span></a>
 			<a href="home.html"><img src="assets/theme_logo.png" class="logo left"></a>
 		</div>
 		<div id="slides" class="row">
@@ -105,10 +105,10 @@
 							https://github.com/scottjehl/picturefill
 					//-->
 					<li><img
-							srcset="../../images/bg_one_lrg.jpg 1920w, 
-									../../images/bg_one.jpg 960w,
-									../../images/bg_one_sml.jpg 480w"
-							src="../../images/bg_one.jpg"
+							srcset="assets/slides/bg_one_lrg.jpg 1920w, 
+									assets/slides/bg_one.jpg 960w,
+									assets/slides/bg_one_sml.jpg 480w"
+							src="assets/slides/bg_one.jpg"
 							alt="">
 							
 						<div class="caption">
@@ -120,10 +120,10 @@
 						</div>
 					</li>
 					<li><img
-							srcset="../../images/bg_two_lrg.jpg 1920w, 
-									../../images/bg_two.jpg 960w,
-									../../images/bg_two_sml.jpg 480w"
-							src="../../images/bg_two.jpg"
+							srcset="assets/slides/bg_two_lrg.jpg 1920w, 
+									assets/slides/bg_two.jpg 960w,
+									assets/slides/bg_two_sml.jpg 480w"
+							src="assets/slides/bg_two.jpg"
 							alt="">
 							
 						<div class="caption">
@@ -135,10 +135,10 @@
 						</div>
 					</li>
 					<li><img
-							srcset="../../images/bg_three_lrg.jpg 1920w, 
-									../../images/bg_three.jpg 960w,
-									../../images/bg_three_sml.jpg 480w"
-							src="../../images/bg_three.jpg"
+							srcset="assets/slides/bg_three_lrg.jpg 1920w, 
+									assets/slides/bg_three.jpg 960w,
+									assets/slides/bg_three_sml.jpg 480w"
+							src="assets/slides/bg_three.jpg"
 							alt="">
 							
 						<div class="caption">
@@ -150,10 +150,10 @@
 						</div>
 					</li>
 					<li><img
-							srcset="../../images/bg_four_lrg.jpg 1920w, 
-									../../images/bg_four.jpg 960w,
-									../../images/bg_four_sml.jpg 480w"
-							src="../../images/bg_four.jpg"
+							srcset="assets/slides/bg_four_lrg.jpg 1920w, 
+									assets/slides/bg_four.jpg 960w,
+									assets/slides/bg_four_sml.jpg 480w"
+							src="assets/slides/bg_four.jpg"
 							alt="">
 							
 						<div class="caption">
@@ -214,7 +214,7 @@
 		</article>
 	</section>
 	<section class="mg_bg pt">
-		<div id="products" class="container focus">
+		<div class="container focus">
 			<div class="col nine">
 				<h3>Check Out Our Services</h3>
 				<ul class="custom">
@@ -250,13 +250,8 @@
 						<li class="divider"></li>
 						<li><a href="cart.html"><span class="icon-cart"></span></a></li>
 					</ul>
-					
 					<ul class="mainnav horizontal">
-						<li><a href="home.html"><span class="icon-house"></span></a>
-							<ul>
-								<li><a href="#amp_content">Services</a></li>
-							</ul>
-						</li>
+						<li><a href="home.html"><span class="icon-house"></span></a></li>
 						<li><a href="interior.html">About Us</a>
 							<ul>
 								<li><a href="#">Sub menu Link</a>
@@ -295,21 +290,13 @@
 	</footer>
 
   
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="../../js/js/jquery-1.9.1.min.js"><\/script>')</script>
-	<script type="text/javascript" src="../../js/libs/jquery.flexslider-min.js"></script>
-	<script src="../../js/plugins.js"></script>	
-	<script src="../../js/scripts.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="../../../js/js/jquery-1.11.1.min.js"><\/script>')</script>
+	<script type="text/javascript" src="../../../src/js/jquery.flexslider-min.js"></script>
+	<script src="../../../js/plugins.js"></script>	
+	<script src="../../../js/scripts.js"></script>
 	<script type="text/javascript">
 		$(window).load(function(){
-		  $('.flexslider').flexslider({
-		    animation: "slide",
-		    start: function(slider){
-		      $('body').removeClass('loading');
-		    }
-		  });
-		});
-		$(window).focus(function(){
 		  $('.flexslider').flexslider({
 		    animation: "slide",
 		    start: function(slider){
@@ -325,7 +312,7 @@
 			<section class="row">
 				
 				<div class="row">
-					<span class="icon-cross2 large right rmr modal_kill" amp-target="amp_overlay"></span>
+					<span class="icon-cross-square large right rmr modal_kill" amp-target="amp_overlay"></span>
 				</div>
 				
 				<form>
