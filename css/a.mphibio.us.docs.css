@@ -454,8 +454,8 @@ ol.linenums li
 .glyph
 {
 	float: left;
-	width: 210px;
-	margin-right: 10px;
+	width: 24%;
+	margin-right: 0;
 }
 
 .glyph input
@@ -471,6 +471,18 @@ ol.linenums li
 	text-indent: 0;
 	width: 2em;
 	text-align: center;
+}
+
+
+.glyph .pbs [class^=icon-]
+{
+	font-size: 2.6em;
+	text-align: center;
+}
+
+.glyph .pbs .mls
+{
+	display: block;
 }
 
 .glyph:nth-child(4n)

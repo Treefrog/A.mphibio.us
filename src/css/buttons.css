@@ -106,14 +106,12 @@ ul.pager_nav li input[type="text"]
 	width: 3em;
 }
 
-/*
-ul.button_grp,
-ul.button_grp li
+.button_grp,
+.button_grp>
 {
     float: left;
     margin: 0;
 }
-*/
 
 ul.button_grp .button,
 ul.button_grp .active,

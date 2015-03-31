@@ -199,7 +199,8 @@ amp.desktoplisteners = function() {
 		* Desktop browser specific listeners are placed here
 		* *** NOT *** executed by mobile browsers. See amp.mobilelisteners instead.
 		* ================================================================== */
-		// $.localScroll();
+		
+	$.localScroll();
 
 };
 
@@ -211,6 +212,7 @@ $(document).ready(function() {
 		* Generally a good thing to add listeners to the object,
 		* however it is ok to be putting listeners directly in here.
 		* ================================================================== */
+	
 	amp.init(); // don't delete this - it is part of the A.mphibio.us startup
 
 });

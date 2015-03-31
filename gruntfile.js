@@ -34,6 +34,8 @@ module.exports = function(grunt) {
 				src:
 				[
 					'src/js/avoid.console.errors.js',
+					'src/js/jquery.scrollTo-1.4.13.js',
+					'src/js/jquery.localScroll-1.3.5.js',
 					'src/js/imagesloaded.pkgd.js',
 					'src/js/picturefill.js'
 				],
@@ -85,7 +87,7 @@ module.exports = function(grunt) {
 					'src/css/print.css'
 				],
 				dest:
-					'css/<%= pkg.name %>.new.css'
+					'css/<%= pkg.name %>.css'
 				
 			}
 		},
@@ -99,8 +101,8 @@ module.exports = function(grunt) {
 			
 			build:
 			{
-				src: 'js/plugins.js',
-				dest: 'js/plugins.min.js'
+				src: ['js/plugins.js', 'js/scripts.js'],
+				dest: 'js/<%= pkg.name %>.js'
 			}
 			
 		},
@@ -136,7 +138,7 @@ module.exports = function(grunt) {
 					'src/css/h5bp.css',
 					'src/css/typography.css',
 					'src/css/pear.rs.css',
-					'src/css/tablestyles.css',
+					'src/css/table_styles.css',
 					'src/css/images.css',
 					'src/css/messaging.css',
 					'src/css/buttons.css',
@@ -198,6 +200,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-grunticon');
 
 	// Default task(s).
-	grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'cssmin']);
+	grunt.registerTask('default', ['concat', 'uglify', 'cssmin']);
 
 };
