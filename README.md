@@ -73,7 +73,7 @@ $ git clone git://github.com/Treefrog-Inc/A.mphibio.us.git
 
 https://github.com/Treefrog-Inc/A.mphibio.us
 
-or if you are reading this on GitHub look right in the sidebar all kinds of options
+or if you are reading this on GitHub look right in the sidebar all kinds of options up there :)
 
 ## Authors
 
