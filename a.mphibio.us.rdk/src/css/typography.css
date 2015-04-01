@@ -1,0 +1,418 @@
+/* ==========================================================================
+   3. Typography
+   ========================================================================== */
+
+/**
+ * Address font sizes and margins set differently in IE 6/7.
+ * Address font sizes within `section` and `article` in Firefox 4+, Safari 5,
+ * and Chrome.
+ *
+ * Using proportional font sizes for proper cascade
+   ========================================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+    font-weight: normal;
+    margin: 0;
+    margin-bottom: 0.3em;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a
+{
+    font-weight: inherit;
+}
+
+h1
+{
+    font-size: 2.6em;
+    margin: 0 0 0.67em 0;
+}
+
+h1 small
+{
+    font-size: 0.625em;
+    margin: 0 0 0.67em 0;
+}
+
+h2
+{
+    font-size: 2em;
+}
+
+h3
+{
+    font-size: 1.6em;
+}
+
+h4
+{
+    font-size: 1.3em;
+}
+
+h5,
+.intro
+{
+    /* Often used for, as you can imagine, some call out text */
+    font-size: 1.2em;
+}
+
+h6
+{
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.large
+{
+    font-size: 2em;
+}
+
+.subheader
+{
+    color: #777;
+}
+
+p
+{
+    margin: 0 0 1.4em 0;
+}
+
+p img,
+img
+{
+    margin: 0;
+}
+
+p.lead
+{
+    font-size: 1.5em;
+    line-height: 1.6;
+    color: #777;
+}
+
+pre
+{
+    /**
+     * Address margins set differently in IE 6/7.
+     */
+    margin: 1em 0;
+    text-wrap: wrap;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    background: #fafafa;
+}
+
+code,
+kbd
+{
+    font-family:
+        'Lucida Console',
+        'Andale Mono',
+        'Nimbus Mono L',
+        'Liberation Mono',
+        FreeMono,
+        'Osaka Monospaced',
+        Courier,
+        'New Courier',
+        monospace;
+    /*  For some exellent options check out
+        http://cssfontstack.com
+        ****************************/
+}
+
+code
+{
+    display: block;
+}
+
+kbd
+{
+    position: relative;
+    top: -0.1em;
+    font-size: 0.8em;
+    padding: 0.3em 0.4em 0.2em;
+    border: 1px solid #1b378c;
+    background-color: #fff;
+    font-style: normal;
+}
+
+/*  Blockquotes  */
+
+blockquote,
+blockquote p
+{
+    font-size: 1.1em;
+    font-style: italic;
+}
+
+blockquote
+{
+    margin: 0 0 1.6em;
+    padding: 0.6em 1.6em 0 1.3em;
+}
+
+blockquote .author
+{
+    font-size: 1em;
+    font-weight: bold;
+}
+
+blockquote cite
+{
+    display: block;
+    font-size: 0.865em;
+    color: #555;
+}
+
+blockquote cite:before
+{
+    content: "\2014 \0020";
+}
+
+blockquote cite a,
+blockquote cite a:visited,
+blockquote cite a:visited
+{
+    color: #555;
+}
+
+
+/* ==========================================================================
+   Link-o-matic
+   ========================================================================== */
+
+a,
+a:visited
+{
+    color: #1b378c;
+    outline: 0;
+
+    /*  Sexy Progressive Enhancement link styles
+    /*  CSS3 Please: http://css3please.com
+    /*  Could also easily be: all .2s linear;
+    /*  if you were looking to change background,
+    /*  image etc, by default as well
+    /*   an excellent article on the subject by Dan Cederhome
+    /*  http://alistapart.com/article/understanding-css3-transitions
+    */
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ *
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover,
+a:focus
+{
+    outline: 0;
+    color: #000;
+}
+
+p a,
+p a:visited {
+    line-height: inherit;
+}
+
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+
+dl,
+ol,
+ul
+{
+    margin: 1em 0;
+}
+
+dd
+{
+    margin: 0 0 0 2.6em;
+}
+
+/**
+ * Address paddings set differently in IE 6/7.
+ */
+
+menu,
+ol,
+ul
+{
+    padding: 0;
+}
+
+/**
+ * Correct list images handled incorrectly in IE 7.
+ */
+
+nav ul,
+nav ol,
+ul.inline,
+ol.inline
+{
+    margin-left: 0;
+    list-style: none;
+    list-style-image: none;
+}
+,
+ul.inline,
+ol.inline,
+ul.inline li,
+ol.inline li
+{
+	display: inline;
+}
+
+ul,
+ol
+{
+    margin-left: 1.6em;
+    margin-bottom: 1.625em;
+}
+
+ul
+{
+    list-style: disc outside;
+}
+
+ol
+{
+    list-style: decimal;
+}
+
+ol,
+ul.square,
+ul.circle,
+ul.disc
+{
+    margin-left: 2em;
+}
+
+ul.square
+{
+    list-style: square outside;
+}
+
+ul.circle
+{
+    list-style: circle outside;
+}
+
+ul.disc
+{
+    list-style: disc outside;
+}
+
+ul.img
+{
+    list-style-image: url(../images/a.bullet.png);
+    list-style-position: outside;
+}
+
+ul.img ul
+{
+    list-style-image: url(../images/bullet.png);
+}
+
+ol.alpha
+{
+    list-style: lower-alpha;
+}
+
+ol.upper_alpha
+{
+    list-style: upper-alpha;
+}
+
+ol.roman
+{
+    list-style: lower-roman;
+}
+
+ol.upper_roman
+{
+    list-style: upper-roman;
+}
+
+ol.latin
+{
+    list-style: lower-latin;
+}
+
+ol.upper_latin
+{
+    list-style: upper-latin;
+}
+
+ul ul
+{
+    list-style: circle outside;
+}
+
+ul ul ul
+{
+    list-style: square outside;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul
+{
+    margin: 0.2em 0 0.3em 2em;
+}
+
+ul ul li,
+ul ol li,
+ol ol li,
+ol ul li
+{
+    margin-bottom: 0.5em;
+}
+
+li
+{
+    margin-bottom: 1em;
+}
+
+ol ol,
+ol ol ol ol
+{
+    list-style: lower-alpha;
+}
+
+ol ol ol
+{
+    list-style: lower-roman;
+}
+
+dl dt
+{
+    font-weight: normal;
+}
+
+dl dd
+{
+    margin: 0px 0px 1em 1.2em;
+    color: #666;
+}
+

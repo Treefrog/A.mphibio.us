@@ -1,0 +1,365 @@
+/* ==========================================================================
+   14. Forms
+   ========================================================================== */
+
+label
+{
+    cursor: pointer;
+}
+
+form
+{
+    margin-bottom: 1.625em;
+}
+
+fieldset
+{
+    border: 0;
+    margin-bottom: 1.625em;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="date"],
+textarea
+{
+    font-size: 1em;
+    -o-box-shadow: inset rgba(0, 0, 0, .2) 0 0 2px inset rgba(0, 0, 0, .1) 0 -2px 6px;
+    -moz-box-shadow: inset rgba(0, 0, 0, .2) 0 0 2px inset rgba(0, 0, 0, .1) 0 -2px 6px;
+    -webkit-box-shadow: inset rgba(0, 0, 0, .2) 0 0 2px inset rgba(0, 0, 0, .1) 0 -2px 6px;
+    -khtml-box-shadow: inset rgba(0, 0, 0, .2) 0 0 2px inset rgba(0, 0, 0, .1) 0 -2px 6px;
+    box-shadow: inset rgba(0, 0, 0, .2) 0 0 2px inset rgba(0, 0, 0, .1) 0 -2px 6px;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+input[type="text"].small,
+input[type="password"].small,
+input[type="email"].small,
+input[type="url"].small,
+input[type="date"].small,
+.styled_select.small
+{
+	font-size: 1em;
+	width: 10%;
+	min-width: 3em;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="date"],
+textarea,
+select
+{
+    border: 1px solid #dcd7d1;
+    padding: 0.625em 2% 0.675em;
+    outline: none;
+/*
+    -webkit-border-radius: 6px;
+    -khtml-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -o-border-radius: 6px;
+    border-radius: 6px;
+*/
+    color: #777;
+    margin: 0;
+    width: 96%;
+    background: #fff;
+    position: relative;
+    display: inline-block;
+    *display: block;
+}
+
+select
+{
+    padding: .325em 0;
+}
+/*
+
+.styled_select select
+{
+    padding: 0;
+}
+*/
+
+input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="email"]:hover,
+input[type="url"]:hover,
+input[type="date"]:hover,
+textarea:hover
+{
+    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, .2);
+    -khtml-box-shadow: 0 0 3px rgba(0, 0, 0, .2);
+    -moz-box-shadow: 0 0 3px rgba(0, 0, 0, .2);
+    -o-box-shadow: 0 0 3px rgba(0, 0, 0, .2);
+    box-shadow: 0 0 3px rgba(0, 0, 0, .2);
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="date"]:focus,
+textarea:focus
+{
+    border: 1px solid #aaa;
+    background: #feffef;
+    color: #444;
+    -webkit-box-shadow: 0 0 3px rgba(0, 0, 250, .6);
+    -khtml-box-shadow: 0 0 3px rgba(0, 0, 250, .6);
+    -moz-box-shadow: 0 0 3px rgba(0, 0, 250, .6);
+    -o-box-shadow: 0 0 3px rgba(0, 0, 250, .6);
+    box-shadow: 0 0 3px rgba(0, 0, 250, .6);
+}
+
+input[type="text"].error,
+input[type="password"].error,
+input[type="email"].error,
+input[type="url"].error,
+input[type="date"].error,
+textarea.error
+{
+    background-color: #ffffff;
+    border: 1px solid #C30300;
+    color: #C30300;
+    display: block;
+    -webkit-box-shadow: 0 0 3px rgba(250, 0, 0, .6), 0 0 12px rgba(250, 0, 0, .2);
+    -khtml-box-shadow: 0 0 3px rgba(250, 0, 0, .6), 0 0 12px rgba(250, 0, 0, .2);
+    -moz-box-shadow: 0 0 3px rgba(250, 0, 0, .6), 0 0 12px rgba(250, 0, 0, .2);
+    -o-box-shadow: 0 0 3px rgba(250, 0, 0, .6), 0 0 12px rgba(250, 0, 0, .2);
+    box-shadow: 0 0 3px rgba(250, 0, 0, .6), 0 0 12px rgba(250, 0, 0, .2);
+}
+
+textarea
+{
+    min-height: 6em;
+}
+
+label,
+legend
+{
+    display: block;
+    font-weight: normal;
+}
+
+legend
+{
+    font-weight: bold;
+    padding-bottom: .5em;
+}
+
+input[type="checkbox"]
+{
+    display: inline;
+}
+
+label span,
+legend span
+{
+    font-weight: normal;
+    color: #444;
+}
+
+label.above
+{
+    margin-bottom: .425em;
+}
+
+form.search fieldset input[type="text"]
+{
+    float: left;
+    width: 50%;
+    background: #f5f5f5;
+    border: 1px solid #adadad;
+/*
+    -webkit-border-bottom-right-radius: 0;
+    -webkit-border-top-right-radius: 0;
+    -khtml-border-bottom-right-radius: 0;
+    -khtml-border-top-right-radius: 0;
+    -moz-border-radius-bottomright: 0;
+    -moz-border-radius-topright: 0;
+    -o-border-bottom-right-radius: 0;
+    -o-border-top-right-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+*/
+}
+
+form.search fieldset input[type="text"]:focus
+{
+    background: #ffffff;
+    width: 250px;
+}
+
+form.search fieldset input[type="submit"]
+{
+    background: transparent;
+    position: relative;
+    top: 0;
+    left: -1.6em;
+    font-size: 1.6em;
+    margin: 0;
+    padding: 0.3em;
+    border: 1px solid transparent;
+    color: #000;
+    z-index: 5000;
+/*
+    float: left;
+    -webkit-border-bottom-left-radius: 0;
+    -webkit-border-top-left-radius: 0;
+    -khtml-border-bottom-left-radius: 0;
+    -khtml-border-top-left-radius: 0;
+    -moz-border-radius-bottomleft: 0;
+    -moz-border-radius-topleft: 0;
+    -o-border-bottom-left-radius: 0;
+    -o-border-top-left-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+*/
+}
+
+form,
+form fieldset
+{
+    margin-bottom: 0;
+}
+form fieldset + fieldset
+{
+	margin-top: 0.5em;
+}
+
+form fieldset
+{
+    font-size: 1.1em;
+}
+
+form fieldset.form-actions
+{
+    margin: 0 0 0 30%;
+    padding: 0;
+    border: none;
+}
+
+form fieldset.check
+{
+    padding-left: 30%;
+}
+
+form.multi.beside fieldset
+{
+    margin-bottom: 1em;
+}
+
+form.multi.beside fieldset label
+{
+    float: left;
+    width: 30%;
+    padding: 0.625em 0;
+}
+
+form.multi.beside fieldset label + label
+{
+	padding: 0.325em 0;
+}	
+
+form.multi.beside fieldset label + label,
+form.multi.beside fieldset input[type="text"],
+form.multi.beside fieldset input[type="email"],
+form.multi.beside fieldset input[type="password"],
+form.multi.beside fieldset input[type="url"],
+form.multi.beside fieldset input[type="date"],
+form.multi.beside fieldset textarea,
+form.multi.beside fieldset .styled_select
+{
+    width: 65%;
+    margin: 0;
+}
+
+form.multi.beside fieldset input[type="text"].half,
+form.multi.beside fieldset input[type="email"].half,
+form.multi.beside fieldset input[type="password"].half,
+form.multi.beside fieldset input[type="url"].half,
+form.multi.beside fieldset input[type="date"].half,
+form.multi.beside fieldset textarea.half
+{
+    width: 20%;
+    margin: 0 0 0 30%;
+}
+
+form.multi.beside fieldset.check label
+{
+    display: inline;
+    float: none;
+    width: auto;
+    font-weight: normal;
+}
+
+form fieldset.radio ul,
+form fieldset.checklist ul
+{
+    list-style: none;
+}
+
+form.multi.beside fieldset.checklist ul li label,
+form.multi.beside fieldset.radio ul li label
+{
+    display: inline;
+    float: none;
+    width: auto;
+    font-weight: normal;
+}
+
+form fieldset textarea
+{
+    height: 6.9em;
+}
+
+form.multi.beside fieldset.radio ul,
+form.multi.beside fieldset.checklist ul
+{
+    margin: .5em 0 0 30%;
+}
+
+form fieldset.radio ul li,
+form fieldset.checklist ul li
+{
+    margin: 0 0 5px 0;
+}
+
+form fieldset.radio.multi ul li,
+form fieldset.checklist.multi ul li
+{
+	float: left;
+	width: 50%;
+}
+
+form fieldset.radio ul li:last-child,
+form fieldset.checklist ul li:last-child
+{
+    margin: 0;
+}
+
+form.multi.beside fieldset p,
+form fieldset p.form-help
+{
+    margin: .5em 0 0 30%;
+}
+
+form fieldset p.form-help
+{
+    font-size: 12px;
+    color: #999;
+}
+
+form fieldset p.form-help.after
+{
+    margin: -1.5em 0 0 62%;
+}
+

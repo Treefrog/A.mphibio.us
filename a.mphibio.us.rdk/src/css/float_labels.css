@@ -1,0 +1,106 @@
+/* Label highlight effect also for non-JS browsers
+http://peter.freilicht.net/float-label-implementation/
+ */
+
+.float_label fieldset
+{
+	position: relative;
+	margin: 1.2em;
+}
+
+.float_label input,
+.float_label label {
+    font-size: 1.5em;
+}
+
+.float_label input {
+    padding: 0.6em 1em;
+    border: none;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    outline: none;
+    margin: 0px;
+    background: #0f3955;
+    color: #4eb7f0;
+    width: 100%;
+}
+
+/**** HERE THE MAGIC STARTS *****/
+/* Original label position: top left and small */
+.float_label label {
+    position: absolute;
+    top: -1em;
+    left: 0.08em;
+    color: #aaaaaa;
+    z-index:-1;
+    font-size: 0.85em;
+    animation: float-labels 300ms none ease-out;
+  -webkit-animation: float-labels 300ms none ease-out;
+   
+    /* There is a bug sometimes pausing the animation. This avoids that.*/
+    animation-play-state:running !important;
+  -webkit-animation-play-state:running !important;
+}
+
+/* Label highlight effect also for non-JS browsers */
+.float_label input:not(.empty):focus + label {
+    color: #0099ff;
+}
+
+/* In JS Browsers the .empty class is assigned to empty inputs -> label is rendered like a placeholder in the input field */
+.float_label input.empty + label {
+    top: 0.1em;
+    font-size: 1.5em;
+    animation:none;
+  -webkit-animation:none;
+}
+
+/* The animation is a bit more complex than what is achievable with simple transitions, because I do not want the label to fly over my input. The place-holder label should fade out first and then appear again above the input text */
+@keyframes float-labels {
+  
+   0% {
+    opacity:1;
+    color:#aaa;
+    top:0.1em;
+    font-size:1.5em;
+  }
+  20% {
+    font-size:1.5em;
+    opacity:0;
+  }
+  30% {
+    top:0.1em;
+  }
+  50% {
+    opacity:0;
+    font-size:0.85em;
+  }
+  100% {
+    top:-1em; 
+    opacity:1; 
+  }
+}
+@-webkit-keyframes float-labels {
+  
+ 0% {
+    opacity:1;
+    color:#aaa;
+    top:0.1em;
+    font-size:1.5em;
+  }
+  20% {
+    font-size:1.5em;
+    opacity:0;
+  }
+  30% {
+    top:0.1em;
+  }
+  50% {
+    opacity:0;
+    font-size:0.85em;
+  }
+  100% {
+    top:-1em; 
+    opacity:1; 
+  }
+}

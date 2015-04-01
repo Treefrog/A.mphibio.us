@@ -192,7 +192,7 @@ module.exports = function(grunt) {
 		}
 	});
 	
-	// Load the plugin that provides the "uglify" task.
+	// Load the plugins that provide the tasks.
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-concat');

@@ -1,0 +1,95 @@
+
+
+/* ==========================================================================
+ * Modified HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ *
+ * You too Mr. Paul Irish !
+ *
+ *
+/*  ==========================================================================
+    2. Base Styles
+    ========================================================================== */
+    
+address
+{
+	font-style: normal;
+	font-weight: normal;
+}
+
+html,
+button,
+input,
+select,
+textarea
+{
+    color: #4d4d4d;
+}
+
+body
+{
+    /**
+     * Address margins handled incorrectly in IE 6/7.
+     */
+    margin: 0;
+    background: #fff;
+    color: #4d4d4d;
+    font-family: "Myriad Pro", "Lucida Grande", "Lucida Sans", Lucida, Arial, Helvetica, sans-serif;
+    /*  For some exellent options check out
+        http://cssfontstack.com
+        ========================================== */
+    font-weight: normal;
+    font-size: 1em;
+    /* For the most device agnostic renderings
+        leave units out of line height
+        ========================================== */
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+    /* Fix for webkit rendering
+        ========================================== */
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection
+{
+    background: #dcebfd;
+    text-shadow: none;
+}
+
+::selection
+{
+    background: #dcebfd;
+    text-shadow: none;
+}
+
+::-webkit-input-placeholder
+{
+    color: #8a8a8a;
+}
+
+:-moz-placeholder
+{
+    /* Firefox 18- */
+    color: #8a8a8a;
+}
+
+::-moz-placeholder
+{
+    /* Firefox 19+ */
+    color: #8a8a8a;
+}
+
+:-ms-input-placeholder
+{
+    color: #8a8a8a;
+}
