@@ -166,7 +166,16 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		
+		imagemin: {
+		    dynamic: {
+		        files: [{
+		            expand: true,
+		            cwd: 'images/',
+		            src: ['**/*.{png,jpg,gif}'],
+		            dest: 'images/build/'
+		        }]
+		    }
+		},
 		watch:
 		{
 			files:['<%= concat.css.src %>'],
@@ -197,6 +206,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-grunticon');
 

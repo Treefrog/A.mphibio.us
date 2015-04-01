@@ -1,6 +1,7 @@
 module.exports = function(grunt) {
 
 	// Project configuration.
+	
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		meta: {
@@ -34,6 +35,8 @@ module.exports = function(grunt) {
 				src:
 				[
 					'src/js/avoid.console.errors.js',
+					'src/js/jquery.scrollTo-1.4.13.js',
+					'src/js/jquery.localScroll-1.3.5.js',
 					'src/js/imagesloaded.pkgd.js',
 					'src/js/picturefill.js'
 				],
@@ -99,8 +102,8 @@ module.exports = function(grunt) {
 			
 			build:
 			{
-				src: 'js/plugins.js',
-				dest: 'js/plugins.min.js'
+				src: ['js/plugins.js', 'js/scripts.js'],
+				dest: 'js/<%= pkg.name %>.js'
 			}
 			
 		},
@@ -136,7 +139,7 @@ module.exports = function(grunt) {
 					'src/css/h5bp.css',
 					'src/css/typography.css',
 					'src/css/pear.rs.css',
-					'src/css/tablestyles.css',
+					'src/css/table_styles.css',
 					'src/css/images.css',
 					'src/css/messaging.css',
 					'src/css/buttons.css',
@@ -163,11 +166,20 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		
+		imagemin: {
+		    dynamic: {
+		        files: [{
+		            expand: true,
+		            cwd: 'images/',
+		            src: ['**/*.{png,jpg,gif}'],
+		            dest: 'images/build/'
+		        }]
+		    }
+		},
 		watch:
 		{
-			files:['<%= concat.files %>'],
-			tasks:['concat']
+			files:['<%= concat.css.src %>'],
+			tasks:['concat:css']
 		},
 		
 		grunticon:
@@ -189,15 +201,16 @@ module.exports = function(grunt) {
 		}
 	});
 	
-	// Load the plugin that provides the "uglify" task.
+	// Load the plugins that provide the tasks.
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-grunticon');
 
 	// Default task(s).
-	grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'cssmin']);
+	grunt.registerTask('default', ['concat', 'uglify', 'cssmin']);
 
 };

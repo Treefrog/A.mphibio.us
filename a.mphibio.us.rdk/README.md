@@ -11,6 +11,7 @@ Leverages Node.js and Grunt
 
 Download the lastest RDK and move/rename it to be your working directory,
 in a new terminal window change to your working directory
+
 	cd /path/to/your/project
 	
 to install Grunt**  and the project's dependices in the same terminal window type in
@@ -26,9 +27,7 @@ for this project you may add or remove as you wish.
 
 The Grunt Tasks are configure in the gruntfile.js file, also at the root of your project.
 
-Please refer to each modules instructions for configuration and options as they are all a little different.
-
-	http://gruntjs.com/plugins
+Please refer to each modules instructions for configuration and options as they are all a little different. http://gruntjs.com/plugins
 
 ** requires NodeJS and GruntJS installed on your machine
 
@@ -37,9 +36,11 @@ Please refer to each modules instructions for configuration and options as they 
 If you are completely new grunt and think its weird we recommend reading this article by 
 Chris Coyier http://24ways.org/2013/grunt-is-not-weird-and-hard/
 
-Otherwise please refer to following resources to install 
-	Node.js -> https://nodejs.org
-	Grunt -> http://gruntjs.com
+Otherwise please refer to following resources to install
+
+Node.js -> https://nodejs.org
+
+Grunt -> http://gruntjs.com
 
 #Grunt default tasks
 
@@ -49,11 +50,15 @@ Grunt will perform the 'concat', 'uglify', 'cssmin' tasks as defined at the bott
 	grunt.registerTask('default', ['concat', 'uglify', 'cssmin']);
 	
 To run individual task (JShint for example) in the terminal window type
+
 	grunt jshint
 		
 To run a portion of a set tasks you can for example concatinate only the css in terminal you would type
+
 	grunt concat:css
+
 or to concatinate the javascript
+
 	grunt concat:js
 
 ##Easy Install
@@ -68,7 +73,7 @@ $ git clone git://github.com/Treefrog-Inc/A.mphibio.us.git
 
 https://github.com/Treefrog-Inc/A.mphibio.us
 
-or if you are reading this on GitHub look right in the sidebar all kinds of options
+or if you are reading this on GitHub look right in the sidebar all kinds of options up there :)
 
 ## Authors
 
