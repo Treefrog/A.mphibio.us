@@ -4,7 +4,7 @@
  * http://a.mphibio.us
  * This content is released under the MIT license
  * http://www.opensource.org/licenses/mit-license.php
- * 31-03-2015
+ * 02-04-2015
  */
 
 
@@ -2655,7 +2655,7 @@ label.append_to
 {
     display: block;
     position: absolute;
-    top:1.4em;
+    top:1.45em;
 	padding: 0.625em !important;
 	text-align: center;
 	background: #cecece;

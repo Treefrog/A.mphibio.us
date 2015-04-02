@@ -301,14 +301,16 @@ Class Name			Shorthand		Styles
 
 			</div>
 			<div class="row double_pad_bottom">
-			<ul class="tabs mini rule_below">
-				<li class="label">Show Source</li>
-				<li class="r"><a href="javascript:;" amp-tab-content="html"><span class="copy icon" style="height:20px;" rel="html">&#59156;</span> <abbr title="Hypertext Markup Language">HTML</abbr></a></li>
-				<li class="r"><a href="javascript:;" amp-tab-content="css"><span class="copy icon" style="height:20px;" rel="css">&#59146;</span> <abbr title="Casscading Style Sheets">CSS</abbr></a></li>
-			</ul>
-			<ul class="tabs-content">
-				<li id="html" class="row inset">
-					<pre class="prettyprint linenums rmt">&lt;div class="row pad_bottom"&gt;
+				<ul class="tabs mini rule_below">
+					<li class="label">Show Source</li>
+					<li class="r"><a href="javascript:;" amp-tab-content="html" class="active"><span class="icon-code"></span> <abbr title="Hypertext Markup Language">HTML</abbr></a></li>
+					<li class="r"><a href="javascript:;" amp-tab-content="css"><span class="icon-code"></span> <abbr title="Casscading Style Sheets">CSS</abbr></a></li>
+				</ul>
+				<ul class="tabs-content">
+					<li id="html" class="row inset active">
+						<pre class="prettyprint linenums rmt">
+							<code>
+&lt;div class="row pad_bottom"&gt;
   &lt;h5 class="mb drb"&gt;Article&lt;/h5&gt;
 
   &lt;article class="aside"&gt;
@@ -327,8 +329,10 @@ Class Name			Shorthand		Styles
     &lt;/footer&gt;
   &lt;/article&gt;
 
-&lt;/div&gt;</pre></li>
-			<li id="css" class="row inset"><pre class="prettyprint linenums rmt">article.aside
+&lt;/div&gt;</code></pre>
+					</li>
+					<li id="css" class="row inset"><pre class="prettyprint linenums rmt"><code>
+article.aside
 {
 	margin: 0 0 1.6em 20%;
 }
@@ -349,9 +353,10 @@ article.aside aside
 	line-height: 1.8;
 	color: #999;
 }
-			</pre></li>
-		</ul>
-			</div>
+				</code></pre>
+				</li>
+			</ul>
+		</div>
 
 		<div class="row">
 			<div class="col nine first">
@@ -5320,6 +5325,9 @@ postion:fixed;top:0;left:0;right:0;
 						<li><a href="form.html#typography">Typography <sub>and the golden ratio</sub></a></li>
 						<li><a href="form.html#forms">Basic Forms</a></li>
 						<li><a href="form.html#multi_forms">Mutli Beside Forms</a></li>
+						<li><a href="form.html#custom_checkbox_radios">Custom Checkboxes and Radios</a></li>
+						<li><a href="form.html#append_prepend_icons">Prepend and Append Icons</a></li>
+						<li><a href="form.html#datepicker_fields">jQuery Datepicker Fields</a></li>
 						<li><a href="form.html#tables">Tables <sub>not for layout</sub></a></li>
 					</ul>
 				</li>
