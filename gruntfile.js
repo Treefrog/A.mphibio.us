@@ -64,6 +64,7 @@ module.exports = function(grunt) {
 					'src/css/typography.css',
 					'src/css/pear.rs.css',
 					'src/css/table_styles.css',
+					'src/css/rwd_tables.css',
 					'src/css/images.css',
 					'src/css/messaging.css',
 					'src/css/buttons.css',

@@ -1,10 +1,10 @@
 /*!
- * A.mphibio.us v1.5.3
+ * A.mphibio.us v1.5.4
  * Copyright 2015, Clive Moore @cliveMoore @Treefrog
  * http://a.mphibio.us
  * This content is released under the MIT license
  * http://www.opensource.org/licenses/mit-license.php
- * 02-04-2015
+ * 23-04-2015
  */
 
 // Avoid `console` errors in browsers that lack a console.
