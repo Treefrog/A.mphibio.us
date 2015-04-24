@@ -4,7 +4,7 @@
  * http://a.mphibio.us
  * This content is released under the MIT license
  * http://www.opensource.org/licenses/mit-license.php
- * 23-04-2015
+ * 24-04-2015
  */
 
 
@@ -2132,6 +2132,290 @@ ul.nav
     content: none;
 }
 
+/* ------------------------------------------------------------
+	Site Map Styles
+------------------------------------------------------------ */
+
+/* ------------------------------------------------------------
+	NUMBER OF COLUMNS: Adjust #sitemap li to set the number
+	of columns required in your site map. The default is 
+	4 columns (25%). 5 columns would be 20%, 6 columns would 
+	be 16.6%, etc. 
+------------------------------------------------------------ */
+
+#sitemap li
+{
+	width:25%;
+}
+
+#sitemap li ul li
+{
+	width:100% !important;
+}
+
+#sitemap.col.one li		{ width:99.9%; }
+#sitemap.col.two li		{ width:50.0%; }
+#sitemap.col.three li	{ width:33.3%; }
+#sitemap.col.four li	{ width:25.0%; }
+#sitemap.col.five li	{ width:20.0%; }
+#sitemap.col.six li		{ width:16.6%; }
+#sitemap.col.seven li	{ width:14.2%; }
+#sitemap.col.eight li	{ width:12.5%; }
+#sitemap.col.nine li	{ width:11.1%; }
+#sitemap.col.ten li		{ width:10.0%; }
+
+#sitemap,
+#sitemap li,
+#sitemap ul,
+#sitemap ul ul
+{
+	font-size: 1em;
+	text-indent: 0;
+	margin: 0 0 0 0;
+}
+
+/* --------	Top Level --------- */
+
+#sitemap,
+#sitemap li
+{
+	list-style: none;
+}
+
+.container #sitemap.col,
+#sitemap
+{
+	margin: 1em 0 2em;
+	float: left;
+	width: 100%;
+}
+
+#sitemap #home
+{
+	display: block;
+	float: none;
+	background: transparent url('../images/L1-left.png') center bottom no-repeat;
+	position: relative;
+	z-index: 2;
+	padding: 0 0 30px 0;
+}
+
+#sitemap li
+{
+	float: left;
+	background: url('../images/L1-center.png') center top no-repeat;
+	padding: 30px 0;
+	margin-top: -30px;
+}
+
+#sitemap li a
+{
+	margin: 0 20px 0 0;
+	padding: 1em 0.5em;
+	display: block;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	color: white;	
+	background: #0080c6;
+	border: 1px solid #0080c6;
+/* 	border-radius: 5px; */
+/* 	box-shadow: rgba(0,0,0,0.5) 2px 2px 2px;  */
+}
+
+#sitemap li a:hover
+{
+	background-color: #5d5d5d;
+	border-color: #5d5d5d;
+	transform: scale(1.03);
+	box-shadow: 0 0 6px rgba(0,0,0,0.3), inset 0 0 12px rgba(255,255,255,0.3);
+}
+
+#sitemap li:last-child
+{
+	background: url('../images/L1-right.png') center top no-repeat;
+}
+
+#sitemap li a:link:before,
+#sitemap li a:visited:before,
+#sitemap li a:link:after,
+#sitemap li a:visited:after
+{
+	content: " "attr(href)" ";
+	display: block;
+	text-transform: uppercase;
+	font-size: 0.7em;
+	margin-bottom: 0.5em;
+	word-wrap: break-word;
+}
+#sitemap li a:link:after,
+#sitemap li a:visited:after
+{
+	content: " "attr(title)" ";
+}
+
+#sitemap li a:link:before,
+#sitemap li a:visited:before,
+#sitemap li a:link:after,
+#sitemap li a:visited:after
+{
+	color: #f3f3f3;
+}
+
+/* --------	Second Level --------- */
+
+#sitemap li li
+{
+	width: 100%;
+	clear: left;
+	margin-top: 0;
+	padding: 10px 0 0 0;
+	background: url('../images/vertical-line.png') center bottom repeat-y;
+}
+
+#sitemap li li a
+{
+	background-color: #939392;
+	border-color: #939392;
+}
+
+#sitemap li li a:hover
+{
+	border-color: #5d5d5d;
+	background-color: #5d5d5d;
+}
+
+#sitemap li li:first-child
+{
+	padding-top: 30px;
+}
+
+#sitemap li li:last-child
+{
+	background: url('../images/vertical-line.png') center bottom repeat-y;
+}
+
+#sitemap li li a:link:before,
+#sitemap li li a:visited:before
+{
+	color: #f3f3f3;
+}
+
+/* --------	Third Level --------- */
+
+#sitemap li li ul
+{
+	margin: 10px 0 0 0;
+	width: 100%;
+	float: right;
+	padding: 9px 0 10px 0;
+	background: transparent url('../images/L3-ul-top.png') center top no-repeat;
+}
+
+#sitemap li li li
+{
+	background: url('../images/L3-center.png') left center no-repeat;
+	padding: 5px 0;
+}
+
+#sitemap li li li a
+{
+	background-color: #e7e7e7;
+	color: #5d5d5d;
+	border-color: #e7e7e7;
+	font-size: 12px;
+	padding: 5px 0;
+	width: 80%;
+	float: right;
+}
+
+#sitemap li li li a:hover
+{
+	background-color: #939392;
+	border-color: #939392;
+	color: #fff;
+}
+
+#sitemap li li li:first-child
+{
+	padding: 15px 0 5px 0;
+	background: url('../images/L3-li-top.png') left center no-repeat;
+}
+
+#sitemap li li li:last-child
+{
+	background: url('../images/L3-bottom.png') left center no-repeat;
+}
+
+#sitemap li li li a:link:before,
+#sitemap li li li a:visited:before
+{
+	color: #939392;
+	font-size: 9px;
+}
+
+#sitemap li li li a:hover:link:before,
+#sitemap li li li a:hover:visited:before
+{
+	color: #f3f3f3;
+}
+
+/* ------------------------------------------------------------
+	Utility Navigation
+------------------------------------------------------------ */
+
+#utility_sitemap
+{
+	float: right;
+	max-width: 50%;
+	margin-right: 10px;
+}
+
+#utility_sitemap li
+{
+	float: left;
+	margin-bottom: 10px;
+}
+
+#utility_sitemap li a
+{
+	margin: 0 10px 0 0;
+	padding: 5px 10px;
+	display: block;	
+	border: 1px solid #e3ca4b;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	color: white;
+	background: #fff7aa;
+/*
+	border-radius: 5px;
+	box-shadow: rgba(0,0,0,0.5) 2px 2px 2px;
+*/
+}
+
+#utility_sitemap li a:hover
+{
+	background-color: #fffce5;
+	border-color: #d1b62c;
+}
+
+#utility_sitemap li a:link:before,
+#utility_sitemap li a:visited:before
+{
+	color: #ccae14;
+	font-size: 9px;
+	margin-bottom: 3px;
+}
+
+@media only screen and (max-width: 600px)
+{
+	#sitemap.col.* li		{ width:98%;margin-left: 2%; }
+	#sitemap.col.* li li	{ width:100%;margin-left: 0; }
+	#sitemap li li li a		{width: 90%;}
+	#sitemap #home			{background: transparent url("../images/vertical-line.png") center bottom no-repeat;}
+}
 
 /* ==========================================================================
    11. Social Media Nav Styles
