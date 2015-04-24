@@ -277,8 +277,21 @@
 
 @media only screen and (max-width: 600px)
 {
-	#sitemap.col.* li		{ width:98%;margin-left: 2%; }
-	#sitemap.col.* li li	{ width:100%;margin-left: 0; }
+	#sitemap.col.one li,
+	#sitemap.col.two li,
+	#sitemap.col.three li,
+	#sitemap.col.four li,
+	#sitemap.col.five li,
+	#sitemap.col.six li,
+	#sitemap.col.seven li,
+	#sitemap.col.eight li,
+	#sitemap.col.nine li,
+	#sitemap.col.ten li
+	{
+		width:98% !important;
+		margin-left: 2%; 
+	}
+	#sitemap.col i li	{ width:100%;margin-left: 0; }
 	#sitemap li li li a		{width: 90%;}
 	#sitemap #home			{background: transparent url("../images/vertical-line.png") center bottom no-repeat;}
 }

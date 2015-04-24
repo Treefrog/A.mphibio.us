@@ -70,6 +70,7 @@ module.exports = function(grunt) {
 					'src/css/buttons.css',
 					'src/css/tabs.css',
 					'src/css/navigation.css',
+					'src/css/sitemap.css',
 					'src/css/socialnav.css',
 					'src/css/progress_bars.css',
 					'src/css/modals.css',
