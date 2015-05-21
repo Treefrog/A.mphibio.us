@@ -5,9 +5,9 @@ A.mphibio.us CSS & HTML 5 Rapid Development Kit
 
 Get started fast with CSS best practices, a well-structured grid that makes mobile consideration easy, an organized file structure and super basic UI elements like lightly styled forms, buttons, tabs and more. Simple human readable code and shorthand classes makes coding a snap! Best used for building airplanes in the sky.
 
-Leverages Node.js and Grunt
+Leverages Node.js and GruntJS
 
-## Installation
+## Installation (see notes)
 
 Download the lastest RDK and move/rename it to be your working directory,
 in a new terminal window change to your working directory
