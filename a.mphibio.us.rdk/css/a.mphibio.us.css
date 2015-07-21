@@ -4501,7 +4501,7 @@ Class Name                      Shorthand                   Styles
 .half_pad_bottom,
 .hpb
 {
-    padding-bottom:: 0.5em !important;
+    padding-bottom: 0.5em !important;
 }
 
 .pad_bottom,
