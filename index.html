@@ -13,6 +13,7 @@
 <title>Amphibious | Simply Elegant HTML5/CSS3 Responsive Front End Development Kit | 1.5.1 November 14, 2014</title>
 <meta name="description" content="A.mphibio.us is a responsive design tool for rapid development has a familiar sixteen column, lightweight 960 grid as its base, but elegantly scales down to downsized browser windows">
 <meta name="keywords" content="css3, html5, responsive, web, design, mobile layout, responsive design">
+<meta name="viewport" content="width=device-width">
 
 <link rel="canonical" href="http://a.mphibio.us/index.html" />
 
@@ -49,10 +50,12 @@
 
 <link rel="stylesheet" href="src/css/sequencejs-theme.sliding-horizontal-parallax.css">
 <link rel="stylesheet" href="src/css/flexslider.css">
+<link rel="stylesheet" href="css/jquery.fancybox.css">
 <link rel="stylesheet" href="css/a.mphibio.us.min.css">
 <link rel="stylesheet" href="css/a.mphibio.us.skin.css">
   
 <script src="js/js/modernizr-2.6.2.min.js"></script>
+<script src="js/js/prefixfree.min.js"></script>
 
 <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
 <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
@@ -83,7 +86,7 @@
 					Its adoptable set of shorthand classes dramatically speed up your prototyping process.</p>
 				
 				<footer class="row mr">
-					<a class="button grn" href="http://a.mphibio.us/releases/a.mphibio.us.rdk.zip" title="The Rapid Design Kit includes evrything you need to get you up and running right away">Get the <abbr title="Rapid Application Development Kit">RDK</abbr><span class="icon-github hml"></span></a>
+					<a class="button grn" href="http://a.mphibio.us/a.mphibio.us.rdk.zip" title="The Rapid Design Kit includes evrything you need to get you up and running right away">Get the <abbr title="Rapid Application Development Kit">RDK</abbr><span class="icon-github hml"></span></a>
 					<a class="button blu" href="https://github.com/Treefrog-Interactive/A.mphibio.us/archive/master.zip" title="The project files include all the source files and documentation and examples allowing you to customize and control the toolkit with your own libraries">Download the Project<span class="icon-download hml"></span></a>
 				</footer>
 			
@@ -188,85 +191,665 @@ A.mphibio.us uses lightweight, basic styles as its foundation. It is ready to ad
     
 </section> <!--#how_its_made-->
 
-<section id="gallery">
-	<div class="container">
+<section id="gallery" class="row">
+	<div class="container focus">
+		
+		<header>
+			<h1>Showcase: Built on the A.mphibio.us framework</h1>
+		</header>
 
-		<nav>
+		<nav class="row">
 			<dl id="filters" class="option-set filter_nav cfx" data-option-key="filter">
-				<dt><a href="#filter" data-option-value="*" class="selected">Entire Collection</a></dt>
-				<dd><a href="#filter" data-option-value=".ice">Ice Puddles</a></dd>
-				<dd><a href="#filter" data-option-value=".nature">Nature's Abstracts</a></dd>
-				<dd><a href="#filter" data-option-value=".snow">Snow Abstracts</a></dd>
-				<dd><a href="#filter" data-option-value=".tension">Surface Tension</a></dd>
+				<dt><a href="#filter" data-option-value="*" class="selected"><span class="icon-ccw"></span> All</a></dt>
+				<dd><a href="#filter" data-option-value=".webapp">Webapps</a></dd>
+				<dd><a href="#filter" data-option-value=".website">Websites</a></dd>
+				<dd><a href="#filter" data-option-value=".tablet">Tablet</a></dd>
+				<dd><a href="#filter" data-option-value=".mobile">Mobile</a></dd>
 			</dl>
 		</nav>
 	
-		<div id="container" class="cfx">
+		<div id="container" class="row">
+			
+			<div id="treefrog" class="element website tablet mobile" data-category="website">
+			
+				<img src="images/showcase/treefrog/treefrog-home.png" alt="The Briars" class="swg" />
+			
+				<div class="overlay">
+					<div class="slug">
+						<h4 class="title">Treefrog</h4>
+						<p class="desc">Newmarket Web Design and Development</p>
+						<span class="number hide">41</span>
+					</div>
+					
+					<div class="row a b l r">
+						<a class="fancybox"
+							href="images/showcase/treefrog/treefrog-home.png" 
+							data-fancybox-group="treefrog-gallery" 
+							title='<h4>Treefrog</h4>Newmarket Web Design and Development'>
+							
+							<span class="icon-search"></span> View Project</a>
+						
+						<a class="right ar"
+							href="https://treefrog.ca"
+							target="_blank"
+							title="Treefrog: Newmarket Web Design and Development">
+							
+							Visit Site <span class="icon-export"></span></a>
+					</div>
+				</div>
+				
+				<!--// 
+					Additional Images
+					//-->
+				
+					<a class="fancybox"
+						href="images/showcase/treefrog/treefrog-home-full.png" 
+						data-fancybox-group="treefrog-gallery" 
+						title='<h4>Treefrog</h4>Newmarket Web Design and Development'></a>
+				
+					<a class="fancybox"
+						href="images/showcase/treefrog/treefrog-case-study-full.png" 
+						data-fancybox-group="treefrog-gallery" 
+						title='<h4>Treefrog</h4>Newmarket Web Design and Development'></a>
+				
+					<a class="fancybox"
+						href="images/showcase/treefrog/treefrog-article-full.png" 
+						data-fancybox-group="treefrog-gallery" 
+						title='<h4>Treefrog</h4>Newmarket Web Design and Development'></a>
+				
+					<a class="fancybox"
+						href="images/showcase/treefrog/treefrog-article-full-hc.png" 
+						data-fancybox-group="treefrog-gallery" 
+						title='<h4>Treefrog</h4>Newmarket Web Design and Development'></a>
+				
+					<a class="fancybox"
+						href="images/showcase/treefrog/treefrog-home-tablet-landscape.png" 
+						data-fancybox-group="treefrog-gallery" 
+						title='<h4>Treefrog</h4>Newmarket Web Design and Development'></a>
+				
+					<a class="fancybox"
+						href="images/showcase/treefrog/treefrog-frogs-tablet-landscape.png" 
+						data-fancybox-group="treefrog-gallery" 
+						title='<h4>Treefrog</h4>Newmarket Web Design and Development'></a>
+				
+					<a class="fancybox"
+						href="images/showcase/treefrog/treefrog-frogs-tablet-portrait.png" 
+						data-fancybox-group="treefrog-gallery" 
+						title='<h4>Treefrog</h4>Newmarket Web Design and Development'></a>
+				
+					<a class="fancybox"
+						href="images/showcase/treefrog/treefrog-frogs-open-tablet-portrait.png" 
+						data-fancybox-group="treefrog-gallery" 
+						title='<h4>Treefrog</h4>Newmarket Web Design and Development'></a>
+				
+					<a class="fancybox"
+						href="images/showcase/treefrog/treefrog-article-tablet-portrait.png" 
+						data-fancybox-group="treefrog-gallery" 
+						title='<h4>Treefrog</h4>Newmarket Web Design and Development'></a>
+				
+					<a class="fancybox"
+						href="images/showcase/treefrog/treefrog-home-mobile.png" 
+						data-fancybox-group="treefrog-gallery" 
+						title='<h4>Treefrog</h4>Newmarket Web Design and Development'></a>
+				
+					<a class="fancybox"
+						href="images/showcase/treefrog/treefrog-home-mobile-nav.png" 
+						data-fancybox-group="treefrog-gallery" 
+						title='<h4>Treefrog</h4>Newmarket Web Design and Development'></a>
+				
+					<a class="fancybox"
+						href="images/showcase/treefrog/treefrog-home-mobile-sidebar.png" 
+						data-fancybox-group="treefrog-gallery" 
+						title='<h4>Treefrog</h4>Newmarket Web Design and Development'></a>
+					
+
+							
+			</div><!--// /.element //-->
+			
+			
+			<div id="mckenna" class="element website tablet mobile" data-category="website">
+			
+				<img src="images/showcase/mckenna/mckenna-home.png" alt="The Briars" class="swg" />
+			
+				<div class="overlay">
+					<div class="slug">
+						<h4 class="title">McKenna Logistics</h4>
+						<p class="desc">The Canadian Logistics Experts</p>
+						<span class="number hide">41</span>
+					</div>
+					
+					<div class="row a b l r">
+						<a class="fancybox"
+							href="images/showcase/mckenna/mckenna-home.png" 
+							data-fancybox-group="mckenna-gallery" 
+							title='<h4>McKenna Logistics</h4>The Canadian Logistics Experts'>
+							
+							<span class="icon-search"></span> View Project</a>
+						
+						<a class="right ar hide"
+							href="http://mckennalogistics.ca"
+							target="_blank"
+							title="McKenna Logistics: Newmarket Web Design and Development">
+							
+							Visit Site <span class="icon-export"></span></a>
+					</div>
+				</div>
+				
+				<!--// 
+					Additional Images
+					//-->
+				
+					<a class="fancybox"
+						href="images/showcase/mckenna/mckenna-home-full.png" 
+						data-fancybox-group="mckenna-gallery" 
+						title='<h4>McKenna Logistics</h4>The Canadian Logistics Experts'></a>
+				
+					<a class="fancybox"
+						href="images/showcase/mckenna/mckenna-inner-full.png" 
+						data-fancybox-group="mckenna-gallery" 
+						title='<h4>McKenna Logistics</h4>The Canadian Logistics Experts'></a>
+				
+					<a class="fancybox"
+						href="images/showcase/mckenna/mckenna-articles-full.png" 
+						data-fancybox-group="mckenna-gallery" 
+						title='<h4>McKenna Logistics</h4>The Canadian Logistics Experts'></a>
+				
+					<a class="fancybox"
+						href="images/showcase/mckenna/mckenna-tablet-home-landscape.png" 
+						data-fancybox-group="mckenna-gallery" 
+						title='<h4>McKenna Logistics</h4>The Canadian Logistics Experts'></a>
+				
+					<a class="fancybox"
+						href="images/showcase/mckenna/mckenna-tablet-inner-landscape.png" 
+						data-fancybox-group="mckenna-gallery" 
+						title='<h4>McKenna Logistics</h4>The Canadian Logistics Experts'></a>
+				
+					<a class="fancybox"
+						href="images/showcase/mckenna/mckenna-tablet-inner-landscape-menu.png" 
+						data-fancybox-group="mckenna-gallery" 
+						title='<h4>McKenna Logistics</h4>The Canadian Logistics Experts'></a>
+				
+					<a class="fancybox"
+						href="images/showcase/mckenna/mckenna-tablet-home-portrait.png" 
+						data-fancybox-group="mckenna-gallery" 
+						title='<h4>McKenna Logistics</h4>The Canadian Logistics Experts'></a>
+				
+					<a class="fancybox"
+						href="images/showcase/mckenna/mckenna-tablet-inner-portrait.png" 
+						data-fancybox-group="mckenna-gallery" 
+						title='<h4>McKenna Logistics</h4>The Canadian Logistics Experts'></a>
+				
+					
+
+							
+			</div><!--// /.element //-->
 		
-			<div id="Nature-s_Abstracts_No1" class="element photography nature" data-category="photography">
-				<img src="http://www.janefuller.ca/img/pht/nat/sml/Nature-s_Abstracts_No1.jpg" alt="Nature's Abstracts No 1" width="160" height="120" />
+<div id="briars" class="element website tablet mobile" data-category="website">
+			
+				<img src="images/showcase/briars/briars-home-desktop-view.png" alt="The Briars" class="swg" />
+			
+				<div class="overlay">
+					<div class="slug">
+						<h4 class="title">The Briars</h4>
+						<p class="desc">Ontario Resort and Spa Vacations Near Toronto</p>
+						<span class="number hide">41</span>
+					</div>
+					
+					<div class="row a b l r">
+						<a class="fancybox"
+							href="images/showcase/briars/briars-home-desktop-view.png" 
+							data-fancybox-group="briars-gallery" 
+							title='<h4>The Briars</h4>Ontario Resort and Spa Vacations'>
+							
+							<span class="icon-search"></span> View Project</a>
+						
+						<a class="right ar"
+							href="http://briars.ca"
+							target="_blank"
+							title="Ontario Resort and Spa Vacations">
+							
+							Visit Site <span class="icon-export"></span></a>
+					</div>
+				</div>
+				
+				<!--// 
+					Additional Images
+					//-->
+				
+					<a class="fancybox"
+						href="images/showcase/briars/briars-home-desktop-full-view.png" 
+						data-fancybox-group="briars-gallery" 
+						title='<h4>The Briars</h4>Ontario Resort and Spa Vacations'></a>
+					
+					<a class="fancybox"
+						href="images/showcase/briars/briars-home-tablet-landscape-view.png" 
+						data-fancybox-group="briars-gallery" 
+						title='<h4>The Briars</h4>Ontario Resort and Spa Vacations'></a>
+					
+					<a class="fancybox"
+						href="images/showcase/briars/briars-home-tablet-portrait-view.png" 
+						data-fancybox-group="briars-gallery" 
+						title='<h4>The Briars</h4>Ontario Resort and Spa Vacations'></a>
+					
+					<a class="fancybox"
+						href="images/showcase/briars/briars-home-mobile-portrait-view.png" 
+						data-fancybox-group="briars-gallery" 
+						title='<h4>The Briars</h4>Ontario Resort and Spa Vacations'></a>
+					
+					<a class="fancybox"
+						href="images/showcase/briars/briars-home-mobile-portrait-full-view.png"  
+						data-fancybox-group="briars-gallery" 
+						title='<h4>The Briars</h4>Ontario Resort and Spa Vacations'></a>
+							
+			</div><!--// /.element //-->
+		
+			<div id="lux" class="element webapp tablet" data-category="webapp">
+				<img src="images/showcase/lux/lux-server-dashboard.png" alt="LUX" class="swg" />
 				
 				<div class="overlay">
-					<a class="fancybox" href="img/pht/nat/lrg/Nature-s_Abstracts_No1.jpg" 
-						data-fancybox-group="nat-gallery" 
-							title='<h4>Nature&#8217;s N<sup>o.</sup> 1</h4>Photography'>
+					<div class="slug">
+						<h4 class="title">LUX</h4>
+						<p class="desc"><span class="media">Lasso 9.3 Server Admin</span></p>
+						<span class="number hide">9</span>
+					</div>
+					<div class="row a b l r">
+						<a class="fancybox"
+							href="images/showcase/lux/lux-server-dashboard.png"
+							data-fancybox-group="lux-gallery" 
+							title='<h4>LUX</h4>Lasso 9.3 Server Dashboard'>
+								
+							<span class="icon-search"></span> View Project</a>
+					</div>
+
+				</div>
+				
+				<!--// 
+					Additional Images
+					//-->
+					
+				<a class="fancybox"
+					href="images/showcase/lux/lux-instance-dashboard.png"
+					data-fancybox-group="lux-gallery" 
+					title='<h4>LUX</h4>Manage Datasources'></a>
+					
+				<a class="fancybox"
+					href="images/showcase/lux/lux-instance-datasources-database-tables.png"
+					data-fancybox-group="lux-gallery" 
+					title='<h4>LUX</h4>Manage Datasources'></a>
+				
+				<a class="fancybox"
+					href="images/showcase/lux/lux-help-lassosoft-support.png"
+					data-fancybox-group="lux-gallery" 
+					title='<h4>LUX</h4>Manage Datasources'></a>
+				
+				<a class="fancybox"
+					href="images/showcase/lux/spitfire_admin_panel.png"
+					data-fancybox-group="lux-gallery" 
+					title='<h4>LUX</h4>Spitfire Admin Panel'></a>
 						
-						<h4 class="title">Nature&#8217;s N<sup>o.</sup> 1</h4>
-						<p class="desc"><span class="media">Photography:</span></p>
-						<span class="number hide">1</span>
-					</a>
-				</div>		
-			</div>
+			</div><!--// /.element //-->
 			
-			<div class="element photography tension" data-category="photography">
+			<div id="mister" class="element website tablet mobile" data-category="website">
 			
-				<img src="http://www.janefuller.ca/img/pht/ten/sml/SurfaceTension_No1.jpg" alt="Surface Tension No 1" width="160" height="120" />
+				<img src="images/showcase/mister/mister-transmission-desktop-home.png" alt="Mister Transmission" class="swg" />
 			
-				<div class="caption">
-					<h4 class="title">Surface Tension N<sup>o.</sup> 1</h4>
-					<p class="desc"><span class="media">Photography:</span></p>
-					<span class="number hide">41</span>
-				</div>		
-			</div>
-			
-			<div id="Snow_No4" class="element photography snow" data-category="photography">
-				<img src="http://www.janefuller.ca/img/pht/sno/sml/Snow_No4.jpg" alt="Snow No 4" width="160" height="120" />
+				<div class="overlay">
+					<div class="slug">
+						<h4 class="title">Mister Transmission</h4>
+						<p class="desc">Transmission and Technology Experts</p>
+						<span class="number hide">41</span>
+					</div>
+					
+					<div class="row a b l r">
+						<a class="fancybox"
+							href="images/showcase/mister/mister-transmission-desktop-home.png" 
+							data-fancybox-group="mister-gallery" 
+							title='<h4>Mister Transmission</h4>Transmission and Technology Experts'>
+							
+							<span class="icon-search"></span> View Project</a>
+						
+						<a class="right ar"
+							href="http://mistertransmission.com"
+							target="_blank"
+							title="Mister Transmission: Transmission and Technology Experts">
+							
+							Visit Site <span class="icon-export"></span></a>
+					</div>
+				</div>
+				
+				<!--// 
+					Additional Images
+					//-->
+				
+					<a class="fancybox"
+						href="images/showcase/mister/mister-transmission-desktop-home-full.png" 
+						data-fancybox-group="mister-gallery" 
+						title='<h4>Mister Transmission</h4>Transmission and Technology Experts'></a>
+				
+					<a class="fancybox"
+						href="images/showcase/mister/mister-transmission-desktop-franchise.png" 
+						data-fancybox-group="mister-gallery" 
+						title='<h4>Mister Transmission</h4>Transmission and Technology Experts'></a>
+						
+					<a class="fancybox"
+						href="images/showcase/mister/mister-transmission-desktop-location.png" 
+						data-fancybox-group="mister-gallery" 
+						title='<h4>Mister Transmission</h4>Transmission and Technology Experts'></a>
+						
+					<a class="fancybox"
+						href="images/showcase/mister/mister-transmission-tablet-landscape.png" 
+						data-fancybox-group="mister-gallery" 
+						title='<h4>Mister Transmission</h4>Transmission and Technology Experts'></a>
+						
+					<a class="fancybox"
+						href="images/showcase/mister/mister-transmission-tablet-portrait.png" 
+						data-fancybox-group="mister-gallery" 
+						title='<h4>Mister Transmission</h4>Transmission and Technology Experts'></a>
+						
+					<a class="fancybox"
+						href="images/showcase/mister/mister-transmission-home-mobile-portrait-view.png" 
+						data-fancybox-group="mister-gallery" 
+						title='<h4>Mister Transmission</h4>Transmission and Technology Experts'></a>
+						
+					<a class="fancybox"
+						href="images/showcase/mister/mister-transmission-home-mobile-portrait-full-view.png" 
+						data-fancybox-group="mister-gallery" 
+						title='<h4>Mister Transmission</h4>Transmission and Technology Experts'></a>
+					
+							
+			</div><!--// /.element //-->
+		
+			<div id="mergini" class="element webapp tablet" data-category="webapp">
+				<img src="images/showcase/mergini/mergini_home.png" alt="LUX" class="swg" />
 				
 				<div class="overlay">
-					<a class="fancybox" href="img/pht/sno/lrg/Snow_No4.jpg" 
-						data-fancybox-group="sno-gallery" 
-							title='<h4>Snow N<sup>o.</sup> 4</h4>Photography'>
+					<div class="slug">
+						<h4 class="title">Mergini</h4>
+						<p class="desc"><span class="media">Corporate Dashboard Application</span></p>
+						<span class="number hide">9</span>
+					</div>
+					<div class="row a b l r">
+						<a class="fancybox" href="images/showcase/mergini/mergini_home.png"  
+							data-fancybox-group="mergini-gallery" 
+								title='<h4>Mergini</h4>Corporate Dashboard Application'>
+							<span class="icon-search"></span> View Project</a>
 						
-						<h4 class="title">Snow N<sup>o.</sup> 4</h4>
-						<p class="desc"><span class="media">Photography:</span></p>
-						<span class="number hide">34</span>
-					</a>
-				</div>		
-			</div>
+						<a class="right ar"
+							href="http://mergini.com"
+							target="_blank"
+							title="Get Mergini">
+							
+							Visit Site <span class="icon-export"></span></a>
+					</div>
+
+				</div>
+				
+				<!--// 
+					Additional Images
+					//-->
+					
+				<a class="fancybox" 
+					href="images/showcase/mergini/mergini_landing_page.png"
+					data-fancybox-group="mergini-gallery" 
+					title='<h4>Mergini</h4>Corporate Dashboard Application'></a>
+					
+				<a class="fancybox" 
+					href="images/showcase/mergini/mergini_staff_profiles.png"
+					data-fancybox-group="mergini-gallery" 
+					title='<h4>Mergini</h4>Corporate Dashboard Application'></a>
+					
+				<a class="fancybox" 
+					href="images/showcase/mergini/mergini_user_profile_edit.png"
+					data-fancybox-group="mergini-gallery" 
+					title='<h4>Mergini</h4>Corporate Dashboard Application'></a>
+					
+				<a class="fancybox" 
+					href="images/showcase/mergini/mergini_user_profile_photo.png"
+					data-fancybox-group="mergini-gallery" 
+					title='<h4>Mergini</h4>Corporate Dashboard Application'></a>
+					
+				<a class="fancybox" 
+					href="images/showcase/mergini/mergini_admin_table.png"
+					data-fancybox-group="mergini-gallery" 
+					title='<h4>Mergini</h4>Corporate Dashboard Application'></a>
+					
+				<a class="fancybox" 
+					href="images/showcase/mergini/mergini_rank_tracker_dashboard.png"
+					data-fancybox-group="mergini-gallery" 
+					title='<h4>Mergini</h4>Rank Tracker Application'></a>
+					
+				<a class="fancybox" 
+					href="images/showcase/mergini/mergini_rank_tracker_amphipious_snap.png"
+					data-fancybox-group="mergini-gallery" 
+					title='<h4>Mergini</h4>Corporate Dashboard Application'></a>
+						
+			</div><!--// /.element //-->
 			
-			<div id="IcePuddle_No5" class="element photography ice" data-category="photography">
-				<img src="http://www.janefuller.ca/img/pht/ice/sml/IcePuddle_No5.jpg" alt="IcePuddle No. 5" width="160" height="120" />
+			
+			<div id="righttime" class="element website tablet mobile" data-category="website">
+			
+				<img src="images/showcase/righttime/right-time-home.png" alt="Right Time: Heating and Air Conditioning Canada" class="swg" />
+			
+				<div class="overlay">
+					<div class="slug">
+						<h4 class="title">Right Time</h4>
+						<p class="desc">Heating and Air Conditioning Canada</p>
+						<span class="number hide">41</span>
+					</div>
+					
+					<div class="row a b l r">
+						<a class="fancybox"
+							href="images/showcase/righttime/right-time-home.png" 
+							data-fancybox-group="righttime-gallery" 
+							title='<h4>Right Time</h4>Heating and Air Conditioning Canada'>
+							
+							<span class="icon-search"></span> View Project</a>
+						
+						<a class="right ar"
+							href="http://www.right-time.ca"
+							target="_blank"
+							title="Right Time: Heating and Air Conditioning Canada">
+							
+							Visit Site <span class="icon-export"></span></a>
+					</div>
+				</div>
+				
+				<!--// 
+					Additional Images
+					//-->
+				
+					<a class="fancybox"
+						href="images/showcase/righttime/boonstra-home.png" 
+						data-fancybox-group="righttime-gallery" 
+						title='<h4>Right Time</h4>Heating and Air Conditioning Canada'></a>
+				
+					<a class="fancybox"
+						href="images/showcase/righttime/boonstra-home-full.png" 
+						data-fancybox-group="righttime-gallery" 
+						title='<h4>Right Time</h4>Heating and Air Conditioning Canada'></a>
+				
+					<a class="fancybox"
+						href="images/showcase/righttime/boonstra-internal-full.png" 
+						data-fancybox-group="righttime-gallery" 
+						title='<h4>Right Time</h4>Heating and Air Conditioning Canada'></a>
+				
+					<a class="fancybox"
+						href="images/showcase/righttime/boonstra-home-ipad-landscape.png" 
+						data-fancybox-group="righttime-gallery" 
+						title='<h4>Right Time</h4>Heating and Air Conditioning Canada'></a>
+				
+					<a class="fancybox"
+						href="images/showcase/righttime/boonstra-home-ipad-portrait.png" 
+						data-fancybox-group="righttime-gallery" 
+						title='<h4>Right Time</h4>Heating and Air Conditioning Canada'></a>
+				
+					<a class="fancybox"
+						href="images/showcase/righttime/boonstra-home-mobile.png" 
+						data-fancybox-group="righttime-gallery" 
+						title='<h4>Right Time</h4>Heating and Air Conditioning Canada'></a>
+				
+					<a class="fancybox"
+						href="images/showcase/righttime/boonstra-menu-mobile.png" 
+						data-fancybox-group="righttime-gallery" 
+						title='<h4>Right Time</h4>Heating and Air Conditioning Canada'></a>
+				
+					<a class="fancybox"
+						href="images/showcase/righttime/boonstra-home-mobile-full.png" 
+						data-fancybox-group="righttime-gallery" 
+						title='<h4>Right Time</h4>Heating and Air Conditioning Canada'></a>
+									
+							
+			</div><!--// /.element //-->
+		
+			<div id="blueworld" class="element webapp" data-category="webapp">
+				<img src="images/showcase/blueworld/blueworld-home.png" alt="LUX" class="swg" />
 				
 				<div class="overlay">
-					<a class="fancybox" href="img/pht/ice/lrg/IcePuddle_No5.jpg" 
-						data-fancybox-group="ice-gallery" 
-						title='<h4>IcePuddle N<sup>o.</sup> 5</h4>Photography'>
+					<div class="slug">
+						<h4 class="title">Blueworld</h4>
+						<p class="desc"><span class="media">Website wireframing made easy</span></p>
+						<span class="number hide">9</span>
+					</div>
+					<div class="row a b l r">
+						<a class="fancybox"
+							href="images/showcase/blueworld/blueworld-home.png"
+							data-fancybox-group="blueworld-gallery" 
+							title='<h4>Blueworld</h4>Website wireframing made easy'>
+								
+							<span class="icon-search"></span> View Project</a>
 						
-						<h4 class="title">IcePuddle N<sup>o.</sup> 5</h4>
-						<p class="desc"><span class="media">Photography:</span></p>
-						<span class="number hide">5</span>
-					</a>
-				</div>		
-			</div>
+						<a class="right ar"
+							href="http://blueworld.com"
+							target="_blank"
+							title="Blueworld: Responsive website wireframing made easy">
+							
+							Visit Site <span class="icon-export"></span></a>
+					</div>
+
+				</div>
+				
+				<!--// 
+					Additional Images
+					//-->
+					
+				<a class="fancybox"
+					href="images/showcase/blueworld/blueworld-home-full.png"
+					data-fancybox-group="blueworld-gallery" 
+					title='<h4>Blueworld</h4>Website wireframing made easy'></a>
+					
+				<a class="fancybox"
+					href="images/showcase/blueworld/blueworld-login.png"
+					data-fancybox-group="blueworld-gallery" 
+					title='<h4>Blueworld</h4>Website wireframing made easy'></a>
+					
+				<a class="fancybox"
+					href="images/showcase/blueworld/blueworld-dashboard-grid-view.png"
+					data-fancybox-group="blueworld-gallery" 
+					title='<h4>Blueworld</h4>Project Dashboard Grid View'></a>
+					
+				<a class="fancybox"
+					href="images/showcase/blueworld/blueworld-dashboard-listview.png"
+					data-fancybox-group="blueworld-gallery" 
+					title='<h4>Blueworld</h4>Project Dashboard List View'></a>
+					
+				<a class="fancybox"
+					href="images/showcase/blueworld/blueworld-project.png"
+					data-fancybox-group="blueworld-gallery" 
+					title='<h4>Blueworld</h4>Project Page'></a>
+					
+				<a class="fancybox"
+					href="images/showcase/blueworld/blueworld-tour.png"
+					data-fancybox-group="blueworld-gallery" 
+					title='<h4>Blueworld</h4>Product tour'></a>
+					
+				<a class="fancybox"
+					href="images/showcase/blueworld/blueworld-content-tools.png"
+					data-fancybox-group="blueworld-gallery" 
+					title='<h4>Blueworld</h4>Drag and drop content tools'></a>
+					
+				<a class="fancybox"
+					href="images/showcase/blueworld/blueworld-content-setting.png"
+					data-fancybox-group="blueworld-gallery" 
+					title='<h4>Blueworld</h4>Drag and drop content setting panel'></a>
+					
+				<a class="fancybox"
+					href="images/showcase/blueworld/blueworld-viewport-resizer.png"
+					data-fancybox-group="blueworld-gallery" 
+					title='<h4>Blueworld</h4>Builtin viewport resizing'></a>
+					
+				<a class="fancybox"
+					href="images/showcase/blueworld/blueworld-admin.png"
+					data-fancybox-group="blueworld-gallery" 
+					title='<h4>Blueworld</h4>Simple admin interface'></a>
+						
+			</div><!--// /.element //-->
+			
+			
+			<div id="cookie-it-up" class="element website" data-category="website">
+			
+				<img src="images/showcase/cookieitup/cookie-it-up-home.png" alt="Cookie It Up | Wholesome Quality Cookies | Natural Ingredients " class="swg" />
+			
+				<div class="overlay">
+					<div class="slug">
+						<h4 class="title">Cookie It Up</h4>
+						<p class="desc">Wholesome Quality Cookies | Natural Ingredients</p>
+						<span class="number hide">41</span>
+					</div>
+					
+					<div class="row a b l r">
+						<a class="fancybox"
+							href="images/showcase/cookieitup/cookie-it-up-home.png" 
+							data-fancybox-group="cookie-it-up-gallery" 
+							title='<h4>Cookie It Up</h4>Wholesome Quality Cookies | Natural Ingredients'>
+							
+							<span class="icon-search"></span> View Project</a>
+						
+						<a class="right ar"
+							href="http://www.cookieitup.com"
+							target="_blank"
+							title="Cookie It Up | Wholesome Quality Cookies | Natural Ingredients">
+							
+							Visit Site <span class="icon-export"></span></a>
+					</div>
+				</div>
+				
+				<!--// 
+					Additional Images
+					//-->
+				
+					<a class="fancybox"
+						href="images/showcase/cookieitup/cookie-it-up-home-full.png" 
+						data-fancybox-group="cookie-it-up-gallery" 
+						title='<h4>Cookie It Up</h4>Wholesome Quality Cookies | Natural Ingredients'></a>
+				
+					<a class="fancybox"
+						href="images/showcase/cookieitup/cookie-it-up-cookies.png" 
+						data-fancybox-group="cookie-it-up-gallery" 
+						title='<h4>Cookie It Up</h4>Wholesome Quality Cookies | Natural Ingredients'></a>
+				
+					<a class="fancybox"
+						href="images/showcase/cookieitup/cookie-it-up-wholesale.png" 
+						data-fancybox-group="cookie-it-up-gallery" 
+						title='<h4>Cookie It Up</h4>Wholesome Quality Cookies | Natural Ingredients'></a>
+				
+					<a class="fancybox"
+						href="images/showcase/cookieitup/cookie-it-up-contact.png" 
+						data-fancybox-group="cookie-it-up-gallery" 
+						title='<h4>Cookie It Up</h4>Wholesome Quality Cookies | Natural Ingredients'></a>
+									
+							
+			</div><!--// /.element //-->
+
+					
+			
 			
 		</div>
-		<br>
 	</div>
 
 </section>
 	
-	<section id="evolution">
-		<div class="container">
+	<section id="evolution" class="row">
+		<div class="container focus">
 			<h1 class="rmb">The E.volution<sub class="meta uc">Includes E.very<span class="orgt">one</span></sub></h1>
 			
 			
@@ -282,7 +865,7 @@ A.mphibio.us uses lightweight, basic styles as its foundation. It is ready to ad
 			<div class="col six">
 				
 				<a class="button blu" href="https://github.com/Treefrog-Interactive/A.mphibio.us/archive/master.zip" title="Download A.mphibio.us Release Candidate 1.0 (.zip )">Download the Project<span class="icon-github hml"></span></a>
-				<a class="button grn" href="/releases/a.mphibio.us.rdk.zip" title="Download A.mphibio.us Release Candidate 1.0 (.zip )">Get the <abbr title="Rapid Application Development Kit">RDK</abbr><span class="icon-download hml"></span></a>
+				<a class="button grn" href="/a.mphibio.us.rdk.zip" title="Download A.mphibio.us Release Candidate 1.0 (.zip )">Get the <abbr title="Rapid Application Development Kit">RDK</abbr><span class="icon-download hml"></span></a>
 				<br>				
 				<a class="dotted more set" href="#colophon"><span class="icon" style="font-size:6em;">&#11015;</span></a>
 			</div>
@@ -340,7 +923,7 @@ A.mphibio.us uses lightweight, basic styles as its foundation. It is ready to ad
 			<div class="col sixteen">
 	
 <footer id="amp_footer" class="row">
-	<p><a href="/"><span class="icon-amphibious hmr"></span></a> <a href="http://www.lassosoft.com/"><span class="icon-lassosoft hmr"></span></a> <a href="http://www.mergini.com/"><span class="icon-mergini hmr"></span></a> Curated by Clive Moore, at <a href="http://www.treefrog.ca"><span class="icon-treefrog hmr"></span>Treefrog Inc.</a> <strong>Twitter</strong>: <a href="http://www.twitter.com/cliveMoore" title="Follow Clive on Twitter">@cliveMoore</a></p>
+	<p><a href="/"><span class="icon-amphibious hmr"></span></a> <a href="http://www.lassosoft.com/"><span class="icon-lassosoft hmr"></span></a> <a href="http://www.mergini.com/"><span class="icon-mergini hmr"></span></a> Curated by Clive Moore, at <a href="http://www.treefrog.ca"><span class="icon-treefrog hmr"></span>Treefrog Inc.</a> <strong>Twitter</strong>: <a href="http://www.twitter.com/cliveMoore" title="Follow Clive on Twitter">@cliveMoore</a> <a href="/sitemap.html"><span class="icon-flow-tree"></span> Sitemap</a></p>
 </footer>
 			</div>
 	    </div> <!--.story-->
@@ -362,12 +945,12 @@ postion:fixed;top:0;left:0;right:0;
 	<div class="container">
 		<nav>
 			<ul id="horizontal" class="horizontal branded">
-				<li class="active"><a href="../index.html#intro" class="hpl">a.mphibio.us</a>
+				<li class="active"><a href="docs/../index.html#intro" class="hpl">a.mphibio.us</a>
 					<ul>
 						<li><a href="docs/../index.html#what_is_it">What is A.mphibio.us</a></li>
-						<li><a href="docs/../index.html#hows_it_made">What is it made of?</a></li>
-<!--						<li><a href="docs/../index.html#slides">Flexslider Slideshows</a></li>
- 							<li><a href="docs/../index.html#gallery">A.mphibio.us Examples</a></li> -->
+						<li><a href="docs/../index.html#how_its_made">What is it made of?</a></li>
+<!--						<li><a href="docs/../index.html#slides">Flexslider Slideshows</a></li> -->
+ 							<li><a href="docs/../index.html#gallery">A.mphibio.us Showcase</a></li>
 						<li><a href="docs/../index.html#evolution">The E.volution of A.mphibio.us</a></li>
 						<li><a href="docs/../index.html#colophon">The A.mphibio.us Colophon</a></li>
 					</ul>
@@ -390,6 +973,9 @@ postion:fixed;top:0;left:0;right:0;
 						<li><a href="docs/form.html#typography">Typography <sub>and the golden ratio</sub></a></li>
 						<li><a href="docs/form.html#forms">Basic Forms</a></li>
 						<li><a href="docs/form.html#multi_forms">Mutli Beside Forms</a></li>
+						<li><a href="docs/form.html#custom_checkbox_radios">Custom Checkboxes and Radios</a></li>
+						<li><a href="docs/form.html#append_prepend_icons">Prepend and Append Icons</a></li>
+						<li><a href="docs/form.html#datepicker_fields">jQuery Datepicker Fields</a></li>
 						<li><a href="docs/form.html#tables">Tables <sub>not for layout</sub></a></li>
 					</ul>
 				</li>
@@ -468,6 +1054,7 @@ postion:fixed;top:0;left:0;right:0;
 <script type="text/javascript" src="src/js/sequence.jquery-min.js"></script>
 <script type="text/javascript" src="src/js/jquery.flexslider-min.js"></script>
 <script type="text/javascript" src="src/js/jquery.isotope.min.js"></script>
+<script type="text/javascript" src="js/js/jquery.fancybox.js"></script>
 
 <script src="js/a.mphibio.us.js"></script>
 
@@ -565,7 +1152,16 @@ $(document).ready(function() {
 		}
 		
 		return false;
-		});	
+		});
+
+		$('.fancybox').fancybox({
+			helpers: {title : {type : 'outside'}},
+			padding: 0,
+			prevEffect: 'fade',
+			nextEffect: 'fade',
+			beforeLoad: function(){$('.focus').addClass('blur');$('#nav').addClass('hide');},
+			beforeClose: function(){$('.focus').removeClass('blur');$('#nav').removeClass('hide');}
+		});		
 
 });
 

@@ -3,22 +3,35 @@
 ------------------------------------------------------------ */
 
 /* ------------------------------------------------------------
+<<<<<<< HEAD
 	NUMBER OF COLUMNS: Adjust .sitemap li to set the number
+=======
+	NUMBER OF COLUMNS: Adjust #sitemap li to set the number
+>>>>>>> origin/master
 	of columns required in your site map. The default is 
 	4 columns (25%). 5 columns would be 20%, 6 columns would 
 	be 16.6%, etc. 
 ------------------------------------------------------------ */
 
+<<<<<<< HEAD
 .sitemap li
+=======
+#sitemap li
+>>>>>>> origin/master
 {
 	width:25%;
 }
 
+<<<<<<< HEAD
 .sitemap li ul li
+=======
+#sitemap li ul li
+>>>>>>> origin/master
 {
 	width:100% !important;
 }
 
+<<<<<<< HEAD
 .container .sitemap.col.one,
 .container .sitemap.col.two,
 .container .sitemap.col.three,
@@ -48,6 +61,23 @@
 .sitemap li,
 .sitemap ul,
 .sitemap ul ul
+=======
+#sitemap.col.one li		{ width:99.9%; }
+#sitemap.col.two li		{ width:50.0%; }
+#sitemap.col.three li	{ width:33.3%; }
+#sitemap.col.four li	{ width:25.0%; }
+#sitemap.col.five li	{ width:20.0%; }
+#sitemap.col.six li		{ width:16.6%; }
+#sitemap.col.seven li	{ width:14.2%; }
+#sitemap.col.eight li	{ width:12.5%; }
+#sitemap.col.nine li	{ width:11.1%; }
+#sitemap.col.ten li		{ width:10.0%; }
+
+#sitemap,
+#sitemap li,
+#sitemap ul,
+#sitemap ul ul
+>>>>>>> origin/master
 {
 	font-size: 1em;
 	text-indent: 0;
@@ -56,21 +86,35 @@
 
 /* --------	Top Level --------- */
 
+<<<<<<< HEAD
 .sitemap,
 .sitemap li
+=======
+#sitemap,
+#sitemap li
+>>>>>>> origin/master
 {
 	list-style: none;
 }
 
+<<<<<<< HEAD
 .container .sitemap.col,
 .sitemap
+=======
+.container #sitemap.col,
+#sitemap
+>>>>>>> origin/master
 {
 	margin: 1em 0 2em;
 	float: left;
 	width: 100%;
 }
 
+<<<<<<< HEAD
 .sitemap #home
+=======
+#sitemap #home
+>>>>>>> origin/master
 {
 	display: block;
 	float: none;
@@ -80,7 +124,11 @@
 	padding: 0 0 30px 0;
 }
 
+<<<<<<< HEAD
 .sitemap li
+=======
+#sitemap li
+>>>>>>> origin/master
 {
 	float: left;
 	background: url('../images/L1-center.png') center top no-repeat;
@@ -88,12 +136,17 @@
 	margin-top: -30px;
 }
 
+<<<<<<< HEAD
 .sitemap li a
+=======
+#sitemap li a
+>>>>>>> origin/master
 {
 	margin: 0 20px 0 0;
 	padding: 1em 0.5em;
 	display: block;
 	font-size: 1em;
+<<<<<<< HEAD
 	font-family: 'source_sans_probold';
 	font-weight: normal;
 	text-align: center;
@@ -103,10 +156,19 @@
 	box-shadow: 0 0 8px rgba(0,0,0,0.6);
 	transition: all 0.3s ease-out;
 /* 	border: 1px solid #0080c6; */
+=======
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	color: white;	
+	background: #0080c6;
+	border: 1px solid #0080c6;
+>>>>>>> origin/master
 /* 	border-radius: 5px; */
 /* 	box-shadow: rgba(0,0,0,0.5) 2px 2px 2px;  */
 }
 
+<<<<<<< HEAD
 .sitemap li a:hover
 {
 	box-shadow: 0 0 2px rgba(0,0,0,0.6);
@@ -114,10 +176,22 @@
 }
 
 .sitemap li:last-child
+=======
+#sitemap li a:hover
+{
+	background-color: #5d5d5d;
+	border-color: #5d5d5d;
+	transform: scale(1.03);
+	box-shadow: 0 0 6px rgba(0,0,0,0.3), inset 0 0 12px rgba(255,255,255,0.3);
+}
+
+#sitemap li:last-child
+>>>>>>> origin/master
 {
 	background: url('../images/L1-right.png') center top no-repeat;
 }
 
+<<<<<<< HEAD
 .sitemap li a:link:before,
 .sitemap li a:visited:before,
 .sitemap li a:link:after,
@@ -135,21 +209,50 @@
 }
 .sitemap li a:link:after,
 .sitemap li a:visited:after
+=======
+#sitemap li a:link:before,
+#sitemap li a:visited:before,
+#sitemap li a:link:after,
+#sitemap li a:visited:after
+{
+	content: " "attr(href)" ";
+	display: block;
+	text-transform: uppercase;
+	font-size: 0.7em;
+	margin-bottom: 0.5em;
+	word-wrap: break-word;
+}
+#sitemap li a:link:after,
+#sitemap li a:visited:after
+>>>>>>> origin/master
 {
 	content: " "attr(title)" ";
 }
 
+<<<<<<< HEAD
 .sitemap li a:link:before,
 .sitemap li a:visited:before,
 .sitemap li a:link:after,
 .sitemap li a:visited:after
 {
 	color: #505050;
+=======
+#sitemap li a:link:before,
+#sitemap li a:visited:before,
+#sitemap li a:link:after,
+#sitemap li a:visited:after
+{
+	color: #f3f3f3;
+>>>>>>> origin/master
 }
 
 /* --------	Second Level --------- */
 
+<<<<<<< HEAD
 .sitemap li li
+=======
+#sitemap li li
+>>>>>>> origin/master
 {
 	width: 100%;
 	clear: left;
@@ -158,6 +261,7 @@
 	background: url('../images/vertical-line.png') center bottom repeat-y;
 }
 
+<<<<<<< HEAD
 .sitemap li li a
 {
 	background-color: #f3f0e8;
@@ -166,22 +270,41 @@
 
 
 .sitemap li li a:hover
+=======
+#sitemap li li a
+{
+	background-color: #939392;
+	border-color: #939392;
+}
+
+#sitemap li li a:hover
+>>>>>>> origin/master
 {
 	border-color: #5d5d5d;
 	background-color: #5d5d5d;
 }
+<<<<<<< HEAD
 */
 
 .sitemap li li:first-child
+=======
+
+#sitemap li li:first-child
+>>>>>>> origin/master
 {
 	padding-top: 30px;
 }
 
+<<<<<<< HEAD
 .sitemap li li:last-child
+=======
+#sitemap li li:last-child
+>>>>>>> origin/master
 {
 	background: url('../images/vertical-line.png') center bottom repeat-y;
 }
 
+<<<<<<< HEAD
 .sitemap li li a:link:before,
 .sitemap li li a:visited:before
 {
@@ -189,11 +312,21 @@
 	font-weight: normal;
 	font-family: 'source_sans_proregular';
 	text-transform: none;
+=======
+#sitemap li li a:link:before,
+#sitemap li li a:visited:before
+{
+	color: #f3f3f3;
+>>>>>>> origin/master
 }
 
 /* --------	Third Level --------- */
 
+<<<<<<< HEAD
 .sitemap li li ul
+=======
+#sitemap li li ul
+>>>>>>> origin/master
 {
 	margin: 10px 0 0 0;
 	width: 100%;
@@ -202,52 +335,87 @@
 	background: transparent url('../images/L3-ul-top.png') center top no-repeat;
 }
 
+<<<<<<< HEAD
 .sitemap li li li
+=======
+#sitemap li li li
+>>>>>>> origin/master
 {
 	background: url('../images/L3-center.png') left center no-repeat;
 	padding: 5px 0;
 }
 
+<<<<<<< HEAD
 .sitemap li li li a
 {
 	background-color: #efe9ee;
 	color: #8e5c83;
 /* 	border-color: #e7e7e7; */
+=======
+#sitemap li li li a
+{
+	background-color: #e7e7e7;
+	color: #5d5d5d;
+	border-color: #e7e7e7;
+>>>>>>> origin/master
 	font-size: 12px;
 	padding: 5px 0;
 	width: 80%;
 	float: right;
 }
 
+<<<<<<< HEAD
 /*
 .sitemap li li li a:hover
+=======
+#sitemap li li li a:hover
+>>>>>>> origin/master
 {
 	background-color: #939392;
 	border-color: #939392;
 	color: #fff;
 }
+<<<<<<< HEAD
 */
 
 .sitemap li li li:first-child
+=======
+
+#sitemap li li li:first-child
+>>>>>>> origin/master
 {
 	padding: 15px 0 5px 0;
 	background: url('../images/L3-li-top.png') left center no-repeat;
 }
 
+<<<<<<< HEAD
 .sitemap li li li:last-child
+=======
+#sitemap li li li:last-child
+>>>>>>> origin/master
 {
 	background: url('../images/L3-bottom.png') left center no-repeat;
 }
 
+<<<<<<< HEAD
 .sitemap li li li a:link:before,
 .sitemap li li li a:visited:before
+=======
+#sitemap li li li a:link:before,
+#sitemap li li li a:visited:before
+>>>>>>> origin/master
 {
 	color: #939392;
 	font-size: 9px;
 }
 
+<<<<<<< HEAD
 .sitemap li li li a:hover:link:before,
 .sitemap li li li a:hover:visited:before
+=======
+#sitemap li li li a:hover:link:before,
+#sitemap li li li a:hover:visited:before
+>>>>>>> origin/master
 {
 	color: #f3f3f3;
 }
@@ -256,6 +424,7 @@
 	Utility Navigation
 ------------------------------------------------------------ */
 
+<<<<<<< HEAD
 .utility_sitemap
 {
 	float: right;
@@ -274,22 +443,48 @@
 }
 
 .utility_sitemap li a
+=======
+#utility_sitemap
+{
+	float: right;
+	max-width: 50%;
+	margin-right: 10px;
+}
+
+#utility_sitemap li
+{
+	float: left;
+	margin-bottom: 10px;
+}
+
+#utility_sitemap li a
+>>>>>>> origin/master
 {
 	margin: 0 10px 0 0;
 	padding: 5px 10px;
 	display: block;	
+<<<<<<< HEAD
 	border: 1px solid #ac9766;
 	font-size: 12px;
 	font-weight: bold;
 	text-align: center;
 	background-color: #f3f0e8;
 	color: #ac9766;
+=======
+	border: 1px solid #e3ca4b;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	color: white;
+	background: #fff7aa;
+>>>>>>> origin/master
 /*
 	border-radius: 5px;
 	box-shadow: rgba(0,0,0,0.5) 2px 2px 2px;
 */
 }
 
+<<<<<<< HEAD
 .utility_sitemap li a:hover
 {
 	opacity: 0.8;
@@ -299,12 +494,25 @@
 .utility_sitemap li a:visited:before
 {
 	color: #505050;
+=======
+#utility_sitemap li a:hover
+{
+	background-color: #fffce5;
+	border-color: #d1b62c;
+}
+
+#utility_sitemap li a:link:before,
+#utility_sitemap li a:visited:before
+{
+	color: #ccae14;
+>>>>>>> origin/master
 	font-size: 9px;
 	margin-bottom: 3px;
 }
 
 @media only screen and (max-width: 600px)
 {
+<<<<<<< HEAD
 	.sitemap.col.one li,
 	.sitemap.col.two li,
 	.sitemap.col.three li,
@@ -315,11 +523,29 @@
 	.sitemap.col.eight li,
 	.sitemap.col.nine li,
 	.sitemap.col.ten li
+=======
+	#sitemap.col.one li,
+	#sitemap.col.two li,
+	#sitemap.col.three li,
+	#sitemap.col.four li,
+	#sitemap.col.five li,
+	#sitemap.col.six li,
+	#sitemap.col.seven li,
+	#sitemap.col.eight li,
+	#sitemap.col.nine li,
+	#sitemap.col.ten li
+>>>>>>> origin/master
 	{
 		width:98% !important;
 		margin-left: 2%; 
 	}
+<<<<<<< HEAD
 	.sitemap.col i li	{ width:100%;margin-left: 0; }
 	.sitemap li li li a		{width: 90%;}
 	.sitemap #home			{background: transparent url("../images/vertical-line.png") center bottom no-repeat;}
+=======
+	#sitemap.col i li	{ width:100%;margin-left: 0; }
+	#sitemap li li li a		{width: 90%;}
+	#sitemap #home			{background: transparent url("../images/vertical-line.png") center bottom no-repeat;}
+>>>>>>> origin/master
 }

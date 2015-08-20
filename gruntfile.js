@@ -64,11 +64,13 @@ module.exports = function(grunt) {
 					'src/css/typography.css',
 					'src/css/pear.rs.css',
 					'src/css/table_styles.css',
+					'src/css/rwd_tables.css',
 					'src/css/images.css',
 					'src/css/messaging.css',
 					'src/css/buttons.css',
 					'src/css/tabs.css',
 					'src/css/navigation.css',
+					'src/css/sitemap.css',
 					'src/css/socialnav.css',
 					'src/css/progress_bars.css',
 					'src/css/modals.css',
@@ -121,56 +123,33 @@ module.exports = function(grunt) {
 			{
 				files:
 				{
-					'css/<%= pkg.name %>.min.css':
-					
-				[
-					// Optional libraries
-					
-					// 'src/css/flexslider.css',
-					// 'src/css/float_labels.css',
-					// 'src/css/datatable.css',
-					// 'src/css/tablesorter.css',
-					// 'src/css/sequencejs-theme.sliding-horizontal-parallax.css',
-					
-					// Standard libraries
-					
-					'src/css/toc.css',
-					'src/css/normalize.css',
-					'src/css/h5bp.css',
-					'src/css/typography.css',
-					'src/css/pear.rs.css',
-					'src/css/table_styles.css',
-					'src/css/images.css',
-					'src/css/messaging.css',
-					'src/css/buttons.css',
-					'src/css/tabs.css',
-					'src/css/navigation.css',
-					'src/css/socialnav.css',
-					'src/css/progress_bars.css',
-					'src/css/modals.css',
-					'src/css/forms.css',
-					'src/css/append_prepend.css',
-					'src/css/custom_form_elements.css',
-					'src/css/jquery_datepicker.css',
-					'src/css/entypo.css',
-					'src/css/helpers.css',
-					'src/css/grid_sixteen.css',
-					'src/css/always_fluid.css',
-					'src/css/tablet_sixteen.css',
-					'src/css/mobile_l_sixteen.css',
-					'src/css/mobile_p_sixteen.css',
-					'src/css/clearing.css',
-					'src/css/tooltip.css',
-					'src/css/print.css'
-				]
+					'css/<%= pkg.name %>.min.css':	
+					'<%= concat.css.src %>'
 				}
 			}
 		},
-		
+		imagemin: {
+		    dynamic: {
+		        files: [{
+		            expand: true,
+		            cwd: 'images/showcase_source/',
+		            src: ['**/*.{png,jpg,gif}'],
+		            dest: 'images/showcase/'
+		        }]
+		    }
+		},
 		watch:
 		{
-			files:['<%= concat.css.src %>'],
-			tasks:['concat:css']
+			css:
+			{
+				files:['<%= concat.css.src %>'],
+				tasks:['concat:css']
+			},
+			js:
+			{
+				files:['<%= uglify.build.src %>'],
+				tasks:['concat:js','uglify']
+			}
 		},
 		
 		grunticon:
@@ -192,11 +171,12 @@ module.exports = function(grunt) {
 		}
 	});
 	
-	// Load the plugin that provides the "uglify" task.
+	// Load the plugins that provide the tasks.
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-grunticon');
 

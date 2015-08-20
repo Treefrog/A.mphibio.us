@@ -1,7 +1,7 @@
 {
   "name": "a.mphibio.us",
   "title": "A.mphibio.us",
-  "version": "1.5.3",
+  "version": "1.5.4",
   "description": "The Elegant HTML5 Boilerplate for Responsive Web Development",
   "homepage": "http://a.mphibio.us",
   "author": {
@@ -22,6 +22,7 @@
     "grunt": "^0.4.5",
     "grunt-contrib-concat": "^0.5.1",
     "grunt-contrib-cssmin": "^0.12.2",
+    "grunt-contrib-imagemin": "^0.9.4",
     "grunt-contrib-jshint": "^0.11.1",
     "grunt-contrib-nodeunit": "^0.4.1",
     "grunt-contrib-uglify": "^0.8.0",
