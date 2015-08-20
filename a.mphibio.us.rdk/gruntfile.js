@@ -104,6 +104,8 @@ module.exports = function(grunt) {
 			
 			build:
 			{
+				src: ['js/plugins.js', 'js/scripts.js'],
+				dest: 'js/<%= pkg.name %>.js'
 			}
 			
 		},
@@ -121,10 +123,11 @@ module.exports = function(grunt) {
 			{
 				files:
 				{
+					'css/<%= pkg.name %>.min.css':	
+					'<%= concat.css.src %>'
 				}
 			}
 		},
-		
 		imagemin: {
 		    dynamic: {
 		        files: [{
@@ -137,6 +140,16 @@ module.exports = function(grunt) {
 		},
 		watch:
 		{
+			css:
+			{
+				files:['<%= concat.css.src %>'],
+				tasks:['concat:css']
+			},
+			js:
+			{
+				files:['<%= uglify.build.src %>'],
+				tasks:['concat:js','uglify']
+			}
 		},
 		
 		grunticon:
@@ -158,13 +171,16 @@ module.exports = function(grunt) {
 		}
 	});
 	
+	// Load the plugins that provide the tasks.
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-grunticon');
 
 	// Default task(s).
+	grunt.registerTask('default', ['concat', 'uglify', 'cssmin']);
 
 };

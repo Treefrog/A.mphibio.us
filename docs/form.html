@@ -54,11 +54,13 @@
 
 <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
 <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
+
 </head>
 <body>
 <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
 <span id="download_button">
+<a class="button" href="http://a.mphibio.us/a.mphibio.us.rdk.zip" title="Download A.mphibio.us Rapid Developmet Kit(.zip )">A.mphibio.us RDK <span class="icon-github hml"></span></a>
 </span>
 
 <div id="main" role="main" class="container">
@@ -72,10 +74,11 @@
 				</blockquote>
 		</header>
 
-	
+
 		<section id="typography" class="row">
 			<div class="row">
 				<h3>Typography</h3>
+
 				<p class="intro">The typography of A.mphibio.us is designed to create a strong visual hierarchy based on the golden ratio with basic styles, with h6, h3, and h1 as the proportional steps. The primary font is Lucida Grande, but the font stack can be easily changed with just a couple adjustments. Regular paragraphs are set at the equilvalent of 16px base with 22px line height.</p>
 				<p>Margins and line heights are set relative to the base for the most adaptive/scalable user experience indepentant of what device you are using</p>
 			</div>
@@ -87,6 +90,7 @@
 					<h4>Heading &lt;h4&gt;</h4>
 					<h5>Heading &lt;h5&gt;</h5>
 					<h6>Heading &lt;h6&gt;</h6>
+
 					<div class="row mt">
 						<pre class="prettyprint linenums">
 &lt;h1&gt;Heading &amp;lt;h1&amp;gt;&lt;/h1&gt;
@@ -97,13 +101,15 @@
 &lt;h6&gt;Heading &amp;lt;h6&amp;gt;&lt;/h6&gt;
 </pre>
 					</div>
+
 					<h6 class="mt">Blockquote Example</h6>
-					
+
 					<blockquote class="vcard row mb">
 						<p>It strikes me as obvious now that &ldquo;responsive web&rdquo; should actually be called &ldquo;amphibious web&rdquo;. It works here, it works there.<br>
 					Where else would you like it to work?</p>
 					<cite class="r"><span class="author fn">Sean Stephens</span>, CEO, <span class="org">Treefrog Interactive Inc.</span></cite>
 					</blockquote>
+
 					<div class="row mt">
 						<pre class="prettyprint linenums">
 &lt;blockquote class=&quot;vcard row mb&quot;&gt;
@@ -113,7 +119,9 @@ Where else would you like it to work?&lt;/p&gt;
 &lt;/blockquote class=&quot;
 </pre>
 					</div>
+
 					<h6>Microformats <a href="http://microformats.org/wiki/hcard">hCard</a> Example</h6>
+
 					<div class="vcard row">
 						<h6 class="org"><a class="url" href="#">Treefrog Interactive Inc</a><h6>
 						<p class="n"><a class="url nickname" href="https://twitter.com/cliveMoore"><span class="given-name">Clive</span> <span>Moore</span></a><p>
@@ -136,6 +144,7 @@ Where else would you like it to work?&lt;/p&gt;
 &lt;/div&gt;
 </pre>
 				</div>
+
 					<aside>
 						<div class="vcard">
 						 <address class="author"><span class="">Example address block pea.rs by </span>
@@ -155,10 +164,15 @@ Where else would you like it to work?&lt;/p&gt;
 </pre>
 				</div>
 					</aside>
+
 				</div>
+
 				<div class="col last eight">
+
 					<h5 class="rmt">Standard Lists</h5>
+
 					<div class="row">
+
 						<div class="col first four">
 							<ul>
 								<li>Unordered Lists
@@ -174,6 +188,7 @@ Where else would you like it to work?&lt;/p&gt;
 									</ul></li>
 								</ul></li>
 							</ul>
+
 							<h6>Classes</h6>
 							<ul class="disc">
 								<li>Disc Bullets
@@ -189,7 +204,9 @@ Where else would you like it to work?&lt;/p&gt;
 									<ul>
 										<li>Image Bullets</li>
 									</ul></li>
+							</ul>
 						</div>
+
 						<div class="col four last">
 							<ol>
 								<li>Ordered Lists
@@ -234,6 +251,7 @@ Where else would you like it to work?&lt;/p&gt;
 								</ol></li>
 							</ol>
 						</div>
+						</div>
 						<div class="row">
 							<pre class="prettyprint linenums">
 &lt;ul class=&quot;disc&quot;&gt;
@@ -250,6 +268,7 @@ Where else would you like it to work?&lt;/p&gt;
 		&lt;ul&gt;
 			&lt;li&gt;Image Bullets&lt;/li&gt;
 		&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
 							</pre>
 							<pre class="prettyprint linenums">
 &lt;ol class=&quot;upper_roman&quot;&gt;
@@ -266,7 +285,10 @@ Where else would you like it to work?&lt;/p&gt;
 &lt;/ol&gt;
 							</pre>
 						</div>
+
+
 				<h5 class="mb rb">Definition Lists</h5>
+
 				<dl>
 					<dt>am·phib·i·ous <sub class="meta">noun <i>\am-ˈfi-bē-əs\</i></sub></dt>
 					<dd>: simply the most elegant css framework</dd>
@@ -274,6 +296,7 @@ Where else would you like it to work?&lt;/p&gt;
 					&lt;a.mphibio.us devices&gt;<br>
 					<b>b</b> : design executed by the coordinated action of HTML5, CSS3, and JavaScript organized for rapid development &lt;<abbr title="Rapid Development Tool Kit">RDK</abbr>&gt;;<br>
 					also : architected to optimize the inherent strenghts of &lt;casscading style sheets&gt;</dd>
+
 				</dl>
 				<div class="row">
 <pre class="prettyprint linenums">
@@ -284,12 +307,16 @@ Where else would you like it to work?&lt;/p&gt;
 	&amp;lt;a.mphibio.us devices&amp;gt;&lt;br&gt;
 	&lt;b&gt;b&lt;/b&gt; : design executed by the coordinated action of HTML5, CSS3, and JavaScript organized for rapid development &amp;lt;&lt;abbr title=&quot;Rapid Development Tool Kit&quot;&gt;RDK&lt;/abbr&gt;&amp;gt;;&lt;br&gt;
 	also : architected to optimize the inherent strengths of &amp;lt;casscading style sheets&amp;gt;&lt;/dd&gt;
+
 &lt;/dl&gt;
 </pre>
 				</div>
+
 		</div>
 
 		</section>
+
+
 
 
 		<section id="forms">
@@ -306,24 +333,29 @@ Where else would you like it to work?&lt;/p&gt;
 			<div class="row">
 				<h3>Forms</h3>
 				<p><del>Web developers</del> <strong>I</strong> often fear the form itself. They are usually a pain in the neck to code. But with A.mphibio.us’ versatile naming convention basic sytatic structure and time-saving style attributes, forms are a cinch to program and implement. </p>
+
 			</div>
 			<div class="row">
+
 			<h4>Standard Fields</h4>
 				<div class="col seven first">
-					
+
 					<form>
 						<fieldset>
 							<label class="above" for="regularInput">Regular Input</label>
 							<input type="text" id="regularInput" placeholder="Sample Placeholder Text" />
 						</fieldset>
+
 						<fieldset>
 							<label class="above" for="regularInputError">Regular Input with error class</label>
 							<input type="text" id="regularInputError" class="error" placeholder="Sample of an error field" />
 						</fieldset>
+
 						<fieldset>
 							<label class="above" for="regularTextarea">Regular Textarea</label>
 							<textarea id="regularTextarea"></textarea>
 						</fieldset>
+
 						<fieldset class="radio">
 							<label for="notifications">Notifications</label>
 							<ul>
@@ -332,8 +364,11 @@ Where else would you like it to work?&lt;/p&gt;
 								<li><label><input type="radio" name="notifications" /> Send me flowers</label></li>
 							</ul>
 						</fieldset>
+
 						<button type="submit">Submit Form</button>
+					</form>
 				</div>
+
 				<div class="col nine last">
 <pre class="prettyprint linenums">
 &lt;form&gt;
@@ -341,15 +376,17 @@ Where else would you like it to work?&lt;/p&gt;
 		&lt;label class=&quot;above&quot; for=&quot;regularInput&quot;&gt;Regular Input&lt;/label&gt;
 		&lt;input type=&quot;text&quot; id=&quot;regularInput&quot; placeholder=&quot;Sample Placeholder Text&quot; /&gt;
 	&lt;/fieldset&gt;
+
 	&lt;fieldset&gt;
 		&lt;label class=&quot;above&quot; for=&quot;regularInputError&quot;&gt;Regular Input with error class&lt;/label&gt;
 		&lt;input type=&quot;text&quot; id=&quot;regularInputError&quot; class=&quot;error&quot; placeholder=&quot;Sample of an error field&quot; /&gt;
 	&lt;/fieldset&gt;
+
 	&lt;fieldset&gt;
 		&lt;label class=&quot;above&quot; for=&quot;regularTextarea&quot;&gt;Regular Textarea&lt;/label&gt;
 		&lt;textarea id=&quot;regularTextarea&quot;&gt;&lt;/textarea&gt;
 	&lt;/fieldset&gt;
-						
+
 	&lt;fieldset class=&quot;radio&quot;&gt;
 		&lt;label for=&quot;notifications&quot;&gt;Notifications&lt;/label&gt;
 		&lt;ul&gt;
@@ -358,11 +395,14 @@ Where else would you like it to work?&lt;/p&gt;
 			&lt;li&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;notifications&quot; /&gt; Send me flowers&lt;/label&gt;&lt;/li&gt;
 		&lt;/ul&gt;
 	&lt;/fieldset&gt;
+
 	&lt;button type=&quot;submit&quot;&gt;Submit Form&lt;/button&gt;
+&lt;/form&gt;
 </pre>
 				</div>
 			</div>
 			<div class="row">
+
 				<div class="col seven first">
 				<h4>Search Field</h4>
 					<form action="/" class="search">

@@ -103,6 +103,7 @@
 <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
 <span id="download_button" class="a r dmt mr">
+<a class="button" href="http://a.mphibio.us/a.mphibio.us.rdk.zip" title="Download A.mphibio.us Rapid Developmet Kit(.zip )">A.mphibio.us RDK <span class="icon-github hml"></span></a>
 </span>
 
 <div id="slides" class="row mb">
@@ -300,6 +301,16 @@ Class Name			Shorthand		Styles
 
 			</div>
 			<div class="row double_pad_bottom">
+				<ul class="tabs mini rule_below">
+					<li class="label">Show Source</li>
+					<li class="r"><a href="javascript:;" amp-tab-content="html" class="active"><span class="icon-code"></span> <abbr title="Hypertext Markup Language">HTML</abbr></a></li>
+					<li class="r"><a href="javascript:;" amp-tab-content="css"><span class="icon-code"></span> <abbr title="Casscading Style Sheets">CSS</abbr></a></li>
+				</ul>
+				<ul class="tabs-content">
+					<li id="html" class="row inset active">
+						<pre class="prettyprint linenums rmt">
+							<code>
+&lt;div class="row pad_bottom"&gt;
   &lt;h5 class="mb drb"&gt;Article&lt;/h5&gt;
 
   &lt;article class="aside"&gt;
@@ -318,6 +329,10 @@ Class Name			Shorthand		Styles
     &lt;/footer&gt;
   &lt;/article&gt;
 
+&lt;/div&gt;</code></pre>
+					</li>
+					<li id="css" class="row inset"><pre class="prettyprint linenums rmt"><code>
+article.aside
 {
 	margin: 0 0 1.6em 20%;
 }
@@ -338,6 +353,10 @@ article.aside aside
 	line-height: 1.8;
 	color: #999;
 }
+				</code></pre>
+				</li>
+			</ul>
+		</div>
 
 		<div class="row">
 			<div class="col nine first">
@@ -5278,28 +5297,57 @@ postion:fixed;top:0;left:0;right:0;
 	<div class="container">
 		<nav>
 			<ul id="horizontal" class="horizontal branded">
+				<li><a href="/index.html#intro" class="hpl">a.mphibio.us</a>
 					<ul>
+						<li><a href="/index.html#what_is_it">What is A.mphibio.us</a></li>
+						<li><a href="/index.html#how_its_made">What is it made of?</a></li>
+<!--						<li><a href="/index.html#slides">Flexslider Slideshows</a></li> -->
+ 							<li><a href="/index.html#gallery">A.mphibio.us Showcase</a></li>
+						<li><a href="/index.html#evolution">The E.volution of A.mphibio.us</a></li>
+						<li><a href="/index.html#colophon">The A.mphibio.us Colophon</a></li>
 					</ul>
 				</li>
+				<li><a href="/docs/foundation.html">Foundation</a>
 					<ul>
+						<li><a href="/docs//docs/foundation.html#core">Core</a></li>
+						<li><a href="/docs/foundation.html#grid">Symantic Grid</a></li>
+						<li><a href="/docs/foundation.html#responsive_col">Responsive Columns</a></li>
+						<li><a href="/docs/foundation.html#fluid_col">Fluid Columns</a></li>
+<!--//					<li><a href="/docs/foundation.html#padded_col">Padded Columns</a></li> //-->
+						<li><a href="/docs/foundation.html#golden_section">Golden ratio grids</a></li>
+						<li><a href="/docs/foundation.html#push_pull">Source Ordering</a></li>
+						<li><a href="/docs/foundation.html#mediaQueries">Media Queries</a></li>
 					</ul>
 				</li>
+				<li><a href="/docs/form.html">Form</a>
 					<ul>
 
+						<li><a href="/docs/form.html#typography">Typography <sub>and the golden ratio</sub></a></li>
+						<li><a href="/docs/form.html#forms">Basic Forms</a></li>
+						<li><a href="/docs/form.html#multi_forms">Mutli Beside Forms</a></li>
+						<li><a href="/docs/form.html#custom_checkbox_radios">Custom Checkboxes and Radios</a></li>
+						<li><a href="/docs/form.html#append_prepend_icons">Prepend and Append Icons</a></li>
+						<li><a href="/docs/form.html#datepicker_fields">jQuery Datepicker Fields</a></li>
+						<li><a href="/docs/form.html#tables">Tables <sub>not for layout</sub></a></li>
 					</ul>
 				</li>
+				<li><a href="/docs/function.html">Function</a>
 					<ul>
 
-						<li><a href="function.html#navigation">Horizontal Nav <sub>with tertiary</sub></a></li>
-						<li><a href="function.html#horizcss">Horizontal Nav <sub>css</sub></a></li>
-						<li><a href="function.html#vertnav">Vertical Nav <sub>with tertiary</sub></a></li>
-						<li><a href="function.html#breadcrumbs">Breadcrumbs</a></li>
-						<li><a href="function.html#tabmagic">Tabs</a></li>
-						<li><a href="function.html#pagination">Pagination nav</a></li>
+						<li><a href="/docs/function.html#navigation">Horizontal Nav <sub>with tertiary</sub></a></li>
+						<li><a href="/docs/function.html#horizcss">Horizontal Nav <sub>css</sub></a></li>
+						<li><a href="/docs/function.html#vertnav">Vertical Nav <sub>with tertiary</sub></a></li>
+						<li><a href="/docs/function.html#breadcrumbs">Breadcrumbs</a></li>
+						<li><a href="/docs/function.html#tabmagic">Tabs</a></li>
+						<li><a href="/docs/function.html#pagination">Pagination nav</a></li>
 					</ul>
 				</li>
 				<li class="active"><a href="/docs/features.html">Features</a>
 					<ul>
+						<li><a href="/docs/features.html#slides">Responsive Slide Shows</a></li>
+						<li><a href="/docs/features.html#helpers">Layout Helpers <sub>& shorthand classes</sub></a></li>
+						<li><a href="/docs/features.html#pears">Content Pea.rs</a></li>
+						<li><a href="/docs/features.html#icons">Webfont Icons <sub>by entypo</sub></a></li>
 					</ul>
 				</li>
 				<li><a href="javascript:;" class="modal_opener" amp-target="amp_overlay">Feedback</a></li>
