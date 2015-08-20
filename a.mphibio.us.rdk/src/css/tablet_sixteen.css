@@ -1,0 +1,310 @@
+/* ==========================================================================
+   22. Tablet (Portrait) Design for a width of 768px
+   ========================================================================== */
+
+@media only screen and (min-width: 768px) and (max-width: 959px)
+{
+    .container
+    {
+        width: 768px;
+    }
+
+    .container .col
+    {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .container .col.padded
+    {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .col.first
+    {
+        margin-left: 0 !important;
+        margin-right: 10px;
+    }
+
+    .col.last
+    {
+        margin-right: 0 !important;
+        margin-left: 10px;
+    }
+
+    .container .one-third.col.padded
+    {
+        width: 30.625%;
+    }
+
+    .container .two-thirds.col.padded
+    {
+        width: 64%;
+    }
+
+    .container .one-quarter.col.padded
+    {
+        width: 22.3625%;
+    }
+
+    .container .half.col.padded
+    {
+        width: 47.325%;
+    }
+
+    .container .three-quarters.col.padded
+    {
+        width: 72.325%;
+    }
+
+    .container .first.last,
+    .container .col.first.padded,
+    .container .col.last.padded,
+    .container .one-third.col.padded,
+    .container .two-thirds.col.padded,
+    .container .one-quarter.col.padded,
+    .container .half.col.padded,
+    .container .three-quarters.col.padded
+    {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-bottom: 0;
+    }
+
+    .container .one.col
+    {
+        width: 28px;
+    }
+
+    .container .two.col
+    {
+        width: 76px;
+    }
+
+    .container .three.col
+    {
+        width: 124px;
+    }
+
+    .container .four.col
+    {
+        width: 172px;
+    }
+
+    .container .five.col
+    {
+        width: 220px;
+    }
+
+    .container .six.col
+    {
+        width: 268px;
+    }
+
+    .container .seven.col
+    {
+        width: 316px;
+    }
+
+    .container .eight.col,
+    .container .half.col
+    {
+        width: 364px;
+    }
+
+    .container .nine.col
+    {
+        width: 412px;
+    }
+
+    .container .ten.col
+    {
+        width: 460px;
+    }
+
+    .container .eleven.col
+    {
+        width: 508px;
+    }
+
+    .container .twelve.col
+    {
+        width: 556px;
+    }
+
+    .container .thirteen.col
+    {
+        width: 604px;
+    }
+
+    .container .fourteen.col
+    {
+        width: 652px;
+    }
+
+    .container .fifteen.col
+    {
+        width: 700px;
+    }
+
+    .container .sixteen.col
+    {
+        width: 748px;
+    }
+    /* Offsets */
+    .container .push_one
+    {
+        margin-left: 48px;
+    }
+
+    .container .push_two
+    {
+        margin-left: 96px;
+    }
+
+    .container .push_three
+    {
+        margin-left: 144px;
+    }
+
+    .container .push_four
+    {
+        margin-left: 192px;
+    }
+
+    .container .push_five
+    {
+        margin-left: 240px;
+    }
+
+    .container .push_six
+    {
+        margin-left: 288px;
+    }
+
+    .container .push_seven
+    {
+        margin-left: 336px;
+    }
+
+    .container .push_eight
+    {
+        margin-left: 384px;
+    }
+
+    .container .push_nine
+    {
+        margin-left: 432px;
+    }
+
+    .container .push_ten
+    {
+        margin-left: 480px;
+    }
+
+    .container .push_eleven
+    {
+        margin-left: 528px;
+    }
+
+    .container .push_twelve
+    {
+        margin-left: 576px;
+    }
+
+    .container .push_thirteen
+    {
+        margin-left: 624px;
+    }
+
+    .container .push_fourteen
+    {
+        margin-left: 672px;
+    }
+
+    .container .push_fifteen
+    {
+        margin-left: 720px;
+    }
+
+    .container .pull_one
+    {
+        margin-left: -48px;
+    }
+
+    .container .pull_two
+    {
+        margin-left: -96px;
+    }
+
+    .container .pull_three
+    {
+        margin-left: -144px;
+    }
+
+    .container .pull_four
+    {
+        margin-left: -192px;
+    }
+
+    .container .pull_five
+    {
+        margin-left: -240px;
+    }
+
+    .container .pull_six
+    {
+        margin-left: -288px;
+    }
+
+    .container .pull_seven
+    {
+        margin-left: -336px;
+    }
+
+    .container .pull_eight
+    {
+        margin-left: -384px;
+    }
+
+    .container .pull_nine
+    {
+        margin-left: -432px;
+    }
+
+    .container .pull_ten
+    {
+        margin-left: -480px;
+    }
+
+    .container .pull_eleven
+    {
+        margin-left: -528px;
+    }
+
+    .container .pull_twelve
+    {
+        margin-left: -576px;
+    }
+
+    .container .pull_thirteen
+    {
+        margin-left: -624px;
+    }
+
+    .container .pull_fourteen
+    {
+        margin-left: -672px;
+    }
+
+    .container .pull_fifteen
+    {
+        margin-left: -720px;
+    }
+
+    .container .pull_sixteen
+    {
+        margin-left: -760px;
+    }
+}

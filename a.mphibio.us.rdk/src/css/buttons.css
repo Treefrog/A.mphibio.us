@@ -1,0 +1,159 @@
+/* ==========================================================================
+   8. Buttons
+   ========================================================================== */
+
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="file"],
+.button_grp .active,
+.filter_nav>dd>a
+{
+    font-size: 1em;
+    position: relative;
+    display: inline-block;
+    margin-top: 0;
+    margin-left: 0;
+    color: #4d4d4d;
+    font-weight: normal;
+    text-decoration: none;
+    cursor: pointer;
+    line-height: normal;
+    padding: .625em;
+    background-color: #f1f1f1;
+    border: 1px solid #4d4d4d;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.button,
+a.button,
+.button a:visited,
+.button:visited,
+.button a,
+.button a:visited,
+.pager a:visited
+{
+    color: #444;
+    text-decoration: none;
+}
+
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+input[type="file"]:hover,
+.filter_nav>dd>a:hover
+{
+    color: #1b378c;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #1b378c;
+}
+
+.button:active,
+button:active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+input[type="button"]:active,
+input[type="file"]:active,
+.button_grp .active,
+.button_grp a.button:active,
+.button_grp a.button:focus,
+.filter_nav>dd>a:active,
+.pager_nav .active
+{
+    color: #fff;
+    border: 1px solid #7485b9;
+    background-color: #1b378c;
+}
+
+.button.full-width,
+button.full-width,
+input[type="submit"].full-width,
+input[type="reset"].full-width,
+input[type="button"].full-width
+{
+    width: 100%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-align: center;
+}
+
+ul.button_grp,
+ul.pager_nav
+{
+    list-style: none;
+    display: inline-block;
+    margin: 0;
+}
+
+ul.pager_nav li,
+ul.button_grp li
+{
+	display: inline;
+	float: none;
+	margin: 0;
+}
+
+ul.pager_nav li input[type="text"]
+{
+	width: 3em;
+}
+
+.button_grp,
+.button_grp>
+{
+    float: left;
+    margin: 0;
+}
+
+ul.button_grp .button,
+ul.button_grp .active,
+.pager_nav input[type="text"],
+.pager_nav button,
+.pager_nav .button,
+.pager_nav .active
+{
+    padding: 0.425em;
+/*     border: 1px solid #dcd7d1; */
+    margin: 0;
+    -webkit-border-radius: 0;
+    -khtml-border-radius: 0;
+    -moz-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+}
+
+.filter_nav,
+.pager_nav,
+.pager_nav input[type="text"],
+.pager_nav button
+{
+    font: -webkit-control;
+}
+
+.pager_nav .button.last
+{
+    -webkit-border-radius: 0;
+    -khtml-border-radius: 0;
+    -moz-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+}
+
+.button_grp .first .button,
+ul.button_grp .first.button
+{
+}
+
+.button_grp .last .button,
+.button_grp .last.button,
+.pager_nav .button.last
+{
+}

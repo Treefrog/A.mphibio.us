@@ -1,0 +1,40 @@
+table.tablesorter thead tr th
+{
+	position: relative;
+	color: #666;
+}
+
+
+table.tablesorter thead tr th:before,
+table.tablesorter thead tr th:after
+{
+	position:absolute;
+	border:solid;
+	border-color:#8a8a8a transparent;
+	border-width: 0 4px 5px 4px;
+	top:8px;
+	content:"";
+	display:block;
+	right:5px;
+	width: 0;
+	z-index:301;
+}
+
+table.tablesorter thead tr th:after
+{
+	border-width: 5px 4px 0 4px;
+	top:15px;
+}
+table.tablesorter thead tr th.headerSortUp,
+table.tablesorter thead tr th.headerSortDown
+{
+	color: #000;
+}
+table.tablesorter thead tr th.headerSortUp:before
+{
+	border-color:#333 transparent;
+}
+table.tablesorter thead tr th.headerSortDown:after
+{
+	border-color:#333 transparent;
+}

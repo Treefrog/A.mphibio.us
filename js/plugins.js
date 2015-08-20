@@ -4,7 +4,7 @@
  * http://a.mphibio.us
  * This content is released under the MIT license
  * http://www.opensource.org/licenses/mit-license.php
- * 31-03-2015
+ * 10-08-2015
  */
 
 // Avoid `console` errors in browsers that lack a console.

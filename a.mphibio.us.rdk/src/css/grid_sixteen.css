@@ -1,0 +1,340 @@
+/* ==========================================================================
+   20. The Grid ala 960.gs
+   ========================================================================== */
+
+.container
+{
+    width: 960px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.container.fluid
+{
+    width: 96%;
+}
+
+.container.fluid.bleed
+{
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.container .col
+{
+    float: left;
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.container .col.padded
+{
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Nested col Classes */
+
+.col.sixteen .col.sixteen,
+.col.first
+{
+    margin-left: 0 !important;
+    padding-left: 0;
+}
+
+.col.sixteen .col.sixteen,
+.col.last
+{
+    margin-right: 0 !important;
+    padding-right: 0;
+}
+
+/* Base Grid */
+
+.container .one.col,
+.container table th.one,
+.container table td.one
+{
+    width: 40px;
+}
+
+.container .two.col,
+.container table th.two,
+.container table td.two
+{
+    width: 100px;
+}
+
+.container .three.col,
+.container table th.three,
+.container table td.three
+{
+    width: 160px;
+}
+
+.container .four.col,
+.container table th.four,
+.container table td.four,
+.container .one-quarter.col
+{
+    width: 220px;
+}
+
+.container .five.col,
+.container table th.five,
+.container table td.five
+{
+    width: 280px;
+}
+
+.container .six.col,
+.container table th.six,
+.container table td.six
+{
+    width: 340px;
+}
+
+.container .seven.col,
+.container table th.seven,
+.container table td.seven
+{
+    width: 400px;
+}
+
+.container .eight.col,
+.container table th.eight,
+.container table td.eight,
+.container .half.col
+{
+    width: 460px;
+}
+
+.container .nine.col,
+.container table th.nine,
+.container table td.nine
+{
+    width: 520px;
+}
+
+.container .ten.col,
+.container table th.ten,
+.container table td.ten
+{
+    width: 580px;
+}
+
+.container .eleven.col,
+.container table th.eleven,
+.container table td.eleven
+{
+    width: 640px;
+}
+
+.container .twelve.col,
+.container table th.twelve,
+.container table td.twelve,
+.container .three-quarters.col
+{
+    width: 700px;
+}
+
+.container .thirteen.col,
+.container table th.thirteen,
+.container table td.thirteen
+{
+    width: 760px;
+}
+
+.container .fourteen.col,
+.container table th.fourteen,
+.container table td.fourteen
+{
+    width: 820px;
+}
+
+.container .fifteen.col,
+.container table th.fifteen,
+.container table td.fifteen
+{
+    width: 880px;
+}
+
+.container .sixteen.col,
+.container table th.sixteen,
+.container table td.sixteen
+{
+    width: 940px;
+}
+
+/* Offsets */
+
+.container .push_one
+{	
+    margin-left: 60px;
+}
+
+.container .push_two
+{
+    margin-left: 120px;
+}
+
+.container .push_three
+{
+    margin-left: 180px;
+}
+
+.container .push_four
+{
+    margin-left: 240px;
+}
+
+.container .push_five
+{
+    margin-left: 300px;
+}
+
+.container .push_six
+{
+    margin-left: 370px;
+}
+
+.container .push_seven
+{
+    margin-left: 420px;
+}
+
+.container .push_eight
+{
+    margin-left: 480px;
+}
+
+.container .push_nine
+{
+    margin-left: 540px;
+}
+
+.container .push_ten
+{
+    margin-left: 610px;
+}
+
+.container .push_eleven
+{
+    margin-left: 660px;
+}
+
+.container .push_twelve
+{
+    margin-left: 720px;
+}
+
+.container .push_thirteen
+{
+    margin-left: 780px;
+}
+
+.container .push_fourteen
+{
+    margin-left: 840px;
+}
+
+.container .push_fifteen
+{
+    margin-left: 900px;
+}
+
+.container .push_one-third
+{
+    margin-left: 32% !important;
+}
+
+.container .push_two-thirds
+{
+    margin-left: 66%;
+}
+
+.container .pull_one
+{
+    margin-left: -60px;
+}
+
+.container .pull_two
+{
+    margin-left: -120px;
+}
+
+.container .pull_three
+{
+    margin-left: -180px;
+}
+
+.container .pull_four
+{
+    margin-left: -240px;
+}
+
+.container .pull_five
+{
+    margin-left: -300px;
+}
+
+.container .pull_six
+{
+    margin-left: -360px;
+}
+
+.container .pull_seven
+{
+    margin-left: -420px;
+}
+
+.container .pull_eight
+{
+    margin-left: -480px;
+}
+
+.container .pull_nine
+{
+    margin-left: -540px;
+}
+
+.container .pull_ten
+{
+    margin-left: -590px;
+}
+
+.container .pull_eleven
+{
+    margin-left: -660px;
+}
+
+.container .pull_twelve
+{
+    margin-left: -720px;
+}
+
+.container .pull_thirteen
+{
+    margin-left: -780px;
+}
+
+.container .pull_fourteen
+{
+    margin-left: -840px;
+}
+
+.container .pull_fifteen
+{
+    margin-left: -900px;
+}
+
+.container .pull_sixteen
+{
+    margin-left: -950px;
+}
+
+

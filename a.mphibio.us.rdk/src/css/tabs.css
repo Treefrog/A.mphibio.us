@@ -1,0 +1,131 @@
+/* ==========================================================================
+   9. Tabs (activated by scripts.js)
+   ========================================================================== */
+
+
+ul.tabs
+{
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.tabs li
+{
+    display: inline-block;
+    float: left;
+    width: auto;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+ul.tabs li.right,
+ul.tabs li.r
+{
+    float: right;
+}
+
+ul.tabs.big,
+ul.tabs.bg
+{
+    font-size: 1.3em;
+}
+
+ul.tabs li a
+{
+    position: relative;
+    top: 3px;
+    display: block;
+    width: auto;
+    padding: 0px 20px;
+    line-height: 30px;
+    margin: 0;
+    color: #4d4d4d;
+    text-decoration: none;
+    background-color: #f1f1f1;
+    border: 1px solid #ededed;
+    border-bottom: 3px solid #fff;
+}
+
+ul.tabs li a:hover
+{
+    top: 2px;
+	background-color: #fafafa;
+}
+
+ul.tabs li a.active
+{
+	top: 0;
+    border-left-width: 1px;
+    margin: 0;
+    color: #6e574c;
+    background-color: #fff;
+}
+
+ul.tabs.mini li,
+ul.tabs.mini li a
+{
+    font: -webkit-control;
+    font-size: 0.826em;
+}
+
+ul.tabs li:first-child a.active
+{
+    margin-left: 0;
+}
+
+ul.tabs li:first-child a
+{
+    -webkit-border-top-left-radius: 2px;
+    -moz-border-radius-topleft: 2px;
+    border-top-left-radius: 2px;
+}
+
+ul.tabs li:last-child a
+{
+}
+
+ul.tabs-content
+{
+	position: relative;
+    top: 3px;
+    margin: 0;
+    display: block;
+    list-style: none;
+}
+
+ul.tabs-content > li
+{
+    display: none;
+}
+
+ul.tabs-content > li.active
+{
+    display: block;
+    background-color: #fefefe;
+}
+
+/* Clearfixing tabs for beautiful stacking */
+
+ul.tabs:before,
+ul.tabs:after
+{
+    content: '\0020';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+ul.tabs:after
+{
+    clear: both;
+}
+
+ul.tabs
+{
+    zoom: 1;
+}
