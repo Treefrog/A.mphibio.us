@@ -200,6 +200,8 @@ amp.desktoplisteners = function() {
 		* *** NOT *** executed by mobile browsers. See amp.mobilelisteners instead.
 		* ================================================================== */
 
+	initTabNav();
+
 };
 
 $(document).ready(function() {
@@ -213,3 +215,13 @@ $(document).ready(function() {
 	amp.init(); // don't delete this - it is part of the A.mphibio.us startup
 
 });
+
+
+// Tab key handling for accessible submenu navigation
+// Plugin adds .hover class to link parent li's when "tab-focused"
+// Remember to add li.hover > ul { style rules } in css file
+function initTabNav() {
+	jQuery('ul.mainmenu').tabNav({
+		items: 'li'
+	});
+}
