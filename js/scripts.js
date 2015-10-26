@@ -67,24 +67,6 @@ amp.bindlisteners = function() {
 	$('ul li:last-child').addClass('last');
 
 
-	$(function(){
-		var d = 'placeholder' in document.createElement('input');
-		if (!d){
-			$('input[placeholder]').each(function(){
-				$(this).val(element.attr('placeholder')).addClass('placeholder');
-				}).bind('focus',function(){
-					if ($(this).val() == element.attr('placeholder')){
-						$(this).val('').removeClass('placeholder');
-						}
-		}).bind('blur',function(){
-				if ($(this).val() === ''){
-					$(this).val(element.attr('placeholder')).addClass('placeholder');
-				}
-			});
-		}
-	});
-	
-
 	$(document).on('click', '.checkall', (function () {
 		$(this).closest('fieldset').find(':checkbox').prop('checked', this.checked);
 	}));
@@ -222,5 +204,13 @@ $(document).ready(function() {
 		* ================================================================== */
 	
 	amp.init(); // don't delete this - it is part of the A.mphibio.us startup
+	// "tab" key handling
+
+	function initTabNav() {
+		jQuery('ul.mainmenu').tabNav({
+			items: 'li'
+		});
+	}
+
 
 });

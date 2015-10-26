@@ -6,7 +6,8 @@
 .container .one-quarter.col,
 .container .one-third.col,
 .container .one-half.col,
-.container .two-thirds.col
+.container .two-thirds.col,
+.container .three-quarters.col
 {
     margin-left: 1%;
     margin-right: 1%;
@@ -16,7 +17,8 @@
 .container .one-quarter.col.padded,
 .container .one-third.col.padded,
 .container .one-half.col.padded,
-.container .two-thirds.col.padded
+.container .two-thirds.col.padded,
+.container .three-quarters.col.padded
 {
     margin-left: 0;
     margin-right: 0;

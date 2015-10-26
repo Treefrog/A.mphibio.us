@@ -39,6 +39,7 @@ module.exports = function(grunt) {
 					'src/js/jquery.localScroll-1.3.5.js',
 					'src/js/imagesloaded.pkgd.js',
 					'src/js/picturefill.js',
+					'src/js/jquery.placeholder.js',
 					'src/js/jquery.tabnav.js'
 				],
 				dest:
