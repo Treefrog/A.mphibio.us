@@ -12,6 +12,11 @@ form
     margin-bottom: 1.625em;
 }
 
+.LEAP_FORM_container
+{
+    margin-bottom: 1.625em;
+}
+
 fieldset
 {
     border: 0;
