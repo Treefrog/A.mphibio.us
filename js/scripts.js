@@ -174,6 +174,26 @@ amp.bindlisteners = function() {
 			$('.focus').removeClass('blur');
 	}));
 	
+	$(document).on( 'click', '#search_toggle, .search_cancel', (function(){
+		if($('#search_toggle').hasClass('active')){
+			$('#search_toggle').removeClass('active');
+			$('#search_form').removeClass('open');
+		} else {
+			$('#search_toggle').addClass('active');
+			$('#search_form').addClass('open');
+		}
+	}));
+
+	$(document).on( 'click', '#nav_toggle', (function(){
+		
+		if($('#nav_toggle').hasClass('active')){
+			$('#nav_toggle').removeClass('active');
+			$('#mainnav').removeClass('open');
+		} else {
+			$('#nav_toggle').addClass('active');
+			$('#mainnav').addClass('open');
+		}
+	}));
 };
 
 amp.mobilelisteners = function() {
@@ -182,7 +202,66 @@ amp.mobilelisteners = function() {
 		* *** NOT *** executed by desktop browsers. See amp.desktoplisteners instead.
 		* ================================================================== */
 
+		//define dragging, set to false by default
+		var dragging = false
+		
+		//set dragging active
+		$("body").on("touchmove", function(){
+			dragging = true;
+		});
+		
+		//reset dragging
+		$("body").on("touchstart", function(){
+			dragging = false;
+		});
+	
+		$(document).on('click', '#mainnav ul.horizontal li a', (function(event){
+			
+			console.log('click');
+	
+			// prevent immediate link following on non iOS and BB devices
+			var iOS = (navigator.userAgent.match(/iPad|iPhone|iPod/g) ? true : false);
+			var BB = (navigator.userAgent.match(/Blackberry|BB/g) ? true : false);
+	
+			if(iOS == false || BB == false) {
+	
+				var siblings = $(this).siblings('ul, .drop').length;
+	
+				if($(this).hasClass('activated') || siblings < 1 ) {
+					//go ahead, follow link
+				} else {
+					event.preventDefault();
+					$(this).addClass('activated');
+				}
+				
+			}
+	
+		}));
+	
+		$(document).on('touchend', '#mainnav ul.horizontal li a', function(){
+			
+			console.log('touchend');
+	
+			if(dragging = false) {
+	
+				var siblings = $(this).siblings('ul').length;
+			
+				if(siblings > 1) {
+					$(this).addClass('okgo');
+				}
+	
+			}
+	
+		});
+	
+		$(document).on('click', '#mainnav li.okgo > a', function(){
+			window.location.href($(this).attr('href'));
+		});
+		
+		
+
 };
+
 
 amp.desktoplisteners = function() {
 	/* ==================================================================
@@ -191,6 +270,8 @@ amp.desktoplisteners = function() {
 		* ================================================================== */
 		
 	$.localScroll();
+	
+	initTabNav();
 
 };
 
@@ -202,15 +283,19 @@ $(document).ready(function() {
 		* Generally a good thing to add listeners to the object,
 		* however it is ok to be putting listeners directly in here.
 		* ================================================================== */
-	
 	amp.init(); // don't delete this - it is part of the A.mphibio.us startup
-	// "tab" key handling
-
-	function initTabNav() {
-		jQuery('ul.mainmenu').tabNav({
-			items: 'li'
-		});
-	}
-
+	
+	// LEAP5 Only 
+	// $('#leapheader').draggable();
 
 });
+
+
+// Tab key handling for accessible submenu navigation
+// Plugin adds .hover class to link parent li's when "tab-focused"
+// Remember to add li.hover > ul { style rules } in css file
+function initTabNav() {
+	jQuery('ul.mainmenu').tabNav({
+		items: 'li'
+	});
+}

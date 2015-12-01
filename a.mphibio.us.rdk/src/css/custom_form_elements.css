@@ -15,18 +15,24 @@
 */
     margin-left: 0;
     margin-bottom: 1.1em;
-    padding-right: 1.3em;
-
-    background-color: #f1f1f1;
-    border: 1px solid #4d4d4d;
-
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
+    
+    color: #e43c23;
+    background: #fff;
+    border: 1px solid #e43c23;
+    border-radius: 3px;
+    
     transition: all 0.3s ease-out;
 }
-.styled_select:after,
-.ui_tpicker_timezone:after
+
+.styled_select select
+{
+	width: 100% !important;
+	color: #e43c23;
+	padding-right: 1.625em;
+}
+
+.styled_select:before,
+.ui_tpicker_timezone:before
 {
     position: absolute;
     top: 0.5em;
@@ -48,10 +54,11 @@
 .styled_select:hover,
 .ui_tpicker_timezone:hover
 {
-    color: #1b378c;
+    color: #1a1b1a;
     background-color: #fff;
     background-image: none;
-    border: 1px solid #1b378c;
+    border: 1px solid #1a1b1a;
+/*     transform: scale(1.1); */
 }
 
 .ui_tpicker_timezone
@@ -71,8 +78,10 @@
 .styled_select:active,
 .styled_select:focus
 {
-    border: 1px solid #7485b9;
-    background-color: #1b378c;
+    border: 1px solid #1a1b1a;
+    color: #fff;
+    background-color: #1a1b1a;
+/*     transform: scale(1.1); */
 }
 
 .styled_select select,

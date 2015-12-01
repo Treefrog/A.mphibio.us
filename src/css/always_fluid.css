@@ -132,12 +132,12 @@
     margin-right: 1%;
 }
 
-.container.fluid .col.first
+.container .col.first
 {
     margin-left: 0 !important;
 }
 
-.container.fluid .col.last
+.container .col.last
 {
     margin-right: 0 !important;
 }

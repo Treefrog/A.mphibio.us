@@ -24,20 +24,6 @@ ul.nav
     list-style: none outside;
 }
 
-.navbar
-{
-    *position: relative;
-    *z-index: 2;
-    overflow: visible;
-}
-
-.navbar-inner
-{
-    background-color: #cfcfcf;
-    border-top: 1px solid #efefef;
-    border-bottom: 1px solid #fefefe;
-}
-
 .horizontal
 {
     margin: 0;
@@ -69,6 +55,7 @@ ul.nav
 .filter_nav>dd>a
 {
     display: inline-block;
+    color: #0068ac;
     float: none;
     padding: 0.5em 0.865em;
     font-size: 1em;
@@ -80,10 +67,9 @@ ul.nav
 }
 
 .horizontal>li>a:hover,
-.vertical>li>a:hover
+.horizontal>li>a:focus
 {
-    background: #89ac4c;
-    background: rgba(0, 0, 0, 0.1);
+	color: #80a401;
 }
 
 .horizontal > li > ul,
@@ -103,9 +89,7 @@ ul.nav
 {
     display: block;
     background: #ffffff;
-    background: rgba(255, 255, 255, 0.9);
-    color: #0080c6;
-    font-weight: bold;
+    color: #0068ac;
     text-decoration: none;
     white-space: nowrap;
     padding: .625em 3em .625em 1.125em;
@@ -116,8 +100,7 @@ ul.nav
 .horizontal > li > ul > li > ul > li > a:hover,
 .vertical > li > ul > li > ul > li > a:hover
 {
-    background: #0080c6;
-    background: rgba(0, 128, 198, 1);
+    background: #0068ac;
     color: #fff;
 }
 
@@ -126,17 +109,11 @@ ul.nav
 {
     position: absolute;
     z-index: 5000;
-    max-height: 0;
     width: auto;
     margin-left: 0;
     margin-top: 0;
 /*  border: 1px solid #cfcfcf; */
-    -webkit-box-shadow: 0 1px 9px rgba(0, 0, 0, 0.25);
-    -moz-box-shadow: 0 1px 9px rgba(0, 0, 0, 0.25);
     box-shadow: 0 1px 9px rgba(0, 0, 0, 0.25);
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
     display: none;
 }
@@ -150,7 +127,6 @@ ul.nav
 .horizontal > li:hover > ul,
 .vertical > li:hover > ul
 {
-    height: auto;
     display: block;
 }
 
@@ -168,11 +144,7 @@ ul.nav
     left: 12%;
     position: absolute;
     z-index: 301;
-    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    -webkit-background-clip: padding-box;
-    -moz-background-clip: padding;
     background-clip: padding-box;
 }
 
@@ -201,15 +173,9 @@ ul.nav
     top: 0%;
     z-index: 5005;
     margin: 0;
-    height: 0;
     width: inherit;
 /*  border: 1px solid #cfcfcf; */
-    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
-    -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
     display: none;
 }
@@ -227,8 +193,27 @@ ul.nav
 {
     display: block;
     left: 100%;
-    height: auto;
 }
+
+
+	
+.horizontal > li a.submenu span:after
+{
+    content:'\e6d0';
+    display:block;
+    font-family:'entypo';
+    font-size:1em;
+    position:absolute;
+    right:0.2em;
+    top:0.5em;
+}
+.horizontal > li:hover > a.submenu span:after,
+.horizontal > li:active > a.submenu span:after
+{
+	transform: rotate(90deg);
+}
+	
+	
 
 .filter_nav
 {
@@ -239,14 +224,6 @@ ul.nav
 {
     border: 1px solid #4d4d4d;
     padding: 0.5em 0.865em;
-    -webkit-border-bottom-left-radius: 6px;
-    -webkit-border-top-left-radius: 6px;
-    -moz-border-radius-bottomleft: 6px;
-    -moz-border-radius-topleft: 6px;
-    -khtml-border-bottom-left-radius: 6px;
-    -khtml-border-top-left-radius: 6px;
-    -o-border-bottom-left-radius: 6px;
-    -o-border-top-left-radius: 6px;
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
 }
@@ -264,36 +241,14 @@ ul.nav
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;
-    -o-border-radius: 0;
-    -moz-border-radius: 0;
-    -khtml-border-radius: 0;
-    -webkit-border-radius: 0;
 }
 
 .filter_nav>dd:last-child>a
 {
-    -o-border-bottom-right-radius: 6px;
-    -o-border-top-right-radius: 6px;
-    -khtml-border-bottom-right-radius: 6px;
-    -khtml-border-top-right-radius: 6px;
-    -moz-border-radius-bottomright: 6px;
-    -moz-border-radius-topright: 6px;
-    -webkit-border-bottom-right-radius: 6px;
-    -webkit-border-top-right-radius: 6px;
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
 }
 
-.horizontal>li>a:hover,
-.filter_nav>dd>a:hover
-{
-    text-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
-}
-
-#navigation .navbar-inner
-{
-    margin-bottom: 2em;
-}
 
 .breadcrumb
 {
@@ -344,4 +299,22 @@ ul.nav
 {
     content: '';
     content: none;
+}
+
+
+@media only screen and (max-width: 800px)
+{
+	.horizontal>li
+	{
+		float: none;
+	}
+	
+	.horizontal > li > ul,
+	.vertical > li > ul,
+	.horizontal > li > ul > li > ul,
+	.vertical > li > ul > li > ul,
+	.vertical > li > ul
+	{
+		position: relative;
+	}
 }

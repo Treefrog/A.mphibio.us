@@ -167,6 +167,28 @@ amp.bindlisteners = function() {
 			$('#'+killIt+'').removeClass('show');
 			$('.focus').removeClass('blur');
 	}));
+	
+	$(document).on( 'click', '#searchtoggle, .search_cancel', (function(){
+		if($('#searchtoggle').hasClass('active')){
+			$('#searchtoggle').removeClass('active');
+			$('#search_form').removeClass('open');
+		} else {
+			$('#searchtoggle').addClass('active');
+			$('#search_form').addClass('open');
+		}
+	}));
+	
+
+	$(document).on( 'click', '#navtoggle', (function(){
+		
+		if($('#navtoggle').hasClass('active')){
+			$('#navtoggle').removeClass('active');
+			$('#mobilenav').removeClass('open');
+		} else {
+			$('#navtoggle').addClass('active');
+			$('#mobilenav').addClass('open');
+		}
+	}));
 };
 
 amp.mobilelisteners = function() {
@@ -174,6 +196,62 @@ amp.mobilelisteners = function() {
 		* Mobile browser specific listeners are placed here
 		* *** NOT *** executed by desktop browsers. See amp.desktoplisteners instead.
 		* ================================================================== */
+
+		//define dragging, set to false by default
+		var dragging = false
+		
+		//set dragging active
+		$("body").on("touchmove", function(){
+			dragging = true;
+		});
+		
+		//reset dragging
+		$("body").on("touchstart", function(){
+			dragging = false;
+		});
+	
+		$(document).on('click', '#mobilenav ul.mainnav li a', (function(event){
+			
+			console.log('click');
+	
+			// prevent immediate link following on non iOS and BB devices
+			var iOS = (navigator.userAgent.match(/iPad|iPhone|iPod/g) ? true : false);
+			var BB = (navigator.userAgent.match(/Blackberry|BB/g) ? true : false);
+	
+			if(iOS == false || BB == false) {
+	
+				var siblings = $(this).siblings('ul, .drop').length;
+	
+				if($(this).hasClass('activated') || siblings < 1 ) {
+					//go ahead, follow link
+				} else {
+					event.preventDefault();
+					$(this).addClass('activated');
+				}
+				
+			}
+	
+		}));
+	
+		$(document).on('touchend', '#mobilenav ul.mainnav li a', function(){
+			
+			console.log('touchend');
+	
+			if(dragging = false) {
+	
+				var siblings = $(this).siblings('ul').length;
+			
+				if(siblings > 1) {
+					$(this).addClass('okgo');
+				}
+	
+			}
+	
+		});
+	
+		$(document).on('click', '#mobilenav li.okgo > a', function(){
+			window.location.href($(this).attr('href'));
+		});
 
 };
 
@@ -196,6 +274,7 @@ $(document).ready(function() {
 		* however it is ok to be putting listeners directly in here.
 		* ================================================================== */
 	amp.init(); // don't delete this - it is part of the A.mphibio.us startup
+	$('#leapheader').draggable();
 
 });
 

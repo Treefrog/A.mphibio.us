@@ -52,11 +52,12 @@ module.exports = function(grunt) {
 				[
 					// Optional libraries
 					
-					// 'src/css/flexslider.css',
+					'src/css/flexslider.css',
 					// 'src/css/float_labels.css',
 					// 'src/css/datatable.css',
 					// 'src/css/tablesorter.css',
-					// 'src/css/sequencejs-theme.sliding-horizontal-parallax.css',
+					'src/css/sequencejs-theme.sliding-horizontal-parallax.css',
+					'css/jquery.fancybox.css',
 					
 					// Standard libraries
 					

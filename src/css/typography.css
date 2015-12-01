@@ -17,6 +17,7 @@ h4,
 h5,
 h6
 {
+	font-family:  "myriad-pro", "Myriad Pro Light", "Myriad Pro", "Lucida Grande", "Lucida Sans", Lucida, Arial, Helvetica, sans-serif;
     font-weight: normal;
     margin: 0;
     margin-bottom: 0.3em;
@@ -34,7 +35,8 @@ h6 a
 
 h1
 {
-    font-size: 2.6em;
+    font-size: 3em;
+    font-weight: 300;
     margin: 0 0 0.67em 0;
 }
 
@@ -46,6 +48,7 @@ h1 small
 
 h2
 {
+    font-weight: 300;
     font-size: 2em;
 }
 
@@ -208,9 +211,6 @@ a:visited
     /*   an excellent article on the subject by Dan Cederhome
     /*  http://alistapart.com/article/understanding-css3-transitions
     */
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
 }
 
@@ -225,7 +225,7 @@ a:hover,
 a:focus
 {
     outline: 0;
-    color: #000;
+    color: #191919;
 }
 
 p a,

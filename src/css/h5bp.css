@@ -36,13 +36,13 @@ body
      */
     margin: 0;
     background: #fff;
-    color: #4d4d4d;
-    font-family: "Myriad Pro", "Lucida Grande", "Lucida Sans", Lucida, Arial, Helvetica, sans-serif;
+    color: #1a1b1a;
+	font-family: "myriad-pro", "Myriad Pro", "Lucida Grande", "Lucida Sans", Lucida, Arial, Helvetica, sans-serif;
     /*  For some exellent options check out
         http://cssfontstack.com
         ========================================== */
     font-weight: normal;
-    font-size: 1em;
+    font-size: 1;
     /* For the most device agnostic renderings
         leave units out of line height
         ========================================== */

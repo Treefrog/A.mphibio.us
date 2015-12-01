@@ -16,18 +16,30 @@ input[type="file"],
     display: inline-block;
     margin-top: 0;
     margin-left: 0;
-    color: #4d4d4d;
+    color: #fff;
     font-weight: normal;
     text-decoration: none;
     cursor: pointer;
     line-height: normal;
-    padding: .625em;
-    background-color: #f1f1f1;
-    border: 1px solid #4d4d4d;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
+    padding: .625em 1.625em;
+    background: rgba(255,255,255,0.2);
+    border: 1px solid #fff;
+    border-radius: 3px;
     transition: all 0.3s ease-out;
+}
+
+.wht-bg .button,
+.wht-bg button,
+.wht-bg .button:visited,
+.wht-bg button:visited,
+.wht-bg input[type="submit"],
+.wht-bg input[type="reset"],
+.wht-bg input[type="button"],
+.wht-bg input[type="file"]
+{
+    color: #e43c23;
+    background: transparent;
+    border: 1px solid #e43c23;
 }
 
 .button,
@@ -38,8 +50,11 @@ a.button,
 .button a:visited,
 .pager a:visited
 {
-    color: #444;
-    text-decoration: none;
+    color: #fff;
+/*
+	color: #444;
+	text-decoration: none;
+*/
 }
 
 .button:hover,
@@ -50,10 +65,9 @@ input[type="button"]:hover,
 input[type="file"]:hover,
 .filter_nav>dd>a:hover
 {
-    color: #1b378c;
-    background-color: #fff;
+    background-color: transparent;
     background-image: none;
-    border: 1px solid #1b378c;
+    transform: scale(1.1);
 }
 
 .button:active,
@@ -68,9 +82,9 @@ input[type="file"]:active,
 .filter_nav>dd>a:active,
 .pager_nav .active
 {
+    border: 1px solid #191919;
     color: #fff;
-    border: 1px solid #7485b9;
-    background-color: #1b378c;
+    background-color: #191919;
 }
 
 .button.full-width,

@@ -10,7 +10,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>Amphibious | Simply Elegant HTML5/CSS3 Responsive Front End Development Kit | 1.5.1 November 14, 2014</title>
+<title>Amphibious | Simply Elegant HTML5/CSS3 Responsive Front End Development Kit | 1.5.5 December 1, 2015</title>
 <meta name="description" content="A.mphibio.us is a responsive design tool for rapid development has a familiar sixteen column, lightweight 960 grid as its base, but elegantly scales down to downsized browser windows">
 <meta name="keywords" content="css3, html5, responsive, web, design, mobile layout, responsive design">
 <meta name="viewport" content="width=device-width">
@@ -48,9 +48,11 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="apple-mobile-web-app-title" content="A.mphibio.us">
 
+<!--
 <link rel="stylesheet" href="src/css/sequencejs-theme.sliding-horizontal-parallax.css">
 <link rel="stylesheet" href="src/css/flexslider.css">
 <link rel="stylesheet" href="css/jquery.fancybox.css">
+-->
 <link rel="stylesheet" href="css/a.mphibio.us.min.css">
 <link rel="stylesheet" href="css/a.mphibio.us.skin.css">
   
@@ -930,7 +932,7 @@ A.mphibio.us uses lightweight, basic styles as its foundation. It is ready to ad
 	</div> <!--#fifth-->
 </div><!-- //#content -->
 
-<div id="navbar" class="f t l r">
+<div id="mainnav" class="f t l r">
 <!--// WTF?
 
 .f.t.l.r == .fixed .top .left .right
@@ -1004,6 +1006,8 @@ postion:fixed;top:0;left:0;right:0;
 	</div>
 </div>
 
+<button id="nav_toggle" type="button" class="f t l hmt hml"><span class="icon-menu-list"></span></button>
+
 <nav class="f t r mr" style="z-index:99999;">
 	<ol id="nav">
 		<li class="reset"><a href="#intro" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
@@ -1039,7 +1043,6 @@ postion:fixed;top:0;left:0;right:0;
 		</section>
 	</div>
 </div>
-
 
 <a href="http://github.com/Treefrog-Interactive/A.mphibio.us">
   <img id="forkme" src="http://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt="Fork me on GitHub">
