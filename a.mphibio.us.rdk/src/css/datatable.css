@@ -32,12 +32,10 @@ div.dataTables_length select
 	width:120px;
 	overflow: hidden;
 	background-image: none;
-	background-image: url(../../images/flat_select.png);
+	background-image: url(/images/flat_select.png);
 	background-repeat: no-repeat;
 	background-position: left -1px;
 	border: 1px solid #ddd;
-	-moz-border-radius: 6px;
-	-webkit-border-radius: 6px;
 	border-radius: 6px;
 }
 div.dataTables_filter input[type="text"]

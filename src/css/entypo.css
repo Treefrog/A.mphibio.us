@@ -1,17 +1,18 @@
 @font-face {
 	font-family: 'entypo';
-	src:url('/fonts/entypo.eot?ou0ohg');
-	src:url('/fonts/entypo.eot?ou0ohg#iefix') format('embedded-opentype'),
-		url('/fonts/entypo.woff2?ou0ohg') format('woff2'),
-		url('/fonts/entypo.ttf?ou0ohg') format('truetype'),
-		url('/fonts/entypo.woff?ou0ohg') format('woff'),
-		url('/fonts/entypo.svg?ou0ohg#entypo') format('svg');
+	src:url('/fonts/entypo.eot?499h');
+	src:url('/fonts/entypo.eot?499h#iefix') format('embedded-opentype'),
+		url('/fonts/entypo.woff2?499h') format('woff2'),
+		url('/fonts/entypo.ttf?499h') format('truetype'),
+		url('/fonts/entypo.woff?499h') format('woff'),
+		url('/fonts/entypo.svg?499h#entypo') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 
 [class^="icon-"], [class*=" icon-"] {
-	font-family: 'entypo';
+    /* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'entypo' !important;
 	speak: none;
 	font-style: normal;
 	font-weight: normal;
@@ -920,5 +921,8 @@
 }
 .icon-leap:before {
 	content: "\e724";
+}
+.icon-perfect:before {
+	content: "\e901";
 }
 

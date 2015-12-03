@@ -7,20 +7,14 @@
 {
     font-size: 1em;
     float: left;
-/*     height: 1.7em; */
+    min-width: 3em;
     position: relative;
-/*
-    max-width: 280px;
-    overflow: hidden;
-*/
     margin-left: 0;
     margin-bottom: 1.1em;
-    
     color: #e43c23;
     background: #fff;
     border: 1px solid #e43c23;
     border-radius: 3px;
-    
     transition: all 0.3s ease-out;
 }
 
@@ -36,11 +30,11 @@
 {
     position: absolute;
     top: 0.5em;
-    right:5px;
+    right:0.2em;
     font-family: 'entypo';
     content: '\e6dd';
     speak: none;
-        font-style: normal;
+    font-style: normal;
     font-weight: normal;
     font-variant: normal;
     text-transform: none;
@@ -58,7 +52,6 @@
     background-color: #fff;
     background-image: none;
     border: 1px solid #1a1b1a;
-/*     transform: scale(1.1); */
 }
 
 .ui_tpicker_timezone
@@ -81,7 +74,6 @@
     border: 1px solid #1a1b1a;
     color: #fff;
     background-color: #1a1b1a;
-/*     transform: scale(1.1); */
 }
 
 .styled_select select,
@@ -90,7 +82,6 @@
     font-size: 1em;
     margin-bottom: 0;
     padding-left: 8px;
-/*     max-width: 248px; */
     -webkit-appearance: none;
     -moz-appearance: none;
     text-indent: 0.01px;

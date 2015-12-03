@@ -75,7 +75,7 @@ a.button:active
 
 #mainnav
 {
-	background-color: rgba(92,174,232,0.8);
+	background-color: rgba(0, 128, 198,0.8);
 }
 
 img.a.r.t
@@ -979,12 +979,18 @@ text-decoration: none;
 /* Media Queries
 ================================================== */
 
+#nav_toggle.active
+{	
+    transform: rotate(-90deg);
+}
+
 #nav_toggle
 {
 	display: none;
 	padding: 0.25em 0.325em 0;
 	font-size: 1.6em;
 	line-height: 1;
+	z-index: 9000;
 }
 	/* Smaller than standard 960 (devices and browsers) */
 	@media only screen and (max-width: 959px) {
@@ -1006,7 +1012,8 @@ text-decoration: none;
 	@media only screen and (max-width: 767px) {
 
 		#forkme, /* Kill it before it grows */
-		#mainnav
+		#mainnav,
+		#section_nav
 		{
 			display: none;
 			visibility: hidden;

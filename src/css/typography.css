@@ -17,7 +17,6 @@ h4,
 h5,
 h6
 {
-	font-family:  "myriad-pro", "Myriad Pro Light", "Myriad Pro", "Lucida Grande", "Lucida Sans", Lucida, Arial, Helvetica, sans-serif;
     font-weight: normal;
     margin: 0;
     margin-bottom: 0.3em;
@@ -111,9 +110,6 @@ pre
     margin: 1em 0;
     text-wrap: wrap;
     white-space: pre-wrap;
-    white-space: -moz-pre-wrap;
-    white-space: -pre-wrap;
-    white-space: -o-pre-wrap;
     word-wrap: break-word;
     background: #fafafa;
 }

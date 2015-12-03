@@ -116,16 +116,14 @@
 
 .sitemap li:last-child
 {
-	background-color: #5d5d5d;
-	border-color: #5d5d5d;
-	transform: scale(1.03);
-	box-shadow: 0 0 6px rgba(0,0,0,0.3), inset 0 0 12px rgba(255,255,255,0.3);
+/* 	background-color: #5d5d5d; */
+/* 	border-color: #5d5d5d; */
+/* 	transform: scale(1.03); */
+/* 	box-shadow: 0 0 6px rgba(0,0,0,0.3), inset 0 0 12px rgba(255,255,255,0.3); */
 }
 
 .sitemap li a:link:before,
-.sitemap li a:visited:before,
-.sitemap li a:link:after,
-.sitemap li a:visited:after
+.sitemap li a:visited:before
 {
 	content: " "attr(href)" ";
 	display: block;

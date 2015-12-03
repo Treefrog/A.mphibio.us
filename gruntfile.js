@@ -56,12 +56,13 @@ module.exports = function(grunt) {
 					// 'src/css/float_labels.css',
 					// 'src/css/datatable.css',
 					// 'src/css/tablesorter.css',
+					// 'src/css/leap_forms.css',
+					// 'src/css/leap_search_results.css',
 					'src/css/sequencejs-theme.sliding-horizontal-parallax.css',
 					'css/jquery.fancybox.css',
 					
 					// Standard libraries
 					
-					'src/css/toc.css',
 					'src/css/normalize.css',
 					'src/css/h5bp.css',
 					'src/css/typography.css',
@@ -81,9 +82,14 @@ module.exports = function(grunt) {
 					'src/css/append_prepend.css',
 					'src/css/custom_form_elements.css',
 					'src/css/jquery_datepicker.css',
+					
+					// 'src/css/jquery-ui.structure.css',
+					// 'src/css/jquery-ui.theme.css',
+					
 					'src/css/entypo.css',
 					'src/css/helpers.css',
 					'src/css/grid_sixteen.css',
+					// 'src/css/twentyfour.css',
 					'src/css/always_fluid.css',
 					'src/css/tablet_sixteen.css',
 					'src/css/mobile_l_sixteen.css',

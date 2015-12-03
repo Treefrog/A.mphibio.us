@@ -18,8 +18,11 @@ a:visited
 	text-decoration: none;
 	outline: 0;
 }
-
-.active a, .
+#amp_footer a
+{
+	text-decoration: none;
+}
+.active a,
 a:hover,
 a:focus
 {
@@ -278,10 +281,6 @@ h2 .adot
 {
 	margin: 0 0 15px 0;
 	opacity: 0.9;
-    -webkit-transition-duration: 0.4s;
-    -moz-transition-duration: 0.4s;
-    -ms-transition-duration: 0.4s;
-    -o-transition-duration: 0.4s;
     transition-duration: 0.4s;
 }
 
@@ -289,15 +288,8 @@ h2 .adot
 #nav li:hover
 {
 	opacity: 1;
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    -o-transform: scale(1.2);
+
     transform: scale(1.2);
-    -webkit-transition-duration: 0.4s;
-    -moz-transition-duration: 0.4s;
-    -ms-transition-duration: 0.4s;
-    -o-transition-duration: 0.4s;
     transition-duration: 0.4s; 
 }
 
@@ -306,29 +298,41 @@ h2 .adot
 	display: none;
 }
 
-#navbar
+#mainnav
 {
 	background: #4d4d4d;
 	background: rgba(0,0,0,0.8);
-	
-	-webkit-transition: all 0.3s ease-out; 
-	   -moz-transition: all 0.3s ease-out; 
-	     -o-transition: all 0.3s ease-out; 
-	        transition: all 0.3s ease-out; 
+    transition: all 0.3s ease-out; 
 }
 
-#navbar:hover,
-#navbar:focus
+#mainnav:hover,
+#mainnav:focus
 {
 	background: #888;
 	background: rgba(0,0,0,1);
 }
 
-#navbar.f,
-#navbar.b
+#mainnav.f,
+#mainnav.b
 {
 	z-index: 1006;
 }
+a.button,
+button
+{
+	background-color: rgba(0,0,0,0.3);
+	margin-right: 1em;
+	margin-bottom: 0.6em;
+}
+
+button:hover,
+button:active,
+a.button:hover,
+a.button:active
+{
+	background-color: rgba(0,0,0,0.6);
+}
+
 
 /*
 

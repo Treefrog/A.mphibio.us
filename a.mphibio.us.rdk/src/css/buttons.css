@@ -16,16 +16,27 @@ input[type="file"],
     display: inline-block;
     margin-top: 0;
     margin-left: 0;
-    color: #fff;
+    color: #000;
     font-weight: normal;
     text-decoration: none;
     cursor: pointer;
     line-height: normal;
     padding: .625em 1.625em;
     background: rgba(255,255,255,0.2);
-    border: 1px solid #fff;
+    border: 1px solid #000;
     border-radius: 3px;
     transition: all 0.3s ease-out;
+}
+
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="file"]
+{
+    color: #fff;
+    border: 1px solid #fff;
 }
 
 .wht-bg .button,
@@ -62,8 +73,7 @@ button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover,
-input[type="file"]:hover,
-.filter_nav>dd>a:hover
+input[type="file"]:hover
 {
     background-color: transparent;
     background-image: none;
@@ -79,6 +89,7 @@ input[type="file"]:active,
 .button_grp .active,
 .button_grp a.button:active,
 .button_grp a.button:focus,
+.filter_nav>dd>a:hover,
 .filter_nav>dd>a:active,
 .pager_nav .active
 {
@@ -135,12 +146,7 @@ ul.button_grp .active,
 .pager_nav .active
 {
     padding: 0.425em;
-/*     border: 1px solid #dcd7d1; */
     margin: 0;
-    -webkit-border-radius: 0;
-    -khtml-border-radius: 0;
-    -moz-border-radius: 0;
-    -o-border-radius: 0;
     border-radius: 0;
 }
 
@@ -154,10 +160,6 @@ ul.button_grp .active,
 
 .pager_nav .button.last
 {
-    -webkit-border-radius: 0;
-    -khtml-border-radius: 0;
-    -moz-border-radius: 0;
-    -o-border-radius: 0;
     border-radius: 0;
 }
 
@@ -166,8 +168,12 @@ ul.button_grp .first.button
 {
 }
 
+/*
 .button_grp .last .button,
 .button_grp .last.button,
+*/
 .pager_nav .button.last
 {
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
 }

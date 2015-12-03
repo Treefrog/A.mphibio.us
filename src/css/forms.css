@@ -59,10 +59,6 @@ select
 	padding: 0.625em 2% 0.675em;
 	outline: none;
 /*
-	-webkit-border-radius: 6px;
-	-khtml-border-radius: 6px;
-	-moz-border-radius: 6px;
-	-o-border-radius: 6px;
 	border-radius: 6px;
 */
 	color: #777;
@@ -199,11 +195,11 @@ form.search fieldset input[type="submit"]
 #search_form
 {
 	position: relative;
-	width: 222px;
-	float: right;
+	width: 240px;
+	float: left;
 }
 
-#search_form .searchText
+#search_form .search_text
 {
 	font-size: 0.865em;
 	text-indent: 2em;
@@ -212,7 +208,7 @@ form.search fieldset input[type="submit"]
 	padding: .5em 0 .5em;
 }
 
-#search_form .searchText:focus
+#search_form .search_text:focus
 {
 	font-style: normal;
 	background-color: #fff;
@@ -220,7 +216,7 @@ form.search fieldset input[type="submit"]
 }
 
 #search_form button.search_submit,
-#search_form button.search_cancel.search_toggle
+#search_form button.search_cancel
 {
 	background: transparent !important;
 	border: transparent !important;
@@ -231,48 +227,48 @@ form.search fieldset input[type="submit"]
 
 #search_form button.search_submit:active,
 #search_form button.search_submit:hover,
-#search_form button.search_cancel.search_toggle:active,
-#search_form button.search_cancel.search_toggle:hover
+#search_form button.search_cancel:active,
+#search_form button.search_cancel:hover
 {
 	color: #d2202f;
 	border: transparent !important;
 }
 
-#search_form button.search_cancel.search_toggle
+#search_form button.search_cancel
 {
 	position: absolute;
-	top: 6px;
-	left: 12px;
+	top: 0.26em;
+	left: 0.5em;
 	opacity: 0.3;
 }
 
 #search_form button.search_submit
 {
 	position: absolute;
-	top: 6px;
-	right: 6px;
+	top: 0.3em;
+	right: 0.5em;
 }
 
 /* Advanced UX Features
 	
 	*/
 	
- #search_form .searchText
+ #search_form .search_text
  {
 	text-indent: 0.6em;
  }
 
-  #search_form .searchText:focus
+  #search_form .search_text:focus
  {
 	text-indent: 2.2em;
  }
  
- #search_form .searchText + .search_cancel.search_toggle
+ #search_form .search_text + .search_cancel
  {
 	 display: none;
  }
  
- #search_form .searchText:focus + .search_cancel.search_toggle
+ #search_form .search_text:focus + .search_cancel
  {
 	 display: inline-block;
  }

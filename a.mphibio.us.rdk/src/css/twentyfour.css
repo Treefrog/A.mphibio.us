@@ -592,7 +592,11 @@
 	.container .col.seventeen,
 	.container .col.eighteen,
 	.container .col.nineteen,
-	.container .col.twenty
+	.container .col.twenty,
+	.container .col.twenty_one,
+	.container .col.twenty_two,
+	.container .col.twenty_three,
+	.container .col.twenty_four
 	{
 		width:93.667%;
 		margin-left: 0;
