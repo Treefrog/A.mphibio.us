@@ -1027,12 +1027,19 @@ text-decoration: none;
 	}
 
 	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-	@media only screen and (max-width: 479px) {
+	@media only screen and (max-width: 500px) {
 
+		#intro_right,
 		#forkme /* Kill it before it grows */
 		{
 			display: none;
 			visibility: hidden;
+		}
+		
+		.bg, .bg2, .bg3, .bg4
+		{
+			height: 450px;
+			width: 300px;
 		}
 	}
 */

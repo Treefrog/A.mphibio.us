@@ -7,7 +7,7 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
  * Contributing author: Tyler Smith (@mbmufffin)
- * 
+ *
  */
 
 /* ====================================================================================================================
@@ -90,16 +90,18 @@ html[xmlns] .flexslider .slides {
   margin-right: 5px;
 }
 .flex-direction-nav {
-	position: relative;
+	position: absolute;
 	width: 100%;
 	max-width: 1024px;
 	margin: 0 auto;
-	margin-top: -200px;
+	top: 50%;
+	left: 0;
+	right: 0;
 	z-index: 5;
   *height: 0;
 }
 .flex-direction-nav li {
-	position: absolute;
+position: absolute;
   display: block;
   width: 40px;
   height: 40px;
@@ -113,7 +115,7 @@ html[xmlns] .flexslider .slides {
   display: block;
   width: 40px;
   height: 40px;
-  margin: -20px 0 0;
+  margin: 0 0;
   position: absolute;
   top: 50%;
   z-index: 10;
@@ -134,28 +136,28 @@ html[xmlns] .flexslider .slides {
   display: block;
   width: 40px;
   height: 40px;
-  content: "\e6cd";
+  content: "\e6d5";
   color: #fff;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
 }
 .flex-direction-nav a.flex-next:before {
-  content: "\e6d0";
+  content: "\e6d8";
 }
-.flex-direction-nav .flex-nav-prev {
-  left: 10px;
+.flex-direction-nav li:first-child {
+  left: -100px;
 }
-.flex-direction-nav .flex-nav-next {
-  right: 10px;
+.flex-direction-nav li:last-child {
+  right: -100px;
   text-align: right;
 }
-.flexslider:hover .flex-direction-nav .flex-nav-prev {
-  left: 0;
+.flexslider:hover .flex-direction-nav li:first-child  {
+  left: -20px;
 }
 .flexslider:hover .flex-direction-nav .flex-nav-prev:hover {
   opacity: 1;
 }
-.flexslider:hover .flex-direction-nav .flex-nav-next {
-  right: 0;
+.flexslider:hover .flex-direction-nav li:last-child  {
+  right: -20px;
 }
 .flexslider:hover .flex-direction-nav .flex-nav-next:hover {
   opacity: 1;
@@ -250,7 +252,7 @@ html[xmlns] .flexslider .slides {
 /* ====================================================================================================================
  * RESPONSIVE
  * ====================================================================================================================*/
- 
+
 @media screen and (max-width: 860px) {
   .flex-direction-nav .flex-prev {
 	opacity: 1;

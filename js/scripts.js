@@ -72,11 +72,11 @@ amp.bindlisteners = function() {
 	}));
 	
 
-	$(document).on('click', '#nav li', (function(){
-		if ($(this).hasClass('active')) {
+	$(document).on('click', '#mainnav li', (function(){
+		if ($('#mainnav').hasClass('open')) {
+			$('#mainnav').removeClass('open');
+			$('#nav_toggle').removeClass('active');
 		} else {
-			$('#nav li').removeClass('active');
-			$(this).addClass('active');
 			/* I May use this later
 			$(content).show().addClass('active').siblings().hide().removeClass('active'); */
 		}

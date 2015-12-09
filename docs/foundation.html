@@ -50,7 +50,8 @@
 <link rel="stylesheet" href="../css/a.mphibio.us.min.css">
 <link rel="stylesheet" href="../css/a.mphibio.us.docs.css">
 
-<script src="../jsrc/js/modernizr-2.6.2.min.js"></script>
+<script src="/js/js/modernizr-2.6.2.min.js"></script>
+<script src="/js/js/prefixfree.min.js"></script>
 
 <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
 <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
@@ -478,7 +479,7 @@ postion:fixed;top:0;left:0;right:0;
 				</li>
 				<li class="active"><a href="/docs/foundation.html">Foundation</a>
 					<ul>
-						<li><a href="/docs//docs/foundation.html#core">Core</a></li>
+						<li><a href="/docs/foundation.html#core">Core</a></li>
 						<li><a href="/docs/foundation.html#grid">Symantic Grid</a></li>
 						<li><a href="/docs/foundation.html#responsive_col">Responsive Columns</a></li>
 						<li><a href="/docs/foundation.html#fluid_col">Fluid Columns</a></li>
@@ -524,6 +525,8 @@ postion:fixed;top:0;left:0;right:0;
 		</nav>
 	</div>
 </div>
+
+<button id="nav_toggle" type="button" class="f t r hmt hmr"><span class="icon-carret-left"></span></button>
 
 <div id="amp_overlay" class="modal_overlay">
 	<div class="modal mt">

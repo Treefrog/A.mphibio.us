@@ -556,9 +556,22 @@ ol.linenums li
 	padding-top: 1em;
 }
 
-
 /* Media Queries
 ================================================== */
+
+#nav_toggle.active
+{	
+    transform: rotate(-90deg);
+}
+
+#nav_toggle
+{
+	display: none;
+	padding: 0.25em 0.325em 0;
+	font-size: 1.6em;
+	line-height: 1;
+	z-index: 9000;
+}
 
 	/* Smaller than standard 960 (devices and browsers) */
 	@media only screen and (max-width: 959px)
@@ -586,14 +599,23 @@ ol.linenums li
 		}
 	}
 
-	/* All Mobile Sizes (devices and browser) */
-	@media only screen and (max-width: 767px) {
-	}
-
 	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-	@media only screen and (min-width: 480px) and (max-width: 767px) {
-	}
+	@media only screen and (max-width: 767px) {
 
+		#forkme, /* Kill it before it grows */
+		#mainnav,
+		#section_nav
+		{
+			display: none;
+			visibility: hidden;
+		}
+		#nav_toggle,
+		#mainnav.open
+		{
+			display: block;
+			visibility: visible;
+		}
+	}
 	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 	@media only screen and (max-width: 479px) {
 	}
