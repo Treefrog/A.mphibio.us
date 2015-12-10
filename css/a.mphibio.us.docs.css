@@ -566,6 +566,9 @@ ol.linenums li
 
 #nav_toggle
 {
+	position: fixed;
+	top: 0.53em;
+	right: 0;
 	display: none;
 	padding: 0.25em 0.325em 0;
 	font-size: 1.6em;
