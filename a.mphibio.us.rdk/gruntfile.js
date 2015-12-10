@@ -119,6 +119,18 @@ module.exports = function(grunt) {
 			
 		},
 		
+		sass:
+        {
+            dist: {
+				options: {
+					style: 'expanded'
+				},
+				files: {
+					'css/theme.css': 'scss/theme.scss'
+				}
+            }
+        },
+		
 		cssmin:
 		{
 			options:
@@ -182,6 +194,7 @@ module.exports = function(grunt) {
 	
 	// Load the plugins that provide the tasks.
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-jshint');

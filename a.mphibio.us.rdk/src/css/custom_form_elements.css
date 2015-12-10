@@ -11,9 +11,9 @@
     position: relative;
     margin-left: 0;
     margin-bottom: 1.1em;
-    color: #e43c23;
+    color: #39b3cb;
     background: #fff;
-    border: 1px solid #e43c23;
+    border: 1px solid #39b3cb;
     border-radius: 3px;
     transition: all 0.3s ease-out;
 }
@@ -21,8 +21,8 @@
 .styled_select select
 {
 	width: 100% !important;
-	color: #e43c23;
-	padding-right: 1.625em;
+	color: #39b3cb;
+/* 	padding-right: 1.625em; */
 }
 
 .styled_select:before,
@@ -48,10 +48,16 @@
 .styled_select:hover,
 .ui_tpicker_timezone:hover
 {
-    color: #1a1b1a;
+    color: #0f3955;
     background-color: #fff;
     background-image: none;
-    border: 1px solid #1a1b1a;
+    border: 1px solid #0f3955;
+}
+
+.styled_select:hover select,
+.ui_tpicker_timezone:hover select
+{
+    color: #0f3955;
 }
 
 .ui_tpicker_timezone
@@ -71,9 +77,9 @@
 .styled_select:active,
 .styled_select:focus
 {
-    border: 1px solid #1a1b1a;
+    border: 1px solid #0f3955;
     color: #fff;
-    background-color: #1a1b1a;
+    background-color: #0f3955;
 }
 
 .styled_select select,
@@ -135,9 +141,6 @@
 :root input[type="radio"].custom + span:before
 {
     color: #39b3cb;
-    -webkit-transition: color 0.3s ease-out;
-    -moz-transition: color 0.3s ease-out;
-    -o-transition: color 0.3s ease-out;
     transition: color 0.3s ease-out;
 }
 
@@ -155,9 +158,6 @@
 :root input[type="radio"].custom:hover + span:before
 {
     color: #0f3955;
-    -webkit-transition: color 0.3s ease-out;
-    -moz-transition: color 0.3s ease-out;
-    -o-transition: color 0.3s ease-out;
     transition: color 0.3s ease-out;
 }
 

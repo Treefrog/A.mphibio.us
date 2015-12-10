@@ -1,0 +1,71 @@
+$tfGrey: #efefef;
+$tfGreen: #8ec642;
+$tfDkGreen: darken($tfGreen, 30%);
+
+@mixin serifs($size) {
+	color:$tfGreen;
+	font-family: 'Times New Roman', Georgia, serif;
+	font-size:$size;
+	line-height:$size;
+	letter-spacing:0.1;
+}
+@mixin sans($size) {
+	color:#222;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:$size;
+	line-height:$size;
+	letter-spacing:0.1;
+}
+
+body {
+	display:block;
+	background:$tfGrey;
+}
+
+#amp_content .container {
+	background:#fff;
+	padding:1rem 2rem;
+	> div {
+		background:$tfDkGreen;
+		color:#eee;
+		h4 {
+			color:$tfGrey;
+			text-decoration:line-through;
+		}
+		a {
+			border-bottom:1px solid $tfGreen;
+			color:$tfGreen;
+			text-decoration:none;
+			&:hover {
+				color:$tfDkGreen;
+			}
+		}
+	}
+}
+
+h1 {
+	@include serifs(2rem);
+}
+h2 {
+	@include sans(1.5rem);
+}
+h3 {
+	@include serifs(1rem);
+}
+h4 {
+	@include sans(0.938rem);
+}
+h5 {
+	@include sans(0.875rem);
+}
+h6 {
+	@include sans(0.75rem);
+}
+
+$fourcols: 4;
+
+@for $i from 1 through $fourcols {
+	.col-#{$i} {
+		width: ((100/$fourcols) * $i) * 1%;
+	}
+}
