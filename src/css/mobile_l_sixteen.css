@@ -6,7 +6,7 @@
 {
     .container
     {
-        width: 300px;
+        width: 94%;
     }
 
     .container .col
@@ -41,7 +41,7 @@
     .container .fifteen.col,
     .container .sixteen.col
     {
-        width: 300px;
+        width: 100%;
     }
 
     /* Offsets */

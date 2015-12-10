@@ -254,7 +254,7 @@ amp.mobilelisteners = function() {
 	
 		});
 	
-		$(document).on('click', '#mainnav li.okgo > a', function(){
+		$(document).on('click', '#mainnav ul.horizontal li.okgo > a', function(){
 			window.location.href($(this).attr('href'));
 		});
 		
