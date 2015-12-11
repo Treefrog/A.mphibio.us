@@ -3,6 +3,7 @@
    ========================================================================== */
 
 .error,
+.error,
 .attn,
 .confirm,
 .dialog,
@@ -37,7 +38,8 @@
     border: 1px solid #E6E6E6;
 }
 
-.error:empty,
+div.error:empty,
+span.error:empty,
 .attn:empty,
 .confirm:empty,
 .dialog:empty,
