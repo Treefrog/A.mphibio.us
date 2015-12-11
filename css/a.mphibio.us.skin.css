@@ -996,7 +996,7 @@ text-decoration: none;
 	z-index: 9000;
 }
 	/* Smaller than standard 960 (devices and browsers) */
-	@media only screen and (max-width: 959px) {
+	@media only screen and (max-width: 960px) {
 		
 		#forkme /* Kill it before it grows */
 		{
@@ -1012,7 +1012,7 @@ text-decoration: none;
 
 
 	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-	@media only screen and (max-width: 767px) {
+	@media only screen and (max-width: 768px) {
 
 		#forkme, /* Kill it before it grows */
 		#mainnav,
