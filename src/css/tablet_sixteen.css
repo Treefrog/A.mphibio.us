@@ -2,7 +2,7 @@
    22. Tablet (Portrait) Design for a width of 768px
    ========================================================================== */
 
-@media only screen and (min-width: 768px) and (max-width: 959px)
+@media only screen and (min-width: 768px) and (max-width: 960px)
 {
     .container
     {
