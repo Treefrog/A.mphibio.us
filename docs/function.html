@@ -782,6 +782,91 @@ $('.tabs li a').click(function(){
 			</pre>
 		</div>
 	</section>
+	<section id="modals" class="row mt">
+		<div class="col sixteen">
+        	<h1>Modals</h1>
+
+<p>There are two flavours and three sizes of modal boxes included with the mergini framework application modals and inline modals, application modals activate an empty container and the foot of the mergini application and take over the whole screen with a blur effect, inline modals are ones you build inside your application and call as neccessary and do not include the blur and focus functions.</p>
+
+<h2>Inline Modals</h2>
+
+<p>Inline modals are pretty easy to implement simply add the <a href="http://a.mphibio.us">a.mphibio.us</a> listener class <kbd>modal_opener</kbd> and assign the element an <kbd>amp-target</kbd> attribute the <kbd>id</kbd> of the modal you want to launch.</p>
+
+<p>Closing a modal is just as simple;assign the button, link, or icon the listener <kbd>modal_kill</kbd> and the proper <kbd>amp-target</kbd> attribute and it's gone.</p>
+
+			<pre class="prettyprint linenums">
+&lt;button class=&quot;modal_opener&quot; amp-target=&quot;launcher_modal&quot;&gt;Sample Modal Opener&lt;/button&gt;
+
+&lt;div id=&quot;launcher_modal&quot; class=&quot;overlay&quot;&gt;
+  &lt;div id=&quot;launcher_content&quot; class=&quot;modal small&quot;&gt;
+    &lt;header&gt;
+    &lt;!--// We recomend using this closing button on all modals the javascript is already handled simply add the
+    class modal_kill and assign the amp-target attribute to the id of your overlay container id it is included in the 
+default configuration of the modal launcher //--&gt;
+      &lt;span class=&quot;icon-close-icon right modal_kill&quot; amp-target=&quot;launcher_modal&quot;&gt;&lt;/span&gt;
+      &lt;h3&gt;Modal Header &lt;/h3&gt;
+    &lt;/header&gt;
+    &lt;section&gt;
+      ...
+    &lt;/section&gt;
+    &lt;footer&gt;
+      &lt;fieldset class=&quot;form-actions&quot;&gt;
+        &lt;button id=&quot;eventDetailActionBtn&quot; type=&quot;button&quot; class=&quot;&quot;&gt;Action&lt;/button&gt;
+        &lt;button type=&quot;reset&quot; class=&quot;modal_kill cancel&quot; amp-target=&quot;launcher_modal&quot;&gt;Cancel&lt;/button&gt;
+      &lt;/fieldset&gt;
+    &lt;/footer&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+			</pre>
+			<div class="row">
+				<button class="modal_opener" amp-target="launcher_modal">Sample Modal Opener</button>
+			</div>
+			<a href="#" class="modal_opener" amp-target="launcher_modal">Sample Modal Opener</a>
+			
+			<div class="dialog">If using an anchor as the modal trigger include an href element (see below) for better mobile compatibility, or stick to buttons for greater usability.</div>
+			
+			<pre class="prettyprint linenums">
+&lt;a href=&quot;#&quot; class=&quot;modal_opener&quot; amp-target=&quot;launcher_modal&quot;&gt;Sample Modal Opener&lt;/a&gt;
+			</pre>
+			
+			<h2>Modal Sizing</h2>
+			
+			<p>Modals are designed to be fluid the default width of the modal is 90% of the screen width up to a maximum width of 940px, a minimum width of 660px and the height grows according to the content within them.</p>
+			
+			<p>Adding the class(es) <kbd>small</kbd> or <kbd>medium</kbd> to the <kbd>modal</kbd> either in your source code or dynamically will change the width of the modal to a width of 200px or 30% of the screen for small and 400px or 60% of the screen width.</p>
+			
+			<h2>Dialogues</h2>
+			
+			<p>A.mphibio.us has some default messaging dialogue boxes available for user feedback assign anyone of the following classes to a container and have consitant feedback elements. Or add and remove these classes to a feedback container as part of your user error handling techniques. They can contain any kind of html.</p>
+			
+			<div class="error">Sample Error message</div>
+			
+			<pre class="prettyprint linenums">
+&lt;div class=&quot;error&quot;&gt;Sample Error message&lt;/div&gt;
+			</pre>
+			
+			<div class="attn"><span class="icon-mergini_logo r"></span>Sample Attention message with icon</div>
+			
+			<pre class="prettyprint linenums">
+&lt;div class=&quot;attn&quot;&gt;&lt;span class=&quot;icon-mergini_logo r&quot;&gt;&lt;/span&gt;Sample Attention message with icon&lt;/div&gt;
+			</pre>
+
+			<div id="feedback" class="dialog">
+				<span class="icon-close a r mr cancel" amp-target="feedback"></span>
+				<h3>Title</h3>
+				<p>Sample Attention message with icon</p>
+			</div>
+			
+			<pre class="prettyprint linenums">
+&lt;div id=&quot;feedback&quot; class=&quot;dialog&quot;&gt;
+  &lt;span class=&quot;icon-close a r mr cancel&quot; amp-target=&quot;feedback&quot;&gt;&lt;/span&gt;
+  &lt;h3&gt;Title&lt;/h3&gt;
+  &lt;p&gt;Sample Attention message with icon&lt;/p&gt;
+&lt;/div&gt;
+			</pre>
+
+        </div>
+	</section>
 	
 </div><!-- /#maincontent.content -->
 
@@ -898,12 +983,29 @@ postion:fixed;top:0;left:0;right:0;
 	<img id="forkme" src="http://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt="Fork me on GitHub">
 </a>
 
-  
-  
+<div id="launcher_modal" class="modal_overlay">
+	<div id="launcher_content" class="modal small">
+		<header>
+			<span class="icon-close-icon right modal_kill" amp-target="launcher_modal" type="button"></span>
+			<h3>Modal Header </h3>
+		</header>
+		<section>
+			Modal body...
+		</section>
+		<footer>
+			<fieldset class="form-actions">
+				<button id="eventDetailActionBtn" type="submit" class="">Action</button>
+				<button type="reset" class="modal_kill" amp-target="launcher_modal">Cancel</button>
+			</fieldset>
+		</footer>
+	</div>
+</div>
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="../js/js/jquery-1.11.1.min.js"><\/script>')</script>
 
 <script type="text/javascript" src="../src/js/run_prettify.js"></script>
+<script type="text/javascript" src="../src/js/jquery-ui.min.js"></script>
 
 <script src="../js/a.mphibio.us.js"></script>
 
