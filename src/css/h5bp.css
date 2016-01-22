@@ -42,7 +42,7 @@ body
         http://cssfontstack.com
         ========================================== */
     font-weight: normal;
-    font-size: 1;
+    font-size: 1em;
     /* For the most device agnostic renderings
         leave units out of line height
         ========================================== */

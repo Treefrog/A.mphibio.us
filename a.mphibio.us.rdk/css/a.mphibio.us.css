@@ -1,10 +1,10 @@
 /*!
  * A.mphibio.us v1.5.6
- * Copyright 2015, Clive Moore @cliveMoore @Treefrog
+ * Copyright 2016, Clive Moore @cliveMoore @Treefrog
  * http://a.mphibio.us
  * This content is released under the MIT license
  * http://www.opensource.org/licenses/mit-license.php
- * 10-12-2015
+ * 22-01-2016
  */
 
 /*
@@ -458,332 +458,6 @@ html[xmlns] .flexslider .slides
     left: 20%;
     top: 200px; }
 
-/*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
-.fancybox-wrap,
-.fancybox-skin,
-.fancybox-outer,
-.fancybox-inner,
-.fancybox-image,
-.fancybox-wrap iframe,
-.fancybox-wrap object,
-.fancybox-nav,
-.fancybox-nav span,
-.fancybox-tmp
-{
-	padding: 0;
-	margin: 0;
-	border: 0;
-	outline: none;
-	vertical-align: top;
-}
-
-.fancybox-wrap {
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 99999;
-}
-
-.fancybox-skin {
-	position: relative;
-	background: transparent;
-	color: #444;
-	text-shadow: none;
-/*
-
-	-webkit-border-radius: 4px;
-	   -moz-border-radius: 4px;
-	        border-radius: 4px;
-*/
-}
-
-.fancybox-opened {
-	z-index: 8030;
-}
-
-.fancybox-opened .fancybox-skin {
-/*
-	-webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-	   -moz-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-	        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-*/
-}
-
-.fancybox-outer, .fancybox-inner {
-	position: relative;
-}
-
-.fancybox-inner {
-	overflow: hidden;
-}
-
-.fancybox-type-iframe .fancybox-inner {
-	-webkit-overflow-scrolling: touch;
-}
-
-.fancybox-error {
-	color: #444;
-	font: 14px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
-	margin: 0;
-	padding: 15px;
-	white-space: nowrap;
-}
-
-.fancybox-image, .fancybox-iframe {
-	display: block;
-	width: 100%;
-	height: 100%;
-}
-
-.fancybox-image {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-#fancybox-loading, /* .fancybox-close, .fancybox-prev span, .fancybox-next span  */
-{
-	background-image: url('fancybox_sprite.png');
-}
-
-#fancybox-loading {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	margin-top: -22px;
-	margin-left: -22px;
-	background-position: 0 -108px;
-	opacity: 0.8;
-	cursor: pointer;
-	z-index: 8060;
-}
-
-#fancybox-loading div {
-	width: 44px;
-	height: 44px;
-	background: url('fancybox_loading.gif') center center no-repeat;
-}
-
-.fancybox-close {
-	position: absolute;
-	top: 0;
-	right: 24px;
-	width: 36px;
-	height: 36px;
-	display: block;
-	cursor: pointer;
-	z-index: 8040;
-	text-decoration: none;
-}
-
-
-a.fancybox-close,
-a.fancybox-close:hover {
-	color: #fff;
-	}
-.fancybox-close:after
-{
-	font-family: 'entypo';
-	font-size: 2em;
-	content: "\e67e";
-	opacity: 0.8;
-}
-.fancybox-close:hover:after
-{
-	opacity: 1;
-}
-
-.fancybox-nav {
-	position: absolute;
-	top: 0;
-	width: 40%;
-	height: 100%;
-	cursor: pointer;
-	text-decoration: none;
-	background: transparent url('blank.gif'); /* helps IE */
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
-	z-index: 8040;
-}
-
-.fancybox-prev {
-	left: 0;
-}
-
-.fancybox-next {
-	right: 0;
-}
-
-.fancybox-nav span {
-	position: absolute;
-	top: 50%;
-	width: 36px;
-	height: 34px;
-	margin-top: -18px;
-	cursor: pointer;
-	z-index: 8040;
-	visibility: hidden;
-}
-
-.fancybox-prev span {
-	left: -5px;
-	display: block;
-/* 	background-position: 0 -36px; */
-}
-
-.fancybox-next span {
-	right: 10px;
-	display: block;
-/* 	background-position: 0 -72px; */
-}
-
-.fancybox-prev span:after,
-.fancybox-next span:after
-{
-	text-decoration: none;
-	color: #fff;
-	font-family: 'entypo';
-	font-size: 3em;
-	opacity: 0.8;
-}
-
-.fancybox-prev:hover span:after,
-.fancybox-next:hover span:after
-{
-	opacity: 1;
-}
-
-.fancybox-prev span:after
-{
-	content: "\e6d5";
-}
-.fancybox-next span:after
-{
-	content: "\e6d8";
-}
-
-.fancybox-nav:hover span {
-	visibility: visible;
-}
-
-.fancybox-tmp {
-	position: absolute;
-	top: -99999px;
-	left: -99999px;
-	visibility: hidden;
-	max-width: 99999px;
-	max-height: 99999px;
-	overflow: visible !important;
-}
-
-/* Overlay helper */
-
-.fancybox-lock {
-    overflow: hidden !important;
-    width: auto;
-}
-
-.fancybox-lock body {
-    overflow: hidden !important;
-}
-
-.fancybox-lock-test {
-    overflow-y: hidden !important;
-}
-
-.fancybox-overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	overflow: hidden;
-	display: none;
-	z-index: 8010;
-	background: url('fancybox_overlay.png');
-}
-
-.fancybox-overlay-fixed {
-	position: fixed;
-	bottom: 0;
-	right: 0;
-}
-
-.fancybox-lock .fancybox-overlay {
-	overflow: auto;
-	overflow-y: scroll;
-}
-
-/* Title helper */
-
-.fancybox-title {
-	visibility: hidden;
-	font: normal 13px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
-	position: relative;
-	text-shadow: none;
-	z-index: 8050;
-}
-
-.fancybox-opened .fancybox-title {
-	visibility: visible;
-}
-
-.fancybox-title-float-wrap {
-	position: absolute;
-	bottom: 0;
-	right: 50%;
-	margin-bottom: -35px;
-	z-index: 8050;
-	text-align: center;
-}
-
-.fancybox-title-float-wrap .child {
-	display: inline-block;
-	margin-right: -100%;
-	padding: 2px 20px;
-	background: transparent; /* Fallback for web browsers that doesn't support RGBa */
-	background: rgba(0, 0, 0, 0.8);
-	-webkit-border-radius: 15px;
-	   -moz-border-radius: 15px;
-	        border-radius: 15px;
-	text-shadow: 0 1px 2px #222;
-	color: #FFF;
-	font-weight: bold;
-	line-height: 24px;
-	white-space: nowrap;
-}
-
-.fancybox-title-outside-wrap {
-	position: relative;
-	margin-top: 10px;
-	color: #fff;
-}
-
-.fancybox-title-inside-wrap {
-	padding-top: 10px;
-}
-
-.fancybox-title-over-wrap {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	color: #fff;
-	padding: 10px;
-	background: #000;
-	background: rgba(0, 0, 0, .8);
-}
-
-/*Retina graphics!*/
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-	   only screen and (min--moz-device-pixel-ratio: 1.5),
-	   only screen and (min-device-pixel-ratio: 1.5){
-
-	#fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
-		background-image: url('fancybox_sprite@2x.png');
-		background-size: 44px 152px; /*The size of the normal image, half the size of the hi-res image*/
-	}
-
-	#fancybox-loading div {
-		background-image: url('fancybox_loading@2x.gif');
-		background-size: 24px 24px; /*The size of the normal image, half the size of the hi-res image*/
-	}
-}
 /* ==========================================================================
    1. Custom Normalize / v3.0.2
    ========================================================================== */
@@ -1320,7 +994,7 @@ body
         http://cssfontstack.com
         ========================================== */
     font-weight: normal;
-    font-size: 1;
+    font-size: 1em;
     /* For the most device agnostic renderings
         leave units out of line height
         ========================================== */
@@ -2112,6 +1786,7 @@ img.swg
    ========================================================================== */
 
 .error,
+.error,
 .attn,
 .confirm,
 .dialog,
@@ -2146,7 +1821,8 @@ img.swg
     border: 1px solid #E6E6E6;
 }
 
-.error:empty,
+div.error:empty,
+span.error:empty,
 .attn:empty,
 .confirm:empty,
 .dialog:empty,
@@ -5423,6 +5099,69 @@ form.multi.beside fieldset.date_picker_set fieldset:nth-child(2n) label
     left: 0;
 }
 
+
+/* ==========================================================================
+   19b. Basic Isotope Rules
+   ========================================================================== */
+   
+
+.element
+{
+	float: left;
+	width: 32%;
+}
+
+.element[style]
+{
+	margin: 0 2% 1em 0 !important;
+}
+
+.element:nth-child(3)[style]
+{
+	margin-right: 0 !important;
+}
+   
+/**** Isotope Filtering ****/
+
+.isotope-item
+{
+	z-index: 2;
+}
+
+.isotope-hidden.isotope-item
+{
+	pointer-events: none;
+	z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item
+{
+	transition-duration: 0.8s;
+}
+
+.isotope
+{
+	transition-property: height, width;
+}
+
+.isotope .isotope-item
+{
+	transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition
+{
+	transition-duration: 0s;
+}
+
+/* End: Recommended Isotope styles */
 /* ==========================================================================
    20. The Grid ala 960.gs
    ========================================================================== */

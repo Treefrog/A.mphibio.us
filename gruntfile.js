@@ -38,6 +38,7 @@ module.exports = function(grunt) {
 					'src/js/jquery.scrollTo-1.4.13.js',
 					'src/js/jquery.localScroll-1.3.5.js',
 					'src/js/imagesloaded.pkgd.js',
+					'src/js/jquery.isotope.js',
 					'src/js/picturefill.js',
 					'src/js/jquery.placeholder.js',
 					'src/js/jquery.tabnav.js'
@@ -88,6 +89,7 @@ module.exports = function(grunt) {
 					
 					'src/css/entypo.css',
 					'src/css/helpers.css',
+					'src/css/isotope.css',
 					'src/css/grid_sixteen.css',
 					// 'src/css/twentyfour.css',
 					'src/css/always_fluid.css',
