@@ -9,7 +9,6 @@
 <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0">
 
 <link rel="stylesheet" href="../../css/a.mphibio.us.min.css">
-<link rel="stylesheet" href="../../src/css/float_labels.css">
   
 <script src="/js/js/modernizr-2.6.2.min.js"></script>
 <script src="/js/js/prefixfree.min.js"></script>
@@ -22,31 +21,32 @@
 	<!--[if lt IE 8]>
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
-		
-		<header id="amp_header" role="banner" class="row">
-			 <div class="container">
-			 	<h1>LEAP5 Search Form</h1>
-			 </div>
-		</header>
-		<section id="amp_content" role="main" class="row">
-			 <div class="container" role="main">
-				 <div class="row dpb">
-				  <div id="search_form" class="inline search">
-					<form class="search_form" action="/search-results">
-						<fieldset>
-							<input class="search_text" type="text" name="q" placeholder="Search">
-							<button type="reset" class="search_cancel search_toggle">
-								<span class="icon-cross-round"></span>
-							</button>
-							<button type="submit" class="search_submit">
-								<span class="icon-search"></span>
-							</button>
-						</fieldset>
-					</form>
+			  
+	<header id="amp_header" role="banner" class="row">
+		 <div class="container">
+		 	<h1>LEAP5 Search</h1>
+		 </div>
+	</header>
+	<section id="amp_content" role="main" class="row">
+		 <div class="container" role="main">
+			 <div class="row dpb">
+			  <div id="search_form" class="inline search">
+				<form class="searchForm" action="/search-results">
+					<fieldset>
+						<label for="q" class="assistive-text">Search</label>
+						<input class="search_text" type="text" id="q" name="q" placeholder="Search Our Site">
+						<button type="reset" class="search_cancel search_toggle" tabindex="-1">
+							<span class="icon-cross-round"></span>
+						</button>
+						<button type="submit" class="search_submit">
+							<span class="icon-search"></span>
+						</button>
+					</fieldset>
+				</form>
 				</div>
-				 </div>
 			 </div>
-		</section>
+		</div>
+	</section>
 	
 	<footer id="amp_footer" class="row">
 		<div class="container">
@@ -61,6 +61,10 @@
 		</div>
 	</footer>
 
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="/js/js/jquery-1.11.1.min.js"><\/script>')</script>
+	
+	<script src="/js/a.mphibio.us.js"></script>
 
-</body>
+	</body>
 </html>
