@@ -1,3 +1,15 @@
+.pager ul
+{
+	list-style: none;
+	display: inline-block;
+	margin: 0 0 !important;
+}
+.pager ul li
+{
+	display: inline-block;
+	margin: 0 0.15em;
+}
+
 /* LEAP Public Snippet */
 .fancybox-inner {
     overflow:auto !important;
@@ -22,10 +34,16 @@
     padding-top: 10px;
 }
 .LEAP_SearchList-pager .pager > span {
-    display:block;
+/*     display:block; */
     font-weight:bold;
+/*
     font-size:90%;
     margin-bottom:18px;
+*/
+}
+.LEAP_SearchList-pager .pager > div
+{
+    float: right;	
 }
 .LEAP_SearchList-pager ul {
     display:inline-block;

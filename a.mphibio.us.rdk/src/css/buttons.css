@@ -9,7 +9,9 @@ input[type="reset"],
 input[type="button"],
 input[type="file"],
 .button_grp .active,
-.filter_nav>dd>a
+.filter_nav>dd>a,
+.pager a,
+.pager .active
 {
     font-size: 1em;
     position: relative;
@@ -26,6 +28,12 @@ input[type="file"],
     border: 1px solid #000;
     border-radius: 3px;
     transition: all 0.3s ease-out;
+}
+
+.pager a,
+.pager .active
+{
+    padding: .325em .625em;
 }
 
 .button,
@@ -73,7 +81,9 @@ button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover,
-input[type="file"]:hover
+input[type="file"]:hover,
+.pager a:hover,
+.pager .active
 {
     background-color: transparent;
     background-image: none;

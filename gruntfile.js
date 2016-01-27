@@ -58,7 +58,8 @@ module.exports = function(grunt) {
 					// 'src/css/datatable.css',
 					// 'src/css/tablesorter.css',
 					// 'src/css/leap_forms.css',
-					// 'src/css/leap_search_results.css',
+					'src/css/leap_pager.css',
+					'src/css/leap_search_results.css',
 					'src/css/sequencejs-theme.sliding-horizontal-parallax.css',
 					'css/jquery.fancybox.css',
 					

@@ -4,7 +4,7 @@
  * http://a.mphibio.us
  * This content is released under the MIT license
  * http://www.opensource.org/licenses/mit-license.php
- * 22-01-2016
+ * 27-01-2016
  */
 
 /*
@@ -300,6 +300,170 @@ html[xmlns] .flexslider .slides
 	}
 }
 
+.pager ul
+{
+	list-style: none;
+	display: inline-block;
+	margin: 0 0 !important;
+}
+.pager>span,
+.pager>div
+{
+	display: inline;
+}
+.pager ul li
+ {
+	 display: inline-block;
+	 margin: 0 0.15em;
+ }
+ 
+.pager a.LEAP_prev-link,
+.pager a.LEAP_next-link
+{
+/*
+	padding-top: 0.5em;
+	border-top-left-radius: 6px !important;
+	border-top-right-radius: 6px !important;
+*/
+	overflow: hidden;
+	background-clip: padding-box;
+}
+
+.pager .LEAP_prev-link,
+.pager .LEAP_next-link,
+.pager ul>li
+{
+	margin: 0 1px 0 0;
+}
+
+.pager a.LEAP_prev-link:before,
+.pager a.LEAP_next-link:after
+{
+	display: inline-block;
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'entypo' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+	position: relative;
+	top: 0.2em;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.pager a.LEAP_prev-link:before
+{
+    content: "\e6d5";
+    margin-right: 0.3em;
+}
+
+.pager a.LEAP_next-link:after
+{
+    content: "\e6d8";
+    margin-left: 0.3em;
+}
+.pager ul
+{
+	list-style: none;
+	display: inline-block;
+	margin: 0 0 !important;
+}
+.pager ul li
+{
+	display: inline-block;
+	margin: 0 0.15em;
+}
+
+/* LEAP Public Snippet */
+.fancybox-inner {
+    overflow:auto !important;
+}
+.LEAP_SearchList {
+    display:block;
+    margin:20px 0 0;
+}
+.LEAP_SearchList-title,
+.LEAP_SearchList-desc,
+.LEAP_SearchList-more {
+    display:block;
+    margin:0 0 8px;
+}
+.LEAP_SearchList-more {
+    font-style:italic;
+}
+.LEAP_SearchList-pager {
+    display: block;
+    margin-top: 35px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+.LEAP_SearchList-pager .pager > span {
+/*     display:block; */
+    font-weight:bold;
+/*
+    font-size:90%;
+    margin-bottom:18px;
+*/
+}
+.LEAP_SearchList-pager .pager > div
+{
+    float: right;	
+}
+.LEAP_SearchList-pager ul {
+    display:inline-block;
+    list-style:none;
+    margin:0;
+}
+.LEAP_SearchList-pager a,
+.LEAP_SearchList-pager a:visited {
+    color:#1b378c;
+    text-decoration:none;
+}
+.LEAP_SearchList-pager li {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-right:4px;
+    padding:0;
+}
+.LEAP_SearchList-pager li.last {
+    margin-right:0;
+}
+.LEAP_SearchList-pager li a,
+.LEAP_SearchList-pager li span.active {
+    border: 1px solid #ccc;
+    padding:8px;
+}
+.LEAP_SearchList-pager li a:hover,
+.LEAP_SearchList-pager li span.active {
+    background:#dedede;
+}
+.LEAP_SearchList-pager .LEAP_prev-link {
+    background-position: 5px 14px;
+    border: 1px solid #ccc;
+    margin:0;
+    padding: 8px 8px 8px 20px;
+    border-radius: 5px 0px 0px 5px;
+}
+.LEAP_SearchList-pager .LEAP_next-link {
+    background-position: 48px 14px;
+    border: 1px solid #ccc;
+    margin:0;
+    padding: 8px 20px 8px 8px;
+    border-radius: 0px 5px 5px 0px;
+}
+.LEAP_SearchList-pager .LEAP_prev-link:hover {
+    background: #dedede url(/lasso9/LEAP_Admin/images/ico-prev.gif) 5px 14px no-repeat;
+}
+.LEAP_SearchList-pager .LEAP_next-link:hover {
+    background: #dedede url(/lasso9/LEAP_Admin/images/ico-next.gif) 48px 14px no-repeat;
+}
+
+/* End LEAP Public Snippet */
 /* prefix declarations */
 /* THEME STYLES */
 #sequence-theme ul {list-style: none;}
@@ -1642,13 +1806,19 @@ ol.inline
     list-style: none;
     list-style-image: none;
 }
-,
+
 ul.inline,
 ol.inline,
 ul.inline li,
-ol.inline li
+ol.inline li,
+.inline ul,
+.inline ul li,
+.inline ol,
+.inline ol li
 {
 	display: inline;
+	display: inline-block;
+	margin-left: 0;
 }
 
 ul,
@@ -2281,7 +2451,9 @@ input[type="reset"],
 input[type="button"],
 input[type="file"],
 .button_grp .active,
-.filter_nav>dd>a
+.filter_nav>dd>a,
+.pager a,
+.pager .active
 {
     font-size: 1em;
     position: relative;
@@ -2298,6 +2470,12 @@ input[type="file"],
     border: 1px solid #000;
     border-radius: 3px;
     transition: all 0.3s ease-out;
+}
+
+.pager a,
+.pager .active
+{
+    padding: .325em .625em;
 }
 
 .button,
@@ -2345,7 +2523,9 @@ button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover,
-input[type="file"]:hover
+input[type="file"]:hover,
+.pager a:hover,
+.pager .active
 {
     background-color: transparent;
     background-image: none;

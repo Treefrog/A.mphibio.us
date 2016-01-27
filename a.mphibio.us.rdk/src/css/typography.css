@@ -269,13 +269,19 @@ ol.inline
     list-style: none;
     list-style-image: none;
 }
-,
+
 ul.inline,
 ol.inline,
 ul.inline li,
-ol.inline li
+ol.inline li,
+.inline ul,
+.inline ul li,
+.inline ol,
+.inline ol li
 {
 	display: inline;
+	display: inline-block;
+	margin-left: 0;
 }
 
 ul,
