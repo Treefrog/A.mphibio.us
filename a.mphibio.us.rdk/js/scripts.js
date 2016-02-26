@@ -1,5 +1,5 @@
 /*!
-* A.mphibio.us  1.5.2
+* A.mphibio.us  1.5.6
 * Copyright 2014, @cliveMoore @Treefrog
 * http://a.mphibio.us
 * Free to use under the MIT license.
