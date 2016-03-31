@@ -197,62 +197,28 @@ amp.mobilelisteners = function() {
 		* *** NOT *** executed by desktop browsers. See amp.desktoplisteners instead.
 		* ================================================================== */
 
-		//define dragging, set to false by default
-		var dragging = false
-		
-		//set dragging active
-		$("body").on("touchmove", function(){
-			dragging = true;
-		});
-		
-		//reset dragging
-		$("body").on("touchstart", function(){
-			dragging = false;
-		});
-	
-		$(document).on('click', '#mobilenav ul.mainnav li a', (function(event){
-			
-			console.log('click');
-	
-			// prevent immediate link following on non iOS and BB devices
-			var iOS = (navigator.userAgent.match(/iPad|iPhone|iPod/g) ? true : false);
-			var BB = (navigator.userAgent.match(/Blackberry|BB/g) ? true : false);
-	
-			if(iOS == false || BB == false) {
-	
-				var siblings = $(this).siblings('ul, .drop').length;
-	
-				if($(this).hasClass('activated') || siblings < 1 ) {
-					//go ahead, follow link
-				} else {
-					event.preventDefault();
-					$(this).addClass('activated');
-				}
-				
-			}
-	
-		}));
-	
-		$(document).on('touchend', '#mobilenav ul.mainnav li a', function(){
-			
-			console.log('touchend');
-	
-			if(dragging = false) {
-	
-				var siblings = $(this).siblings('ul').length;
-			
-				if(siblings > 1) {
-					$(this).addClass('okgo');
-				}
-	
-			}
-	
-		});
-	
-		$(document).on('click', '#mobilenav li.okgo > a', function(){
-			window.location.href($(this).attr('href'));
-		});
+	$(document).on('click', '.touch .mainmenu li a.okgo', function(){
+        window.location.href = $(this).attr('href');
+    });
 
+    $(document).on('click', '.touch .mainmenu a.submenu', function(e){
+        e.preventDefault();
+        var grandparent = $(this).parent().parent().attr('class');
+
+        //if another root item...
+        if(grandparent == 'mainmenu'){
+            //remove extraneous okgo classes and apply to only current root item
+            $('.okgo').removeClass('okgo');
+            $(this).addClass('okgo');
+            //hide other menu items
+            $('ul.display').removeClass('display');
+        } else {
+            $(this).addClass('okgo');
+        }
+        
+        $(this).siblings('ul').addClass('display');
+    });
+    
 };
 
 amp.desktoplisteners = function() {
