@@ -9,25 +9,56 @@ input[type="reset"],
 input[type="button"],
 input[type="file"],
 .button_grp .active,
-.filter_nav>dd>a
+.filter_nav>dd>a,
+.pager a,
+.pager .active
 {
     font-size: 1em;
     position: relative;
     display: inline-block;
     margin-top: 0;
     margin-left: 0;
-    color: #4d4d4d;
+    color: #000;
     font-weight: normal;
     text-decoration: none;
     cursor: pointer;
     line-height: normal;
-    padding: .625em;
-    background-color: #f1f1f1;
-    border: 1px solid #4d4d4d;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
+    padding: .625em 1.625em;
+    background: rgba(255,255,255,0.2);
+    border: 1px solid #000;
+    border-radius: 3px;
     transition: all 0.3s ease-out;
+}
+
+.pager a,
+.pager .active
+{
+    padding: .325em .625em;
+}
+
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="file"]
+{
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.wht-bg .button,
+.wht-bg button,
+.wht-bg .button:visited,
+.wht-bg button:visited,
+.wht-bg input[type="submit"],
+.wht-bg input[type="reset"],
+.wht-bg input[type="button"],
+.wht-bg input[type="file"]
+{
+    color: #e43c23;
+    background: transparent;
+    border: 1px solid #e43c23;
 }
 
 .button,
@@ -38,8 +69,11 @@ a.button,
 .button a:visited,
 .pager a:visited
 {
-    color: #444;
-    text-decoration: none;
+    color: #fff;
+/*
+	color: #444;
+	text-decoration: none;
+*/
 }
 
 .button:hover,
@@ -48,12 +82,12 @@ input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover,
 input[type="file"]:hover,
-.filter_nav>dd>a:hover
+.pager a:hover,
+.pager .active
 {
-    color: #1b378c;
-    background-color: #fff;
+    background-color: transparent;
     background-image: none;
-    border: 1px solid #1b378c;
+    transform: scale(1.1);
 }
 
 .button:active,
@@ -65,12 +99,13 @@ input[type="file"]:active,
 .button_grp .active,
 .button_grp a.button:active,
 .button_grp a.button:focus,
+.filter_nav>dd>a:hover,
 .filter_nav>dd>a:active,
 .pager_nav .active
 {
+    border: 1px solid #191919;
     color: #fff;
-    border: 1px solid #7485b9;
-    background-color: #1b378c;
+    background-color: #191919;
 }
 
 .button.full-width,
@@ -121,12 +156,7 @@ ul.button_grp .active,
 .pager_nav .active
 {
     padding: 0.425em;
-/*     border: 1px solid #dcd7d1; */
     margin: 0;
-    -webkit-border-radius: 0;
-    -khtml-border-radius: 0;
-    -moz-border-radius: 0;
-    -o-border-radius: 0;
     border-radius: 0;
 }
 
@@ -140,10 +170,6 @@ ul.button_grp .active,
 
 .pager_nav .button.last
 {
-    -webkit-border-radius: 0;
-    -khtml-border-radius: 0;
-    -moz-border-radius: 0;
-    -o-border-radius: 0;
     border-radius: 0;
 }
 
@@ -152,8 +178,12 @@ ul.button_grp .first.button
 {
 }
 
+/*
 .button_grp .last .button,
 .button_grp .last.button,
+*/
 .pager_nav .button.last
 {
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
 }

@@ -20,7 +20,7 @@ body
 {
 	background-color: #efefef;
 }
-#navbar
+#mainnav
 {
 	background-color: rgba(255,255,255,0.3);
 	z-index: 999;
@@ -56,6 +56,44 @@ p a:visited
 	line-height: inherit;
 }
 */
+
+a.button,
+button
+{
+	background-color: rgba(0,0,0,0.3);
+	margin-right: 1em;
+	margin-bottom: 0.6em;
+}
+
+button:hover,
+button:active,
+a.button:hover,
+a.button:active
+{
+	background-color: rgba(0,0,0,0.6);
+}
+
+#mainnav
+{
+	background-color: rgba(0, 128, 198,0.8);
+}
+
+img.a.r.t
+{
+	z-index: -1;
+	opacity: 0.6;
+}
+
+#amp_footer a
+{
+	text-decoration: none;
+}
+
+#amp_footer a:hover,
+#amp_footer a:active
+{
+	text-decoration: none;
+}
 
 /* Typography
 /* These are additional styles for this site only
@@ -941,8 +979,25 @@ text-decoration: none;
 /* Media Queries
 ================================================== */
 
+#nav_toggle.active
+{	
+    transform: rotate(-90deg);
+}
+
+#nav_toggle
+{
+	position: fixed;
+	top: 0.53em;
+	right: 0;
+	display: none;
+	padding: 0.25em 0.325em 0;
+	font-size: 1.6em;
+	line-height: 1;
+	z-index: 9000;
+}
 	/* Smaller than standard 960 (devices and browsers) */
-	@media only screen and (max-width: 959px), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
+	@media only screen and (max-width: 960px) {
+		
 		#forkme /* Kill it before it grows */
 		{
 			display: none;
@@ -955,33 +1010,39 @@ text-decoration: none;
 
 	}
 
-	/* All Mobile Sizes (devices and browser) */
-	@media only screen and (max-width: 767px) {
 
-		#forkme /* Kill it before it grows */
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (max-width: 768px) {
+
+		#forkme, /* Kill it before it grows */
+		#mainnav,
+		#section_nav
 		{
 			display: none;
 			visibility: hidden;
 		}
-	}
-
-	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-	@media only screen and (min-width: 480px) and (max-width: 767px) {
-
-		#forkme /* Kill it before it grows */
+		#nav_toggle,
+		#mainnav.open
 		{
-			display: none;
-			visibility: hidden;
+			display: block;
+			visibility: visible;
 		}
 	}
 
 	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-	@media only screen and (max-width: 479px) {
+	@media only screen and (max-width: 500px) {
 
+		#intro_right,
 		#forkme /* Kill it before it grows */
 		{
 			display: none;
 			visibility: hidden;
+		}
+		
+		.bg, .bg2, .bg3, .bg4
+		{
+			height: 450px;
+			width: 300px;
 		}
 	}
 */

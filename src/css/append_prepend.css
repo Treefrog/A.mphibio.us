@@ -93,10 +93,7 @@ form.multi.beside fieldset.date_picker_set fieldset:nth-child(2n) label
 .prepend_to [class*=" icon-"]
 {
     opacity: 0.7;
-    -webkit-transition: opacity 0.3s ease-in;
-     -moz-transition: opacity 0.3s ease-in;
-       -o-transition: opacity 0.3s ease-in;
-          transition: opacity 0.3s ease-in;
+    transition: opacity 0.3s ease-in;
 }
 .append_to [class^="icon-"]:hover,
 .append_to [class*=" icon-"]:hover,
@@ -104,8 +101,5 @@ form.multi.beside fieldset.date_picker_set fieldset:nth-child(2n) label
 .prepend_to [class*=" icon-"]:hover
 {
     opacity: 1;
-    -webkit-transition: opacity 0.3s ease-in;
-     -moz-transition: opacity 0.3s ease-in;
-       -o-transition: opacity 0.3s ease-in;
-          transition: opacity 0.3s ease-in;
+    transition: opacity 0.3s ease-in;
 }

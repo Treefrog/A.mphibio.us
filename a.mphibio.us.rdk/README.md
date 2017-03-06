@@ -5,6 +5,16 @@ A.mphibio.us CSS & HTML 5 Rapid Development Kit
 
 Get started fast with CSS best practices, a well-structured grid that makes mobile consideration easy, an organized file structure and super basic UI elements like lightly styled forms, buttons, tabs and more. Simple human readable code and shorthand classes makes coding a snap! Best used for building airplanes in the sky.
 
+<<<<<<< HEAD
+Leverages jQuery 1.11.1 and GruntJS
+
+## Installation
+
+## Installation
+
+#Easy Install
+Download the lastest RDK release and use as a webroot for you next 
+=======
 Leverages Node.js and Grunt
 
 ## Installation
@@ -64,17 +74,21 @@ or to concatinate the javascript
 ##Easy Install
 
 Download the lastest RDK release and use it as a webroot for your next 
+>>>>>>> origin/master
 front end project and start prototyping your html immediately, 
 get to the browser in minutes.
 
 #Github Project Installation
 
+<<<<<<< HEAD
+=======
 $ git clone git://github.com/Treefrog-Inc/A.mphibio.us.git
 
 https://github.com/Treefrog-Inc/A.mphibio.us
 
 or if you are reading this on GitHub look right in the sidebar all kinds of options up there :)
 
+>>>>>>> origin/master
 ## Authors
 
 Authored by Clive Moore (clive@lassosoft.com) and Jonathan Guthrie (jono@lassosoft.com)

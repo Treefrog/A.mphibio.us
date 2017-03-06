@@ -1,0 +1,91 @@
+body {
+  display: block;
+  background: #efefef;
+}
+
+#amp_content .container {
+  background: #fff;
+  padding: 1rem 2rem;
+}
+#amp_content .container > div {
+  background: #3c551a;
+  color: #eee;
+}
+#amp_content .container > div h4 {
+  color: #efefef;
+  text-decoration: line-through;
+}
+#amp_content .container > div a {
+  border-bottom: 1px solid #8ec642;
+  color: #8ec642;
+  text-decoration: none;
+}
+#amp_content .container > div a:hover {
+  color: #3c551a;
+}
+
+h1 {
+  color: #8ec642;
+  font-family: 'Times New Roman', Georgia, serif;
+  font-size: 2rem;
+  line-height: 2rem;
+  letter-spacing: 0.1;
+}
+
+h2 {
+  color: #222;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.1;
+}
+
+h3 {
+  color: #8ec642;
+  font-family: 'Times New Roman', Georgia, serif;
+  font-size: 1rem;
+  line-height: 1rem;
+  letter-spacing: 0.1;
+}
+
+h4 {
+  color: #222;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.938rem;
+  line-height: 0.938rem;
+  letter-spacing: 0.1;
+}
+
+h5 {
+  color: #222;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
+  letter-spacing: 0.1;
+}
+
+h6 {
+  color: #222;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  letter-spacing: 0.1;
+}
+
+.col-1 {
+  width: 25%;
+}
+
+.col-2 {
+  width: 50%;
+}
+
+.col-3 {
+  width: 75%;
+}
+
+.col-4 {
+  width: 100%;
+}
+
+/*# sourceMappingURL=theme.css.map */

@@ -3,10 +3,6 @@
    19. Layout Helper Rules
    ========================================================================== */
 
-/*
-Class Name                      Shorthand                   Styles
-==================================================================================== */
-
 .absolute,
 .a
 {
@@ -186,7 +182,7 @@ Class Name                      Shorthand                   Styles
 .half_pad_bottom,
 .hpb
 {
-    padding-bottom:: 0.5em !important;
+    padding-bottom: 0.5em !important;
 }
 
 .pad_bottom,
@@ -207,10 +203,22 @@ Class Name                      Shorthand                   Styles
     padding-right: 1em !important;
 }
 
+.half_pad_right,
+.hpr
+{
+    padding-right: 1em !important;
+}
+
 .double_pad_right,
 .dpr
 {
     padding-right: 2em !important;
+}
+
+.half_pad_right,
+.hpr
+{
+    padding-right: 0.5em !important;
 }
 
 .rule_above,

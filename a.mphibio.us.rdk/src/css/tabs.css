@@ -78,8 +78,6 @@ ul.tabs li:first-child a.active
 
 ul.tabs li:first-child a
 {
-    -webkit-border-top-left-radius: 2px;
-    -moz-border-radius-topleft: 2px;
     border-top-left-radius: 2px;
 }
 

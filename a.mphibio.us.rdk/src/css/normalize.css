@@ -125,7 +125,7 @@ abbr[title]
 b,
 strong
 {
-    font-weight: bold;
+    font-weight: 400;
 }
 
 /**
@@ -167,7 +167,7 @@ mark
 small,
 .small
 {
-    font-size: 0.865em !important;
+    font-size: 0.825em !important;
 }
 
 /**

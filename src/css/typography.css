@@ -34,7 +34,8 @@ h6 a
 
 h1
 {
-    font-size: 2.6em;
+    font-size: 3em;
+    font-weight: 300;
     margin: 0 0 0.67em 0;
 }
 
@@ -46,6 +47,7 @@ h1 small
 
 h2
 {
+    font-weight: 300;
     font-size: 2em;
 }
 
@@ -108,9 +110,6 @@ pre
     margin: 1em 0;
     text-wrap: wrap;
     white-space: pre-wrap;
-    white-space: -moz-pre-wrap;
-    white-space: -pre-wrap;
-    white-space: -o-pre-wrap;
     word-wrap: break-word;
     background: #fafafa;
 }
@@ -208,9 +207,6 @@ a:visited
     /*   an excellent article on the subject by Dan Cederhome
     /*  http://alistapart.com/article/understanding-css3-transitions
     */
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
 }
 
@@ -225,7 +221,7 @@ a:hover,
 a:focus
 {
     outline: 0;
-    color: #000;
+    color: #191919;
 }
 
 p a,
@@ -273,13 +269,19 @@ ol.inline
     list-style: none;
     list-style-image: none;
 }
-,
+
 ul.inline,
 ol.inline,
 ul.inline li,
-ol.inline li
+ol.inline li,
+.inline ul,
+.inline ul li,
+.inline ol,
+.inline ol li
 {
 	display: inline;
+	display: inline-block;
+	margin-left: 0;
 }
 
 ul,

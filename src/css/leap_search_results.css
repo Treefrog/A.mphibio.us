@@ -1,0 +1,97 @@
+.pager ul
+{
+	list-style: none;
+	display: inline-block;
+	margin: 0 0 !important;
+}
+.pager ul li
+{
+	display: inline-block;
+	margin: 0 0.15em;
+}
+
+/* LEAP Public Snippet */
+.fancybox-inner {
+    overflow:auto !important;
+}
+.LEAP_SearchList {
+    display:block;
+    margin:20px 0 0;
+}
+.LEAP_SearchList-title,
+.LEAP_SearchList-desc,
+.LEAP_SearchList-more {
+    display:block;
+    margin:0 0 8px;
+}
+.LEAP_SearchList-more {
+    font-style:italic;
+}
+.LEAP_SearchList-pager {
+    display: block;
+    margin-top: 35px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+.LEAP_SearchList-pager .pager > span {
+/*     display:block; */
+    font-weight:bold;
+/*
+    font-size:90%;
+    margin-bottom:18px;
+*/
+}
+.LEAP_SearchList-pager .pager > div
+{
+    float: right;	
+}
+.LEAP_SearchList-pager ul {
+    display:inline-block;
+    list-style:none;
+    margin:0;
+}
+.LEAP_SearchList-pager a,
+.LEAP_SearchList-pager a:visited {
+    color:#1b378c;
+    text-decoration:none;
+}
+.LEAP_SearchList-pager li {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-right:4px;
+    padding:0;
+}
+.LEAP_SearchList-pager li.last {
+    margin-right:0;
+}
+.LEAP_SearchList-pager li a,
+.LEAP_SearchList-pager li span.active {
+    border: 1px solid #ccc;
+    padding:8px;
+}
+.LEAP_SearchList-pager li a:hover,
+.LEAP_SearchList-pager li span.active {
+    background:#dedede;
+}
+.LEAP_SearchList-pager .LEAP_prev-link {
+    background-position: 5px 14px;
+    border: 1px solid #ccc;
+    margin:0;
+    padding: 8px 8px 8px 20px;
+    border-radius: 5px 0px 0px 5px;
+}
+.LEAP_SearchList-pager .LEAP_next-link {
+    background-position: 48px 14px;
+    border: 1px solid #ccc;
+    margin:0;
+    padding: 8px 20px 8px 8px;
+    border-radius: 0px 5px 5px 0px;
+}
+.LEAP_SearchList-pager .LEAP_prev-link:hover {
+    background: #dedede url(/lasso9/LEAP_Admin/images/ico-prev.gif) 5px 14px no-repeat;
+}
+.LEAP_SearchList-pager .LEAP_next-link:hover {
+    background: #dedede url(/lasso9/LEAP_Admin/images/ico-next.gif) 48px 14px no-repeat;
+}
+
+/* End LEAP Public Snippet */

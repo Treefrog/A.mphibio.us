@@ -1,26 +1,26 @@
 A.mphibio.us CSS & HTML 5 Rapid Development Kit
 ===============================================
 
-###A.mphibio.us is a front-end tool for rapid development of web application interfaces.
+### A.mphibio.us is a front-end tool for rapid development of web application interfaces.
 
 Get started fast with CSS best practices, a well-structured grid that makes mobile consideration easy, an organized file structure and super basic UI elements like lightly styled forms, buttons, tabs and more. Simple human readable code and shorthand classes makes coding a snap! Best used for building airplanes in the sky.
 
-Leverages Node.js and Grunt
+Leverages Node.js and GruntJS
 
-## Installation
+## Installation (see notes)
 
-Download the lastest RDK and move/rename it to be your working directory,
+Download the latest RDK and move/rename it to be your working directory,
 in a new terminal window change to your working directory
 
 	cd /path/to/your/project
 	
-to install Grunt**  and the project's dependices in the same terminal window type in
+to install Grunt**  and the project's dependencies in the same terminal window type in
 
 	sudo npm install
 
 While this is installing...
 Open the package.json file in your working directory and edit the details of
-your project including name, title, version, description, url and authour information.
+your project including name, title, version, description, url and author information.
 
 The devDependencies section lists all the node-modules that you are currently installing
 for this project you may add or remove as you wish.
@@ -31,7 +31,7 @@ Please refer to each modules instructions for configuration and options as they 
 
 ** requires NodeJS and GruntJS installed on your machine
 
-#Node and Grunt Installation
+# Node and Grunt Installation
 
 If you are completely new grunt and think its weird we recommend reading this article by 
 Chris Coyier http://24ways.org/2013/grunt-is-not-weird-and-hard/
@@ -42,7 +42,7 @@ Node.js -> https://nodejs.org
 
 Grunt -> http://gruntjs.com
 
-#Grunt default tasks
+# Grunt default tasks
 
 When you type grunt into the same terminal window as above,
 Grunt will perform the 'concat', 'uglify', 'cssmin' tasks as defined at the bottom of 'gruntfile.js' in the your projects root.
@@ -53,21 +53,21 @@ To run individual task (JShint for example) in the terminal window type
 
 	grunt jshint
 		
-To run a portion of a set tasks you can for example concatinate only the css in terminal you would type
+To run a portion of a set tasks you can for example concatenate only the css in terminal you would type
 
 	grunt concat:css
 
-or to concatinate the javascript
+or to concatenate the javascript
 
 	grunt concat:js
 
-##Easy Install
+## Easy Install
 
-Download the lastest RDK release and use it as a webroot for your next 
+Download the latest RDK release and use it as a webroot for your next 
 front end project and start prototyping your html immediately, 
 get to the browser in minutes.
 
-#Github Project Installation
+# Github Project Installation
 
 $ git clone git://github.com/Treefrog-Inc/A.mphibio.us.git
 

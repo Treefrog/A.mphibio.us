@@ -1,5 +1,5 @@
 /*!
-* A.mphibio.us  1.5.2
+* A.mphibio.us  1.5.6
 * Copyright 2014, @cliveMoore @Treefrog
 * http://a.mphibio.us
 * Free to use under the MIT license.
@@ -67,23 +67,6 @@ amp.bindlisteners = function() {
 	$('ul li:last-child').addClass('last');
 
 
-	$(function(){
-		var d = 'placeholder' in document.createElement('input');
-		if (!d){
-			$('input[placeholder]').each(function(){
-				$(this).val(element.attr('placeholder')).addClass('placeholder');
-				}).bind('focus',function(){
-					if ($(this).val() == element.attr('placeholder')){
-						$(this).val('').removeClass('placeholder');
-						}
-		}).bind('blur',function(){
-				if ($(this).val() === ''){
-					$(this).val(element.attr('placeholder')).addClass('placeholder');
-				}
-			});
-		}
-	});
-	
 	$(document).on('click', '.checkall', (function () {
 		$(this).closest('fieldset').find(':checkbox').prop('checked', this.checked);
 	}));
@@ -184,6 +167,28 @@ amp.bindlisteners = function() {
 			$('#'+killIt+'').removeClass('show');
 			$('.focus').removeClass('blur');
 	}));
+	
+	$(document).on( 'click', '#searchtoggle, .search_cancel', (function(){
+		if($('#searchtoggle').hasClass('active')){
+			$('#searchtoggle').removeClass('active');
+			$('#search_form').removeClass('open');
+		} else {
+			$('#searchtoggle').addClass('active');
+			$('#search_form').addClass('open');
+		}
+	}));
+	
+
+	$(document).on( 'click', '#navtoggle', (function(){
+		
+		if($('#navtoggle').hasClass('active')){
+			$('#navtoggle').removeClass('active');
+			$('#mobilenav').removeClass('open');
+		} else {
+			$('#navtoggle').addClass('active');
+			$('#mobilenav').addClass('open');
+		}
+	}));
 };
 
 amp.mobilelisteners = function() {
@@ -192,6 +197,28 @@ amp.mobilelisteners = function() {
 		* *** NOT *** executed by desktop browsers. See amp.desktoplisteners instead.
 		* ================================================================== */
 
+	$(document).on('click', '.touch .mainmenu li a.okgo', function(){
+        window.location.href = $(this).attr('href');
+    });
+
+    $(document).on('click', '.touch .mainmenu a.submenu', function(e){
+        e.preventDefault();
+        var grandparent = $(this).parent().parent().attr('class');
+
+        //if another root item...
+        if(grandparent == 'mainmenu'){
+            //remove extraneous okgo classes and apply to only current root item
+            $('.okgo').removeClass('okgo');
+            $(this).addClass('okgo');
+            //hide other menu items
+            $('ul.display').removeClass('display');
+        } else {
+            $(this).addClass('okgo');
+        }
+        
+        $(this).siblings('ul').addClass('display');
+    });
+    
 };
 
 amp.desktoplisteners = function() {
@@ -199,6 +226,8 @@ amp.desktoplisteners = function() {
 		* Desktop browser specific listeners are placed here
 		* *** NOT *** executed by mobile browsers. See amp.mobilelisteners instead.
 		* ================================================================== */
+
+	initTabNav();
 
 };
 
@@ -211,5 +240,16 @@ $(document).ready(function() {
 		* however it is ok to be putting listeners directly in here.
 		* ================================================================== */
 	amp.init(); // don't delete this - it is part of the A.mphibio.us startup
+	$('#leapheader').draggable();
 
 });
+
+
+// Tab key handling for accessible submenu navigation
+// Plugin adds .hover class to link parent li's when "tab-focused"
+// Remember to add li.hover > ul { style rules } in css file
+function initTabNav() {
+	jQuery('ul.mainmenu').tabNav({
+		items: 'li'
+	});
+}

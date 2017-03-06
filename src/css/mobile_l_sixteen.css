@@ -1,12 +1,13 @@
 /* ==========================================================================
-   23. Mobile (Portrait) max width of 767px
+   23. Mobile (Portrait) max width of 768px
    ========================================================================== */
 
-@media only screen and (max-width: 767px)
+@media only screen and (max-width: 768px)
 {
     .container
     {
-        width: 300px;
+        width: 94%;
+        margin: 0 auto;
     }
 
     .container .col
@@ -41,7 +42,7 @@
     .container .fifteen.col,
     .container .sixteen.col
     {
-        width: 300px;
+        width: 100%;
     }
 
     /* Offsets */

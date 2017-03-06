@@ -10,7 +10,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>Amphibious | Simply Elegant HTML5/CSS3 Responsive Front End Development Kit | 1.5.1 November 14, 2014</title>
+<title>Amphibious | Simply Elegant HTML5/CSS3 Responsive Front End Development Kit | 1.5.5 December 2, 2015</title>
 <meta name="description" content="A.mphibio.us is a responsive design tool for rapid development has a familiar sixteen column, lightweight 960 grid as its base, but elegantly scales down to downsized browser windows">
 <meta name="keywords" content="css3, html5, responsive, web, design, mobile layout, responsive design">
 
@@ -49,7 +49,8 @@
 <link rel="stylesheet" href="../css/a.mphibio.us.min.css">
 <link rel="stylesheet" href="../css/a.mphibio.us.docs.css">
 
-<script src="../src/js/modernizr-2.6.2.min.js"></script>
+<script src="/js/js/modernizr-2.6.2.min.js"></script>
+<script src="/js/js/prefixfree.min.js"></script>
 
 <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
 <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
@@ -67,7 +68,7 @@
 <div id="maincontent" class="col sixteen content">
 	<header>
 		<h1 class="rmb mt">A.mphibio.us</h1>
-		<p class="meta v">1.5.1 <span class="date ml">Release <span class="mo">November</span> 14<sup>th</sup> 2014</span></p>
+		<p class="meta v">1.5.5 <span class="date ml">Release <span class="mo">December</span> 2<sup>nd</sup> 2015</span></p>
 	</header>
   
 	<section id="navigation">
@@ -706,8 +707,8 @@ $('.tabs li a').click(function(){
 			</div>
 		</div>
 	</section>
-	<section class="row mt">  
-		<div id="uxnav" class="col eight first">
+	<section id="" class="row mt">  
+		<div id="pagination" class="col eight first">
 			<h4>Pagination</h4>
 			<menu role="navigation">
 				<ul class="pager_nav">
@@ -752,6 +753,17 @@ $('.tabs li a').click(function(){
 					<dd><a href="#uxnav">Option 3</a></dd>
 				</dl>
 			</menu>
+				
+			<pre class="prettyprint linenums">
+&lt;menu role=&quot;navigation&quot;&gt;
+  &lt;dl class=&quot;filter_nav&quot;&gt;
+    &lt;dt&gt;Filter by:&lt;/dt&gt;
+    &lt;dd class=&quot;active&quot;&gt;&lt;a href=&quot;#uxnav&quot;&gt;Option 1&lt;/a&gt;&lt;/dd&gt;
+    &lt;dd&gt;&lt;a href=&quot;#uxnav&quot;&gt;Option 2&lt;/a&gt;&lt;/dd&gt;
+    &lt;dd&gt;&lt;a href=&quot;#uxnav&quot;&gt;Option 3&lt;/a&gt;&lt;/dd&gt;
+  &lt;/dl&gt;
+&lt;/menu&gt;
+			</pre>
 			
 			<h4>Button Group</h4>
 			<menu role="navigation">
@@ -760,7 +772,100 @@ $('.tabs li a').click(function(){
 					<li><a class="button" href="#uxnav">Next<span class="icon-arrow-right hml"></span></a></li>
 				</ul>
 			</menu>
+			<pre class="prettyprint linenums">
+&lt;menu role=&quot;navigation&quot;&gt;
+  &lt;ul class=&quot;button_grp&quot;&gt;
+    &lt;li&gt;&lt;a class=&quot;button&quot; href=&quot;#uxnav&quot;&gt;&lt;span class=&quot;icon-arrow-left hmr&quot;&gt;&lt;/span&gt;Prev&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&quot;button&quot; href=&quot;#uxnav&quot;&gt;Next&lt;span class=&quot;icon-arrow-right hml&quot;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/menu&gt;
+			</pre>
 		</div>
+	</section>
+	<section id="modals" class="row mt">
+		<div class="col sixteen">
+        	<h1>Modals</h1>
+
+<p>There are two flavours and three sizes of modal boxes included with the mergini framework application modals and inline modals, application modals activate an empty container and the foot of the mergini application and take over the whole screen with a blur effect, inline modals are ones you build inside your application and call as neccessary and do not include the blur and focus functions.</p>
+
+<h2>Inline Modals</h2>
+
+<p>Inline modals are pretty easy to implement simply add the <a href="http://a.mphibio.us">a.mphibio.us</a> listener class <kbd>modal_opener</kbd> and assign the element an <kbd>amp-target</kbd> attribute the <kbd>id</kbd> of the modal you want to launch.</p>
+
+<p>Closing a modal is just as simple;assign the button, link, or icon the listener <kbd>modal_kill</kbd> and the proper <kbd>amp-target</kbd> attribute and it's gone.</p>
+
+			<pre class="prettyprint linenums">
+&lt;button class=&quot;modal_opener&quot; amp-target=&quot;launcher_modal&quot;&gt;Sample Modal Opener&lt;/button&gt;
+
+&lt;div id=&quot;launcher_modal&quot; class=&quot;overlay&quot;&gt;
+  &lt;div id=&quot;launcher_content&quot; class=&quot;modal small&quot;&gt;
+    &lt;header&gt;
+    &lt;!--// We recomend using this closing button on all modals the javascript is already handled simply add the
+    class modal_kill and assign the amp-target attribute to the id of your overlay container id it is included in the 
+default configuration of the modal launcher //--&gt;
+      &lt;span class=&quot;icon-close-icon right modal_kill&quot; amp-target=&quot;launcher_modal&quot;&gt;&lt;/span&gt;
+      &lt;h3&gt;Modal Header &lt;/h3&gt;
+    &lt;/header&gt;
+    &lt;section&gt;
+      ...
+    &lt;/section&gt;
+    &lt;footer&gt;
+      &lt;fieldset class=&quot;form-actions&quot;&gt;
+        &lt;button id=&quot;eventDetailActionBtn&quot; type=&quot;button&quot; class=&quot;&quot;&gt;Action&lt;/button&gt;
+        &lt;button type=&quot;reset&quot; class=&quot;modal_kill cancel&quot; amp-target=&quot;launcher_modal&quot;&gt;Cancel&lt;/button&gt;
+      &lt;/fieldset&gt;
+    &lt;/footer&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+			</pre>
+			<div class="row">
+				<button class="modal_opener" amp-target="launcher_modal">Sample Modal Opener</button>
+			</div>
+			<a href="#" class="modal_opener" amp-target="launcher_modal">Sample Modal Opener</a>
+			
+			<div class="dialog">If using an anchor as the modal trigger include an href element (see below) for better mobile compatibility, or stick to buttons for greater usability.</div>
+			
+			<pre class="prettyprint linenums">
+&lt;a href=&quot;#&quot; class=&quot;modal_opener&quot; amp-target=&quot;launcher_modal&quot;&gt;Sample Modal Opener&lt;/a&gt;
+			</pre>
+			
+			<h2>Modal Sizing</h2>
+			
+			<p>Modals are designed to be fluid the default width of the modal is 90% of the screen width up to a maximum width of 940px, a minimum width of 660px and the height grows according to the content within them.</p>
+			
+			<p>Adding the class(es) <kbd>small</kbd> or <kbd>medium</kbd> to the <kbd>modal</kbd> either in your source code or dynamically will change the width of the modal to a width of 200px or 30% of the screen for small and 400px or 60% of the screen width.</p>
+			
+			<h2>Dialogues</h2>
+			
+			<p>A.mphibio.us has some default messaging dialogue boxes available for user feedback assign anyone of the following classes to a container and have consitant feedback elements. Or add and remove these classes to a feedback container as part of your user error handling techniques. They can contain any kind of html.</p>
+			
+			<div class="error">Sample Error message</div>
+			
+			<pre class="prettyprint linenums">
+&lt;div class=&quot;error&quot;&gt;Sample Error message&lt;/div&gt;
+			</pre>
+			
+			<div class="attn"><span class="icon-mergini_logo r"></span>Sample Attention message with icon</div>
+			
+			<pre class="prettyprint linenums">
+&lt;div class=&quot;attn&quot;&gt;&lt;span class=&quot;icon-mergini_logo r&quot;&gt;&lt;/span&gt;Sample Attention message with icon&lt;/div&gt;
+			</pre>
+
+			<div id="feedback" class="dialog">
+				<span class="icon-close a r mr cancel" amp-target="feedback"></span>
+				<h3>Title</h3>
+				<p>Sample Attention message with icon</p>
+			</div>
+			
+			<pre class="prettyprint linenums">
+&lt;div id=&quot;feedback&quot; class=&quot;dialog&quot;&gt;
+  &lt;span class=&quot;icon-close a r mr cancel&quot; amp-target=&quot;feedback&quot;&gt;&lt;/span&gt;
+  &lt;h3&gt;Title&lt;/h3&gt;
+  &lt;p&gt;Sample Attention message with icon&lt;/p&gt;
+&lt;/div&gt;
+			</pre>
+
+        </div>
 	</section>
 	
 </div><!-- /#maincontent.content -->
@@ -772,7 +877,7 @@ $('.tabs li a').click(function(){
 	<p><a href="/"><span class="icon-amphibious hmr"></span></a> <a href="http://www.lassosoft.com/"><span class="icon-lassosoft hmr"></span></a> <a href="http://www.mergini.com/"><span class="icon-mergini hmr"></span></a> Curated by Clive Moore, at <a href="http://www.treefrog.ca"><span class="icon-treefrog hmr"></span>Treefrog Inc.</a> <strong>Twitter</strong>: <a href="http://www.twitter.com/cliveMoore" title="Follow Clive on Twitter">@cliveMoore</a> <a href="/sitemap.html"><span class="icon-flow-tree"></span> Sitemap</a></p>
 </footer>
 
-<div id="navbar" class="f t l r">
+<div id="mainnav" class="f t l r">
 <!--// WTF?
 
 .f.t.l.r == .fixed .top .left .right
@@ -799,7 +904,7 @@ postion:fixed;top:0;left:0;right:0;
 				</li>
 				<li><a href="/docs/foundation.html">Foundation</a>
 					<ul>
-						<li><a href="/docs//docs/foundation.html#core">Core</a></li>
+						<li><a href="/docs/foundation.html#core">Core</a></li>
 						<li><a href="/docs/foundation.html#grid">Symantic Grid</a></li>
 						<li><a href="/docs/foundation.html#responsive_col">Responsive Columns</a></li>
 						<li><a href="/docs/foundation.html#fluid_col">Fluid Columns</a></li>
@@ -846,6 +951,8 @@ postion:fixed;top:0;left:0;right:0;
 	</div>
 </div>
 
+<button id="nav_toggle" type="button"><span class="icon-carret-left"></span></button>
+
 <div id="amp_overlay" class="modal_overlay">
 	<div class="modal mt">
 		<section>
@@ -872,18 +979,36 @@ postion:fixed;top:0;left:0;right:0;
 </div>
 
 
-<a href="http://github.com/Treefrog-Interactive/A.mphibio.us">
+<a href="http://github.com/Treefrog/A.mphibio.us">
 	<img id="forkme" src="http://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt="Fork me on GitHub">
 </a>
 
-<a id="to_top" class="icon reset" href="#maincontent">&#11014;</a>  
-  
+<div id="launcher_modal" class="modal_overlay">
+	<div id="launcher_content" class="modal small">
+		<header>
+			<span class="icon-cross-round large right rmr modal_kill" amp-target="launcher_modal"></span>
+
+			<h3>Modal Header </h3>
+		</header>
+		<section>
+			Modal body...
+		</section>
+		<footer>
+			<fieldset class="form-actions">
+				<button id="eventDetailActionBtn" type="submit" class="">Action</button>
+				<button type="reset" class="modal_kill" amp-target="launcher_modal">Cancel</button>
+			</fieldset>
+		</footer>
+	</div>
+</div>
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="../js/js/jquery-1.11.1.min.js"><\/script>')</script>
+<script>window.jQuery || document.write('<script src="/js/js/jquery-1.11.1.min.js"><\/script>')</script>
 
-<script type="text/javascript" src="../src/js/run_prettify.js"></script>
+<script type="text/javascript" src="/src/js/run_prettify.js"></script>
+<script type="text/javascript" src="/src/js/jquery-ui.min.js"></script>
 
-<script src="../js/a.mphibio.us.js"></script>
+<script src="/js/a.mphibio.us.js"></script>
 
 <script type="text/javascript">
 

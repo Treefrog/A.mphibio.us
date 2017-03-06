@@ -101,19 +101,11 @@
     display: block;
     padding: 0.6em;
     text-align: center;
-
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
 }
 .ui-datepicker table tbody tr td a:hover
 {
     background-color: #39b3cb;
-
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
 }
 .ui-datepicker table tbody tr td a.ui-state-active,

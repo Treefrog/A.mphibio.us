@@ -67,34 +67,16 @@ amp.bindlisteners = function() {
 	$('ul li:last-child').addClass('last');
 
 
-	$(function(){
-		var d = 'placeholder' in document.createElement('input');
-		if (!d){
-			$('input[placeholder]').each(function(){
-				$(this).val(element.attr('placeholder')).addClass('placeholder');
-				}).bind('focus',function(){
-					if ($(this).val() == element.attr('placeholder')){
-						$(this).val('').removeClass('placeholder');
-						}
-		}).bind('blur',function(){
-				if ($(this).val() === ''){
-					$(this).val(element.attr('placeholder')).addClass('placeholder');
-				}
-			});
-		}
-	});
-	
-
 	$(document).on('click', '.checkall', (function () {
 		$(this).closest('fieldset').find(':checkbox').prop('checked', this.checked);
 	}));
 	
 
-	$(document).on('click', '#nav li', (function(){
-		if ($(this).hasClass('active')) {
+	$(document).on('click', '#mainnav li', (function(){
+		if ($('#mainnav').hasClass('open')) {
+			$('#mainnav').removeClass('open');
+			$('#nav_toggle').removeClass('active');
 		} else {
-			$('#nav li').removeClass('active');
-			$(this).addClass('active');
 			/* I May use this later
 			$(content).show().addClass('active').siblings().hide().removeClass('active'); */
 		}
@@ -192,6 +174,26 @@ amp.bindlisteners = function() {
 			$('.focus').removeClass('blur');
 	}));
 	
+	$(document).on( 'click', '#search_toggle, .search_cancel', (function(){
+		if($('#search_toggle').hasClass('active')){
+			$('#search_toggle').removeClass('active');
+			$('#search_form').removeClass('open');
+		} else {
+			$('#search_toggle').addClass('active');
+			$('#search_form').addClass('open');
+		}
+	}));
+
+	$(document).on( 'click', '#nav_toggle', (function(){
+		
+		if($('#nav_toggle').hasClass('active')){
+			$('#nav_toggle').removeClass('active');
+			$('#mainnav').removeClass('open');
+		} else {
+			$('#nav_toggle').addClass('active');
+			$('#mainnav').addClass('open');
+		}
+	}));
 };
 
 amp.mobilelisteners = function() {
@@ -199,8 +201,31 @@ amp.mobilelisteners = function() {
 		* Mobile browser specific listeners are placed here
 		* *** NOT *** executed by desktop browsers. See amp.desktoplisteners instead.
 		* ================================================================== */
+	
+	$(document).on('click', '.touch .mainmenu li a.okgo', function(){
+        window.location.href = $(this).attr('href');
+    });
+
+    $(document).on('click', '.touch .mainmenu a.submenu', function(e){
+        e.preventDefault();
+        var grandparent = $(this).parent().parent().attr('class');
+
+        //if another root item...
+        if(grandparent == 'mainmenu'){
+            //remove extraneous okgo classes and apply to only current root item
+            $('.okgo').removeClass('okgo');
+            $(this).addClass('okgo');
+            //hide other menu items
+            $('ul.display').removeClass('display');
+        } else {
+            $(this).addClass('okgo');
+        }
+        
+        $(this).siblings('ul').addClass('display');
+    });
 
 };
+
 
 amp.desktoplisteners = function() {
 	/* ==================================================================
@@ -209,6 +234,8 @@ amp.desktoplisteners = function() {
 		* ================================================================== */
 		
 	$.localScroll();
+	
+	initTabNav();
 
 };
 
@@ -220,7 +247,19 @@ $(document).ready(function() {
 		* Generally a good thing to add listeners to the object,
 		* however it is ok to be putting listeners directly in here.
 		* ================================================================== */
-	
 	amp.init(); // don't delete this - it is part of the A.mphibio.us startup
+	
+	// LEAP5 Only 
+	// $('#leapheader').draggable();
 
 });
+
+
+// Tab key handling for accessible submenu navigation
+// Plugin adds .hover class to link parent li's when "tab-focused"
+// Remember to add li.hover > ul { style rules } in css file
+function initTabNav() {
+	jQuery('ul.mainmenu').tabNav({
+		items: 'li'
+	});
+}
