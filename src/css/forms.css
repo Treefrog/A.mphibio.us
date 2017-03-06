@@ -74,13 +74,13 @@ select
 {
 	padding: .325em 0;
 }
-/*
+
 
 .styled_select select
 {
-	padding: 0;
+  padding-right: 1rem;
 }
-*/
+
 
 input[type="text"]:hover,
 input[type="password"]:hover,
